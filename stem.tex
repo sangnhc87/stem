@@ -1,0 +1,942 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% --- BẢN NÂNG CẤP ĐẲNG CẤP - GIÁO ÁN HỘI THI STEM ---
+% --- Tác giả: Gemini (dựa trên file của người dùng) ---
+% --- Tương thích PDFLATEX, thiết kế hiện đại, sửa mọi lỗi ---
+% --- NỘI DUNG ĐÃ ĐƯỢC CẬP NHẬT ĐỂ KHỚP VỚI WEB APP NÂNG CAO ---
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+% --- 1. GÓI CƠ BẢN VÀ NGÔN NGỮ (CHO PDFLATEX) ---
+\usepackage[utf8]{inputenc}    % Mã hóa UTF-8 (thay cho vietnam)
+\usepackage[T1]{fontenc}       % Mã hóa font chữ
+\usepackage[vietnamese]{babel} % Gói ngôn ngữ chuẩn (thay cho vietnam)
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{booktabs}            % Bảng đẹp (không gạch dọc)
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{lipsum}              % Tạo văn bản mẫu
+\usepackage{ragged2e}            % Căn lề
+\usepackage{setspace}            % Giãn dòng
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning}
+\usepackage{fontawesome5}        % Icon (nếu cần)
+\usepackage{verbatim}            % Thêm gói verbatim
+\usepackage{colortbl}            % Thêm gói tô màu bảng
+
+% --- 2. CẤU HÌNH FONT (CHO PDFLATEX) ---
+% Xóa \fontspec, thay bằng các gói tương đương
+\usepackage{newtxtext, newtxmath} % Font Times New Roman
+\usepackage[scaled=0.92]{helvet}  % Font Arial/Helvetica
+\usepackage{courier}              % Font Courier New
+\usepackage{microtype}            % Cải thiện hiển thị
+
+% --- 3. MÀU SẮC VÀ BỐ CỤC ---
+\usepackage[svgnames]{xcolor}
+\definecolor{primary}{RGB}{0,82,155}     % Xanh đậm
+\definecolor{secondary}{RGB}{102,102,102} % Xám
+\definecolor{accent}{RGB}{204,0,0}      % Đỏ
+\definecolor{success}{RGB}{0,128,0}     % Xanh lá
+\definecolor{warning}{RGB}{255,165,0}   % Cam
+% SỬA LỖI: Định nghĩa màu TableHeader
+\definecolor{TableHeader}{gray}{0.9} 
+
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2cm,headheight=15.6pt]{geometry} % Sửa Headheight
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrule}{\color{primary}\hrule width\textwidth height 1.5pt}
+\fancyhead[L]{\color{primary}\footnotesize\sffamily\textbf{SỞ GD\&ĐT TP.HCM - HỘI THI STEM/STEAM CẤP THÀNH PHỐ}}
+\fancyhead[R]{\color{primary}\footnotesize\sffamily\textbf{NĂM HỌC 2025-2026}}
+\fancyfoot[C]{\sffamily\thepage}
+\renewcommand{\footrule}{\color{primary}\hrule width\textwidth height 0.8pt}
+
+% --- 4. GÓI HỖ TRỢ VÀ TÙY CHỈNH ---
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage[
+    colorlinks=true,
+    linkcolor=primary,
+    urlcolor=accent,
+    citecolor=success,
+    pdftitle={Giao an du thi STEM: Tu van Tiet kiem},
+    pdfauthor={Nguyen Van A} % Tên từ file
+]{hyperref}
+
+% --- 5. ĐỊNH DẠNG TIÊU ĐỀ (GIỮ NGUYÊN) ---
+\usepackage{titlesec}
+% Bỏ \titleformat{\section} vì đã dùng \competitionsection
+\titleformat{\subsection}
+{\normalfont\bfseries\color{accent}\sffamily}
+{\llap{\color{accent}\rule{1.2em}{1.2em}\hspace{0.5em}}}
+{0em}
+{}
+
+\titleformat{\subsubsection}
+{\normalfont\bfseries\itshape\color{secondary}\sffamily}
+{\llap{\color{secondary}\rule{1em}{1em}\hspace{0.5em}}}
+{0em}
+{}
+
+% --- 6. MÔI TRƯỜNG TÙY CHỈNH (NÂNG CẤP VÀ SỬA LỖI) ---
+
+% Tiêu đề cho các phần
+\def\phanI{TỔNG QUAN}
+\def\phanII{CHUẨN BỊ CỦA GIÁO VIÊN}
+\def\phanIII{KẾ HOẠCH DẠY HỌC ĐỀ XUẤT}
+\def\phanIV{HƯỚNG DẪN HỌC SINH}
+\def\phanV{CÁC PHỤ LỤC}
+
+% SỬA LỖI: Định nghĩa môi trường 'phan' bằng \newtcolorbox
+\newtcolorbox{competitionsection}[1]{
+    enhanced, 
+    breakable, % Cho phép ngắt trang
+    colback=white, 
+    colframe=primary, 
+    boxrule=0.8pt,
+    fonttitle=\bfseries\sffamily\Huge, 
+    coltitle=white, 
+    colbacktitle=primary,
+    % Đặt tiêu đề như 1 cái tab
+    attach boxed title to top left={xshift=1cm, yshift=-1mm-\tcboxedtitleheight/2},
+    boxed title style={sharp corners, boxrule=0pt},
+    title={PHẦN #1: \csname phan#1\endcsname},
+    % Tự động thêm vào Mục lục
+    before upper={
+        \addcontentsline{toc}{section}{Phần #1: \csname phan#1\endcsname}
+        %\clearpage % Tự động sang trang mới cho mỗi phần
+    }
+}
+
+
+% Định dạng bảng hiện đại
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+% SỬA LỖI: Định nghĩa \header
+\newcommand{\header}[1]{\cellcolor{TableHeader}\sffamily\bfseries#1}
+
+% Bảng thời gian giảng dạy
+\newcommand{\teachingplan}[4]{
+\noindent
+\begin{minipage}{0.15\textwidth}
+\centering\bfseries\sffamily\color{primary}#1
+\end{minipage}%
+\begin{minipage}{0.25\textwidth}
+\sffamily\textbf{#2}
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+\textit{#3}
+\end{minipage}%
+\begin{minipage}{0.25\textwidth}
+\small #4
+\end{minipage}
+\vspace{1ex}\par\noindent\color{primary!30}\rule{\textwidth}{0.4pt}\vspace{1ex}
+}
+
+% Môi trường case study
+\newtcolorbox{casestudy}{
+    enhanced, breakable,
+    colback=primary!5, colframe=primary!80,
+    boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries\color{accent}TÌNH HUỐNG THỰC TIỄN,
+    fonttitle=\bfseries\sffamily
+}
+
+% Môi trường công thức quan trọng
+\newtcolorbox{keyformula}{
+    enhanced, breakable,
+    colback=accent!5, colframe=accent!80,
+    boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries\color{primary}CÔNG THỨC TRỌNG TÂM,
+    fonttitle=\bfseries\sffamily
+}
+
+% Môi trường nhiệm vụ
+\newtcolorbox{task}[1]{
+    enhanced, breakable,
+    colback=warning!10, colframe=warning!80,
+    boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries\color{secondary}NHIỆM VỤ: #1,
+    fonttitle=\bfseries\sffamily
+}
+
+% Môi trường phiếu học tập
+\newtcolorbox{phieuhoc_tap_box}[1]{
+    enhanced, breakable,
+    colback=white, colframe=DarkGreen,
+    boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries #1,
+    fonttitle=\bfseries\sffamily,
+    coltitle=DarkGreen
+}
+
+
+% Định dạng list đẹp hơn (GIỮ NGUYÊN)
+\setlist[itemize,1]{label=\textbullet, leftmargin=*, nosep}
+\setlist[itemize,2]{label=--, leftmargin=*, nosep}
+\setlist[description]{font=\bfseries\sffamily\color{primary}, nosep} % Sửa lỗi dùng \item
+
+\begin{document}
+
+% Trang bìa chuyên nghiệp
+\begin{titlepage}
+\begin{tikzpicture}[remember picture, overlay]
+\node[rectangle, fill=primary, anchor=north, minimum width=\paperwidth, minimum height=2cm] (header) at (current page.north){};
+\node[anchor=south, yshift=2mm, text=white] at (header.south) {\Huge\sffamily\bfseries GIÁO ÁN DỰ THI STEM/STEAM CẤP THÀNH PHỐ};
+\end{tikzpicture}
+
+\vspace{2cm}
+\begin{center}
+{\LARGE\bfseries\color{primary}\sffamily SỞ GIÁO DỤC VÀ ĐÀO TẠO THÀNH PHỐ HỒ CHÍ MINH}\\
+\vspace{0.5cm}
+{\Large\bfseries\sffamily HỘI THI THIẾT KẾ CHỦ ĐỀ DẠY HỌC STEM/STEAM}\\
+\vspace{0.3cm}
+{\large\sffamily Năm học 2025 - 2026}
+
+\vspace{2cm}
+
+\begin{tcolorbox}[
+    width=0.9\textwidth, 
+    colback=gray!5, 
+    colframe=primary,
+    arc=2mm, boxrule=1pt
+]
+    \centering
+    {\LARGE\bfseries\sffamily CHỦ ĐỀ:} \\
+    {\Huge\bfseries\color{accent}\sffamily XÂY DỰNG CÔNG CỤ TƯ VẤN TIẾT KIỆM TƯƠNG LAI}\\
+    \vspace{0.25cm}
+    {\Large\sffamily ỨNG DỤNG HÀM SỐ MŨ VÀ CÔNG NGHỆ SỐ}
+\end{tcolorbox}
+
+\vspace{1.5cm}
+{\Large\bfseries\sffamily MÔN: TOÁN - KHỐI: 11}
+
+\vfill
+\large
+% SỬA LỖI: Điền thông tin vào \tabular
+\begin{tabular}{rl}
+\sffamily\bfseries Giáo viên: & Nguyễn Văn Sang\\
+\sffamily\bfseries Đơn vị: & Trường THPT Nguyễn Hữu Cảnh\\
+\sffamily\bfseries Số điện thoại: & 0389\,821\,115\\
+\end{tabular}
+
+\vspace{1cm}
+{\large\sffamily Thành phố Hồ Chí Minh, tháng 11 năm 2025}
+\end{center}
+\end{titlepage}
+
+% Mục lục
+\tableofcontents
+\thispagestyle{empty}
+% \newpage % Bỏ vì \begin{competitionsection} đã có \clearpage
+
+%%%%% PHẦN 1: TỔNG QUAN %%%%%
+\begin{competitionsection}{I}
+\vspace{0.5cm}
+\subsection*{1.1. Thông tin cá nhân}
+% SỬA LỖI: Dùng itemize
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Họ và tên:} Nguyễn Văn A
+\item \textbf{Chuyên môn:} Toán học
+\item \textbf{Thâm niên:} 12 năm giảng dạy THPT
+\item \textbf{Đơn vị:} Trường THPT Chuyên ABC, TP.HCM
+\item \textbf{Thành tích nổi bật:}
+    \begin{itemize}
+    \item Giải Nhất sáng kiến cấp sở năm 2024 về ứng dụng công nghệ trong dạy học Toán
+    \item Giáo viên dạy giỏi cấp thành phố năm 2023
+    \item Huấn luyện viên đội tuyển Toán Olympic 30/4
+    \end{itemize}
+\end{itemize}
+
+\subsection*{1.2. Giới thiệu chủ đề}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tên chủ đề:} \textcolor{accent}{Xây dựng công cụ tư vấn tiết kiệm tương lai: Ứng dụng hàm số mũ và công nghệ số}
+\item \textbf{Bối cảnh thực tiễn:}
+    \begin{itemize}
+    \item \textbf{76\%} học sinh THPT chưa có kế hoạch tài chính cá nhân (Khảo sát Sở GD\&ĐT TP.HCM 2024)
+    \item Trung bình mỗi học sinh mong muốn mua xe máy điện trị giá 15-25 triệu đồng khi vào đại học
+    \item Nhu cầu ứng dụng toán học vào giải quyết vấn đề thực tiễn ngày càng cấp thiết trong chương trình GDPT 2018
+    \end{itemize}
+\item \textbf{Điểm mới và sáng tạo:}
+    \begin{itemize}
+    \item \textbf{Đa ngành:} Kết hợp Toán học - Kinh tế - Công nghệ thông tin tạo thành vòng tròn STEAM hoàn chỉnh
+    % CẬP NHẬT: Khớp với file HTML
+    \item \textbf{Sản phẩm thực:} Công cụ web (file HTML) hoàn thiện có thể sử dụng ngay trong đời sống, không cần server.
+    \item \textbf{Giáo dục tài chính:} Phát triển năng lực tài chính cá nhân - kỹ năng sống còn thiếu trong chương trình hiện tại
+    \item \textbf{Cá nhân hóa:} Mỗi học sinh tạo ra công cụ phù hợp với điều kiện và mục tiêu riêng
+    \end{itemize}
+\end{itemize}
+
+\subsection*{1.3. Căn cứ thiết kế}
+\begin{minipage}{0.48\textwidth}
+\textbf{Căn cứ pháp lý:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Chương trình GDPT 2018 môn Toán
+\item Công văn 5555/BGDĐT-GDTrH về dạy học STEM
+\item Kế hoạch số 4500/KH-SGDĐT của Sở GD\&ĐT TP.HCM (Giả định)
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\textbf{Cơ sở lý luận:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Lý thuyết học tập qua dự án (Project-Based Learning)
+\item Mô hình 5E (Engage, Explore, Explain, Elaborate, Evaluate)
+\item Khung năng lực tài chính của OECD
+\end{itemize}
+\end{minipage}
+
+\subsection*{1.4. Mục tiêu giáo dục}
+% SỬA LỖI: Bảng không thể chứa list, dùng \parbox
+\begin{center}
+\begin{tabularx}{\linewidth}{@{} L L L @{}}
+\toprule
+\header{Kiến thức} & \header{Kỹ năng} & \header{Thái độ} \\
+\midrule
+% Dùng \parbox để chứa list
+\parbox[t]{\dimexpr1.\linewidth-2\tabcolsep}{
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Nắm vững công thức lãi kép
+        \item Hiểu bản chất của hàm số mũ trong tài chính
+        % CẬP NHẬT: Thêm Lạm phát (có trong app)
+        \item Hiểu khái niệm lạm phát
+    \end{itemize}
+} &
+\parbox[t]{\dimexpr1.\linewidth-2\tabcolsep}{
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Mô hình hóa toán học
+        \item Sử dụng công nghệ số để tự động hóa
+        % CẬP NHẬT: Kỹ năng có trong app
+        \item Phân tích kịch bản và độ nhạy
+        \item Đọc hiểu biểu đồ (tròn, cột, đường)
+    \end{itemize}
+} &
+\parbox[t]{\dimexpr1.\linewidth-2\tabcolsep}{
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Ý thức tiết kiệm
+        \item Tư duy phản biện
+        \item Trách nhiệm với tài chính cá nhân
+        \item Tôn trọng sự khác biệt
+    \end{itemize}
+} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{1.5. Cấu trúc chương trình}
+\begin{center}
+\begin{tikzpicture}[node distance=1.5cm, every node/.style={font=\sffamily}]
+\node (start) [rectangle, rounded corners, fill=primary!20, text width=4cm, align=center, minimum height=1.2cm] {\textbf{Khám phá thực tiễn}\\ Tình huống: Mua xe máy điện};
+\node (mid1) [rectangle, rounded corners, fill=accent!20, text width=4cm, align=center, below of=start, yshift=-1.2cm, minimum height=1.2cm] {\textbf{Xây dựng mô hình toán học}\\ Công thức lãi kép};
+\node (mid2) [rectangle, rounded corners, fill=primary!20, text width=4cm, align=center, below of=mid1, yshift=-1.2cm, minimum height=1.2cm] {\textbf{Phát triển công cụ số}\\ Ứng dụng web (HTML/JS)};
+\node (end) [rectangle, rounded corners, fill=accent!20, text width=4cm, align=center, below of=mid2, yshift=-1.2cm, minimum height=1.2cm] {\textbf{Ứng dụng thực tế}\\ Lập kế hoạch tài chính cá nhân};
+\draw[->, thick, color=primary] (start) -- (mid1) node[midway, right, text width=3cm, align=center] {\footnotesize \textbf{M} (Toán học)};
+\draw[->, thick, color=primary] (mid1) -- (mid2) node[midway, right, text width=3cm, align=center] {\footnotesize \textbf{T} (Công nghệ)};
+\draw[->, thick, color=primary] (mid2) -- (end) node[midway, right, text width=3cm, align=center] {\footnotesize \textbf{A} (Kinh tế)};
+\end{tikzpicture}
+\end{center}
+\end{competitionsection}
+\newpage
+%%%%% PHẦN 2: CHUẨN BỊ %%%%%
+\begin{competitionsection}{II}
+\vspace{0.5cm}
+\subsection*{2.1. Thiết bị và công nghệ}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Phần cứng:}
+    \begin{itemize}
+    \item Máy tính cấu hình tối thiểu 4GB RAM, kết nối Internet (1 máy/2 HS)
+    \item Máy chiếu tương tác thông minh + màn hình cảm ứng
+    \item Máy tính cá nhân của học sinh (BYOD - Bring Your Own Device)
+    \end{itemize}
+\item \textbf{Phần mềm và nền tảng:}
+    % CẬP NHẬT: Khớp với file HTML
+    \begin{itemize}
+    \item \textbf{Học liệu số chính:} Ứng dụng web \texttt{CongCuTuVanTietKiem.html} (đính kèm).
+    \item \textit{Yêu cầu:} Trình duyệt web (Chrome, Firefox, Edge...)
+    \item Google Sheets template (dự phòng)
+    \item Padlet để chia sẻ kết quả nhóm
+    \item Kahoot! để kiểm tra nhanh kiến thức
+    \end{itemize}
+\item \textbf{Tài liệu:}
+    \begin{itemize}
+    \item Phiếu học tập số 1: Khám phá công thức lãi kép
+    % CẬP NHẬT: PHT 2 phải khớp với app
+    \item Phiếu học tập số 2: Hướng dẫn sử dụng 3 tab của Web App
+    \item Bảng tham khảo lãi suất cập nhật tháng 10/2025
+    \item Rubric đánh giá sản phẩm
+    \end{itemize}
+\end{itemize}
+
+\subsection*{2.2. Kịch bản giảng dạy}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{} L L L L L @{}}
+\toprule
+\header{Thời lượng} & \header{Hoạt động} & \header{Phương pháp} & \header{Công cụ} & \header{Đánh giá} \\
+\midrule
+10' & Khởi động: Video case study & Tình huống thực tiễn & Clip phỏng vấn HS & Quan sát mức độ hứng thú \\
+15' & Khám phá công thức & Khám phá có hướng dẫn & Phiếu học tập số 1 & Phiếu trả lời nhanh \\
+% CẬP NHẬT: "Demo ứng dụng (3 tabs)"
+\rowcolor{primary!10}
+10' & Chuyển tiếp sang công nghệ & Đàm thoại & Demo ứng dụng (3 tabs) & Câu hỏi phản hồi \\
+\rowcolor{primary!10}
+20' & Thực hành (Tab 1, 2) & Học qua dự án & Ứng dụng web & Đánh giá quá trình \\
+\rowcolor{primary!10}
+15' & Phân tích kết quả & Hợp tác nhóm & Bảng so sánh (Tab 2) & Peer assessment \\
+10' & Trình bày sản phẩm & Thuyết trình & Google Slides & Rubric đánh giá \\
+5' & Tổng kết mở rộng & Suy ngẫm & Mindmap số (Tab 3) & Nhật ký học tập \\
+5' & Giao bài tập về nhà & Cá nhân hóa & LMS của trường & Đánh giá sản phẩm \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{2.3. Đánh giá đa chiều}
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Đánh giá quá trình:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Phiếu quan sát nhóm:} Ghi nhận mức độ hợp tác, giải quyết vấn đề
+\item \textbf{Nhật ký học tập điện tử:} Ghi chép suy nghĩ, thắc mắc của học sinh
+\item \textbf{Phiếu phản hồi nhanh:} Google Form thu thập phản hồi tức thì
+\item \textbf{Đánh giá đồng cấp:} Học sinh đánh giá lẫn nhau trong nhóm
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Đánh giá sản phẩm:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Rubric 4 tiêu chí:} (Xem Phụ lục 3)
+    \begin{itemize}
+    \item Tính chính xác của công thức (4 điểm)
+    % CẬP NHẬT: Tiêu chí khớp với app
+    \item Khả năng sử dụng công nghệ (3 tabs) (4 điểm)
+    \item Tính khả thi của phương án (4 điểm)
+    \item Khả năng trình bày và bảo vệ ý tưởng (4 điểm)
+    \end{itemize}
+\item \textbf{Sản phẩm demo ứng dụng:} Đánh giá tính thực tiễn và sáng tạo
+\item \textbf{Bài tập về nhà:} Áp dụng công cụ cho mục tiêu cá nhân
+\end{itemize}
+\end{minipage}
+
+\subsection*{2.4. Kế hoạch dự phòng}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tình huống 1:} Mất điện hoặc mất kết nối Internet
+    \begin{itemize}
+    \item Học liệu số \texttt{CongCuTuVanTietKiem.html} \textbf{không cần Internet}, chỉ cần mở bằng trình duyệt.
+    \item Nếu mất điện: Chuyển sang sử dụng Google Sheets offline (nếu máy tính còn pin) hoặc phiếu tính toán bằng tay.
+    \end{itemize}
+\item \textbf{Tình huống 2:} Học sinh không có thiết bị cá nhân
+    \begin{itemize}
+    \item Sắp xếp nhóm 3-4 học sinh/1 máy tính của trường
+    \item Sử dụng phương pháp "station rotation" để luân phiên sử dụng thiết bị
+    \end{itemize}
+\item \textbf{Tình huống 3:} Một số học sinh tiếp thu nhanh hơn
+    \begin{itemize}
+    % CẬP NHẬT: Khớp với app
+    \item Giao nhiệm vụ mở rộng: Khám phá "Tab Học tập" và "Phân tích độ nhạy".
+    \item Giao vai trò hỗ trợ các nhóm khác
+    \end{itemize}
+\end{itemize}
+\end{competitionsection}
+
+%%%%% PHẦN 3: KẾ HOẠCH DẠY HỌC %%%%%
+\begin{competitionsection}{III}
+    \vspace{0.5cm}
+\subsection*{3.1. Tiến trình hai tiết học (Tóm tắt)}
+\teachingplan{10'}{Khởi động}{Video tình huống: Nam (16t) muốn mua xe máy điện 20 triệu}{Công nghệ: Clip tương tác}
+\teachingplan{15'}{Khám phá toán học}{Xây dựng công thức lãi kép}{PP: Khám phá có hướng dẫn}
+% CẬP NHẬT: Khớp với app
+\teachingplan{10'}{Chuyển tiếp}{Demo ứng dụng web (3 tabs)}{Công nghệ: Màn hình tương tác}
+\teachingplan{20'}{Thực hành}{Sử dụng Tab 1 (Tính toán) và Tab 2 (Kịch bản)}{PP: Học qua dự án}
+\teachingplan{15'}{Phân tích}{So sánh kịch bản, phân tích độ nhạy}{Công cụ: Biểu đồ cột, đường}
+\teachingplan{10'}{Báo cáo}{Thuyết trình nhóm}{Công nghệ: Google Slides chia sẻ}
+\teachingplan{5'}{Tổng kết}{Hệ thống hóa kiến thức (Tab 3)}{PP: Sơ đồ tư duy}
+\teachingplan{5'}{Mở rộng}{Bài tập về nhà ứng dụng}{Nền tảng: Google Classroom}
+
+\subsection*{3.2. Kịch bản chi tiết}
+
+\begin{casestudy}
+Nam là học sinh lớp 11, mong muốn mua một chiếc xe máy điện trị giá 20.000.000 VNĐ khi vào đại học (sau 2 năm nữa). Hiện tại Nam được gia đình cho 5.000.000 VNĐ. Mỗi tháng Nam có thể tiết kiệm từ 300.000 - 500.000 VNĐ từ tiền tiêu vặt và làm thêm. Với các mức lãi suất tiết kiệm khác nhau, Nam nên chọn phương án nào để đạt được mục tiêu?
+\end{casestudy}
+
+\subsubsection*{Hoạt động 1: Khởi động - Kết nối thực tiễn (10 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} Giáo viên chiếu video phỏng vấn 3 học sinh về ước mơ mua xe máy điện khi vào đại học
+\item \textbf{Bước 2:} Đặt câu hỏi kích thích tư duy:
+    \begin{itemize}
+    \item \textit{"Theo em, việc để dành tiền mua xe sau 2 năm có dễ dàng không?"}
+    \item \textit{"Làm thế nào để số tiền tiết kiệm sinh lời hiệu quả?"}
+    \end{itemize}
+\item \textbf{Bước 3:} Học sinh thảo luận cặp đôi (2 phút) và chia sẻ ý tưởng ban đầu
+\item \textbf{Dự kiến câu trả lời:}
+    \begin{itemize}
+    \item Gửi ngân hàng để hưởng lãi
+    \item Gửi càng sớm càng tốt để tiền sinh lời nhiều hơn
+    \item Cần tính toán chi tiết để tránh thiếu hụt
+    \end{itemize}
+\item \textbf{Chuyển tiếp:} \textit{"Hôm nay chúng ta sẽ sử dụng toán học và công nghệ để xây dựng công cụ giúp Nam và các bạn có quyết định tài chính sáng suốt."}
+\end{itemize}
+
+\subsubsection*{Hoạt động 2: Khám phá công thức toán học (15 phút)}
+\begin{task}{Nhóm}
+\textbf{Nhiệm vụ:} Khám phá công thức lãi kép thông qua tình huống cụ thể (PHT 1)
+\textbf{Hướng dẫn:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Tính số tiền nhận được sau 1, 2, 3 tháng nếu gửi 5.000.000 VNĐ với lãi suất 0,583\%/tháng (tương đương 7\%/năm)
+\item Nhận xét quy luật và tổng quát thành công thức
+\item Thử áp dụng công thức cho trường hợp gửi tiền hàng tháng
+\end{itemize}
+\end{task}
+
+\begin{keyformula}
+\textbf{Công thức 1: Lãi kép (gửi một lần)}
+$$A = P \times (1 + r)^n$$
+\textbf{Công thức 2: Lãi kép (gửi định kỳ)}
+$$A = P \times \frac{(1+r)^n-1}{r}$$
+Trong đó:
+\begin{itemize}[leftmargin=*,noitemsep]
+\item $A$: Số tiền nhận được sau $n$ kỳ
+\item $P$: Tiền gốc (hoặc số tiền gửi mỗi kỳ)
+\item $r$: Lãi suất theo kỳ (tháng)
+\item $n$: Số kỳ tính lãi
+\end{itemize}
+\end{keyformula}
+
+% CẬP NHẬT: Hoạt động 3 khớp với 3 tab của app
+\subsubsection*{Hoạt động 3: Chuyển tiếp sang công nghệ (10 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} Giáo viên demo ứng dụng web \texttt{CongCuTuVanTietKiem.html} (PHT 2).
+\item \textbf{Bước 2:} Thao tác minh họa 3 tab chính:
+    \begin{itemize}
+    \item \textbf{Tab 1 - Tính toán:} Nhập các tham số (5tr, 400k, 7\%, 24 tháng). Cho thấy kết quả (16.05tr) và biểu đồ tròn. Nhấn bật "Lạm phát" để thấy giá trị thực bị giảm.
+    \item \textbf{Tab 2 - Phân tích kịch bản:} Thêm 2-3 kịch bản (VD: tăng tiền, tăng thời gian). Cho thấy biểu đồ cột so sánh. Kéo xuống cho thấy biểu đồ đường "Phân tích độ nhạy".
+    \item \textbf{Tab 3 - Học tập:} Lướt qua nội dung công thức, các kênh đầu tư và quy trình STEM.
+    \end{itemize}
+\item \textbf{Bước 3:} Đặt câu hỏi chuyển tiếp:
+    \begin{itemize}
+    \item \textit{"Làm thế nào để nhanh chóng so sánh nhiều phương án khác nhau?"}
+    \item \textit{"Yếu tố nào (tiền gửi hay lãi suất) ảnh hưởng đến kết quả nhiều hơn?"}
+    \end{itemize}
+\end{itemize}
+
+% CẬP NHẬT: Hoạt động 4 khớp với app
+\subsubsection*{Hoạt động 4: Xây dựng công cụ tính toán (20 phút)}
+\begin{task}{Nhóm}
+\textbf{Nhiệm vụ:} Sử dụng Web App (PHT 2) để tìm 2 phương án khả thi đạt mục tiêu 20 triệu.
+\textbf{Yêu cầu cụ thể:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tab 1:} Nhập kịch bản gốc, ghi lại kết quả (chưa đạt).
+\item \textbf{Tab 2:} Sử dụng nút "Thêm kịch bản" để thử nghiệm các thay đổi (tăng tiền gửi, tăng thời gian, tìm lãi suất cao hơn).
+\item \textbf{Tab 2:} Tìm ra 2 kịch bản đạt được mục tiêu 20 triệu. Chụp màn hình (hoặc dùng nút "Xuất biểu đồ").
+\item \textbf{Tab 2:} Quan sát biểu đồ "Phân tích độ nhạy" và nhận xét.
+\end{itemize}
+\end{task}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Hỗ trợ giáo viên:}
+    \begin{itemize}
+    \item Tuần tra các nhóm, hỗ trợ kỹ thuật khi cần
+    \item Gợi ý các ngân hàng có lãi suất cạnh tranh (xem Phụ lục 4)
+    \item Hướng dẫn cách đọc biểu đồ cột (so sánh) và biểu đồ đường (độ nhạy).
+    \end{itemize}
+\end{itemize}
+
+% CẬP NHẬT: Hoạt động 5 khớp với app
+\subsubsection*{Hoạt động 5: Phân tích và trình bày (15 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} 2 nhóm được chọn ngẫu nhiên trình bày phương án của mình (3 phút/nhóm) (dựa trên PHT 2).
+\item \textbf{Bước 2:} Các nhóm khác đặt câu hỏi phản biện
+\item \textbf{Bước 3:} Giáo viên đặt câu hỏi mở rộng:
+    \begin{itemize}
+    % CẬP NHẬT: Câu hỏi Lạm phát khớp với tính năng của app
+    \item \textit{"Sử dụng \textbf{Tab Tính toán}, hãy bật chức năng 'Lạm phát' (với tỉ lệ 3.5\%). Giá trị thực của tiền tiết kiệm thay đổi như thế nào so với giá trị danh nghĩa?"}
+    \item \textit{"Dựa trên biểu đồ 'Phân tích độ nhạy' ở \textbf{Tab 2}, yếu tố nào (tăng tiền gửi hay tăng lãi suất) có ảnh hưởng mạnh mẽ hơn?"}
+    \end{itemize}
+\item \textbf{Bước 4:} Cả lớp thảo luận và thống nhất phương án tối ưu
+\end{itemize}
+
+\subsubsection*{Hoạt động 6: Tổng kết và mở rộng (10 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tổng kết kiến thức:} Giáo viên hệ thống hóa (sử dụng \textbf{Tab 3 - Học tập}):
+    \begin{itemize}
+    \item Công thức lãi kép là ứng dụng thực tế của hàm số mũ (M).
+    \item Công nghệ (T) giúp tự động hóa, trực quan hóa (biểu đồ) và phân tích (độ nhạy).
+    \item Lập kế hoạch tài chính (A - Arts/Kinh tế) từ sớm mang lại lợi ích lâu dài.
+    \end{itemize}
+\item \textbf{Bài tập về nhà:}
+    \begin{itemize}
+    \item Sử dụng công cụ (Web App) đã học để lập kế hoạch tài chính cho một mục tiêu cá nhân.
+    \item Trình bày trong 1 trang giấy hoặc slide, bao gồm:
+        \begin{itemize}
+        \item Mục tiêu cụ thể (số tiền, thời gian)
+        \item Phương án tiết kiệm được lựa chọn (ảnh chụp từ Tab 2)
+        \item Lý do lựa chọn và tính khả thi
+        \end{itemize}
+    \end{itemize}
+\item \textbf{Liên kết thực tế:}
+    \begin{itemize}
+    \item Giới thiệu các kênh đầu tư khác (có trong Tab 3).
+    \item Khuyến khích mở tài khoản tiết kiệm học đường tại ngân hàng.
+    \end{itemize}
+\end{itemize}
+\end{competitionsection}
+
+%%%%% PHẦN 4: HƯỚNG DẪN HỌC SINH %%%%%
+\begin{competitionsection}{IV}
+\vspace{0.5cm}
+\subsection*{4.1. Hướng dẫn chi tiết cho học sinh}
+\subsubsection*{Giai đoạn 1: Khám phá công thức toán học (PHT 1)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} Tính toán số tiền nhận được theo từng tháng:
+    \begin{itemize}
+    \item Tháng 1: $5.000.000 \times (1 + 0,00583) = 5.029.150$ VNĐ
+    \item Tháng 2: $5.029.150 \times (1 + 0,00583) = 5.058.471$ VNĐ
+    \item Tháng 3: $5.058.471 \times (1 + 0,00583) = 5.087.965$ VNĐ
+    \end{itemize}
+\item \textbf{Bước 2:} Nhận xét quy luật:
+    \begin{itemize}
+    \item Số tiền tăng theo cấp số nhân với công bội $(1 + r)$
+    \item Tổng quát công thức: $A = P \times (1 + r)^n$
+    \end{itemize}
+\item \textbf{Bước 3:} Kiểm tra công thức bằng cách tính cho $n = 24$ tháng
+\end{itemize}
+
+% CẬP NHẬT: Giai đoạn 2 khớp với 3 tab của app
+\subsubsection*{Giai đoạn 2: Sử dụng công cụ công nghệ (Web App \texttt{CongCuTuVanTietKiem.html})}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1: Mở ứng dụng}
+    \begin{itemize}
+    \item Mở file \texttt{CongCuTuVanTietKiem.html} bằng trình duyệt web.
+    \end{itemize}
+\item \textbf{Bước 2: Tab 1 - Tính toán}
+    \begin{itemize}
+    \item Nhập các tham số của bài toán gốc (5tr, 400k, 7\%, 24 tháng).
+    \item Ghi lại kết quả (chưa đạt mục tiêu 20tr).
+    \item Quan sát biểu đồ tròn (Doughnut chart) để xem cơ cấu tiền.
+    \item \textbf{Thử nghiệm:} Bật chức năng "Lạm phát" và xem "giá trị thực" thay đổi thế nào.
+    \end{itemize}
+\item \textbf{Bước 3: Tab 2 - Phân tích kịch bản}
+    \begin{itemize}
+    \item Nhấn nút "Thêm kịch bản" để tạo phương án mới.
+    \item Thay đổi các tham số (VD: Tăng tiền gửi tháng, tăng thời gian, tăng lãi suất).
+    \item Quan sát biểu đồ cột để so sánh các kịch bản.
+    \item Kéo xuống dưới, quan sát biểu đồ đường "Phân tích độ nhạy".
+    \end{itemize}
+\item \textbf{Bước 4: Tab 3 - Học tập}
+    \begin{itemize}
+    \item Đọc lại 2 công thức lãi kép.
+    \item Đọc phần "Phân tích đầu tư" để biết thêm về các kênh khác.
+    \item Đọc phần "Quy trình STEM" để hiểu rõ dự án.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Giai đoạn 3: Phân tích và trình bày}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} So sánh các phương án (từ Tab 2) dựa trên tiêu chí:
+    \begin{itemize}
+    \item Khả năng thực hiện (số tiền gửi hàng tháng có phù hợp với điều kiện cá nhân)
+    \item Hiệu quả tài chính (tổng số tiền nhận được)
+    \item Rủi ro (độ ổn định của lãi suất)
+    \end{itemize}
+\item \textbf{Bước 2:} Chọn 1 phương án tối ưu và lý giải lựa chọn
+\item \textbf{Bước 3:} Chuẩn bị phần trình bày 3 phút với cấu trúc:
+    \begin{itemize}
+    \item Giới thiệu tình huống và mục tiêu
+    \item Trình bày các phương án đã thử nghiệm (chụp ảnh biểu đồ cột từ Tab 2)
+    \item Phân tích và lựa chọn phương án tối ưu
+    \item Kết luận (có nhắc đến lạm phát và độ nhạy)
+    \end{itemize}
+\end{itemize}
+
+\subsection*{4.2. Gợi ý mở rộng}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tìm hiểu sâu về tài chính cá nhân (từ Tab 3):}
+    \begin{itemize}
+    \item Nghiên cứu các hình thức đầu tư khác: chứng khoán, bất động sản, vàng
+    \item So sánh rủi ro và lợi nhuận của các kênh đầu tư
+    \item Tìm hiểu về lạm phát và ảnh hưởng đến giá trị tiền tệ
+    \end{itemize}
+\item \textbf{Phát triển công cụ (từ Phụ lục 5):}
+    \begin{itemize}
+    \item Thử "View Source" (Xem nguồn trang) file HTML để đọc code JavaScript.
+    \item Đề xuất cải tiến giao diện hoặc thuật toán tính toán
+    \item Xây dựng phiên bản dành cho điện thoại di động
+    \end{itemize}
+\item \textbf{Ứng dụng thực tế:}
+    \begin{itemize}
+    \item Tạo kế hoạch tài chính cho cả gia đình
+    \item Tham gia cuộc thi "Quản lý tài chính học đường" do ngân hàng tổ chức
+    \item Viết bài chia sẻ kinh nghiệm trên blog cá nhân hoặc mạng xã hội
+    \end{itemize}
+\end{itemize}
+\end{competitionsection}
+
+%%%%% PHẦN 5: CÁC PHỤ LỤC %%%%%
+\begin{competitionsection}{V}
+\vspace{0.5cm}
+\subsection*{Phụ lục 1: Phiếu học tập số 1 - Khám phá công thức lãi kép}
+\begin{phieuhoc_tap_box}{Phụ lục 1: Phiếu học tập số 1 - Công thức lãi kép}
+\textbf{Bài toán 1:} Gửi 5.000.000 VNĐ vào ngân hàng với lãi suất 0,583\%/tháng (tương đương 7\%/năm). Tính số tiền nhận được sau:
+\begin{itemize}[leftmargin=*,noitemsep]
+\item 1 tháng: $5.000.000 \times (1 + 0,00583) = \underline{\hspace{3cm}}$ VNĐ
+\item 2 tháng: $\underline{\hspace{3cm}} \times (1 + 0,00583) = \underline{\hspace{3cm}}$ VNĐ
+\item 3 tháng: $\ldots$
+\item n tháng: $\ldots$
+\end{itemize}
+\textbf{Kết luận:} Công thức lãi kép cho khoản gửi một lần:
+$$\boxed{A = P \times (1 + r)^n}$$
+
+\vspace{0.5cm}
+\textbf{Bài toán 2:} Mỗi tháng gửi đều đặn 400.000 đồng vào ngân hàng với lãi suất 0,583\%/tháng. Tính số tiền nhận được sau 24 tháng.
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Số tiền gửi tháng cuối cùng (tháng 24): 400.000
+\item Số tiền gửi tháng 23: $400.000 \times (1 + 0,00583)$
+\item Số tiền gửi tháng 22: $400.000 \times (1 + 0,00583)^2$
+\item $\ldots$
+\item Tổng số tiền là tổng của một Cấp số nhân $S_n = u_1 \times \frac{q^n - 1}{q-1}$
+\end{itemize}
+\textbf{Kết luận:} Công thức lãi kép cho khoản gửi định kỳ:
+$$\boxed{A = P \times \frac{(1+r)^n-1}{r}}$$
+Trong đó $P$ là số tiền gửi mỗi kỳ, $r$ là lãi suất theo kỳ, $n$ là số kỳ.
+\end{phieuhoc_tap_box}
+
+\newpage
+% CẬP NHẬT: PHT 2 phải khớp với 3 tab của app
+\subsection*{Phụ lục 2: Phiếu học tập số 2 - Hướng dẫn sử dụng ứng dụng web}
+\begin{phieuhoc_tap_box}{Phụ lục 2: Phiếu học tập số 2 - Nhiệm vụ với Web App \texttt{CongCuTuVanTietKiem.html}}
+\textbf{\color{accent}I. Giới thiệu ứng dụng}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tên ứng dụng:} Công cụ tư vấn tiết kiệm tương lai
+\item \textbf{Địa chỉ truy cập:} File \texttt{CongCuTuVanTietKiem.html} (mở bằng trình duyệt)
+\item \textbf{Cấu trúc 3 Tab:}
+    \begin{itemize}
+    \item \textbf{Tab 1 - TÍNH TOÁN:} Nhập tham số, tính kết quả, xem biểu đồ tròn, bật/tắt Lạm phát.
+    \item \textbf{Tab 2 - PHÂN TÍCH KỊCH BẢN:} Thêm/xóa kịch bản, so sánh bằng biểu đồ cột, xem phân tích độ nhạy (biểu đồ đường).
+    \item \textbf{Tab 3 - HỌC TẬP:} Đọc công thức Toán, tìm hiểu kênh đầu tư khác, xem quy trình STEM.
+    \end{itemize}
+\end{itemize}
+\textbf{\color{accent}II. Hướng dẫn thực hiện nhiệm vụ}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1: Mở Tab "TÍNH TOÁN"}
+    \begin{itemize}
+    \item Nhập các tham số của bài toán gốc:
+    \item \textit{Số tiền hiện có:} 5.000.000
+    \item \textit{Số tiền gửi thêm mỗi tháng:} 400.000
+    \item \textit{Lãi suất năm (\%):} 7
+    \item \textit{Thời gian (tháng):} 24
+    \item \textit{Ghi lại kết quả (Tổng tiền):} \underline{\hspace{4cm}} VNĐ
+    \item \textit{Ghi lại Trạng thái mục tiêu (20tr):} \underline{\hspace{4cm}}
+    \item \textbf{Thử nghiệm:} Bật chức năng "Lạm phát" (3.5\%). Ghi lại "Giá trị thực": \underline{\hspace{3cm}} VNĐ
+    \end{itemize}
+\item \textbf{Bước 2: Mở Tab "PHÂN TÍCH KỊCH BẢN"}
+    \begin{itemize}
+    \item Ứng dụng đã có sẵn 3 kịch bản. Hãy nhấn "Thêm kịch bản" để tạo \textbf{Kịch bản 4} của nhóm em.
+    \item \textit{Mục tiêu:} Tạo kịch bản để đạt được 20.000.000 VNĐ.
+    \item \textit{Kịch bản 4 đề xuất:} (VD: Tăng tiền gửi tháng lên 600.000) \underline{\hspace{6cm}}
+    \item Quan sát biểu đồ cột. Kịch bản nào tốt nhất? \underline{\hspace{4cm}}
+    \end{itemize}
+\item \textbf{Bước 3: Phân tích Độ nhạy (vẫn ở Tab 2)}
+    \begin{itemize}
+    \item Kéo xuống xem biểu đồ đường "Phân tích độ nhạy cảm".
+    \item \textit{Nhận xét:} Yếu tố nào (Lãi suất hay Tiền gửi tháng) làm cho các đường đồ thị dốc hơn (ảnh hưởng mạnh hơn)? \underline{\hspace{10cm}}
+    \end{itemize}
+\item \textbf{Bước 4: Mở Tab "HỌC TẬP"}
+    \begin{itemize}
+    \item Đọc phần "Phân tích đầu tư". Kể tên 2 kênh đầu tư khác ngoài gửi tiết kiệm:
+    \item 1: \underline{\hspace{4cm}} | 2: \underline{\hspace{4cm}}
+    \end{itemize}
+\end{itemize}
+\end{phieuhoc_tap_box}
+
+\newpage
+\subsection*{Phụ lục 3: Rubric đánh giá sản phẩm}
+% SỬA LỖI TRÀN LỀ
+\begin{tabularx}{\linewidth}{@{} >{\raggedright\arraybackslash}p{3.5cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X @{}}
+    \toprule
+    \rowcolor{TableHeader}
+    \sffamily\bfseries Tiêu chí & \sffamily\bfseries Xuất sắc (4 điểm) & \sffamily\bfseries Khá (3 điểm) & \sffamily\bfseries Cần cải thiện (1-2 điểm) \\
+    \midrule
+    
+    \textbf{Tính chính xác của công thức toán học} 
+    & 
+    % SỬA LỖI: Dùng \begin{itemize}
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Công thức (PHT 1) chính xác
+        \item Giải thích rõ ràng nguồn gốc
+        \item Ứng dụng linh hoạt
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Công thức chủ yếu chính xác
+        \item Giải thích cơ bản
+        \item Ứng dụng được
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Công thức sai
+        \item Không giải thích được
+        \item Không ứng dụng được
+    \end{itemize} \\
+    \addlinespace
+    % CẬP NHẬT: Tiêu chí khớp với app
+    \textbf{Khả năng sử dụng công nghệ (Web App)} 
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Sử dụng thành thạo cả 3 tabs
+        \item Phân tích đúng (Lạm phát, Độ nhạy)
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Sử dụng tốt Tab 1, 2
+        \item Còn lúng túng ở Tab 3, Độ nhạy
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Chỉ dùng được Tab 1
+        \item Không phân tích được
+    \end{itemize} \\
+    \addlinespace
+    \textbf{Tính khả thi của phương án (PHT 2)} 
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Đề xuất 2+ phương án thực tế, khả thi
+        \item Phân tích chi tiết ưu nhược điểm
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Đề xuất 1-2 phương án
+        \item Phân tích cơ bản
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Phương án không khả thi
+        \item Thiếu phân tích
+    \end{itemize} \\
+    \addlinespace
+    \textbf{Khả năng trình bày và bảo vệ ý tưởng} 
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Trình bày mạch lạc, logic
+        \item Hỗ trợ trực quan hiệu quả
+        \item Trả lời trọn vẹn
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Trình bày rõ ràng
+        \item Có hỗ trợ trực quan
+        \item Trả lời được
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex, partopsep=0pt]
+        \item Trình bày rời rạc
+        \item Thiếu trực quan
+        \item Không trả lời được
+    \end{itemize} \\ % SỬA LỖI: Xóa \end{tcolorbox}
+    \bottomrule
+\end{tabularx}
+\vspace{1em}
+\noindent\textbf{Tổng điểm:} \underline{\hspace{2cm}}/16 điểm\\
+\textbf{Nhận xét của giáo viên:}\\
+\vspace{3cm}
+
+\subsection*{Phụ lục 4: Bảng tham khảo lãi suất tiết kiệm}
+\begin{center}
+% Nâng cấp: Dùng booktabs
+\begin{tabularx}{0.9\linewidth}{@{} l C C C C @{}}
+\toprule
+\header{Ngân hàng} & \header{Không kỳ hạn} & \header{6 tháng} & \header{12 tháng} & \header{24 tháng} \\
+\midrule
+Vietcombank & 0,5\% & 5,3\% & 7,0\% & 7,5\% \\
+Techcombank & 0,6\% & 5,5\% & 7,2\% & 7,8\% \\
+VPBank & 0,4\% & 5,2\% & 6,8\% & 7,3\% \\
+MB Bank & 0,5\% & 5,4\% & 7,1\% & 7,6\% \\
+\bottomrule
+\multicolumn{5}{@{}l}{\footnotesize * Số liệu cập nhật tháng 10/2025, mang tính minh họa.}
+\end{tabularx}
+\end{center}
+
+\newpage
+% CẬP NHẬT: Phụ lục 5 khớp với file HTML
+\subsection*{Phụ lục 5: Mã nguồn ứng dụng web (tham khảo)}
+\textbf{Giới thiệu:} Ứng dụng được phát triển bằng \textbf{HTML, CSS và JavaScript (vanilla JS)}, không sử dụng React.js.
+% SỬA LỖI: Dùng \itemize
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Cấu trúc 3 Tabs:} (1) Tính toán, (2) Phân tích kịch bản, (3) Học tập.
+\item \textbf{Thư viện sử dụng:} \texttt{Chart.js} (vẽ biểu đồ), \texttt{SweetAlert2} (hiển thị thông báo).
+\item \textbf{Đặc điểm:} Chạy trực tiếp từ file \texttt{.html}, không cần server, tương thích Quyết định 791/QĐ-SGDĐT.
+\end{itemize}
+
+\textbf{Mã nguồn mẫu - Hàm tính toán chính (JavaScript - trích từ file HTML):}
+% CẬP NHẬT: Mã nguồn khớp với file HTML
+\begin{verbatim}
+// Main calculation function
+function calculate() {
+    try {
+        const initial = parseFloat(document
+        .getElementById('initial').value) || 0;
+        const monthly = parseFloat(document
+        .getElementById('monthly').value) || 0;
+        const rateAnnual = parseFloat(document
+        .getElementById('rate').value) || 0;
+        const months = parseInt(document
+        .getElementById('monthsInput').value) || 1;
+        const isUsingInflation = document
+        .getElementById('inflationToggle').checked;
+        const inflationRate = isUsingInflation ? 
+            (parseFloat(document
+            .getElementById('inflationRate')
+            .value) || 3.5) / 100 : 0;
+        
+        // Convert annual rate to monthly rate
+        const rateMonthly = rateAnnual / 100 / 12;
+        
+        // Calculate compound interest for initial deposit
+        const initialFutureValue = initial * Math
+        .pow(1 + rateMonthly, months);
+        
+        // Calculate compound interest for monthly deposits
+        let monthlyFutureValue = 0;
+        if (rateMonthly > 0) {
+            monthlyFutureValue = monthly * ((Math
+            .pow(1 + rateMonthly, months) - 1) 
+                / rateMonthly);
+        } else {
+            monthlyFutureValue = monthly * months;
+        }
+        
+        // Total amount before inflation
+        const nominalTotal = initialFutureValue 
+        + monthlyFutureValue;
+        
+        // Calculate real value after inflation
+        const inflationFactor = isUsingInflation ? 
+            Math.pow(1 + inflationRate/12, months) : 1;
+        const realTotal = nominalTotal / inflationFactor;
+        
+        // ... (phần còn lại của hàm cập nhật giao diện) ...
+        
+        return {
+            initial, monthly, rateAnnual, months, nominalTotal, 
+            realTotal, /* ... */
+        };
+    } catch (error) {
+        console.error('Lỗi tính toán:', error);
+        // ... (xử lý lỗi) ...
+    }
+}
+\end{verbatim}
+
+\textbf{Tài nguyên học tập:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Mã nguồn đầy đủ:} Có thể xem trực tiếp bằng cách mở file \texttt{CongCuTuVanTietKiem.html} bằng trình soạn thảo văn bản (Notepad++, VS Code...) hoặc chọn "View Page Source" (Xem Nguồn Trang) trên trình duyệt.
+\end{itemize} % SỬA LỖI
+\textbf{Hướng dẫn cài đặt cho giáo viên:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Không cần cài đặt.
+\item Chỉ cần gửi file \texttt{CongCuTuVanTietKiem.html} cho học sinh.
+\item Yêu cầu học sinh mở file bằng trình duyệt web (Chrome, Firefox, Edge...).
+\end{itemize} % SỬA LỖI
+\end{competitionsection}
+
+\end{document}

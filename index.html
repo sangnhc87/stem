@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CÔNG CỤ TƯ VẤN TIẾT KIỆM TƯƠNG LAI | STEM Toán Học Tài Chính</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* CSS không thay đổi - giữ nguyên toàn bộ phần style */
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4895ef;
+            --success: #4cc9f0;
+            --warning: #f72585;
+            --dark: #1d3557;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --card-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header styling */
+        header {
+            background: linear-gradient(120deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            background: linear-gradient(to right, #fff, #e0f7fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+        
+        .tagline {
+            background: rgba(255,255,255,0.15);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-top: 15px;
+            backdrop-filter: blur(10px);
+            font-weight: 500;
+        }
+        
+        /* Navigation tabs */
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .tabs {
+            display: flex;
+            background: white;
+            border-radius: 15px;
+            padding: 5px;
+            box-shadow: var(--card-shadow);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .tab {
+            flex: 1;
+            padding: 15px 10px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.1rem;
+            border-radius: 10px;
+            transition: var(--transition);
+            color: var(--gray);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tab::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transition: var(--transition);
+            transform-origin: right;
+        }
+        
+        .tab:hover {
+            color: var(--primary);
+        }
+        
+        .tab.active {
+            color: white;
+            background: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(67, 97, 238, 0.4);
+        }
+        
+        .tab.active::after {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        /* Main content layout */
+        .main-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        @media (max-width: 1100px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Card styling */
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            padding: 30px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+        
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary);
+        }
+        
+        .card-title {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid rgba(67, 97, 238, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card-icon {
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+        
+        /* Input and form styling */
+        .input-group {
+            margin-bottom: 25px;
+        }
+        
+        .input-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .input-description {
+            font-size: 0.85rem;
+            color: var(--gray);
+            margin-top: 4px;
+            font-style: italic;
+        }
+        
+        input, select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid rgba(67, 97, 238, 0.2);
+            border-radius: 12px;
+            font-size: 1rem;
+            transition: var(--transition);
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+        
+        input[type="range"] {
+            -webkit-appearance: none;
+            height: 8px;
+            border-radius: 4px;
+            background: #e9ecef;
+            outline: none;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--primary);
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 2px 6px rgba(67, 97, 238, 0.4);
+        }
+        
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.2);
+        }
+        
+        /* Results and charts */
+        .result-container {
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.08) 0%, rgba(76, 201, 240, 0.08) 100%);
+            border-radius: 16px;
+            padding: 25px;
+            margin: 25px 0;
+            border-left: 4px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .result-container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200px;
+            height: 200px;
+            background: radial-gradient(circle, rgba(67, 97, 238, 0.1) 0%, transparent 70%);
+        }
+        
+        .result-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .result-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 15px 0;
+            font-family: 'Poppins', sans-serif;
+            text-shadow: 0 2px 4px rgba(67, 97, 238, 0.2);
+        }
+        
+        .target-status {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .target-met {
+            background: rgba(76, 201, 240, 0.2);
+            color: #0891b2;
+        }
+        
+        .target-not-met {
+            background: rgba(247, 37, 133, 0.15);
+            color: #be123c;
+        }
+        
+        .chart-container {
+            height: 320px;
+            margin-top: 25px;
+            position: relative;
+        }
+        
+        .chart-title {
+            text-align: center;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--dark);
+            font-size: 1.2rem;
+        }
+        
+        /* Scenario comparison */
+        .scenario-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .scenario-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 2px solid rgba(67, 97, 238, 0.1);
+        }
+        
+        .scenario-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 12px 28px rgba(67, 97, 238, 0.15);
+        }
+        
+        .scenario-header {
+            background: linear-gradient(120deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .scenario-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .scenario-subtitle {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+        
+        .scenario-content {
+            padding: 25px;
+        }
+        
+        .scenario-param {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(0,0,0,0.08);
+        }
+        
+        .scenario-param:last-child {
+            border-bottom: none;
+        }
+        
+        .scenario-value {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .scenario-result {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px solid rgba(67, 97, 238, 0.2);
+        }
+        
+        .scenario-amount {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+        
+        /* Button styles */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            flex: 1;
+            min-width: 150px;
+            padding: 14px 20px;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            font-family: 'Poppins', sans-serif;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        
+        .btn:active {
+            transform: translateY(1px);
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary);
+        }
+        
+        .btn-success {
+            background: #2ecc71;
+            color: white;
+        }
+        
+        .btn-success:hover {
+            background: #27ae60;
+        }
+        
+        .btn-warning {
+            background: #f39c12;
+            color: white;
+        }
+        
+        .btn-warning:hover {
+            background: #e67e22;
+        }
+        
+        .btn-danger {
+            background: #e74c3c;
+            color: white;
+        }
+        
+        .btn-danger:hover {
+            background: #c0392b;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        
+        .btn-outline:hover {
+            background: rgba(67, 97, 238, 0.1);
+        }
+        
+        /* Learning section */
+        .learning-section {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            padding: 30px;
+            margin-top: 30px;
+        }
+        
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .learning-card {
+            background: linear-gradient(135deg, rgba(67, 97, 238, 0.05) 0%, rgba(76, 201, 240, 0.05) 100%);
+            border-radius: 16px;
+            padding: 25px;
+            transition: var(--transition);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .learning-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 8px 20px rgba(67, 97, 238, 0.15);
+        }
+        
+        .learning-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .learning-content {
+            line-height: 1.7;
+        }
+        
+        .formula {
+            background: rgba(67, 97, 238, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+            text-align: center;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 1.3rem;
+            color: var(--dark);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .formula::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+        }
+        
+        .highlight {
+            background: rgba(76, 201, 240, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: #0891b2;
+        }
+        
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .footer {
+            text-align: center;
+            color: var(--dark);
+            margin-top: 40px;
+            padding: 25px 0;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .footer-highlight {
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        /* Animation classes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+        
+        .animation-delay-1 { animation-delay: 0.1s; }
+        .animation-delay-2 { animation-delay: 0.2s; }
+        .animation-delay-3 { animation-delay: 0.3s; }
+        .animation-delay-4 { animation-delay: 0.4s; }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .card {
+                padding: 20px;
+            }
+            
+            .result-value {
+                font-size: 2rem;
+            }
+            
+            .scenario-amount {
+                font-size: 1.7rem;
+            }
+            
+            .btn {
+                min-width: auto;
+                width: 100%;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .tab {
+                width: 100%;
+            }
+            
+            .chart-container {
+                height: 250px;
+            }
+        }
+        
+        /* Advanced features styling */
+        .advanced-section {
+            margin-top: 30px;
+            padding-top: 25px;
+            border-top: 2px dashed rgba(67, 97, 238, 0.2);
+        }
+        
+        .inflation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .sensitivity-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 25px;
+        }
+        
+        .sensitivity-header {
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        
+        .sensitivity-chart {
+            height: 400px;
+            position: relative;
+        }
+        
+        /* Loading animation */
+        .loading {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            border: 3px solid rgba(67, 97, 238, 0.3);
+            border-radius: 50%;
+            border-top-color: var(--primary);
+            animation: spin 1s linear infinite;
+            margin-right: 10px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        .loading-text {
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            font-weight: 500;
+        }
+        
+        /* Toggle switch styling */
+        .switch-container {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 26px;
+        }
+        
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 26px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px;
+            width: 20px;
+            left: 3px;
+            bottom: 3px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: var(--primary);
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(24px);
+        }
+        
+        .switch-label {
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        /* Scenario analysis */
+        .analysis-section {
+            margin-top: 30px;
+            padding: 25px;
+            background: rgba(67, 97, 238, 0.05);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary);
+        }
+        
+        .analysis-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .analysis-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .analysis-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .analysis-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+        
+        .analysis-label {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+        
+        .chart-annotation {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            margin-top: 15px;
+            border-left: 3px solid var(--accent);
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .tabs-container, .button-group, .no-print {
+                display: none !important;
+            }
+            
+            .card, .result-container {
+                box-shadow: none !important;
+                border: 1px solid #ddd;
+            }
+            
+            .header-content {
+                text-align: left;
+            }
+        }
+        
+        /* SweetAlert2 custom styling */
+        .swal2-container {
+            z-index: 10000;
+        }
+    </style>
+</head>
+<body>
+    <!-- HTML content remains unchanged -->
+    <header>
+        <div class="container">
+            <div class="header-content animate-fade-in">
+                <h1><i class="fas fa-calculator"></i> CÔNG CỤ TƯ VẤN TIẾT KIỆM TƯƠNG LAI</h1>
+                <p class="subtitle">Ứng dụng hàm số mũ & phân tích dữ liệu - Dự án STEM môn Toán</p>
+                <div class="tagline">
+                    <i class="fas fa-award"></i> Giải quyết vấn đề thực tiễn bằng Toán học & Công nghệ
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="tabs-container animate-fade-in animation-delay-1">
+            <div class="tabs">
+                <div class="tab active" data-tab="calculator">
+                    <i class="fas fa-calculator"></i> TÍNH TOÁN
+                </div>
+                <div class="tab" data-tab="scenario">
+                    <i class="fas fa-chart-line"></i> PHÂN TÍCH KỊCH BẢN
+                </div>
+                <div class="tab" data-tab="learn">
+                    <i class="fas fa-graduation-cap"></i> HỌC TẬP
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content active" id="calculator">
+            <div class="main-content">
+                <div class="card animate-fade-in animation-delay-2">
+                    <h2 class="card-title"><i class="fas fa-sliders-h card-icon"></i> THAM SỐ TIẾT KIỆM</h2>
+                    
+                    <div class="info-box" style="background: rgba(76, 201, 240, 0.1); border-left: 4px solid #4cc9f0; padding: 15px; border-radius: 0 10px 10px 0; margin: 15px 0;">
+                        <strong><i class="fas fa-lightbulb"></i> TÌNH HUỐNG THỰC TIỄN:</strong> Bạn muốn mua xe máy điện trị giá 20.000.000 VNĐ sau 2 năm. Hiện có 5.000.000 VNĐ và có thể tiết kiệm 300.000 - 500.000 VNĐ mỗi tháng.
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-label">
+                            <span><i class="fas fa-money-bill-wave"></i> Số tiền hiện có (VNĐ)</span>
+                            <span class="value-display" id="initialDisplay">5.000.000</span>
+                        </div>
+                        <input type="range" id="initialSlider" min="0" max="10000000" step="500000" value="5000000" oninput="updateInitialValue()">
+                        <input type="number" id="initial" value="5000000" min="0" oninput="calculate()" class="mt-2">
+                        <div class="input-description">
+                            Số tiền bạn có sẵn để bắt đầu tiết kiệm
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-label">
+                            <span><i class="fas fa-calendar-alt"></i> Số tiền gửi thêm mỗi tháng (VNĐ)</span>
+                            <span class="value-display" id="monthlyDisplay">400.000</span>
+                        </div>
+                        <input type="range" id="monthlySlider" min="0" max="1000000" step="50000" value="400000" oninput="updateMonthlyValue()">
+                        <input type="number" id="monthly" value="400000" min="0" oninput="calculate()" class="mt-2">
+                        <div class="input-description">
+                            Số tiền bạn có thể tiết kiệm đều đặn mỗi tháng
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-label">
+                            <span><i class="fas fa-percentage"></i> Lãi suất năm (%)</span>
+                            <span class="value-display" id="rateDisplay">7.0%</span>
+                        </div>
+                        <input type="range" id="rateSlider" min="0" max="15" step="0.5" value="7" oninput="updateRateValue()">
+                        <select id="rate" onchange="calculate()" class="mt-2">
+                            <option value="5">5% (Ngân hàng C)</option>
+                            <option value="6">6% (Ngân hàng B)</option>
+                            <option value="6.5">6.5%</option>
+                            <option value="7" selected>7% (Ngân hàng A)</option>
+                            <option value="7.5">7.5%</option>
+                            <option value="8">8%</option>
+                            <option value="8.5">8.5%</option>
+                            <option value="9">9%</option>
+                        </select>
+                        <div class="input-description">
+                            Lãi suất tiết kiệm theo năm của ngân hàng
+                        </div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <div class="input-label">
+                            <span><i class="fas fa-clock"></i> Thời gian tiết kiệm (tháng)</span>
+                            <span class="value-display" id="monthsDisplay">24 tháng</span>
+                        </div>
+                        <input type="range" id="months" min="1" max="60" value="24" class="slider" oninput="updateSliderValue()">
+                        <input type="number" id="monthsInput" value="24" min="1" max="60" oninput="calculate()" class="mt-2">
+                        <div class="input-description">
+                            Khoảng thời gian bạn dự định tiết kiệm
+                        </div>
+                    </div>
+                    
+                    <div class="switch-container">
+                        <label class="switch">
+                            <input type="checkbox" id="inflationToggle" onchange="toggleInflation()">
+                            <span class="slider"></span>
+                        </label>
+                        <span class="switch-label">Tính toán ảnh hưởng của lạm phát</span>
+                    </div>
+                    
+                    <div id="inflationSection" style="display: none; margin-top: 20px;">
+                        <div class="input-group">
+                            <div class="input-label">
+                                <span><i class="fas fa-chart-line"></i> Tỷ lệ lạm phát năm (%)</span>
+                                <span class="value-display" id="inflationDisplay">3.5%</span>
+                            </div>
+                            <input type="range" id="inflationSlider" min="0" max="20" step="0.5" value="3.5" oninput="updateInflationValue()">
+                            <input type="number" id="inflationRate" value="3.5" step="0.1" min="0" max="20" oninput="calculate()" class="mt-2">
+                        </div>
+                    </div>
+                    
+                    <div class="button-group">
+                        <button class="btn btn-primary" onclick="calculate()">
+                            <i class="fas fa-play-circle"></i> TÍNH TOÁN
+                        </button>
+                        <button class="btn btn-success" onclick="exportResult()">
+                            <i class="fas fa-file-export"></i> XUẤT KẾT QUẢ
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="card animate-fade-in animation-delay-3">
+                    <h2 class="card-title"><i class="fas fa-chart-bar card-icon"></i> KẾT QUẢ PHÂN TÍCH</h2>
+                    
+                    <div class="result-container">
+                        <div class="result-title">
+                            <i class="fas fa-wallet"></i> Số tiền bạn sẽ có sau <span id="resultMonths">24</span> tháng
+                        </div>
+                        <div class="result-value" id="resultAmount">15,823,456 VNĐ</div>
+                        
+                        <div class="result-title">
+                            <i class="fas fa-bullseye"></i> So với mục tiêu 20,000,000 VNĐ
+                        </div>
+                        <span id="resultStatus" class="target-status target-not-met">
+                            Chưa đạt (còn thiếu 4,176,544 VNĐ)
+                        </span>
+                        
+                        <div class="analysis-section">
+                            <div class="analysis-title"><i class="fas fa-gem"></i> PHÂN TÍCH CHI TIẾT</div>
+                            <div class="analysis-grid">
+                                <div class="analysis-card">
+                                    <div class="analysis-label">Tiền gốc ban đầu</div>
+                                    <div class="analysis-value" id="principalValue">5,000,000</div>
+                                    <div style="font-size: 0.85rem; color: var(--gray);">Chiếm 31.6%</div>
+                                </div>
+                                <div class="analysis-card">
+                                    <div class="analysis-label">Tiền gửi hàng tháng</div>
+                                    <div class="analysis-value" id="monthlyDepositValue">9,600,000</div>
+                                    <div style="font-size: 0.85rem; color: var(--gray);">Chiếm 60.7%</div>
+                                </div>
+                                <div class="analysis-card">
+                                    <div class="analysis-label">Lãi suất tích lũy</div>
+                                    <div class="analysis-value" id="interestValue">1,223,456</div>
+                                    <div style="font-size: 0.85rem; color: var(--gray);">Chiếm 7.7%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-title">
+                        <i class="fas fa-chart-pie"></i> CƠ CẤU SỐ TIỀN NHẬN ĐƯỢC
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="resultChart"></canvas>
+                    </div>
+                    
+                    <div class="chart-annotation">
+                        <strong><i class="fas fa-info-circle"></i> NHẬN XÉT:</strong> Lãi kép tạo ra tác động theo cấp số nhân theo thời gian. Tiền gốc và tiền gửi hàng tháng tạo nên nền tảng, còn lãi suất là yếu tố tăng tốc giúp tài sản của bạn phát triển nhanh chóng.
+                    </div>
+                    
+                    <div class="advanced-section">
+                        <h3 style="color: var(--dark); margin-bottom: 15px;"><i class="fas fa-rocket"></i> GIẢI PHÁP TỐI ƯU</h3>
+                        <div id="optimizationSuggestion" style="line-height: 1.8;">
+                            <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;">
+                                <i class="fas fa-check-circle" style="color: #2ecc71; margin-top: 4px;"></i>
+                                <div><strong>Tăng tiền gửi hàng tháng</strong> lên 550.000 VNĐ (giữ nguyên lãi suất 7%/năm)</div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px;">
+                                <i class="fas fa-check-circle" style="color: #2ecc71; margin-top: 4px;"></i>
+                                <div><strong>Tìm ngân hàng có lãi suất cao hơn</strong> (8.5%/năm) với số tiền gửi không đổi</div>
+                            </div>
+                            <div style="display: flex; align-items: flex-start; gap: 10px;">
+                                <i class="fas fa-check-circle" style="color: #2ecc71; margin-top: 4px;"></i>
+                                <div><strong>Kết hợp cả hai giải pháp</strong> để có dư địa tài chính cho các rủi ro phát sinh</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="scenario">
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-balance-scale card-icon"></i> SO SÁNH CÁC KỊCH BẢN TIẾT KIỆM</h2>
+                
+                <div class="button-group">
+                    <button class="btn btn-primary" onclick="addScenario()">
+                        <i class="fas fa-plus-circle"></i> THÊM KỊCH BẢN
+                    </button>
+                    <button class="btn btn-success" onclick="exportComparison()">
+                        <i class="fas fa-chart-line"></i> XUẤT BIỂU ĐỒ
+                    </button>
+                    <button class="btn btn-danger" onclick="resetComparison()">
+                        <i class="fas fa-trash-alt"></i> XÓA TẤT CẢ
+                    </button>
+                </div>
+                
+                <div class="scenario-cards" id="scenariosContainer">
+                    <!-- Scenarios will be added here dynamically -->
+                </div>
+                
+                <div class="chart-container" style="height: 400px; margin-top: 30px;">
+                    <div class="chart-title">
+                        <i class="fas fa-line-chart"></i> SO SÁNH CÁC KỊCH BẢN TIẾT KIỆM
+                    </div>
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+                <br>
+                <div class="sensitivity-container">
+                    <div class="sensitivity-header">
+                        <h3><i class="fas fa-sliders-h"></i> PHÂN TÍCH ĐỘ NHẠY CẢM</h3>
+                        <p style="color: var(--gray); margin-top: 5px;">Thay đổi lãi suất hoặc số tiền gửi hàng tháng để xem ảnh hưởng đến kết quả cuối cùng</p>
+                    </div>
+                    <div class="chart-container sensitivity-chart">
+                        <canvas id="sensitivityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content" id="learn">
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-book card-icon"></i> KIẾN THỨC & ỨNG DỤNG</h2>
+                
+                <div class="learning-grid">
+                    <div class="learning-card">
+                        <div class="learning-title"><i class="fas fa-infinity"></i> CÔNG THỨC TOÁN HỌC</div>
+                        <div class="learning-content">
+                            <p><strong>1. Lãi kép (gửi một lần):</strong></p>
+                            <div class="formula">
+                                A = P × (1 + r)<sup>n</sup>
+                            </div>
+                            
+                            <p><strong>2. Lãi kép (gửi định kỳ):</strong></p>
+                            <div class="formula">
+                                A = P × <span class="highlight">[(1+r)<sup>n</sup> - 1]</span> / r
+                            </div>
+                            
+                            <p style="margin-top: 15px;"><strong>Trong đó:</strong></p>
+                            <ul style="padding-left: 20px; margin-top: 8px;">
+                                <li><strong>A:</strong> Số tiền nhận được cuối kỳ</li>
+                                <li><strong>P:</strong> Tiền gốc hoặc tiền gửi mỗi kỳ</li>
+                                <li><strong>r:</strong> Lãi suất theo kỳ</li>
+                                <li><strong>n:</strong> Số kỳ tính lãi</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="learning-card">
+                        <div class="learning-title"><i class="fas fa-lightbulb"></i> ỨNG DỤNG THỰC TẾ</div>
+                        <div class="learning-content">
+                            <p><strong>Tình huống:</strong> Bạn có 5 triệu đồng, muốn mua xe 20 triệu sau 2 năm. Mỗi tháng tiết kiệm 400.000 đồng với lãi suất 7%/năm.</p>
+                            
+                            <p style="margin: 15px 0;"><strong>Tính toán:</strong></p>
+                            <ul style="padding-left: 20px;">
+                                <li>Tiền gốc sau 24 tháng: 5.743.408 VNĐ</li>
+                                <li>Tiết kiệm hàng tháng sau 24 tháng: 10.310.279 VNĐ</li>
+                                <li><strong>Tổng cộng: 16.053.687 VNĐ</strong></li>
+                            </ul>
+                            
+                            <p style="margin: 15px 0;"><strong>Kết luận:</strong> Chưa đạt mục tiêu 20 triệu đồng. Cần điều chỉnh kế hoạch.</p>
+                            
+                            <div style="background: rgba(247, 37, 133, 0.1); padding: 15px; border-radius: 10px; margin-top: 15px;">
+                                <strong><i class="fas fa-exclamation-circle"></i> BÀI HỌC QUAN TRỌNG:</strong> Lãi kép là "kỳ quan thứ 8 của thế giới" (Albert Einstein). Hiểu và tận dụng triệt để sức mạnh của lãi kép sẽ giúp bạn đạt được tự do tài chính sớm hơn.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="learning-card">
+                        <div class="learning-title"><i class="fas fa-chart-line"></i> PHÂN TÍCH ĐẦU TƯ</div>
+                        <div class="learning-content">
+                            <p><strong>Các hình thức sinh lời khác nhau (trung bình hàng năm):</strong></p>
+                            
+                            <div style="margin: 15px 0;">
+                                <div style="display: flex; justify-content: space-between; margin: 8px 0;">
+                                    <span><i class="fas fa-piggy-bank"></i> Gửi tiết kiệm</span>
+                                    <span class="highlight">5-8%</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin: 8px 0;">
+                                    <span><i class="fas fa-gem"></i> Vàng</span>
+                                    <span class="highlight">8-12%</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin: 8px 0;">
+                                    <span><i class="fas fa-building"></i> Bất động sản</span>
+                                    <span class="highlight">10-15%</span>
+                                </div>
+                                <div style="display: flex; justify-content: space-between; margin: 8px 0;">
+                                    <span><i class="fas fa-chart-pie"></i> Chứng khoán</span>
+                                    <span class="highlight">12-20%</span>
+                                </div>
+                            </div>
+                            
+                            <p style="margin-top: 15px;"><strong>Nguyên tắc phân bổ tài sản:</strong></p>
+                            <ul style="padding-left: 20px;">
+                                <li>60% an toàn (tiết kiệm, trái phiếu)</li>
+                                <li>30% tăng trưởng (chứng khoán, bất động sản)</li>
+                                <li>10% mạo hiểm (tiền ảo, startup)</li>
+                            </ul>
+                            
+                            <div style="margin-top: 15px; font-style: italic; color: var(--gray);">
+                                <i class="fas fa-exclamation-triangle"></i> Lưu ý: Rủi ro luôn tỷ lệ thuận với lợi nhuận kỳ vọng. Hãy phân bổ tài sản phù hợp với khả năng chịu đựng rủi ro của bạn.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="learning-section">
+                    <h3 style="text-align: center; margin-bottom: 25px; color: var(--dark);">
+                        <i class="fas fa-project-diagram"></i> QUY TRÌNH STEM TRONG DỰ ÁN
+                    </h3>
+                    
+                    <div class="comparison-grid">
+                        <div style="text-align: center; padding: 20px;">
+                            <div style="background: rgba(67, 97, 238, 0.15); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 2.5rem; color: var(--primary);">
+                                S
+                            </div>
+                            <h4 style="font-weight: 700; margin-bottom: 10px;">Khoa học (Science)</h4>
+                            <p>Nghiên cứu thực trạng tiết kiệm của học sinh; phân tích dữ liệu lãi suất ngân hàng; tìm hiểu tác động của lạm phát</p>
+                        </div>
+                        
+                        <div style="text-align: center; padding: 20px;">
+                            <div style="background: rgba(67, 97, 238, 0.15); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 2.5rem; color: var(--primary);">
+                                T
+                            </div>
+                            <h4 style="font-weight: 700; margin-bottom: 10px;">Công nghệ (Technology)</h4>
+                            <p>Phát triển ứng dụng web tương tác; sử dụng thư viện biểu đồ; thiết kế giao diện người dùng thân thiện</p>
+                        </div>
+                        
+                        <div style="text-align: center; padding: 20px;">
+                            <div style="background: rgba(67, 97, 238, 0.15); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 2.5rem; color: var(--primary);">
+                                E
+                            </div>
+                            <h4 style="font-weight: 700; margin-bottom: 10px;">Kỹ thuật (Engineering)</h4>
+                            <p>Thiết kế quy trình tính toán; tối ưu hóa hiệu suất ứng dụng; kiểm thử và cải tiến sản phẩm</p>
+                        </div>
+                        
+                        <div style="text-align: center; padding: 20px;">
+                            <div style="background: rgba(67, 97, 238, 0.15); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 2.5rem; color: var(--primary);">
+                                M
+                            </div>
+                            <h4 style="font-weight: 700; margin-bottom: 10px;">Toán học (Mathematics)</h4>
+                            <p>Ứng dụng hàm số mũ; công thức lãi kép; cấp số nhân; phân tích dữ liệu; lập biểu đồ trực quan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 <span class="footer-highlight">CÔNG CỤ TƯ VẤN TIẾT KIỆM TƯƠNG LAI</span> - Dự án STEM môn Toán | Phát triển bởi Nguyễn Văn Sang - GV THPT NGUYỄN HỮU CẢNH</p>
+            <p style="margin-top: 8px;">Ứng dụng này phục vụ mục đích học tập và không chịu trách nhiệm về quyết định tài chính thực tế</p>
+            <p style="margin-top: 8px; font-style: italic;">
+                <i class="fas fa-info-circle"></i> Học liệu số tuân thủ Quyết định 791/QĐ-SGDĐT của Sở GD&ĐT TP.HCM về quản lý học liệu số dùng chung
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Global variables
+        let resultChart;
+        let comparisonChart;
+        let sensitivityChart;
+        let scenarioCount = 0;
+        let scenarios = [];
+        
+        // DOM Elements
+        const tabButtons = document.querySelectorAll('.tab');
+        const tabContents = document.querySelectorAll('.tab-content');
+        
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize charts
+            initCharts();
+            
+            // Set up tab navigation
+            setupTabs();
+            
+            // Calculate initial result
+            calculate();
+            
+            // Add default scenarios for comparison
+            // Kịch bản 1: 24 tháng tiết kiệm
+            addScenario(true, {
+                initial: 5000000,
+                monthly: 400000,
+                rate: 7,
+                months: 24,
+                title: "Kịch bản 1: 24 tháng",
+                subtitle: "Mục tiêu: Mua xe máy điện"
+            });
+            
+            // Kịch bản 2: 36 tháng tiết kiệm (thêm kịch bản mới theo yêu cầu)
+            addScenario(true, {
+                initial: 5000000,
+                monthly: 400000,
+                rate: 7,
+                months: 36,
+                title: "Kịch bản 2: 36 tháng",
+                subtitle: "Kế hoạch dài hạn hơn"
+            });
+            
+            // Kịch bản 3: Tăng tiền gửi hàng tháng (thêm kịch bản thứ 3)
+            addScenario(true, {
+                initial: 5000000,
+                monthly: 550000,
+                rate: 7,
+                months: 24,
+                title: "Kịch bản 3: Tăng tiết kiệm",
+                subtitle: "550.000 VNĐ/tháng"
+            });
+            
+            // Set up sensitivity analysis
+            setupSensitivityAnalysis();
+        });
+        
+        // Initialize all charts
+        function initCharts() {
+            // Initialize result chart
+            const ctx = document.getElementById('resultChart').getContext('2d');
+            resultChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Tiền gốc', 'Tiền gửi hàng tháng', 'Lãi suất'],
+                    datasets: [{
+                        label: 'Số tiền (VNĐ)',
+                        data: [5000000, 9600000, 1223456],
+                        backgroundColor: [
+                            'rgba(67, 97, 238, 0.85)',
+                            'rgba(76, 201, 240, 0.85)',
+                            'rgba(247, 37, 133, 0.85)'
+                        ],
+                        borderWidth: 0,
+                        borderRadius: 5
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 20,
+                                font: {
+                                    family: 'Roboto',
+                                    size: 12
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    const total = context.dataset.data.reduce((a, b) => a + b, 0);
+                                    const percentage = Math.round((value / total) * 100);
+                                    return `${label}: ${value.toLocaleString('vi-VN')} VNĐ (${percentage}%)`;
+                                }
+                            }
+                        }
+                    },
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true
+                    }
+                }
+            });
+            
+            // Initialize comparison chart
+            const compCtx = document.getElementById('comparisonChart').getContext('2d');
+            comparisonChart = new Chart(compCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Kịch bản 1: 24 tháng', 'Kịch bản 2: 36 tháng', 'Kịch bản 3: Tăng tiết kiệm'],
+                    datasets: [{
+                        label: 'Số tiền đạt được (VNĐ)',
+                        data: [15823456, 19850473, 20765321],
+                        backgroundColor: [
+                            'rgba(67, 97, 238, 0.7)',
+                            'rgba(76, 201, 240, 0.7)',
+                            'rgba(247, 37, 133, 0.7)'
+                        ],
+                        borderColor: [
+                            'rgba(67, 97, 238, 1)',
+                            'rgba(76, 201, 240, 1)',
+                            'rgba(247, 37, 133, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return (value/1000000).toFixed(1) + 'M';
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'So sánh các phương án tiết kiệm',
+                            font: {
+                                size: 16,
+                                family: 'Roboto'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return context.dataset.label + ': ' + context.raw.toLocaleString('vi-VN') + ' VNĐ';
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // Set up tab navigation
+        function setupTabs() {
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all tabs and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        }
+        
+        // Update slider value display
+        function updateSliderValue() {
+            const months = document.getElementById('months').value;
+            document.getElementById('monthsInput').value = months;
+            document.getElementById('monthsDisplay').textContent = `${months} tháng`;
+            document.getElementById('resultMonths').textContent = months;
+            calculate();
+        }
+        
+        // Update initial value from slider
+        function updateInitialValue() {
+            const value = document.getElementById('initialSlider').value;
+            document.getElementById('initial').value = value;
+            document.getElementById('initialDisplay').textContent = parseInt(value).toLocaleString('vi-VN');
+            calculate();
+        }
+        
+        // Update monthly value from slider
+        function updateMonthlyValue() {
+            const value = document.getElementById('monthlySlider').value;
+            document.getElementById('monthly').value = value;
+            document.getElementById('monthlyDisplay').textContent = parseInt(value).toLocaleString('vi-VN');
+            calculate();
+        }
+        
+        // Update rate value from slider
+        function updateRateValue() {
+            const value = document.getElementById('rateSlider').value;
+            document.getElementById('rate').value = value;
+            document.getElementById('rateDisplay').textContent = `${parseFloat(value).toFixed(1)}%`;
+            calculate();
+        }
+        
+        // Update inflation value from slider
+        function updateInflationValue() {
+            const value = document.getElementById('inflationSlider').value;
+            document.getElementById('inflationRate').value = value;
+            document.getElementById('inflationDisplay').textContent = `${parseFloat(value).toFixed(1)}%`;
+            calculate();
+        }
+        
+        // Toggle inflation section
+        function toggleInflation() {
+            const inflationSection = document.getElementById('inflationSection');
+            const isChecked = document.getElementById('inflationToggle').checked;
+            inflationSection.style.display = isChecked ? 'block' : 'none';
+            calculate();
+        }
+        
+        // Main calculation function
+        function calculate() {
+            try {
+                const initial = parseFloat(document.getElementById('initial').value) || 0;
+                const monthly = parseFloat(document.getElementById('monthly').value) || 0;
+                const rateAnnual = parseFloat(document.getElementById('rate').value) || 0;
+                const months = parseInt(document.getElementById('monthsInput').value) || 1;
+                const isUsingInflation = document.getElementById('inflationToggle').checked;
+                const inflationRate = isUsingInflation ? (parseFloat(document.getElementById('inflationRate').value) || 3.5) / 100 : 0;
+                
+                // Convert annual rate to monthly rate
+                const rateMonthly = rateAnnual / 100 / 12;
+                
+                // Calculate compound interest for initial deposit
+                const initialFutureValue = initial * Math.pow(1 + rateMonthly, months);
+                
+                // Calculate compound interest for monthly deposits
+                let monthlyFutureValue = 0;
+                if (rateMonthly > 0) {
+                    monthlyFutureValue = monthly * ((Math.pow(1 + rateMonthly, months) - 1) / rateMonthly);
+                } else {
+                    monthlyFutureValue = monthly * months;
+                }
+                
+                // Total amount before inflation
+                const nominalTotal = initialFutureValue + monthlyFutureValue;
+                
+                // Calculate real value after inflation
+                const inflationFactor = isUsingInflation ? Math.pow(1 + inflationRate/12, months) : 1;
+                const realTotal = nominalTotal / inflationFactor;
+                
+                // Calculate interest earned
+                const totalDeposits = initial + monthly * months;
+                const interestEarned = nominalTotal - totalDeposits;
+                
+                // Format result
+                const resultAmountElement = document.getElementById('resultAmount');
+                const resultStatusElement = document.getElementById('resultStatus');
+                const target = 20000000;
+                
+                if (isUsingInflation) {
+                    resultAmountElement.innerHTML = `
+                        <span style="font-size: 1.2rem; color: #6c757d; text-decoration: line-through;">${nominalTotal.toLocaleString('vi-VN')} VNĐ</span><br>
+                        ${realTotal.toLocaleString('vi-VN')} VNĐ <sup style="font-size: 0.8rem; color: #f72585;">(đã điều chỉnh lạm phát)</sup>
+                    `;
+                } else {
+                    resultAmountElement.textContent = nominalTotal.toLocaleString('vi-VN') + ' VNĐ';
+                }
+                
+                // Check if target is reached
+                const totalToCompare = isUsingInflation ? realTotal : nominalTotal;
+                if (totalToCompare >= target) {
+                    resultStatusElement.innerHTML = '<i class="fas fa-check-circle"></i> Đã đạt mục tiêu! ✅';
+                    resultStatusElement.className = 'target-status target-met';
+                } else {
+                    const shortfall = target - totalToCompare;
+                    resultStatusElement.innerHTML = `<i class="fas fa-times-circle"></i> Chưa đạt (còn thiếu ${shortfall.toLocaleString('vi-VN')} VNĐ) ❌`;
+                    resultStatusElement.className = 'target-status target-not-met';
+                }
+                
+                // Update analysis values
+                document.getElementById('principalValue').textContent = initialFutureValue.toLocaleString('vi-VN');
+                document.getElementById('monthlyDepositValue').textContent = monthlyFutureValue.toLocaleString('vi-VN');
+                document.getElementById('interestValue').textContent = interestEarned.toLocaleString('vi-VN');
+                
+                // Update chart
+                if (resultChart) {
+                    resultChart.data.datasets[0].data = [
+                        initialFutureValue,
+                        monthlyFutureValue,
+                        interestEarned
+                    ];
+                    resultChart.update();
+                }
+                
+                return {
+                    initial,
+                    monthly,
+                    rateAnnual,
+                    months,
+                    nominalTotal,
+                    realTotal,
+                    interestEarned,
+                    totalDeposits
+                };
+            } catch (error) {
+                console.error('Lỗi tính toán:', error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Lỗi tính toán',
+                    text: 'Có lỗi xảy ra trong quá trình tính toán. Vui lòng kiểm tra lại các giá trị nhập vào.',
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#4361ee'
+                });
+                return null;
+            }
+        }
+        
+        // Add a new scenario
+        function addScenario(isDefault = false, defaultValues = null) {
+            scenarioCount++;
+            const container = document.getElementById('scenariosContainer');
+            
+            // Get current calculation values if not default
+            const calculation = isDefault && !defaultValues ? calculate() : null;
+            
+            // Create scenario object
+            const scenario = {
+                id: scenarioCount,
+                initial: defaultValues?.initial || (calculation?.initial || 5000000),
+                monthly: defaultValues?.monthly || (calculation?.monthly || 400000),
+                rate: defaultValues?.rate || (calculation?.rateAnnual || 7),
+                months: defaultValues?.months || (calculation?.months || 24),
+                title: defaultValues?.title || `Kịch bản ${scenarioCount}`,
+                subtitle: defaultValues?.subtitle || `${defaultValues?.months || 24} tháng tiết kiệm`
+            };
+            
+            // Calculate result
+            const rateMonthly = scenario.rate / 100 / 12;
+            const initialFutureValue = scenario.initial * Math.pow(1 + rateMonthly, scenario.months);
+            const monthlyFutureValue = scenario.monthly * ((Math.pow(1 + rateMonthly, scenario.months) - 1) / rateMonthly);
+            scenario.result = initialFutureValue + monthlyFutureValue;
+            
+            scenarios.push(scenario);
+            
+            // Create scenario card
+            const scenarioCard = document.createElement('div');
+            scenarioCard.className = 'scenario-card animate-fade-in';
+            scenarioCard.id = `scenario-${scenarioCount}`;
+            scenarioCard.innerHTML = `
+                <div class="scenario-header">
+                    <div class="scenario-title">${scenario.title}</div>
+                    <div class="scenario-subtitle">${scenario.subtitle}</div>
+                </div>
+                <div class="scenario-content">
+                    <div class="scenario-param">
+                        <span>Số tiền hiện có:</span>
+                        <span class="scenario-value">${scenario.initial.toLocaleString('vi-VN')} VNĐ</span>
+                    </div>
+                    <div class="scenario-param">
+                        <span>Tiết kiệm hàng tháng:</span>
+                        <span class="scenario-value">${scenario.monthly.toLocaleString('vi-VN')} VNĐ</span>
+                    </div>
+                    <div class="scenario-param">
+                        <span>Lãi suất năm:</span>
+                        <span class="scenario-value">${scenario.rate}%</span>
+                    </div>
+                    <div class="scenario-param">
+                        <span>Thời gian:</span>
+                        <span class="scenario-value">${scenario.months} tháng</span>
+                    </div>
+                    
+                    <div class="scenario-result">
+                        <div>Số tiền đạt được:</div>
+                        <div class="scenario-amount">${scenario.result.toLocaleString('vi-VN')} VNĐ</div>
+                        <button class="btn btn-outline" onclick="setAsMain(${scenarioCount})">
+                            <i class="fas fa-sync-alt"></i> Áp dụng
+                        </button>
+                        <button class="btn btn-danger" onclick="removeScenario(${scenarioCount})" style="margin-top: 10px;">
+                            <i class="fas fa-trash-alt"></i> Xóa
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            container.appendChild(scenarioCard);
+            
+            // Update comparison chart
+            updateComparisonChart();
+            
+            return scenario;
+        }
+        
+        // Set scenario as main values
+        function setAsMain(scenarioId) {
+            const scenario = scenarios.find(s => s.id === scenarioId);
+            if (scenario) {
+                document.getElementById('initial').value = scenario.initial;
+                document.getElementById('initialSlider').value = scenario.initial;
+                document.getElementById('initialDisplay').textContent = scenario.initial.toLocaleString('vi-VN');
+                
+                document.getElementById('monthly').value = scenario.monthly;
+                document.getElementById('monthlySlider').value = scenario.monthly;
+                document.getElementById('monthlyDisplay').textContent = scenario.monthly.toLocaleString('vi-VN');
+                
+                document.getElementById('rate').value = scenario.rate;
+                document.getElementById('rateSlider').value = scenario.rate;
+                document.getElementById('rateDisplay').textContent = `${scenario.rate}%`;
+                
+                document.getElementById('monthsInput').value = scenario.months;
+                document.getElementById('months').value = scenario.months;
+                document.getElementById('monthsDisplay').textContent = `${scenario.months} tháng`;
+                
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Áp dụng thành công!',
+                    text: `Đã áp dụng ${scenario.title} vào các tham số chính`,
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#4361ee'
+                });
+                
+                calculate();
+            }
+        }
+        
+        // Remove a scenario
+        function removeScenario(scenarioId) {
+            Swal.fire({
+                title: 'Xác nhận xóa',
+                text: "Bạn có chắc chắn muốn xóa kịch bản này không?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#4361ee',
+                confirmButtonText: 'Xóa ngay',
+                cancelButtonText: 'Hủy'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Remove from DOM
+                    const scenarioElement = document.getElementById(`scenario-${scenarioId}`);
+                    if (scenarioElement) {
+                        scenarioElement.remove();
+                    }
+                    
+                    // Remove from array
+                    scenarios = scenarios.filter(s => s.id !== scenarioId);
+                    
+                    // Update comparison chart
+                    updateComparisonChart();
+                    
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Đã xóa!',
+                        text: 'Kịch bản đã được xóa thành công.',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#4361ee'
+                    });
+                }
+            });
+        }
+        
+        // Reset all scenarios
+        function resetComparison() {
+            Swal.fire({
+                title: 'Xác nhận xóa tất cả',
+                text: "Bạn có chắc chắn muốn xóa tất cả kịch bản không?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#d33',
+                cancelButtonColor: '#4361ee',
+                confirmButtonText: 'Xóa tất cả',
+                cancelButtonText: 'Hủy'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.getElementById('scenariosContainer').innerHTML = '';
+                    scenarios = [];
+                    scenarioCount = 0;
+                    updateComparisonChart();
+                    
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Đã xóa tất cả!',
+                        text: 'Tất cả kịch bản đã được xóa thành công.',
+                        confirmButtonText: 'OK',
+                        confirmButtonColor: '#4361ee'
+                    });
+                }
+            });
+        }
+        
+        // Update comparison chart
+        function updateComparisonChart() {
+            if (!comparisonChart) return;
+            
+            const labels = scenarios.map(s => s.title);
+            const data = scenarios.map(s => s.result);
+            const backgroundColors = scenarios.map((_, index) => {
+                const colors = [
+                    'rgba(67, 97, 238, 0.7)',
+                    'rgba(76, 201, 240, 0.7)',
+                    'rgba(247, 37, 133, 0.7)',
+                    'rgba(255, 159, 64, 0.7)',
+                    'rgba(153, 102, 255, 0.7)'
+                ];
+                return colors[index % colors.length];
+            });
+            
+            comparisonChart.data.labels = labels;
+            comparisonChart.data.datasets[0].data = data;
+            comparisonChart.data.datasets[0].backgroundColor = backgroundColors;
+            comparisonChart.update();
+        }
+        
+        // Export result
+        function exportResult() {
+            const calculation = calculate();
+            if (!calculation) return;
+            
+            const resultText = `
+KẾT QUẢ TÍNH TOÁN TIẾT KIỆM
+----------------------------------------
+Số tiền hiện có: ${calculation.initial.toLocaleString('vi-VN')} VNĐ
+Số tiền gửi hàng tháng: ${calculation.monthly.toLocaleString('vi-VN')} VNĐ
+Lãi suất năm: ${calculation.rateAnnual}%
+Thời gian: ${calculation.months} tháng
+----------------------------------------
+SỐ TIỀN NHẬN ĐƯỢC: ${calculation.nominalTotal.toLocaleString('vi-VN')} VNĐ
+Lãi suất tích lũy: ${calculation.interestEarned.toLocaleString('vi-VN')} VNĐ
+----------------------------------------
+Công thức áp dụng:
+1. Lãi kép (gửi một lần): A = P × (1 + r)^n
+2. Lãi kép (gửi định kỳ): A = P × [(1+r)^n - 1] / r
+`;
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(resultText).then(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Kết quả đã được sao chép!',
+                    html: 'Đã sẵn sàng để dán vào báo cáo của bạn.<br><br><small style="color:#6c757d">Mở trình soạn thảo văn bản và nhấn Ctrl+V (hoặc Cmd+V trên Mac) để dán kết quả.</small>',
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#4361ee'
+                });
+            }).catch(err => {
+                console.error('Lỗi sao chép:', err);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Lỗi sao chép',
+                    text: 'Không thể sao chép kết quả vào clipboard. Vui lòng chọn và sao chép thủ công.',
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#d33'
+                });
+            });
+        }
+        
+        // Export comparison
+        function exportComparison() {
+            if (scenarios.length === 0) {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Chưa có kịch bản',
+                    text: 'Vui lòng thêm ít nhất một kịch bản để xuất biểu đồ so sánh.',
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#4361ee'
+                });
+                return;
+            }
+            
+            // Create a summary of all scenarios
+            let comparisonText = "SO SÁNH CÁC KỊCH BẢN TIẾT KIỆM\n";
+            comparisonText += "----------------------------------------\n\n";
+            
+            scenarios.forEach((scenario, index) => {
+                comparisonText += `KỊCH BẢN ${index + 1}: ${scenario.title}\n`;
+                comparisonText += `Thời gian: ${scenario.months} tháng\n`;
+                comparisonText += `Số tiền hiện có: ${scenario.initial.toLocaleString('vi-VN')} VNĐ\n`;
+                comparisonText += `Tiết kiệm hàng tháng: ${scenario.monthly.toLocaleString('vi-VN')} VNĐ\n`;
+                comparisonText += `Lãi suất năm: ${scenario.rate}%\n`;
+                comparisonText += `SỐ TIỀN ĐẠT ĐƯỢC: ${Math.round(scenario.result).toLocaleString('vi-VN')} VNĐ\n`;
+                comparisonText += `\n`;
+            });
+            
+            comparisonText += "----------------------------------------\n";
+            comparisonText += "Phân tích: ";
+            
+            if (scenarios.length >= 2) {
+                const bestScenario = scenarios.reduce((max, scenario) => scenario.result > max.result ? scenario : max);
+                comparisonText += `Kịch bản "${bestScenario.title}" mang lại kết quả tốt nhất với ${Math.round(bestScenario.result).toLocaleString('vi-VN')} VNĐ.`;
+            } else {
+                comparisonText += "Hãy thêm nhiều kịch bản hơn để có phân tích chi tiết.";
+            }
+            
+            // Copy to clipboard
+            navigator.clipboard.writeText(comparisonText).then(() => {
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Biểu đồ so sánh đã được tạo!',
+                    html: 'Dữ liệu so sánh đã được sao chép vào clipboard.<br><br><small style="color:#6c757d">Bạn có thể chụp màn hình biểu đồ trực quan hoặc dán dữ liệu đã sao chép để phân tích trong báo cáo.</small>',
+                    confirmButtonText: 'OK',
+                    confirmButtonColor: '#4361ee'
+                });
+            });
+        }
+        
+        // Setup sensitivity analysis
+        function setupSensitivityAnalysis() {
+            const ctx = document.getElementById('sensitivityChart').getContext('2d');
+            sensitivityChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [
+                        {
+                            label: 'Tiền gửi hàng tháng 300.000 VNĐ',
+                            data: [],
+                            borderColor: 'rgba(67, 97, 238, 1)',
+                            backgroundColor: 'rgba(67, 97, 238, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Tiền gửi hàng tháng 500.000 VNĐ',
+                            data: [],
+                            borderColor: 'rgba(76, 201, 240, 1)',
+                            backgroundColor: 'rgba(76, 201, 240, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Tiền gửi hàng tháng 700.000 VNĐ',
+                            data: [],
+                            borderColor: 'rgba(247, 37, 133, 1)',
+                            backgroundColor: 'rgba(247, 37, 133, 0.1)',
+                            borderWidth: 3,
+                            fill: true,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        x: {
+                            title: {
+                                display: true,
+                                text: 'Lãi suất năm (%)'
+                            }
+                        },
+                        y: {
+                            title: {
+                                display: true,
+                                text: 'Số tiền nhận được (triệu VNĐ)'
+                            },
+                            ticks: {
+                                callback: function(value) {
+                                    return (value / 1000000).toFixed(1);
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Phân tích độ nhạy cảm: Ảnh hưởng của lãi suất và số tiền gửi đến kết quả',
+                            font: {
+                                size: 16,
+                                family: 'Roboto'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${Math.round(context.raw).toLocaleString('vi-VN')} VNĐ`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Initial data
+            updateSensitivityChart();
+        }
+        
+        // Update sensitivity chart
+        function updateSensitivityChart() {
+            if (!sensitivityChart) return;
+            
+            const rates = [5, 5.5, 6, 6.5, 7, 7.5, 8, 8.5, 9, 9.5, 10];
+            const months = parseInt(document.getElementById('monthsInput').value) || 24;
+            const initial = parseFloat(document.getElementById('initial').value) || 5000000;
+            
+            // Update labels
+            sensitivityChart.data.labels = rates;
+            
+            // Dataset 1: 300.000 VNĐ monthly
+            const data1 = rates.map(rate => {
+                const rateMonthly = rate / 100 / 12;
+                const initialFutureValue = initial * Math.pow(1 + rateMonthly, months);
+                const monthlyFutureValue = 300000 * ((Math.pow(1 + rateMonthly, months) - 1) / rateMonthly);
+                return initialFutureValue + monthlyFutureValue;
+            });
+            
+            // Dataset 2: 500.000 VNĐ monthly
+            const data2 = rates.map(rate => {
+                const rateMonthly = rate / 100 / 12;
+                const initialFutureValue = initial * Math.pow(1 + rateMonthly, months);
+                const monthlyFutureValue = 500000 * ((Math.pow(1 + rateMonthly, months) - 1) / rateMonthly);
+                return initialFutureValue + monthlyFutureValue;
+            });
+            
+            // Dataset 3: 700.000 VNĐ monthly (thêm kịch bản mới)
+            const data3 = rates.map(rate => {
+                const rateMonthly = rate / 100 / 12;
+                const initialFutureValue = initial * Math.pow(1 + rateMonthly, months);
+                const monthlyFutureValue = 700000 * ((Math.pow(1 + rateMonthly, months) - 1) / rateMonthly);
+                return initialFutureValue + monthlyFutureValue;
+            });
+            
+            // Update datasets
+            sensitivityChart.data.datasets[0].data = data1;
+            sensitivityChart.data.datasets[1].data = data2;
+            sensitivityChart.data.datasets[2].data = data3;
+            
+            // Update chart
+            sensitivityChart.update();
+        }
+        
+        // Event listeners for inputs to update sensitivity chart
+        document.getElementById('initial').addEventListener('input', updateSensitivityChart);
+        document.getElementById('monthsInput').addEventListener('input', updateSensitivityChart);
+    </script>
+</body>
+</html>
