@@ -1,0 +1,122 @@
+\documentclass[12pt,a4paper]{article}
+
+% --- 1. GÓI NGÔN NGỮ & MÃ HÓA (NÂNG CẤP) ---
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}         % Dùng T5 cho tiếng Việt
+\usepackage[vietnamese]{babel}   % Gói ngôn ngữ chuẩn
+
+% --- 2. GÓI BỐ CỤC & TOÁN ---
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{enumitem}
+
+% --- 3. GÓI FONT CHUYÊN NGHIỆP (NÂNG CẤP) ---
+\usepackage{newtxtext, newtxmath} % Serif + Toán
+\renewcommand{\sfdefault}{qhv}    % Sans-serif = TeX Gyre Heros (Helvetica-like)
+\usepackage{microtype}            % Cải thiện hiển thị
+
+% --- 4. GÓI THIẾT KẾ (NÂNG CẤP) ---
+\usepackage[svgnames]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{hyperref}             % Liên kết có thể click
+
+% --- 5. MÔI TRƯỜNG TÙY CHỈNH (NÂNG CẤP) ---
+
+% Khung tiêu đề chính của PHT
+\newtcolorbox{phieubox}{
+    enhanced, breakable,
+    colback=white, colframe=DarkBlue,
+    fonttitle=\bfseries\sffamily\Large,
+    coltitle=white,
+    colbacktitle=DarkBlue,
+    attach boxed title to top center={yshift=-1mm},
+    boxed title style={
+        sharp corners, 
+        boxrule=0pt,
+        colback=DarkBlue,
+    },
+    title={PHIẾU HỌC TẬP SỐ 1: KHÁM PHÁ CÔNG THỨC LÃI KÉP},
+    segmentation style={solid, line width=0.5pt, color=gray}
+}
+
+% Khung kết luận
+\newtcolorbox{ketluanbox}{
+    enhanced,
+    colback=green!5, colframe=DarkGreen,
+    fonttitle=\bfseries\sffamily,
+    coltitle=DarkGreen,
+    title=Kết luận:,
+    boxrule=1pt, arc=2mm
+}
+
+% Khung bài tập
+\newtcolorbox{baitapbox}{
+    enhanced,
+    colback=yellow!10, colframe=Orange,
+    fonttitle=\bfseries\sffamily,
+    coltitle=Orange,
+    title=Bài tập vận dụng:,
+    boxrule=1pt, arc=2mm
+}
+
+\begin{document}
+
+\begin{phieubox}
+\tcblower % Bắt đầu nội dung bên dưới tiêu đề
+
+\subsubsection*{\sffamily Bài toán 1: Gửi một lần (Lãi kép đơn)}
+Gửi 5 triệu đồng vào ngân hàng với lãi suất 0,583\%/tháng (tương đương 7\%/năm). Tính số tiền nhận được sau:
+
+\begin{itemize}[leftmargin=*, label=\textbullet]
+    \item Sau 1 tháng: $5{,}000{,}000 \times (1 + 0{,}00583) = \text{5{,}029{,}150 đồng}$
+    \item Sau 2 tháng: $5{,}029{,}150 \times (1 + 0{,}00583) = 5{,}000{,}000 \times (1 + 0{,}00583)^2 = \text{5{,}058{,}470 đồng}$
+    \item Sau 3 tháng: $5{,}058{,}470 \times (1 + 0{,}00583) = 5{,}000{,}000 \times (1 + 0{,}00583)^3 = \text{5{,}088{,}000 đồng}$
+    \item Sau n tháng: $5{,}000{,}000 \times (1 + 0{,}00583)^n$
+\end{itemize}
+
+\begin{ketluanbox}
+Công thức lãi kép cho khoản gửi một lần:
+$$\boxed{A = P \times (1 + r)^n}$$
+Trong đó: $A$: Số tiền nhận được, $P$: Số tiền gốc, $r$: Lãi suất kỳ, $n$: Số kỳ.
+\end{ketluanbox}
+
+\subsubsection*{\sffamily Bài toán 2: Gửi đều đặn (Lãi kép chuỗi)}
+Mỗi tháng gửi đều đặn 400{,}000 đồng vào ngân hàng với lãi suất 0{,}583\%/tháng. Tính số tiền nhận được sau 24 tháng.
+
+\begin{itemize}[leftmargin=*, label=\textbullet]
+    \item Khoản tiền gửi tháng cuối (tháng 24) có giá trị: 400{,}000
+    \item Khoản tiền gửi tháng 23 có giá trị: $400{,}000 \times (1 + 0{,}00583)$
+    \item ...
+    \item Khoản tiền gửi tháng 1 có giá trị: $400{,}000 \times (1 + 0{,}00583)^{23}$
+\end{itemize}
+
+\noindent Tổng số tiền $A$ là tổng của một Cấp số nhân với $n=24$ số hạng:
+$$A = 400{,}000 \times \left[1 + (1 + 0{,}00583) + \ldots + (1 + 0{,}00583)^{23}\right]$$
+
+\noindent Áp dụng công thức tổng Cấp số nhân $S_n = u_1 \times \frac{q^n - 1}{q-1}$:
+$$S_{24} = 1 \times \frac{(1+0{,}00583)^{24}-1}{(1+0{,}00583)-1} = \frac{(1+0{,}00583)^{24}-1}{0{,}00583}$$
+
+\begin{ketluanbox}
+Công thức lãi kép cho khoản gửi định kỳ:
+$$\boxed{A = P \times \frac{(1+r)^n-1}{r}}$$
+Trong đó: $A$: Số tiền nhận được, $P$: Số tiền gửi mỗi kỳ, $r$: Lãi suất kỳ, $n$: Số kỳ.
+\end{ketluanbox}
+
+\vspace{1cm}
+
+\begin{baitapbox}
+\begin{itemize}[leftmargin=*, label=\textbullet]
+    \item Tính tổng số tiền nhận được sau 24 tháng nếu gửi 5 triệu đồng ban đầu \textbf{VÀ} mỗi tháng gửi thêm 400{,}000 đồng với lãi suất 7\%/năm.
+    \item Liệu có đạt được mục tiêu 20 triệu đồng không?
+\end{itemize}
+\end{baitapbox}
+
+% --- Link click được ---
+\bigskip
+\noindent \textbf{Học liệu số:} Truy cập website \href{https://stem-1h8.pages.dev/}{\texttt{https://stem-1h8.pages.dev/}}.
+
+\end{phieubox}
+
+\end{document}
