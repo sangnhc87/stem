@@ -6,25 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AI Doctor - Diagnostic Simulator</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         :root {
-            /* PDF Colors: Sky 50/500/900 */
-            --bg: #f0f9ff;
-            /* medbg */
+            --bg: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
             --card: #ffffff;
             --text: #0c4a6e;
-            /* meddark */
             --primary: #0ea5e9;
-            /* medblue (Sky 500) */
             --header: #0369a1;
-            /* Sky 700 */
             --accent: #ef4444;
-            /* medalert (Red 500) */
             --success: #10b981;
-            /* Emerald 500 */
-            --ring: #38bdf8;
-            /* Sky 400 */
+            --warning: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
@@ -32,92 +27,105 @@
             background: var(--bg);
             color: var(--text);
             margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            padding: 30px 20px;
             min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         h1 {
             color: var(--header);
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            display: flex;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin: 0;
+            display: inline-flex;
             align-items: center;
             gap: 15px;
-            font-weight: 800;
-            letter-spacing: -0.5px;
-            text-shadow: 0 2px 10px rgba(14, 165, 233, 0.2);
+        }
+
+        .subtitle {
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-top: 10px;
         }
 
         .container {
-            width: 100%;
-            max-width: 1200px;
+            max-width: 1300px;
+            margin: 0 auto;
             display: grid;
-            grid-template-columns: 380px 1fr;
-            gap: 40px;
-            align-items: start;
+            grid-template-columns: 400px 1fr;
+            gap: 30px;
         }
 
         .panel {
             background: var(--card);
             padding: 30px;
             border-radius: 24px;
-            box-shadow: 0 20px 25px -5px rgba(14, 165, 233, 0.1), 0 8px 10px -6px rgba(14, 165, 233, 0.1);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
             border: 1px solid #e0f2fe;
-            transition: transform 0.3s ease;
         }
 
-        .panel:hover {
-            transform: translateY(-5px);
+        h2 {
+            margin: 0 0 25px 0;
+            color: var(--header);
+            font-size: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
-        /* Control Styles */
+        /* Controls */
         .control-group {
-            margin-bottom: 30px;
+            margin-bottom: 28px;
         }
 
-        label {
+        .control-label {
             display: flex;
             justify-content: space-between;
             font-weight: 700;
-            margin-bottom: 12px;
-            font-size: 1rem;
+            margin-bottom: 10px;
             color: var(--header);
         }
 
-        .val-display {
-            color: var(--primary);
-            font-weight: 800;
-            background: #e0f2fe;
-            padding: 2px 8px;
-            border-radius: 6px;
+        .val-badge {
+            background: linear-gradient(135deg, var(--primary), #0284c7);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .helper-text {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            margin-top: 8px;
         }
 
         input[type="range"] {
             width: 100%;
-            height: 6px;
+            height: 8px;
             background: #e2e8f0;
-            border-radius: 5px;
-            accent-color: var(--primary);
-            cursor: pointer;
+            border-radius: 10px;
             appearance: none;
+            cursor: pointer;
         }
 
         input[type="range"]::-webkit-slider-thumb {
             appearance: none;
-            width: 20px;
-            height: 20px;
-            background: var(--primary);
+            width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, var(--primary), #0284c7);
             border-radius: 50%;
             cursor: pointer;
-            box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.2);
-            transition: 0.2s;
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.4);
+            transition: transform 0.2s;
         }
 
         input[type="range"]::-webkit-slider-thumb:hover {
-            transform: scale(1.2);
+            transform: scale(1.15);
         }
 
         /* Result Box */
@@ -125,56 +133,156 @@
             background: linear-gradient(135deg, #0ea5e9, #0284c7);
             color: white;
             border-radius: 20px;
-            padding: 25px;
+            padding: 30px;
             text-align: center;
             margin-top: 30px;
-            box-shadow: 0 10px 15px -3px rgba(14, 165, 233, 0.3);
+            position: relative;
+            overflow: hidden;
         }
 
-        .main-stat {
-            font-size: 4rem;
-            font-weight: 900;
-            line-height: 1;
-            margin: 10px 0;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        .result-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: shimmer 3s infinite;
         }
 
-        .stat-desc {
-            font-size: 0.9rem;
-            opacity: 0.9;
-            line-height: 1.5;
-            font-weight: 500;
+        @keyframes shimmer {
+
+            0%,
+            100% {
+                transform: translateX(-30%) translateY(-30%);
+            }
+
+            50% {
+                transform: translateX(30%) translateY(30%);
+            }
         }
 
         .stat-title {
             font-size: 0.85rem;
-            font-weight: 700;
-            opacity: 0.8;
-            letter-spacing: 1px;
+            font-weight: 600;
+            opacity: 0.9;
             text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        /* Viz Matrix */
+        .main-stat {
+            font-size: 4.5rem;
+            font-weight: 900;
+            line-height: 1;
+            margin: 15px 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .stat-desc {
+            font-size: 0.95rem;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .stat-card {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stat-card.highlight {
+            background: linear-gradient(135deg, #fef2f2, #fee2e2);
+            border-color: #fecaca;
+        }
+
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+
+        .stat-card .label {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 5px;
+        }
+
+        .stat-card.true-pos .number {
+            color: var(--accent);
+        }
+
+        .stat-card.false-pos .number {
+            color: var(--warning);
+        }
+
+        .stat-card.true-neg .number {
+            color: var(--success);
+        }
+
+        .stat-card.false-neg .number {
+            color: #94a3b8;
+        }
+
+        /* Analysis */
+        .analysis-box {
+            margin-top: 25px;
+            padding: 20px;
+            border-radius: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .analysis-box.danger {
+            background: #fef2f2;
+            color: #dc2626;
+            border-left: 4px solid #dc2626;
+        }
+
+        .analysis-box.warning {
+            background: #fffbeb;
+            color: #d97706;
+            border-left: 4px solid #d97706;
+        }
+
+        .analysis-box.success {
+            background: #f0fdf4;
+            color: #16a34a;
+            border-left: 4px solid #16a34a;
+        }
+
+        .analysis-icon {
+            font-size: 1.5rem;
+        }
+
+        /* Visualization */
         .viz-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 2px solid #f0f9ff;
-        }
-
-        .viz-header h2 {
-            color: var(--header);
-            font-weight: 800;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         .legend {
             display: flex;
             gap: 20px;
-            font-size: 0.9rem;
-            background: #f8fafc;
-            padding: 10px 20px;
+            background: #f1f5f9;
+            padding: 12px 20px;
             border-radius: 50px;
         }
 
@@ -183,160 +291,201 @@
             align-items: center;
             gap: 8px;
             font-weight: 600;
+            font-size: 0.85rem;
             color: #475569;
         }
 
         .dot {
-            width: 12px;
-            height: 12px;
+            width: 14px;
+            height: 14px;
             border-radius: 50%;
-            display: inline-block;
+        }
+
+        .dot.ring {
+            background: transparent;
+            border: 3px solid var(--primary);
+            width: 8px;
+            height: 8px;
         }
 
         .dot-matrix {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(14px, 1fr));
-            gap: 6px;
-            max-height: 550px;
-            overflow-y: auto;
+            grid-template-columns: repeat(40, 1fr);
+            gap: 5px;
             padding: 20px;
-            background: #ffffff;
+            background: #fafafa;
             border-radius: 16px;
             border: 2px solid #f1f5f9;
         }
 
         .person {
-            width: 14px;
-            height: 14px;
+            width: 16px;
+            height: 16px;
             border-radius: 50%;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             position: relative;
+            cursor: pointer;
         }
 
         .person.healthy {
             background: #cbd5e1;
         }
 
-        /* Grey 300 */
         .person.sick {
             background: #ef4444;
-            box-shadow: 0 0 8px rgba(239, 68, 68, 0.4);
+            box-shadow: 0 0 10px rgba(239, 68, 68, 0.5);
         }
-
-        /* Rose 500 */
 
         .person.ai-pos::after {
             content: '';
             position: absolute;
-            top: -3px;
-            left: -3px;
-            right: -3px;
-            bottom: -3px;
-            border: 2px solid var(--primary);
+            top: -4px;
+            left: -4px;
+            right: -4px;
+            bottom: -4px;
+            border: 3px solid var(--primary);
             border-radius: 50%;
             animation: pulse 2s infinite;
         }
 
         @keyframes pulse {
-            0% {
+
+            0%,
+            100% {
                 transform: scale(1);
                 opacity: 1;
             }
 
             50% {
-                transform: scale(1.2);
-                opacity: 0.5;
-            }
-
-            100% {
-                transform: scale(1);
-                opacity: 1;
+                transform: scale(1.15);
+                opacity: 0.6;
             }
         }
 
         .person:hover {
-            transform: scale(1.5);
-            z-index: 10;
+            transform: scale(2);
+            z-index: 100;
         }
 
-        #analysis-text {
-            font-weight: 600;
-            padding: 15px;
+        .person:hover::before {
+            content: attr(data-tip);
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1e293b;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.7rem;
+            white-space: nowrap;
+            z-index: 1000;
+        }
+
+        /* Formula */
+        .formula-box {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
             border-radius: 12px;
-            background: white;
-            border-left: 5px solid transparent;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        .formula-box .title {
+            font-weight: 700;
+            color: var(--header);
+            margin-bottom: 10px;
         }
     </style>
 </head>
 
 <body>
 
-    <h1>🤖 AI Doctor <span style="font-size: 1rem; color: #64748b; font-weight: 400; margin-left: 10px;">| Hệ thống chẩn
-            đoán sơ bộ</span></h1>
+    <div class="header">
+        <h1>🤖 AI Doctor</h1>
+        <p class="subtitle">Hệ thống Mô phỏng Chẩn đoán Y tế bằng AI | Khám phá Nghịch lý Dương tính Giả</p>
+    </div>
 
     <div class="container">
         <div class="panel">
-            <h2 style="margin-top:0; font-size: 1.2rem;">🎛️ Tham số Hệ thống</h2>
+            <h2>🎛️ Tham số Hệ thống AI</h2>
 
             <div class="control-group">
-                <label>Tỷ lệ mắc bệnh (Cộng đồng) <span class="val-display" id="prev-val">0.1%</span></label>
+                <div class="control-label">
+                    <span>Tỷ lệ mắc bệnh (Prevalence)</span>
+                    <span class="val-badge" id="prev-val">0.1%</span>
+                </div>
                 <input type="range" id="prevalence" min="0.1" max="20" step="0.1" value="0.1" oninput="updateViz()">
-                <div style="font-size: 0.8rem; color: #64748b; margin-top: 5px;">Mức độ phổ biến của bệnh trong dân số.
-                </div>
+                <p class="helper-text">Tỷ lệ người bệnh trong cộng đồng. Bệnh hiếm thường < 1%.</p>
             </div>
 
             <div class="control-group">
-                <label>Độ nhạy AI (Sensitivity) <span class="val-display" id="sens-val">99%</span></label>
+                <div class="control-label">
+                    <span>Độ nhạy AI (Sensitivity)</span>
+                    <span class="val-badge" id="sens-val">99%</span>
+                </div>
                 <input type="range" id="sensitivity" min="80" max="100" step="0.1" value="99" oninput="updateViz()">
-                <div style="font-size: 0.8rem; color: #64748b; margin-top: 5px;">Khả năng AI phát hiện đúng người bệnh.
-                </div>
+                <p class="helper-text">Khả năng AI phát hiện đúng người bệnh. P(+|Bệnh)</p>
             </div>
 
             <div class="control-group">
-                <label>Độ đặc hiệu AI (Specificity) <span class="val-display" id="spec-val">99%</span></label>
-                <input type="range" id="specificity" min="80" max="100" step="0.1" value="99" oninput="updateViz()">
-                <div style="font-size: 0.8rem; color: #64748b; margin-top: 5px;">Khả năng AI loại trừ đúng người khỏe.
+                <div class="control-label">
+                    <span>Độ đặc hiệu AI (Specificity)</span>
+                    <span class="val-badge" id="spec-val">99%</span>
                 </div>
+                <input type="range" id="specificity" min="80" max="100" step="0.1" value="99" oninput="updateViz()">
+                <p class="helper-text">Khả năng AI loại trừ đúng người khỏe. P(-|Khỏe)</p>
             </div>
 
             <div class="result-box">
-                <div class="stat-title">ĐỘ TIN CẬY THỰC SỰ (PPV)</div>
+                <div class="stat-title">Độ tin cậy thực sự (PPV)</div>
                 <div class="main-stat" id="ppv-result">--%</div>
-                <div class="stat-desc">
-                    Nếu AI báo Dương tính, đây là xác suất bạn <b>THỰC SỰ</b> bị bệnh.
+                <div class="stat-desc">Xác suất bạn <b>THỰC SỰ</b> bị bệnh khi AI báo Dương tính</div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card true-pos highlight">
+                    <div class="number" id="count-tp">0</div>
+                    <div class="label">Dương tính THẬT</div>
+                </div>
+                <div class="stat-card false-pos highlight">
+                    <div class="number" id="count-fp">0</div>
+                    <div class="label">Dương tính GIẢ</div>
+                </div>
+                <div class="stat-card false-neg">
+                    <div class="number" id="count-fn">0</div>
+                    <div class="label">Âm tính Giả</div>
+                </div>
+                <div class="stat-card true-neg">
+                    <div class="number" id="count-tn">0</div>
+                    <div class="label">Âm tính Thật</div>
                 </div>
             </div>
 
-            <div style="margin-top: 20px; font-size: 0.9rem; line-height: 1.5;">
-                <p>🔴 <strong>Tín hiệu báo động:</strong></p>
-                <p id="analysis-text">...</p>
+            <div class="analysis-box" id="analysis-box">
+                <span class="analysis-icon">⏳</span>
+                <span id="analysis-text">Đang phân tích...</span>
             </div>
         </div>
 
         <div class="panel">
             <div class="viz-header">
-                <h2 style="margin:0; font-size: 1.2rem;">👥 Mô phỏng Quần thể (1000 người)</h2>
+                <h2 style="margin: 0;">👥 Mô phỏng Quần thể (1000 người)</h2>
                 <div class="legend">
                     <div class="legend-item"><span class="dot" style="background: #cbd5e1;"></span> Khỏe</div>
-                    <div class="legend-item"><span class="dot" style="background: #f43f5e;"></span> Bệnh</div>
-                    <div class="legend-item"><span class="dot"
-                            style="border: 2px solid var(--primary); width: 6px; height: 6px;"></span> AI Báo Dương (+)
-                    </div>
+                    <div class="legend-item"><span class="dot" style="background: #ef4444;"></span> Bệnh</div>
+                    <div class="legend-item"><span class="dot ring"></span> AI Báo (+)</div>
                 </div>
             </div>
 
             <div id="matrix" class="dot-matrix"></div>
 
-            <div style="display: flex; gap: 20px; margin-top: 15px; justify-content: center;">
-                <div style="text-align: center;">
-                    <div style="font-weight: bold; font-size: 1.2rem; color: #f43f5e;" id="count-true-pos">0</div>
-                    <div style="font-size: 0.8rem; color: #64748b;">Dương tính THẬT</div>
-                </div>
-                <div style="text-align: center;">
-                    <div style="font-weight: bold; font-size: 1.2rem; color: var(--primary);" id="count-false-pos">0
-                    </div>
-                    <div style="font-size: 0.8rem; color: #64748b;">Dương tính GIẢ</div>
-                </div>
+            <div class="formula-box">
+                <div class="title">📐 Công thức Bayes</div>
+                <div id="formula-display">PPV = P(Bệnh|+) = TP / (TP + FP)</div>
             </div>
         </div>
     </div>
@@ -345,76 +494,68 @@
         function updateViz() {
             const prev = parseFloat(document.getElementById('prevalence').value);
             const sens = parseFloat(document.getElementById('sensitivity').value);
-            const spec = parseFloat(document.getElementById('specificity').value); // Accuracy for healthy people
+            const spec = parseFloat(document.getElementById('specificity').value);
 
             document.getElementById('prev-val').innerText = prev.toFixed(1) + '%';
             document.getElementById('sens-val').innerText = sens.toFixed(1) + '%';
             document.getElementById('spec-val').innerText = spec.toFixed(1) + '%';
 
             const POPULATION = 1000;
-
-            // Calcs
             const pSick = prev / 100;
-            const pHealthy = 1 - pSick;
-            const pPosGivenSick = sens / 100;
-            const pPosGivenHealthy = (100 - spec) / 100; // False Positive Rate
-
             const nSick = Math.round(POPULATION * pSick);
             const nHealthy = POPULATION - nSick;
 
-            const nTruePos = Math.round(nSick * pPosGivenSick);
-            const nFalsePos = Math.round(nHealthy * pPosGivenHealthy);
-            const totalPos = nTruePos + nFalsePos;
+            const nTP = Math.round(nSick * (sens / 100));
+            const nFN = nSick - nTP;
+            const nFP = Math.round(nHealthy * ((100 - spec) / 100));
+            const nTN = nHealthy - nFP;
 
-            const ppv = totalPos > 0 ? (nTruePos / totalPos) * 100 : 0;
+            const totalPos = nTP + nFP;
+            const ppv = totalPos > 0 ? (nTP / totalPos) * 100 : 0;
 
-            // Update Stats
             document.getElementById('ppv-result').innerText = ppv.toFixed(1) + '%';
-            document.getElementById('count-true-pos').innerText = nTruePos;
-            document.getElementById('count-false-pos').innerText = nFalsePos;
+            document.getElementById('count-tp').innerText = nTP;
+            document.getElementById('count-fp').innerText = nFP;
+            document.getElementById('count-fn').innerText = nFN;
+            document.getElementById('count-tn').innerText = nTN;
 
-            // Analysis Text
-            const elAnalysis = document.getElementById('analysis-text');
+            // Formula
+            document.getElementById('formula-display').innerHTML =
+                `PPV = ${nTP} / (${nTP} + ${nFP}) = ${nTP} / ${totalPos} = <b>${ppv.toFixed(1)}%</b>`;
+
+            // Analysis
+            const analysisBox = document.getElementById('analysis-box');
+            const analysisText = document.getElementById('analysis-text');
+            analysisBox.className = 'analysis-box';
+
             if (ppv < 50) {
-                elAnalysis.innerHTML = `Nguy hiểm! Số ca <b>Dương tính giả (${nFalsePos})</b> cao gấp nhiều lần ca bệnh thật. AI đang gây báo động thừa!`;
-                elAnalysis.style.color = '#e11d48';
+                analysisBox.classList.add('danger');
+                analysisBox.querySelector('.analysis-icon').textContent = '🚨';
+                analysisText.innerHTML = `<b>NGUY HIỂM!</b> Có ${nFP} người khỏe bị báo nhầm, gấp ${(nFP / Math.max(1, nTP)).toFixed(1)}x số ca bệnh thật. AI đang gây hoang mang!`;
             } else if (ppv < 90) {
-                elAnalysis.innerHTML = `Khá ổn. Tuy nhiên vẫn còn <b>${nFalsePos}</b> người khỏe bị báo nhầm. Cần bác sĩ kiểm tra lại.`;
-                elAnalysis.style.color = '#d97706';
+                analysisBox.classList.add('warning');
+                analysisBox.querySelector('.analysis-icon').textContent = '⚠️';
+                analysisText.innerHTML = `<b>CẦN KIỂM TRA THÊM.</b> Vẫn còn ${nFP} trường hợp Dương tính giả. Nên làm xét nghiệm lần 2.`;
             } else {
-                elAnalysis.innerHTML = `Tuyệt vời! Hệ thống rất đáng tin cậy.`;
-                elAnalysis.style.color = '#059669';
+                analysisBox.classList.add('success');
+                analysisBox.querySelector('.analysis-icon').textContent = '✅';
+                analysisText.innerHTML = `<b>TUYỆT VỜI!</b> Hệ thống rất đáng tin cậy. Độ chính xác chẩn đoán cao.`;
             }
 
             // Draw Matrix
             const container = document.getElementById('matrix');
             container.innerHTML = '';
 
-            // Generate dots
-            // We want to group them to make visual counting easier:
-            // 1. Sick & Detected (True Pos)
-            // 2. Sick & Missed (False Neg)
-            // 3. Healthy & Detected (False Pos) - IMPORTANT to show these next to True Pos
-            // 4. Healthy & Safe (True Neg)
-
             const dots = [];
-
-            // 1. True Positives
-            for (let i = 0; i < nTruePos; i++) dots.push({ type: 'sick', detected: true, status: 'Bệnh thật (AI bắt đúng)' });
-
-            // 2. False Negatives
-            for (let i = 0; i < (nSick - nTruePos); i++) dots.push({ type: 'sick', detected: false, status: 'Bệnh (AI bỏ sót)' });
-
-            // 3. False Positives
-            for (let i = 0; i < nFalsePos; i++) dots.push({ type: 'healthy', detected: true, status: 'Khỏe (AI báo nhầm)' });
-
-            // 4. True Negatives
-            for (let i = 0; i < (nHealthy - nFalsePos); i++) dots.push({ type: 'healthy', detected: false, status: 'Khỏe (AI đúng)' });
+            for (let i = 0; i < nTP; i++) dots.push({ type: 'sick', ai: true, tip: '🔴 Bệnh thật, AI đúng' });
+            for (let i = 0; i < nFN; i++) dots.push({ type: 'sick', ai: false, tip: '🔴 Bệnh, AI bỏ sót!' });
+            for (let i = 0; i < nFP; i++) dots.push({ type: 'healthy', ai: true, tip: '🟡 Khỏe, AI báo nhầm!' });
+            for (let i = 0; i < nTN; i++) dots.push({ type: 'healthy', ai: false, tip: '✅ Khỏe, AI đúng' });
 
             dots.forEach(d => {
                 const el = document.createElement('div');
-                el.className = `person ${d.type} ${d.detected ? 'ai-pos' : ''}`;
-                el.setAttribute('data-status', d.status);
+                el.className = `person ${d.type} ${d.ai ? 'ai-pos' : ''}`;
+                el.setAttribute('data-tip', d.tip);
                 container.appendChild(el);
             });
         }

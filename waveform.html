@@ -4,22 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WaveForm - Giai điệu Toán học</title>
+    <title>WaveForm - Âm nhạc & Toán</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg: #1e1b4b;
-            --card: #312e81;
+            --card: rgba(49, 46, 129, 0.7);
             --text: #e0e7ff;
             --primary: #8b5cf6;
-            --secondary: #a78bfa;
             --accent: #f472b6;
             --border: #4c1d95;
         }
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
+            background: linear-gradient(135deg, #1e1b4b, #312e81);
             color: var(--text);
             margin: 0;
             padding: 30px 20px;
@@ -42,12 +45,12 @@
 
         .subtitle {
             text-align: center;
-            color: var(--secondary);
+            color: #a78bfa;
             margin-bottom: 40px;
         }
 
         .card {
-            background: rgba(49, 46, 129, 0.6);
+            background: var(--card);
             backdrop-filter: blur(10px);
             border: 1px solid var(--border);
             border-radius: 20px;
@@ -56,23 +59,21 @@
         }
 
         h2 {
-            color: var(--secondary);
-            margin-top: 0;
+            color: #a78bfa;
+            margin: 0 0 20px;
             font-size: 1.2rem;
         }
 
-        /* Piano Styles */
         .piano {
             display: flex;
             justify-content: center;
             gap: 4px;
             padding: 20px 0;
-            position: relative;
         }
 
         .key {
             width: 50px;
-            height: 180px;
+            height: 160px;
             background: linear-gradient(to bottom, #fff, #e5e5e5);
             border: 1px solid #999;
             border-radius: 0 0 6px 6px;
@@ -82,38 +83,36 @@
             justify-content: flex-end;
             align-items: center;
             padding-bottom: 10px;
-            transition: all 0.1s;
-            position: relative;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: 0.1s;
         }
 
         .key:hover {
             background: linear-gradient(to bottom, #f0f0f0, #ddd);
         }
 
-        .key:active,
         .key.active {
-            background: linear-gradient(to bottom, var(--secondary), var(--primary));
+            background: linear-gradient(to bottom, #a78bfa, var(--primary));
             transform: translateY(2px);
         }
 
         .key-label {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: bold;
             color: #333;
         }
 
         .key-freq {
-            font-size: 0.65rem;
+            font-size: 0.6rem;
             color: #666;
         }
 
         .key.black {
-            width: 35px;
-            height: 110px;
+            width: 32px;
+            height: 100px;
             background: linear-gradient(to bottom, #333, #111);
             border-color: #000;
-            margin: 0 -18px;
+            margin: 0 -16px;
             z-index: 2;
         }
 
@@ -126,21 +125,40 @@
             background: linear-gradient(to bottom, #444, #222);
         }
 
-        .key.black:active,
         .key.black.active {
             background: linear-gradient(to bottom, var(--primary), #5b21b6);
         }
 
-        /* Waveform Display */
         #waveform-canvas {
             width: 100%;
-            height: 200px;
+            height: 180px;
             background: #0f0a1f;
             border-radius: 12px;
             border: 1px solid var(--border);
         }
 
-        /* Controls */
+        .info-box {
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid var(--primary);
+            border-radius: 12px;
+            padding: 15px;
+            margin-top: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            text-align: center;
+        }
+
+        .info-label {
+            font-size: 0.75rem;
+            color: #a78bfa;
+        }
+
+        .info-val {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
         .controls {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -154,274 +172,92 @@
             font-weight: 600;
         }
 
-        input[type="range"] {
+        input[type=range] {
             width: 100%;
             accent-color: var(--primary);
         }
 
-        .value-display {
-            text-align: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--primary);
-            margin-top: 5px;
-        }
-
-        /* Info Box */
-        .info-box {
-            background: rgba(139, 92, 246, 0.2);
+        .formula-box {
+            background: #0f0a1f;
             border: 1px solid var(--primary);
-            border-radius: 12px;
+            border-radius: 10px;
             padding: 15px;
             margin-top: 20px;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
             text-align: center;
+            font-family: monospace;
+            color: var(--primary);
+            font-size: 1.1rem;
         }
 
-        .info-item {}
-
-        .info-label {
-            font-size: 0.8rem;
-            color: var(--secondary);
-        }
-
-        .info-val {
-            font-size: 1.3rem;
-            font-weight: bold;
+        .kbd-hint {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #a78bfa;
         }
     </style>
 </head>
 
 <body>
-
     <div class="container">
         <h1>🎵 WAVE FORM</h1>
         <p class="subtitle">Nhìn thấy Toán trong Âm nhạc</p>
-
-        <!-- Piano -->
         <div class="card">
-            <h2>🎹 Đàn Piano Ảo</h2>
+            <h2>🎹 Đàn Piano Ảo (Bấm phím A-K)</h2>
             <div class="piano" id="piano"></div>
+            <p class="kbd-hint">⌨️ Dùng phím bàn phím: A S D F G H J K để chơi!</p>
         </div>
-
-        <!-- Waveform -->
         <div class="card">
             <h2>📈 Đồ thị Sóng Sin</h2>
             <canvas id="waveform-canvas"></canvas>
-
             <div class="info-box">
-                <div class="info-item">
-                    <div class="info-label">Nốt hiện tại</div>
+                <div>
+                    <div class="info-label">Nốt</div>
                     <div class="info-val" id="note-name">-</div>
                 </div>
-                <div class="info-item">
+                <div>
                     <div class="info-label">Tần số f (Hz)</div>
                     <div class="info-val" id="freq-val">-</div>
                 </div>
-                <div class="info-item">
+                <div>
                     <div class="info-label">Chu kỳ T (ms)</div>
                     <div class="info-val" id="period-val">-</div>
                 </div>
-                <div class="info-item">
+                <div>
                     <div class="info-label">Biên độ A</div>
                     <div class="info-val" id="amp-val">1.0</div>
                 </div>
             </div>
-
+            <div class="formula-box" id="formula">y = A sin(2π f t)</div>
             <div class="controls">
-                <div class="control-group">
-                    <label>🔊 Biên độ (Độ to)</label>
-                    <input type="range" id="amplitude" min="0.1" max="2" step="0.1" value="1" oninput="updateAmp()">
-                </div>
-                <div class="control-group">
-                    <label>🎚️ Tần số tùy chỉnh (Hz)</label>
-                    <input type="range" id="custom-freq" min="100" max="1000" step="1" value="440"
-                        oninput="playCustomFreq()">
-                    <div class="value-display" id="custom-freq-val">440 Hz</div>
-                </div>
+                <div class="control-group"><label>🔊 Biên độ</label><input type="range" id="amplitude" min="0.2" max="2"
+                        step="0.1" value="1" oninput="updateAmp()"></div>
+                <div class="control-group"><label>🎚️ Tần số tùy chỉnh</label><input type="range" id="custom-freq"
+                        min="100" max="800" step="1" value="440" oninput="playCustom()"></div>
             </div>
         </div>
     </div>
-
     <script>
-        // Audio Context
-        let audioCtx = null;
-        let oscillator = null;
-        let gainNode = null;
-
-        // Note frequencies (A4 = 440Hz standard)
-        const notes = [
-            { name: 'C4', freq: 261.63, black: false },
-            { name: 'C#4', freq: 277.18, black: true },
-            { name: 'D4', freq: 293.66, black: false },
-            { name: 'D#4', freq: 311.13, black: true },
-            { name: 'E4', freq: 329.63, black: false },
-            { name: 'F4', freq: 349.23, black: false },
-            { name: 'F#4', freq: 369.99, black: true },
-            { name: 'G4', freq: 392.00, black: false },
-            { name: 'G#4', freq: 415.30, black: true },
-            { name: 'A4', freq: 440.00, black: false },
-            { name: 'A#4', freq: 466.16, black: true },
-            { name: 'B4', freq: 493.88, black: false },
-            { name: 'C5', freq: 523.25, black: false },
-        ];
-
-        let currentFreq = 440;
-        let amplitude = 1;
-        let animationId = null;
-
-        // Build Piano
-        const pianoEl = document.getElementById('piano');
-        notes.forEach((note, i) => {
-            const key = document.createElement('div');
-            key.className = 'key' + (note.black ? ' black' : '');
-            key.innerHTML = `<span class="key-label">${note.name}</span><span class="key-freq">${Math.round(note.freq)}</span>`;
-            key.onmousedown = () => playNote(note.name, note.freq, key);
-            key.onmouseup = () => stopNote(key);
-            key.onmouseleave = () => stopNote(key);
-            pianoEl.appendChild(key);
-        });
-
-        function initAudio() {
-            if (!audioCtx) {
-                audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-            }
-        }
-
-        function playNote(name, freq, keyEl) {
-            initAudio();
-            stopNote();
-
-            currentFreq = freq;
-            oscillator = audioCtx.createOscillator();
-            gainNode = audioCtx.createGain();
-
-            oscillator.type = 'sine';
-            oscillator.frequency.setValueAtTime(freq, audioCtx.currentTime);
-            gainNode.gain.setValueAtTime(amplitude * 0.3, audioCtx.currentTime);
-
-            oscillator.connect(gainNode);
-            gainNode.connect(audioCtx.destination);
-            oscillator.start();
-
-            keyEl.classList.add('active');
-            updateInfo(name, freq);
-            drawWave();
-        }
-
-        function stopNote(keyEl) {
-            if (oscillator) {
-                oscillator.stop();
-                oscillator = null;
-            }
-            if (keyEl) keyEl.classList.remove('active');
-        }
-
-        function playCustomFreq() {
-            const freq = parseFloat(document.getElementById('custom-freq').value);
-            document.getElementById('custom-freq-val').textContent = freq + ' Hz';
-
-            initAudio();
-            stopNote();
-
-            currentFreq = freq;
-            oscillator = audioCtx.createOscillator();
-            gainNode = audioCtx.createGain();
-
-            oscillator.type = 'sine';
-            oscillator.frequency.setValueAtTime(freq, audioCtx.currentTime);
-            gainNode.gain.setValueAtTime(amplitude * 0.3, audioCtx.currentTime);
-
-            oscillator.connect(gainNode);
-            gainNode.connect(audioCtx.destination);
-            oscillator.start();
-
-            updateInfo('Custom', freq);
-            drawWave();
-
-            // Stop after 0.5s
-            setTimeout(() => stopNote(), 500);
-        }
-
-        function updateAmp() {
-            amplitude = parseFloat(document.getElementById('amplitude').value);
-            document.getElementById('amp-val').textContent = amplitude.toFixed(1);
-            if (gainNode) {
-                gainNode.gain.setValueAtTime(amplitude * 0.3, audioCtx.currentTime);
-            }
-            drawWave();
-        }
-
-        function updateInfo(name, freq) {
-            document.getElementById('note-name').textContent = name;
-            document.getElementById('freq-val').textContent = Math.round(freq);
-            document.getElementById('period-val').textContent = (1000 / freq).toFixed(2);
-        }
-
-        // Waveform Drawing
-        const canvas = document.getElementById('waveform-canvas');
-        const ctx = canvas.getContext('2d');
-
-        function resizeCanvas() {
-            canvas.width = canvas.offsetWidth * 2;
-            canvas.height = canvas.offsetHeight * 2;
-            ctx.scale(2, 2);
-        }
-        resizeCanvas();
-        window.addEventListener('resize', resizeCanvas);
-
-        function drawWave() {
-            const w = canvas.offsetWidth;
-            const h = canvas.offsetHeight;
-            const midY = h / 2;
-
-            ctx.clearRect(0, 0, w, h);
-
-            // Grid
-            ctx.strokeStyle = '#333';
-            ctx.lineWidth = 0.5;
-            ctx.beginPath();
-            for (let y = 0; y <= h; y += h / 4) {
-                ctx.moveTo(0, y);
-                ctx.lineTo(w, y);
-            }
-            ctx.stroke();
-            ctx.beginPath();
-            ctx.strokeStyle = '#555';
-            ctx.moveTo(0, midY);
-            ctx.lineTo(w, midY);
-            ctx.stroke();
-
-            // Wave
-            const cycles = Math.max(2, Math.min(10, currentFreq / 100)); // Show 2-10 cycles
-            const omega = 2 * Math.PI * cycles;
-
-            ctx.strokeStyle = '#8b5cf6';
-            ctx.lineWidth = 2;
-            ctx.shadowColor = '#8b5cf6';
-            ctx.shadowBlur = 10;
-            ctx.beginPath();
-
-            for (let x = 0; x <= w; x++) {
-                const t = x / w;
-                const y = midY - amplitude * (midY * 0.7) * Math.sin(omega * t);
-                if (x === 0) ctx.moveTo(x, y);
-                else ctx.lineTo(x, y);
-            }
-            ctx.stroke();
-            ctx.shadowBlur = 0;
-
-            // Label
-            ctx.fillStyle = '#a78bfa';
-            ctx.font = '12px Inter';
-            ctx.fillText(`y = ${amplitude.toFixed(1)} sin(2π × ${Math.round(currentFreq)} × t)`, 10, 20);
-        }
-
+        let audioCtx = null, osc = null, gain = null, currentFreq = 440, amplitude = 1;
+        const notes = [{ n: 'C4', f: 262, b: false }, { n: 'C#', f: 277, b: true }, { n: 'D4', f: 294, b: false }, { n: 'D#', f: 311, b: true }, { n: 'E4', f: 330, b: false }, { n: 'F4', f: 349, b: false }, { n: 'F#', f: 370, b: true }, { n: 'G4', f: 392, b: false }, { n: 'G#', f: 415, b: true }, { n: 'A4', f: 440, b: false }, { n: 'A#', f: 466, b: true }, { n: 'B4', f: 494, b: false }, { n: 'C5', f: 523, b: false }];
+        const keyMap = { a: 0, w: 1, s: 2, e: 3, d: 4, f: 5, t: 6, g: 7, y: 8, h: 9, u: 10, j: 11, k: 12 };
+        const piano = document.getElementById('piano');
+        const keys = [];
+        notes.forEach((note, i) => { const k = document.createElement('div'); k.className = 'key' + (note.b ? ' black' : ''); k.innerHTML = `<span class="key-label">${note.n}</span><span class="key-freq">${note.f}</span>`; k.onmousedown = () => play(i); k.onmouseup = () => stop(i); k.onmouseleave = () => stop(i); piano.appendChild(k); keys.push(k); });
+        document.addEventListener('keydown', e => { const i = keyMap[e.key.toLowerCase()]; if (i !== undefined && !e.repeat) play(i); });
+        document.addEventListener('keyup', e => { const i = keyMap[e.key.toLowerCase()]; if (i !== undefined) stop(i); });
+        function initAudio() { if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)(); }
+        function play(i) { initAudio(); stopOsc(); currentFreq = notes[i].f; osc = audioCtx.createOscillator(); gain = audioCtx.createGain(); osc.type = 'sine'; osc.frequency.setValueAtTime(currentFreq, audioCtx.currentTime); gain.gain.setValueAtTime(amplitude * 0.3, audioCtx.currentTime); osc.connect(gain); gain.connect(audioCtx.destination); osc.start(); keys[i].classList.add('active'); updateInfo(notes[i].n, currentFreq); drawWave(); }
+        function stop(i) { stopOsc(); if (keys[i]) keys[i].classList.remove('active'); }
+        function stopOsc() { if (osc) { osc.stop(); osc = null; } }
+        function playCustom() { const f = parseInt(document.getElementById('custom-freq').value); initAudio(); stopOsc(); currentFreq = f; osc = audioCtx.createOscillator(); gain = audioCtx.createGain(); osc.type = 'sine'; osc.frequency.setValueAtTime(f, audioCtx.currentTime); gain.gain.setValueAtTime(amplitude * 0.3, audioCtx.currentTime); osc.connect(gain); gain.connect(audioCtx.destination); osc.start(); updateInfo('Custom', f); drawWave(); setTimeout(stopOsc, 400); }
+        function updateAmp() { amplitude = parseFloat(document.getElementById('amplitude').value); document.getElementById('amp-val').textContent = amplitude.toFixed(1); if (gain) gain.gain.setValueAtTime(amplitude * 0.3, audioCtx.currentTime); drawWave(); }
+        function updateInfo(n, f) { document.getElementById('note-name').textContent = n; document.getElementById('freq-val').textContent = f; document.getElementById('period-val').textContent = (1000 / f).toFixed(2); document.getElementById('formula').textContent = `y = ${amplitude.toFixed(1)} sin(2π × ${f} × t)`; }
+        const canvas = document.getElementById('waveform-canvas'), ctx = canvas.getContext('2d');
+        function resize() { canvas.width = canvas.offsetWidth * 2; canvas.height = canvas.offsetHeight * 2; ctx.scale(2, 2); } resize(); window.onresize = resize;
+        function drawWave() { const w = canvas.offsetWidth, h = canvas.offsetHeight, mid = h / 2; ctx.clearRect(0, 0, w, h); ctx.strokeStyle = '#333'; ctx.lineWidth = 0.5; ctx.beginPath(); for (let y = 0; y <= h; y += h / 4) { ctx.moveTo(0, y); ctx.lineTo(w, y); } ctx.stroke(); ctx.strokeStyle = '#555'; ctx.beginPath(); ctx.moveTo(0, mid); ctx.lineTo(w, mid); ctx.stroke(); const cycles = Math.max(2, Math.min(8, currentFreq / 100)), omega = 2 * Math.PI * cycles; ctx.strokeStyle = '#8b5cf6'; ctx.lineWidth = 2; ctx.shadowColor = '#8b5cf6'; ctx.shadowBlur = 10; ctx.beginPath(); for (let x = 0; x <= w; x++) { const t = x / w, y = mid - amplitude * (mid * 0.7) * Math.sin(omega * t); x === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y); } ctx.stroke(); ctx.shadowBlur = 0; }
         drawWave();
     </script>
-
 </body>
 
 </html>

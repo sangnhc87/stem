@@ -4,19 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoCode - Mã hóa Bí mật</title>
+    <title>CryptoCode - Mật mã</title>
     <link
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap"
         rel="stylesheet">
     <style>
         :root {
-            --bg: #0d1117;
-            --card: #161b22;
-            --text: #c9d1d9;
+            --bg: #0a0f0d;
+            --card: #111a16;
+            --text: #d1fae5;
             --primary: #10b981;
-            --secondary: #34d399;
             --accent: #f59e0b;
-            --border: #30363d;
+            --border: #1f3d32;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
@@ -24,7 +27,7 @@
             background: var(--bg);
             color: var(--text);
             margin: 0;
-            padding: 40px 20px;
+            padding: 30px 20px;
             min-height: 100vh;
         }
 
@@ -35,16 +38,14 @@
 
         h1 {
             text-align: center;
-            color: var(--primary);
             font-size: 2.5rem;
+            color: var(--primary);
             margin-bottom: 10px;
-            font-weight: 800;
-            letter-spacing: 2px;
         }
 
         .subtitle {
             text-align: center;
-            color: #8b949e;
+            color: #6ee7b7;
             margin-bottom: 40px;
         }
 
@@ -52,128 +53,137 @@
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 30px;
+            padding: 25px;
+            margin-bottom: 25px;
         }
 
         h2 {
-            color: var(--secondary);
-            margin-top: 0;
-            font-size: 1.3rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            color: var(--primary);
+            margin: 0 0 20px;
+            font-size: 1.2rem;
+        }
+
+        .alpha-grid {
+            display: grid;
+            grid-template-columns: repeat(13, 1fr);
+            gap: 6px;
+        }
+
+        .alpha-cell {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .alpha-letter {
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--primary);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .alpha-num {
+            font-size: 0.7rem;
+            color: #6ee7b7;
         }
 
         label {
             display: block;
             font-weight: 600;
             margin-bottom: 8px;
-            color: var(--text);
         }
 
-        textarea,
-        input[type="number"] {
+        textarea {
             width: 100%;
             padding: 15px;
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.1rem;
             background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
+            border: 2px solid var(--border);
+            border-radius: 10px;
             color: var(--text);
             resize: none;
-            box-sizing: border-box;
         }
 
-        textarea:focus,
-        input:focus {
+        textarea:focus {
             outline: none;
             border-color: var(--primary);
         }
 
-        .key-input {
+        .key-row {
             display: flex;
-            gap: 15px;
             align-items: center;
+            gap: 15px;
             margin: 20px 0;
+            padding: 15px;
+            background: var(--bg);
+            border-radius: 10px;
         }
 
-        .key-input input {
-            width: 100px;
-            text-align: center;
-            font-size: 1.5rem;
+        .key-input {
+            width: 70px;
+            padding: 12px;
+            font-size: 1.3rem;
             font-weight: bold;
-        }
-
-        .key-input span {
-            color: #8b949e;
+            text-align: center;
+            background: transparent;
+            border: 2px solid var(--primary);
+            border-radius: 8px;
+            color: var(--primary);
         }
 
         .btn-group {
             display: flex;
             gap: 10px;
-            margin-top: 20px;
             flex-wrap: wrap;
         }
 
         button {
-            padding: 12px 25px;
+            padding: 12px 24px;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             font-weight: 700;
             cursor: pointer;
-            transition: all 0.2s;
-            font-size: 1rem;
         }
 
         .btn-primary {
             background: var(--primary);
-            color: #0d1117;
-        }
-
-        .btn-primary:hover {
-            background: var(--secondary);
-            transform: translateY(-2px);
+            color: #0a0f0d;
         }
 
         .btn-secondary {
             background: transparent;
-            border: 1px solid var(--primary);
+            border: 2px solid var(--primary);
             color: var(--primary);
-        }
-
-        .btn-secondary:hover {
-            background: rgba(16, 185, 129, 0.1);
         }
 
         .btn-accent {
             background: var(--accent);
-            color: #0d1117;
-        }
-
-        .btn-accent:hover {
-            filter: brightness(1.1);
+            color: #0a0f0d;
         }
 
         .output-box {
             background: #000;
-            border: 1px solid var(--primary);
-            border-radius: 8px;
+            border: 2px solid var(--primary);
+            border-radius: 10px;
             padding: 20px;
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.2rem;
             color: var(--primary);
-            min-height: 60px;
-            word-break: break-all;
+            min-height: 50px;
             margin-top: 20px;
+            word-break: break-all;
         }
 
-        /* Brute-force Results */
         .brute-results {
-            max-height: 400px;
+            max-height: 350px;
             overflow-y: auto;
             margin-top: 20px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            display: none;
         }
 
         .brute-item {
@@ -182,10 +192,16 @@
             padding: 10px 15px;
             border-bottom: 1px solid var(--border);
             font-family: 'JetBrains Mono', monospace;
+            cursor: pointer;
         }
 
         .brute-item:hover {
             background: rgba(16, 185, 129, 0.1);
+        }
+
+        .brute-item.likely {
+            background: rgba(16, 185, 129, 0.15);
+            border-left: 3px solid var(--primary);
         }
 
         .brute-key {
@@ -194,143 +210,67 @@
             min-width: 50px;
         }
 
-        .brute-text {
-            color: var(--text);
-        }
-
-        /* Alphabet Reference */
-        .alphabet-ref {
+        .freq-bars {
             display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-            justify-content: center;
-            margin: 20px 0;
-        }
-
-        .alpha-item {
+            align-items: flex-end;
+            gap: 3px;
+            height: 80px;
+            padding: 10px;
             background: var(--bg);
-            border: 1px solid var(--border);
-            padding: 8px 12px;
-            border-radius: 6px;
-            text-align: center;
-            font-family: 'JetBrains Mono', monospace;
+            border-radius: 8px;
+            margin-top: 15px;
+            display: none;
         }
 
-        .alpha-letter {
-            font-size: 1rem;
-            font-weight: bold;
-            color: var(--primary);
-        }
-
-        .alpha-num {
-            font-size: 0.75rem;
-            color: #8b949e;
+        .freq-bar {
+            flex: 1;
+            background: var(--primary);
+            border-radius: 2px 2px 0 0;
+            min-height: 2px;
         }
     </style>
 </head>
 
 <body>
-
     <div class="container">
-
         <h1>🔐 CRYPTO CODE</h1>
-        <p class="subtitle">Mã hóa & Giải mã tin nhắn bí mật bằng Toán học</p>
-
-        <!-- Alphabet Reference -->
+        <p class="subtitle">Mã hóa Caesar • Số học Đồng dư</p>
         <div class="card">
-            <h2>📊 Bảng Tham chiếu Chữ - Số</h2>
-            <div class="alphabet-ref" id="alpha-ref"></div>
+            <h2>📊 Bảng Chữ → Số</h2>
+            <div class="alpha-grid" id="alpha-grid"></div>
         </div>
-
-        <!-- Encoder/Decoder -->
         <div class="card">
-            <h2>✉️ Công cụ Mã hóa / Giải mã</h2>
-
-            <label for="input-text">Nhập tin nhắn:</label>
-            <textarea id="input-text" rows="3" placeholder="Nhập tin nhắn của bạn ở đây..."></textarea>
-
-            <div class="key-input">
-                <label for="key" style="margin:0">Khóa (k):</label>
-                <input type="number" id="key" value="3" min="0" max="25">
-                <span>(Dịch chuyển bao nhiêu bước, từ 0 đến 25)</span>
+            <h2>✉️ Mã hóa / Giải mã</h2>
+            <label>Tin nhắn:</label>
+            <textarea id="input-text" rows="3" placeholder="VD: HELLO WORLD"></textarea>
+            <div class="key-row">
+                <span>Khóa k =</span>
+                <input type="number" class="key-input" id="key" value="3" min="0" max="25">
+                <span style="color:#6ee7b7">E(x) = (x + k) mod 26</span>
             </div>
-
             <div class="btn-group">
-                <button class="btn-primary" onclick="encrypt()">🔒 Mã hóa (Encrypt)</button>
-                <button class="btn-secondary" onclick="decrypt()">🔓 Giải mã (Decrypt)</button>
-                <button class="btn-accent" onclick="bruteForce()">💣 Brute-force (Thử tất cả)</button>
+                <button class="btn-primary" onclick="encrypt()">🔒 Mã hóa</button>
+                <button class="btn-secondary" onclick="decrypt()">🔓 Giải mã</button>
+                <button class="btn-accent" onclick="bruteForce()">💣 Brute-force</button>
             </div>
-
-            <div class="output-box" id="output">Kết quả sẽ hiển thị ở đây...</div>
-
-            <div class="brute-results" id="brute-results" style="display: none;"></div>
+            <div class="output-box" id="output">Chờ lệnh...</div>
+            <div class="freq-bars" id="freq-bars"></div>
+            <div class="brute-results" id="brute-results"></div>
         </div>
-
     </div>
-
     <script>
-        // Generate Alphabet Reference
-        const alphaRef = document.getElementById('alpha-ref');
-        for (let i = 0; i < 26; i++) {
-            const letter = String.fromCharCode(65 + i);
-            const div = document.createElement('div');
-            div.className = 'alpha-item';
-            div.innerHTML = `<div class="alpha-letter">${letter}</div><div class="alpha-num">${i}</div>`;
-            alphaRef.appendChild(div);
-        }
-
-        // Caesar Cipher Functions
-        function shiftChar(char, shift, decrypt = false) {
-            const code = char.toUpperCase().charCodeAt(0);
-            if (code < 65 || code > 90) return char; // Not A-Z
-
-            let shifted = code - 65;
-            if (decrypt) {
-                shifted = (shifted - shift + 26) % 26;
-            } else {
-                shifted = (shifted + shift) % 26;
-            }
-            return String.fromCharCode(shifted + 65);
-        }
-
-        function processText(text, shift, decrypt = false) {
-            return text.split('').map(c => shiftChar(c, shift, decrypt)).join('');
-        }
-
-        function encrypt() {
-            const text = document.getElementById('input-text').value;
-            const key = parseInt(document.getElementById('key').value);
-            const result = processText(text, key, false);
-            document.getElementById('output').textContent = result;
-            document.getElementById('brute-results').style.display = 'none';
-        }
-
-        function decrypt() {
-            const text = document.getElementById('input-text').value;
-            const key = parseInt(document.getElementById('key').value);
-            const result = processText(text, key, true);
-            document.getElementById('output').textContent = result;
-            document.getElementById('brute-results').style.display = 'none';
-        }
-
+        const grid = document.getElementById('alpha-grid');
+        for (let i = 0; i < 26; i++) { const l = String.fromCharCode(65 + i); const d = document.createElement('div'); d.className = 'alpha-cell'; d.innerHTML = `<div class="alpha-letter">${l}</div><div class="alpha-num">${i}</div>`; grid.appendChild(d); }
+        function shift(c, k, dec = false) { const code = c.toUpperCase().charCodeAt(0); if (code < 65 || code > 90) return c; let s = code - 65; s = dec ? (s - k + 26) % 26 : (s + k) % 26; return String.fromCharCode(s + 65); }
+        function proc(t, k, dec = false) { return t.split('').map(c => shift(c, k, dec)).join(''); }
+        function encrypt() { const t = document.getElementById('input-text').value, k = parseInt(document.getElementById('key').value); document.getElementById('output').textContent = proc(t, k); document.getElementById('brute-results').style.display = 'none'; }
+        function decrypt() { const t = document.getElementById('input-text').value, k = parseInt(document.getElementById('key').value); document.getElementById('output').textContent = proc(t, k, true); document.getElementById('brute-results').style.display = 'none'; }
         function bruteForce() {
-            const text = document.getElementById('input-text').value;
-            const container = document.getElementById('brute-results');
-            container.innerHTML = '<h3 style="color: var(--accent); margin: 0 0 15px 0;">🔍 Thử tất cả 26 khóa:</h3>';
-
-            for (let k = 0; k < 26; k++) {
-                const result = processText(text, k, true);
-                const div = document.createElement('div');
-                div.className = 'brute-item';
-                div.innerHTML = `<span class="brute-key">k=${k}</span><span class="brute-text">${result}</span>`;
-                container.appendChild(div);
-            }
-
-            container.style.display = 'block';
-            document.getElementById('output').textContent = '⬆️ Tìm câu có nghĩa trong danh sách trên!';
+            const t = document.getElementById('input-text').value, c = document.getElementById('brute-results'); c.innerHTML = ''; const words = ['THE', 'AND', 'YOU', 'HELLO', 'WORLD'];
+            for (let k = 0; k < 26; k++) { const r = proc(t, k, true), likely = words.some(w => r.includes(w)); const d = document.createElement('div'); d.className = 'brute-item' + (likely ? ' likely' : ''); d.innerHTML = `<span class="brute-key">k=${k}</span><span>${r}</span>`; d.onclick = () => { document.getElementById('key').value = k; document.getElementById('output').textContent = r; }; c.appendChild(d); }
+            c.style.display = 'block'; document.getElementById('output').textContent = '⬇️ Chọn kết quả có nghĩa!';
         }
     </script>
-
 </body>
 
 </html>
