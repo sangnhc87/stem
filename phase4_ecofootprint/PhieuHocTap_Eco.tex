@@ -1,0 +1,108 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PHIẾU HỌC TẬP: ECOFOOTPRINT
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+% ============= GÓI CƠ BẢN =============
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usepackage{enumitem}
+\usepackage{geometry}
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+% ============= MÀU SẮC =============
+\usepackage[svgnames]{xcolor}
+\definecolor{primary}{RGB}{34,139,34}
+\definecolor{headerbg}{RGB}{200,240,200}
+
+% ============= TIÊU ĐỀ =============
+\newcommand{\MyHeader}{
+    \begin{tikzpicture}[remember picture, overlay]
+        \draw[primary, line width=2pt] ($(current page.north west)+(1.5,-1.5)$) rectangle ($(current page.south east)+(-1.5,1.5)$);
+    \end{tikzpicture}
+    \begin{center}
+        {\large\sffamily SỞ GD\&ĐT TP. HỒ CHÍ MINH}\\
+        {\bfseries\large\sffamily TRƯỜNG THPT NGUYỄN HỮU CẢNH}\\[0.5cm]
+        {\huge\bfseries\color{primary}\sffamily PHIẾU HỌC TẬP STEM}\\[0.2cm]
+        {\Large\sffamily CHỦ ĐỀ: TÍNH DẤU CHÂN CARBON CÁ NHÂN}\\[0.5cm]
+    \end{center}
+    \noindent\textbf{Họ và tên:} \underline{\hspace{6cm}} \textbf{Lớp:} \underline{\hspace{2cm}} \textbf{Nhóm:} \underline{\hspace{1cm}}
+    \vspace{0.5cm}
+    \hrule
+    \vspace{0.5cm}
+}
+
+\begin{document}
+\MyHeader
+
+% PHẦN 1
+\section*{\color{primary} I. KHẢO SÁT DỮ LIỆU ĐẦU VÀO (DATA COLLECTION)}
+\textit{Hãy thu thập số liệu thực tế từ gia đình em trong 1 tháng vừa qua.}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabularx}{\textwidth}{|>{\columncolor{headerbg}\bfseries}l|X|X|}
+\hline
+\textbf{Nguồn phát thải} & \textbf{Số liệu thu thập} & \textbf{Quy đổi về đơn vị chuẩn} \\
+\hline
+\textbf{1. Điện năng} & Hóa đơn tháng trước: \dotfill VND & Số kWh tiêu thụ = $\dfrac{\text{Tiền}}{2.500} \approx$ \dotfill kWh \\
+\hline
+\textbf{2. Nước sạch} & Hóa đơn nước: \dotfill VND & Số $m^3$ tiêu thụ = $\dfrac{\text{Tiền}}{10.000} \approx$ \dotfill $m^3$ \\
+\hline
+\textbf{3. Di chuyển} & Phương tiện chính: \dotfill & Quãng đường đi/ngày: \dotfill km \\
+(Xe máy/Bus/...) & Số ngày đi/tuần: \dotfill & Tổng km/tháng $\approx$ \dotfill km \\
+\hline
+\textbf{4. Rác thải} & Ước lượng rác nhà em: \dotfill kg/ngày & Tổng kg/tháng $\approx$ \dotfill kg \\
+\hline
+\end{tabularx}
+\end{center}
+
+% PHẦN 2
+\section*{\color{primary} II. TÍNH TOÁN TOÁN HỌC (MATHEMATICAL MODELING)}
+\textbf{Công thức:} $E = EF \times x$ (trong đó $EF$ là hệ số phát thải).
+
+\begin{enumerate}
+    \item \textbf{Tính lượng $CO_2$ từ ĐIỆN:} ($EF_{dien} = 0.72$ kg/kWh)
+    $$E_{dien} = 0.72 \times \text{\hspace{2cm}} = \text{\hspace{3cm}} \text{ (kg } CO_2)$$
+    
+    \item \textbf{Tính lượng $CO_2$ từ XE MÁY:} ($EF_{xe} = 0.05$ kg/km)
+    $$E_{xe} = 0.05 \times \text{\hspace{2cm}} = \text{\hspace{3cm}} \text{ (kg } CO_2)$$
+    
+    \item \textbf{Tổng Dấu chân Carbon ước tính trong 1 tháng:}
+    $$E_{total} = E_{dien} + E_{xe} + E_{nuoc} + \dots = \text{\hspace{3cm}} \text{ (kg } CO_2)$$
+    
+    \item \textbf{Quy đổi ra 1 năm:} $E_{nam} = E_{total} \times 12 = \text{\hspace{3cm}} \text{ (kg } CO_2)$
+\end{enumerate}
+
+% PHẦN 3
+\section*{\color{primary} III. ỨNG DỤNG CÔNG NGHỆ (ECO APP)}
+Truy cập: \textbf{\texttt{stem-1h8.pages.dev/eco.html}}
+
+\begin{enumerate}
+    \item Nhập các số liệu em đã thu thập vào ứng dụng.
+    \item Ghi lại kết quả từ App:
+    \begin{itemize}
+        \item Tổng phát thải: \dotfill kg/năm. (So sánh với tính tay: lệch bao nhiêu? \dotfill)
+        \item Nguồn phát thải lớn nhất là gì? \dotfill (chiếm \dotfill \%)
+    \end{itemize}
+    \item \textbf{Thử nghiệm kịch bản giảm thải:} 
+    \textit{Nếu em giảm dùng điện 10\% và đi xe đạp 2 ngày/tuần, App dự báo em sẽ giảm được bao nhiêu kg $CO_2$?}
+    \vspace{1cm}
+\end{enumerate}
+
+% PHẦN 4
+\section*{\color{primary} IV. CAM KẾT HÀNH ĐỘNG}
+\textit{Dựa trên kết quả tính toán, hãy viết ra 3 hành động cụ thể em sẽ làm:}
+\begin{itemize}
+    \item [1.] \dotfill
+    \item [2.] \dotfill
+    \item [3.] \dotfill
+\end{itemize}
+
+\end{document}

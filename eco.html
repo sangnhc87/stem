@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoFootprint - Tính Dấu Chân Carbon</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #22c55e;
+            --primary-dark: #15803d;
+            --bg-light: #f0fdf4;
+            --card-bg: rgba(255, 255, 255, 0.9);
+            --text-main: #064e3b;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(120deg, #dcfce7 0%, #bbf7d0 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #bbf7d0;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 1rem;
+            box-sizing: border-box;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .result-box {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background: #ecfdf5;
+            border-radius: 15px;
+            border: 2px dashed var(--primary);
+        }
+
+        .big-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+        }
+
+        .unit {
+            font-size: 1rem;
+            color: #64748b;
+        }
+
+        .tips {
+            margin-top: 20px;
+        }
+
+        .tip-item {
+            background: #fff;
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border-left: 4px solid var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🌿 EcoFootprint</h1>
+            <p>Tính toán Dấu chân Carbon cá nhân bằng Toán học</p>
+        </header>
+
+        <div class="grid">
+            <!-- INPUT -->
+            <div class="card">
+                <h3>📝 Nhập liệu thói quen (Tháng)</h3>
+
+                <div class="form-group">
+                    <label>⚡ Điện sinh hoạt (kWh/tháng)</label>
+                    <input type="number" id="inpElec" placeholder="VD: 150">
+                </div>
+
+                <div class="form-group">
+                    <label>💧 Nước sạch (m³/tháng)</label>
+                    <input type="number" id="inpWater" placeholder="VD: 20">
+                </div>
+
+                <div class="form-group">
+                    <label>🛵 Xe máy (km/tháng)</label>
+                    <input type="number" id="inpBike" placeholder="VD: 300 (khoảng 10km/ngày)">
+                </div>
+
+                <div class="form-group">
+                    <label>🗑️ Rác thải (kg/tháng)</label>
+                    <input type="number" id="inpTrash" placeholder="VD: 30 (khoảng 1kg/ngày)">
+                </div>
+
+                <button onclick="calculate()">TÍNH TOÁN NGAY 🚀</button>
+            </div>
+
+            <!-- OUTPUT -->
+            <div class="card">
+                <h3>📊 Kết quả phân tích</h3>
+                <div style="height: 250px; position: relative;">
+                    <canvas id="chart"></canvas>
+                </div>
+
+                <div class="result-box">
+                    <div>Tổng phát thải ước tính:</div>
+                    <div class="big-number" id="totalVal">0</div>
+                    <div class="unit">kg CO₂ / năm</div>
+                    <div id="compareText" style="margin-top: 10px; font-weight: 600; color: #d97706;"></div>
+                </div>
+
+                <div class="tips" id="tipsBox" style="display: none;">
+                    <h4>💡 Giải pháp cho bạn:</h4>
+                    <div id="tipsList"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Coefficients (kg CO2 per unit)
+        const EF = {
+            elec: 0.72,  // per kWh
+            water: 0.3,  // per m3
+            bike: 0.05,  // per km
+            trash: 1.5   // per kg
+        };
+
+        let chartInstance = null;
+
+        function calculate() {
+            // Get inputs (monthly)
+            let elec = Number(document.getElementById('inpElec').value) || 0;
+            let water = Number(document.getElementById('inpWater').value) || 0;
+            let bike = Number(document.getElementById('inpBike').value) || 0;
+            let trash = Number(document.getElementById('inpTrash').value) || 0;
+
+            // Calculate CO2 (Monthly)
+            let co2_elec = elec * EF.elec;
+            let co2_water = water * EF.water;
+            let co2_bike = bike * EF.bike;
+            let co2_trash = trash * EF.trash;
+
+            // Total Annual
+            let totalMonth = co2_elec + co2_water + co2_bike + co2_trash;
+            let totalYear = totalMonth * 12;
+
+            // Animate count up
+            document.getElementById('totalVal').innerText = Math.round(totalYear).toLocaleString();
+
+            // Comparison
+            let vnAvg = 2300; // 2.3 tons
+            let diff = totalYear - vnAvg;
+            let compText = "";
+
+            if (diff > 0) compText = `⚠️ Cao hơn trung bình VN ${Math.round(diff)} kg!`;
+            else compText = `✅ Thấp hơn trung bình VN ${Math.round(Math.abs(diff))} kg. Tốt!`;
+            document.getElementById('compareText').innerText = compText;
+
+            // Chart
+            const ctx = document.getElementById('chart').getContext('2d');
+            if (chartInstance) chartInstance.destroy();
+
+            chartInstance = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Điện', 'Nước', 'Xe máy', 'Rác'],
+                    datasets: [{
+                        data: [co2_elec, co2_water, co2_bike, co2_trash],
+                        backgroundColor: ['#facc15', '#3b82f6', '#f97316', '#78716c'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'right' }
+                    }
+                }
+            });
+
+            // Recommendations
+            let msg = "";
+            let max = Math.max(co2_elec, co2_water, co2_bike, co2_trash);
+
+            if (max === co2_elec) msg = `<div class="tip-item">⚡ Bạn dùng nhiều điện nhất! Hãy tắt máy lạnh khi không cần, dùng đèn LED.</div>`;
+            if (max === co2_bike) msg = `<div class="tip-item">🛵 Đi lại phát thải nhiều! Thử đi xe buýt hoặc xe đạp điện.</div>`;
+            if (max === co2_trash) msg = `<div class="tip-item">🗑️ Rác nhiều quá! Hãy phân loại rác và ủ phân hữu cơ.</div>`;
+
+            msg += `<div class="tip-item">🌳 Hãy trồng thêm <b>${Math.ceil(totalYear / 20)}</b> cây xanh để trung hòa lượng khí thải này.</div>`;
+
+            document.getElementById('tipsList').innerHTML = msg;
+            document.getElementById('tipsBox').style.display = 'block';
+        }
+    </script>
+
+</body>
+
+</html>

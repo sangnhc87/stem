@@ -1,0 +1,236 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GIÁO ÁN STEM: ECOFOOTPRINT - TÍNH DẤU CHÂN CARBON
+% Môn: Toán 10/11 | Chủ đề: Hàm số bậc nhất & Thống kê
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+% ============= GÓI CƠ BẢN =============
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,calc,shadows}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ============= FONT =============
+\usepackage{newtxtext, newtxmath}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{microtype}
+
+% ============= MÀU SẮC (THEME XANH LÁ) =============
+\usepackage[svgnames]{xcolor}
+\definecolor{primary}{RGB}{34,139,34}      % ForestGreen
+\definecolor{primarylight}{RGB}{144,238,144} % LightGreen
+\definecolor{accent}{RGB}{255,140,0}       % DarkOrange
+\definecolor{mathblue}{RGB}{0,51,102}      % NavyBlue
+\definecolor{bgsoft}{RGB}{240,255,240}     % Honeydew
+\definecolor{TableHeader}{gray}{0.9}
+
+% ============= TRANG =============
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrule}{\color{primary}\hrule width\textwidth height 1.5pt}
+\fancyhead[L]{\color{primary}\sffamily\textbf{DỰ ÁN STEM: ECOFOOTPRINT}}
+\fancyhead[R]{\color{primary}\sffamily\textbf{TOÁN HỌC VÌ MÔI TRƯỜNG}}
+\fancyfoot[C]{\sffamily\thepage}
+
+% ============= GÓI HỖ TRỢ =============
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=primary, urlcolor=accent}
+
+% ============= TCOLORBOX CUSTOM =============
+\newtcolorbox{sectionbox}[1]{
+    enhanced, breakable, colback=white, colframe=primary, boxrule=1pt,
+    fonttitle=\bfseries\sffamily\Large, coltitle=white, colbacktitle=primary,
+    title={#1},
+    shadow={2mm}{-1mm}{0mm}{black!20}
+}
+
+\newtcolorbox{mathbox}[1][]{
+    enhanced, breakable, 
+    colback=bgsoft, colframe=primary, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} 📐 KIẾN THỨC TOÁN HỌC #1},
+    colbacktitle=primary, fonttitle=\bfseries\sffamily
+}
+
+\newtcolorbox{activitybox}[1]{
+    enhanced, breakable,
+    colback=white, colframe=accent, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} 🎬 HOẠT ĐỘNG: #1},
+    colbacktitle=accent, fonttitle=\bfseries\sffamily
+}
+
+% ============= BẮT ĐẦU TÀI LIỆU =============
+\begin{document}
+
+% ========== TRANG BÌA ==========
+\begin{titlepage}
+\begin{tikzpicture}[remember picture, overlay]
+\fill[primary] (current page.south west) rectangle ($(current page.south east)+(0,1.5)$);
+\fill[primary] (current page.north west) rectangle ($(current page.north east)+(0,-1.5)$);
+\node[yshift=-1cm] at (current page.north) {\color{white}\Huge\bfseries\sffamily GIÁO ÁN STEM DỰ THI};
+\end{tikzpicture}
+
+\vspace{3cm}
+\begin{center}
+    {\Huge\bfseries\sffamily\color{primary} ECOFOOTPRINT}\\[1cm]
+    {\LARGE\bfseries\sffamily CÔNG CỤ TÍNH DẤU CHÂN CARBON CÁ NHÂN}\\[0.5cm]
+    \rule{0.6\textwidth}{2pt}\\[1cm]
+    {\Large\itshape\sffamily Ứng dụng Toán học trong đo lường phát thải và bảo vệ môi trường}\\[2cm]
+
+    \begin{tcolorbox}[width=0.7\textwidth, colback=bgsoft, colframe=primary, arc=5mm]
+        \centering
+        \large\sffamily
+        \begin{tabular}{rl}
+            \textbf{Môn học:} & Toán học (Kết hợp Sinh học, GDCD) \\
+            \textbf{Khối lớp:} & 10 - 11 \\
+            \textbf{Chủ đề Toán:} & Thống kê & Hàm số bậc nhất \\
+            \textbf{Thời lượng:} & 2 tiết (90 phút) \\
+        \end{tabular}
+    \end{tcolorbox}
+    
+    \vfill
+    {\large\sffamily TP. Hồ Chí Minh, Năm 2026}
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ========== NỘI DUNG ==========
+
+\begin{sectionbox}{I. TỔNG QUAN CHỦ ĐỀ}
+\subsection*{1. Mục tiêu và Ý nghĩa}
+\textbf{Vấn đề thực tiễn:} Biến đổi khí hậu đang là thách thức toàn cầu. Việt Nam cam kết đạt phát thải dòng bằng 0 (Net Zero) vào năm 2050. Tuy nhiên, khái niệm "Dấu chân Carbon" (Carbon Footprint) vẫn còn trừu tượng với học sinh.
+
+\textbf{Giải pháp STEM:} Sử dụng Toán học để \textit{định lượng} tác động môi trường của mỗi cá nhân. Học sinh sẽ xây dựng công thức tính lượng $CO_2$ phát thải từ các hoạt động thường ngày (điện, nước, đi lại) và lập trình công cụ tính toán tự động.
+
+\subsection*{2. Kiến thức tích hợp}
+\begin{itemize}
+    \item \textbf{Toán học (M):} 
+    \begin{itemize}
+        \item \textbf{Hàm số bậc nhất ($y=ax+b$):} Mô hình hóa mối quan hệ giữa lượng tiêu thụ và khí thải. Ví dụ: $E = k \cdot x$ (k là hệ số phát thải).
+        \item \textbf{Thống kê:} Thu thập số liệu hóa đơn, tính trung bình, vẽ biểu đồ so sánh.
+    \end{itemize}
+    \item \textbf{Công nghệ (T):} Sử dụng ứng dụng web \texttt{EcoFootprint} để tính toán và trực quan hóa dữ liệu.
+    \item \textbf{Khoa học (S):} Hiểu về hiệu ứng nhà kính, chu trình Carbon.
+    \item \textbf{Xã hội (S):} Ý thức trách nhiệm công dân toàn cầu.
+\end{itemize}
+\end{sectionbox}
+
+\begin{sectionbox}{II. TIẾN TRÌNH DẠY HỌC (5E MODEL)}
+
+\subsection*{1. ENGAGE (Gắn kết - 10 phút)}
+\begin{activitybox}{Dấu chân vô hình}
+\textbf{Hoạt động:}
+\begin{enumerate}
+    \item GV chiếu video ngắn: "Một ngày của bạn thải ra bao nhiêu khí CO2?".
+    \item GV đặt câu hỏi: \textit{"Em đi học bằng xe máy 5km, em bật điều hòa 8 tiếng. Làm sao biết hành động nào hại môi trường hơn?"}
+    \item HS thảo luận và nhận ra nhu cầu cần một \textbf{công cụ đo lường} chính xác.
+\end{enumerate}
+\end{activitybox}
+
+\subsection*{2. EXPLORE (Khám phá - 15 phút)}
+\begin{activitybox}{Thu thập số liệu thô}
+HS làm việc theo nhóm, sử dụng \textbf{Phiếu học tập 1} để liệt kê các nguồn phát thải:
+\begin{itemize}
+    \item Điện năng (kWh/tháng): Xem hóa đơn điện gia đình.
+    \item Nước sạch ($m^3$/tháng): Xem hóa đơn nước.
+    \item Di chuyển (km/tuần): Đo quãng đường đi học.
+    \item Rác thải (kg/ngày): Ước lượng.
+\end{itemize}
+\textbf{Câu hỏi định hướng:} \textit{"Làm sao đổi từ kWh điện sang kg $CO_2$? Cần một hệ số quy đổi nào?"}
+\end{activitybox}
+
+\subsection*{3. EXPLAIN (Giải thích - 20 phút)}
+\begin{mathbox}[: Hàm số tính phát thải]
+Để tính lượng khí thải $E$ (kg $CO_2$) từ lượng tiêu thụ $x$ (đơn vị tiêu thụ), ta dùng mô hình hàm số bậc nhất:
+$$E = EF \times x$$
+Trong đó \textbf{EF (Emission Factor)} là hệ số phát thải (theo số liệu Bộ TN\&MT):
+\begin{itemize}
+    \item \textbf{Điện:} $EF_{dien} \approx 0.72$ kg $CO_2$/kWh (nhiệt điện than chiếm tỷ trọng lớn).
+    \item \textbf{Xăng (Xe máy):} $EF_{xe} \approx 0.05$ kg $CO_2$/km.
+    \item \textbf{Nước sạch:} $EF_{nuoc} \approx 0.3$ kg $CO_2$/$m^3$.
+    \item \textbf{Rác hữu cơ:} $EF_{rac} \approx 1.5$ kg $CO_2$/kg (do sinh khí Metan).
+\end{itemize}
+Tổng dấu chân Carbon:
+$$E_{total} = (0.72 \cdot x_{dien}) + (0.05 \cdot x_{xe}) + \dots$$
+\end{mathbox}
+
+\subsection*{4. ELABORATE (Áp dụng - 30 phút)}
+\begin{activitybox}{Tính toán với EcoFootprint App}
+HS truy cập ứng dụng web: \href{https://stem-1h8.pages.dev/eco.html}{\texttt{stem-1h8.pages.dev/eco.html}} (Dự kiến deploy).
+\begin{enumerate}
+    \item Nhập số liệu cá nhân đã thu thập vào App.
+    \item App tự động tính toán và vẽ biểu đồ tròn (cơ cấu phát thải).
+    \item HS so sánh kết quả của mình với:
+    \begin{itemize}
+        \item Mức trung bình Việt Nam: $\approx 2.3$ tấn/người/năm.
+        \item Mục tiêu toàn cầu: $< 2.0$ tấn/người/năm.
+    \end{itemize}
+    \item HS đề xuất "Kịch bản giảm thải": Nếu giảm dùng máy lạnh 1h/ngày thì tiết kiệm được bao nhiêu kg $CO_2$ một năm?
+\end{enumerate}
+\end{activitybox}
+
+\subsection*{5. EVALUATE (Đánh giá - 15 phút)}
+\begin{activitybox}{Cam kết xanh}
+HS trình bày báo cáo nhóm:
+- Tổng lượng phát thải ước tính.
+- Nguồn phát thải lớn nhất (thường là điện hoặc xe máy).
+- Cam kết hành động cụ thể (VD: Đi xe đạp 2 ngày/tuần).
+GV đánh giá dựa trên Rubric (đính kèm).
+\end{activitybox}
+
+\end{sectionbox}
+
+\newpage
+\begin{sectionbox}{III. PHỤ LỤC}
+\subsection*{Phụ lục 1: Bảng tra cứu Hệ số phát thải (EF)}
+(Nguồn tham khảo: IPCC & Bộ TN\&MT)
+\begin{center}
+\begin{tabular}{|l|c|l|}
+\hline
+\rowcolor{primary!20} \textbf{Nguồn} & \textbf{Hệ số (kg $CO_2$)} & \textbf{Ghi chú} \\
+\hline
+Điện lưới & 0.7208 / kWh & Cao do nhiệt điện \\
+Xe máy & 0.050 / km & Xe 110cc \\
+Ô tô con & 0.180 / km & Xe 5 chỗ xăng \\
+Xe buýt & 0.025 / km & Tính theo đầu người \\
+Nước sạch & 0.300 / $m^3$ & Xử lý và bơm \\
+Thịt bò & 27.0 / kg & Chăn nuôi phát thải cao \\
+Rau củ & 0.50 / kg & Canh tác \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Phụ lục 2: Rubric Đánh giá}
+\begin{tabularx}{\textwidth}{|>{\bfseries}l|X|X|X|}
+\hline
+\rowcolor{primary!20} Tiêu chí & Mức 1 (Cần cố gắng) & Mức 2 (Đạt) & Mức 3 (Tốt) \\
+\hline
+Thu thập dữ liệu & Số liệu ước lượng, thiếu chính xác & Có số liệu từ hóa đơn, nhưng chưa đầy đủ & Số liệu chi tiết, nguồn gốc rõ ràng (hóa đơn, đo đạc) \\
+\hline
+Tính toán Toán học & Sai công thức hoặc kết quả & Áp dụng đúng công thức $E=EF \cdot x$ & Tính đúng, hiểu ý nghĩa con số, biết quy đổi đơn vị \\
+\hline
+Sử dụng Công nghệ & Nhập liệu sai vào App & Nhập đúng, ra kết quả & Phân tích được biểu đồ, so sánh kịch bản trên App \\
+\hline
+Đề xuất giải pháp & Chung chung (bảo vệ MT) & Có giải pháp cụ thể & Giải pháp định lượng được hiệu quả (giảm bao nhiêu kg) \\
+\hline
+\end{tabularx}
+
+\end{sectionbox}
+
+\end{document}
