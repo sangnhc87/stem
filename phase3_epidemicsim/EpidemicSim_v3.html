@@ -4,25 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EpidemicSim v3 - Mô hình Toán học về Lây lan Dịch bệnh</title>
+    <title>EpidemicSim v3 - Sức Mạnh của Toán Học</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0891b2;
-            --primary-light: #22d3ee;
-            --accent: #dc2626;
-            --accent-light: #f87171;
-            --math-blue: #1e40af;
-            --success: #16a34a;
-            --warning: #f59e0b;
-            --bg-light: #f0f9ff;
-            --bg-card: #ffffff;
-            --bg-card-hover: #f1f5f9;
-            --text-primary: #0f172a;
-            --text-secondary: #475569;
-            --border: rgba(0, 0, 0, 0.1);
-            --glass: rgba(8, 145, 178, 0.1);
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --primary-light: #818cf8;
+            --secondary: #06b6d4;
+            --accent: #f43f5e;
+            --success: #10b981;
+            --bg-body: #f1f5f9;
+            --bg-card: rgba(255, 255, 255, 0.95);
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 16px;
         }
 
         * {
@@ -32,108 +33,131 @@
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background: linear-gradient(135deg, #e0f2fe 0%, #f0f9ff 50%, #ecfeff 100%);
-            color: var(--text-primary);
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+            color: var(--text-main);
             min-height: 100vh;
-            line-height: 1.6;
+            background-attachment: fixed;
+            padding-bottom: 2rem;
+        }
+
+        /* Decorative background blobs */
+        .blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .blob-1 {
+            top: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: #6366f1;
+        }
+
+        .blob-2 {
+            bottom: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: #06b6d4;
+        }
+
+        .blob-3 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: #f43f5e;
+            opacity: 0.2;
         }
 
         /* Header */
-        .header {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--math-blue) 100%);
-            padding: 1.5rem 2rem;
-            text-align: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            position: sticky;
             top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.5;
+            z-index: 100;
+            padding: 1rem 0;
+            box-shadow: var(--shadow-sm);
         }
 
-        .header h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-            position: relative;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
         }
 
-        .header p {
-            color: rgba(255, 255, 255, 0.9);
-            margin-top: 0.3rem;
-            font-size: 1rem;
-            position: relative;
-        }
-
-        /* Tabs */
-        .tabs {
+        .header-content {
             display: flex;
-            justify-content: center;
-            gap: 0.5rem;
-            padding: 1rem;
-            background: var(--bg-card);
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .tab-btn {
-            padding: 0.8rem 1.5rem;
-            border: none;
-            background: transparent;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            border-radius: 8px;
-            transition: all 0.3s ease;
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
 
-        .tab-btn:hover {
-            background: var(--glass);
-            color: var(--text-primary);
+        /* Navigation */
+        .nav-tabs {
+            display: flex;
+            background: #e2e8f0;
+            padding: 0.3rem;
+            border-radius: 12px;
+            gap: 0.3rem;
         }
 
-        .tab-btn.active {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            color: white;
-            box-shadow: 0 4px 15px rgba(26, 95, 122, 0.4);
+        .nav-btn {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 10px;
+            background: transparent;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
 
-        .tab-btn .icon {
-            font-size: 1.2rem;
+        .nav-btn.active {
+            background: white;
+            color: var(--primary);
+            box-shadow: var(--shadow-sm);
         }
 
-        /* Main content */
-        .main {
-            padding: 1.5rem;
-            max-width: 1400px;
-            margin: 0 auto;
+        .nav-btn:hover:not(.active) {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.5);
         }
 
+        /* Main Content */
         .tab-content {
             display: none;
-            animation: fadeIn 0.4s ease;
+            margin-top: 2rem;
+            animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         .tab-content.active {
             display: block;
         }
 
-        @keyframes fadeIn {
+        @keyframes slideUp {
             from {
                 opacity: 0;
-                transform: translateY(10px);
+                transform: translateY(20px);
             }
 
             to {
@@ -142,1083 +166,601 @@
             }
         }
 
-        /* Cards */
-        .card {
-            background: var(--bg-card);
-            border-radius: 16px;
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .card-title {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .card-title .icon {
-            font-size: 1.4rem;
-        }
-
-        /* Grid layouts */
-        .grid-2 {
+        /* Grid System */
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 1.5rem;
         }
 
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
         .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         }
 
-        .grid-4 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 1rem;
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Form controls */
-        .form-group {
-            margin-bottom: 1rem;
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
 
-        .form-group label {
-            display: block;
-            margin-bottom: 0.4rem;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-
-        .form-group input,
-        .form-group select {
-            width: 100%;
-            padding: 0.8rem 1rem;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            background: rgba(255, 255, 255, 0.05);
-            color: var(--text-primary);
-            font-size: 1rem;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--primary-light);
-            box-shadow: 0 0 0 3px rgba(45, 138, 184, 0.2);
-        }
-
-        .input-with-unit {
+        .card-header {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        .input-with-unit input {
-            flex: 1;
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
         }
 
-        .input-with-unit span {
-            color: var(--text-secondary);
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* Math Display */
+        .math-display {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 1rem 0;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .math-display::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+        }
+
+        .formula-large {
+            font-family: 'Times New Roman', serif;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-dark);
+        }
+
+        /* Controls */
+        label {
+            display: block;
             font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
         }
 
-        /* Buttons */
-        .btn {
-            padding: 0.9rem 1.8rem;
-            border: none;
-            border-radius: 8px;
+        input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            font-family: inherit;
             font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.2s;
+            background: #f8fafc;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+
+        .btn {
             display: inline-flex;
+            justify-content: center;
             align-items: center;
             gap: 0.5rem;
+            padding: 0.9rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            width: 100%;
         }
 
         .btn-primary {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
             color: white;
-            box-shadow: 0 4px 15px rgba(26, 95, 122, 0.3);
+            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(26, 95, 122, 0.4);
-        }
-
-        .btn-accent {
-            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
-            color: white;
-        }
-
-        .btn-accent:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-success {
-            background: var(--success);
-            color: white;
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);
         }
 
         .btn-outline {
-            background: transparent;
-            border: 2px solid var(--primary);
-            color: var(--primary-light);
+            background: white;
+            border: 2px solid #e2e8f0;
+            color: var(--text-muted);
         }
 
         .btn-outline:hover {
-            background: var(--primary);
-            color: white;
+            border-color: var(--primary);
+            color: var(--primary);
         }
 
-        .btn-group {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
-
-        /* Chart container */
-        .chart-container {
-            background: rgba(0, 0, 0, 0.2);
-            border-radius: 12px;
-            padding: 1rem;
-            min-height: 350px;
-        }
-
-        /* Stats */
-        .stats-grid {
+        /* Stats Grid */
+        .stats-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            grid-template-columns: repeat(4, 1fr);
             gap: 1rem;
-            margin-top: 1rem;
+            margin-top: 1.5rem;
         }
 
-        .stat-card {
-            background: linear-gradient(135deg, rgba(26, 95, 122, 0.2) 0%, rgba(45, 138, 184, 0.1) 100%);
-            border-radius: 12px;
+        .stat-item {
+            text-align: center;
             padding: 1rem;
-            text-align: center;
-            border: 1px solid var(--border);
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
         }
 
-        .stat-card.accent {
-            background: linear-gradient(135deg, rgba(194, 55, 40, 0.2) 0%, rgba(224, 74, 58, 0.1) 100%);
+        .stat-val {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
         }
 
-        .stat-card.success {
-            background: linear-gradient(135deg, rgba(34, 139, 34, 0.2) 0%, rgba(50, 205, 50, 0.1) 100%);
-        }
-
-        .stat-value {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: var(--text-primary);
-        }
-
-        .stat-label {
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            margin-top: 0.2rem;
-        }
-
-        /* Formula box */
-        .formula-box {
-            background: linear-gradient(135deg, rgba(0, 51, 102, 0.3) 0%, rgba(0, 51, 102, 0.1) 100%);
-            border-left: 4px solid var(--math-blue);
-            border-radius: 0 12px 12px 0;
-            padding: 1.2rem;
-            margin: 1rem 0;
-        }
-
-        .formula-box h4 {
-            color: var(--primary-light);
-            margin-bottom: 0.5rem;
-            font-size: 1rem;
-        }
-
-        .formula {
-            font-size: 1.3rem;
-            font-family: 'Times New Roman', serif;
-            text-align: center;
-            padding: 0.5rem;
-        }
-
-        .formula-highlight {
-            color: var(--accent-light);
-            font-weight: bold;
-        }
-
-        /* Table */
-        .data-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 1rem;
-        }
-
-        .data-table th,
-        .data-table td {
-            padding: 0.8rem;
-            text-align: center;
-            border: 1px solid var(--border);
-        }
-
-        .data-table th {
-            background: var(--primary);
-            color: white;
+        .stat-lbl {
+            font-size: 0.8rem;
             font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
-        .data-table tr:nth-child(even) {
-            background: rgba(255, 255, 255, 0.03);
-        }
-
-        .data-table tr:hover {
-            background: rgba(45, 138, 184, 0.1);
-        }
-
-        /* Scenario list */
+        /* Tables & Lists */
         .scenario-list {
             margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
         }
 
-        .scenario-item {
+        .scenario-card {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0.8rem 1rem;
-            background: rgba(255, 255, 255, 0.03);
-            border-radius: 8px;
-            margin-bottom: 0.5rem;
-            border: 1px solid var(--border);
-        }
-
-        .scenario-item .name {
-            font-weight: 600;
-        }
-
-        .scenario-item .params {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-
-        .scenario-item .remove {
-            color: var(--accent);
-            cursor: pointer;
-            padding: 0.3rem 0.6rem;
-            border-radius: 4px;
-        }
-
-        .scenario-item .remove:hover {
-            background: rgba(194, 55, 40, 0.2);
-        }
-
-        /* Learning section */
-        .learning-section {
-            margin-top: 1rem;
-        }
-
-        .learning-card {
-            background: var(--bg-card-hover);
-            border-radius: 12px;
-            padding: 1.2rem;
-            margin-bottom: 1rem;
-            border-left: 4px solid var(--primary);
-        }
-
-        .learning-card h4 {
-            color: var(--primary-light);
-            margin-bottom: 0.5rem;
-        }
-
-        .learning-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        .learning-card ul {
-            margin-left: 1.2rem;
-            color: var(--text-secondary);
-        }
-
-        .learning-card li {
-            margin-bottom: 0.3rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 1.4rem;
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
             }
 
-            .tabs {
-                gap: 0.3rem;
-            }
-
-            .tab-btn {
-                padding: 0.6rem 1rem;
-                font-size: 0.85rem;
-            }
-
-            .main {
-                padding: 1rem;
-            }
-
-            .card {
-                padding: 1rem;
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
             }
 
             .grid-2,
-            .grid-3,
-            .grid-4 {
+            .grid-3 {
                 grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animations */
-        .pulse {
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.7;
             }
         }
     </style>
 </head>
 
 <body>
-    <header class="header">
-        <h1>📊 Mô hình Toán học về Lây lan Dịch bệnh</h1>
-        <p>EpidemicSim v3 • Ứng dụng Hàm số Mũ trong Y tế Công cộng</p>
+
+    <!-- Background Effects -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span style="font-size: 2rem;">⚡</span>
+                <div>
+                    <div>EpidemicSim <span style="font-weight: 300; opacity: 0.8;">v3</span></div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">TOÁN HỌC & ĐỜI SỐNG
+                    </div>
+                </div>
+            </div>
+            <nav class="nav-tabs">
+                <button class="nav-btn active" onclick="switchTab('formula', this)">Công Thức</button>
+                <button class="nav-btn" onclick="switchTab('simulation', this)">Mô Phỏng</button>
+                <button class="nav-btn" onclick="switchTab('compare', this)">So Sánh</button>
+            </nav>
+        </div>
     </header>
 
-    <nav class="tabs">
-        <button class="tab-btn active" onclick="showTab('formula')">
-            <span class="icon">📐</span> Công thức
-        </button>
-        <button class="tab-btn" onclick="showTab('simulation')">
-            <span class="icon">🔬</span> Mô phỏng
-        </button>
-        <button class="tab-btn" onclick="showTab('compare')">
-            <span class="icon">📊</span> So sánh
-        </button>
-        <button class="tab-btn" onclick="showTab('learning')">
-            <span class="icon">📚</span> Học tập
-        </button>
-    </nav>
+    <main class="container">
 
-    <main class="main">
-        <!-- TAB 1: CÔNG THỨC -->
+        <!-- SECTION 1: CÔNG THỨC TOÁN HỌC -->
         <section id="formula" class="tab-content active">
-            <div class="grid-2">
+            <div class="grid grid-2">
                 <div class="card">
-                    <h3 class="card-title"><span class="icon">📐</span> Kiến thức Toán học</h3>
-
-                    <div class="formula-box">
-                        <h4>1. Hàm số mũ cơ sở e</h4>
-                        <div class="formula">y = e<sup>x</sup> &nbsp;&nbsp; với &nbsp;&nbsp; e ≈ 2.71828</div>
+                    <div class="card-header">
+                        <div class="card-icon">Σ</div>
+                        <div class="card-title">Cơ Sở Toán Học</div>
                     </div>
 
-                    <div class="formula-box">
-                        <h4>2. Công thức lây lan dịch bệnh</h4>
-                        <div class="formula" style="font-size: 1.5rem;">
-                            <span class="formula-highlight">I(t) = I₀ · e<sup>rt</sup></span>
+                    <p style="margin-bottom: 1rem; color: var(--text-muted);">Mô hình lây lan dịch bệnh tuân theo quy
+                        luật tăng trưởng mũ ở giai đoạn đầu:</p>
+
+                    <div class="math-display">
+                        <div class="formula-large">I(t) = I₀ · e<sup>rt</sup></div>
+                        <div style="margin-top: 0.5rem; color: var(--accent); font-weight: 600;">r = β - γ</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;">
+                        <div class="stat-item">
+                            <div class="stat-val" style="color: var(--secondary);">R₀</div>
+                            <div class="stat-lbl">Hệ số lây nhiễm</div>
+                            <div style="font-size: 0.9rem; margin-top: 0.2rem;">= β / γ</div>
                         </div>
-                        <p style="text-align: center; color: var(--text-secondary); margin-top: 0.5rem;">
-                            với r = β - γ
-                        </p>
-                    </div>
-
-                    <div class="formula-box">
-                        <h4>3. Hệ số lây nhiễm cơ bản</h4>
-                        <div class="formula">R₀ = β / γ</div>
-                        <ul style="margin-top: 0.5rem; color: var(--text-secondary);">
-                            <li>R₀ > 1: Dịch bùng phát</li>
-                            <li>R₀ < 1: Dịch tự tắt</li>
-                        </ul>
-                    </div>
-
-                    <div class="formula-box">
-                        <h4>4. Ngưỡng miễn dịch cộng đồng</h4>
-                        <div class="formula">H = 1 - 1/R₀</div>
+                        <div class="stat-item">
+                            <div class="stat-val" style="color: var(--success);">H</div>
+                            <div class="stat-lbl">Ngưỡng miễn dịch</div>
+                            <div style="font-size: 0.9rem; margin-top: 0.2rem;">= 1 - 1/R₀</div>
+                        </div>
                     </div>
                 </div>
 
                 <div class="card">
-                    <h3 class="card-title"><span class="icon">🧮</span> Bảng giá trị e<sup>x</sup></h3>
-                    <table class="data-table">
-                        <thead>
-                            <tr>
-                                <th>x</th>
-                                <th>0</th>
-                                <th>0.5</th>
-                                <th>1</th>
-                                <th>1.5</th>
-                                <th>2</th>
-                                <th>3</th>
-                                <th>4</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td><strong>e<sup>x</sup></strong></td>
-                                <td>1.00</td>
-                                <td>1.65</td>
-                                <td>2.72</td>
-                                <td>4.48</td>
-                                <td>7.39</td>
-                                <td>20.09</td>
-                                <td>54.60</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <h4 style="margin-top: 1.5rem; color: var(--primary-light);">Ý nghĩa các tham số</h4>
-                    <table class="data-table" style="margin-top: 0.5rem;">
-                        <thead>
-                            <tr>
-                                <th>Ký hiệu</th>
-                                <th>Tên</th>
-                                <th>Ý nghĩa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>I₀</td>
-                                <td>Số ca ban đầu</td>
-                                <td>Số người nhiễm tại t=0</td>
-                            </tr>
-                            <tr>
-                                <td>β</td>
-                                <td>Tỷ lệ lây</td>
-                                <td>Số người bị lây/người/ngày</td>
-                            </tr>
-                            <tr>
-                                <td>γ</td>
-                                <td>Tỷ lệ khỏi</td>
-                                <td>1 / thời gian nhiễm bệnh</td>
-                            </tr>
-                            <tr>
-                                <td>R₀</td>
-                                <td>Hệ số lây nhiễm</td>
-                                <td>Số người mà 1 ca lây cho</td>
-                            </tr>
-                            <tr>
-                                <td>H</td>
-                                <td>Ngưỡng miễn dịch</td>
-                                <td>% dân số cần miễn dịch</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-                    <div class="btn-group" style="justify-content: center;">
-                        <button class="btn btn-primary" onclick="showTab('simulation')">
-                            Thực hành mô phỏng →
-                        </button>
+                    <div class="card-header">
+                        <div class="card-icon">📈</div>
+                        <div class="card-title">Sức Mạnh Của Hàm Mũ</div>
                     </div>
+                    <p style="margin-bottom: 1rem;">Bảng giá trị của hàm <b>y = eˣ</b> cho thấy tốc độ tăng trưởng khủng
+                        khiếp:</p>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <th style="text-align: left; padding: 0.8rem; color: var(--text-muted);">x (thời gian)</th>
+                            <th style="text-align: right; padding: 0.8rem;">Giá trị eˣ</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.8rem;">0</td>
+                            <td style="text-align: right; font-weight: bold;">1.00</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.8rem;">1</td>
+                            <td style="text-align: right; font-weight: bold;">2.72</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.8rem;">2</td>
+                            <td style="text-align: right; font-weight: bold;">7.39</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.8rem;">3</td>
+                            <td style="text-align: right; font-weight: bold;">20.09</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.8rem; color: var(--accent);">4</td>
+                            <td style="text-align: right; font-weight: bold; color: var(--accent);">54.60</td>
+                        </tr>
+                    </table>
+                    <button class="btn btn-primary" style="margin-top: 1.5rem;"
+                        onclick="document.querySelectorAll('.nav-btn')[1].click()">
+                        Thử Mô Phỏng Ngay ➜
+                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- TAB 2: MÔ PHỎNG -->
+        <!-- SECTION 2: MÔ PHỎNG -->
         <section id="simulation" class="tab-content">
-            <div class="grid-2">
+            <div class="grid grid-3" style="grid-template-columns: 350px 1fr;">
+
+                <!-- Controls -->
                 <div class="card">
-                    <h3 class="card-title"><span class="icon">⚙️</span> Tham số mô phỏng</h3>
+                    <div class="card-header">
+                        <div class="card-icon">⚙️</div>
+                        <div class="card-title">Tham Số Đầu Vào</div>
+                    </div>
 
-                    <div class="grid-2" style="gap: 1rem;">
-                        <div class="form-group">
+                    <div class="grid" style="gap: 1rem;">
+                        <div>
                             <label>Dân số (N)</label>
-                            <input type="number" id="simN" value="10000" min="100" max="1000000">
+                            <input type="number" id="simN" value="10000">
                         </div>
-                        <div class="form-group">
-                            <label>Số ca ban đầu (I₀)</label>
-                            <input type="number" id="simI0" value="10" min="1" max="1000">
-                        </div>
-                    </div>
-
-                    <div class="grid-2" style="gap: 1rem;">
-                        <div class="form-group">
-                            <label>Tỷ lệ lây nhiễm (β)</label>
-                            <div class="input-with-unit">
-                                <input type="number" id="simBeta" value="0.3" min="0.01" max="1" step="0.01">
-                                <span>/ngày</span>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <label>Tỷ lệ lây (β)</label>
+                                <input type="number" id="simBeta" value="0.3" step="0.01">
+                            </div>
+                            <div>
+                                <label>Tỷ lệ khỏi (γ)</label>
+                                <input type="number" id="simGamma" value="0.1" step="0.01">
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label>Tỷ lệ hồi phục (γ)</label>
-                            <div class="input-with-unit">
-                                <input type="number" id="simGamma" value="0.1" min="0.01" max="1" step="0.01">
-                                <span>/ngày</span>
+                        <div>
+                            <label>Tiêm chủng (%)</label>
+                            <input type="range" id="simVaxDisplay" min="0" max="100" value="0"
+                                style="width: 100%; margin-bottom: 0.5rem;"
+                                oninput="document.getElementById('vaxVal').innerText = this.value + '%'; document.getElementById('simVax').value = this.value;">
+                            <div
+                                style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: bold; color: var(--primary);">
+                                <span>Mức độ bảo vệ</span>
+                                <span id="vaxVal">0%</span>
                             </div>
+                            <input type="hidden" id="simVax" value="0">
                         </div>
+
+                        <button class="btn btn-primary" onclick="runSimulation()">▶ CHẠY MÔ PHỎNG</button>
                     </div>
 
-                    <div class="grid-2" style="gap: 1rem;">
-                        <div class="form-group">
-                            <label>Số ngày mô phỏng</label>
-                            <input type="number" id="simDays" value="100" min="10" max="365">
+                    <div class="stats-row" style="grid-template-columns: 1fr 1fr; margin-top: 2rem;">
+                        <div class="stat-item">
+                            <div class="stat-val" id="resR0">-</div>
+                            <div class="stat-lbl">R₀</div>
                         </div>
-                        <div class="form-group">
-                            <label>Tỷ lệ tiêm chủng (%)</label>
-                            <input type="number" id="simVax" value="0" min="0" max="100">
-                        </div>
-                    </div>
-
-                    <div class="btn-group">
-                        <button class="btn btn-primary" onclick="runSimulation()">
-                            ▶️ Chạy mô phỏng
-                        </button>
-                        <button class="btn btn-outline" onclick="resetSimulation()">
-                            🔄 Đặt lại
-                        </button>
-                    </div>
-
-                    <div class="stats-grid" id="simStats" style="display: none;">
-                        <div class="stat-card">
-                            <div class="stat-value" id="statR0">-</div>
-                            <div class="stat-label">R₀</div>
-                        </div>
-                        <div class="stat-card accent">
-                            <div class="stat-value" id="statPeak">-</div>
-                            <div class="stat-label">Đỉnh dịch</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-value" id="statPeakDay">-</div>
-                            <div class="stat-label">Ngày đỉnh</div>
-                        </div>
-                        <div class="stat-card success">
-                            <div class="stat-value" id="statTotal">-</div>
-                            <div class="stat-label">Tổng nhiễm</div>
+                        <div class="stat-item">
+                            <div class="stat-val" id="resPeak">-</div>
+                            <div class="stat-lbl">Đỉnh Dịch</div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card">
-                    <h3 class="card-title"><span class="icon">📈</span> Đồ thị S-I-R</h3>
-                    <div class="chart-container">
+                <!-- Chart -->
+                <div class="card" style="display: flex; flex-direction: column;">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: var(--success);">📊</div>
+                        <div class="card-title">Diễn Biến Theo Thời Gian (Mô hình SIR)</div>
+                    </div>
+                    <div style="flex: 1; min-height: 400px; position: relative;">
                         <canvas id="sirChart"></canvas>
                     </div>
                 </div>
             </div>
-
-            <div class="card">
-                <h3 class="card-title"><span class="icon">📋</span> So sánh công thức và mô phỏng</h3>
-                <table class="data-table" id="compareTable">
-                    <thead>
-                        <tr>
-                            <th>Ngày (t)</th>
-                            <th>0</th>
-                            <th>5</th>
-                            <th>10</th>
-                            <th>15</th>
-                            <th>20</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr id="formulaRow">
-                            <td><strong>Công thức I=I₀e<sup>rt</sup></strong></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                        </tr>
-                        <tr id="simRow">
-                            <td><strong>Mô phỏng SIR</strong></td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                            <td>-</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </section>
 
-        <!-- TAB 3: SO SÁNH -->
+        <!-- SECTION 3: SO SÁNH -->
         <section id="compare" class="tab-content">
-            <div class="grid-2">
+            <div class="grid grid-2">
                 <div class="card">
-                    <h3 class="card-title"><span class="icon">➕</span> Thêm kịch bản</h3>
-
-                    <div class="form-group">
-                        <label>Tên kịch bản</label>
-                        <input type="text" id="scenarioName" placeholder="VD: Giãn cách xã hội">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: var(--accent);">⚡</div>
+                        <div class="card-title">Quản Lý Kịch Bản</div>
                     </div>
 
-                    <div class="grid-3" style="gap: 0.8rem;">
-                        <div class="form-group">
-                            <label>β</label>
-                            <input type="number" id="scenarioBeta" value="0.3" min="0.01" max="1" step="0.01">
-                        </div>
-                        <div class="form-group">
-                            <label>γ</label>
-                            <input type="number" id="scenarioGamma" value="0.1" min="0.01" max="1" step="0.01">
-                        </div>
-                        <div class="form-group">
-                            <label>Tiêm (%)</label>
-                            <input type="number" id="scenarioVax" value="0" min="0" max="100">
-                        </div>
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <input type="text" id="scenName" placeholder="Tên kịch bản (VD: Giãn cách 50%)">
+                        <button class="btn btn-primary" style="width: auto;" onclick="addScenario()">+</button>
                     </div>
 
-                    <button class="btn btn-success" onclick="addScenario()" style="width: 100%;">
-                        ➕ Thêm kịch bản
+                    <div class="grid grid-3" style="gap: 0.5rem; margin-bottom: 1rem;">
+                        <input type="number" id="scenBeta" placeholder="β (Lây)" value="0.3">
+                        <input type="number" id="scenGamma" placeholder="γ (Khỏi)" value="0.1">
+                        <input type="number" id="scenVax" placeholder="Tiêm %" value="0">
+                    </div>
+
+                    <div class="scenario-list" id="scenList">
+                        <!-- Items rendered via JS -->
+                    </div>
+
+                    <button class="btn btn-primary" style="margin-top: 1rem;" onclick="compareScenarios()">
+                        🚀 So Sánh Hiệu Quả
                     </button>
-
-                    <div class="scenario-list" id="scenarioList"></div>
-
-                    <div class="btn-group" style="margin-top: 1rem;">
-                        <button class="btn btn-primary" onclick="runComparison()">
-                            📊 So sánh các kịch bản
-                        </button>
-                        <button class="btn btn-outline" onclick="clearScenarios()">
-                            🗑️ Xóa tất cả
-                        </button>
-                    </div>
+                    <button class="btn btn-outline" style="margin-top: 0.5rem;" onclick="resetScenarios()">
+                        Xóa Tất Cả
+                    </button>
                 </div>
 
                 <div class="card">
-                    <h3 class="card-title"><span class="icon">📊</span> Biểu đồ so sánh</h3>
-                    <div class="chart-container">
+                    <div class="card-header">
+                        <div class="card-title">Kết Quả So Sánh</div>
+                    </div>
+                    <div style="position: relative; height: 300px;">
                         <canvas id="compareChart"></canvas>
                     </div>
-                </div>
-            </div>
-
-            <div class="card" id="comparisonResults" style="display: none;">
-                <h3 class="card-title"><span class="icon">📋</span> Kết quả so sánh</h3>
-                <table class="data-table" id="comparisonTable">
-                    <thead>
-                        <tr>
-                            <th>Kịch bản</th>
-                            <th>R₀</th>
-                            <th>Đỉnh dịch (ca)</th>
-                            <th>Ngày đỉnh</th>
-                            <th>Tổng nhiễm</th>
-                            <th>Hiệu quả</th>
-                        </tr>
-                    </thead>
-                    <tbody id="comparisonBody"></tbody>
-                </table>
-            </div>
-        </section>
-
-        <!-- TAB 4: HỌC TẬP -->
-        <section id="learning" class="tab-content">
-            <div class="grid-2">
-                <div>
-                    <div class="card">
-                        <h3 class="card-title"><span class="icon">🔢</span> Mô hình SIR</h3>
-                        <div class="learning-section">
-                            <div class="learning-card">
-                                <h4>S - Susceptible (Nhạy cảm)</h4>
-                                <p>Những người chưa bị nhiễm và có thể bị lây bệnh.</p>
-                            </div>
-                            <div class="learning-card" style="border-left-color: var(--accent);">
-                                <h4>I - Infected (Nhiễm bệnh)</h4>
-                                <p>Những người đang mắc bệnh và có thể lây cho người khác.</p>
-                            </div>
-                            <div class="learning-card" style="border-left-color: var(--success);">
-                                <h4>R - Recovered (Hồi phục)</h4>
-                                <p>Những người đã khỏi bệnh và có miễn dịch.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title"><span class="icon">📌</span> Hệ số R₀</h3>
-                        <table class="data-table">
-                            <thead>
-                                <tr>
-                                    <th>Bệnh</th>
-                                    <th>R₀</th>
-                                    <th>Ngưỡng H</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Cúm mùa</td>
-                                    <td>1.2 - 1.5</td>
-                                    <td>17 - 33%</td>
-                                </tr>
-                                <tr>
-                                    <td>COVID-19 (gốc)</td>
-                                    <td>2.5 - 3.0</td>
-                                    <td>60 - 67%</td>
-                                </tr>
-                                <tr>
-                                    <td>COVID-19 (Delta)</td>
-                                    <td>5 - 8</td>
-                                    <td>80 - 88%</td>
-                                </tr>
-                                <tr>
-                                    <td>Sởi</td>
-                                    <td>12 - 18</td>
-                                    <td>92 - 94%</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div>
-                    <div class="card">
-                        <h3 class="card-title"><span class="icon">💡</span> Tại sao cần "Làm phẳng đường cong"?</h3>
-                        <div class="learning-card">
-                            <p>Khi dịch bùng phát mạnh, số ca nhiễm cùng lúc quá nhiều sẽ làm quá tải hệ thống y tế.</p>
-                            <ul style="margin-top: 0.5rem;">
-                                <li>Không đủ giường bệnh</li>
-                                <li>Thiếu máy thở, thuốc men</li>
-                                <li>Nhân viên y tế kiệt sức</li>
-                            </ul>
-                            <p style="margin-top: 0.5rem;"><strong>Giải pháp:</strong> Giãn cách xã hội (giảm β) hoặc
-                                tiêm chủng để "làm phẳng" đường cong I(t).</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title"><span class="icon">🛡️</span> Miễn dịch cộng đồng</h3>
-                        <div class="learning-card">
-                            <h4>Công thức: H = 1 - 1/R₀</h4>
-                            <p style="margin-top: 0.5rem;"><strong>Ví dụ:</strong> Nếu R₀ = 3:</p>
-                            <p style="text-align: center; font-size: 1.2rem; margin: 0.5rem 0;">
-                                H = 1 - 1/3 = <span style="color: var(--accent-light);">66.7%</span>
-                            </p>
-                            <p>Nghĩa là cần khoảng 67% dân số có miễn dịch (qua tiêm chủng hoặc đã mắc bệnh) để dịch
-                                không còn lây lan mạnh.</p>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <h3 class="card-title"><span class="icon">📚</span> Liên hệ Toán học</h3>
-                        <div class="formula-box">
-                            <h4>Tại sao dùng công thức I = I₀·e<sup>rt</sup>?</h4>
-                            <p style="margin-top: 0.5rem;">Vì tốc độ lây lan <strong>tỷ lệ với số ca đang
-                                    nhiễm</strong>:</p>
-                            <div class="formula">dI/dt = r · I</div>
-                            <p style="margin-top: 0.5rem;">Giải phương trình vi phân này ta được hàm mũ!</p>
-                        </div>
-                    </div>
+                    <div id="compareStats" style="margin-top: 1rem;"></div>
                 </div>
             </div>
         </section>
+
     </main>
 
     <script>
-        // ========== TAB NAVIGATION ==========
-        function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-            document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
-            event.target.closest('.tab-btn').classList.add('active');
+        // Init default settings
+        Chart.defaults.font.family = "'Outfit', sans-serif";
+        Chart.defaults.color = '#64748b';
+
+        // --- UX Functions ---
+        function switchTab(id, btn) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+
+            document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+            btn.classList.add('active');
         }
 
-        // ========== SIR SIMULATION ==========
-        let sirChart = null;
-        let compareChart = null;
-        let scenarios = [];
-
-        function simulateSIR(N, I0, beta, gamma, days, vaxRate = 0) {
-            const effectiveN = N * (1 - vaxRate / 100);
-            let S = effectiveN - I0;
-            let I = I0;
-            let R = N - effectiveN;
-
-            const data = { days: [], S: [], I: [], R: [] };
-
-            for (let t = 0; t <= days; t++) {
-                data.days.push(t);
-                data.S.push(Math.max(0, S));
-                data.I.push(Math.max(0, I));
-                data.R.push(Math.max(0, R));
-
-                const newInfected = (beta * S * I) / N;
-                const newRecovered = gamma * I;
-
-                S -= newInfected;
-                I += newInfected - newRecovered;
-                R += newRecovered;
-            }
-
-            return data;
-        }
+        // --- Logic Engine ---
+        let sirChartInstance = null;
+        let compareChartInstance = null;
+        let scenarios = [
+            { name: "Mặc định (Không can thiệp)", beta: 0.3, gamma: 0.1, vax: 0 },
+            { name: "Giãn cách xã hội (Giảm tiếp xúc)", beta: 0.15, gamma: 0.1, vax: 0 },
+            { name: "Vaccine thần tốc (60%)", beta: 0.3, gamma: 0.1, vax: 60 }
+        ];
 
         function runSimulation() {
-            const N = parseInt(document.getElementById('simN').value);
-            const I0 = parseInt(document.getElementById('simI0').value);
-            const beta = parseFloat(document.getElementById('simBeta').value);
-            const gamma = parseFloat(document.getElementById('simGamma').value);
-            const days = parseInt(document.getElementById('simDays').value);
-            const vax = parseFloat(document.getElementById('simVax').value);
+            const N = +document.getElementById('simN').value;
+            const beta = +document.getElementById('simBeta').value;
+            const gamma = +document.getElementById('simGamma').value;
+            const vax = +document.getElementById('simVax').value;
 
-            const r = beta - gamma;
+            const results = calculateSIR(N, beta, gamma, vax);
+
+            // Update stats UI
             const R0 = beta / gamma;
+            const peak = Math.max(...results.I);
 
-            const data = simulateSIR(N, I0, beta, gamma, days, vax);
+            document.getElementById('resR0').innerText = R0.toFixed(2);
+            document.getElementById('resR0').style.color = R0 > 1 ? 'var(--accent)' : 'var(--success)';
+            document.getElementById('resPeak').innerText = Math.round(peak).toLocaleString();
 
-            // Find peak
-            let peak = 0, peakDay = 0;
-            data.I.forEach((val, idx) => {
-                if (val > peak) { peak = val; peakDay = idx; }
-            });
-
-            const totalInfected = Math.round(data.R[data.R.length - 1]);
-
-            // Update stats
-            document.getElementById('simStats').style.display = 'grid';
-            document.getElementById('statR0').textContent = R0.toFixed(2);
-            document.getElementById('statPeak').textContent = Math.round(peak).toLocaleString();
-            document.getElementById('statPeakDay').textContent = `Ngày ${peakDay}`;
-            document.getElementById('statTotal').textContent = totalInfected.toLocaleString();
-
-            // Update comparison table
-            const checkpoints = [0, 5, 10, 15, 20];
-            const formulaRow = document.getElementById('formulaRow');
-            const simRow = document.getElementById('simRow');
-
-            formulaRow.innerHTML = '<td><strong>Công thức I=I₀e<sup>rt</sup></strong></td>';
-            simRow.innerHTML = '<td><strong>Mô phỏng SIR</strong></td>';
-
-            checkpoints.forEach(t => {
-                const formulaVal = Math.round(I0 * Math.exp(r * t));
-                const simVal = Math.round(data.I[t] || 0);
-                formulaRow.innerHTML += `<td>${formulaVal.toLocaleString()}</td>`;
-                simRow.innerHTML += `<td>${simVal.toLocaleString()}</td>`;
-            });
-
-            // Draw chart
+            // Render Chart
             const ctx = document.getElementById('sirChart').getContext('2d');
-            if (sirChart) sirChart.destroy();
+            if (sirChartInstance) sirChartInstance.destroy();
 
-            sirChart = new Chart(ctx, {
+            sirChartInstance = new Chart(ctx, {
                 type: 'line',
                 data: {
-                    labels: data.days,
+                    labels: results.labels,
                     datasets: [
-                        {
-                            label: 'S (Nhạy cảm)',
-                            data: data.S,
-                            borderColor: '#3b82f6',
-                            backgroundColor: 'rgba(59,130,246,0.1)',
-                            fill: true,
-                            tension: 0.3,
-                            pointRadius: 0
-                        },
-                        {
-                            label: 'I (Nhiễm)',
-                            data: data.I,
-                            borderColor: '#ef4444',
-                            backgroundColor: 'rgba(239,68,68,0.1)',
-                            fill: true,
-                            tension: 0.3,
-                            pointRadius: 0
-                        },
-                        {
-                            label: 'R (Hồi phục)',
-                            data: data.R,
-                            borderColor: '#22c55e',
-                            backgroundColor: 'rgba(34,197,94,0.1)',
-                            fill: true,
-                            tension: 0.3,
-                            pointRadius: 0
-                        }
+                        { label: 'Người Lành (S)', data: results.S, borderColor: '#3b82f6', backgroundColor: 'rgba(59, 130, 246, 0.1)', fill: true, tension: 0.4, pointRadius: 0 },
+                        { label: 'Người Nhiễm (I)', data: results.I, borderColor: '#f43f5e', backgroundColor: 'rgba(244, 63, 94, 0.2)', fill: true, tension: 0.4, pointRadius: 0 },
+                        { label: 'Hồi Phục (R)', data: results.R, borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.1)', fill: true, tension: 0.4, pointRadius: 0 }
                     ]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    plugins: {
-                        legend: { position: 'top', labels: { color: '#a0aec0' } }
-                    },
-                    scales: {
-                        x: {
-                            title: { display: true, text: 'Ngày', color: '#a0aec0' },
-                            ticks: { color: '#a0aec0' },
-                            grid: { color: 'rgba(255,255,255,0.05)' }
-                        },
-                        y: {
-                            title: { display: true, text: 'Số người', color: '#a0aec0' },
-                            ticks: { color: '#a0aec0' },
-                            grid: { color: 'rgba(255,255,255,0.05)' }
-                        }
-                    }
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: { legend: { position: 'top' } },
+                    scales: { x: { grid: { display: false } }, y: { grid: { borderDash: [5, 5] } } }
                 }
             });
-
-            Swal.fire({
-                icon: 'success',
-                title: 'Mô phỏng hoàn tất!',
-                html: `<b>R₀ = ${R0.toFixed(2)}</b><br>Đỉnh dịch: ${Math.round(peak).toLocaleString()} ca (ngày ${peakDay})`,
-                confirmButtonColor: '#1a5f7a'
-            });
         }
 
-        function resetSimulation() {
-            document.getElementById('simN').value = 10000;
-            document.getElementById('simI0').value = 10;
-            document.getElementById('simBeta').value = 0.3;
-            document.getElementById('simGamma').value = 0.1;
-            document.getElementById('simDays').value = 100;
-            document.getElementById('simVax').value = 0;
-            document.getElementById('simStats').style.display = 'none';
-            if (sirChart) { sirChart.destroy(); sirChart = null; }
-        }
+        function calculateSIR(N, beta, gamma, vaxPercent) {
+            let S = N * (1 - vaxPercent / 100);
+            let I = 10; // Patient zero
+            let R = N * (vaxPercent / 100);
+            const dt = 1;
+            const days = 100;
 
-        // ========== SCENARIO COMPARISON ==========
-        function addScenario() {
-            const name = document.getElementById('scenarioName').value.trim() || `Kịch bản ${scenarios.length + 1}`;
-            const beta = parseFloat(document.getElementById('scenarioBeta').value);
-            const gamma = parseFloat(document.getElementById('scenarioGamma').value);
-            const vax = parseFloat(document.getElementById('scenarioVax').value);
+            let data = { S: [], I: [], R: [], labels: [] };
 
-            scenarios.push({ name, beta, gamma, vax });
-            renderScenarioList();
+            for (let t = 0; t <= days; t++) {
+                data.labels.push(t);
+                data.S.push(S);
+                data.I.push(I);
+                data.R.push(R);
 
-            document.getElementById('scenarioName').value = '';
+                let newInf = (beta * I * S) / N;
+                let newRec = gamma * I;
 
-            Swal.fire({
-                icon: 'success',
-                title: 'Đã thêm kịch bản!',
-                text: name,
-                timer: 1500,
-                showConfirmButton: false
-            });
-        }
+                S = S - newInf;
+                I = I + newInf - newRec;
+                R = R + newRec;
 
-        function renderScenarioList() {
-            const list = document.getElementById('scenarioList');
-            list.innerHTML = scenarios.map((s, i) => `
-                <div class="scenario-item">
-                    <div>
-                        <div class="name">${s.name}</div>
-                        <div class="params">β=${s.beta}, γ=${s.gamma}, Tiêm=${s.vax}%</div>
-                    </div>
-                    <span class="remove" onclick="removeScenario(${i})">✕</span>
-                </div>
-            `).join('');
-        }
-
-        function removeScenario(index) {
-            scenarios.splice(index, 1);
-            renderScenarioList();
-        }
-
-        function clearScenarios() {
-            scenarios = [];
-            renderScenarioList();
-            document.getElementById('comparisonResults').style.display = 'none';
-            if (compareChart) { compareChart.destroy(); compareChart = null; }
-        }
-
-        function runComparison() {
-            if (scenarios.length === 0) {
-                Swal.fire({ icon: 'warning', title: 'Chưa có kịch bản!', text: 'Vui lòng thêm ít nhất 1 kịch bản.' });
-                return;
+                if (I < 0.5 && t > 10) I = 0; // End epidemic
             }
+            return data;
+        }
 
-            const N = 10000, I0 = 10, days = 100;
-            const colors = ['#ef4444', '#3b82f6', '#22c55e', '#f59e0b', '#8b5cf6', '#ec4899'];
-            const results = [];
-            const datasets = [];
-
-            let baselinePeak = 0;
-
+        // --- Scenario Logic ---
+        function renderScenarios() {
+            const list = document.getElementById('scenList');
+            list.innerHTML = '';
             scenarios.forEach((s, idx) => {
-                const data = simulateSIR(N, I0, s.beta, s.gamma, days, s.vax);
+                list.innerHTML += `
+                    <div class="scenario-card">
+                        <div>
+                            <div style="font-weight:700">${s.name}</div>
+                            <div style="font-size:0.8rem; color:var(--text-muted)">β=${s.beta}, γ=${s.gamma}, Vax=${s.vax}%</div>
+                        </div>
+                        <button onclick="scenarios.splice(${idx},1); renderScenarios()" style="border:none; background:none; cursor:pointer; color:var(--accent)">✕</button>
+                    </div>
+                `;
+            });
+        }
 
-                let peak = 0, peakDay = 0;
-                data.I.forEach((val, i) => { if (val > peak) { peak = val; peakDay = i; } });
+        function addScenario() {
+            scenarios.push({
+                name: document.getElementById('scenName').value || `Kịch bản ${scenarios.length + 1}`,
+                beta: +document.getElementById('scenBeta').value,
+                gamma: +document.getElementById('scenGamma').value,
+                vax: +document.getElementById('scenVax').value
+            });
+            renderScenarios();
+        }
 
-                const R0 = s.beta / s.gamma;
-                const totalInfected = Math.round(data.R[data.R.length - 1]);
+        function resetScenarios() { scenarios = []; renderScenarios(); }
 
-                if (idx === 0) baselinePeak = peak;
-                const efficiency = idx === 0 ? '-' : `${Math.round((1 - peak / baselinePeak) * 100)}%`;
-
-                results.push({ name: s.name, R0, peak: Math.round(peak), peakDay, total: totalInfected, efficiency });
-
-                datasets.push({
+        function compareScenarios() {
+            const datasets = scenarios.map((s, idx) => {
+                const res = calculateSIR(10000, s.beta, s.gamma, s.vax);
+                const colors = ['#f43f5e', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6'];
+                return {
                     label: s.name,
-                    data: data.I,
+                    data: res.I,
                     borderColor: colors[idx % colors.length],
-                    backgroundColor: 'transparent',
-                    tension: 0.3,
-                    pointRadius: 0,
-                    borderWidth: 2
-                });
+                    borderWidth: 2,
+                    tension: 0.4,
+                    pointRadius: 0
+                };
             });
 
-            // Draw comparison chart
             const ctx = document.getElementById('compareChart').getContext('2d');
-            if (compareChart) compareChart.destroy();
+            if (compareChartInstance) compareChartInstance.destroy();
 
-            compareChart = new Chart(ctx, {
+            compareChartInstance = new Chart(ctx, {
                 type: 'line',
-                data: { labels: Array.from({ length: days + 1 }, (_, i) => i), datasets },
+                data: { labels: Array.from({ length: 101 }, (_, i) => i), datasets: datasets },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
                     plugins: {
-                        legend: { position: 'top', labels: { color: '#a0aec0' } },
-                        title: { display: true, text: 'So sánh đường cong I(t)', color: '#a0aec0' }
+                        title: { display: true, text: 'So sánh đường cong lây nhiễm (Số ca nhiễm I)' },
+                        tooltip: { mode: 'index', intersect: false }
                     },
-                    scales: {
-                        x: { title: { display: true, text: 'Ngày', color: '#a0aec0' }, ticks: { color: '#a0aec0' }, grid: { color: 'rgba(255,255,255,0.05)' } },
-                        y: { title: { display: true, text: 'Số ca nhiễm (I)', color: '#a0aec0' }, ticks: { color: '#a0aec0' }, grid: { color: 'rgba(255,255,255,0.05)' } }
-                    }
+                    scales: { x: { grid: { display: false } } }
                 }
             });
 
-            // Update table
-            document.getElementById('comparisonResults').style.display = 'block';
-            const tbody = document.getElementById('comparisonBody');
-            tbody.innerHTML = results.map(r => `
-                <tr>
-                    <td><strong>${r.name}</strong></td>
-                    <td>${r.R0.toFixed(2)}</td>
-                    <td>${r.peak.toLocaleString()}</td>
-                    <td>Ngày ${r.peakDay}</td>
-                    <td>${r.total.toLocaleString()}</td>
-                    <td style="color: ${r.efficiency === '-' ? '#a0aec0' : '#22c55e'};">${r.efficiency}</td>
-                </tr>
-            `).join('');
+            // Generate comparison stats table
+            let html = `<table style="width:100%; font-size:0.9rem;"><tr><th>Kịch bản</th><th>Đỉnh dịch</th><th>Thấp hơn gốc</th></tr>`;
+            const basePeak = Math.max(...datasets[0].data);
 
-            Swal.fire({
-                icon: 'success',
-                title: 'So sánh hoàn tất!',
-                text: `Đã so sánh ${scenarios.length} kịch bản.`,
-                confirmButtonColor: '#1a5f7a'
+            datasets.forEach((d, i) => {
+                const peak = Math.max(...d.data);
+                const reduction = i === 0 ? '-' : Math.round((1 - peak / basePeak) * 100) + '%';
+                html += `<tr><td>${d.label}</td><td>${Math.round(peak).toLocaleString()}</td><td style="color:var(--success); font-weight:bold">${reduction}</td></tr>`;
             });
+            html += `</table>`;
+            document.getElementById('compareStats').innerHTML = html;
         }
 
-        // Initialize with default scenarios
-        scenarios = [
-            { name: 'Không can thiệp', beta: 0.3, gamma: 0.1, vax: 0 },
-            { name: 'Giãn cách xã hội', beta: 0.15, gamma: 0.1, vax: 0 },
-            { name: 'Tiêm chủng 60%', beta: 0.3, gamma: 0.1, vax: 60 }
-        ];
-        renderScenarioList();
+        // Init
+        renderScenarios();
+        runSimulation(); // Auto run once
     </script>
 </body>
 
