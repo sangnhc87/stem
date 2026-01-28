@@ -1,0 +1,67 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PHIẾU HỌC TẬP: FINANCE PLANNING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\definecolor{fingreen}{RGB}{34, 139, 34}
+
+\begin{document}
+
+\begin{center}
+    \begin{tikzpicture}
+        \node[draw=fingreen, line width=2pt, rounded corners=10pt, inner sep=10pt] (box) {
+            \begin{minipage}{0.9\textwidth}
+                \centering
+                \bfseries\Large\color{fingreen} HỒ SƠ HOẠCH ĐỊNH TÀI CHÍNH CÁ NHÂN
+            \end{minipage}
+        };
+    \end{tikzpicture}
+    \vspace{0.5cm}
+\end{center}
+
+\noindent \textbf{Họ và tên:} \dotfill \textbf{Lớp:} \dotfill
+
+\section*{\color{fingreen} I. MỤC TIÊU TÀI CHÍNH (GOAL)}
+\textbf{Em muốn tiết kiệm tiền để mua (hoặc làm) gì?}
+\begin{itemize}
+    \item \textbf{Mục tiêu:} ........................................................................................
+    \item \textbf{Số tiền cần có ($A$):} ........................................... VNĐ
+    \item \textbf{Thời gian dự kiến ($n$):} .................................. Tháng/Năm
+\end{itemize}
+
+\section*{\color{fingreen} II. TÍNH TOÁN PHƯƠNG ÁN (PLAN)}
+\textit{Sử dụng App FinanceSim hoặc công thức để tính toán.}
+
+\subsection*{Phương án 1: Gửi tiết kiệm (Tích sản)}
+- Lãi suất ngân hàng ($r$): ............ \%/tháng (hoặc năm).
+- Áp dụng công thức: $A = M \frac{(1+r)^n - 1}{r}(1+r)$
+- \textbf{Số tiền cần để dành mỗi tháng ($M$):}
+$$ M = \frac{A \cdot r}{(1+r)((1+r)^n - 1)} = \dots\dots\dots\dots\dots\dots $$
+$\Rightarrow$ Kết quả: Mỗi tháng em cần dành: ....................................... VNĐ.
+
+\subsection*{Phương án 2: Mua trả góp (Vay)}
+- Giá sản phẩm ($N$): ........................................ VNĐ.
+- Trả trước (nếu có): ........................................ VNĐ.
+- Số tiền vay thực tế: ........................................ VNĐ.
+- Lãi suất vay: ............ \%/tháng.
+- \textbf{Số tiền phải trả hàng tháng (EMI):} ........................................ VNĐ.
+- \textbf{Tổng tiền phải trả sau $n$ tháng:} ........................................ VNĐ.
+- \textbf{Chênh lệch so với giá gốc (Tiền lãi):} ........................................ VNĐ.
+
+\section*{\color{fingreen} III. KẾT LUẬN (DECISION)}
+\textbf{Em chọn phương án nào? Tại sao?}
+.............................................................................................................
+.............................................................................................................
+.............................................................................................................
+
+\end{document}

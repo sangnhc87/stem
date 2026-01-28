@@ -1,6 +1,14 @@
 \babel@toc {vietnamese}{}\relax 
 \contentsline {section}{I. TỔNG QUAN DỰ ÁN}{2}{section*.2}%
-\contentsline {section}{II. TIẾN TRÌNH DẠY HỌC (5E)}{2}{section*.6}%
-\contentsline {section}{III. PHỤ LỤC}{5}{section*.12}%
-\contentsline {subsection}{Phụ lục 1: Tiêu chuẩn BMI}{5}{section*.14}%
-\contentsline {subsection}{Phụ lục 2: Phiếu theo dõi mẫu}{5}{section*.16}%
+\contentsline {subsection}{1. Đặt vấn đề}{2}{section*.4}%
+\contentsline {subsection}{2. Giải pháp STEM}{2}{section*.6}%
+\contentsline {subsection}{3. Chuẩn kiến thức}{2}{section*.8}%
+\contentsline {section}{II. TIẾN TRÌNH DẠY HỌC (5E)}{2}{section*.9}%
+\contentsline {subsection}{1. ENGAGE (Gắn kết - 10p)}{2}{section*.11}%
+\contentsline {subsection}{2. EXPLORE (Khám phá - 20p)}{3}{section*.13}%
+\contentsline {subsection}{3. EXPLAIN (Giải thích - 20p)}{3}{section*.15}%
+\contentsline {subsection}{4. ELABORATE (Áp dụng - 25p)}{3}{section*.17}%
+\contentsline {subsection}{5. EVALUATE (Đánh giá - 15p)}{4}{section*.19}%
+\contentsline {section}{III. PHỤ LỤC}{5}{section*.20}%
+\contentsline {subsection}{Phụ lục 1: Tiêu chuẩn BMI}{5}{section*.22}%
+\contentsline {subsection}{Phụ lục 2: Phiếu theo dõi mẫu}{5}{section*.24}%

@@ -1,0 +1,181 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GIÁO ÁN STEM: FINANCE - TÀI CHÍNH THÔNG MINH
+% Môn: Toán 11/12 | Chủ đề: Lãi suất & Dãy số
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+% ============= PACKAGES =============
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{array, booktabs, tabularx, colortbl}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage[svgnames]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% ============= SETTINGS =============
+\geometry{left=2cm,right=2cm,top=2.5cm,bottom=2cm}
+\definecolor{fingold}{RGB}{218, 165, 32}   % GoldenRod
+\definecolor{fingreen}{RGB}{34, 139, 34}   % ForestGreen
+\definecolor{finblue}{RGB}{0, 51, 102}     % NavyBlue
+\definecolor{bgcream}{RGB}{255, 250, 240}  % FloralWhite
+
+\hypersetup{colorlinks=true, linkcolor=fingreen, urlcolor=fingold}
+
+% ============= BOX DEFINITIONS (AUTO TOC) =============
+\newtcolorbox{sectionbox}[1]{
+    enhanced, breakable, colback=white, colframe=fingreen, boxrule=1pt,
+    fonttitle=\bfseries\sffamily\Large, coltitle=white, colbacktitle=fingreen,
+    title={#1},
+    shadow={2mm}{-1mm}{0mm}{black!20},
+    code={\phantomsection\addcontentsline{toc}{section}{#1}}
+}
+
+\newtcolorbox{activitybox}[1]{
+    enhanced, breakable, colback=white, colframe=fingold, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} [HOẠT ĐỘNG] #1},
+    colbacktitle=fingold
+}
+
+\newtcolorbox{mathbox}[1]{
+    enhanced, breakable, colback=bgcream, colframe=finblue, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} [TOÁN] CÔNG THỨC: #1},
+    colbacktitle=finblue
+}
+
+% ============= HEADERS =============
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{fingreen}\textbf{DỰ ÁN STEM: FINANCE}}
+\fancyhead[R]{\color{fingreen}\textbf{TOÁN HỌC \& ĐỒNG TIỀN}}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+% ========== TITLE PAGE ==========
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        \fill[fingreen] (current page.north west) -- (current page.north east) -- (current page.east) -- (current page.west) -- cycle;
+        \node[anchor=center, color=white, font=\fontsize{40}{50}\sffamily\bfseries] at ($(current page.north)+(0,-3)$) {QUẢN LÝ TÀI CHÍNH THÔNG MINH};
+    \end{tikzpicture}
+    
+    \vspace{6cm}
+    \begin{center}
+        {\Huge\bfseries\sffamily FINANCE SIMULATOR}\\[1cm]
+        {\Large\itshape\sffamily Ứng dụng Lãi suất kép và Dãy số trong Hoạch định Tài chính}\\[3cm]
+        
+        \begin{tcolorbox}[width=0.8\textwidth, colback=bgcream, colframe=fingold]
+            \centering \large
+            \begin{tabular}{rl}
+                \textbf{Môn học:} & Toán (Giải tích 11/12) \\
+                \textbf{Chủ đề:} & Lãi suất kép, Cấp số nhân \\
+                \textbf{Thực tiễn:} & Tiết kiệm, Vay vốn, Đầu tư \\
+                \textbf{Thời lượng:} & 2 tiết (90 phút)
+            \end{tabular}
+        \end{tcolorbox}
+        
+        \vfill
+        {\large TP. Hồ Chí Minh, Năm 2026}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ========== CONTENT ==========
+
+\begin{sectionbox}{I. TỔNG QUAN DỰ ÁN}
+\phantomsection\subsection*{1. Đặt vấn đề}\addcontentsline{toc}{subsection}{1. Đặt vấn đề}
+"Lãi suất kép là kỳ quan thứ 8 của thế giới". Tuy nhiên, nhiều học sinh chưa hiểu sức mạnh của việc tiết kiệm sớm hoặc gánh nặng của lãi suất vay trả góp.
+
+\phantomsection\subsection*{2. Mục tiêu STEM}\addcontentsline{toc}{subsection}{2. Mục tiêu STEM}
+\begin{itemize}
+    \item \textbf{Toán học:} Xây dựng công thức tính lãi kép và trả góp từ quy luật cấp số nhân.
+    \item \textbf{Công nghệ:} Sử dụng Web App để mô phỏng các kịch bản tài chính.
+    \item \textbf{Tài chính:} Lập kế hoạch tài chính cá nhân khả thi.
+\end{itemize}
+\end{sectionbox}
+
+\begin{sectionbox}{II. TIẾN TRÌNH DẠY HỌC (5E)}
+
+\phantomsection\subsection*{1. ENGAGE (Gắn kết - 10p)}\addcontentsline{toc}{subsection}{1. ENGAGE (Gắn kết - 10p)}
+\begin{activitybox}{Triệu phú tuổi 30}
+GV đưa tình huống: "Nếu từ 18 tuổi, mỗi ngày bạn để dành 20.000đ (bằng 1 ly trà sữa) gửi tiết kiệm 8\%/năm. Đến năm 30 tuổi bạn có bao nhiêu tiền? Nếu để trong heo đất thì sao?"
+$\to$ So sánh Lãi đơn vs Lãi kép.
+\end{activitybox}
+
+\phantomsection\subsection*{2. EXPLORE (Khám phá - 15p)}\addcontentsline{toc}{subsection}{2. EXPLORE (Khám phá - 15p)}
+\begin{activitybox}{Truy tìm công thức}
+Học sinh tính tay số tiền qua từng năm với số vốn $P$:
+\begin{itemize}
+    \item Năm 1: $P(1+r)$
+    \item Năm 2: $P(1+r)(1+r) = P(1+r)^2$
+    \item ...
+    \item Năm n: $A = P(1+r)^n$
+\end{itemize}
+\end{activitybox}
+
+\phantomsection\subsection*{3. EXPLAIN (Giải thích - 20p)}\addcontentsline{toc}{subsection}{3. EXPLAIN (Giải thích - 20p)}
+\begin{mathbox}{Các bài toán Lãi suất}
+\textbf{1. Lãi kép (Gửi 1 lần):}
+$$ A_n = P(1+r)^n $$
+
+\textbf{2. Gửi định kỳ hàng tháng (Annuity):}
+Gửi số tiền $M$ mỗi tháng, lãi suất $r$/tháng. Tổng sau $n$ tháng là tổng của cấp số nhân:
+$$ A_n = M \frac{(1+r)^n - 1}{r} (1+r) $$
+
+\textbf{3. Vay trả góp (Loan Amortization):}
+Vay số tiền $N$, trả $M$/tháng. Số tiền còn nợ giảm dần:
+$$ M = N \frac{r(1+r)^n}{(1+r)^n - 1} $$
+\end{mathbox}
+
+\phantomsection\subsection*{4. ELABORATE (Áp dụng - 30p)}\addcontentsline{toc}{subsection}{4. ELABORATE (Áp dụng - 30p)}
+\begin{activitybox}{FinanceSim App}
+Truy cập: \href{https://stem-1h8.pages.dev/finance.html}{\texttt{stem-1h8.pages.dev/finance.html}}
+\begin{enumerate}
+    \item \textbf{Bài toán 1:} Lên kế hoạch mua Laptop 20 triệu.
+    \begin{itemize}
+        \item Option A: Gửi tiết kiệm bao nhiêu mỗi tháng để 1 năm sau đủ tiền?
+        \item Option B: Mua trả góp lãi suất 2\%/tháng. Tổng tiền phải trả là bao nhiêu?
+    \end{itemize}
+    \item \textbf{Bài toán 2:} (Nâng cao) Tự do tài chính. Cần tiết kiệm bao nhiêu để có 1 tỷ đồng sau 20 năm?
+\end{enumerate}
+\end{activitybox}
+
+\phantomsection\subsection*{5. EVALUATE (Đánh giá - 15p)}\addcontentsline{toc}{subsection}{5. EVALUATE (Đánh giá - 15p)}
+GV đánh giá dựa trên:
+- Độ chính xác khi áp dụng công thức.
+- Tính khả thi của Kế hoạch tài chính cá nhân (Phiếu học tập).
+\end{sectionbox}
+
+\newpage
+\begin{sectionbox}{III. PHỤ LỤC}
+\phantomsection\subsection*{Phụ lục 1: Bảng lãi suất tham khảo (2026)}\addcontentsline{toc}{subsection}{Phụ lục 1: Lãi suất tham khảo}
+\begin{center}
+\begin{tabular}{|l|c|l|}
+\hline
+\textbf{Ngân hàng} & \textbf{Lãi suất (\%/năm)} & \textbf{Ghi chú} \\
+\hline
+Big4 (Vietcom, BIDV...) & 4.8\% - 5.5\% & An toàn cao \\
+Ngân hàng TMCP & 5.5\% - 6.5\% & Lãi tốt hơn \\
+Công ty tài chính (Vay) & 20\% - 40\% & Lãi vay rất cao \\
+Tín dụng đen & > 100\% & \textbf{Cảnh báo!} \\
+\hline
+\end{tabular}
+\end{center}
+
+\phantomsection\subsection*{Phụ lục 2: Phiếu Kế hoạch Tài chính}\addcontentsline{toc}{subsection}{Phụ lục 2: Phiếu Kế hoạch mẫu}
+(Đính kèm file PDF riêng)
+\end{sectionbox}
+
+\end{document}
