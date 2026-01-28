@@ -1,0 +1,169 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GIÁO ÁN STEM: BAYESHUNTER - AI & Y TẾ
+% Môn: Toán 12 | Chủ đề: Xác suất có điều kiện - Ứng dụng trong AI
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+% ============= PACKAGES =============
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{array, booktabs, tabularx}
+\usepackage{tikz}
+\usetikzlibrary{calc, trees, positioning, arrows}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage[svgnames]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% ============= SETTINGS =============
+\geometry{left=2cm,right=2cm,top=2.5cm,bottom=2cm}
+\definecolor{medblue}{RGB}{14, 165, 233}      % Sky 500
+\definecolor{meddark}{RGB}{12, 74, 110}       % Sky 900
+\definecolor{medalert}{RGB}{239, 68, 68}      % Red 500
+\definecolor{medbg}{RGB}{240, 249, 255}       % Sky 50
+
+\hypersetup{colorlinks=true, linkcolor=meddark, urlcolor=medblue}
+
+% ============= BOX DEFINITIONS =============
+\newtcolorbox{sectionbox}[1]{
+    enhanced, breakable, colback=white, colframe=medblue, boxrule=1pt,
+    fonttitle=\bfseries\sffamily\Large, coltitle=white, colbacktitle=medblue,
+    title={#1},
+    shadow={2mm}{-1mm}{0mm}{black!20},
+    code={\phantomsection\addcontentsline{toc}{section}{#1}}
+}
+
+\newtcolorbox{activitybox}[1]{
+    enhanced, breakable, colback=white, colframe=meddark, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} [HOẠT ĐỘNG] #1},
+    colbacktitle=meddark
+}
+
+\newtcolorbox{mathbox}[1]{
+    enhanced, breakable, colback=medbg, colframe=meddark, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} [TOÁN] CÔNG THỨC: #1},
+    colbacktitle=meddark
+}
+
+% ============= HEADERS =============
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{meddark}\textbf{DỰ ÁN STEM: AI DOCTOR}}
+\fancyhead[R]{\color{meddark}\textbf{TOÁN HỌC \& Y TẾ}}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+% ========== TITLE PAGE ==========
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        \fill[meddark] (current page.north west) rectangle (current page.south east);
+        \node[anchor=center, color=medblue, font=\fontsize{60}{70}\sffamily\bfseries] at ($(current page.center)+(0,1)$) {AI DOCTOR};
+        \node[anchor=center, color=white, font=\Large\sffamily] at ($(current page.center)+(0,-1)$) {XÁC SUẤT CÓ ĐIỀU KIỆN TRONG CHẨN ĐOÁN Y KHOA};
+        
+        \draw[white, line width=1pt] ($(current page.center)+(-6,0)$) -- ($(current page.center)+(6,0)$);
+    \end{tikzpicture}
+    
+    \vspace{12cm}
+    \begin{center}
+        \color{black}
+        \begin{tcolorbox}[width=0.8\textwidth, colback=white, colframe=medblue]
+            \centering \large
+            \begin{tabular}{rl}
+                \textbf{Môn học:} & Toán (Xác suất 12) \\
+                \textbf{Chủ đề:} & Công thức Bayes \& Độ chính xác AI \\
+                \textbf{Ứng dụng:} & Y tế thông minh (AI Diagnostics) \\
+                \textbf{Thời lượng:} & 2 tiết (90 phút)
+            \end{tabular}
+        \end{tcolorbox}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ========== CONTENT ==========
+
+\begin{sectionbox}{I. TỔNG QUAN DỰ ÁN}
+\phantomsection\subsection*{1. Đặt vấn đề}\addcontentsline{toc}{subsection}{1. Đặt vấn đề}
+Trí tuệ nhân tạo (AI) đang được dùng để chẩn đoán ung thư sớm. Một hệ thống AI được quảng cáo là "Chính xác 99\%". Tuy nhiên, khi AI báo một người bị bệnh, xác suất người đó THỰC SỰ bị bệnh có thể rất thấp. Tại sao lại có nghịch lý này?
+
+\phantomsection\subsection*{2. Mục tiêu STEM}\addcontentsline{toc}{subsection}{2. Mục tiêu STEM}
+\begin{itemize}
+    \item \textbf{Toán học:} Vận dụng Công thức Bayes để tính xác suất hậu nghiệm (Posterior Probability).
+    \item \textbf{Y tế:} Hiểu các khái niệm: Độ nhạy (Sensitivity), Độ đặc hiệu (Specificity), Dương tính giả (False Positive).
+    \item \textbf{Công nghệ:} Sử dụng \textbf{AI Diagnostic Simulator} (Web App) để trực quan hóa dữ liệu y tế lớn.
+\end{itemize}
+\end{sectionbox}
+
+\begin{sectionbox}{II. TIẾN TRÌNH DẠY HỌC (5E)}
+
+\phantomsection\subsection*{1. ENGAGE (Gắn kết - 10p)}\addcontentsline{toc}{subsection}{1. ENGAGE (Gắn kết - 10p)}
+\begin{activitybox}{Tình huống: Bản án tử hình hay Báo động giả?}
+GV đưa ra tình huống: Bệnh X rất hiếm (0.1\% dân số). Một AI mới có độ chính xác 99\%.
+Anh A đi khám sức khỏe, AI báo \textbf{DƯƠNG TÍNH (+)}.
+\begin{itemize}
+    \item \textbf{Câu hỏi:} Anh A nên lo lắng đến mức nào? Xác suất anh ấy bệnh thật là:
+    \item A. 99\% \quad B. 50\% \quad C. Dưới 10\%
+\end{itemize}
+HS bình chọn nhanh. Đa số sẽ chọn 99\% (Bẫy nhận thức).
+\end{activitybox}
+
+\phantomsection\subsection*{2. EXPLORE (Khám phá - 20p)}\addcontentsline{toc}{subsection}{2. EXPLORE (Khám phá - 20p)}
+\begin{activitybox}{Thực nghiệm trên BayesHunter App}
+Truy cập: \href{https://stem-1h8.pages.dev/bayes.html}{\texttt{stem-1h8.pages.dev/bayes.html}}
+- Nhập tham số: Tỷ lệ bệnh 0.1\%, AI chính xác 99\%.
+- Quan sát \textbf{Dot Matrix} (1000 chấm):
+  - Đếm số chấm Đỏ (Bệnh thật).
+  - Đếm số chấm có Vòng tròn (AI báo dương tính).
+  - Tìm giao của 2 tập hợp này.
+\textbf{Kết quả bất ngờ:} Hầu hết các ca AI báo dương tính là NGƯỜI KHỎE MẠNH (Dương tính giả).
+\end{activitybox}
+
+\phantomsection\subsection*{3. EXPLAIN (Giải thích - 25p)}\addcontentsline{toc}{subsection}{3. EXPLAIN (Giải thích - 25p)}
+\begin{mathbox}{Công thức Bayes trong Y khoa}
+Gọi $B$ là biến cố Bị bệnh, $+$ là biến cố Test Dương tính.
+$$ P(B|+) = \frac{P(+|B) \cdot P(B)}{P(+)} $$
+Khai triển mẫu số $P(+) = P(+|B)P(B) + P(+|K)P(K)$:
+\begin{itemize}
+    \item $P(B)$: Tỷ lệ nhiễm trong cộng đồng (Prevalence).
+    \item $P(+|B)$: Độ nhạy (Sensitivity) - Khả năng phát hiện bệnh.
+    \item $P(+|K)$: Tỷ lệ Dương tính giả (False Positive Rate) = $1 - \text{Độ đặc hiệu}$.
+\end{itemize}
+\textbf{Kết luận:} Khi bệnh quá hiếm ($P(B)$ thấp), số lượng người khỏe bị báo nhầm ($P(+|K)P(K)$) sẽ áp đảo số người bệnh thật, làm giảm độ tin cậy của kết quả Dương tính ($PPV$).
+\end{mathbox}
+
+\phantomsection\subsection*{4. ELABORATE (Áp dụng - 25p)}\addcontentsline{toc}{subsection}{4. ELABORATE (Áp dụng - 25p)}
+\begin{activitybox}{Thách thức Kỹ sư AI}
+Nếu muốn tăng độ tin cậy chẩn đoán lên 80\%, ta cần làm gì?
+1. Tăng Độ chính xác AI lên 99.9\%?
+2. Hay Sàng lọc đối tượng nguy cơ cao (Tăng $P(B)$ lên 10\%)?
+HS dùng App điều chỉnh thanh trượt để tìm câu trả lời.
+\end{activitybox}
+
+\phantomsection\subsection*{5. EVALUATE (Đánh giá - 10p)}\addcontentsline{toc}{subsection}{5. EVALUATE (Đánh giá - 10p)}
+HS hoàn thành \textbf{Báo cáo Đánh giá Công nghệ Y tế}, giải thích tại sao bác sĩ luôn cần xét nghiệm lần 2 dù lần 1 đã dương tính.
+\end{sectionbox}
+
+\newpage
+\begin{sectionbox}{III. PHỤ LỤC}
+\phantomsection\subsection*{Phụ lục 1: Thuật ngữ Y tế}\addcontentsline{toc}{subsection}{Phụ lục 1: Thuật ngữ Y tế}
+\begin{itemize}
+    \item \textbf{Sensitivity (Độ nhạy):} Bệnh thật $\to$ Test ra (+).
+    \item \textbf{Specificity (Độ đặc hiệu):} Khỏe thật $\to$ Test ra (-).
+    \item \textbf{PPV (Positive Predictive Value):} Test ra (+) $\to$ Bệnh thật.
+\end{itemize}
+
+\phantomsection\subsection*{Phụ lục 2: Phiếu Học tập}\addcontentsline{toc}{subsection}{Phụ lục 2: Phiếu Học tập}
+(Đính kèm file PDF riêng)
+\end{sectionbox}
+
+\end{document}
