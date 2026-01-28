@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EpidemicSim - Mô Phỏng Lây Lan Dịch Bệnh | STEM Project</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #159895;
+            --accent: #ff6b35;
+            --danger: #c23728;
+            --success: #57cc99;
+            --warning: #f4a261;
+            --bg-dark: #0d1b2a;
+            --bg-light: #1b263b;
+            --text-light: #e0e1dd;
+            --card-bg: rgba(27, 38, 59, 0.95);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--bg-dark) 0%, #1b3a4b 50%, var(--bg-dark) 100%);
+            min-height: 100vh;
+            color: var(--text-light);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            padding: 1.5rem 2rem;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: pulse 4s infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.3;
+            }
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .header h1 span {
+            color: var(--accent);
+        }
+
+        .header p {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: var(--bg-light);
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            background: transparent;
+            color: var(--text-light);
+            border: 2px solid transparent;
+        }
+
+        .tab-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .tab-btn.active {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--danger) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Grid Layout */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.3);
+            color: var(--text-light);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--secondary);
+            box-shadow: 0 0 10px rgba(21, 152, 149, 0.3);
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .slider-container input[type="range"] {
+            flex: 1;
+            -webkit-appearance: none;
+            height: 8px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .slider-container input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--accent);
+            cursor: pointer;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+        }
+
+        .slider-value {
+            min-width: 60px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(21, 152, 149, 0.4);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--danger) 100%);
+            color: white;
+        }
+
+        .btn-danger:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(194, 55, 40, 0.4);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        /* Stats */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .stat-card.susceptible {
+            border-left: 4px solid #3b82f6;
+        }
+
+        .stat-card.infected {
+            border-left: 4px solid var(--danger);
+        }
+
+        .stat-card.recovered {
+            border-left: 4px solid var(--success);
+        }
+
+        .stat-card.r0 {
+            border-left: 4px solid var(--warning);
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-card.susceptible .stat-value {
+            color: #3b82f6;
+        }
+
+        .stat-card.infected .stat-value {
+            color: var(--danger);
+        }
+
+        .stat-card.recovered .stat-value {
+            color: var(--success);
+        }
+
+        .stat-card.r0 .stat-value {
+            color: var(--warning);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* Chart Container */
+        .chart-container {
+            position: relative;
+            height: 400px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        /* Scenarios */
+        .scenario-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            padding: 1rem;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .scenario-card:hover {
+            border-color: var(--secondary);
+        }
+
+        .scenario-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.8rem;
+        }
+
+        .scenario-name {
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .scenario-actions button {
+            background: transparent;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            padding: 0.3rem;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .scenario-actions button:hover {
+            opacity: 1;
+        }
+
+        .scenario-params {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* Learning Section */
+        .learning-section {
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid var(--secondary);
+        }
+
+        .learning-section h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .formula-box {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 1.2rem;
+            margin: 1rem 0;
+            font-family: 'Times New Roman', serif;
+            font-size: 1.1rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .formula-box .fraction {
+            display: inline-block;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .formula-box .fraction .top {
+            display: block;
+            border-bottom: 1px solid var(--text-light);
+            padding-bottom: 0.2rem;
+        }
+
+        .formula-box .fraction .bottom {
+            display: block;
+            padding-top: 0.2rem;
+        }
+
+        .term-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .term-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .term-card h4 {
+            color: var(--accent);
+            margin-bottom: 0.5rem;
+        }
+
+        .term-card p {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            line-height: 1.5;
+        }
+
+        /* STEM Process */
+        .stem-process {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .stem-step {
+            text-align: center;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .stem-step:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .stem-step .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stem-step h4 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .stem-step p {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stem-process {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+        }
+
+        /* Animation for running simulation */
+        .running {
+            animation: glow 1s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px var(--accent);
+            }
+
+            to {
+                box-shadow: 0 0 20px var(--accent), 0 0 30px var(--danger);
+            }
+        }
+
+        /* Progress indicator */
+        .day-indicator {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        /* Comparison Chart */
+        .comparison-chart {
+            height: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header">
+        <h1>🧬 <span>EpidemicSim</span> - Mô Phỏng Lây Lan Dịch Bệnh</h1>
+        <p>Ứng dụng Mô hình SIR và Hàm số Mũ trong Dịch tễ học | STEM Toán 11</p>
+    </header>
+
+    <nav class="tabs">
+        <button class="tab-btn active" onclick="showTab('simulation')">🔬 Mô Phỏng</button>
+        <button class="tab-btn" onclick="showTab('scenarios')">📊 So Sánh Kịch Bản</button>
+        <button class="tab-btn" onclick="showTab('learning')">📚 Học Tập</button>
+    </nav>
+
+    <main class="container">
+        <!-- Tab 1: Simulation -->
+        <div id="simulation" class="tab-content active">
+            <div class="grid-2">
+                <!-- Parameters -->
+                <div class="card">
+                    <h2 class="card-title">⚙️ Tham số mô phỏng</h2>
+
+                    <div class="form-group">
+                        <label>Dân số (N)</label>
+                        <input type="number" id="population" value="10000" min="100" max="1000000">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Số ca nhiễm ban đầu (I₀)</label>
+                        <input type="number" id="initialInfected" value="10" min="1" max="1000">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tỷ lệ lây nhiễm (β) - Mỗi người nhiễm lây cho bao nhiêu người/ngày</label>
+                        <div class="slider-container">
+                            <input type="range" id="beta" min="0.05" max="1" step="0.01" value="0.3">
+                            <span class="slider-value" id="betaValue">0.30</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tỷ lệ hồi phục (γ) - Tỷ lệ khỏi bệnh/ngày (1/thời gian nhiễm)</label>
+                        <div class="slider-container">
+                            <input type="range" id="gamma" min="0.01" max="0.5" step="0.01" value="0.1">
+                            <span class="slider-value" id="gammaValue">0.10</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Số ngày mô phỏng</label>
+                        <input type="number" id="days" value="100" min="10" max="365">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tỷ lệ tiêm chủng (%)</label>
+                        <div class="slider-container">
+                            <input type="range" id="vaccination" min="0" max="90" step="5" value="0">
+                            <span class="slider-value" id="vaccinationValue">0%</span>
+                        </div>
+                    </div>
+
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="runSimulation()">▶️ Chạy mô phỏng</button>
+                        <button class="btn btn-danger" onclick="resetSimulation()">🔄 Đặt lại</button>
+                    </div>
+                </div>
+
+                <!-- Chart -->
+                <div class="card">
+                    <h2 class="card-title">📈 Biểu đồ SIR theo thời gian</h2>
+                    <div class="day-indicator" id="dayIndicator">Ngày: 0</div>
+                    <div class="chart-container">
+                        <canvas id="sirChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="stats-grid">
+                <div class="stat-card susceptible">
+                    <div class="stat-value" id="statS">10,000</div>
+                    <div class="stat-label">Nhạy cảm (S)</div>
+                </div>
+                <div class="stat-card infected">
+                    <div class="stat-value" id="statI">10</div>
+                    <div class="stat-label">Đang nhiễm (I)</div>
+                </div>
+                <div class="stat-card recovered">
+                    <div class="stat-value" id="statR">0</div>
+                    <div class="stat-label">Đã hồi phục (R)</div>
+                </div>
+                <div class="stat-card r0">
+                    <div class="stat-value" id="statR0">3.00</div>
+                    <div class="stat-label">Hệ số R₀</div>
+                </div>
+            </div>
+
+            <!-- Explanation -->
+            <div class="card">
+                <h2 class="card-title">💡 Giải thích kết quả</h2>
+                <div id="explanation">
+                    <p>Nhấn <strong>"Chạy mô phỏng"</strong> để xem dịch bệnh lây lan như thế nào theo mô hình SIR.</p>
+                    <ul style="margin-top: 1rem; margin-left: 1.5rem; line-height: 2;">
+                        <li><strong style="color: #3b82f6">S (Susceptible)</strong>: Người có thể bị lây nhiễm</li>
+                        <li><strong style="color: var(--danger)">I (Infected)</strong>: Người đang nhiễm bệnh và có thể
+                            lây cho người khác</li>
+                        <li><strong style="color: var(--success)">R (Recovered)</strong>: Người đã khỏi bệnh và có miễn
+                            dịch</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 2: Scenarios -->
+        <div id="scenarios" class="tab-content">
+            <div class="grid-2">
+                <div class="card">
+                    <h2 class="card-title">📋 Danh sách kịch bản</h2>
+                    <div id="scenarioList"></div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="addScenario()">➕ Thêm kịch bản</button>
+                        <button class="btn btn-danger" onclick="compareScenarios()">📊 So sánh</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2 class="card-title">📊 Biểu đồ so sánh - Đỉnh dịch</h2>
+                    <div class="chart-container comparison-chart">
+                        <canvas id="comparisonChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">📈 Phân tích độ nhạy - Ảnh hưởng của R₀</h2>
+                <div class="chart-container">
+                    <canvas id="sensitivityChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tab 3: Learning -->
+        <div id="learning" class="tab-content">
+            <div class="learning-section">
+                <h3>🧮 Mô hình SIR - Phương trình vi phân</h3>
+                <p>Mô hình SIR là mô hình toán học cơ bản trong dịch tễ học, chia dân số thành 3 nhóm:</p>
+
+                <div class="formula-box">
+                    <div class="fraction">
+                        <span class="top">dS</span>
+                        <span class="bottom">dt</span>
+                    </div>
+                    = -β ×
+                    <div class="fraction">
+                        <span class="top">S × I</span>
+                        <span class="bottom">N</span>
+                    </div>
+                    &nbsp;&nbsp;&nbsp;
+                    <div class="fraction">
+                        <span class="top">dI</span>
+                        <span class="bottom">dt</span>
+                    </div>
+                    = β ×
+                    <div class="fraction">
+                        <span class="top">S × I</span>
+                        <span class="bottom">N</span>
+                    </div>
+                    - γ × I
+                    &nbsp;&nbsp;&nbsp;
+                    <div class="fraction">
+                        <span class="top">dR</span>
+                        <span class="bottom">dt</span>
+                    </div>
+                    = γ × I
+                </div>
+
+                <div class="term-grid">
+                    <div class="term-card">
+                        <h4>S (Susceptible)</h4>
+                        <p>Số người có thể bị lây nhiễm. Giảm dần khi dịch lan rộng.</p>
+                    </div>
+                    <div class="term-card">
+                        <h4>I (Infected)</h4>
+                        <p>Số người đang nhiễm bệnh. Tăng rồi giảm theo hình chuông.</p>
+                    </div>
+                    <div class="term-card">
+                        <h4>R (Recovered)</h4>
+                        <p>Số người đã khỏi bệnh và có miễn dịch. Tăng liên tục.</p>
+                    </div>
+                    <div class="term-card">
+                        <h4>R₀ = β/γ</h4>
+                        <p>Hệ số lây nhiễm cơ bản. Nếu R₀ > 1, dịch sẽ bùng phát.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="learning-section">
+                <h3>📐 Hàm số Mũ trong Dịch tễ học</h3>
+                <p>Ở giai đoạn đầu của dịch bệnh, số ca nhiễm tăng theo hàm số mũ:</p>
+
+                <div class="formula-box">
+                    I(t) = I₀ × e<sup>(β-γ)t</sup> = I₀ × e<sup>rt</sup>
+                </div>
+
+                <p style="margin-top: 1rem;">Trong đó:</p>
+                <ul style="margin-left: 1.5rem; line-height: 2;">
+                    <li><strong>I₀</strong>: Số ca nhiễm ban đầu</li>
+                    <li><strong>r = β - γ</strong>: Tốc độ tăng trưởng dịch</li>
+                    <li><strong>e ≈ 2.718</strong>: Số Euler</li>
+                    <li><strong>t</strong>: Thời gian (ngày)</li>
+                </ul>
+
+                <p style="margin-top: 1rem; padding: 1rem; background: rgba(255,107,53,0.2); border-radius: 8px;">
+                    💡 <strong>Ý nghĩa:</strong> Nếu r > 0 (tức β > γ), dịch bệnh sẽ tăng theo cấp số nhân.
+                    Đây là lý do tại sao việc can thiệp sớm (giãn cách xã hội, tiêm chủng) rất quan trọng!
+                </p>
+            </div>
+
+            <div class="learning-section">
+                <h3>💉 Miễn dịch cộng đồng (Herd Immunity)</h3>
+                <p>Ngưỡng miễn dịch cộng đồng là tỷ lệ dân số cần có miễn dịch để dịch tự tắt:</p>
+
+                <div class="formula-box">
+                    H = 1 -
+                    <div class="fraction">
+                        <span class="top">1</span>
+                        <span class="bottom">R₀</span>
+                    </div>
+                </div>
+
+                <div class="term-grid">
+                    <div class="term-card">
+                        <h4>COVID-19 (R₀ ≈ 2.5)</h4>
+                        <p>Cần ~60% dân số miễn dịch</p>
+                    </div>
+                    <div class="term-card">
+                        <h4>Sởi (R₀ ≈ 15)</h4>
+                        <p>Cần ~93% dân số miễn dịch</p>
+                    </div>
+                    <div class="term-card">
+                        <h4>Cúm mùa (R₀ ≈ 1.3)</h4>
+                        <p>Cần ~23% dân số miễn dịch</p>
+                    </div>
+                    <div class="term-card">
+                        <h4>Ebola (R₀ ≈ 2)</h4>
+                        <p>Cần ~50% dân số miễn dịch</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="learning-section">
+                <h3>🔬 Quy trình STEM</h3>
+                <div class="stem-process">
+                    <div class="stem-step">
+                        <div class="icon">🔬</div>
+                        <h4>Science</h4>
+                        <p>Dịch tễ học, Sinh học virus, Miễn dịch học</p>
+                    </div>
+                    <div class="stem-step">
+                        <div class="icon">💻</div>
+                        <h4>Technology</h4>
+                        <p>Web App mô phỏng, Trực quan hóa dữ liệu</p>
+                    </div>
+                    <div class="stem-step">
+                        <div class="icon">⚙️</div>
+                        <h4>Engineering</h4>
+                        <p>Thiết kế thuật toán, Tối ưu hóa</p>
+                    </div>
+                    <div class="stem-step">
+                        <div class="icon">📐</div>
+                        <h4>Mathematics</h4>
+                        <p>Hàm số mũ, Phương trình vi phân, Thống kê</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Global variables
+        let sirChart, comparisonChart, sensitivityChart;
+        let scenarios = [];
+        let currentSimData = null;
+
+        // Initialize charts
+        function initCharts() {
+            // SIR Chart
+            const sirCtx = document.getElementById('sirChart').getContext('2d');
+            sirChart = new Chart(sirCtx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: [
+                        {
+                            label: 'Nhạy cảm (S)',
+                            data: [],
+                            borderColor: '#3b82f6',
+                            backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Đang nhiễm (I)',
+                            data: [],
+                            borderColor: '#c23728',
+                            backgroundColor: 'rgba(194, 55, 40, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        },
+                        {
+                            label: 'Hồi phục (R)',
+                            data: [],
+                            borderColor: '#57cc99',
+                            backgroundColor: 'rgba(87, 204, 153, 0.1)',
+                            fill: true,
+                            tension: 0.4
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: { color: '#e0e1dd' }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: { display: true, text: 'Ngày', color: '#e0e1dd' },
+                            ticks: { color: '#e0e1dd' },
+                            grid: { color: 'rgba(255,255,255,0.1)' }
+                        },
+                        y: {
+                            title: { display: true, text: 'Số người', color: '#e0e1dd' },
+                            ticks: { color: '#e0e1dd' },
+                            grid: { color: 'rgba(255,255,255,0.1)' }
+                        }
+                    }
+                }
+            });
+
+            // Comparison Chart
+            const compCtx = document.getElementById('comparisonChart').getContext('2d');
+            comparisonChart = new Chart(compCtx, {
+                type: 'bar',
+                data: {
+                    labels: [],
+                    datasets: [{
+                        label: 'Đỉnh dịch (số ca nhiễm cao nhất)',
+                        data: [],
+                        backgroundColor: [
+                            'rgba(194, 55, 40, 0.8)',
+                            'rgba(255, 107, 53, 0.8)',
+                            'rgba(244, 162, 97, 0.8)',
+                            'rgba(21, 152, 149, 0.8)',
+                            'rgba(87, 204, 153, 0.8)'
+                        ],
+                        borderWidth: 0,
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: {
+                            ticks: { color: '#e0e1dd' },
+                            grid: { display: false }
+                        },
+                        y: {
+                            title: { display: true, text: 'Số ca nhiễm', color: '#e0e1dd' },
+                            ticks: { color: '#e0e1dd' },
+                            grid: { color: 'rgba(255,255,255,0.1)' }
+                        }
+                    }
+                }
+            });
+
+            // Sensitivity Chart
+            const sensCtx = document.getElementById('sensitivityChart').getContext('2d');
+            sensitivityChart = new Chart(sensCtx, {
+                type: 'line',
+                data: {
+                    labels: [],
+                    datasets: []
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            labels: { color: '#e0e1dd' }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            title: { display: true, text: 'Ngày', color: '#e0e1dd' },
+                            ticks: { color: '#e0e1dd' },
+                            grid: { color: 'rgba(255,255,255,0.1)' }
+                        },
+                        y: {
+                            title: { display: true, text: 'Số ca nhiễm (I)', color: '#e0e1dd' },
+                            ticks: { color: '#e0e1dd' },
+                            grid: { color: 'rgba(255,255,255,0.1)' }
+                        }
+                    }
+                }
+            });
+
+            // Add default scenarios
+            addDefaultScenarios();
+        }
+
+        // SIR Model simulation
+        function simulateSIR(N, I0, beta, gamma, days, vaccinationRate = 0) {
+            const vaccinated = Math.floor(N * vaccinationRate / 100);
+            let S = N - I0 - vaccinated;
+            let I = I0;
+            let R = vaccinated;
+
+            const data = {
+                days: [0],
+                S: [S],
+                I: [I],
+                R: [R]
+            };
+
+            const dt = 1; // 1 day step
+
+            for (let t = 1; t <= days; t++) {
+                const dS = -beta * S * I / N * dt;
+                const dI = (beta * S * I / N - gamma * I) * dt;
+                const dR = gamma * I * dt;
+
+                S = Math.max(0, S + dS);
+                I = Math.max(0, I + dI);
+                R = Math.min(N, R + dR);
+
+                data.days.push(t);
+                data.S.push(Math.round(S));
+                data.I.push(Math.round(I));
+                data.R.push(Math.round(R));
+            }
+
+            return data;
+        }
+
+        // Run simulation with animation
+        async function runSimulation() {
+            const N = parseInt(document.getElementById('population').value);
+            const I0 = parseInt(document.getElementById('initialInfected').value);
+            const beta = parseFloat(document.getElementById('beta').value);
+            const gamma = parseFloat(document.getElementById('gamma').value);
+            const days = parseInt(document.getElementById('days').value);
+            const vaccination = parseInt(document.getElementById('vaccination').value);
+
+            const R0 = (beta / gamma).toFixed(2);
+
+            // Validate
+            if (I0 >= N) {
+                Swal.fire('Lỗi', 'Số ca nhiễm ban đầu phải nhỏ hơn dân số!', 'error');
+                return;
+            }
+
+            // Run simulation
+            currentSimData = simulateSIR(N, I0, beta, gamma, days, vaccination);
+
+            // Animate chart update
+            sirChart.data.labels = [];
+            sirChart.data.datasets[0].data = [];
+            sirChart.data.datasets[1].data = [];
+            sirChart.data.datasets[2].data = [];
+
+            const step = Math.max(1, Math.floor(days / 50));
+
+            for (let i = 0; i <= days; i += step) {
+                sirChart.data.labels.push(currentSimData.days[i]);
+                sirChart.data.datasets[0].data.push(currentSimData.S[i]);
+                sirChart.data.datasets[1].data.push(currentSimData.I[i]);
+                sirChart.data.datasets[2].data.push(currentSimData.R[i]);
+
+                document.getElementById('dayIndicator').textContent = `Ngày: ${i}`;
+                document.getElementById('statS').textContent = currentSimData.S[i].toLocaleString();
+                document.getElementById('statI').textContent = currentSimData.I[i].toLocaleString();
+                document.getElementById('statR').textContent = currentSimData.R[i].toLocaleString();
+
+                sirChart.update('none');
+                await new Promise(r => setTimeout(r, 30));
+            }
+
+            // Final update
+            document.getElementById('dayIndicator').textContent = `Ngày: ${days}`;
+            document.getElementById('statS').textContent = currentSimData.S[days].toLocaleString();
+            document.getElementById('statI').textContent = currentSimData.I[days].toLocaleString();
+            document.getElementById('statR').textContent = currentSimData.R[days].toLocaleString();
+            document.getElementById('statR0').textContent = R0;
+
+            // Update explanation
+            const peakDay = currentSimData.I.indexOf(Math.max(...currentSimData.I));
+            const peakInfected = Math.max(...currentSimData.I);
+            const totalInfected = N - currentSimData.S[days];
+            const herdImmunity = ((1 - 1 / R0) * 100).toFixed(1);
+
+            document.getElementById('explanation').innerHTML = `
+                <h4 style="color: var(--accent); margin-bottom: 1rem;">📊 Kết quả mô phỏng:</h4>
+                <ul style="line-height: 2; margin-left: 1.5rem;">
+                    <li><strong>Hệ số R₀ = ${R0}</strong>: ${R0 > 1 ? '⚠️ Dịch sẽ bùng phát (R₀ > 1)' : '✅ Dịch sẽ tự tắt (R₀ < 1)'}</li>
+                    <li><strong>Đỉnh dịch:</strong> Ngày ${peakDay} với ${peakInfected.toLocaleString()} ca nhiễm</li>
+                    <li><strong>Tổng số ca nhiễm:</strong> ${totalInfected.toLocaleString()} người (${(totalInfected / N * 100).toFixed(1)}% dân số)</li>
+                    <li><strong>Ngưỡng miễn dịch cộng đồng:</strong> ${herdImmunity}% dân số</li>
+                    ${vaccination > 0 ? `<li><strong>Hiệu quả tiêm chủng:</strong> Giảm ${vaccination}% người có thể bị lây</li>` : ''}
+                </ul>
+            `;
+        }
+
+        function resetSimulation() {
+            document.getElementById('population').value = 10000;
+            document.getElementById('initialInfected').value = 10;
+            document.getElementById('beta').value = 0.3;
+            document.getElementById('gamma').value = 0.1;
+            document.getElementById('days').value = 100;
+            document.getElementById('vaccination').value = 0;
+
+            updateSliderValues();
+
+            sirChart.data.labels = [];
+            sirChart.data.datasets.forEach(d => d.data = []);
+            sirChart.update();
+
+            document.getElementById('dayIndicator').textContent = 'Ngày: 0';
+            document.getElementById('statS').textContent = '10,000';
+            document.getElementById('statI').textContent = '10';
+            document.getElementById('statR').textContent = '0';
+            document.getElementById('statR0').textContent = '3.00';
+
+            document.getElementById('explanation').innerHTML = `
+                <p>Nhấn <strong>"Chạy mô phỏng"</strong> để xem dịch bệnh lây lan như thế nào theo mô hình SIR.</p>
+            `;
+        }
+
+        function updateSliderValues() {
+            document.getElementById('betaValue').textContent = parseFloat(document.getElementById('beta').value).toFixed(2);
+            document.getElementById('gammaValue').textContent = parseFloat(document.getElementById('gamma').value).toFixed(2);
+            document.getElementById('vaccinationValue').textContent = document.getElementById('vaccination').value + '%';
+        }
+
+        // Scenarios
+        function addDefaultScenarios() {
+            scenarios = [
+                { name: 'Không can thiệp', beta: 0.4, gamma: 0.1, vaccination: 0 },
+                { name: 'Giãn cách xã hội', beta: 0.2, gamma: 0.1, vaccination: 0 },
+                { name: 'Tiêm chủng 50%', beta: 0.4, gamma: 0.1, vaccination: 50 }
+            ];
+            updateScenarioList();
+        }
+
+        function addScenario() {
+            Swal.fire({
+                title: 'Thêm kịch bản mới',
+                html: `
+                    <input id="swal-name" class="swal2-input" placeholder="Tên kịch bản" value="Kịch bản ${scenarios.length + 1}">
+                    <input id="swal-beta" class="swal2-input" type="number" step="0.01" placeholder="Tỷ lệ lây (β)" value="0.3">
+                    <input id="swal-gamma" class="swal2-input" type="number" step="0.01" placeholder="Tỷ lệ hồi phục (γ)" value="0.1">
+                    <input id="swal-vacc" class="swal2-input" type="number" placeholder="% Tiêm chủng" value="0">
+                `,
+                confirmButtonText: 'Thêm',
+                showCancelButton: true,
+                cancelButtonText: 'Hủy',
+                preConfirm: () => {
+                    return {
+                        name: document.getElementById('swal-name').value,
+                        beta: parseFloat(document.getElementById('swal-beta').value),
+                        gamma: parseFloat(document.getElementById('swal-gamma').value),
+                        vaccination: parseInt(document.getElementById('swal-vacc').value)
+                    };
+                }
+            }).then(result => {
+                if (result.isConfirmed) {
+                    scenarios.push(result.value);
+                    updateScenarioList();
+                    Swal.fire('Đã thêm!', '', 'success');
+                }
+            });
+        }
+
+        function removeScenario(index) {
+            scenarios.splice(index, 1);
+            updateScenarioList();
+        }
+
+        function updateScenarioList() {
+            const list = document.getElementById('scenarioList');
+            list.innerHTML = scenarios.map((s, i) => `
+                <div class="scenario-card" style="margin-bottom: 0.5rem;">
+                    <div class="scenario-header">
+                        <span class="scenario-name">${s.name}</span>
+                        <div class="scenario-actions">
+                            <button onclick="removeScenario(${i})">🗑️</button>
+                        </div>
+                    </div>
+                    <div class="scenario-params">
+                        β=${s.beta} | γ=${s.gamma} | R₀=${(s.beta / s.gamma).toFixed(2)} | Tiêm chủng: ${s.vaccination}%
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function compareScenarios() {
+            if (scenarios.length < 2) {
+                Swal.fire('Thông báo', 'Cần ít nhất 2 kịch bản để so sánh!', 'info');
+                return;
+            }
+
+            const N = 10000;
+            const I0 = 10;
+            const days = 100;
+
+            const results = scenarios.map(s => {
+                const data = simulateSIR(N, I0, s.beta, s.gamma, days, s.vaccination);
+                return {
+                    name: s.name,
+                    peakInfected: Math.max(...data.I),
+                    data: data
+                };
+            });
+
+            // Update comparison bar chart
+            comparisonChart.data.labels = results.map(r => r.name);
+            comparisonChart.data.datasets[0].data = results.map(r => r.peakInfected);
+            comparisonChart.update();
+
+            // Update sensitivity line chart
+            const colors = ['#c23728', '#ff6b35', '#f4a261', '#159895', '#57cc99'];
+            sensitivityChart.data.labels = results[0].data.days.filter((_, i) => i % 2 === 0);
+            sensitivityChart.data.datasets = results.map((r, i) => ({
+                label: r.name,
+                data: r.data.I.filter((_, j) => j % 2 === 0),
+                borderColor: colors[i % colors.length],
+                backgroundColor: 'transparent',
+                tension: 0.4
+            }));
+            sensitivityChart.update();
+
+            Swal.fire({
+                title: 'So sánh hoàn tất!',
+                html: `
+                    <p>Kịch bản tốt nhất: <strong>${results.reduce((a, b) => a.peakInfected < b.peakInfected ? a : b).name}</strong></p>
+                    <p>Đỉnh dịch thấp nhất: ${Math.min(...results.map(r => r.peakInfected)).toLocaleString()} ca</p>
+                `,
+                icon: 'success'
+            });
+        }
+
+        // Tab switching
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // Event listeners
+        document.getElementById('beta').addEventListener('input', updateSliderValues);
+        document.getElementById('gamma').addEventListener('input', updateSliderValues);
+        document.getElementById('vaccination').addEventListener('input', updateSliderValues);
+
+        // Initialize on load
+        window.onload = initCharts;
+    </script>
+</body>
+
+</html>
