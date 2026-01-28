@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenPack - Tối Ưu Hóa Bao Bì</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --primary: #15803d;
+            /* Green 700 */
+            --accent: #a3e635;
+            /* Lime 400 */
+            --bg: #f0fdf4;
+            /* Green 50 */
+            --card: #ffffff;
+            --text: #14532d;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: 800;
+            font-size: 1.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            flex: 1;
+            display: grid;
+            grid-template-columns: 350px 1fr;
+            max-width: 1200px;
+            margin: 30px auto;
+            width: 95%;
+            gap: 30px;
+        }
+
+        .panel {
+            background: var(--card);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            color: var(--primary);
+            border-bottom: 2px solid #dcfce7;
+            padding-bottom: 10px;
+        }
+
+        .control-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #bbf7d0;
+            border-radius: 8px;
+            font-size: 1rem;
+            box-sizing: border-box;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: var(--primary);
+        }
+
+        .btn-opt {
+            width: 100%;
+            padding: 15px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-opt:hover {
+            background: #166534;
+            transform: translateY(-2px);
+        }
+
+        .viz-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+            background: #e2e8f0;
+            border-radius: 12px;
+            position: relative;
+            perspective: 1000px;
+            overflow: hidden;
+        }
+
+        /* 3D Cylinder Implementation using CSS */
+        .cylinder-wrapper {
+            position: relative;
+            transform-style: preserve-3d;
+            animation: rotate 10s infinite linear;
+            transition: all 1s ease;
+        }
+
+        .cylinder {
+            position: relative;
+            transform-style: preserve-3d;
+        }
+
+        .side {
+            position: absolute;
+            background: rgba(21, 128, 61, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            width: 100%;
+            height: 100%;
+            /* Approximating cylinder with multiple panels would be complex in pure CSS without JS generation */
+            /* Using a simpler visual representation: A div that looks like a cylinder */
+            border-radius: 5px;
+            /* Just a box for now, enhanced below */
+        }
+
+        /* Simplified 3D Shape for Visualization */
+        .shape-box {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(90deg, #4ade80, #22c55e, #16a34a);
+            border-radius: 50%;
+            /* Top/Bottom look */
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateX(90deg);
+        }
+
+        .shape-body {
+            width: 100px;
+            height: 200px;
+            background: linear-gradient(90deg, rgba(74, 222, 128, 0.8), rgba(34, 197, 94, 0.8), rgba(22, 163, 74, 0.8));
+            position: absolute;
+            top: 50px;
+            /* Offset by radius roughly */
+            left: 0;
+            transform-style: preserve-3d;
+            border-radius: 10px;
+            /* Make it look a bit rounded */
+            /* This is a "fake" 3D cylinder. For true 3D we need Canvas/WebGL, but let's try a clever CSS trick */
+        }
+
+        /* Better CSS 3D Cylinder */
+        .scene {
+            width: 200px;
+            height: 200px;
+            perspective: 1200px;
+        }
+
+        .cube {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transform: rotateX(-15deg) rotateY(30deg);
+            transition: transform 1s;
+        }
+
+        .cylinder-face {
+            position: absolute;
+            border: 2px solid var(--primary);
+            opacity: 0.7;
+            background: rgba(163, 230, 53, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--text);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .stat-card {
+            background: #f0fdf4;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #bbf7d0;
+        }
+
+        .stat-val {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotateY(0deg);
+            }
+
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>📦 GreenPack Optimizer</header>
+
+    <div class="container">
+        <div class="panel">
+            <h2>🛠️ Thông số thiết kế</h2>
+            <div class="control-group">
+                <label>Thể tích mục tiêu ($V$)</label>
+                <input type="number" id="volume" value="330" placeholder="ml (cm3)">
+            </div>
+            <div class="control-group">
+                <label>Hình dáng</label>
+                <select id="shape" disabled>
+                    <option value="cylinder">Hình trụ (Cylinder)</option>
+                    <option value="box">Hình hộp (Box) - Coming soon</option>
+                </select>
+            </div>
+            <button class="btn-opt" onclick="optimize()">🚀 TÌM KÍCH THƯỚC TỐI ƯU</button>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-val" id="opt_r">--</div>
+                    <div class="stat-label">Bán kính (r)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" id="opt_h">--</div>
+                    <div class="stat-label">Chiều cao (h)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" id="opt_s">--</div>
+                    <div class="stat-label">Diện tích ($S_{min}$)</div>
+                </div>
+            </div>
+
+            <div style="margin-top:20px; padding: 15px; background: #fffbeb; border-radius: 8px; font-size: 0.9rem;">
+                💡 <strong>Mẹo Toán học:</strong><br>
+                Với hình trụ, diện tích nhỏ nhất khi $h = 2r$ (Chiều cao = Đường kính).<br>
+                Lúc đó hình trụ ngoại tiếp một hình cầu.
+            </div>
+        </div>
+
+        <div class="panel" style="display: flex; flex-direction: column;">
+            <h2>🔍 Mô phỏng 3D</h2>
+            <div class="viz-container">
+                <div class="scene">
+                    <div class="cube" id="shape3d">
+                        <!-- Top Cap -->
+                        <div class="cylinder-face"
+                            style="width: 100px; height: 100px; border-radius: 50%; transform: rotateX(90deg) translateZ(50px); background: #4ade80;">
+                            Top</div>
+                        <!-- Bottom Cap -->
+                        <div class="cylinder-face"
+                            style="width: 100px; height: 100px; border-radius: 50%; transform: rotateX(-90deg) translateZ(50px); background: #22c55e;">
+                            Bot</div>
+                        <!-- Body (represented as a cross-plane for simplicity in pure CSS) -->
+                        <div class="cylinder-face"
+                            style="width: 100px; height: 100px; border: none; background: rgba(21, 128, 61, 0.4); transform: translateZ(0);">
+                            Mặt cắt
+                        </div>
+                    </div>
+                </div>
+                <div style="position: absolute; bottom: 10px; left: 10px; color: #64748b; font-size: 0.8rem;">
+                    *Mô hình minh họa tỷ lệ
+                </div>
+            </div>
+
+            <canvas id="costChart" style="max-height: 200px; margin-top: 20px;"></canvas>
+        </div>
+    </div>
+
+    <script>
+        function optimize() {
+            const V = parseFloat(document.getElementById('volume').value) || 330;
+
+            // Math: 2*pi*r^3 = V => r = cbrt(V / 2pi)
+            const r = Math.pow(V / (2 * Math.PI), 1 / 3);
+            const h = 2 * r;
+            const S = 2 * Math.PI * r * r + 2 * Math.PI * r * h;
+
+            // Display Stats
+            document.getElementById('opt_r').innerText = r.toFixed(2) + " cm";
+            document.getElementById('opt_h').innerText = h.toFixed(2) + " cm";
+            document.getElementById('opt_s').innerText = Math.round(S) + " cm²";
+
+            // Update 3D Visuals (Scale relative to 100px base)
+            // Let's assume standard r=3.5cm -> 50px radius. Scaling factor k ~ 14.
+            const k = 14;
+            const visualR = r * k;
+            const visualH = h * k;
+
+            const shape = document.getElementById('shape3d');
+            const top = shape.children[0];
+            const bot = shape.children[1];
+            const body = shape.children[2];
+
+            // Reset transform to apply new sizes
+            // CSS Cylinder Logic:
+            // Top/Bot width/height = 2*visualR
+            // TranslateZ for Top = visualH / 2
+            // TranslateZ for Bot = visualH / 2
+
+            const D = visualR * 2;
+
+            top.style.width = D + 'px';
+            top.style.height = D + 'px';
+            top.style.transform = `rotateX(90deg) translateZ(${visualH / 2}px)`;
+
+            bot.style.width = D + 'px';
+            bot.style.height = D + 'px';
+            bot.style.transform = `rotateX(-90deg) translateZ(${visualH / 2}px)`;
+
+            // Body Plane
+            body.style.width = D + 'px';
+            body.style.height = visualH + 'px';
+
+            // Update Chart
+            updateChart(S);
+        }
+
+        let myChart = null;
+        function updateChart(optimalS) {
+            // Compare with a real Coke can (330ml): r=3.3cm, h=11.5cm
+            const realR = 3.3;
+            const realH = 11.5;
+            const realS = 2 * Math.PI * realR * realR + 2 * Math.PI * realR * realH; // ~300
+
+            const ctx = document.getElementById('costChart').getContext('2d');
+            if (myChart) myChart.destroy();
+
+            myChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Tối ưu (Toán học)', 'Thực tế (Lon Coca)'],
+                    datasets: [{
+                        label: 'Diện tích bề mặt (cm²)',
+                        data: [optimalS, realS],
+                        backgroundColor: ['#4ade80', '#eab308'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    plugins: {
+                        title: { display: true, text: 'So sánh Tốn kém Nguyên liệu' }
+                    }
+                }
+            });
+        }
+
+        // Init
+        optimize();
+
+        // Add simple rotation animation via JS
+        let angle = 0;
+        const box = document.getElementById('shape3d');
+        function animate() {
+            angle += 0.5;
+            box.style.transform = `rotateX(-10deg) rotateY(${angle}deg)`;
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+    </script>
+
+</body>
+
+</html>

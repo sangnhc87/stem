@@ -1,0 +1,70 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PHIẾU HỌC TẬP: GREENPACK OPTIMIZATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\definecolor{ecogreen}{RGB}{34, 197, 94}
+
+\begin{document}
+
+\begin{center}
+    \begin{tikzpicture}
+        \node[draw=ecogreen, line width=2pt, rounded corners=10pt, inner sep=10pt] (box) {
+            \begin{minipage}{0.9\textwidth}
+                \centering
+                \bfseries\Large\color{ecogreen} PHIẾU KIỂM TOÁN BAO BÌ (PACKAGING AUDIT)
+            \end{minipage}
+        };
+    \end{tikzpicture}
+    \vspace{0.5cm}
+\end{center}
+
+\noindent \textbf{Nhóm thực hiện:} \dotfill \textbf{Lớp:} \dotfill
+
+\section*{\color{ecogreen} I. SỐ LIỆU THỰC TẾ (REALITY)}
+\textit{Chọn 1 lon nước ngọt (330ml) và đo đạc:}
+
+\begin{itemize}
+    \item \textbf{Sản phẩm:} .....................................................................
+    \item \textbf{Thể tích ghi trên vỏ ($V$):} ....................... ml ($\approx cm^3$)
+    \item \textbf{Bán kính đáy ($r$):} ....................... cm
+    \item \textbf{Chiều cao ($h$):} ....................... cm
+    \item \textbf{Diện tích toàn phần thực tế ($S_{tt}$):}
+    $$ S_{tt} = 2\pi r^2 + 2\pi rh = \dots\dots\dots\dots\dots\dots\dots\dots\dots \approx \dots\dots\dots (cm^2) $$
+\end{itemize}
+
+\section*{\color{ecogreen} II. TỐI ƯU HÓA TOÁN HỌC (OPTIMIZATION)}
+\textit{Giả sử muốn giữ nguyên $V$, tìm kích thước để diện tích nhỏ nhất.}
+
+\begin{itemize}
+    \item \textbf{Công thức tối ưu:} $h = 2r$.
+    \item \textbf{Bán kính tối ưu ($r_{min}$):}
+    $$ 2\pi r^3 = V \Rightarrow r_{min} = \sqrt[3]{\frac{V}{2\pi}} = \sqrt[3]{\frac{\dots\dots}{2\pi}} \approx \dots\dots\dots (cm) $$
+    \item \textbf{Chiều cao tối ưu ($h_{min}$):}
+    $$ h_{min} = 2 \times r_{min} \approx \dots\dots\dots (cm) $$
+    \item \textbf{Diện tích tối ưu ($S_{min}$):}
+    $$ S_{min} = 2\pi r_{min}^2 + 2\pi r_{min}h_{min} \approx \dots\dots\dots (cm^2) $$
+\end{itemize}
+
+\section*{\color{ecogreen} III. SO SÁNH & KẾT LUẬN}
+
+\textbf{1. Hiệu quả tiết kiệm:}
+$$ \% \text{Tiết kiệm} = \frac{S_{tt} - S_{min}}{S_{tt}} \times 100\% = \dots\dots\dots \% $$
+
+\textbf{2. Câu hỏi thảo luận:}
+Tại sao nhà sản xuất không chọn kích thước tối ưu ($h=2r$) dù tiết kiệm được nguyên liệu?
+.............................................................................................................
+.............................................................................................................
+.............................................................................................................
+
+\end{document}

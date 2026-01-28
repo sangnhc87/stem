@@ -1,0 +1,164 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GIÁO ÁN STEM: GREENPACK - TỐI ƯU HÓA BAO BÌ
+% Môn: Toán 12 | Chủ đề: Ứng dụng Đạo hàm & Giá trị nhỏ nhất
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+% ============= PACKAGES =============
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{array, booktabs, tabularx, colortbl}
+\usepackage{tikz}
+\usetikzlibrary{calc, 3d}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage[svgnames]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% ============= SETTINGS =============
+\geometry{left=2cm,right=2cm,top=2.5cm,bottom=2cm}
+\definecolor{ecogreen}{RGB}{34, 197, 94}   % Green 500
+\definecolor{ecodark}{RGB}{20, 83, 45}     % Green 900
+\definecolor{ecopaper}{RGB}{250, 240, 230} % Linen (Paper color)
+\definecolor{ecobrown}{RGB}{139, 69, 19}   % SaddleBrown
+
+\hypersetup{colorlinks=true, linkcolor=ecodark, urlcolor=ecobrown}
+
+% ============= BOX DEFINITIONS =============
+\newtcolorbox{sectionbox}[1]{
+    enhanced, breakable, colback=white, colframe=ecogreen, boxrule=1pt,
+    fonttitle=\bfseries\sffamily\Large, coltitle=white, colbacktitle=ecogreen,
+    title={#1},
+    shadow={2mm}{-1mm}{0mm}{black!20},
+    code={\phantomsection\addcontentsline{toc}{section}{#1}}
+}
+
+\newtcolorbox{activitybox}[1]{
+    enhanced, breakable, colback=white, colframe=ecobrown, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} [HOẠT ĐỘNG] #1},
+    colbacktitle=ecobrown
+}
+
+\newtcolorbox{mathbox}[1]{
+    enhanced, breakable, colback=ecopaper, colframe=ecodark, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} [TOÁN] BÀI TOÁN TỐI ƯU: #1},
+    colbacktitle=ecodark
+}
+
+% ============= HEADERS =============
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{ecodark}\textbf{DỰ ÁN STEM: GREENPACK}}
+\fancyhead[R]{\color{ecodark}\textbf{TOÁN HỌC \& MÔI TRƯỜNG}}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+% ========== TITLE PAGE ==========
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        \fill[ecogreen!20] (current page.north east) circle (15cm);
+        \node[anchor=north east, color=ecodark, font=\fontsize{50}{60}\sffamily\bfseries] at ($(current page.north east)+(-1,-3)$) {GREEN};
+        \node[anchor=north east, color=ecobrown, font=\fontsize{50}{60}\sffamily\bfseries] at ($(current page.north east)+(-1,-5)$) {PACK};
+    \end{tikzpicture}
+    
+    \vspace{8cm}
+    \begin{center}
+        {\Huge\bfseries\sffamily TỐI ƯU HÓA BAO BÌ SẢN PHẨM}\\[1cm]
+        {\Large\itshape\sffamily Ứng dụng Đạo hàm để Tiết kiệm Nguyên liệu \& Bảo vệ Môi trường}\\[3cm]
+        
+        \begin{tcolorbox}[width=0.8\textwidth, colback=ecopaper, colframe=ecogreen]
+            \centering \large
+            \begin{tabular}{rl}
+                \textbf{Môn học:} & Toán (Giải tích 12) \\
+                \textbf{Chủ đề:} & Ứng dụng Đạo hàm (GTLN-GTNN) \\
+                \textbf{Liên môn:} & Công nghệ, Môi trường \\
+                \textbf{Thời lượng:} & 2 tiết (90 phút)
+            \end{tabular}
+        \end{tcolorbox}
+        
+        \vfill
+        {\large TP. Hồ Chí Minh, Năm 2026}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ========== CONTENT ==========
+
+\begin{sectionbox}{I. TỔNG QUAN DỰ ÁN}
+\phantomsection\subsection*{1. Đặt vấn đề}\addcontentsline{toc}{subsection}{1. Đặt vấn đề}
+Mỗi năm, hàng tỷ vỏ lon, hộp giấy được sản xuất. Chỉ cần giảm 1\% diện tích bề mặt của mỗi vỏ lon, thế giới có thể tiết kiệm hàng ngàn tấn nhôm và giảm phát thải CO2 khổng lồ.
+
+\phantomsection\subsection*{2. Mục tiêu STEM}\addcontentsline{toc}{subsection}{2. Mục tiêu STEM}
+\begin{itemize}
+    \item \textbf{Toán học:} Vận dụng Đạo hàm để tìm kích thước tối ưu (diện tích nhỏ nhất) cho một thể tích cho trước.
+    \item \textbf{Công nghệ:} Sử dụng công cụ tính toán và mô phỏng 3D.
+    \item \textbf{Tư duy phản biện:} Tại sao thực tế lon nước ngọt không làm theo kích thước tối ưu Toán học?
+\end{itemize}
+\end{sectionbox}
+
+\begin{sectionbox}{II. TIẾN TRÌNH DẠY HỌC (5E)}
+
+\phantomsection\subsection*{1. ENGAGE (Gắn kết - 10p)}\addcontentsline{toc}{subsection}{1. ENGAGE (Gắn kết - 10p)}
+\begin{activitybox}{Thử thách Nhà thiết kế}
+GV đưa ra yêu cầu: "Công ty cần đóng gói 330ml nước ngọt. Hãy thiết kế hình dáng lon nước (hình trụ) sao cho tốn ít nhôm nhất."
+HS dự đoán: Nên làm lon cao gầy hay lon thấp béo?
+\end{activitybox}
+
+\phantomsection\subsection*{2. EXPLORE (Khám phá - 15p)}\addcontentsline{toc}{subsection}{2. EXPLORE (Khám phá - 15p)}
+\begin{activitybox}{Đo đạc thực tế}
+HS đo kích thước các lon nước có sẵn trên thị trường (Coca, Pepsi, Bia...):
+- Chiều cao $h$, Đường kính $d$.
+- Tính tỷ lệ $h/d$.
+- Tính diện tích toàn phần: $S_{tp} = 2\pi r^2 + 2\pi rh$.
+\end{activitybox}
+
+\phantomsection\subsection*{3. EXPLAIN (Giải thích - 25p)}\addcontentsline{toc}{subsection}{3. EXPLAIN (Giải thích - 25p)}
+\begin{mathbox}{Bài toán Tối ưu Hình trụ}
+Cho thể tích $V$ không đổi. Tìm $r, h$ để $S_{tp}$ nhỏ nhất.
+Ta có: $V = \pi r^2 h \Rightarrow h = \frac{V}{\pi r^2}$.
+Thay vào công thức diện tích:
+$$ S(r) = 2\pi r^2 + 2\pi r \left(\frac{V}{\pi r^2}\right) = 2\pi r^2 + \frac{2V}{r} $$
+Khảo sát hàm số $S(r)$ trên $(0, +\infty)$:
+$$ S'(r) = 4\pi r - \frac{2V}{r^2} $$
+$$ S'(r) = 0 \Leftrightarrow 4\pi r^3 = 2V \Leftrightarrow 2\pi r^3 = \pi r^2 h \Leftrightarrow 2r = h $$
+\textbf{Kết luận:} Để tiết kiệm nguyên liệu nhất, chiều cao phải bằng đường kính đáy ($h=d$) (Hình trụ vuông).
+\end{mathbox}
+
+\phantomsection\subsection*{4. ELABORATE (Áp dụng - 25p)}\addcontentsline{toc}{subsection}{4. ELABORATE (Áp dụng - 25p)}
+\begin{activitybox}{GreenPack App & Phản biện}
+1. Truy cập App: \href{https://stem-1h8.pages.dev/greenpack.html}{\texttt{stem-1h8.pages.dev/greenpack.html}}
+2. Nhập $V=330$ml. App sẽ tính ra $h=2r$ tối ưu.
+3. \textbf{Thảo luận:} Tại sao lon Coca thực tế lại thon dài ($h > 2r$) mà không làm hình trụ vuông ($h=2r$) dù tốn nhôm hơn?
+   - Cầm nắm dễ hơn?
+   - Xếp chồng tốt hơn?
+   - Hiệu ứng thị giác (cao trông to hơn)?
+\end{activitybox}
+
+\phantomsection\subsection*{5. EVALUATE (Đánh giá - 15p)}\addcontentsline{toc}{subsection}{5. EVALUATE (Đánh giá - 15p)}
+HS nộp Phiếu học tập so sánh giữa:
+- Phương án Tối ưu Toán học (Tiết kiệm nhất).
+- Phương án Tối ưu Thực tế (Cân bằng giữa chi phí và trải nghiệm người dùng).
+\end{sectionbox}
+
+\newpage
+\begin{sectionbox}{III. PHỤ LỤC}
+\phantomsection\subsection*{Phụ lục 1: Các dạng hình học khác}\addcontentsline{toc}{subsection}{Phụ lục 1: Các dạng hình học khác}
+- \textbf{Hình cầu:} Là hình có diện tích bề mặt nhỏ nhất cho mọi thể tích. (Tại sao không dùng lon hình cầu? $\to$ Không xếp chồng được, dễ lăn).
+- \textbf{Hình hộp chữ nhật:} Tối ưu khi là hình lập phương.
+
+\phantomsection\subsection*{Phụ lục 2: Phiếu Thiết kế}\addcontentsline{toc}{subsection}{Phụ lục 2: Phiếu Thiết kế}
+(Đính kèm file PDF riêng)
+\end{sectionbox}
+
+\end{document}
