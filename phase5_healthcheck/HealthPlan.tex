@@ -1,0 +1,188 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GIÁO ÁN STEM: HEALTHCHECK - THEO DÕI SỨC KHỎE HỌC ĐƯỜNG
+% Môn: Toán 10/11 | Chủ đề: Thống kê & Công thức
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+% ============= PACKAGES =============
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{array, booktabs, tabularx, colortbl}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage[svgnames]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+% ============= SETTINGS =============
+\geometry{left=2cm,right=2cm,top=2.5cm,bottom=2cm}
+\definecolor{medblue}{RGB}{2, 132, 199}   % Medical Blue
+\definecolor{medred}{RGB}{220, 38, 38}    % Alert Red
+\definecolor{medbg}{RGB}{240, 249, 255}   % Light Blue BG
+
+\hypersetup{colorlinks=true, linkcolor=medblue, urlcolor=medred}
+
+% ============= BOX DEFINITIONS =============
+\newtcolorbox{sectionbox}[1]{
+    enhanced, breakable, colback=white, colframe=medblue, boxrule=1pt,
+    fonttitle=\bfseries\sffamily\Large, coltitle=white, colbacktitle=medblue,
+    title={#1},
+    shadow={2mm}{-1mm}{0mm}{black!20},
+    code={\phantomsection\addcontentsline{toc}{section}{#1}}
+}
+
+\newtcolorbox{activitybox}[1]{
+    enhanced, breakable, colback=white, colframe=medred, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} [HOẠT ĐỘNG] #1},
+    colbacktitle=medred
+}
+
+\newtcolorbox{mathbox}[1]{
+    enhanced, breakable, colback=medbg, colframe=medblue, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} [TOÁN] KIẾN THỨC NỀN: #1},
+    colbacktitle=medblue
+}
+
+% ============= HEADERS =============
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{medblue}\textbf{DỰ ÁN STEM: HEALTHCHECK}}
+\fancyhead[R]{\color{medblue}\textbf{TOÁN HỌC & SỨC KHỎE}}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+% ========== TITLE PAGE ==========
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        \fill[medblue] (current page.west) rectangle ($(current page.west)+(2,0)$);
+        \node[anchor=north west, color=medblue, font=\fontsize{60}{70}\sffamily\bfseries] at (3,-3) {HEALTH};
+        \node[anchor=north west, color=medred, font=\fontsize{60}{70}\sffamily\bfseries] at (3,-5.5) {CHECK};
+    \end{tikzpicture}
+    
+    \vspace{8cm}
+    \begin{center}
+        {\Huge\bfseries CÔNG CỤ THEO DÕI SỨC KHỎE HỌC ĐƯỜNG}\\[1cm]
+        {\Large\itshape Ứng dụng Thống kê và Công thức Toán học trong Y tế dự phòng}\\[3cm]
+        
+        \begin{tcolorbox}[width=0.8\textwidth, colback=medbg, colframe=medblue]
+            \centering \large
+            \begin{tabular}{rl}
+                \textbf{Môn học:} & Toán (Thống kê, Đại số) \\
+                \textbf{Liên môn:} & Sinh học, Thể dục, Tin học \\
+                \textbf{Đối tượng:} & Học sinh THPT (Lớp 10-11) \\
+                \textbf{Thời lượng:} & 90 phút (2 tiết)
+            \end{tabular}
+        \end{tcolorbox}
+        
+        \vfill
+        {\large TP. Hồ Chí Minh, Năm 2026}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ========== CONTENT ==========
+
+\begin{sectionbox}{I. TỔNG QUAN DỰ ÁN}
+\subsection*{1. Đặt vấn đề}
+Tình trạng béo phì hoặc suy dinh dưỡng học đường đang gia tăng. Học sinh thường không nắm rõ các chỉ số cơ thể chuẩn và nhu cầu năng lượng (Calo) cần thiết.
+
+\subsection*{2. Giải pháp STEM}
+Xây dựng bộ công cụ \textbf{HealthCheck} giúp học sinh:
+\begin{itemize}
+    \item Tự đo lường và tính toán chỉ số BMI, BMR.
+    \item Sử dụng Toán học để hiểu ý nghĩa các con số này.
+    \item Ứng dụng Web App để theo dõi và nhận lời khuyên sức khỏe.
+\end{itemize}
+
+\subsection*{3. Chuẩn kiến thức}
+\begin{itemize}
+    \item \textbf{Toán học:} Tính giá trị biểu thức, làm tròn số, thống kê mô tả (trung bình, mốt), vẽ biểu đồ.
+    \item \textbf{Sinh học:} Trao đổi chất, nhu cầu dinh dưỡng.
+    \item \textbf{Công nghệ:} Sử dụng phần mềm tính toán.
+\end{itemize}
+\end{sectionbox}
+
+\begin{sectionbox}{II. TIẾN TRÌNH DẠY HỌC (5E)}
+
+\subsection*{1. ENGAGE (Gắn kết - 10p)}
+\begin{activitybox}{Bạn có đang "khỏe" không?}
+GV đặt câu hỏi: "Hai bạn cùng cao 1m70, một bạn nặng 60kg, một bạn 80kg. Ai khỏe hơn?"
+Dẫn dắt vào khái niệm: Cân nặng không nói lên tất cả, cần tỷ lệ giữa Chiều cao và Cân nặng.
+\end{activitybox}
+
+\subsection*{2. EXPLORE (Khám phá - 20p)}
+\begin{activitybox}{Trạm Y tế Lớp học}
+Học sinh thực hành đo các chỉ số cơ thể bằng dụng cụ (cân, thước dây) và điền vào \textbf{Phiếu học tập}.
+\begin{itemize}
+    \item Chiều cao ($h$ - mét)
+    \item Cân nặng ($w$ - kg)
+    \item Vòng eo ($waist$ - cm)
+    \item Nhịp tim nghỉ ngơi.
+\end{itemize}
+\end{activitybox}
+
+\subsection*{3. EXPLAIN (Giải thích - 20p)}
+\begin{mathbox}{Các công thức Y học}
+\textbf{1. Chỉ số Khối cơ thể (BMI):}
+$$ BMI = \frac{w}{h^2} \quad (kg/m^2) $$
+Phân loại (WHO cho người châu Á):
+- $< 18.5$: Nhẹ cân
+- $18.5 - 22.9$: Bình thường
+- $\ge 23$: Thừa cân
+
+\textbf{2. Chỉ số Trao đổi chất cơ bản (BMR) - Công thức Mifflin-St Jeor:}
+$$ BMR = 10w + 6.25h_{cm} - 5a + s $$
+Trong đó: $w$ (kg), $h_{cm}$ (cm), $a$ (tuổi), $s$ (+5 cho nam, -161 cho nữ). 
+\end{mathbox}
+
+\subsection*{4. ELABORATE (Áp dụng - 25p)}
+\begin{activitybox}{HealthCheck App}
+Học sinh truy cập: \href{https://stem-1h8.pages.dev/health.html}{\texttt{stem-1h8.pages.dev/health.html}}
+\begin{enumerate}
+    \item Nhập số liệu cá nhân vào App.
+    \item Xem kết quả phân tích tự động.
+    \item \textbf{Bài toán thực tế:} "Nếu muốn giảm 1kg mỡ (7700 Calo) trong 1 tháng, mỗi ngày cần thâm hụt bao nhiêu Calo?"
+    \item Sử dụng App để tính TDEE (Tổng năng lượng tiêu thụ) và lập kế hoạch ăn uống.
+\end{enumerate}
+\end{activitybox}
+
+\subsection*{5. EVALUATE (Đánh giá - 15p)}
+GV thu phiếu học tập và tổng hợp thống kê cả lớp:
+- Bao nhiêu \% học sinh đạt chuẩn?
+- Chiều cao trung bình của lớp là bao nhiêu?
+\end{sectionbox}
+
+\newpage
+\begin{sectionbox}{III. PHỤ LỤC}
+\phantomsection\subsection*{Phụ lục 1: Tiêu chuẩn BMI Châu Á}\addcontentsline{toc}{subsection}{Phụ lục 1: Tiêu chuẩn BMI}
+\begin{center}
+\begin{tabular}{|l|c|l|}
+\hline
+\textbf{Phân loại} & \textbf{BMI ($kg/m^2$)} & \textbf{Nguy cơ bệnh} \\
+\hline
+Cân nặng thấp & $< 18.5$ & Thấp (nhưng nguy cơ bệnh khác) \\
+Bình thường & $18.5 - 22.9$ & Trung bình \\
+Thừa cân & $\ge 23$ & Tăng nhẹ \\
+Tiền béo phì & $23 - 24.9$ & Tăng \\
+Béo phì độ I & $25 - 29.9$ & Cao \\
+Béo phì độ II & $\ge 30$ & Rất cao \\
+\hline
+\end{tabular}
+\end{center}
+
+\phantomsection\subsection*{Phụ lục 2: Phiếu theo dõi mẫu}\addcontentsline{toc}{subsection}{Phụ lục 2: Phiếu theo dõi mẫu}
+(Đính kèm file PDF Phiếu học tập riêng)
+\end{sectionbox}
+
+\end{document}

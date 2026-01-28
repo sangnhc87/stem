@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartLogi - Tối Ưu Hóa Vận Tải | STEM Toán Học Kinh Doanh</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0066cc;
+            --secondary: #3f37c9;
+            --accent: #ff4500;
+            --success: #28a745;
+            --warning: #f39c12;
+            --dark: #1d3557;
+            --light: #f8f9fa;
+            --gray: #6c757d;
+            --card-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4edf5 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(120deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            border-radius: 0 0 20px 20px;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .tagline {
+            background: rgba(255, 255, 255, 0.15);
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-top: 10px;
+        }
+
+        /* Tabs */
+        .tabs-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .tabs {
+            display: flex;
+            background: white;
+            border-radius: 15px;
+            padding: 5px;
+            box-shadow: var(--card-shadow);
+            max-width: 700px;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 15px 20px;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 10px;
+            transition: all 0.3s;
+            color: var(--gray);
+        }
+
+        .tab:hover {
+            color: var(--primary);
+        }
+
+        .tab.active {
+            color: white;
+            background: var(--primary);
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.4);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            padding: 25px;
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: var(--primary);
+        }
+
+        .card-title {
+            font-family: 'Poppins', sans-serif;
+            color: var(--dark);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 102, 204, 0.2);
+        }
+
+        /* Inputs */
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid rgba(0, 102, 204, 0.2);
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.2);
+        }
+
+        /* Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 400px 1fr;
+            gap: 25px;
+        }
+
+        @media (max-width: 1000px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Results */
+        .result-box {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.1) 0%, rgba(40, 167, 69, 0.1) 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .result-value {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin: 10px 0;
+        }
+
+        .highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #218838;
+        }
+
+        .btn-danger {
+            background: #dc3545;
+            color: white;
+        }
+
+        .btn-danger:hover {
+            background: #c82333;
+        }
+
+        /* Chart */
+        .chart-container {
+            height: 450px;
+            position: relative;
+        }
+
+        /* Scenario Cards */
+        .scenario-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .scenario-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            border: 2px solid rgba(0, 102, 204, 0.1);
+        }
+
+        .scenario-header {
+            background: linear-gradient(120deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .scenario-content {
+            padding: 20px;
+        }
+
+        .scenario-param {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .scenario-result {
+            text-align: center;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 2px solid rgba(0, 102, 204, 0.2);
+        }
+
+        .scenario-amount {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        /* Learning Section */
+        .learning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .learning-card {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.05) 0%, rgba(40, 167, 69, 0.05) 100%);
+            border-radius: 15px;
+            padding: 20px;
+            border-left: 4px solid var(--primary);
+        }
+
+        .learning-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 15px;
+        }
+
+        .formula {
+            background: rgba(0, 102, 204, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            color: var(--gray);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1>🚚 SmartLogi - Tối Ưu Hóa Vận Tải</h1>
+            <p class="subtitle">Ứng dụng Hệ bất phương trình và Quy hoạch tuyến tính</p>
+            <div class="tagline"><i class="fas fa-graduation-cap"></i> Dự án STEM - Môn Toán Lớp 10</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="tabs-container">
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab(0)"><i class="fas fa-calculator"></i> Tính Toán</div>
+                <div class="tab" onclick="switchTab(1)"><i class="fas fa-chart-bar"></i> Phân Tích Kịch Bản</div>
+                <div class="tab" onclick="switchTab(2)"><i class="fas fa-book"></i> Học Tập</div>
+            </div>
+        </div>
+
+        <!-- TAB 1: Tính Toán -->
+        <div class="tab-content active" id="tab1">
+            <div class="main-grid">
+                <div>
+                    <div class="card">
+                        <h2 class="card-title"><i class="fas fa-truck" style="color:var(--primary)"></i> Thông Số Xe
+                        </h2>
+
+                        <h4 style="color:var(--primary);margin-bottom:10px">🚛 Xe Loại A (Xe tải)</h4>
+                        <div class="input-group">
+                            <label class="input-label">Tải trọng (Tấn):</label>
+                            <input type="number" id="a_load" value="3" onchange="calculate()">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Thể tích (m³):</label>
+                            <input type="number" id="a_vol" value="3" onchange="calculate()">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Giá thuê (Triệu/chuyến):</label>
+                            <input type="number" id="a_cost" value="4" step="0.5" onchange="calculate()">
+                        </div>
+
+                        <hr style="margin:15px 0;border:none;border-top:1px dashed #ddd">
+
+                        <h4 style="color:var(--warning);margin-bottom:10px">🚐 Xe Loại B (Xe van)</h4>
+                        <div class="input-group">
+                            <label class="input-label">Tải trọng (Tấn):</label>
+                            <input type="number" id="b_load" value="1" onchange="calculate()">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Thể tích (m³):</label>
+                            <input type="number" id="b_vol" value="6" onchange="calculate()">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Giá thuê (Triệu/chuyến):</label>
+                            <input type="number" id="b_cost" value="3" step="0.5" onchange="calculate()">
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <h2 class="card-title"><i class="fas fa-box" style="color:var(--success)"></i> Yêu Cầu Vận
+                            Chuyển</h2>
+                        <div class="input-group">
+                            <label class="input-label">Tổng tải trọng cần chở (Tấn):</label>
+                            <input type="number" id="min_load" value="9" onchange="calculate()">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Tổng thể tích cần chở (m³):</label>
+                            <input type="number" id="min_vol" value="36" onchange="calculate()">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Giới hạn số Xe A (max):</label>
+                            <input type="number" id="max_a" value="10" onchange="calculate()">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Giới hạn số Xe B (max):</label>
+                            <input type="number" id="max_b" value="9" onchange="calculate()">
+                        </div>
+
+                        <button class="btn btn-primary" style="width:100%;margin-top:10px" onclick="calculate()">
+                            <i class="fas fa-search"></i> TÌM PHƯƠNG ÁN TỐI ƯU
+                        </button>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="card">
+                        <h2 class="card-title"><i class="fas fa-chart-area" style="color:var(--accent)"></i> Biểu Đồ
+                            Miền Nghiệm</h2>
+                        <div class="chart-container">
+                            <canvas id="mainChart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="result-box" id="resultBox">
+                        <h3><i class="fas fa-trophy" style="color:gold"></i> Kết Quả Tối Ưu</h3>
+                        <div id="resultContent">Nhấn "Tìm phương án tối ưu" để xem kết quả</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 2: Phân Tích Kịch Bản -->
+        <div class="tab-content" id="tab2">
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-layer-group" style="color:var(--primary)"></i> So Sánh Các Kịch
+                    Bản</h2>
+                <button class="btn btn-success" onclick="addScenario()"><i class="fas fa-plus"></i> Thêm Kịch
+                    Bản</button>
+                <button class="btn btn-danger" onclick="clearScenarios()"><i class="fas fa-trash"></i> Xóa Tất
+                    Cả</button>
+
+                <div class="scenario-grid" id="scenarioGrid"></div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-chart-bar" style="color:var(--warning)"></i> Biểu Đồ So Sánh Chi
+                    Phí</h2>
+                <div class="chart-container" style="height:350px">
+                    <canvas id="compareChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title"><i class="fas fa-chart-line" style="color:var(--success)"></i> Phân Tích Độ Nhạy
+                </h2>
+                <p style="color:var(--gray);margin-bottom:15px">Đồ thị cho thấy chi phí thay đổi như thế nào khi điều
+                    chỉnh từng yếu tố</p>
+                <div class="chart-container" style="height:350px">
+                    <canvas id="sensitivityChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: Học Tập -->
+        <div class="tab-content" id="tab3">
+            <div class="learning-grid">
+                <div class="learning-card">
+                    <h3 class="learning-title"><i class="fas fa-square-root-alt" style="color:var(--primary)"></i> Công
+                        Thức Toán Học</h3>
+                    <div class="formula">
+                        Hàm mục tiêu: C = a₁x + a₂y → min
+                    </div>
+                    <p style="margin-top:10px"><strong>Các ràng buộc:</strong></p>
+                    <ul style="margin-left:20px;margin-top:10px">
+                        <li>Tải trọng: b₁x + b₂y ≥ T (tấn)</li>
+                        <li>Thể tích: c₁x + c₂y ≥ V (m³)</li>
+                        <li>Giới hạn: 0 ≤ x ≤ M₁, 0 ≤ y ≤ M₂</li>
+                    </ul>
+                    <div class="formula" style="background:rgba(255,69,0,0.1)">
+                        <strong>Định lý:</strong> Giá trị tối ưu đạt tại đỉnh của đa giác miền nghiệm
+                    </div>
+                </div>
+
+                <div class="learning-card">
+                    <h3 class="learning-title"><i class="fas fa-truck-loading" style="color:var(--warning)"></i> Kiến
+                        Thức Logistics</h3>
+                    <p><strong>Logistics là gì?</strong></p>
+                    <p style="margin-top:10px">Logistics là quá trình lập kế hoạch, thực hiện và kiểm soát hiệu quả dòng
+                        chảy và lưu trữ hàng hóa từ điểm xuất phát đến điểm tiêu thụ.</p>
+                    <p style="margin-top:15px"><strong>Các thuật ngữ quan trọng:</strong></p>
+                    <ul style="margin-left:20px;margin-top:10px">
+                        <li><strong>Last-mile delivery:</strong> Chặng giao hàng cuối cùng đến tay khách</li>
+                        <li><strong>Supply chain:</strong> Chuỗi cung ứng</li>
+                        <li><strong>Fleet management:</strong> Quản lý đội xe</li>
+                        <li><strong>Route optimization:</strong> Tối ưu hóa lộ trình</li>
+                    </ul>
+                </div>
+
+                <div class="learning-card">
+                    <h3 class="learning-title"><i class="fas fa-cogs" style="color:var(--success)"></i> Quy Trình STEM
+                    </h3>
+                    <p><strong>S</strong>cience - Khoa học: Phân tích dữ liệu vận chuyển</p>
+                    <p style="margin-top:8px"><strong>T</strong>echnology - Công nghệ: Ứng dụng web SmartLogi</p>
+                    <p style="margin-top:8px"><strong>E</strong>ngineering - Kỹ thuật: Thiết kế thuật toán tối ưu</p>
+                    <p style="margin-top:8px"><strong>M</strong>athematics - Toán học: Hệ BPT, Quy hoạch tuyến tính</p>
+                    <div class="formula" style="background:rgba(40,167,69,0.1);margin-top:15px">
+                        🎯 Mục tiêu: Giải quyết bài toán kinh doanh thực tế bằng Toán học
+                    </div>
+                </div>
+
+                <div class="learning-card">
+                    <h3 class="learning-title"><i class="fas fa-lightbulb" style="color:var(--accent)"></i> Ứng Dụng
+                        Thực Tế</h3>
+                    <p><strong>Các lĩnh vực áp dụng:</strong></p>
+                    <ul style="margin-left:20px;margin-top:10px">
+                        <li>🛒 Thương mại điện tử (Shopee, Lazada)</li>
+                        <li>🍔 Giao đồ ăn (GrabFood, ShopeeFood)</li>
+                        <li>🏭 Nhà máy sản xuất</li>
+                        <li>✈️ Vận tải hàng không, đường biển</li>
+                        <li>🏥 Phân phối thuốc, vaccine</li>
+                    </ul>
+                    <p style="margin-top:15px;font-style:italic;color:var(--gray)">
+                        "Tối ưu hóa 1% chi phí logistics có thể tiết kiệm hàng tỷ đồng cho doanh nghiệp lớn"
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>SmartLogi</strong> - Dự án STEM Toán Học Lớp 10</p>
+            <p>Giáo viên: Nguyễn Văn Sang | Trường THPT Nguyễn Hữu Cảnh</p>
+        </div>
+    </div>
+
+    <script>
+        let mainChart = null;
+        let compareChart = null;
+        let sensitivityChart = null;
+        let scenarios = [];
+
+        function switchTab(index) {
+            document.querySelectorAll('.tab').forEach((t, i) => t.classList.toggle('active', i === index));
+            document.querySelectorAll('.tab-content').forEach((c, i) => c.classList.toggle('active', i === index));
+            if (index === 1) updateScenarioCharts();
+        }
+
+        function getInputs() {
+            return {
+                a_load: parseFloat(document.getElementById('a_load').value) || 3,
+                a_vol: parseFloat(document.getElementById('a_vol').value) || 3,
+                a_cost: parseFloat(document.getElementById('a_cost').value) || 4,
+                b_load: parseFloat(document.getElementById('b_load').value) || 1,
+                b_vol: parseFloat(document.getElementById('b_vol').value) || 6,
+                b_cost: parseFloat(document.getElementById('b_cost').value) || 3,
+                min_load: parseFloat(document.getElementById('min_load').value) || 9,
+                min_vol: parseFloat(document.getElementById('min_vol').value) || 36,
+                max_a: parseInt(document.getElementById('max_a').value) || 10,
+                max_b: parseInt(document.getElementById('max_b').value) || 9
+            };
+        }
+
+        function findOptimal(params) {
+            const { a_load, a_vol, a_cost, b_load, b_vol, b_cost, min_load, min_vol, max_a, max_b } = params;
+            let minCost = Infinity, optimal = null;
+            const feasible = [], infeasible = [];
+
+            for (let x = 0; x <= max_a + 1; x++) {
+                for (let y = 0; y <= max_b + 1; y++) {
+                    const load = a_load * x + b_load * y;
+                    const vol = a_vol * x + b_vol * y;
+                    const cost = a_cost * x + b_cost * y;
+                    const isFeasible = load >= min_load && vol >= min_vol && x <= max_a && y <= max_b;
+                    const point = { x, y, cost, load, vol, feasible: isFeasible };
+
+                    if (x <= max_a && y <= max_b) {
+                        if (isFeasible) {
+                            feasible.push(point);
+                            if (cost < minCost) { minCost = cost; optimal = point; }
+                        } else {
+                            infeasible.push(point);
+                        }
+                    }
+                }
+            }
+            return { optimal, feasible, infeasible };
+        }
+
+        function calculate() {
+            const params = getInputs();
+            const { optimal, feasible, infeasible } = findOptimal(params);
+
+            // Update result
+            const resultDiv = document.getElementById('resultContent');
+            if (optimal) {
+                resultDiv.innerHTML = `
+                <div class="result-value">${optimal.x} Xe A + ${optimal.y} Xe B</div>
+                <p style="font-size:1.3rem">💰 Chi phí: <span class="highlight">${optimal.cost} Triệu VNĐ</span></p>
+                <p style="margin-top:10px;color:var(--gray)">
+                    📦 Tải: ${optimal.load} tấn (yêu cầu ${params.min_load}) | 
+                    📐 Thể tích: ${optimal.vol} m³ (yêu cầu ${params.min_vol})
+                </p>
+            `;
+            } else {
+                resultDiv.innerHTML = `<p style="color:red;font-weight:bold">❌ Không tìm được phương án thỏa mãn!</p>`;
+            }
+
+            // Draw chart
+            drawMainChart(feasible, infeasible, optimal, params);
+        }
+
+        function drawMainChart(feasible, infeasible, optimal, params) {
+            const ctx = document.getElementById('mainChart').getContext('2d');
+            if (mainChart) mainChart.destroy();
+
+            const datasets = [
+                { label: 'Không đạt yêu cầu', data: infeasible, backgroundColor: 'rgba(255,99,132,0.4)', pointRadius: 5 },
+                { label: 'Phương án khả thi', data: feasible.filter(p => p !== optimal), backgroundColor: 'rgba(75,192,192,0.6)', pointRadius: 7 }
+            ];
+            if (optimal) {
+                datasets.push({ label: 'TỐI ƯU (Chi phí thấp nhất)', data: [optimal], backgroundColor: '#FFD700', borderColor: '#FF4500', pointRadius: 15, pointStyle: 'star', borderWidth: 2 });
+            }
+
+            mainChart = new Chart(ctx, {
+                type: 'scatter',
+                data: { datasets },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    scales: {
+                        x: { title: { display: true, text: 'Số Xe A (x)', font: { size: 14, weight: 'bold' } }, min: 0, max: params.max_a + 2, ticks: { stepSize: 1 } },
+                        y: { title: { display: true, text: 'Số Xe B (y)', font: { size: 14, weight: 'bold' } }, min: 0, max: params.max_b + 2, ticks: { stepSize: 1 } }
+                    },
+                    plugins: {
+                        title: { display: true, text: 'Miền Nghiệm (Feasible Region)', font: { size: 18 } },
+                        tooltip: { callbacks: { label: ctx => `(${ctx.raw.x}, ${ctx.raw.y}) => ${ctx.raw.cost} Triệu` } }
+                    }
+                }
+            });
+        }
+
+        function addScenario() {
+            const params = getInputs();
+            const { optimal } = findOptimal(params);
+            if (!optimal) { Swal.fire('Lỗi', 'Phương án hiện tại không khả thi', 'error'); return; }
+
+            scenarios.push({
+                name: `Kịch bản ${scenarios.length + 1}`,
+                params: { ...params },
+                optimal: { ...optimal }
+            });
+            renderScenarios();
+            updateScenarioCharts();
+        }
+
+        function clearScenarios() {
+            scenarios = [];
+            renderScenarios();
+            updateScenarioCharts();
+        }
+
+        function renderScenarios() {
+            const grid = document.getElementById('scenarioGrid');
+            grid.innerHTML = scenarios.map((s, i) => `
+            <div class="scenario-card">
+                <div class="scenario-header">
+                    <h3>${s.name}</h3>
+                </div>
+                <div class="scenario-content">
+                    <div class="scenario-param"><span>Xe A (Giá):</span><span>${s.params.a_cost} Tr</span></div>
+                    <div class="scenario-param"><span>Xe B (Giá):</span><span>${s.params.b_cost} Tr</span></div>
+                    <div class="scenario-param"><span>Yêu cầu Tải:</span><span>${s.params.min_load} Tấn</span></div>
+                    <div class="scenario-param"><span>Yêu cầu Thể tích:</span><span>${s.params.min_vol} m³</span></div>
+                    <div class="scenario-result">
+                        <p>Phương án: ${s.optimal.x} Xe A + ${s.optimal.y} Xe B</p>
+                        <div class="scenario-amount">${s.optimal.cost} Triệu</div>
+                    </div>
+                </div>
+            </div>
+        `).join('');
+        }
+
+        function updateScenarioCharts() {
+            // Compare Chart
+            const ctx1 = document.getElementById('compareChart').getContext('2d');
+            if (compareChart) compareChart.destroy();
+
+            compareChart = new Chart(ctx1, {
+                type: 'bar',
+                data: {
+                    labels: scenarios.map(s => s.name),
+                    datasets: [{ label: 'Chi phí (Triệu VNĐ)', data: scenarios.map(s => s.optimal.cost), backgroundColor: scenarios.map((_, i) => `hsl(${i * 60}, 70%, 60%)`) }]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: 'So Sánh Chi Phí Các Kịch Bản' } } }
+            });
+
+            // Sensitivity Chart
+            const ctx2 = document.getElementById('sensitivityChart').getContext('2d');
+            if (sensitivityChart) sensitivityChart.destroy();
+
+            const baseParams = getInputs();
+            const variations = [-20, -10, 0, 10, 20];
+            const costAData = variations.map(v => {
+                const p = { ...baseParams, a_cost: baseParams.a_cost * (1 + v / 100) };
+                const { optimal } = findOptimal(p);
+                return optimal ? optimal.cost : null;
+            });
+            const costBData = variations.map(v => {
+                const p = { ...baseParams, b_cost: baseParams.b_cost * (1 + v / 100) };
+                const { optimal } = findOptimal(p);
+                return optimal ? optimal.cost : null;
+            });
+
+            sensitivityChart = new Chart(ctx2, {
+                type: 'line',
+                data: {
+                    labels: variations.map(v => `${v >= 0 ? '+' : ''}${v}%`),
+                    datasets: [
+                        { label: 'Thay đổi giá Xe A', data: costAData, borderColor: '#3498db', tension: 0.3, fill: false },
+                        { label: 'Thay đổi giá Xe B', data: costBData, borderColor: '#e67e22', tension: 0.3, fill: false }
+                    ]
+                },
+                options: { responsive: true, maintainAspectRatio: false, plugins: { title: { display: true, text: 'Phân Tích Độ Nhạy: Chi phí thay đổi theo giá thuê xe' } } }
+            });
+        }
+
+        // Initialize
+        window.onload = function () {
+            calculate();
+            addScenario(); // Add default scenario
+        };
+    </script>
+</body>
+
+</html>

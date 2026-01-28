@@ -1,0 +1,807 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GIÁO ÁN STEM GIAI ĐOẠN 2: SMARTLOGI - TỐI ƯU HÓA VẬN TẢI
+% Phiên bản đầy đủ - Tương thích với stem.tex Giai đoạn 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+% --- 1. GÓI CƠ BẢN ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,patterns,calc}
+\usepackage{fontawesome5}
+\usepackage{verbatim}
+\usepackage{colortbl}
+
+% --- 2. FONT ---
+\usepackage{newtxtext, newtxmath}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{courier}
+\usepackage{microtype}
+
+% --- 3. MÀU SẮC ---
+\usepackage[svgnames]{xcolor}
+\definecolor{primary}{RGB}{0,102,204}
+\definecolor{secondary}{RGB}{80,80,80}
+\definecolor{accent}{RGB}{255,69,0}
+\definecolor{success}{RGB}{34,139,34}
+\definecolor{warning}{RGB}{255,140,0}
+\definecolor{TableHeader}{gray}{0.9}
+
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2cm,headheight=15.6pt]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrule}{\color{primary}\hrule width\textwidth height 1.5pt}
+\fancyhead[L]{\color{primary}\footnotesize\sffamily\textbf{SỞ GD\&ĐT TP.HCM - HỘI THI STEM/STEAM CẤP THÀNH PHỐ}}
+\fancyhead[R]{\color{primary}\footnotesize\sffamily\textbf{NĂM HỌC 2025-2026}}
+\fancyfoot[C]{\sffamily\thepage}
+\renewcommand{\footrule}{\color{primary}\hrule width\textwidth height 0.8pt}
+
+% --- 4. GÓI HỖ TRỢ ---
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage[colorlinks=true,linkcolor=primary,urlcolor=accent,citecolor=success,
+    pdftitle={Giao an STEM: SmartLogi Logistics},pdfauthor={Nguyen Van Sang}]{hyperref}
+
+% --- 5. TIÊU ĐỀ ---
+\usepackage{titlesec}
+\titleformat{\subsection}{\normalfont\bfseries\color{accent}\sffamily}
+{\llap{\color{accent}\rule{1.2em}{1.2em}\hspace{0.5em}}}{0em}{}
+\titleformat{\subsubsection}{\normalfont\bfseries\itshape\color{secondary}\sffamily}
+{\llap{\color{secondary}\rule{1em}{1em}\hspace{0.5em}}}{0em}{}
+
+% --- 6. MÔI TRƯỜNG ---
+\def\phanI{TỔNG QUAN}
+\def\phanII{CHUẨN BỊ CỦA GIÁO VIÊN}
+\def\phanIII{KẾ HOẠCH DẠY HỌC ĐỀ XUẤT}
+\def\phanIV{HƯỚNG DẪN HỌC SINH}
+\def\phanV{CÁC PHỤ LỤC}
+
+\newtcolorbox{competitionsection}[1]{
+    enhanced, breakable, colback=white, colframe=primary, boxrule=0.8pt,
+    fonttitle=\bfseries\sffamily\Huge, coltitle=white, colbacktitle=primary,
+    attach boxed title to top left={xshift=1cm, yshift=-1mm-\tcboxedtitleheight/2},
+    boxed title style={sharp corners, boxrule=0pt},
+    title={PHẦN #1: \csname phan#1\endcsname},
+    before upper={\addcontentsline{toc}{section}{Phần #1: \csname phan#1\endcsname}}
+}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\header}[1]{\cellcolor{TableHeader}\sffamily\bfseries#1}
+
+\newcommand{\teachingplan}[4]{
+\noindent\begin{minipage}{0.12\textwidth}\centering\bfseries\sffamily\color{primary}#1\end{minipage}%
+\begin{minipage}{0.23\textwidth}\sffamily\textbf{#2}\end{minipage}%
+\begin{minipage}{0.35\textwidth}\textit{#3}\end{minipage}%
+\begin{minipage}{0.25\textwidth}\small #4\end{minipage}
+\vspace{1ex}\par\noindent\color{primary!30}\rule{\textwidth}{0.4pt}\vspace{1ex}}
+
+\newtcolorbox{casestudy}{enhanced, breakable, colback=primary!5, colframe=primary!80, boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries\color{accent}TÌNH HUỐNG THỰC TIỄN: STARTUP VẬN TẢI SMARTLOGI, fonttitle=\bfseries\sffamily}
+\newtcolorbox{keyformula}{enhanced, breakable, colback=accent!5, colframe=accent!80, boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries\color{primary}KIẾN THỨC TRỌNG TÂM, fonttitle=\bfseries\sffamily}
+\newtcolorbox{task}[1]{enhanced, breakable, colback=warning!10, colframe=warning!80, boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries\color{secondary}NHIỆM VỤ: #1, fonttitle=\bfseries\sffamily}
+\newtcolorbox{phieuhoc_tap_box}[1]{enhanced, breakable, colback=white, colframe=success, boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries #1, fonttitle=\bfseries\sffamily, coltitle=white}
+
+\setlist[itemize,1]{label=\textbullet, leftmargin=*, nosep}
+\setlist[itemize,2]{label=--, leftmargin=*, nosep}
+\setlist[description]{font=\bfseries\sffamily\color{primary}, nosep}
+
+\begin{document}
+
+% --- TRANG BÌA ---
+\begin{titlepage}
+\begin{tikzpicture}[remember picture, overlay]
+\node[rectangle, fill=primary, anchor=north, minimum width=\paperwidth, minimum height=2cm] (header) at (current page.north){};
+\node[anchor=south, yshift=2mm, text=white] at (header.south) {\Huge\sffamily\bfseries GIÁO ÁN DỰ THI STEM/STEAM CẤP THÀNH PHỐ};
+\end{tikzpicture}
+
+\vspace{2cm}
+\begin{center}
+{\LARGE\bfseries\color{primary}\sffamily SỞ GIÁO DỤC VÀ ĐÀO TẠO THÀNH PHỐ HỒ CHÍ MINH}\\
+\vspace{0.5cm}
+{\Large\bfseries\sffamily HỘI THI THIẾT KẾ CHỦ ĐỀ DẠY HỌC STEM/STEAM}\\
+\vspace{0.3cm}
+{\large\sffamily Năm học 2025 - 2026}
+
+\vspace{2cm}
+
+\begin{tcolorbox}[width=0.9\textwidth, colback=gray!5, colframe=primary, arc=2mm, boxrule=1pt]
+    \centering
+    {\LARGE\bfseries\sffamily CHỦ ĐỀ:} \\
+    {\Huge\bfseries\color{accent}\sffamily LOGISTICS THÔNG MINH}\\
+    \vspace{0.25cm}
+    {\Large\sffamily TỐI ƯU HÓA VẬN TẢI BẰNG HỆ BẤT PHƯƠNG TRÌNH}\\
+    \vspace{0.25cm}
+    {\large\sffamily Ứng dụng Quy hoạch tuyến tính và Công nghệ số}
+\end{tcolorbox}
+
+\vspace{1.5cm}
+{\Large\bfseries\sffamily MÔN: TOÁN - KHỐI: 10}
+
+\vfill
+\large
+\begin{tabular}{rl}
+\sffamily\bfseries Giáo viên: & Nguyễn Văn Sang\\
+\sffamily\bfseries Đơn vị: & Trường THPT Nguyễn Hữu Cảnh\\
+\sffamily\bfseries Số điện thoại: & 0389\,821\,115\\
+\end{tabular}
+
+\vspace{1cm}
+{\large\sffamily Thành phố Hồ Chí Minh, tháng 11 năm 2025}
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\thispagestyle{empty}
+
+%%%%% PHẦN I: TỔNG QUAN %%%%%
+\begin{competitionsection}{I}
+\vspace{0.5cm}
+\subsection*{1.1. Thông tin cá nhân}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Họ và tên:} Nguyễn Văn Sang
+\item \textbf{Chuyên môn:} Toán học
+\item \textbf{Thâm niên:} 15 năm giảng dạy THPT
+\item \textbf{Đơn vị:} Trường THPT Nguyễn Hữu Cảnh, TP.HCM
+\end{itemize}
+
+\subsection*{1.2. Giới thiệu chủ đề}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tên chủ đề:} \textcolor{accent}{Logistics Thông Minh: Tối ưu hóa bài toán vận tải bằng Hệ bất phương trình bậc nhất hai ẩn}
+\item \textbf{Bối cảnh thực tiễn:}
+    \begin{itemize}
+    \item \textbf{82\%} doanh nghiệp vừa và nhỏ gặp khó khăn trong tối ưu chi phí vận chuyển (Khảo sát VCCI 2024)
+    \item Sự bùng nổ của Thương mại điện tử (Shopee, TikTok Shop) đòi hỏi giải pháp logistics hiệu quả
+    \item Học sinh cần thấy được ``sức mạnh kinh tế'' của Toán học trong kinh doanh thực tế
+    \end{itemize}
+\item \textbf{Điểm mới và sáng tạo:}
+    \begin{itemize}
+    \item \textbf{Đa ngành:} Kết hợp Toán học - Kinh tế - Công nghệ thông tin tạo thành vòng tròn STEAM hoàn chỉnh
+    \item \textbf{Sản phẩm thực:} Công cụ web \texttt{SmartLogi.html} hoàn thiện có thể sử dụng ngay, không cần server
+    \item \textbf{Tư duy khởi nghiệp:} Học sinh đóng vai CEO startup để giải quyết bài toán lỗ/lãi thực tế
+    \item \textbf{Trực quan hóa:} Biến các con số khô khan thành đồ thị miền nghiệm sinh động
+    \end{itemize}
+\end{itemize}
+
+\subsection*{1.3. Căn cứ thiết kế}
+\begin{minipage}{0.48\textwidth}
+\textbf{Căn cứ pháp lý:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Chương trình GDPT 2018 môn Toán lớp 10
+\item Công văn 5555/BGDĐT-GDTrH về dạy học STEM
+\item Kế hoạch số 4500/KH-SGDĐT của Sở GD\&ĐT TP.HCM
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\textbf{Cơ sở lý luận:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Lý thuyết học tập qua dự án (Project-Based Learning)
+\item Mô hình 5E (Engage, Explore, Explain, Elaborate, Evaluate)
+\item Khung năng lực khởi nghiệp của EU (EntreComp)
+\end{itemize}
+\end{minipage}
+
+\subsection*{1.4. Mục tiêu giáo dục}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{} L L L @{}}
+\toprule
+\header{Kiến thức} & \header{Kỹ năng} & \header{Thái độ} \\
+\midrule
+\parbox[t]{\dimexpr1.\linewidth-2\tabcolsep}{
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Xác định miền nghiệm của Hệ BPT bậc nhất 2 ẩn
+        \item Hiểu bản chất bài toán tối ưu (Linear Programming)
+        \item Tìm cực trị của hàm $F(x,y)$ trên miền đa giác
+    \end{itemize}
+} &
+\parbox[t]{\dimexpr1.\linewidth-2\tabcolsep}{
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Mô hình hóa bài toán thực tế
+        \item Sử dụng công nghệ số (Web App)
+        \item Đọc hiểu đồ thị, phân tích kịch bản
+        \item Làm việc nhóm, thuyết trình
+    \end{itemize}
+} &
+\parbox[t]{\dimexpr1.\linewidth-2\tabcolsep}{
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Tư duy tối ưu hóa (chi phí thấp nhất)
+        \item Tinh thần khởi nghiệp
+        \item Trách nhiệm với môi trường (giảm khí thải)
+    \end{itemize}
+} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{1.5. Cấu trúc chương trình}
+\begin{center}
+\begin{tikzpicture}[node distance=1.5cm, every node/.style={font=\sffamily}]
+\node (start) [rectangle, rounded corners, fill=primary!20, text width=4.5cm, align=center, minimum height=1.2cm] {\textbf{Khám phá thực tiễn}\\ CEO Startup cần tối ưu chi phí};
+\node (mid1) [rectangle, rounded corners, fill=accent!20, text width=4.5cm, align=center, below of=start, yshift=-1.2cm, minimum height=1.2cm] {\textbf{Xây dựng mô hình Toán}\\ Hệ BPT, Miền nghiệm};
+\node (mid2) [rectangle, rounded corners, fill=primary!20, text width=4.5cm, align=center, below of=mid1, yshift=-1.2cm, minimum height=1.2cm] {\textbf{Phát triển công cụ số}\\ Ứng dụng SmartLogi.html};
+\node (end) [rectangle, rounded corners, fill=accent!20, text width=4.5cm, align=center, below of=mid2, yshift=-1.2cm, minimum height=1.2cm] {\textbf{Ứng dụng thực tế}\\ Lập kế hoạch vận tải tối ưu};
+\draw[->, thick, color=primary] (start) -- (mid1) node[midway, right, text width=3cm, align=center] {\footnotesize \textbf{M} (Toán học)};
+\draw[->, thick, color=primary] (mid1) -- (mid2) node[midway, right, text width=3cm, align=center] {\footnotesize \textbf{T} (Công nghệ)};
+\draw[->, thick, color=primary] (mid2) -- (end) node[midway, right, text width=3cm, align=center] {\footnotesize \textbf{A} (Kinh tế)};
+\end{tikzpicture}
+\end{center}
+\end{competitionsection}
+\newpage
+
+%%%%% PHẦN II: CHUẨN BỊ %%%%%
+\begin{competitionsection}{II}
+\vspace{0.5cm}
+\subsection*{2.1. Thiết bị và công nghệ}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Phần cứng:}
+    \begin{itemize}
+    \item Máy tính có kết nối Internet (1 máy/2 HS) hoặc điện thoại thông minh
+    \item Máy chiếu tương tác thông minh
+    \end{itemize}
+\item \textbf{Phần mềm và nền tảng:}
+    \begin{itemize}
+    \item \textbf{Học liệu số chính:} Ứng dụng web \texttt{SmartLogi.html} (đính kèm) hoặc truy cập \href{https://stem-1h8.pages.dev/SmartLogi.html}{stem-1h8.pages.dev/SmartLogi.html}
+    \item \textit{Yêu cầu:} Trình duyệt web (Chrome, Firefox, Edge...)
+    \item Google Sheets template (dự phòng)
+    \item Padlet để chia sẻ kết quả nhóm
+    \end{itemize}
+\item \textbf{Tài liệu:}
+    \begin{itemize}
+    \item Phiếu học tập số 1: Khám phá bài toán tối ưu
+    \item Phiếu học tập số 2: Hướng dẫn sử dụng 3 Tab của SmartLogi
+    \item Phiếu khảo sát trước/sau học (đánh giá nhận thức học sinh)
+    \item Bảng tham khảo giá thuê xe thực tế
+    \item Rubric đánh giá sản phẩm
+    \item Phiếu đánh giá đồng cấp (Peer Assessment)
+    \end{itemize}
+\end{itemize}
+
+\subsection*{2.2. Kịch bản giảng dạy}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{} L L L L L @{}}
+\toprule
+\header{Thời lượng} & \header{Hoạt động} & \header{Phương pháp} & \header{Công cụ} & \header{Đánh giá} \\
+\midrule
+10' & Khởi động: Game CEO & Tình huống thực tiễn & Clip + Web App & Quan sát hứng thú \\
+15' & Khám phá Hệ BPT & Khám phá có hướng dẫn & PHT số 1 & Phiếu trả lời \\
+\rowcolor{primary!10}
+10' & Chuyển tiếp công nghệ & Đàm thoại & Demo App (3 tabs) & Câu hỏi phản hồi \\
+\rowcolor{primary!10}
+25' & Thực hành (Tab 1, 2) & Học qua dự án & Web App SmartLogi & Đánh giá quá trình \\
+\rowcolor{primary!10}
+15' & Phân tích kết quả & Hợp tác nhóm & Biểu đồ (Tab 2) & Peer assessment \\
+10' & Trình bày sản phẩm & Thuyết trình & Google Slides & Rubric đánh giá \\
+5' & Tổng kết mở rộng & Suy ngẫm & Tab 3: Học tập & Nhật ký học tập \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{2.3. Đánh giá đa chiều}
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Đánh giá quá trình:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Phiếu quan sát nhóm:} Mức độ hợp tác, giải quyết vấn đề
+\item \textbf{Nhật ký học tập:} Suy nghĩ, thắc mắc của học sinh
+\item \textbf{Đánh giá đồng cấp:} Học sinh đánh giá lẫn nhau
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Đánh giá sản phẩm:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Rubric 4 tiêu chí:} (Xem Phụ lục 3)
+    \begin{itemize}
+    \item Tính chính xác mô hình toán (4 điểm)
+    \item Khả năng sử dụng công nghệ (4 điểm)
+    \item Tính khả thi phương án (4 điểm)
+    \item Khả năng trình bày (4 điểm)
+    \end{itemize}
+\end{itemize}
+\end{minipage}
+
+\subsection*{2.4. Kế hoạch dự phòng}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tình huống 1:} Mất điện hoặc mất kết nối Internet
+    \begin{itemize}
+    \item Học liệu số \texttt{SmartLogi.html} \textbf{không cần Internet}, chỉ cần mở bằng trình duyệt.
+    \item Nếu mất điện: Chuyển sang sử dụng Google Sheets offline hoặc phiếu tính toán bằng tay.
+    \end{itemize}
+\item \textbf{Tình huống 2:} Học sinh không có thiết bị cá nhân
+    \begin{itemize}
+    \item Sắp xếp nhóm 3-4 học sinh/1 máy tính của trường
+    \item Sử dụng phương pháp ``station rotation'' để luân phiên sử dụng thiết bị
+    \end{itemize}
+\item \textbf{Tình huống 3:} Một số học sinh tiếp thu nhanh hơn
+    \begin{itemize}
+    \item Giao nhiệm vụ mở rộng: Khám phá ``Tab Học tập'' và ``Phân tích độ nhạy''.
+    \item Giao vai trò hỗ trợ các nhóm khác
+    \end{itemize}
+\end{itemize}
+\end{competitionsection}
+
+%%%%% PHẦN III: KẾ HOẠCH DẠY HỌC %%%%%
+\begin{competitionsection}{III}
+\vspace{0.5cm}
+\subsection*{3.1. Tiến trình hai tiết học (Tóm tắt)}
+\teachingplan{10'}{Khởi động}{Video tình huống: CEO startup cần tối ưu chi phí vận chuyển}{Công nghệ: Clip tương tác}
+\teachingplan{15'}{Khám phá toán học}{Xây dựng Hệ BPT từ bài toán thực tế}{PP: Khám phá có hướng dẫn}
+\teachingplan{10'}{Chuyển tiếp}{Demo ứng dụng web SmartLogi (3 tabs)}{Công nghệ: Màn hình tương tác}
+\teachingplan{25'}{Thực hành}{Sử dụng Tab 1 (Tính toán) và Tab 2 (Kịch bản)}{PP: Học qua dự án}
+\teachingplan{15'}{Phân tích}{So sánh kịch bản, phân tích độ nhạy}{Công cụ: Biểu đồ cột, đường}
+\teachingplan{10'}{Báo cáo}{Thuyết trình nhóm: Phương án tối ưu}{Công nghệ: Google Slides chia sẻ}
+\teachingplan{5'}{Tổng kết}{Hệ thống hóa kiến thức (Tab 3)}{PP: Sơ đồ tư duy}
+
+\subsection*{3.2. Kịch bản chi tiết}
+
+\begin{casestudy}
+Bạn là CEO của startup SmartLogi - một công ty logistics mới thành lập. Công ty nhận được đơn hàng đầu tiên: vận chuyển tối thiểu \textbf{9 tấn} hàng hóa với tổng thể tích tối thiểu \textbf{36 m$^3$}. Bạn có thể thuê 2 loại xe:
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Xe loại A:} Tải trọng 3 tấn, thể tích 3 m$^3$, giá thuê 4 triệu/xe
+\item \textbf{Xe loại B:} Tải trọng 1 tấn, thể tích 6 m$^3$, giá thuê 3 triệu/xe
+\end{itemize}
+\textbf{Thách thức:} Với ngân sách eo hẹp của startup, làm thế nào để chọn phương án vận chuyển với chi phí thấp nhất mà vẫn đảm bảo yêu cầu đơn hàng?
+\end{casestudy}
+
+\subsubsection*{Hoạt động 1: Khởi động - Kết nối thực tiễn (10 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} Giáo viên chiếu video giới thiệu về ngành Logistics và thương mại điện tử tại Việt Nam
+\item \textbf{Bước 2:} Đặt câu hỏi kích thích tư duy:
+    \begin{itemize}
+    \item \textit{``Nếu em là CEO một startup logistics, em sẽ làm gì để tối ưu chi phí?''}
+    \item \textit{``Làm thế nào để biết nên thuê bao nhiêu xe mỗi loại?''}
+    \end{itemize}
+\item \textbf{Bước 3:} Học sinh thảo luận cặp đôi (2 phút) và chia sẻ ý tưởng ban đầu
+\item \textbf{Dự kiến câu trả lời:}
+    \begin{itemize}
+    \item Thuê nhiều xe nhỏ để linh hoạt
+    \item Thuê xe lớn để tiết kiệm chi phí
+    \item Cần tính toán cụ thể để so sánh
+    \end{itemize}
+\item \textbf{Chuyển tiếp:} \textit{``Hôm nay chúng ta sẽ sử dụng Toán học và Công nghệ để giải quyết bài toán kinh doanh thực tế này!''}
+\end{itemize}
+
+\subsubsection*{Hoạt động 2: Khám phá Hệ bất phương trình (15 phút)}
+\begin{task}{Nhóm}
+\textbf{Nhiệm vụ:} Mô hình hóa bài toán logistics thành Hệ bất phương trình (Phiếu học tập số 1)
+
+\textbf{Hướng dẫn:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Xác định các ẩn số: $x$ (số xe A), $y$ (số xe B)
+\item Viết các ràng buộc từ yêu cầu bài toán
+\item Xác định hàm mục tiêu: Chi phí cần tối thiểu hóa
+\end{itemize}
+\end{task}
+
+\begin{keyformula}
+\textbf{Hệ bất phương trình bậc nhất hai ẩn:}
+$$\begin{cases}
+3x + y \ge 9 & \text{(Ràng buộc tải trọng)} \\
+3x + 6y \ge 36 & \text{(Ràng buộc thể tích)} \\
+0 \le x \le 10 & \text{(Giới hạn xe A)} \\
+0 \le y \le 9 & \text{(Giới hạn xe B)}
+\end{cases}$$
+
+\textbf{Hàm mục tiêu:} $C = 4x + 3y \to \min$
+
+\textbf{Ý nghĩa:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Miền nghiệm:} Tập hợp các điểm $(x, y)$ thỏa mãn tất cả các ràng buộc
+\item \textbf{Điểm tối ưu:} Điểm trong miền nghiệm làm cho hàm $C$ đạt giá trị nhỏ nhất
+\item \textbf{Định lý:} Cực trị của hàm tuyến tính trên miền đa giác lồi đạt được tại đỉnh
+\end{itemize}
+\end{keyformula}
+
+\subsubsection*{Hoạt động 3: Chuyển tiếp sang công nghệ (10 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} Giáo viên demo ứng dụng web \texttt{SmartLogi.html} (Phiếu học tập số 2).
+\item \textbf{Bước 2:} Thao tác minh họa 3 tab chính:
+    \begin{itemize}
+    \item \textbf{Tab 1 - Tính toán:} Nhập các tham số xe A, xe B, yêu cầu tải trọng/thể tích. Cho thấy miền nghiệm (vùng tô màu) và điểm tối ưu (điểm đỏ).
+    \item \textbf{Tab 2 - Phân tích kịch bản:} Thêm 2-3 kịch bản (VD: thay đổi giá xe, thay đổi yêu cầu). Cho thấy biểu đồ cột so sánh chi phí. Kéo xuống xem biểu đồ ``Phân tích độ nhạy''.
+    \item \textbf{Tab 3 - Học tập:} Lướt qua nội dung công thức Toán, kiến thức Logistics và quy trình STEM.
+    \end{itemize}
+\item \textbf{Bước 3:} Đặt câu hỏi chuyển tiếp:
+    \begin{itemize}
+    \item \textit{``Tại sao điểm tối ưu lại nằm ở đỉnh của miền nghiệm?''}
+    \item \textit{``Nếu giá xe thay đổi, điểm tối ưu có thay đổi không?''}
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Hoạt động 4: Thực hành với Web App (25 phút)}
+\begin{task}{Nhóm}
+\textbf{Nhiệm vụ:} Sử dụng Web App SmartLogi để tìm phương án tối ưu và phân tích các kịch bản.
+
+\textbf{Yêu cầu cụ thể:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tab 1:} Nhập kịch bản gốc theo Phiếu học tập số 1, ghi lại kết quả tối ưu.
+\item \textbf{Tab 2:} Sử dụng nút ``Thêm kịch bản'' để thử nghiệm các thay đổi:
+    \begin{itemize}
+    \item Kịch bản 2: Tăng giá xe A lên 5 triệu
+    \item Kịch bản 3: Tăng yêu cầu tải trọng lên 12 tấn
+    \item Kịch bản 4: Nhóm tự đề xuất
+    \end{itemize}
+\item \textbf{Tab 2:} Quan sát biểu đồ ``Phân tích độ nhạy'' và nhận xét.
+\item \textbf{Chụp màn hình} kết quả để chuẩn bị báo cáo.
+\end{itemize}
+\end{task}
+
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Hỗ trợ giáo viên:}
+    \begin{itemize}
+    \item Tuần tra các nhóm, hỗ trợ kỹ thuật khi cần
+    \item Gợi ý cách đọc đồ thị miền nghiệm
+    \item Hướng dẫn cách đọc biểu đồ cột (so sánh) và biểu đồ đường (độ nhạy).
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Hoạt động 5: Phân tích và trình bày (15 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} 2 nhóm được chọn ngẫu nhiên trình bày phương án của mình (3 phút/nhóm).
+\item \textbf{Bước 2:} Các nhóm khác đặt câu hỏi phản biện
+\item \textbf{Bước 3:} Giáo viên đặt câu hỏi mở rộng:
+    \begin{itemize}
+    \item \textit{``Dựa trên biểu đồ 'Phân tích độ nhạy', yếu tố nào (giá xe hay yêu cầu tải trọng) có ảnh hưởng mạnh hơn đến chi phí?''}
+    \item \textit{``Nếu khách hàng đột ngột tăng yêu cầu thể tích lên 50 m$^3$, phương án của nhóm có còn khả thi không?''}
+    \end{itemize}
+\item \textbf{Bước 4:} Cả lớp thảo luận và thống nhất phương án tối ưu
+\end{itemize}
+
+\subsubsection*{Hoạt động 6: Tổng kết và mở rộng (5 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tổng kết kiến thức:} Giáo viên hệ thống hóa (sử dụng \textbf{Tab 3 - Học tập}):
+    \begin{itemize}
+    \item Hệ BPT bậc nhất 2 ẩn giúp mô hình hóa bài toán kinh doanh thực tế (M).
+    \item Công nghệ (T) giúp trực quan hóa miền nghiệm và tự động tìm điểm tối ưu.
+    \item Tư duy tối ưu hóa là kỹ năng quan trọng trong kinh doanh (A - Arts/Kinh tế).
+    \end{itemize}
+\item \textbf{Bài tập về nhà:}
+    \begin{itemize}
+    \item Sử dụng công cụ SmartLogi để giải quyết một bài toán logistics khác (VD: cho công ty gia đình hoặc cửa hàng online).
+    \item Trình bày trong 1 trang giấy hoặc slide, bao gồm:
+        \begin{itemize}
+        \item Bài toán cụ thể (yêu cầu, ràng buộc)
+        \item Phương án tối ưu được lựa chọn (ảnh chụp từ Tab 1, 2)
+        \item Lý do lựa chọn và tính khả thi
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+\end{competitionsection}
+\newpage
+
+%%%%% PHẦN IV: HƯỚNG DẪN HỌC SINH %%%%%
+\begin{competitionsection}{IV}
+\vspace{0.5cm}
+\subsection*{4.1. Hướng dẫn chi tiết cho học sinh}
+\subsubsection*{Giai đoạn 1: Mô hình hóa bài toán (Phiếu học tập số 1)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} Đọc kỹ tình huống CEO startup SmartLogi
+\item \textbf{Bước 2:} Xác định các ẩn số:
+    \begin{itemize}
+    \item $x$ = số xe loại A cần thuê
+    \item $y$ = số xe loại B cần thuê
+    \end{itemize}
+\item \textbf{Bước 3:} Viết các ràng buộc từ yêu cầu bài toán:
+    \begin{itemize}
+    \item Tải trọng: $3x + 1y \ge 9$ (cần ít nhất 9 tấn)
+    \item Thể tích: $3x + 6y \ge 36$ (cần ít nhất 36 m$^3$)
+    \item Giới hạn: $0 \le x \le 10$, $0 \le y \le 9$
+    \end{itemize}
+\item \textbf{Bước 4:} Viết hàm mục tiêu: $C = 4x + 3y \to \min$
+\item \textbf{Bước 5:} Dự đoán trực giác và kiểm tra tính khả thi
+\end{itemize}
+
+\subsubsection*{Giai đoạn 2: Sử dụng công cụ SmartLogi (Phiếu học tập số 2)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1: Mở ứng dụng}
+    \begin{itemize}
+    \item Mở file \texttt{SmartLogi.html} bằng trình duyệt web.
+    \end{itemize}
+\item \textbf{Bước 2: Tab 1 - Tính toán}
+    \begin{itemize}
+    \item Nhập các tham số của bài toán (xe A, xe B, yêu cầu tải trọng/thể tích).
+    \item Quan sát miền nghiệm (vùng tô màu xanh) trên đồ thị.
+    \item Ghi lại điểm tối ưu (x, y) và chi phí tối thiểu.
+    \end{itemize}
+\item \textbf{Bước 3: Tab 2 - Phân tích kịch bản}
+    \begin{itemize}
+    \item Nhấn nút ``Thêm kịch bản'' để tạo phương án mới.
+    \item Thay đổi các tham số (VD: Tăng giá xe, thay đổi yêu cầu).
+    \item Quan sát biểu đồ cột để so sánh các kịch bản.
+    \item Kéo xuống, quan sát biểu đồ đường ``Phân tích độ nhạy''.
+    \end{itemize}
+\item \textbf{Bước 4: Tab 3 - Học tập}
+    \begin{itemize}
+    \item Đọc lại công thức Hệ BPT và điều kiện tối ưu.
+    \item Đọc phần ``Kiến thức Logistics'' để hiểu thêm về ngành.
+    \item Đọc phần ``Quy trình STEM'' để hiểu rõ dự án.
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Giai đoạn 3: Phân tích và trình bày}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} So sánh các phương án (từ Tab 2) dựa trên tiêu chí:
+    \begin{itemize}
+    \item Chi phí thấp nhất
+    \item Tính linh hoạt (dễ điều chỉnh khi yêu cầu thay đổi)
+    \item Rủi ro (độ nhạy với biến động giá)
+    \end{itemize}
+\item \textbf{Bước 2:} Chọn 1 phương án tối ưu và lý giải lựa chọn
+\item \textbf{Bước 3:} Chuẩn bị phần trình bày 3 phút với cấu trúc:
+    \begin{itemize}
+    \item Giới thiệu bài toán và vai trò CEO startup
+    \item Trình bày các phương án đã thử nghiệm (chụp ảnh biểu đồ từ Tab 2)
+    \item Phân tích và lựa chọn phương án tối ưu
+    \item Kết luận (có nhắc đến độ nhạy và rủi ro)
+    \end{itemize}
+\end{itemize}
+
+\subsection*{4.2. Gợi ý mở rộng}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tìm hiểu sâu về Logistics (từ Tab 3):}
+    \begin{itemize}
+    \item Nghiên cứu các thuật toán tối ưu hóa phức tạp hơn (Simplex, Branch and Bound)
+    \item Tìm hiểu về chuỗi cung ứng (Supply Chain) và quản lý kho
+    \item Khám phá các phần mềm logistics chuyên nghiệp
+    \end{itemize}
+\item \textbf{Phát triển công cụ (từ Phụ lục 5):}
+    \begin{itemize}
+    \item Thử ``View Source'' (Xem nguồn trang) file HTML để đọc code JavaScript.
+    \item Đề xuất cải tiến giao diện hoặc thuật toán tính toán
+    \item Thêm tính năng mới (VD: tính toán thời gian, tuyến đường)
+    \end{itemize}
+\item \textbf{Ứng dụng thực tế:}
+    \begin{itemize}
+    \item Giúp gia đình hoặc cửa hàng nhỏ tối ưu vận chuyển hàng hóa
+    \item Tham gia cuộc thi khởi nghiệp học sinh do trường tổ chức
+    \item Viết bài chia sẻ kinh nghiệm trên blog cá nhân hoặc mạng xã hội
+    \end{itemize}
+\end{itemize}
+\end{competitionsection}
+\newpage
+
+%%%%% PHẦN V: PHỤ LỤC %%%%%
+\begin{competitionsection}{V}
+\vspace{0.5cm}
+\subsection*{Phụ lục 1: Phiếu học tập số 1 - Khám phá bài toán tối ưu}
+\begin{phieuhoc_tap_box}{Phụ lục 1: Phiếu học tập số 1 - Mô hình hóa bài toán Logistics}
+\textbf{Tình huống:} Bạn là CEO startup SmartLogi, cần vận chuyển tối thiểu 9 tấn hàng và 36 m$^3$ hàng.
+
+\vspace{0.5cm}
+\textbf{Bài 1: Xác định ẩn số}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Gọi $x$ = số xe loại A cần thuê
+\item Gọi $y$ = số xe loại B cần thuê
+\item Điều kiện: $x, y \ge 0$ và $x, y \in \mathbb{N}$ (số nguyên)
+\end{itemize}
+
+\textbf{Bài 2: Viết các ràng buộc (điền vào chỗ trống)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Tải trọng (Xe A chở 3 tấn, Xe B chở 1 tấn, cần $\ge$ 9 tấn): $3x + \underline{\hspace{1cm}}y \ge \underline{\hspace{1cm}}$
+\item Thể tích (Xe A chở 3 m$^3$, Xe B chở 6 m$^3$, cần $\ge$ 36 m$^3$): $\underline{\hspace{1cm}}x + 6y \ge \underline{\hspace{1cm}}$
+\item Giới hạn xe A: $0 \le x \le \underline{\hspace{1cm}}$
+\item Giới hạn xe B: $0 \le y \le \underline{\hspace{1cm}}$
+\end{itemize}
+
+\textbf{Bài 3: Xác định hàm mục tiêu}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Chi phí thuê xe A: 4 triệu/xe
+\item Chi phí thuê xe B: 3 triệu/xe
+\item Hàm chi phí: $C = \underline{\hspace{1cm}}x + \underline{\hspace{1cm}}y \to \min$
+\end{itemize}
+
+\textbf{Bài 4: Dự đoán theo cảm tính}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Phương án dự đoán của em: \underline{\hspace{2cm}} xe A, \underline{\hspace{2cm}} xe B
+\item Chi phí dự đoán: \underline{\hspace{3cm}} triệu VNĐ
+\item Kiểm tra: Tải trọng = \underline{\hspace{2cm}} tấn $\ge$ 9 tấn? \quad (\text{Đạt} / \text{Không đạt})
+\item Kiểm tra: Thể tích = \underline{\hspace{2cm}} m$^3$ $\ge$ 36 m$^3$? \quad (\text{Đạt} / \text{Không đạt})
+\end{itemize}
+\end{phieuhoc_tap_box}
+
+\newpage
+\subsection*{Phụ lục 2: Phiếu học tập số 2 - Hướng dẫn sử dụng SmartLogi}
+\begin{phieuhoc_tap_box}{Phụ lục 2: Phiếu học tập số 2 - Nhiệm vụ với Web App SmartLogi.html}
+\textbf{\color{accent}I. Giới thiệu ứng dụng}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tên ứng dụng:} SmartLogi - Tối ưu hóa Vận tải
+\item \textbf{Địa chỉ truy cập:} File \texttt{SmartLogi.html} (mở bằng trình duyệt) hoặc \href{https://stem-1h8.pages.dev/SmartLogi.html}{stem-1h8.pages.dev/SmartLogi.html}
+\item \textbf{Cấu trúc 3 Tab:}
+    \begin{itemize}
+    \item \textbf{Tab 1 - TÍNH TOÁN:} Nhập tham số, xem miền nghiệm, tìm điểm tối ưu.
+    \item \textbf{Tab 2 - PHÂN TÍCH KỊCH BẢN:} Thêm/xóa kịch bản, so sánh biểu đồ cột, phân tích độ nhạy.
+    \item \textbf{Tab 3 - HỌC TẬP:} Công thức Toán, kiến thức Logistics, quy trình STEM.
+    \end{itemize}
+\end{itemize}
+
+\textbf{\color{accent}II. Hướng dẫn thực hiện nhiệm vụ}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1: Mở Tab ``TÍNH TOÁN''}
+    \begin{itemize}
+    \item Nhập các tham số của bài toán gốc:
+    \item \textit{Xe A:} Tải trọng = 3 tấn, Thể tích = 3 m$^3$, Giá = 4 triệu
+    \item \textit{Xe B:} Tải trọng = 1 tấn, Thể tích = 6 m$^3$, Giá = 3 triệu
+    \item \textit{Yêu cầu:} Tổng tấn = 9, Tổng khối = 36
+    \item \textit{Giới hạn:} Max xe A = 10, Max xe B = 9
+    \item \textit{Ghi lại kết quả tối ưu:} \underline{\hspace{2cm}} xe A, \underline{\hspace{2cm}} xe B
+    \item \textit{Chi phí tối ưu:} \underline{\hspace{4cm}} triệu
+    \end{itemize}
+\item \textbf{Bước 2: Mở Tab ``PHÂN TÍCH KỊCH BẢN''}
+    \begin{itemize}
+    \item Nhấn ``+ Thêm kịch bản'' để tạo \textbf{Kịch bản 2} của nhóm em
+    \item \textit{Thay đổi:} (VD: Giá xe A tăng lên 5 triệu) \underline{\hspace{6cm}}
+    \item \textit{Kết quả mới:} \underline{\hspace{2cm}} xe A, \underline{\hspace{2cm}} xe B. Chi phí: \underline{\hspace{3cm}}
+    \item Quan sát biểu đồ cột. Kịch bản nào tốt hơn? \underline{\hspace{4cm}}
+    \end{itemize}
+\item \textbf{Bước 3: Phân tích Độ nhạy (vẫn ở Tab 2)}
+    \begin{itemize}
+    \item Kéo xuống xem biểu đồ đường ``Phân tích độ nhạy''
+    \item \textit{Nhận xét:} Yếu tố nào làm chi phí thay đổi nhiều nhất? \underline{\hspace{8cm}}
+    \end{itemize}
+\item \textbf{Bước 4: Mở Tab ``HỌC TẬP''}
+    \begin{itemize}
+    \item Đọc phần ``Kiến thức Logistics''. Kể tên 2 thuật ngữ mới:
+    \item 1: \underline{\hspace{4cm}} | 2: \underline{\hspace{4cm}}
+    \end{itemize}
+\end{itemize}
+\end{phieuhoc_tap_box}
+
+\newpage
+\subsection*{Phụ lục 3: Rubric đánh giá sản phẩm}
+\begin{tabularx}{\linewidth}{@{} >{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X @{}}
+    \toprule
+    \rowcolor{TableHeader}
+    \sffamily\bfseries Tiêu chí & \sffamily\bfseries Xuất sắc (4đ) & \sffamily\bfseries Khá (3đ) & \sffamily\bfseries Cần cải thiện (1-2đ) \\
+    \midrule
+    
+    \textbf{Mô hình hóa Toán học} 
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Hệ BPT chính xác
+        \item Xác định đúng hàm mục tiêu
+        \item Giải thích rõ ràng
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Hệ BPT cơ bản đúng
+        \item Có sai sót nhỏ
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Hệ BPT sai
+        \item Không xác định được mục tiêu
+    \end{itemize} \\
+    \addlinespace
+    
+    \textbf{Sử dụng công nghệ (SmartLogi App)} 
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Thành thạo cả 3 tabs
+        \item Phân tích độ nhạy đúng
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Sử dụng tốt Tab 1, 2
+        \item Còn lúng túng Tab 3
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Chỉ dùng được Tab 1
+        \item Không phân tích được
+    \end{itemize} \\
+    \addlinespace
+    
+    \textbf{Tính khả thi phương án} 
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Đề xuất 2+ kịch bản khả thi
+        \item Phân tích ưu nhược chi tiết
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Đề xuất 1-2 kịch bản
+        \item Phân tích cơ bản
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Phương án không khả thi
+        \item Thiếu phân tích
+    \end{itemize} \\
+    \addlinespace
+    
+    \textbf{Trình bày và bảo vệ} 
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Mạch lạc, logic
+        \item Trực quan hiệu quả
+        \item Trả lời trọn vẹn
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Trình bày rõ ràng
+        \item Có hỗ trợ trực quan
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Trình bày rời rạc
+        \item Không trả lời được
+    \end{itemize} \\
+    \bottomrule
+\end{tabularx}
+\vspace{1em}
+\noindent\textbf{Tổng điểm:} \underline{\hspace{2cm}}/16 điểm\\
+\textbf{Nhận xét của giáo viên:}\\
+\vspace{2cm}
+
+\subsection*{Phụ lục 4: Bảng tham khảo giá thuê xe}
+\begin{center}
+\begin{tabularx}{0.95\linewidth}{@{} l C C C C @{}}
+\toprule
+\header{Loại xe} & \header{Tải trọng (tấn)} & \header{Thể tích (m$^3$)} & \header{Giá thuê (triệu/chuyến)} & \header{Ghi chú} \\
+\midrule
+Xe tải nhỏ (1 tấn) & 1.0 & 6 & 2.5 - 3.5 & Linh hoạt nội thành \\
+Xe tải trung (3 tấn) & 3.0 & 12 & 4.0 - 5.0 & Phổ biến nhất \\
+Xe tải lớn (5 tấn) & 5.0 & 20 & 6.0 - 7.5 & Đường dài \\
+Xe van (chở đồ cồng kềnh) & 0.8 & 8 & 2.0 - 3.0 & Đồ nội thất \\
+\bottomrule
+\multicolumn{5}{@{}l}{\footnotesize * Số liệu tham khảo tháng 11/2025, giá có thể thay đổi theo khu vực và thời điểm.}
+\end{tabularx}
+\end{center}
+
+\subsection*{Phụ lục 5: Mã nguồn ứng dụng (tham khảo)}
+\textbf{Giới thiệu:} Ứng dụng SmartLogi được phát triển bằng \textbf{HTML, CSS và JavaScript (vanilla JS)}.
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Cấu trúc 3 Tabs:} (1) Tính toán \& Miền nghiệm, (2) Phân tích kịch bản, (3) Học tập.
+\item \textbf{Thư viện:} \texttt{Chart.js} (vẽ biểu đồ), \texttt{SweetAlert2} (thông báo).
+\item \textbf{Đặc điểm:} Chạy trực tiếp từ file \texttt{.html}, không cần server.
+\end{itemize}
+
+\textbf{Thuật toán tối ưu (JavaScript):}
+\begin{verbatim}
+// Brute-force Integer Linear Programming
+function findOptimal(constraints, objective) {
+    let minCost = Infinity;
+    let optimalPoint = null;
+    
+    for (let x = 0; x <= maxA; x++) {
+        for (let y = 0; y <= maxB; y++) {
+            // Kiểm tra ràng buộc
+            if (loadA*x + loadB*y >= minLoad &&
+                volA*x + volB*y >= minVol) {
+                // Tính chi phí
+                const cost = costA*x + costB*y;
+                if (cost < minCost) {
+                    minCost = cost;
+                    optimalPoint = {x, y, cost};
+                }
+            }
+        }
+    }
+    return optimalPoint;
+}
+\end{verbatim}
+
+\textbf{Hướng dẫn cài đặt:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Không cần cài đặt. Chỉ cần gửi file \texttt{SmartLogi.html} cho học sinh.
+\item Yêu cầu mở bằng trình duyệt web (Chrome, Firefox, Edge...).
+\end{itemize}
+\end{competitionsection}
+
+\end{document}

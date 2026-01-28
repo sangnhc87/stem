@@ -1,0 +1,6 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {section}{Phần I: TỔNG QUAN}{1}{Doc-Start}%
+\contentsline {section}{Phần II: CHUẨN BỊ CỦA GIÁO VIÊN}{3}{Doc-Start}%
+\contentsline {section}{Phần III: KẾ HOẠCH DẠY HỌC ĐỀ XUẤT}{4}{Doc-Start}%
+\contentsline {section}{Phần IV: HƯỚNG DẪN HỌC SINH}{8}{Doc-Start}%
+\contentsline {section}{Phần V: CÁC PHỤ LỤC}{10}{Doc-Start}%

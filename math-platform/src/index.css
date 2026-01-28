@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom KaTeX Styling */
+.katex {
+    color: #c026d3;
+    /* Fuchsia-600 - A nice magenta shade */
+    font-size: 1.1em;
+    /* Slightly larger for better readability */
+}
+
+/* Ensure inline math doesn't break line height too much */
+.katex-display {
+    margin: 1em 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+}

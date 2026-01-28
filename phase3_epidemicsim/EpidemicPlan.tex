@@ -1,0 +1,737 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GIÁO ÁN STEM: EPIDEMICSIM - MÔ PHỎNG LÂY LAN DỊCH BỆNH
+% Môn: Toán 11 + Sinh học | Mô hình SIR và Hàm số Mũ
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+% --- GÓI CƠ BẢN ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,patterns,calc}
+\usepackage{fontawesome5}
+\usepackage{verbatim}
+\usepackage{colortbl}
+
+% --- FONT ---
+\usepackage{newtxtext, newtxmath}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{courier}
+\usepackage{microtype}
+
+% --- MÀU SẮC ---
+\usepackage[svgnames]{xcolor}
+\definecolor{primary}{RGB}{26,95,122}
+\definecolor{secondary}{RGB}{21,152,149}
+\definecolor{accent}{RGB}{255,107,53}
+\definecolor{danger}{RGB}{194,55,40}
+\definecolor{success}{RGB}{87,204,153}
+\definecolor{warning}{RGB}{244,162,97}
+\definecolor{TableHeader}{gray}{0.9}
+
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2cm,headheight=15.6pt]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrule}{\color{primary}\hrule width\textwidth height 1.5pt}
+\fancyhead[L]{\color{primary}\footnotesize\sffamily\textbf{SỞ GD\&ĐT TP.HCM - HỘI THI STEM/STEAM CẤP THÀNH PHỐ}}
+\fancyhead[R]{\color{primary}\footnotesize\sffamily\textbf{NĂM HỌC 2025-2026}}
+\fancyfoot[C]{\sffamily\thepage}
+\renewcommand{\footrule}{\color{primary}\hrule width\textwidth height 0.8pt}
+
+% --- GÓI HỖ TRỢ ---
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage[colorlinks=true,linkcolor=primary,urlcolor=accent,citecolor=success,
+    pdftitle={Giao an STEM: EpidemicSim},pdfauthor={Nguyen Van Sang}]{hyperref}
+
+% --- TIÊU ĐỀ ---
+\usepackage{titlesec}
+\titleformat{\subsection}{\normalfont\bfseries\color{accent}\sffamily}
+{\llap{\color{accent}\rule{1.2em}{1.2em}\hspace{0.5em}}}{0em}{}
+\titleformat{\subsubsection}{\normalfont\bfseries\itshape\color{secondary}\sffamily}
+{\llap{\color{secondary}\rule{1em}{1em}\hspace{0.5em}}}{0em}{}
+
+% --- MÔI TRƯỜNG ---
+\def\phanI{TỔNG QUAN}
+\def\phanII{CHUẨN BỊ CỦA GIÁO VIÊN}
+\def\phanIII{KẾ HOẠCH DẠY HỌC ĐỀ XUẤT}
+\def\phanIV{HƯỚNG DẪN HỌC SINH}
+\def\phanV{CÁC PHỤ LỤC}
+
+\newtcolorbox{competitionsection}[1]{
+    enhanced, breakable, colback=white, colframe=primary, boxrule=0.8pt,
+    fonttitle=\bfseries\sffamily\Huge, coltitle=white, colbacktitle=primary,
+    attach boxed title to top left={xshift=1cm, yshift=-1mm-\tcboxedtitleheight/2},
+    boxed title style={sharp corners, boxrule=0pt},
+    title={PHẦN #1: \csname phan#1\endcsname},
+    before upper={\addcontentsline{toc}{section}{Phần #1: \csname phan#1\endcsname}}
+}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\header}[1]{\cellcolor{TableHeader}\sffamily\bfseries#1}
+
+\newcommand{\teachingplan}[4]{
+\noindent\begin{minipage}{0.12\textwidth}\centering\bfseries\sffamily\color{primary}#1\end{minipage}%
+\begin{minipage}{0.23\textwidth}\sffamily\textbf{#2}\end{minipage}%
+\begin{minipage}{0.35\textwidth}\textit{#3}\end{minipage}%
+\begin{minipage}{0.25\textwidth}\small #4\end{minipage}
+\vspace{1ex}\par\noindent\color{primary!30}\rule{\textwidth}{0.4pt}\vspace{1ex}}
+
+\newtcolorbox{casestudy}{enhanced, breakable, colback=primary!5, colframe=primary!80, boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries\color{accent}TÌNH HUỐNG THỰC TIỄN: ĐẠI DỊCH VÀ TOÁN HỌC, fonttitle=\bfseries\sffamily}
+\newtcolorbox{keyformula}{enhanced, breakable, colback=accent!5, colframe=accent!80, boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries\color{primary}KIẾN THỨC TRỌNG TÂM, fonttitle=\bfseries\sffamily}
+\newtcolorbox{task}[1]{enhanced, breakable, colback=warning!10, colframe=warning!80, boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries\color{secondary}NHIỆM VỤ: #1, fonttitle=\bfseries\sffamily}
+\newtcolorbox{phieuhoc_tap_box}[1]{enhanced, breakable, colback=white, colframe=success, boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries #1, fonttitle=\bfseries\sffamily, coltitle=white}
+
+\setlist[itemize,1]{label=\textbullet, leftmargin=*, nosep}
+\setlist[itemize,2]{label=--, leftmargin=*, nosep}
+\setlist[description]{font=\bfseries\sffamily\color{primary}, nosep}
+
+\begin{document}
+
+% --- TRANG BÌA ---
+\begin{titlepage}
+\begin{tikzpicture}[remember picture, overlay]
+\node[rectangle, fill=primary, anchor=north, minimum width=\paperwidth, minimum height=2cm] (header) at (current page.north){};
+\node[anchor=south, yshift=2mm, text=white] at (header.south) {\Huge\sffamily\bfseries GIÁO ÁN DỰ THI STEM/STEAM CẤP THÀNH PHỐ};
+\end{tikzpicture}
+
+\vspace{2cm}
+\begin{center}
+{\LARGE\bfseries\color{primary}\sffamily SỞ GIÁO DỤC VÀ ĐÀO TẠO THÀNH PHỐ HỒ CHÍ MINH}\\
+\vspace{0.5cm}
+{\Large\bfseries\sffamily HỘI THI THIẾT KẾ CHỦ ĐỀ DẠY HỌC STEM/STEAM}\\
+\vspace{0.3cm}
+{\large\sffamily Năm học 2025 - 2026}
+
+\vspace{2cm}
+
+\begin{tcolorbox}[width=0.9\textwidth, colback=gray!5, colframe=primary, arc=2mm, boxrule=1pt]
+    \centering
+    {\LARGE\bfseries\sffamily CHỦ ĐỀ:} \\
+    {\Huge\bfseries\color{danger}\sffamily EPIDEMICSIM}\\
+    \vspace{0.25cm}
+    {\Large\sffamily MÔ PHỎNG LÂY LAN DỊCH BỆNH}\\
+    \vspace{0.25cm}
+    {\large\sffamily Ứng dụng Mô hình SIR và Hàm số Mũ trong Dịch tễ học}
+\end{tcolorbox}
+
+\vspace{1.5cm}
+{\Large\bfseries\sffamily MÔN: TOÁN + SINH HỌC - KHỐI: 11}
+
+\vfill
+\large
+\begin{tabular}{rl}
+\sffamily\bfseries Giáo viên: & Nguyễn Văn Sang\\
+\sffamily\bfseries Đơn vị: & Trường THPT Nguyễn Hữu Cảnh\\
+\sffamily\bfseries Số điện thoại: & 0389\,821\,115\\
+\end{tabular}
+
+\vspace{1cm}
+{\large\sffamily Thành phố Hồ Chí Minh, tháng 11 năm 2025}
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\thispagestyle{empty}
+
+%%%%% PHẦN I: TỔNG QUAN %%%%%
+\begin{competitionsection}{I}
+\vspace{0.5cm}
+\subsection*{1.1. Thông tin cá nhân}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Họ và tên:} Nguyễn Văn Sang
+\item \textbf{Chuyên môn:} Toán học
+\item \textbf{Thâm niên:} 15 năm giảng dạy THPT
+\item \textbf{Đơn vị:} Trường THPT Nguyễn Hữu Cảnh, TP.HCM
+\end{itemize}
+
+\subsection*{1.2. Giới thiệu chủ đề}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tên chủ đề:} \textcolor{danger}{EpidemicSim: Mô phỏng lây lan dịch bệnh bằng Mô hình SIR và Hàm số Mũ}
+\item \textbf{Bối cảnh thực tiễn:}
+    \begin{itemize}
+    \item Đại dịch COVID-19 cho thấy tầm quan trọng của việc hiểu cách dịch bệnh lây lan
+    \item Các tin tức về ``làm phẳng đường cong'' và ``miễn dịch cộng đồng'' cần được giải thích bằng Toán học
+    \item Học sinh cần thấy được ứng dụng thực tiễn của Hàm số Mũ trong y tế công cộng
+    \end{itemize}
+\item \textbf{Điểm mới và sáng tạo:}
+    \begin{itemize}
+    \item \textbf{Liên môn:} Kết hợp Toán học (Hàm số mũ, PT vi phân) + Sinh học (Dịch tễ học, Miễn dịch)
+    \item \textbf{Mô phỏng động:} Công cụ web trực quan hóa quá trình lây lan theo thời gian thực
+    \item \textbf{Ra quyết định:} Học sinh đóng vai chuyên gia y tế, đề xuất chính sách phòng dịch
+    \item \textbf{Thời sự:} Liên hệ trực tiếp với kinh nghiệm COVID-19 của học sinh
+    \end{itemize}
+\end{itemize}
+
+\subsection*{1.3. Căn cứ thiết kế}
+\begin{minipage}{0.48\textwidth}
+\textbf{Căn cứ pháp lý:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Chương trình GDPT 2018 môn Toán lớp 11 (Hàm số mũ và logarit)
+\item Công văn 5555/BGDĐT-GDTrH về dạy học STEM
+\item Kế hoạch số 4500/KH-SGDĐT của Sở GD\&ĐT TP.HCM
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\textbf{Cơ sở lý luận:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Mô hình SIR (Kermack-McKendrick, 1927) trong Dịch tễ học
+\item Mô hình 5E (Engage, Explore, Explain, Elaborate, Evaluate)
+\item Học tập dựa trên mô phỏng (Simulation-Based Learning)
+\end{itemize}
+\end{minipage}
+
+\subsection*{1.4. Mục tiêu giáo dục}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{} L L L @{}}
+\toprule
+\header{Kiến thức} & \header{Kỹ năng} & \header{Thái độ} \\
+\midrule
+\parbox[t]{\dimexpr1.\linewidth-2\tabcolsep}{
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Hiểu mô hình SIR và các tham số dịch tễ
+        \item Áp dụng hàm số mũ để mô tả tăng trưởng dịch
+        \item Tính hệ số lây nhiễm $R_0$ và ngưỡng miễn dịch cộng đồng
+    \end{itemize}
+} &
+\parbox[t]{\dimexpr1.\linewidth-2\tabcolsep}{
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Mô hình hóa bài toán thực tế
+        \item Sử dụng công nghệ mô phỏng
+        \item Đọc hiểu đồ thị, phân tích kịch bản
+        \item Ra quyết định dựa trên dữ liệu
+    \end{itemize}
+} &
+\parbox[t]{\dimexpr1.\linewidth-2\tabcolsep}{
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Ý thức phòng chống dịch bệnh
+        \item Tư duy phản biện với thông tin y tế
+        \item Trách nhiệm với sức khỏe cộng đồng
+    \end{itemize}
+} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{1.5. Cấu trúc chương trình}
+\begin{center}
+\begin{tikzpicture}[node distance=1.5cm, every node/.style={font=\sffamily}]
+\node (start) [rectangle, rounded corners, fill=primary!20, text width=4.5cm, align=center, minimum height=1.2cm] {\textbf{Khám phá thực tiễn}\\ Đại dịch COVID-19 đã lây lan như thế nào?};
+\node (mid1) [rectangle, rounded corners, fill=accent!20, text width=4.5cm, align=center, below of=start, yshift=-1.2cm, minimum height=1.2cm] {\textbf{Xây dựng mô hình Toán}\\ Hàm số mũ, Mô hình SIR};
+\node (mid2) [rectangle, rounded corners, fill=primary!20, text width=4.5cm, align=center, below of=mid1, yshift=-1.2cm, minimum height=1.2cm] {\textbf{Mô phỏng và phân tích}\\ Ứng dụng EpidemicSim.html};
+\node (end) [rectangle, rounded corners, fill=accent!20, text width=4.5cm, align=center, below of=mid2, yshift=-1.2cm, minimum height=1.2cm] {\textbf{Ra quyết định}\\ Đề xuất chính sách phòng dịch};
+\draw[->, thick, color=primary] (start) -- (mid1) node[midway, right, text width=3cm, align=center] {\footnotesize \textbf{S} (Sinh học)};
+\draw[->, thick, color=primary] (mid1) -- (mid2) node[midway, right, text width=3cm, align=center] {\footnotesize \textbf{T+M} (Công nghệ + Toán)};
+\draw[->, thick, color=primary] (mid2) -- (end) node[midway, right, text width=3cm, align=center] {\footnotesize \textbf{E} (Kỹ thuật/Chính sách)};
+\end{tikzpicture}
+\end{center}
+\end{competitionsection}
+\newpage
+
+%%%%% PHẦN II: CHUẨN BỊ %%%%%
+\begin{competitionsection}{II}
+\vspace{0.5cm}
+\subsection*{2.1. Thiết bị và công nghệ}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Phần cứng:}
+    \begin{itemize}
+    \item Máy tính hoặc điện thoại thông minh có trình duyệt web
+    \item Máy chiếu tương tác (nếu có)
+    \end{itemize}
+\item \textbf{Phần mềm và nền tảng:}
+    \begin{itemize}
+    \item \textbf{Học liệu số chính:} Ứng dụng web \texttt{EpidemicSim.html} hoặc \href{https://stem-1h8.pages.dev/EpidemicSim.html}{stem-1h8.pages.dev/EpidemicSim.html}
+    \item \textit{Yêu cầu:} Trình duyệt web (Chrome, Firefox, Edge...)
+    \item Padlet/Jamboard để chia sẻ kết quả nhóm
+    \end{itemize}
+\item \textbf{Tài liệu:}
+    \begin{itemize}
+    \item Phiếu học tập số 1: Khám phá Mô hình SIR
+    \item Phiếu học tập số 2: Hướng dẫn sử dụng EpidemicSim
+    \item Phiếu khảo sát trước/sau học
+    \item Rubric đánh giá sản phẩm
+    \end{itemize}
+\end{itemize}
+
+\subsection*{2.2. Kịch bản giảng dạy (2 tiết = 90 phút)}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{} L L L L L @{}}
+\toprule
+\header{Thời lượng} & \header{Hoạt động} & \header{Phương pháp} & \header{Công cụ} & \header{Đánh giá} \\
+\midrule
+10' & Khởi động: Dịch COVID-19 & Đàm thoại & Clip + Số liệu thực & Quan sát hứng thú \\
+15' & Khám phá Mô hình SIR & Khám phá có hướng dẫn & PHT số 1 & Phiếu trả lời \\
+\rowcolor{primary!10}
+10' & Giới thiệu EpidemicSim & Demo ứng dụng & Web App (3 tabs) & Câu hỏi phản hồi \\
+\rowcolor{primary!10}
+25' & Mô phỏng và phân tích & Học qua dự án & EpidemicSim & Nhật ký học tập \\
+\rowcolor{primary!10}
+15' & So sánh kịch bản & Hợp tác nhóm & Tab 2: So sánh & Peer assessment \\
+10' & Trình bày sản phẩm & Thuyết trình & Google Slides & Rubric đánh giá \\
+5' & Tổng kết & Suy ngẫm & Tab 3: Học tập & Khảo sát sau học \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{2.3. Đánh giá đa chiều}
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Đánh giá quá trình:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Phiếu quan sát nhóm:} Mức độ hợp tác, tư duy phản biện
+\item \textbf{Nhật ký học tập:} Suy nghĩ cá nhân, câu hỏi đặt ra
+\item \textbf{Đánh giá đồng cấp:} Học sinh đánh giá lẫn nhau
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{Đánh giá sản phẩm:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Rubric 4 tiêu chí:}
+    \begin{itemize}
+    \item Hiểu mô hình SIR (4 điểm)
+    \item Sử dụng công nghệ mô phỏng (4 điểm)
+    \item Phân tích và ra quyết định (4 điểm)
+    \item Trình bày và bảo vệ (4 điểm)
+    \end{itemize}
+\end{itemize}
+\end{minipage}
+
+\subsection*{2.4. Kế hoạch dự phòng}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tình huống 1:} Mất điện hoặc mất kết nối Internet
+    \begin{itemize}
+    \item Ứng dụng \texttt{EpidemicSim.html} \textbf{không cần Internet}, chỉ cần mở bằng trình duyệt.
+    \item Dự phòng: Sử dụng bảng tính Excel với công thức SIR đã chuẩn bị sẵn.
+    \end{itemize}
+\item \textbf{Tình huống 2:} Học sinh không có thiết bị cá nhân
+    \begin{itemize}
+    \item Sắp xếp nhóm 3-4 học sinh/1 máy tính
+    \item Luân phiên sử dụng thiết bị
+    \end{itemize}
+\item \textbf{Tình huống 3:} Học sinh tiếp thu nhanh
+    \begin{itemize}
+    \item Giao nhiệm vụ mở rộng: Nghiên cứu mô hình SEIR (thêm nhóm Exposed)
+    \item Tìm hiểu số liệu thực từ WHO
+    \end{itemize}
+\end{itemize}
+\end{competitionsection}
+
+%%%%% PHẦN III: KẾ HOẠCH DẠY HỌC %%%%%
+\begin{competitionsection}{III}
+\vspace{0.5cm}
+\subsection*{3.1. Tiến trình hai tiết học (Tóm tắt)}
+\teachingplan{10'}{Khởi động}{Video/Số liệu COVID-19: ``Tại sao số ca tăng theo cấp số nhân?''}{Công nghệ: Clip + Infographic}
+\teachingplan{15'}{Khám phá mô hình SIR}{Phiếu học tập: S-I-R là gì? Ý nghĩa các tham số}{PP: Khám phá có hướng dẫn}
+\teachingplan{10'}{Demo EpidemicSim}{Giới thiệu 3 tabs: Mô phỏng, So sánh, Học tập}{Công nghệ: Web App}
+\teachingplan{25'}{Mô phỏng và phân tích}{Thực hành mô phỏng, thay đổi tham số, quan sát kết quả}{PP: Học qua dự án}
+\teachingplan{15'}{So sánh kịch bản}{So sánh: Không can thiệp vs Giãn cách vs Tiêm chủng}{Công cụ: Biểu đồ so sánh}
+\teachingplan{10'}{Trình bày}{Thuyết trình: Đề xuất chính sách phòng dịch cho địa phương}{PP: Thuyết trình nhóm}
+\teachingplan{5'}{Tổng kết}{Kiến thức SIR, Hàm mũ, Ý nghĩa thực tiễn}{Tab 3: Học tập}
+
+\subsection*{3.2. Kịch bản chi tiết}
+
+\begin{casestudy}
+Năm 2020, đại dịch COVID-19 bùng phát và lan rộng toàn cầu. Tại Việt Nam, từ 0 ca ban đầu, số ca nhiễm tăng theo cấp số nhân, đặc biệt trong làn sóng Delta.
+
+\textbf{Thách thức:} Là một chuyên gia dịch tễ học, bạn cần:
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Hiểu cách dịch bệnh lây lan theo mô hình toán học
+\item Dự đoán ``đỉnh dịch'' sẽ xảy ra khi nào
+\item Đề xuất biện pháp can thiệp (giãn cách, tiêm chủng) để ``làm phẳng đường cong''
+\end{itemize}
+\end{casestudy}
+
+\subsubsection*{Hoạt động 1: Khởi động - Kết nối thực tiễn (10 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} Giáo viên trình chiếu biểu đồ số ca COVID-19 tại Việt Nam (2020-2022)
+\item \textbf{Bước 2:} Đặt câu hỏi kích thích tư duy:
+    \begin{itemize}
+    \item \textit{``Tại sao số ca nhiễm tăng rất nhanh ở giai đoạn đầu?''}
+    \item \textit{``Miễn dịch cộng đồng là gì? Cần bao nhiêu \% dân số có miễn dịch?''}
+    \end{itemize}
+\item \textbf{Bước 3:} Học sinh thảo luận cặp đôi và chia sẻ ý kiến
+\item \textbf{Chuyển tiếp:} \textit{``Toán học có thể giúp chúng ta dự đoán và kiểm soát dịch bệnh!''}
+\end{itemize}
+
+\subsubsection*{Hoạt động 2: Khám phá Mô hình SIR (15 phút)}
+\begin{task}{Nhóm}
+\textbf{Nhiệm vụ:} Tìm hiểu mô hình SIR qua Phiếu học tập số 1
+
+\textbf{Nội dung:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{S} (Susceptible): Người có thể bị lây nhiễm
+\item \textbf{I} (Infected): Người đang nhiễm bệnh
+\item \textbf{R} (Recovered): Người đã khỏi bệnh và có miễn dịch
+\end{itemize}
+\end{task}
+
+\begin{keyformula}
+\textbf{Hệ phương trình vi phân SIR:}
+$$\frac{dS}{dt} = -\beta \cdot \frac{S \cdot I}{N}, \quad \frac{dI}{dt} = \beta \cdot \frac{S \cdot I}{N} - \gamma \cdot I, \quad \frac{dR}{dt} = \gamma \cdot I$$
+
+\textbf{Các tham số:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item $\beta$ = Tỷ lệ lây nhiễm (số người bị lây/người nhiễm/ngày)
+\item $\gamma$ = Tỷ lệ hồi phục (1/thời gian nhiễm trung bình)
+\item $R_0 = \beta/\gamma$ = Hệ số lây nhiễm cơ bản
+\item Nếu $R_0 > 1$: Dịch bùng phát | Nếu $R_0 < 1$: Dịch tự tắt
+\end{itemize}
+
+\textbf{Giai đoạn đầu (Hàm số mũ):}
+$$I(t) = I_0 \cdot e^{(\beta - \gamma) \cdot t} = I_0 \cdot e^{r \cdot t}$$
+\end{keyformula}
+
+\subsubsection*{Hoạt động 3: Demo ứng dụng EpidemicSim (10 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} Giáo viên demo ứng dụng web EpidemicSim.html
+\item \textbf{Bước 2:} Giới thiệu 3 tab:
+    \begin{itemize}
+    \item \textbf{Tab 1 - Mô phỏng:} Nhập tham số, xem biểu đồ SIR động
+    \item \textbf{Tab 2 - So sánh kịch bản:} Thêm kịch bản, so sánh đỉnh dịch
+    \item \textbf{Tab 3 - Học tập:} Công thức, kiến thức dịch tễ học
+    \end{itemize}
+\item \textbf{Bước 3:} Thay đổi tham số $\beta$ và quan sát sự thay đổi của đồ thị
+\end{itemize}
+
+\subsubsection*{Hoạt động 4: Mô phỏng và phân tích (25 phút)}
+\begin{task}{Nhóm}
+\textbf{Nhiệm vụ:} Sử dụng EpidemicSim để mô phỏng 3 kịch bản
+
+\textbf{Kịch bản 1 - Không can thiệp:} $\beta = 0.4$, $\gamma = 0.1$, Tiêm chủng = 0\%
+
+\textbf{Kịch bản 2 - Giãn cách xã hội:} $\beta = 0.2$, $\gamma = 0.1$, Tiêm chủng = 0\%
+
+\textbf{Kịch bản 3 - Tiêm chủng 50\%:} $\beta = 0.4$, $\gamma = 0.1$, Tiêm chủng = 50\%
+
+\textbf{Yêu cầu:} Ghi lại đỉnh dịch (số ca max) và ngày đỉnh dịch của mỗi kịch bản.
+\end{task}
+
+\subsubsection*{Hoạt động 5: So sánh và trình bày (15 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} 2 nhóm trình bày kết quả so sánh 3 kịch bản
+\item \textbf{Bước 2:} Các nhóm khác đặt câu hỏi phản biện
+\item \textbf{Bước 3:} Giáo viên đặt câu hỏi mở rộng:
+    \begin{itemize}
+    \item \textit{``Tại sao giãn cách xã hội làm giảm $\beta$?''}
+    \item \textit{``Cần tiêm chủng bao nhiêu \% để đạt miễn dịch cộng đồng?''}
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Hoạt động 6: Tổng kết (5 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Kiến thức trọng tâm:}
+    \begin{itemize}
+    \item Mô hình SIR giúp dự đoán diễn biến dịch bệnh
+    \item Hàm số mũ mô tả giai đoạn đầu của dịch
+    \item $R_0 > 1$ là điều kiện để dịch bùng phát
+    \item Giãn cách và tiêm chủng là hai biện pháp ``làm phẳng đường cong''
+    \end{itemize}
+\item \textbf{Bài tập về nhà:}
+    \begin{itemize}
+    \item Tìm hiểu $R_0$ của các bệnh khác (Sởi, Cúm, Ebola)
+    \item Tính ngưỡng miễn dịch cộng đồng $H = 1 - 1/R_0$ cho mỗi bệnh
+    \end{itemize}
+\end{itemize}
+\end{competitionsection}
+\newpage
+
+%%%%% PHẦN IV: HƯỚNG DẪN HỌC SINH %%%%%
+\begin{competitionsection}{IV}
+\vspace{0.5cm}
+\subsection*{4.1. Hướng dẫn chi tiết cho học sinh}
+\subsubsection*{Giai đoạn 1: Tìm hiểu Mô hình SIR}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} Đọc kỹ tình huống đại dịch COVID-19
+\item \textbf{Bước 2:} Xác định 3 nhóm dân số:
+    \begin{itemize}
+    \item \textbf{S (Susceptible):} Người có thể bị lây (chưa có miễn dịch)
+    \item \textbf{I (Infected):} Người đang nhiễm bệnh
+    \item \textbf{R (Recovered):} Người đã khỏi bệnh và có miễn dịch
+    \end{itemize}
+\item \textbf{Bước 3:} Viết công thức $R_0 = \beta / \gamma$ và giải thích ý nghĩa
+\item \textbf{Bước 4:} Tính ngưỡng miễn dịch cộng đồng $H = 1 - 1/R_0$
+\end{itemize}
+
+\subsubsection*{Giai đoạn 2: Sử dụng EpidemicSim}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1: Mở ứng dụng}
+    \begin{itemize}
+    \item Mở file \texttt{EpidemicSim.html} bằng trình duyệt hoặc truy cập website
+    \end{itemize}
+\item \textbf{Bước 2: Tab 1 - Mô phỏng}
+    \begin{itemize}
+    \item Nhập dân số (N = 10,000)
+    \item Nhập số ca ban đầu ($I_0$ = 10)
+    \item Điều chỉnh $\beta$ và $\gamma$ bằng thanh trượt
+    \item Nhấn ``Chạy mô phỏng'' và quan sát biểu đồ
+    \end{itemize}
+\item \textbf{Bước 3: Tab 2 - So sánh kịch bản}
+    \begin{itemize}
+    \item Thêm các kịch bản khác nhau (thay đổi $\beta$, tỷ lệ tiêm chủng)
+    \item Nhấn ``So sánh'' để xem biểu đồ cột so sánh đỉnh dịch
+    \end{itemize}
+\item \textbf{Bước 4: Tab 3 - Học tập}
+    \begin{itemize}
+    \item Đọc công thức SIR và Hàm số mũ
+    \item Tìm hiểu ngưỡng miễn dịch cộng đồng của các bệnh khác nhau
+    \end{itemize}
+\end{itemize}
+
+\subsubsection*{Giai đoạn 3: Phân tích và trình bày}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} So sánh các kịch bản dựa trên:
+    \begin{itemize}
+    \item Đỉnh dịch (số ca nhiễm cao nhất)
+    \item Ngày đỉnh dịch
+    \item Tổng số ca nhiễm
+    \end{itemize}
+\item \textbf{Bước 2:} Đề xuất chính sách phòng dịch cho địa phương
+\item \textbf{Bước 3:} Chuẩn bị trình bày 3-5 phút
+\end{itemize}
+
+\subsection*{4.2. Gợi ý mở rộng}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tìm hiểu sâu về Dịch tễ học:}
+    \begin{itemize}
+    \item Mô hình SEIR (thêm nhóm Exposed - đã nhiễm nhưng chưa lây)
+    \item Số liệu thực từ WHO và Bộ Y tế Việt Nam
+    \end{itemize}
+\item \textbf{Liên hệ môn Sinh học:}
+    \begin{itemize}
+    \item Cơ chế lây lan virus qua giọt bắn, tiếp xúc
+    \item Nguyên lý hoạt động của vaccine
+    \item Miễn dịch tự nhiên vs miễn dịch nhân tạo
+    \end{itemize}
+\item \textbf{Ứng dụng thực tế:}
+    \begin{itemize}
+    \item Theo dõi tin tức dịch bệnh và phân tích bằng kiến thức đã học
+    \item Tham gia các hoạt động tuyên truyền phòng dịch tại trường
+    \end{itemize}
+\end{itemize}
+\end{competitionsection}
+\newpage
+
+%%%%% PHẦN V: PHỤ LỤC %%%%%
+\begin{competitionsection}{V}
+\vspace{0.5cm}
+\subsection*{Phụ lục 1: Phiếu học tập số 1 - Khám phá Mô hình SIR}
+\begin{phieuhoc_tap_box}{Phụ lục 1: Phiếu học tập số 1 - Mô hình SIR}
+\textbf{Tình huống:} Một thành phố có 10,000 dân. Có 10 ca nhiễm bệnh X ban đầu.
+
+\vspace{0.5cm}
+\textbf{Bài 1: Xác định 3 nhóm dân số}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{S} (Susceptible) = \underline{\hspace{6cm}} người
+\item \textbf{I} (Infected) = \underline{\hspace{6cm}} người
+\item \textbf{R} (Recovered) = \underline{\hspace{6cm}} người
+\item Kiểm tra: S + I + R = \underline{\hspace{2cm}} = N (dân số)
+\end{itemize}
+
+\textbf{Bài 2: Tính $R_0$ (điền vào chỗ trống)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Biết $\beta = 0.3$ (tỷ lệ lây nhiễm/ngày), $\gamma = 0.1$ (tỷ lệ hồi phục/ngày)
+\item $R_0 = \beta / \gamma = \underline{\hspace{2cm}} / \underline{\hspace{2cm}} = \underline{\hspace{2cm}}$
+\item Ý nghĩa: Mỗi người nhiễm trung bình lây cho \underline{\hspace{2cm}} người khác
+\end{itemize}
+
+\textbf{Bài 3: Ngưỡng miễn dịch cộng đồng}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Công thức: $H = 1 - 1/R_0 = 1 - 1/\underline{\hspace{1cm}} = \underline{\hspace{2cm}}$
+\item Ý nghĩa: Cần \underline{\hspace{2cm}}\% dân số có miễn dịch để dịch tự tắt
+\end{itemize}
+
+\textbf{Bài 4: Dự đoán}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Dịch có bùng phát không? ($R_0 > 1$ hay $R_0 < 1$): \underline{\hspace{4cm}}
+\item Nếu không can thiệp, dự đoán số ca nhiễm sau 30 ngày: \underline{\hspace{4cm}}
+\end{itemize}
+\end{phieuhoc_tap_box}
+
+\newpage
+\subsection*{Phụ lục 2: Phiếu học tập số 2 - Hướng dẫn sử dụng EpidemicSim}
+\begin{phieuhoc_tap_box}{Phụ lục 2: Nhiệm vụ với Web App EpidemicSim.html}
+\textbf{I. Giới thiệu ứng dụng}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Địa chỉ:} \href{https://stem-1h8.pages.dev/EpidemicSim.html}{stem-1h8.pages.dev/EpidemicSim.html} hoặc file \texttt{EpidemicSim.html}
+\item \textbf{Cấu trúc 3 Tab:} (1) Mô phỏng, (2) So sánh kịch bản, (3) Học tập
+\end{itemize}
+
+\textbf{II. Nhiệm vụ thực hành}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1: Tab ``Mô phỏng''}
+    \begin{itemize}
+    \item Nhập: N = 10,000 | $I_0$ = 10 | $\beta$ = 0.3 | $\gamma$ = 0.1 | Tiêm chủng = 0\%
+    \item Nhấn ``Chạy mô phỏng''
+    \item Ghi lại: Đỉnh dịch = \underline{\hspace{2cm}} ca | Ngày đỉnh = \underline{\hspace{2cm}}
+    \end{itemize}
+\item \textbf{Bước 2: Tab ``So sánh kịch bản''}
+    \begin{itemize}
+    \item Thêm Kịch bản 2: $\beta$ = 0.2 (giãn cách xã hội)
+    \item Thêm Kịch bản 3: Tiêm chủng = 50\%
+    \item Nhấn ``So sánh''
+    \item Kịch bản nào tốt nhất? \underline{\hspace{6cm}}
+    \end{itemize}
+\item \textbf{Bước 3: Tab ``Học tập''}
+    \begin{itemize}
+    \item Đọc công thức $H = 1 - 1/R_0$
+    \item Với COVID-19 ($R_0 \approx 2.5$), ngưỡng miễn dịch = \underline{\hspace{2cm}}\%
+    \end{itemize}
+\end{itemize}
+
+\textbf{III. Kết luận}
+
+Chính sách phòng dịch nhóm em đề xuất: \underline{\hspace{0.8\textwidth}}
+
+Lý do: \underline{\hspace{0.9\textwidth}}
+\end{phieuhoc_tap_box}
+
+\newpage
+\subsection*{Phụ lục 3: Rubric đánh giá sản phẩm}
+\begin{tabularx}{\linewidth}{@{} >{\raggedright\arraybackslash}p{3cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X @{}}
+    \toprule
+    \rowcolor{TableHeader}
+    \sffamily\bfseries Tiêu chí & \sffamily\bfseries Xuất sắc (4đ) & \sffamily\bfseries Khá (3đ) & \sffamily\bfseries Cần cải thiện (1-2đ) \\
+    \midrule
+    
+    \textbf{Hiểu mô hình SIR} 
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Giải thích đúng S, I, R
+        \item Tính đúng $R_0$ và $H$
+        \item Hiểu ý nghĩa các tham số
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Hiểu cơ bản S, I, R
+        \item Tính đúng công thức
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Nhầm lẫn các khái niệm
+        \item Tính sai công thức
+    \end{itemize} \\
+    \addlinespace
+    
+    \textbf{Sử dụng EpidemicSim} 
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Thành thạo cả 3 tabs
+        \item So sánh 3+ kịch bản
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Sử dụng tốt Tab 1, 2
+        \item So sánh 2 kịch bản
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Chỉ dùng được Tab 1
+        \item Không so sánh được
+    \end{itemize} \\
+    \addlinespace
+    
+    \textbf{Phân tích \& Ra quyết định} 
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Đề xuất chính sách hợp lý
+        \item Lý giải dựa trên dữ liệu
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Đề xuất cơ bản
+        \item Có lý giải
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Không đề xuất được
+        \item Thiếu lý giải
+    \end{itemize} \\
+    \addlinespace
+    
+    \textbf{Trình bày} 
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Mạch lạc, logic
+        \item Có biểu đồ minh họa
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Trình bày rõ ràng
+        \item Có hỗ trợ trực quan
+    \end{itemize}
+    & 
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Trình bày rời rạc
+        \item Không có minh họa
+    \end{itemize} \\
+    \bottomrule
+\end{tabularx}
+\vspace{1em}
+\noindent\textbf{Tổng điểm:} \underline{\hspace{2cm}}/16 điểm
+
+\newpage
+\subsection*{Phụ lục 4: Bảng tham khảo $R_0$ các bệnh thường gặp}
+\begin{center}
+\begin{tabularx}{0.95\linewidth}{@{} l C C C @{}}
+\toprule
+\header{Bệnh} & \header{$R_0$ (ước tính)} & \header{Ngưỡng miễn dịch $H$} & \header{Đặc điểm} \\
+\midrule
+COVID-19 (gốc) & 2.5 - 3.0 & 60-67\% & Lây qua giọt bắn, tiếp xúc \\
+COVID-19 (Delta) & 5 - 8 & 80-88\% & Biến thể lây lan nhanh hơn \\
+Cúm mùa & 1.2 - 1.5 & 17-33\% & Lây theo mùa \\
+Sởi & 12 - 18 & 92-94\% & Rất dễ lây, cần tiêm chủng cao \\
+Ebola & 1.5 - 2.5 & 33-60\% & Lây qua dịch cơ thể \\
+HIV/AIDS & 2 - 5 & 50-80\% & Lây qua máu, tình dục \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{Phụ lục 5: Mã nguồn thuật toán SIR (JavaScript)}
+\begin{verbatim}
+function simulateSIR(N, I0, beta, gamma, days) {
+    let S = N - I0;
+    let I = I0;
+    let R = 0;
+    
+    const data = { days: [0], S: [S], I: [I], R: [R] };
+    
+    for (let t = 1; t <= days; t++) {
+        const dS = -beta * S * I / N;
+        const dI = beta * S * I / N - gamma * I;
+        const dR = gamma * I;
+        
+        S = Math.max(0, S + dS);
+        I = Math.max(0, I + dI);
+        R = Math.min(N, R + dR);
+        
+        data.days.push(t);
+        data.S.push(Math.round(S));
+        data.I.push(Math.round(I));
+        data.R.push(Math.round(R));
+    }
+    return data;
+}
+\end{verbatim}
+
+\textbf{Hướng dẫn:} Học sinh có thể xem mã nguồn đầy đủ bằng cách nhấn F12 (DevTools) hoặc View Source.
+\end{competitionsection}
+
+\end{document}

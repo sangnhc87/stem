@@ -1,0 +1,509 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GIÁO ÁN STEM: HÀM SỐ MŨ VÀ MÔ HÌNH TĂNG TRƯỞNG DỊCH BỆNH
+% Môn: Toán 11 | Chương: Hàm số mũ và Logarit
+% Phiên bản 2.0: Tiếp cận từ Toán học → Ứng dụng thực tiễn
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+% --- GÓI CƠ BẢN ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{wrapfig}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,patterns,calc}
+\usepackage{fontawesome5}
+\usepackage{verbatim}
+
+% --- FONT ---
+\usepackage{newtxtext, newtxmath}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{courier}
+\usepackage{microtype}
+
+% --- MÀU SẮC ---
+\usepackage[svgnames]{xcolor}
+\definecolor{primary}{RGB}{0,102,153}
+\definecolor{secondary}{RGB}{51,153,102}
+\definecolor{accent}{RGB}{255,102,0}
+\definecolor{mathblue}{RGB}{0,51,102}
+\definecolor{success}{RGB}{34,139,34}
+\definecolor{TableHeader}{gray}{0.9}
+
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2cm,headheight=15.6pt]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrule}{\color{primary}\hrule width\textwidth height 1.5pt}
+\fancyhead[L]{\color{primary}\footnotesize\sffamily\textbf{SỞ GD\&ĐT TP.HCM - HỘI THI STEM/STEAM CẤP THÀNH PHỐ}}
+\fancyhead[R]{\color{primary}\footnotesize\sffamily\textbf{NĂM HỌC 2025-2026}}
+\fancyfoot[C]{\sffamily\thepage}
+\renewcommand{\footrule}{\color{primary}\hrule width\textwidth height 0.8pt}
+
+% --- GÓI HỖ TRỢ ---
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage[colorlinks=true,linkcolor=primary,urlcolor=accent,citecolor=success,
+    pdftitle={Giao an STEM: Ham so Mu va Mo hinh Dich benh},pdfauthor={Nguyen Van Sang}]{hyperref}
+
+% --- TIÊU ĐỀ ---
+\usepackage{titlesec}
+\titleformat{\subsection}{\normalfont\bfseries\color{accent}\sffamily}
+{\llap{\color{accent}\rule{1.2em}{1.2em}\hspace{0.5em}}}{0em}{}
+\titleformat{\subsubsection}{\normalfont\bfseries\itshape\color{secondary}\sffamily}
+{\llap{\color{secondary}\rule{1em}{1em}\hspace{0.5em}}}{0em}{}
+
+% --- MÔI TRƯỜNG ---
+\def\phanI{TỔNG QUAN}
+\def\phanII{CHUẨN BỊ CỦA GIÁO VIÊN}
+\def\phanIII{KẾ HOẠCH DẠY HỌC ĐỀ XUẤT}
+\def\phanIV{HƯỚNG DẪN HỌC SINH}
+\def\phanV{CÁC PHỤ LỤC}
+
+\newtcolorbox{competitionsection}[1]{
+    enhanced, breakable, colback=white, colframe=primary, boxrule=0.8pt,
+    fonttitle=\bfseries\sffamily\Huge, coltitle=white, colbacktitle=primary,
+    attach boxed title to top left={xshift=1cm, yshift=-1mm-\tcboxedtitleheight/2},
+    boxed title style={sharp corners, boxrule=0pt},
+    title={PHẦN #1: \csname phan#1\endcsname},
+    before upper={\addcontentsline{toc}{section}{Phần #1: \csname phan#1\endcsname}}
+}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\header}[1]{\cellcolor{TableHeader}\sffamily\bfseries#1}
+
+\newtcolorbox{mathbox}{enhanced, breakable, colback=mathblue!5, colframe=mathblue!80, boxrule=1.5pt, arc=2mm,
+    title=\sffamily\bfseries\color{white}KIẾN THỨC TOÁN HỌC, fonttitle=\bfseries\sffamily, colbacktitle=mathblue}
+\newtcolorbox{realworld}{enhanced, breakable, colback=accent!5, colframe=accent!80, boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries\color{primary}ỨNG DỤNG THỰC TIỄN, fonttitle=\bfseries\sffamily}
+\newtcolorbox{task}[1]{enhanced, breakable, colback=secondary!10, colframe=secondary!80, boxrule=1pt, arc=2mm,
+    title=\sffamily\bfseries\color{white}NHIỆM VỤ: #1, fonttitle=\bfseries\sffamily, colbacktitle=secondary}
+
+\setlist[itemize,1]{label=\textbullet, leftmargin=*, nosep}
+\setlist[itemize,2]{label=--, leftmargin=*, nosep}
+\setlist[description]{font=\bfseries\sffamily\color{primary}, nosep}
+
+\begin{document}
+
+% --- TRANG BÌA ---
+\begin{titlepage}
+\begin{tikzpicture}[remember picture, overlay]
+\node[rectangle, fill=primary, anchor=north, minimum width=\paperwidth, minimum height=2cm] (header) at (current page.north){};
+\node[anchor=south, yshift=2mm, text=white] at (header.south) {\Huge\sffamily\bfseries GIÁO ÁN DỰ THI STEM/STEAM CẤP THÀNH PHỐ};
+\end{tikzpicture}
+
+\vspace{2cm}
+\begin{center}
+{\LARGE\bfseries\color{primary}\sffamily SỞ GIÁO DỤC VÀ ĐÀO TẠO THÀNH PHỐ HỒ CHÍ MINH}\\
+\vspace{0.5cm}
+{\Large\bfseries\sffamily HỘI THI THIẾT KẾ CHỦ ĐỀ DẠY HỌC STEM/STEAM}\\
+\vspace{0.3cm}
+{\large\sffamily Năm học 2025 - 2026}
+
+\vspace{2cm}
+
+\begin{tcolorbox}[width=0.9\textwidth, colback=gray!5, colframe=primary, arc=2mm, boxrule=1pt]
+    \centering
+    {\LARGE\bfseries\sffamily CHỦ ĐỀ:} \\[0.3cm]
+    {\Huge\bfseries\color{mathblue}\sffamily HÀM SỐ MŨ}\\
+    \vspace{0.2cm}
+    {\Large\sffamily VÀ MÔ HÌNH TĂNG TRƯỞNG DỊCH BỆNH}\\
+    \vspace{0.3cm}
+    \rule{0.6\textwidth}{0.5pt}\\
+    \vspace{0.2cm}
+    {\large\itshape\sffamily Từ Toán học đến Ứng dụng Y tế Công cộng}
+\end{tcolorbox}
+
+\vspace{1.5cm}
+{\Large\bfseries\sffamily MÔN: TOÁN - KHỐI: 11}\\
+\vspace{0.3cm}
+{\large\sffamily Chương: Hàm số mũ và Logarit}
+
+\vfill
+\large
+\begin{tabular}{rl}
+\sffamily\bfseries Giáo viên: & Nguyễn Văn Sang\\
+\sffamily\bfseries Đơn vị: & Trường THPT Nguyễn Hữu Cảnh\\
+\sffamily\bfseries Số điện thoại: & 0389\,821\,115\\
+\end{tabular}
+
+\vspace{1cm}
+{\large\sffamily Thành phố Hồ Chí Minh, tháng 11 năm 2025}
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\thispagestyle{empty}
+
+%%%%% PHẦN I: TỔNG QUAN %%%%%
+\begin{competitionsection}{I}
+\vspace{0.5cm}
+\subsection*{1.1. Thông tin cá nhân}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Họ và tên:} Nguyễn Văn Sang
+\item \textbf{Chuyên môn:} Toán học
+\item \textbf{Thâm niên:} 15 năm giảng dạy THPT
+\item \textbf{Đơn vị:} Trường THPT Nguyễn Hữu Cảnh, TP.HCM
+\end{itemize}
+
+\subsection*{1.2. Giới thiệu chủ đề}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Tên chủ đề:} \textcolor{mathblue}{Hàm số Mũ và Mô hình Tăng trưởng Dịch bệnh}
+\item \textbf{Xuất phát điểm:} Từ \textbf{kiến thức Toán học} (Hàm số mũ) đến \textbf{ứng dụng thực tiễn}
+\item \textbf{Bối cảnh Toán học:}
+    \begin{itemize}
+    \item Chương trình Toán 11 CTGDPT 2018: \textbf{Hàm số mũ và Logarit}
+    \item Hàm số mũ $y = a^x$ với $a > 0, a \neq 1$ là nền tảng cho nhiều mô hình tăng trưởng
+    \item Học sinh thường hỏi: \textit{``Học hàm số mũ để làm gì?''}
+    \end{itemize}
+\item \textbf{Điểm mới và sáng tạo:}
+    \begin{itemize}
+    \item \textbf{Toán học là trục chính:} Bắt đầu từ công thức $y = y_0 \cdot e^{rt}$, sau đó ứng dụng
+    \item \textbf{Đa dạng ứng dụng:} Lãi kép, tăng trưởng dân số, phân rã phóng xạ, \textbf{và dịch bệnh}
+    \item \textbf{Công nghệ hỗ trợ:} Ứng dụng web mô phỏng trực quan
+    \item \textbf{Giải đáp câu hỏi:} Cho học sinh thấy Toán học có ích trong đời sống
+    \end{itemize}
+\end{itemize}
+
+\subsection*{1.3. Căn cứ thiết kế}
+\begin{minipage}{0.48\textwidth}
+\textbf{Căn cứ pháp lý:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Chương trình GDPT 2018 môn Toán lớp 11
+\item Nội dung: Hàm số mũ và logarit
+\item Công văn 5555/BGDĐT-GDTrH về dạy học STEM
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}{0.48\textwidth}
+\textbf{Yêu cầu cần đạt (SGK Toán 11):}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Nhận biết hàm số mũ và tính chất
+\item Vẽ đồ thị hàm số mũ
+\item Vận dụng vào bài toán thực tế
+\end{itemize}
+\end{minipage}
+
+\subsection*{1.4. Mục tiêu giáo dục}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{} L L L @{}}
+\toprule
+\header{Kiến thức Toán học} & \header{Kỹ năng STEM} & \header{Thái độ} \\
+\midrule
+\parbox[t]{\dimexpr1.\linewidth-2\tabcolsep}{
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Hiểu hàm số mũ $y = a^x$
+        \item Viết công thức tăng trưởng $y = y_0 \cdot e^{rt}$
+        \item Tính toán với logarit tự nhiên
+    \end{itemize}
+} &
+\parbox[t]{\dimexpr1.\linewidth-2\tabcolsep}{
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Mô hình hóa bài toán thực tế
+        \item Sử dụng công nghệ mô phỏng
+        \item Đọc hiểu đồ thị, phân tích dữ liệu
+    \end{itemize}
+} &
+\parbox[t]{\dimexpr1.\linewidth-2\tabcolsep}{
+    \begin{itemize}[leftmargin=*,noitemsep,topsep=1ex]
+        \item Thấy được ý nghĩa của Toán học
+        \item Hứng thú với ứng dụng thực tế
+        \item Tư duy phản biện
+    \end{itemize}
+} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{1.5. Cấu trúc chương trình: Từ Toán đến Thực tiễn}
+\begin{center}
+\begin{tikzpicture}[node distance=1.2cm, every node/.style={font=\sffamily}]
+\node (math1) [rectangle, rounded corners, fill=mathblue!20, text width=5cm, align=center, minimum height=1cm] {\textbf{TOÁN HỌC}\\Hàm số mũ $y = a^x$};
+\node (math2) [rectangle, rounded corners, fill=mathblue!30, text width=5cm, align=center, below of=math1, yshift=-0.8cm, minimum height=1cm] {\textbf{CÔNG THỨC}\\$y = y_0 \cdot e^{rt}$};
+\node (app1) [rectangle, rounded corners, fill=accent!20, text width=5cm, align=center, below of=math2, yshift=-0.8cm, minimum height=1cm] {\textbf{ỨNG DỤNG 1}\\Lãi kép ngân hàng};
+\node (app2) [rectangle, rounded corners, fill=accent!30, text width=5cm, align=center, below of=app1, yshift=-0.8cm, minimum height=1cm] {\textbf{ỨNG DỤNG 2}\\Mô hình dịch bệnh (SIR)};
+\draw[->, thick, color=mathblue] (math1) -- (math2);
+\draw[->, thick, color=accent] (math2) -- (app1);
+\draw[->, thick, color=accent] (app1) -- (app2);
+\node[right of=math1, xshift=3cm, text width=4cm] {\footnotesize Định nghĩa, tính chất, đồ thị};
+\node[right of=math2, xshift=3cm, text width=4cm] {\footnotesize Mô hình tăng trưởng liên tục};
+\node[right of=app1, xshift=3cm, text width=4cm] {\footnotesize $A = P \cdot e^{rt}$};
+\node[right of=app2, xshift=3cm, text width=4cm] {\footnotesize $I(t) = I_0 \cdot e^{(\beta-\gamma)t}$};
+\end{tikzpicture}
+\end{center}
+\end{competitionsection}
+\newpage
+
+%%%%% PHẦN II: CHUẨN BỊ %%%%%
+\begin{competitionsection}{II}
+\vspace{0.5cm}
+\subsection*{2.1. Thiết bị và công nghệ}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Phần cứng:} Máy tính/điện thoại có trình duyệt web
+\item \textbf{Phần mềm:}
+    \begin{itemize}
+    \item \textbf{Học liệu số:} Ứng dụng web \texttt{EpidemicSim.html} hoặc \href{https://stem-1h8.pages.dev/EpidemicSim.html}{stem-1h8.pages.dev/EpidemicSim.html}
+    \item Máy tính cầm tay Casio fx-580VN X (tính $e^x$, $\ln x$)
+    \end{itemize}
+\item \textbf{Tài liệu:}
+    \begin{itemize}
+    \item Phiếu học tập số 1: Khám phá Hàm số mũ
+    \item Phiếu học tập số 2: Ứng dụng vào Mô hình dịch bệnh
+    \item Rubric đánh giá sản phẩm
+    \end{itemize}
+\end{itemize}
+
+\subsection*{2.2. Kịch bản giảng dạy (2 tiết = 90 phút)}
+\begin{center}
+\begin{tabularx}{\linewidth}{@{} L L L L @{}}
+\toprule
+\header{Thời gian} & \header{Nội dung} & \header{Phương pháp} & \header{Công cụ} \\
+\midrule
+10' & Khởi động: Câu hỏi ``Học hàm mũ để làm gì?'' & Đàm thoại & Slide câu hỏi \\
+\rowcolor{mathblue!10}
+20' & Ôn tập Hàm số mũ: $y = a^x$, tính chất, đồ thị & Giảng dạy trực tiếp & Bảng, PHT1 \\
+\rowcolor{mathblue!10}
+10' & Công thức tăng trưởng: $y = y_0 \cdot e^{rt}$ & Khám phá có hướng dẫn & PHT1 \\
+\rowcolor{accent!10}
+10' & Ứng dụng 1: Lãi kép ngân hàng & Bài toán thực tế & Máy tính \\
+\rowcolor{accent!10}
+25' & Ứng dụng 2: Mô hình dịch bệnh & Học qua mô phỏng & EpidemicSim \\
+10' & Trình bày và phản biện & Thuyết trình nhóm & Slides \\
+5' & Tổng kết: Toán học trong đời sống & Suy ngẫm & -- \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{2.3. Điểm nhấn: Tiếp cận từ Toán học}
+\begin{mathbox}
+\textbf{Hàm số mũ cơ sở $e$:}
+$$y = e^x \quad \text{với} \quad e = \lim_{n \to \infty}\left(1 + \frac{1}{n}\right)^n \approx 2.71828...$$
+
+\textbf{Mô hình tăng trưởng liên tục:}
+$$y(t) = y_0 \cdot e^{rt}$$
+\begin{itemize}[leftmargin=*,noitemsep]
+\item $y_0$ = Giá trị ban đầu (tại $t=0$)
+\item $r$ = Tốc độ tăng trưởng (nếu $r > 0$: tăng, $r < 0$: giảm)
+\item $t$ = Thời gian
+\end{itemize}
+
+\textbf{Ý nghĩa logarit:} Tìm thời gian $t$ khi biết $y$:
+$$t = \frac{\ln(y/y_0)}{r}$$
+\end{mathbox}
+
+\begin{realworld}
+\textbf{Các ứng dụng của công thức $y = y_0 \cdot e^{rt}$:}
+\begin{enumerate}[leftmargin=*,noitemsep]
+\item \textbf{Lãi kép ngân hàng:} $A = P \cdot e^{rt}$ (P: vốn gốc, r: lãi suất, t: thời gian)
+\item \textbf{Tăng trưởng dân số:} $N = N_0 \cdot e^{rt}$ (r: tỷ lệ sinh - tỷ lệ tử)
+\item \textbf{Phân rã phóng xạ:} $N = N_0 \cdot e^{-\lambda t}$ (r = $-\lambda$ < 0: giảm)
+\item \textbf{Lây lan dịch bệnh:} $I = I_0 \cdot e^{(\beta - \gamma)t}$ (giai đoạn đầu)
+\end{enumerate}
+\end{realworld}
+\end{competitionsection}
+
+%%%%% PHẦN III: KẾ HOẠCH DẠY HỌC %%%%%
+\begin{competitionsection}{III}
+\vspace{0.5cm}
+\subsection*{3.1. Kịch bản chi tiết}
+
+\subsubsection*{Hoạt động 1: Khởi động - Đặt vấn đề (10 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Câu hỏi mở đầu:} \textit{``Học hàm số mũ để làm gì trong cuộc sống?''}
+\item \textbf{Học sinh thảo luận:} Thu thập ý kiến (lãi suất, dân số, virus...)
+\item \textbf{Giáo viên dẫn dắt:} \textit{``Hôm nay chúng ta sẽ khám phá sức mạnh của hàm số mũ qua nhiều ứng dụng thực tế, đặc biệt là mô hình lây lan dịch bệnh!''}
+\end{itemize}
+
+\subsubsection*{Hoạt động 2: Ôn tập Hàm số Mũ (20 phút)}
+\begin{task}{Cá nhân + Nhóm}
+\textbf{Phiếu học tập số 1:} Ôn tập kiến thức Hàm số mũ
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Định nghĩa hàm số mũ $y = a^x$ ($a > 0$, $a \neq 1$)
+\item Tính chất: $a^0 = 1$, $a^{x+y} = a^x \cdot a^y$, ...
+\item Đồ thị: qua điểm $(0, 1)$, tăng nếu $a > 1$, giảm nếu $0 < a < 1$
+\item \textbf{Số $e$:} $e \approx 2.71828$, hàm $y = e^x$ là ``hàm mũ tự nhiên''
+\end{itemize}
+\end{task}
+
+\subsubsection*{Hoạt động 3: Công thức Tăng trưởng (10 phút)}
+\begin{mathbox}
+\textbf{Bài toán:} Một đại lượng $y$ tăng trưởng liên tục với tốc độ $r$ (r\% mỗi đơn vị thời gian).
+
+\textbf{Công thức:}
+$$y(t) = y_0 \cdot e^{rt}$$
+
+\textbf{Ví dụ 1:} Gửi ngân hàng 100 triệu, lãi suất 5\%/năm, lãi kép liên tục. Sau 10 năm:
+$$A = 100 \cdot e^{0.05 \times 10} = 100 \cdot e^{0.5} \approx 164.87 \text{ triệu}$$
+
+\textbf{Ví dụ 2:} Dân số một thành phố ban đầu 1 triệu, tăng 2\%/năm. Sau 20 năm:
+$$N = 1 \cdot e^{0.02 \times 20} = e^{0.4} \approx 1.492 \text{ triệu}$$
+\end{mathbox}
+
+\subsubsection*{Hoạt động 4: Ứng dụng vào Mô hình Dịch bệnh (25 phút)}
+\begin{realworld}
+\textbf{Tình huống:} Một thành phố có 10,000 dân. Xuất hiện 10 ca nhiễm bệnh X ban đầu.
+
+\textbf{Câu hỏi:} Dùng công thức tăng trưởng mũ để dự đoán số ca nhiễm theo thời gian?
+
+\textbf{Thông số:}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Tốc độ lây lan: $r = \beta - \gamma = 0.3 - 0.1 = 0.2$ (20\%/ngày)
+\item Công thức: $I(t) = 10 \cdot e^{0.2t}$
+\end{itemize}
+\end{realworld}
+
+\begin{task}{Nhóm - Sử dụng EpidemicSim}
+\textbf{Bước 1:} Mở ứng dụng web \texttt{EpidemicSim.html}
+
+\textbf{Bước 2:} Nhập tham số ban đầu:
+\begin{itemize}[leftmargin=*,noitemsep]
+\item Dân số N = 10,000
+\item Số ca ban đầu $I_0$ = 10
+\item $\beta$ = 0.3, $\gamma$ = 0.1
+\end{itemize}
+
+\textbf{Bước 3:} Quan sát đồ thị và trả lời:
+\begin{enumerate}[leftmargin=*,noitemsep]
+\item Giai đoạn đầu có dạng hàm mũ không? (so sánh với $I = 10 \cdot e^{0.2t}$)
+\item Tại sao sau một thời gian đồ thị không còn tăng theo hàm mũ?
+\item Đỉnh dịch (peak) xảy ra khi nào? Bao nhiêu ca?
+\end{enumerate}
+
+\textbf{Bước 4:} Thử nghiệm: Thay đổi $\beta$ (giãn cách xã hội) hoặc thêm tiêm chủng.
+\end{task}
+
+\subsubsection*{Hoạt động 5: Trình bày và Phản biện (10 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item 2 nhóm trình bày kết quả mô phỏng và nhận xét
+\item Các nhóm khác đặt câu hỏi phản biện
+\item Giáo viên tổng kết: Liên hệ Toán học với thực tiễn
+\end{itemize}
+
+\subsubsection*{Hoạt động 6: Tổng kết (5 phút)}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Kiến thức Toán:} Hàm số mũ $y = a^x$, công thức $y = y_0 \cdot e^{rt}$
+\item \textbf{Ứng dụng:} Lãi kép, dân số, dịch bệnh
+\item \textbf{Kỹ năng STEM:} Mô hình hóa, sử dụng công nghệ, phân tích dữ liệu
+\item \textbf{Bài tập về nhà:}
+    \begin{enumerate}[leftmargin=*,noitemsep]
+    \item Tính số tiền sau 5 năm nếu gửi 50 triệu với lãi suất 6\%/năm (lãi kép liên tục)
+    \item Một chất phóng xạ có chu kỳ bán rã 10 ngày. Sau bao lâu còn 25\% khối lượng ban đầu?
+    \end{enumerate}
+\end{itemize}
+\end{competitionsection}
+\newpage
+
+%%%%% PHẦN IV: HƯỚNG DẪN HỌC SINH %%%%%
+\begin{competitionsection}{IV}
+\vspace{0.5cm}
+\subsection*{4.1. Tóm tắt kiến thức}
+
+\begin{mathbox}
+\textbf{1. Hàm số mũ:}
+$$y = a^x \quad (a > 0, a \neq 1)$$
+
+\textbf{2. Hàm số mũ cơ sở $e$:}
+$$y = e^x \quad \text{với} \quad e \approx 2.71828$$
+
+\textbf{3. Mô hình tăng trưởng liên tục:}
+$$y(t) = y_0 \cdot e^{rt}$$
+
+\textbf{4. Công thức nghịch đảo (dùng logarit):}
+$$t = \frac{\ln(y/y_0)}{r} = \frac{\ln y - \ln y_0}{r}$$
+\end{mathbox}
+
+\subsection*{4.2. Ví dụ ứng dụng}
+
+\textbf{Ví dụ 1: Lãi kép}\\
+Gửi 100 triệu với lãi suất 5\%/năm, lãi kép liên tục. Sau $t$ năm:
+$$A = 100 \cdot e^{0.05t}$$
+Sau 10 năm: $A = 100 \cdot e^{0.5} \approx 164.87$ triệu.
+
+\textbf{Ví dụ 2: Dịch bệnh (giai đoạn đầu)}\\
+Ban đầu có 10 ca nhiễm, tốc độ lây lan $r = 0.2$/ngày:
+$$I(t) = 10 \cdot e^{0.2t}$$
+Sau 10 ngày: $I = 10 \cdot e^{2} \approx 73.9$ ca.\\
+Sau 20 ngày: $I = 10 \cdot e^{4} \approx 545.9$ ca.
+
+\textbf{Lưu ý:} Công thức mũ chỉ đúng ở giai đoạn đầu. Khi số người nhạy cảm giảm, tốc độ lây lan chậm lại (mô hình SIR chính xác hơn).
+
+\subsection*{4.3. Hướng dẫn sử dụng EpidemicSim}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Bước 1:} Truy cập \href{https://stem-1h8.pages.dev/EpidemicSim.html}{stem-1h8.pages.dev/EpidemicSim.html}
+\item \textbf{Bước 2:} Tab ``Mô phỏng'' - Nhập tham số và chạy mô phỏng
+\item \textbf{Bước 3:} So sánh đường cong I(t) với công thức $I_0 \cdot e^{rt}$ (giai đoạn đầu)
+\item \textbf{Bước 4:} Tab ``So sánh'' - Thử các kịch bản khác nhau
+\item \textbf{Bước 5:} Tab ``Học tập'' - Đọc thêm về mô hình SIR
+\end{itemize}
+\end{competitionsection}
+\newpage
+
+%%%%% PHẦN V: PHỤ LỤC %%%%%
+\begin{competitionsection}{V}
+\vspace{0.5cm}
+\subsection*{Phụ lục 1: Bảng giá trị $e^x$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+$x$ & 0 & 0.5 & 1 & 1.5 & 2 & 3 & 4 \\
+\hline
+$e^x$ & 1 & 1.649 & 2.718 & 4.482 & 7.389 & 20.09 & 54.60 \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Phụ lục 2: So sánh các mô hình tăng trưởng}
+\begin{center}
+\begin{tabularx}{0.95\linewidth}{@{} L C C @{}}
+\toprule
+\header{Loại tăng trưởng} & \header{Công thức} & \header{Đặc điểm} \\
+\midrule
+Tuyến tính & $y = y_0 + rt$ & Tăng đều, chậm \\
+Lũy thừa & $y = y_0 \cdot t^n$ & Tăng nhanh dần \\
+Mũ & $y = y_0 \cdot e^{rt}$ & Tăng rất nhanh (bùng nổ) \\
+Logistic & $y = \dfrac{K}{1 + Ae^{-rt}}$ & Tăng rồi bão hòa \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{Phụ lục 3: Liên hệ với Mô hình SIR}
+\begin{itemize}[leftmargin=*,noitemsep]
+\item \textbf{Mô hình SIR đầy đủ:} Gồm 3 nhóm S (Susceptible), I (Infected), R (Recovered)
+\item \textbf{Giai đoạn đầu:} Khi $S \approx N$ (gần như tất cả đều nhạy cảm), ta có:
+$$\frac{dI}{dt} \approx (\beta - \gamma) I \quad \Rightarrow \quad I(t) = I_0 \cdot e^{(\beta - \gamma)t}$$
+\item Đây chính là \textbf{công thức tăng trưởng mũ} với $r = \beta - \gamma$
+\item \textbf{Sau đó:} Số người nhạy cảm giảm, tốc độ lây lan chậm lại, đồ thị uốn cong và đạt đỉnh
+\item \textbf{Hệ số $R_0 = \beta/\gamma$:} Nếu $R_0 > 1$ thì dịch bùng phát, $R_0 < 1$ thì dịch tự tắt
+\end{itemize}
+
+\subsection*{Phụ lục 4: Rubric đánh giá}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.5cm}|X|X|X|c|}
+\hline
+\rowcolor{TableHeader}
+\sffamily\bfseries Tiêu chí & \sffamily\bfseries Xuất sắc (4đ) & \sffamily\bfseries Khá (3đ) & \sffamily\bfseries Cần cải thiện (1-2đ) & \sffamily\bfseries Điểm \\
+\hline
+\textbf{Kiến thức Toán} & Nắm vững hàm mũ, tính đúng $e^{rt}$ & Hiểu cơ bản, tính đúng & Còn nhầm lẫn công thức & \underline{\hspace{1cm}} \\
+\hline
+\textbf{Mô hình hóa} & Viết đúng công thức ứng dụng & Viết được với hỗ trợ & Chưa viết được & \underline{\hspace{1cm}} \\
+\hline
+\textbf{Sử dụng công nghệ} & Thành thạo mô phỏng, phân tích & Sử dụng cơ bản & Cần hướng dẫn & \underline{\hspace{1cm}} \\
+\hline
+\textbf{Trình bày} & Mạch lạc, có minh họa & Rõ ràng & Rời rạc & \underline{\hspace{1cm}} \\
+\hline
+\end{tabularx}
+\vspace{0.5cm}
+\noindent\textbf{TỔNG ĐIỂM:} \underline{\hspace{2cm}} / 16 điểm
+\end{competitionsection}
+
+\end{document}

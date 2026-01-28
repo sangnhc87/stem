@@ -1,0 +1,729 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GIÁO ÁN STEM: MÔ HÌNH TOÁN HỌC VỀ LÂY LAN DỊCH BỆNH
+% Phiên bản 3.1 - Hoàn chỉnh cho Cuộc thi STEM/STEAM
+% Môn: Toán 11 | Chương: Hàm số mũ và Logarit
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+% ============= GÓI CƠ BẢN =============
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning,calc,decorations.pathreplacing}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+% ============= FONT =============
+\usepackage{newtxtext, newtxmath}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{microtype}
+
+% ============= MÀU SẮC =============
+\usepackage[svgnames]{xcolor}
+\definecolor{primary}{RGB}{26,95,122}      % Xanh chính
+\definecolor{accent}{RGB}{194,55,40}       % Đỏ nhấn
+\definecolor{mathblue}{RGB}{0,51,102}      % Xanh đậm cho Toán
+\definecolor{success}{RGB}{34,139,34}      % Xanh lá
+\definecolor{warning}{RGB}{255,140,0}      % Cam cảnh báo
+\definecolor{TableHeader}{gray}{0.88}
+\definecolor{lightgray}{gray}{0.95}
+
+% ============= TRANG =============
+\usepackage[left=2cm,right=2cm,top=2.5cm,bottom=2cm,headheight=16pt]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrule}{\color{primary}\hrule width\textwidth height 1.5pt}
+\fancyhead[L]{\color{primary}\footnotesize\sffamily\textbf{SỞ GD\&ĐT TP.HCM - HỘI THI STEM/STEAM CẤP THÀNH PHỐ}}
+\fancyhead[R]{\color{primary}\footnotesize\sffamily\textbf{NĂM HỌC 2025-2026}}
+\fancyfoot[C]{\sffamily\thepage}
+\renewcommand{\footrule}{\color{primary}\hrule width\textwidth height 0.8pt}
+
+% ============= GÓI HỖ TRỢ =============
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable, theorems}
+\usepackage[colorlinks=true,linkcolor=primary,urlcolor=accent,citecolor=success,
+    pdftitle={Mo hinh Toan hoc ve Lay lan Dich benh - Giao an STEM},
+    pdfauthor={Nguyen Van Sang}]{hyperref}
+
+% ============= TIÊU ĐỀ =============
+\usepackage{titlesec}
+\titleformat{\section}{\normalfont\Large\bfseries\color{primary}\sffamily}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries\color{accent}\sffamily}
+{\llap{\color{accent}\rule{1.2em}{1.2em}\hspace{0.5em}}}{0em}{}
+\titleformat{\subsubsection}{\normalfont\bfseries\color{success}\sffamily}
+{\llap{\color{success}\rule{1em}{1em}\hspace{0.5em}}}{0em}{}
+
+% ============= MÔI TRƯỜNG TCOLORBOX =============
+\def\phanI{TỔNG QUAN}
+\def\phanII{CHUẨN BỊ CỦA GIÁO VIÊN}
+\def\phanIII{KẾ HOẠCH DẠY HỌC ĐỀ XUẤT}
+\def\phanIV{HƯỚNG DẪN HỌC SINH}
+\def\phanV{CÁC PHỤ LỤC}
+
+\newtcolorbox{competitionsection}[1]{
+    enhanced, breakable, colback=white, colframe=primary, boxrule=1pt,
+    fonttitle=\bfseries\sffamily\Huge, coltitle=white, colbacktitle=primary,
+    attach boxed title to top left={xshift=1cm, yshift=-1mm-\tcboxedtitleheight/2},
+    boxed title style={sharp corners, boxrule=0pt},
+    title={PHẦN #1: \csname phan#1\endcsname},
+    before upper={\addcontentsline{toc}{section}{Phần #1: \csname phan#1\endcsname}}
+}
+
+\newtcolorbox{mathbox}[1][]{
+    enhanced, breakable, 
+    colback=mathblue!5, colframe=mathblue!80, boxrule=1.5pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} KIẾN THỨC TOÁN HỌC #1},
+    fonttitle=\bfseries\sffamily, colbacktitle=mathblue,
+    shadow={2mm}{-1mm}{0mm}{black!20}
+}
+
+\newtcolorbox{problembox}[1][]{
+    enhanced, breakable,
+    colback=accent!5, colframe=accent!80, boxrule=1.5pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} BÀI TOÁN DỊCH BỆNH #1},
+    fonttitle=\bfseries\sffamily, colbacktitle=accent,
+    shadow={2mm}{-1mm}{0mm}{black!20}
+}
+
+\newtcolorbox{taskbox}[1]{
+    enhanced, breakable,
+    colback=success!8, colframe=success!80, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} NHIỆM VỤ: #1},
+    fonttitle=\bfseries\sffamily, colbacktitle=success
+}
+
+\newtcolorbox{highlightbox}{
+    enhanced, colback=warning!10, colframe=warning!80, boxrule=1pt, arc=2mm
+}
+
+\newtcolorbox{quotebox}{
+    enhanced, colback=lightgray, colframe=gray!50, boxrule=0.5pt, arc=2mm,
+    left=10pt, right=10pt
+}
+
+% ============= BẢNG =============
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\header}[1]{\cellcolor{TableHeader}\sffamily\bfseries#1}
+
+% ============= DANH SÁCH =============
+\setlist[itemize,1]{label=\color{primary}\textbullet, leftmargin=*, nosep}
+\setlist[itemize,2]{label=\color{accent}$\circ$, leftmargin=*, nosep}
+\setlist[enumerate,1]{label=\color{primary}\arabic*., leftmargin=*, nosep}
+
+% ============= BẮT ĐẦU TÀI LIỆU =============
+\begin{document}
+
+% ========== TRANG BÌA ==========
+\begin{titlepage}
+\begin{tikzpicture}[remember picture, overlay]
+% Header bar
+\node[rectangle, fill=primary, anchor=north, minimum width=\paperwidth, minimum height=2.5cm] (header) at (current page.north){};
+\node[anchor=south, yshift=5mm, text=white] at (header.south) {\Huge\sffamily\bfseries GIÁO ÁN DỰ THI STEM/STEAM CẤP THÀNH PHỐ};
+
+% Footer bar
+\node[rectangle, fill=primary!80, anchor=south, minimum width=\paperwidth, minimum height=1cm] (footer) at (current page.south){};
+\node[text=white] at (footer.center) {\sffamily Thành phố Hồ Chí Minh, tháng 11 năm 2025};
+
+% Decorative elements
+\draw[primary!30, line width=3pt] (current page.west) ++(2cm,5cm) -- ++(0,-10cm);
+\end{tikzpicture}
+
+\vspace{3cm}
+\begin{center}
+{\LARGE\bfseries\color{primary}\sffamily SỞ GIÁO DỤC VÀ ĐÀO TẠO THÀNH PHỐ HỒ CHÍ MINH}\\
+\vspace{0.5cm}
+{\Large\bfseries\sffamily HỘI THI THIẾT KẾ CHỦ ĐỀ DẠY HỌC STEM/STEAM}\\
+\vspace{0.3cm}
+{\large\sffamily Năm học 2025 - 2026}
+
+\vspace{2cm}
+
+\begin{tcolorbox}[
+    width=0.92\textwidth, 
+    colback=white, colframe=primary, 
+    arc=4mm, boxrule=2pt,
+    shadow={3mm}{-2mm}{0mm}{black!30}
+]
+    \centering
+    {\LARGE\bfseries\sffamily CHỦ ĐỀ:} \\[0.4cm]
+    {\fontsize{28}{34}\selectfont\bfseries\color{accent}\sffamily MÔ HÌNH TOÁN HỌC}\\[0.2cm]
+    {\Large\sffamily VỀ LÂY LAN DỊCH BỆNH}\\[0.4cm]
+    \rule{0.5\textwidth}{0.5pt}\\[0.3cm]
+    {\large\itshape\sffamily Ứng dụng Hàm số Mũ trong Y tế Công cộng}\\[0.2cm]
+    {\normalsize\sffamily\color{primary} Mô hình SIR • Hệ số $R_0$ • Ngưỡng miễn dịch cộng đồng}
+\end{tcolorbox}
+
+\vspace{1.5cm}
+{\Large\bfseries\sffamily\color{mathblue} MÔN: TOÁN -- KHỐI: 11}\\
+\vspace{0.3cm}
+{\large\sffamily Chương: Hàm số mũ và Logarit (CTGDPT 2018)}
+
+\vfill
+\begin{tcolorbox}[
+    enhanced,
+    width=0.65\textwidth,
+    colback=primary!8, 
+    colframe=primary!80,
+    arc=4mm, 
+    boxrule=1.5pt,
+    left=15pt, right=15pt, top=12pt, bottom=12pt,
+    shadow={2mm}{-1mm}{0mm}{primary!30},
+    borderline west={4pt}{0pt}{accent}
+]
+\centering
+\large
+\begin{tabular}{@{}r@{\hspace{8pt}}l@{}}
+\sffamily\bfseries\color{accent} Giáo viên: & \sffamily\bfseries Nguyễn Văn Sang\\[4pt]
+\sffamily\bfseries\color{accent} Đơn vị: & \sffamily Trường THPT Nguyễn Hữu Cảnh\\[4pt]
+\sffamily\bfseries\color{accent} Điện thoại: & \sffamily 0389\,821\,115\\[4pt]
+\sffamily\bfseries\color{accent} Email: & \sffamily\href{mailto:nguyensang@edu.vn}{nguyensang@edu.vn}\\
+\end{tabular}
+\end{tcolorbox}
+
+\end{center}
+\end{titlepage}
+
+% ========== MỤC LỤC ==========
+\tableofcontents
+\thispagestyle{empty}
+\newpage
+
+% ========== PHẦN I: TỔNG QUAN ==========
+\begin{competitionsection}{I}
+\vspace{0.5cm}
+
+\subsection*{1.1. Thông tin cá nhân}
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\textbf{Họ và tên:} & Nguyễn Văn Sang \\
+\textbf{Chuyên môn:} & Toán học \\
+\textbf{Thâm niên:} & 15 năm giảng dạy THPT \\
+\textbf{Đơn vị:} & Trường THPT Nguyễn Hữu Cảnh, TP.HCM \\
+\textbf{Thành tích:} & Giáo viên dạy giỏi cấp Thành phố (2022, 2024) \\
+\end{tabularx}
+
+\subsection*{1.2. Giới thiệu chủ đề}
+
+\begin{highlightbox}
+\textbf{\large\color{accent} Tên chủ đề:} \textcolor{mathblue}{\textbf{Mô hình Toán học về Lây lan Dịch bệnh}}
+
+\textbf{Ý tưởng cốt lõi:} Sử dụng kiến thức \textbf{Hàm số mũ} (Toán 11) để xây dựng mô hình dự đoán diễn biến dịch bệnh, từ đó giúp học sinh thấy được ý nghĩa thực tiễn của Toán học trong Y tế Công cộng.
+\end{highlightbox}
+
+\vspace{0.3cm}
+\textbf{Bối cảnh và tính cấp thiết:}
+\begin{itemize}
+\item Đại dịch COVID-19 (2020-2023) đã cho thấy tầm quan trọng của việc hiểu cách dịch bệnh lây lan
+\item Các khái niệm như ``làm phẳng đường cong'', ``miễn dịch cộng đồng'', ``$R_0$'' được sử dụng rộng rãi nhưng nhiều người chưa hiểu bản chất Toán học
+\item \textbf{Câu hỏi đặt ra:} \textit{``Toán học có thể giúp dự đoán và kiểm soát dịch bệnh như thế nào?''}
+\end{itemize}
+
+\textbf{Cách tiếp cận từ Toán học (điểm khác biệt):}
+\begin{enumerate}
+\item Xuất phát từ kiến thức \textbf{Hàm số mũ} trong Chương trình Toán 11
+\item Xây dựng công thức tăng trưởng: $I(t) = I_0 \cdot e^{rt}$
+\item Áp dụng trực tiếp vào bài toán lây lan dịch bệnh: $r = \beta - \gamma$
+\item Mở rộng: Mô hình SIR, hệ số $R_0$, ngưỡng miễn dịch cộng đồng
+\item Sử dụng công nghệ: Ứng dụng web EpidemicSim để mô phỏng và phân tích
+\end{enumerate}
+
+\subsection*{1.3. Căn cứ thiết kế}
+
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{\color{primary}Căn cứ pháp lý:}
+\begin{itemize}
+\item Chương trình GDPT 2018 môn Toán lớp 11
+\item Nội dung: \textbf{Hàm số mũ và logarit}
+\item Yêu cầu cần đạt: Vận dụng hàm số mũ vào bài toán thực tế
+\item Công văn 5555/BGDĐT-GDTrH về dạy học STEM
+\item Nghị quyết 29-NQ/TW về đổi mới giáo dục
+\end{itemize}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\textbf{\color{primary}Tích hợp liên môn:}
+\begin{itemize}
+\item \textbf{Toán (T):} Hàm mũ, logarit, đồ thị
+\item \textbf{Tin học (E):} Phần mềm mô phỏng
+\item \textbf{Sinh học (A):} Dịch tễ học cơ bản
+\item \textbf{GDCD (M):} Ý thức công dân, trách nhiệm cộng đồng
+\end{itemize}
+\end{minipage}
+
+\subsection*{1.4. Mục tiêu giáo dục}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{@{} L L L @{}}
+\toprule
+\header{Kiến thức} & \header{Kỹ năng} & \header{Thái độ \& Năng lực} \\
+\midrule
+\parbox[t]{\dimexpr\linewidth-2\tabcolsep}{
+    \begin{itemize}[topsep=2pt]
+        \item Củng cố hàm số mũ $y = e^x$
+        \item Viết công thức $I(t) = I_0 \cdot e^{rt}$
+        \item Hiểu tham số $\beta$, $\gamma$, $R_0$
+        \item Tính ngưỡng miễn dịch $H$
+    \end{itemize}
+} &
+\parbox[t]{\dimexpr\linewidth-2\tabcolsep}{
+    \begin{itemize}[topsep=2pt]
+        \item Mô hình hóa bài toán thực tế
+        \item Sử dụng phần mềm mô phỏng
+        \item Đọc, phân tích đồ thị
+        \item Trình bày, phản biện
+    \end{itemize}
+} &
+\parbox[t]{\dimexpr\linewidth-2\tabcolsep}{
+    \begin{itemize}[topsep=2pt]
+        \item Thấy ý nghĩa của Toán học
+        \item Ý thức phòng chống dịch
+        \item Tư duy phản biện
+        \item Hợp tác nhóm
+    \end{itemize}
+} \\
+\bottomrule
+\end{tabularx}
+\end{center}
+
+\subsection*{1.5. Cấu trúc bài học: Từ Toán đến Dịch bệnh}
+
+\begin{center}
+\begin{tikzpicture}[
+    node distance=1.2cm,
+    every node/.style={font=\sffamily\small},
+    box/.style={rectangle, rounded corners=4pt, minimum width=5cm, minimum height=1.3cm, align=center, text width=5cm}
+]
+% Nodes
+\node (step1) [box, fill=mathblue!20, draw=mathblue, thick] {\textbf{Bước 1: TOÁN HỌC}\\Hàm số mũ $y = a^x$, số $e$\\Tính chất, đồ thị};
+
+\node (step2) [box, fill=mathblue!30, draw=mathblue, thick, below=of step1] {\textbf{Bước 2: CÔNG THỨC}\\Mô hình tăng trưởng\\$I(t) = I_0 \cdot e^{rt}$};
+
+\node (step3) [box, fill=accent!20, draw=accent, thick, below=of step2] {\textbf{Bước 3: BÀI TOÁN}\\Dịch bệnh: $r = \beta - \gamma$\\Hệ số $R_0$, ngưỡng $H$};
+
+\node (step4) [box, fill=success!20, draw=success, thick, below=of step3] {\textbf{Bước 4: MÔ PHỎNG}\\EpidemicSim\\Phân tích kịch bản, đề xuất};
+
+% Arrows
+\draw[->, thick, color=mathblue] (step1) -- (step2);
+\draw[->, thick, color=primary] (step2) -- (step3);
+\draw[->, thick, color=accent] (step3) -- (step4);
+
+% Annotations
+\node[right=0.5cm of step1, text width=4cm, align=left] {\footnotesize\color{gray} Ôn tập kiến thức SGK};
+\node[right=0.5cm of step2, text width=4cm, align=left] {\footnotesize\color{gray} Xây dựng từ bài toán};
+\node[right=0.5cm of step3, text width=4cm, align=left] {\footnotesize\color{gray} Áp dụng vào dịch bệnh};
+\node[right=0.5cm of step4, text width=4cm, align=left] {\footnotesize\color{gray} Thực hành, trải nghiệm};
+\end{tikzpicture}
+\end{center}
+
+\end{competitionsection}
+\newpage
+
+% ========== PHẦN II: CHUẨN BỊ ==========
+\begin{competitionsection}{II}
+\vspace{0.5cm}
+
+\subsection*{2.1. Thiết bị và học liệu}
+
+\begin{tabularx}{\textwidth}{@{} l X @{}}
+\toprule
+\header{Loại} & \header{Chi tiết} \\
+\midrule
+\textbf{Phần cứng} & Máy tính/điện thoại có trình duyệt web (Chrome, Firefox, Edge) \\
+\midrule
+\textbf{Phần mềm} & 
+\begin{itemize}[nosep,leftmargin=*]
+    \item \textbf{Học liệu số chính:} Ứng dụng web \texttt{EpidemicSim\_v3.html}
+    \item Địa chỉ: \href{https://stem-1h8.pages.dev/sim.html}{\texttt{stem-1h8.pages.dev/sim.html}}
+    \item Máy tính Casio fx-580VN X (tính $e^x$, $\ln x$)
+\end{itemize} \\
+\midrule
+\textbf{Tài liệu} & 
+\begin{itemize}[nosep,leftmargin=*]
+    \item Phiếu học tập số 1: Xây dựng công thức Toán học
+    \item Phiếu học tập số 2: Mô phỏng và phân tích dịch bệnh
+    \item Phiếu khảo sát trước/sau bài học
+    \item Rubric đánh giá sản phẩm
+    \item Phiếu đánh giá đồng cấp
+\end{itemize} \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{2.2. Thời lượng và kịch bản tổng quát}
+
+\begin{center}
+\textbf{Tổng thời lượng: 2 tiết (90 phút)}
+\end{center}
+
+\begin{tabularx}{\linewidth}{@{} c L c L c @{}}
+\toprule
+\header{TT} & \header{Nội dung} & \header{Thời gian} & \header{Phương pháp} & \header{Mô hình 5E} \\
+\midrule
+1 & Khởi động: Video/Số liệu COVID-19 & 10' & Đàm thoại & \textbf{Engage} \\
+\rowcolor{mathblue!8}
+2 & Ôn tập Hàm số mũ $y = e^x$ & 12' & Ôn tập có hướng dẫn & Explore \\
+\rowcolor{mathblue!8}
+3 & Xây dựng công thức $I(t) = I_0 e^{rt}$ & 10' & Khám phá & Explore \\
+\rowcolor{accent!8}
+4 & Áp dụng: $r = \beta - \gamma$, $R_0$, $H$ & 8' & Giảng dạy & \textbf{Explain} \\
+\rowcolor{success!8}
+5 & Mô phỏng với EpidemicSim & 25' & Thực hành nhóm & \textbf{Elaborate} \\
+\rowcolor{success!8}
+6 & So sánh kịch bản can thiệp & 12' & Hợp tác & Elaborate \\
+7 & Trình bày và phản biện & 8' & Thuyết trình & Evaluate \\
+8 & Tổng kết và đánh giá & 5' & Suy ngẫm & \textbf{Evaluate} \\
+\bottomrule
+\end{tabularx}
+
+\subsection*{2.3. Điểm nhấn: Nền tảng Toán học}
+
+\begin{mathbox}
+\textbf{\large Hàm số mũ cơ sở $e$:}
+$$y = e^x \quad \text{với} \quad e = \lim_{n \to \infty}\left(1 + \frac{1}{n}\right)^n \approx 2.71828...$$
+
+\textbf{Tính chất quan trọng:}
+\begin{itemize}
+\item $e^0 = 1$, \quad $e^1 = e \approx 2.718$, \quad $e^{a+b} = e^a \cdot e^b$
+\item Đạo hàm: $(e^x)' = e^x$ \quad\textit{(Tốc độ thay đổi tỷ lệ với giá trị hiện tại)}
+\end{itemize}
+
+\textbf{Mô hình tăng trưởng liên tục:}
+$$\boxed{y(t) = y_0 \cdot e^{rt}}$$
+
+\textbf{Ý nghĩa:} Khi một đại lượng tăng/giảm với tốc độ tỷ lệ với giá trị hiện tại, nó tuân theo hàm mũ. Đây chính là cách dịch bệnh lây lan!
+\end{mathbox}
+
+\begin{problembox}
+\textbf{\large Áp dụng vào dịch bệnh:}
+
+Gọi $I(t)$ là số ca nhiễm tại thời điểm $t$. Ta có:
+$$I(t) = I_0 \cdot e^{(\beta - \gamma)t}$$
+
+Trong đó:
+\begin{itemize}
+\item $I_0$: Số ca nhiễm ban đầu
+\item $\beta$: Tỷ lệ lây nhiễm (số người bị lây/người nhiễm/ngày)
+\item $\gamma$: Tỷ lệ hồi phục = $1/\text{(thời gian nhiễm bệnh)}$
+\item $r = \beta - \gamma$: Tốc độ ròng
+\end{itemize}
+
+\textbf{Hệ số lây nhiễm cơ bản:} $R_0 = \dfrac{\beta}{\gamma}$
+
+\textbf{Ngưỡng miễn dịch cộng đồng:} $H = 1 - \dfrac{1}{R_0}$
+\end{problembox}
+
+\end{competitionsection}
+\newpage
+
+% ========== PHẦN III: KẾ HOẠCH DẠY HỌC ==========
+\begin{competitionsection}{III}
+\vspace{0.5cm}
+
+\subsection*{3.1. Hoạt động 1: Khởi động -- Engage (10 phút)}
+
+\begin{problembox}[: Đặt vấn đề]
+\textbf{Tình huống mở đầu:}
+
+Giáo viên trình chiếu:
+\begin{itemize}
+\item Đồ thị số ca COVID-19 tại Việt Nam (tháng 4-8/2021)
+\item Video ngắn (2 phút) về ``làm phẳng đường cong''
+\end{itemize}
+
+\textbf{Câu hỏi kích thích tư duy:}
+\begin{enumerate}
+\item \textit{``Tại sao số ca nhiễm tăng rất nhanh ở giai đoạn đầu?''}
+\item \textit{``Làm thế nào các nhà khoa học dự đoán được đỉnh dịch?''}
+\item \textit{``Toán học có vai trò gì trong việc kiểm soát dịch bệnh?''}
+\end{enumerate}
+
+\textbf{Chuyển tiếp:} \textit{``Hôm nay chúng ta sẽ dùng kiến thức Hàm số mũ -- thứ các em đã học -- để xây dựng mô hình dự đoán diễn biến dịch bệnh!''}
+\end{problembox}
+
+\subsection*{3.2. Hoạt động 2: Ôn tập Hàm số Mũ -- Explore (12 phút)}
+
+\begin{taskbox}{Cá nhân -- Phiếu học tập số 1}
+\textbf{Nội dung ôn tập:}
+\begin{enumerate}
+\item Định nghĩa hàm số mũ $y = a^x$ ($a > 0$, $a \neq 1$)
+\item Tính chất: $a^0 = 1$, $a^{x+y} = a^x \cdot a^y$, $(a^x)^y = a^{xy}$
+\item Đồ thị: Qua điểm $(0, 1)$, tăng nếu $a > 1$, giảm nếu $0 < a < 1$
+\item \textbf{Số $e$:} $e \approx 2.71828$, được gọi là ``hằng số Euler''
+\item Hàm $y = e^x$ là ``hàm mũ tự nhiên'', rất quan trọng trong khoa học
+\end{enumerate}
+
+\textbf{Bài tập:} Dùng máy tính tính $e^0$, $e^1$, $e^2$, $e^3$, $e^4$ và điền vào bảng.
+\end{taskbox}
+
+\subsection*{3.3. Hoạt động 3: Xây dựng Công thức (10 phút)}
+
+\begin{mathbox}[: Lập luận]
+\textbf{Bài toán:} Giả sử dịch bệnh mới xuất hiện với:
+\begin{itemize}
+\item Ban đầu có $I_0 = 10$ ca nhiễm
+\item Mỗi ngày, số ca mới phát sinh \textbf{tỷ lệ} với số ca đang nhiễm
+\item Tỷ lệ lây lan $\beta = 30\%$/ngày, tỷ lệ khỏi $\gamma = 10\%$/ngày
+\end{itemize}
+
+\textbf{Suy luận Toán học:}
+
+Tốc độ thay đổi số ca: $\dfrac{dI}{dt} \propto I$, hay $\dfrac{dI}{dt} = rI$ với $r = \beta - \gamma$
+
+Giải phương trình vi phân (giới thiệu ý tưởng, không đi sâu): $$I(t) = I_0 \cdot e^{rt}$$
+
+\textbf{Kết luận:} Công thức hàm mũ mô tả sự lây lan dịch bệnh ở giai đoạn đầu!
+\end{mathbox}
+
+\subsection*{3.4. Hoạt động 4: Tham số Dịch tễ học (8 phút)}
+
+\begin{problembox}[: Giải thích]
+\textbf{Hệ số lây nhiễm cơ bản $R_0$:}
+$$R_0 = \frac{\beta}{\gamma} = \frac{\text{Tỷ lệ lây}}{\text{Tỷ lệ khỏi}}$$
+
+\textbf{Ý nghĩa:} $R_0$ là số người trung bình mà MỘT người nhiễm lây cho trong suốt thời gian mắc bệnh.
+\begin{itemize}
+\item $R_0 > 1$: Dịch bùng phát (số ca tăng)
+\item $R_0 < 1$: Dịch tự tắt (số ca giảm)
+\item $R_0 = 1$: Dịch ổn định
+\end{itemize}
+
+\textbf{Ngưỡng miễn dịch cộng đồng:}
+$$H = 1 - \frac{1}{R_0}$$
+
+\textbf{Ý nghĩa:} $H$ là tỷ lệ dân số cần có miễn dịch để dịch không còn lây lan mạnh.
+
+\textbf{Ví dụ:} Với $R_0 = 3$: $H = 1 - 1/3 = 66.7\%$ $\Rightarrow$ Cần $\approx 67\%$ dân số có miễn dịch.
+\end{problembox}
+
+\subsection*{3.5. Hoạt động 5: Mô phỏng với EpidemicSim (25 phút)}
+
+\begin{taskbox}{Nhóm -- Thực hành}
+\textbf{Bước 1:} Truy cập \href{https://stem-1h8.pages.dev/sim.html}{\texttt{stem-1h8.pages.dev/sim.html}}
+
+\textbf{Bước 2:} Tab ``Mô phỏng'' -- Nhập tham số:
+\begin{itemize}
+\item Dân số $N = 10{,}000$
+\item Số ca ban đầu $I_0 = 10$
+\item $\beta = 0.3$, $\gamma = 0.1$ (tức $R_0 = 3$)
+\item Tiêm chủng = 0\%
+\end{itemize}
+
+\textbf{Bước 3:} Nhấn ``Chạy mô phỏng'' và quan sát đồ thị S-I-R
+
+\textbf{Bước 4:} Trả lời câu hỏi:
+\begin{enumerate}
+\item Giai đoạn đầu (ngày 0-10): So sánh với công thức $I = 10 \cdot e^{0.2t}$. Có giống không?
+\item Tại sao sau một thời gian đồ thị I ``uốn cong'' và đạt đỉnh?
+\item Đỉnh dịch xảy ra vào ngày thứ mấy? Bao nhiêu ca max?
+\item Cuối cùng có bao nhiêu người bị nhiễm (tổng R)?
+\end{enumerate}
+\end{taskbox}
+
+\subsection*{3.6. Hoạt động 6: So sánh Kịch bản (12 phút)}
+
+\begin{taskbox}{Nhóm -- Phân tích}
+\textbf{Tab ``So sánh kịch bản'':}
+
+\begin{center}
+\begin{tabularx}{0.95\textwidth}{|c|L|c|c|}
+\hline
+\header{KB} & \header{Mô tả} & \header{$\beta$} & \header{Tiêm chủng} \\
+\hline
+1 & Không can thiệp & 0.3 & 0\% \\
+2 & Giãn cách xã hội (giảm 50\% tiếp xúc) & 0.15 & 0\% \\
+3 & Tiêm chủng 60\% dân số & 0.3 & 60\% \\
+\hline
+\end{tabularx}
+\end{center}
+
+\textbf{Yêu cầu:}
+\begin{enumerate}
+\item Thêm 3 kịch bản vào ứng dụng, chạy mô phỏng
+\item So sánh: Đỉnh dịch, ngày đỉnh, tổng ca nhiễm
+\item Kịch bản nào hiệu quả nhất? Tại sao?
+\item Với $R_0 = 3$, ngưỡng $H = 66.7\%$. Tiêm chủng 60\% có đủ không?
+\end{enumerate}
+\end{taskbox}
+
+\subsection*{3.7. Hoạt động 7: Trình bày và Phản biện (8 phút)}
+
+\begin{itemize}
+\item 2 nhóm được chọn ngẫu nhiên trình bày kết quả (mỗi nhóm 3 phút)
+\item Các nhóm khác đặt câu hỏi phản biện
+\item GV tổng hợp, liên hệ thực tế Việt Nam (chiến lược ``Zero COVID'' vs ``Sống chung'')
+\end{itemize}
+
+\subsection*{3.8. Hoạt động 8: Tổng kết (5 phút)}
+
+\begin{highlightbox}
+\textbf{Kiến thức Toán học đã vận dụng:}
+\begin{itemize}
+\item Hàm số mũ $y = e^x$
+\item Công thức tăng trưởng: $I(t) = I_0 \cdot e^{rt}$
+\item Logarit: Tìm thời gian khi biết số ca
+\end{itemize}
+
+\textbf{Kiến thức Dịch tễ học:}
+\begin{itemize}
+\item Mô hình SIR (Susceptible - Infected - Recovered)
+\item Hệ số $R_0$, ngưỡng miễn dịch $H$
+\end{itemize}
+
+\textbf{Bài tập về nhà:}
+\begin{enumerate}
+\item Với $I_0 = 5$, $r = 0.15$, tính số ca sau 7 ngày
+\item Nếu $R_0 = 5$ (như biến thể Delta), ngưỡng miễn dịch là bao nhiêu?
+\item Đề xuất 3 biện pháp làm giảm $\beta$ trong thực tế
+\end{enumerate}
+\end{highlightbox}
+
+\end{competitionsection}
+\newpage
+
+% ========== PHẦN IV: HƯỚNG DẪN HỌC SINH ==========
+\begin{competitionsection}{IV}
+\vspace{0.5cm}
+
+\subsection*{4.1. Tóm tắt công thức}
+
+\begin{mathbox}
+\textbf{1. Hàm số mũ cơ sở $e$:}
+$$y = e^x \quad (e \approx 2.71828)$$
+
+\textbf{2. Công thức lây lan dịch bệnh (giai đoạn đầu):}
+$$\boxed{I(t) = I_0 \cdot e^{(\beta - \gamma)t}}$$
+
+\textbf{3. Hệ số lây nhiễm cơ bản:}
+$$R_0 = \frac{\beta}{\gamma}$$
+\begin{itemize}
+\item $R_0 > 1 \Rightarrow$ Dịch bùng phát
+\item $R_0 < 1 \Rightarrow$ Dịch tự tắt
+\end{itemize}
+
+\textbf{4. Ngưỡng miễn dịch cộng đồng:}
+$$H = 1 - \frac{1}{R_0}$$
+
+\textbf{5. Tìm thời gian (dùng logarit):}
+$$t = \frac{\ln(I/I_0)}{r}$$
+\end{mathbox}
+
+\subsection*{4.2. Ví dụ mẫu}
+
+\textbf{Bài toán:} Một thành phố có 10 ca nhiễm ban đầu. Biết $\beta = 0.3$/ngày, $\gamma = 0.1$/ngày.
+
+\textbf{Giải:}
+\begin{enumerate}
+\item Tính $r = \beta - \gamma = 0.3 - 0.1 = 0.2$/ngày
+\item Công thức: $I(t) = 10 \cdot e^{0.2t}$
+\item Sau 10 ngày: $I(10) = 10 \cdot e^{2} = 10 \times 7.389 \approx 74$ ca
+\item Sau 15 ngày: $I(15) = 10 \cdot e^{3} = 10 \times 20.09 \approx 201$ ca
+\item $R_0 = 0.3/0.1 = 3$ (mỗi người lây cho 3 người)
+\item Ngưỡng miễn dịch: $H = 1 - 1/3 = 66.7\%$
+\end{enumerate}
+
+\subsection*{4.3. Hướng dẫn sử dụng EpidemicSim v3}
+
+\begin{enumerate}
+\item \textbf{Truy cập:} \href{https://stem-1h8.pages.dev/sim.html}{\texttt{stem-1h8.pages.dev/sim.html}}
+\item \textbf{Tab ``Công thức'':} Xem công thức Toán học, bảng giá trị $e^x$
+\item \textbf{Tab ``Mô phỏng'':} Nhập tham số, chạy mô phỏng SIR
+\item \textbf{Tab ``So sánh'':} Thêm nhiều kịch bản, so sánh biểu đồ cột
+\item \textbf{Tab ``Học tập'':} Đọc thêm lý thuyết, ví dụ thực tế
+\end{enumerate}
+
+\end{competitionsection}
+\newpage
+
+% ========== PHẦN V: PHỤ LỤC ==========
+\begin{competitionsection}{V}
+\vspace{0.5cm}
+
+\subsection*{Phụ lục 1: Bảng giá trị $e^x$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
+\hline
+$x$ & 0 & 0.5 & 1 & 1.5 & 2 & 2.5 & 3 & 3.5 & 4 \\
+\hline
+$e^x$ & 1.00 & 1.65 & 2.72 & 4.48 & 7.39 & 12.18 & 20.09 & 33.12 & 54.60 \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Phụ lục 2: Bảng $R_0$ và ngưỡng miễn dịch các bệnh}
+\begin{center}
+\begin{tabular}{|l|c|c|l|}
+\hline
+\header{Bệnh} & \header{$R_0$} & \header{$H$} & \header{Ghi chú} \\
+\hline
+Cúm mùa & 1.2 -- 1.5 & 17 -- 33\% & Dễ kiểm soát \\
+COVID-19 (gốc Vũ Hán) & 2.5 -- 3.0 & 60 -- 67\% & Bùng phát 2020 \\
+COVID-19 (Delta) & 5 -- 8 & 80 -- 88\% & Lây nhanh hơn \\
+COVID-19 (Omicron) & 10 -- 15 & 90 -- 93\% & Rất khó kiểm soát \\
+Sởi & 12 -- 18 & 92 -- 94\% & Cần tiêm chủng cao \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{Phụ lục 3: Đồ thị SIR điển hình}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=12cm, height=6cm,
+    xlabel={Thời gian (ngày)},
+    ylabel={Số người},
+    legend style={at={(0.98,0.98)}, anchor=north east, font=\small},
+    grid=major,
+    xmin=0, xmax=100,
+    ymin=0, ymax=10000
+]
+\addplot[blue, thick, domain=0:100, samples=100] {10000*exp(-0.0003*x^1.5)};
+\addplot[red, thick, domain=0:100, samples=100] {4000*exp(-((x-30)/15)^2)};
+\addplot[green!60!black, thick, domain=0:100, samples=100] {10000*(1-exp(-0.00005*x^2))};
+\legend{S (Nhạy cảm), I (Nhiễm), R (Hồi phục)}
+\end{axis}
+\end{tikzpicture}
+
+\textit{Hình minh họa: Đường cong S-I-R trong mô hình dịch bệnh}
+\end{center}
+
+\subsection*{Phụ lục 4: Rubric đánh giá sản phẩm}
+
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.2cm}|X|X|X|c|}
+\hline
+\rowcolor{TableHeader}
+\sffamily\bfseries Tiêu chí & \sffamily\bfseries Xuất sắc (4đ) & \sffamily\bfseries Khá (3đ) & \sffamily\bfseries Cần cải thiện (1-2đ) & \sffamily\bfseries Điểm \\
+\hline
+\textbf{Công thức Toán} & Viết đúng $I=I_0 e^{rt}$, tính chính xác, giải thích được & Viết đúng, tính đúng & Còn sai công thức hoặc tính & \\
+\hline
+\textbf{Hiểu $R_0$, $H$} & Giải thích đúng ý nghĩa, tính đúng, liên hệ thực tế & Hiểu và tính đúng & Chưa hiểu ý nghĩa & \\
+\hline
+\textbf{Mô phỏng} & Thành thạo, so sánh 3+ kịch bản, phân tích sâu & Sử dụng tốt, so sánh 2 kịch bản & Cần hướng dẫn & \\
+\hline
+\textbf{Trình bày} & Mạch lạc, có đồ thị, lập luận logic, trả lời phản biện tốt & Rõ ràng, có số liệu & Rời rạc, thiếu minh họa & \\
+\hline
+\multicolumn{4}{|r|}{\textbf{TỔNG ĐIỂM:}} & \textbf{/16} \\
+\hline
+\end{tabularx}
+
+\subsection*{Phụ lục 5: Tài liệu tham khảo}
+
+\begin{enumerate}
+\item Sách giáo khoa Toán 11, Chương Hàm số mũ và Logarit (Kết nối tri thức, 2023)
+\item Kermack, W. O., \& McKendrick, A. G. (1927). A contribution to the mathematical theory of epidemics. \textit{Proceedings of the Royal Society of London}.
+\item WHO. COVID-19 Dashboard. \url{https://covid19.who.int/}
+\item Bộ Y tế Việt Nam. Cổng thông tin COVID-19. \url{https://covid19.gov.vn/}
+\end{enumerate}
+
+\end{competitionsection}
+
+\end{document}

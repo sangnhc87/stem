@@ -1,0 +1,520 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PHIẾU HỌC TẬP - SMARTLOGI: TỐI ƯU HÓA VẬN TẢI
+% File riêng để in phát cho học sinh
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+% --- GÓI CƠ BẢN ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{graphicx}
+
+% --- FONT ---
+\usepackage{newtxtext, newtxmath}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{microtype}
+
+% --- MÀU SẮC VÀ BỐ CỤC ---
+\usepackage[svgnames]{xcolor}
+\definecolor{primary}{RGB}{0,102,204}
+\definecolor{accent}{RGB}{255,69,0}
+\definecolor{success}{RGB}{34,139,34}
+\definecolor{TableHeader}{gray}{0.9}
+
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm,headheight=15pt]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrule}{\color{primary}\hrule width\textwidth height 1pt}
+\fancyhead[L]{\color{primary}\footnotesize\sffamily\textbf{PHIẾU HỌC TẬP - CHỦ ĐỀ STEM: SMARTLOGI}}
+\fancyhead[R]{\color{primary}\footnotesize\sffamily\textbf{LỚP 10}}
+\fancyfoot[C]{\sffamily\thepage}
+
+% --- GÓI HỖ TRỢ ---
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage[colorlinks=true,linkcolor=primary,urlcolor=accent]{hyperref}
+
+% --- MÔI TRƯỜNG ---
+\newtcolorbox{phieuhoctap}[1]{
+    enhanced, breakable,
+    colback=white, colframe=success,
+    boxrule=1.5pt, arc=3mm,
+    fonttitle=\bfseries\sffamily\Large,
+    coltitle=white, colbacktitle=success,
+    title=#1,
+    before upper={\setlength{\parskip}{0.5em}}
+}
+
+\newtcolorbox{tinhuong}{
+    enhanced, breakable,
+    colback=primary!5, colframe=primary!80,
+    boxrule=1pt, arc=2mm,
+    fonttitle=\bfseries\sffamily,
+    title=\color{accent}TÌNH HUỐNG THỰC TIỄN
+}
+
+\newtcolorbox{congthuc}{
+    enhanced, breakable,
+    colback=accent!5, colframe=accent!80,
+    boxrule=1pt, arc=2mm,
+    fonttitle=\bfseries\sffamily,
+    title=\color{primary}CÔNG THỨC TRỌNG TÂM
+}
+
+\newtcolorbox{khaosat}{
+    enhanced, breakable,
+    colback=gray!5, colframe=gray!60,
+    boxrule=1pt, arc=2mm,
+    fonttitle=\bfseries\sffamily,
+    title=\color{primary}PHIẾU KHẢO SÁT
+}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\header}[1]{\cellcolor{TableHeader}\sffamily\bfseries#1}
+
+\setlist[itemize,1]{label=\textbullet, leftmargin=*, nosep}
+\setlist[itemize,2]{label=--, leftmargin=*, nosep}
+
+\begin{document}
+
+%==============================================================
+% PHIẾU HỌC TẬP SỐ 1
+%==============================================================
+\begin{phieuhoctap}{PHIẾU HỌC TẬP SỐ 1: MÔ HÌNH HÓA BÀI TOÁN LOGISTICS}
+
+\noindent\textbf{Họ và tên:} \underline{\hspace{6cm}} \hfill \textbf{Nhóm:} \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+\begin{tinhuong}
+\textbf{Bạn là CEO của startup SmartLogi} - một công ty logistics mới thành lập. Công ty nhận được đơn hàng đầu tiên:
+\begin{itemize}
+\item Vận chuyển tối thiểu \textbf{9 tấn} hàng hóa
+\item Tổng thể tích tối thiểu \textbf{36 m$^3$}
+\end{itemize}
+
+\textbf{Bạn có thể thuê 2 loại xe:}
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Loại xe} & \textbf{Tải trọng} & \textbf{Thể tích} & \textbf{Giá thuê} \\
+\hline
+Xe loại A & 3 tấn & 3 m$^3$ & 4 triệu/xe \\
+Xe loại B & 1 tấn & 6 m$^3$ & 3 triệu/xe \\
+\hline
+\end{tabular}
+\end{center}
+
+\textbf{Thách thức:} Làm thế nào để chọn phương án vận chuyển với chi phí thấp nhất?
+\end{tinhuong}
+
+\vspace{0.5cm}
+\textbf{\color{accent}BÀI 1: Xác định ẩn số}
+\begin{itemize}
+\item Gọi $x$ = số xe loại A cần thuê
+\item Gọi $y$ = số xe loại B cần thuê
+\item Điều kiện: $x, y \ge 0$ và $x, y \in \mathbb{N}$ (số nguyên không âm)
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{\color{accent}BÀI 2: Viết các ràng buộc (điền vào chỗ trống)}
+
+\begin{enumerate}[label=\alph*)]
+\item \textbf{Ràng buộc tải trọng:} (Xe A chở 3 tấn, Xe B chở 1 tấn, cần $\ge$ 9 tấn)
+
+\hspace{2cm} $3x + \underline{\hspace{1.5cm}}y \ge \underline{\hspace{1.5cm}}$
+
+\item \textbf{Ràng buộc thể tích:} (Xe A chở 3 m$^3$, Xe B chở 6 m$^3$, cần $\ge$ 36 m$^3$)
+
+\hspace{2cm} $\underline{\hspace{1.5cm}}x + 6y \ge \underline{\hspace{1.5cm}}$
+
+\item \textbf{Giới hạn số xe:}
+
+\hspace{2cm} $0 \le x \le \underline{\hspace{1.5cm}}$ \quad (giả sử tối đa 10 xe A)
+
+\hspace{2cm} $0 \le y \le \underline{\hspace{1.5cm}}$ \quad (giả sử tối đa 9 xe B)
+\end{enumerate}
+
+\vspace{0.5cm}
+\textbf{\color{accent}BÀI 3: Xác định hàm mục tiêu}
+\begin{itemize}
+\item Chi phí thuê xe A: \underline{\hspace{2cm}} triệu/xe
+\item Chi phí thuê xe B: \underline{\hspace{2cm}} triệu/xe
+\item \textbf{Hàm chi phí:} $C = \underline{\hspace{1.5cm}}x + \underline{\hspace{1.5cm}}y \to \min$
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{\color{accent}BÀI 4: Dự đoán theo trực giác}
+
+\begin{tabularx}{\textwidth}{|L|C|C|}
+\hline
+\header{Phương án dự đoán} & \header{Số xe A} & \header{Số xe B} \\
+\hline
+Phương án của em & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} \\
+\hline
+\end{tabularx}
+
+\vspace{0.3cm}
+\textbf{Kiểm tra tính khả thi:}
+\begin{itemize}
+\item Chi phí dự đoán: \underline{\hspace{4cm}} triệu VNĐ
+\item Tải trọng = \underline{\hspace{2cm}} tấn $\ge$ 9 tấn? \quad $\square$ Đạt \quad $\square$ Không đạt
+\item Thể tích = \underline{\hspace{2cm}} m$^3$ $\ge$ 36 m$^3$? \quad $\square$ Đạt \quad $\square$ Không đạt
+\end{itemize}
+
+\begin{congthuc}
+\textbf{Hệ bất phương trình bậc nhất hai ẩn:}
+$$\begin{cases}
+3x + y \ge 9 \\
+3x + 6y \ge 36 \\
+0 \le x \le 10 \\
+0 \le y \le 9
+\end{cases}$$
+\textbf{Hàm mục tiêu:} $C = 4x + 3y \to \min$
+\end{congthuc}
+\end{phieuhoctap}
+
+\newpage
+%==============================================================
+% PHIẾU HỌC TẬP SỐ 2
+%==============================================================
+\begin{phieuhoctap}{PHIẾU HỌC TẬP SỐ 2: HƯỚNG DẪN SỬ DỤNG SMARTLOGI}
+
+\noindent\textbf{Họ và tên:} \underline{\hspace{6cm}} \hfill \textbf{Nhóm:} \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+\textbf{\color{primary}I. GIỚI THIỆU ỨNG DỤNG}
+\begin{itemize}
+\item \textbf{Tên ứng dụng:} SmartLogi - Tối ưu hóa Vận tải
+\item \textbf{Địa chỉ:} File \texttt{SmartLogi.html} (mở bằng trình duyệt) hoặc \href{https://stem-1h8.pages.dev/SmartLogi.html}{stem-1h8.pages.dev/SmartLogi.html}
+\item \textbf{Cấu trúc 3 Tab:}
+    \begin{itemize}
+    \item \textbf{Tab 1 - TÍNH TOÁN:} Nhập tham số, xem miền nghiệm, tìm điểm tối ưu
+    \item \textbf{Tab 2 - PHÂN TÍCH KỊCH BẢN:} So sánh kịch bản, phân tích độ nhạy
+    \item \textbf{Tab 3 - HỌC TẬP:} Công thức Toán, kiến thức Logistics
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{\color{primary}II. NHIỆM VỤ THỰC HÀNH}
+
+\textbf{\color{accent}Bước 1: Mở Tab ``TÍNH TOÁN''}
+\begin{itemize}
+\item Nhập các tham số theo bài toán gốc:
+    \begin{itemize}
+    \item \textit{Xe A:} Tải trọng = 3 tấn, Thể tích = 3 m$^3$, Giá = 4 triệu
+    \item \textit{Xe B:} Tải trọng = 1 tấn, Thể tích = 6 m$^3$, Giá = 3 triệu
+    \item \textit{Yêu cầu:} Tổng tấn = 9, Tổng khối = 36
+    \item \textit{Giới hạn:} Max xe A = 10, Max xe B = 9
+    \end{itemize}
+\end{itemize}
+
+\textbf{Ghi lại kết quả tối ưu:}
+
+\begin{tabularx}{\textwidth}{|L|C|C|C|}
+\hline
+& \header{Số xe A} & \header{Số xe B} & \header{Chi phí tối ưu} \\
+\hline
+Kết quả từ ứng dụng & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} & \underline{\hspace{3cm}} triệu \\
+\hline
+\end{tabularx}
+
+\vspace{0.5cm}
+\textbf{\color{accent}Bước 2: Mở Tab ``PHÂN TÍCH KỊCH BẢN''}
+\begin{itemize}
+\item Nhấn ``+ Thêm kịch bản'' để tạo \textbf{Kịch bản 2} của nhóm em
+\item \textit{Thay đổi đề xuất:} (VD: Giá xe A tăng lên 5 triệu)
+
+\underline{\hspace{\textwidth}}
+\end{itemize}
+
+\textbf{Ghi lại kết quả mới:}
+
+\begin{tabularx}{\textwidth}{|L|C|C|C|}
+\hline
+& \header{Số xe A} & \header{Số xe B} & \header{Chi phí} \\
+\hline
+Kịch bản 2 & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} & \underline{\hspace{3cm}} triệu \\
+\hline
+\end{tabularx}
+
+\vspace{0.3cm}
+\textbf{So sánh:} Quan sát biểu đồ cột. Kịch bản nào tốt hơn? \underline{\hspace{6cm}}
+
+\vspace{0.5cm}
+\textbf{\color{accent}Bước 3: Phân tích Độ nhạy (vẫn ở Tab 2)}
+\begin{itemize}
+\item Kéo xuống xem biểu đồ đường ``Phân tích độ nhạy''
+\item \textbf{Nhận xét:} Yếu tố nào làm chi phí thay đổi nhiều nhất?
+
+\underline{\hspace{\textwidth}}
+
+\underline{\hspace{\textwidth}}
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{\color{accent}Bước 4: Mở Tab ``HỌC TẬP''}
+\begin{itemize}
+\item Đọc phần ``Kiến thức Logistics''. Kể tên 2 thuật ngữ mới:
+    \begin{enumerate}
+    \item \underline{\hspace{6cm}}
+    \item \underline{\hspace{6cm}}
+    \end{enumerate}
+\end{itemize}
+
+\vspace{0.5cm}
+\textbf{\color{primary}III. KẾT LUẬN CỦA NHÓM}
+
+\textbf{Phương án tối ưu được nhóm chọn:}
+
+\underline{\hspace{\textwidth}}
+
+\textbf{Lý do lựa chọn:}
+
+\underline{\hspace{\textwidth}}
+
+\underline{\hspace{\textwidth}}
+\end{phieuhoctap}
+
+\newpage
+%==============================================================
+% PHIẾU KHẢO SÁT TRƯỚC KHI HỌC
+%==============================================================
+\begin{khaosat}
+
+\begin{center}
+\Large\bfseries\sffamily PHIẾU KHẢO SÁT TRƯỚC KHI HỌC
+\end{center}
+
+\noindent\textbf{Họ và tên:} \underline{\hspace{6cm}} \hfill \textbf{Lớp:} \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+\textbf{Hãy đánh dấu ($\checkmark$) vào ô phù hợp với em:}
+
+\vspace{0.3cm}
+\begin{tabularx}{\textwidth}{|L|c|c|c|c|}
+\hline
+\header{Câu hỏi} & \header{Rất đồng ý} & \header{Đồng ý} & \header{Phân vân} & \header{Không} \\
+\hline
+1. Em biết Logistics (vận tải) là gì & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+2. Em đã nghe về ``tối ưu hóa chi phí'' & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+3. Em biết cách giải Hệ bất phương trình 2 ẩn & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+4. Em biết cách vẽ miền nghiệm trên mặt phẳng tọa độ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+5. Em thấy Toán học có thể ứng dụng vào kinh doanh & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+6. Em quan tâm đến khởi nghiệp và kinh doanh & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+\end{tabularx}
+
+\vspace{0.5cm}
+\textbf{7. Em mong muốn học được gì từ bài học này?}
+
+\underline{\hspace{\textwidth}}
+
+\underline{\hspace{\textwidth}}
+\end{khaosat}
+
+\vspace{1cm}
+%==============================================================
+% PHIẾU KHẢO SÁT SAU KHI HỌC
+%==============================================================
+\begin{khaosat}
+
+\begin{center}
+\Large\bfseries\sffamily PHIẾU KHẢO SÁT SAU KHI HỌC
+\end{center}
+
+\noindent\textbf{Họ và tên:} \underline{\hspace{6cm}} \hfill \textbf{Lớp:} \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+\textbf{Hãy đánh dấu ($\checkmark$) vào ô phù hợp với em:}
+
+\vspace{0.3cm}
+\begin{tabularx}{\textwidth}{|L|c|c|c|c|}
+\hline
+\header{Câu hỏi} & \header{Rất đồng ý} & \header{Đồng ý} & \header{Phân vân} & \header{Không} \\
+\hline
+1. Em hiểu rõ hơn về bài toán tối ưu hóa & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+2. Em biết cách mô hình hóa bài toán thực tế thành Hệ BPT & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+3. Ứng dụng SmartLogi giúp em hiểu bài tốt hơn & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+4. Em thấy Toán học hữu ích trong kinh doanh thực tế & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+5. Em muốn học thêm các chủ đề STEM tương tự & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+6. Em tự tin có thể áp dụng kiến thức này vào thực tế & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+\end{tabularx}
+
+\vspace{0.5cm}
+\textbf{7. Điều em thích nhất về bài học này là gì?}
+
+\underline{\hspace{\textwidth}}
+
+\underline{\hspace{\textwidth}}
+
+\vspace{0.3cm}
+\textbf{8. Điều em muốn cải thiện về bài học này là gì?}
+
+\underline{\hspace{\textwidth}}
+
+\underline{\hspace{\textwidth}}
+\end{khaosat}
+
+\newpage
+%==============================================================
+% RUBRIC ĐÁNH GIÁ SẢN PHẨM
+%==============================================================
+\begin{center}
+{\Large\bfseries\sffamily\color{primary} RUBRIC ĐÁNH GIÁ SẢN PHẨM}
+\end{center}
+
+\vspace{0.3cm}
+\noindent\textbf{Tên nhóm:} \underline{\hspace{4cm}} \hfill \textbf{Người đánh giá:} \underline{\hspace{4cm}}
+
+\vspace{0.5cm}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.8cm}|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|>{\raggedright\arraybackslash}X|c|}
+\hline
+\rowcolor{TableHeader}
+\sffamily\bfseries Tiêu chí & \sffamily\bfseries Xuất sắc (4đ) & \sffamily\bfseries Khá (3đ) & \sffamily\bfseries Cần cải thiện (1-2đ) & \sffamily\bfseries Điểm \\
+\hline
+
+\textbf{1. Mô hình hóa Toán học} 
+& 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Hệ BPT chính xác
+    \item Xác định đúng hàm mục tiêu
+    \item Giải thích rõ ràng
+\end{itemize}
+& 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Hệ BPT cơ bản đúng
+    \item Có sai sót nhỏ
+\end{itemize}
+& 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Hệ BPT sai
+    \item Không xác định được mục tiêu
+\end{itemize}
+& \underline{\hspace{1cm}} \\
+\hline
+
+\textbf{2. Sử dụng công nghệ}
+& 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Thành thạo cả 3 tabs
+    \item Phân tích độ nhạy đúng
+\end{itemize}
+& 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Sử dụng tốt Tab 1, 2
+    \item Còn lúng túng Tab 3
+\end{itemize}
+& 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Chỉ dùng được Tab 1
+    \item Không phân tích được
+\end{itemize}
+& \underline{\hspace{1cm}} \\
+\hline
+
+\textbf{3. Tính khả thi phương án}
+& 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Đề xuất 2+ kịch bản khả thi
+    \item Phân tích ưu nhược chi tiết
+\end{itemize}
+& 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Đề xuất 1-2 kịch bản
+    \item Phân tích cơ bản
+\end{itemize}
+& 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Phương án không khả thi
+    \item Thiếu phân tích
+\end{itemize}
+& \underline{\hspace{1cm}} \\
+\hline
+
+\textbf{4. Trình bày và bảo vệ}
+& 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Mạch lạc, logic
+    \item Trực quan hiệu quả
+    \item Trả lời trọn vẹn
+\end{itemize}
+& 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Trình bày rõ ràng
+    \item Có hỗ trợ trực quan
+\end{itemize}
+& 
+\begin{itemize}[leftmargin=*,noitemsep,topsep=0pt]
+    \item Trình bày rời rạc
+    \item Không trả lời được
+\end{itemize}
+& \underline{\hspace{1cm}} \\
+\hline
+\end{tabularx}
+
+\vspace{0.5cm}
+\noindent\textbf{TỔNG ĐIỂM:} \underline{\hspace{2cm}} / 16 điểm
+
+\vspace{0.5cm}
+\noindent\textbf{Nhận xét của giáo viên:}
+
+\underline{\hspace{\textwidth}}
+
+\underline{\hspace{\textwidth}}
+
+\underline{\hspace{\textwidth}}
+
+\vspace{1cm}
+%==============================================================
+% PHIẾU ĐÁNH GIÁ ĐỒNG CẤP
+%==============================================================
+\begin{center}
+{\Large\bfseries\sffamily\color{primary} PHIẾU ĐÁNH GIÁ ĐỒNG CẤP (PEER ASSESSMENT)}
+\end{center}
+
+\vspace{0.3cm}
+\noindent\textbf{Tên em:} \underline{\hspace{4cm}} \hfill \textbf{Nhóm:} \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+\textbf{Đánh giá các thành viên trong nhóm} (thang điểm 1-5: 1=Yếu, 5=Xuất sắc)
+
+\vspace{0.3cm}
+\begin{tabularx}{\textwidth}{|L|c|c|c|c|}
+\hline
+\header{Tên thành viên} & \header{Ý tưởng} & \header{Hợp tác} & \header{Hoàn thành} & \header{Tổng} \\
+\hline
+\underline{\hspace{4cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} \\
+\hline
+\underline{\hspace{4cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} \\
+\hline
+\underline{\hspace{4cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} \\
+\hline
+\underline{\hspace{4cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} \\
+\hline
+\end{tabularx}
+
+\vspace{0.5cm}
+\noindent\textbf{Thành viên đóng góp nhiều nhất:} \underline{\hspace{6cm}}
+
+\noindent\textbf{Lý do:} \underline{\hspace{\textwidth}}
+
+\end{document}

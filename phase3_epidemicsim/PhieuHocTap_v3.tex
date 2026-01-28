@@ -1,0 +1,399 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PHIẾU HỌC TẬP - MÔ HÌNH TOÁN HỌC VỀ LÂY LAN DỊCH BỆNH
+% Phiên bản 3.1 - Hoàn chỉnh cho Cuộc thi STEM/STEAM
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{newtxtext, newtxmath}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{microtype}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning}
+
+\usepackage[svgnames]{xcolor}
+\definecolor{primary}{RGB}{26,95,122}
+\definecolor{mathblue}{RGB}{0,51,102}
+\definecolor{accent}{RGB}{194,55,40}
+\definecolor{success}{RGB}{34,139,34}
+\definecolor{TableHeader}{gray}{0.88}
+\definecolor{lightgray}{gray}{0.95}
+
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm,headheight=15pt]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrule}{\color{primary}\hrule width\textwidth height 1pt}
+\fancyhead[L]{\color{primary}\footnotesize\sffamily\textbf{MÔ HÌNH TOÁN HỌC VỀ LÂY LAN DỊCH BỆNH}}
+\fancyhead[R]{\color{primary}\footnotesize\sffamily\textbf{TOÁN 11}}
+\fancyfoot[C]{\sffamily\thepage}
+
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage[colorlinks=true,linkcolor=primary,urlcolor=accent]{hyperref}
+
+% ============= MÔI TRƯỜNG =============
+\newtcolorbox{phieuhoctap}[1]{
+    enhanced, breakable,
+    colback=white, colframe=primary,
+    boxrule=1.5pt, arc=4mm,
+    fonttitle=\bfseries\sffamily\Large,
+    coltitle=white, colbacktitle=primary,
+    title=#1,
+    shadow={2mm}{-1mm}{0mm}{black!20}
+}
+
+\newtcolorbox{mathbox}{
+    enhanced, breakable,
+    colback=mathblue!5, colframe=mathblue!80,
+    boxrule=1.5pt, arc=3mm,
+    fonttitle=\bfseries\sffamily,
+    title=\color{white}CÔNG THỨC TOÁN HỌC,
+    colbacktitle=mathblue
+}
+
+\newtcolorbox{problembox}{
+    enhanced, breakable,
+    colback=accent!5, colframe=accent!80,
+    boxrule=1.5pt, arc=3mm,
+    fonttitle=\bfseries\sffamily,
+    title=\color{white}BÀI TOÁN DỊCH BỆNH,
+    colbacktitle=accent
+}
+
+\newtcolorbox{khaosat}[1]{
+    enhanced, breakable,
+    colback=lightgray, colframe=gray!60,
+    boxrule=1pt, arc=3mm,
+    fonttitle=\bfseries\sffamily\large,
+    coltitle=primary, colbacktitle=lightgray,
+    title=#1
+}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\header}[1]{\cellcolor{TableHeader}\sffamily\bfseries#1}
+
+\setlist[itemize,1]{label=\color{primary}\textbullet, leftmargin=*, nosep}
+\setlist[enumerate,1]{label=\color{primary}\arabic*., leftmargin=*, nosep}
+
+\begin{document}
+
+%==============================================================
+% KHẢO SÁT TRƯỚC BÀI HỌC
+%==============================================================
+\begin{khaosat}{PHIẾU KHẢO SÁT TRƯỚC BÀI HỌC}
+
+\noindent\textbf{Họ và tên:} \underline{\hspace{5cm}} \hfill \textbf{Lớp:} \underline{\hspace{2cm}} \hfill \textbf{Ngày:} \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+\textbf{Hướng dẫn:} Đánh dấu ($\checkmark$) vào ô phù hợp với mức độ đồng ý của em.
+
+\vspace{0.3cm}
+\begin{tabularx}{\textwidth}{|L|c|c|c|c|}
+\hline
+\header{Câu hỏi} & \header{5} & \header{4} & \header{3} & \header{1-2} \\
+\hline
+1. Em hiểu dịch bệnh lây lan như thế nào & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+2. Em biết hệ số $R_0$ (hệ số lây nhiễm cơ bản) là gì & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+3. Em hiểu ``miễn dịch cộng đồng'' nghĩa là gì & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+4. Em biết Hàm số mũ có thể ứng dụng trong y tế & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+5. Em thấy Toán học giúp dự đoán diễn biến dịch bệnh & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+\end{tabularx}
+
+\textit{\footnotesize Thang điểm: 5 = Rất đồng ý, 4 = Đồng ý, 3 = Phân vân, 1-2 = Không đồng ý}
+
+\vspace{0.4cm}
+\textbf{6. Em mong muốn học được gì từ bài học này?}
+
+\underline{\hspace{0.95\textwidth}}
+\end{khaosat}
+
+\vspace{0.8cm}
+
+%==============================================================
+% PHIẾU HỌC TẬP SỐ 1
+%==============================================================
+\begin{phieuhoctap}{PHIẾU HỌC TẬP SỐ 1: XÂY DỰNG CÔNG THỨC TOÁN HỌC}
+
+\noindent\textbf{Họ và tên:} \underline{\hspace{5cm}} \hfill \textbf{Nhóm:} \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+\begin{mathbox}
+\textbf{Kiến thức cần nhớ:}
+
+\textbf{1. Hàm số mũ cơ sở $e$:} $y = e^x$ với $e \approx 2.71828$
+
+\textbf{2. Công thức lây lan dịch bệnh:}
+$$\boxed{I(t) = I_0 \cdot e^{rt} \quad \text{với} \quad r = \beta - \gamma}$$
+
+\textbf{3. Hệ số lây nhiễm:} $R_0 = \dfrac{\beta}{\gamma}$ \qquad \textbf{4. Ngưỡng miễn dịch:} $H = 1 - \dfrac{1}{R_0}$
+\end{mathbox}
+
+\vspace{0.5cm}
+\textbf{\color{mathblue} PHẦN A: TÍNH GIÁ TRỊ $e^x$} (Dùng máy tính, làm tròn 2 chữ số)
+
+\begin{center}
+\begin{tabularx}{0.9\textwidth}{|C|C|C|C|C|C|}
+\hline
+$x$ & 0 & 1 & 2 & 3 & 4 \\
+\hline
+$e^x$ & \underline{\hspace{1.2cm}} & \underline{\hspace{1.2cm}} & \underline{\hspace{1.2cm}} & \underline{\hspace{1.2cm}} & \underline{\hspace{1.2cm}} \\
+\hline
+\end{tabularx}
+\end{center}
+
+\vspace{0.3cm}
+\begin{problembox}
+\textbf{Tình huống:} Một thành phố xuất hiện \textbf{10 ca nhiễm} bệnh X ban đầu.
+
+Biết: $\beta = 0.3$ (tỷ lệ lây nhiễm/ngày), $\gamma = 0.1$ (tỷ lệ hồi phục/ngày)
+\end{problembox}
+
+\vspace{0.3cm}
+\textbf{\color{mathblue} PHẦN B: XÁC ĐỊNH THAM SỐ}
+\begin{itemize}
+\item Số ca ban đầu: $I_0 = \underline{\hspace{2cm}}$
+\item Tốc độ lây lan: $r = \beta - \gamma = \underline{\hspace{1.5cm}} - \underline{\hspace{1.5cm}} = \underline{\hspace{2cm}}$
+\item Công thức: $I(t) = \underline{\hspace{1.5cm}} \cdot e^{\underline{\hspace{1.5cm}} \cdot t}$
+\end{itemize}
+
+\vspace{0.3cm}
+\textbf{\color{mathblue} PHẦN C: TÍNH SỐ CA NHIỄM} (Công thức: $I(t) = 10 \cdot e^{0.2t}$)
+
+\begin{center}
+\begin{tabularx}{0.95\textwidth}{|C|C|C|C|C|C|}
+\hline
+\header{Ngày $t$} & 0 & 5 & 10 & 15 & 20 \\
+\hline
+$0.2t$ & 0 & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} \\
+\hline
+$e^{0.2t}$ & 1 & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} \\
+\hline
+$I(t)$ = số ca & 10 & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} \\
+\hline
+\end{tabularx}
+\end{center}
+
+\textbf{Nhận xét:} Số ca tăng rất nhanh vì \underline{\hspace{7cm}}
+
+\vspace{0.3cm}
+\textbf{\color{mathblue} PHẦN D: TÍNH $R_0$ VÀ NGƯỠNG MIỄN DỊCH $H$}
+\begin{itemize}
+\item $R_0 = \dfrac{\beta}{\gamma} = \dfrac{\underline{\hspace{1cm}}}{\underline{\hspace{1cm}}} = \underline{\hspace{2cm}}$
+\item Ý nghĩa $R_0$: Mỗi người nhiễm trung bình lây cho \underline{\hspace{2cm}} người
+\item Nếu $R_0 > 1$, dịch sẽ \underline{\hspace{4cm}} (bùng phát / tự tắt)
+\item $H = 1 - \dfrac{1}{R_0} = 1 - \dfrac{1}{\underline{\hspace{1cm}}} = \underline{\hspace{2cm}} = \underline{\hspace{2cm}}\%$
+\item Ý nghĩa $H$: Cần \underline{\hspace{2cm}}\% dân số có miễn dịch để dịch tự tắt
+\end{itemize}
+
+\end{phieuhoctap}
+
+\newpage
+%==============================================================
+% PHIẾU HỌC TẬP SỐ 2
+%==============================================================
+\begin{phieuhoctap}{PHIẾU HỌC TẬP SỐ 2: MÔ PHỎNG VỚI EPIDEMICSIM}
+
+\noindent\textbf{Họ và tên:} \underline{\hspace{5cm}} \hfill \textbf{Nhóm:} \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+\textbf{\color{primary}\large I. THỰC HÀNH MÔ PHỎNG}
+
+\begin{itemize}
+\item \textbf{Địa chỉ:} \href{https://stem-1h8.pages.dev/sim.html}{\texttt{stem-1h8.pages.dev/sim.html}}
+\item \textbf{Nhập tham số:} $N = 10{,}000$, $I_0 = 10$, $\beta = 0.3$, $\gamma = 0.1$, Tiêm chủng = 0\%
+\end{itemize}
+
+\textbf{\color{accent} Bài 1: So sánh công thức với mô phỏng SIR}
+
+\begin{center}
+\begin{tabularx}{0.9\textwidth}{|L|C|C|C|C|C|}
+\hline
+\header{Ngày $t$} & 0 & 5 & 10 & 15 & 20 \\
+\hline
+Công thức $I = 10e^{0.2t}$ & 10 & 27 & 74 & 201 & 546 \\
+\hline
+Từ EpidemicSim & 10 & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} \\
+\hline
+\end{tabularx}
+\end{center}
+
+\textbf{Câu hỏi:}
+\begin{enumerate}[label=\alph*)]
+\item Giai đoạn đầu (0-10 ngày): Công thức và mô phỏng \underline{\hspace{3cm}} (giống / khác)
+\item Giai đoạn sau (15-20 ngày): Kết quả khác nhau vì \underline{\hspace{5cm}}
+\item Đỉnh dịch (số ca cao nhất) xảy ra vào ngày \underline{\hspace{2cm}} với \underline{\hspace{3cm}} ca
+\item Cuối cùng, tổng số người đã nhiễm (R) là \underline{\hspace{3cm}} người
+\end{enumerate}
+
+\vspace{0.5cm}
+\textbf{\color{primary}\large II. SO SÁNH KỊCH BẢN CAN THIỆP}
+
+\begin{center}
+\begin{tabularx}{0.95\textwidth}{|L|c|c|C|C|C|}
+\hline
+\header{Kịch bản} & \header{$\beta$} & \header{Tiêm} & \header{Đỉnh (ca)} & \header{Ngày đỉnh} & \header{Tổng R} \\
+\hline
+KB1: Không can thiệp & 0.3 & 0\% & \underline{\hspace{1.5cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1.5cm}} \\
+\hline
+KB2: Giãn cách xã hội & 0.15 & 0\% & \underline{\hspace{1.5cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1.5cm}} \\
+\hline
+KB3: Tiêm chủng 60\% & 0.3 & 60\% & \underline{\hspace{1.5cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1.5cm}} \\
+\hline
+\end{tabularx}
+\end{center}
+
+\textbf{\color{accent} Bài 2: Phân tích kết quả}
+\begin{enumerate}[label=\alph*)]
+\item Kịch bản hiệu quả nhất là: \underline{\hspace{8cm}}
+\item Giãn cách xã hội làm giảm $\beta$ vì \underline{\hspace{6cm}}
+\item Với $R_0 = 3$, ngưỡng $H = 66.7\%$. Tiêm 60\% có đủ không? \underline{\hspace{3cm}}
+\end{enumerate}
+
+\vspace{0.5cm}
+\textbf{\color{primary}\large III. ĐỀ XUẤT CHÍNH SÁCH}
+
+Dựa trên kết quả mô phỏng, nhóm em đề xuất biện pháp phòng dịch:
+
+\underline{\hspace{0.95\textwidth}}
+
+\underline{\hspace{0.95\textwidth}}
+
+\underline{\hspace{0.95\textwidth}}
+
+\end{phieuhoctap}
+
+\newpage
+%==============================================================
+% KHẢO SÁT SAU BÀI HỌC
+%==============================================================
+\begin{khaosat}{PHIẾU KHẢO SÁT SAU BÀI HỌC}
+
+\noindent\textbf{Họ và tên:} \underline{\hspace{5cm}} \hfill \textbf{Lớp:} \underline{\hspace{2cm}} \hfill \textbf{Ngày:} \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+\textbf{Hướng dẫn:} Đánh dấu ($\checkmark$) vào ô phù hợp.
+
+\vspace{0.3cm}
+\begin{tabularx}{\textwidth}{|L|c|c|c|c|}
+\hline
+\header{Câu hỏi} & \header{5} & \header{4} & \header{3} & \header{1-2} \\
+\hline
+1. Em hiểu công thức $I(t) = I_0 \cdot e^{rt}$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+2. Em biết ý nghĩa của $R_0$ và cách tính & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+3. Em hiểu ngưỡng miễn dịch cộng đồng $H$ & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+4. Ứng dụng EpidemicSim giúp em hiểu bài hơn & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+5. Em thấy Toán học có ích trong đời sống & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+6. Em tự tin giải thích được cách phòng dịch & $\square$ & $\square$ & $\square$ & $\square$ \\
+\hline
+\end{tabularx}
+
+\textit{\footnotesize Thang điểm: 5 = Rất đồng ý, 4 = Đồng ý, 3 = Phân vân, 1-2 = Không đồng ý}
+
+\vspace{0.4cm}
+\textbf{7. Điều em thích nhất về bài học này:}
+
+\underline{\hspace{0.95\textwidth}}
+
+\textbf{8. Điều em muốn cải thiện:}
+
+\underline{\hspace{0.95\textwidth}}
+\end{khaosat}
+
+\vspace{0.8cm}
+
+%==============================================================
+% RUBRIC ĐÁNH GIÁ
+%==============================================================
+\begin{center}
+{\Large\bfseries\sffamily\color{primary} RUBRIC ĐÁNH GIÁ SẢN PHẨM NHÓM}
+\end{center}
+
+\vspace{0.3cm}
+\noindent\textbf{Tên nhóm:} \underline{\hspace{4cm}} \hfill \textbf{Người đánh giá:} \underline{\hspace{4cm}}
+
+\vspace{0.5cm}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.2cm}|X|X|X|c|}
+\hline
+\rowcolor{TableHeader}
+\sffamily\bfseries Tiêu chí & \sffamily\bfseries Xuất sắc (4đ) & \sffamily\bfseries Khá (3đ) & \sffamily\bfseries Cần cải thiện (1-2đ) & \sffamily\bfseries Điểm \\
+\hline
+\textbf{1. Công thức Toán} & Viết đúng $I=I_0 e^{rt}$, tính chính xác, giải thích rõ & Viết đúng, tính đúng & Còn sai công thức & \underline{\hspace{0.8cm}} \\
+\hline
+\textbf{2. Hiểu $R_0$, $H$} & Giải thích đúng ý nghĩa, tính chính xác, liên hệ thực tế & Hiểu cơ bản, tính đúng & Chưa hiểu ý nghĩa & \underline{\hspace{0.8cm}} \\
+\hline
+\textbf{3. Mô phỏng} & Thành thạo, so sánh 3 kịch bản, phân tích sâu sắc & Sử dụng tốt, so sánh 2 kịch bản & Cần hướng dẫn & \underline{\hspace{0.8cm}} \\
+\hline
+\textbf{4. Trình bày} & Mạch lạc, có đồ thị, trả lời phản biện tốt & Rõ ràng, có số liệu & Rời rạc, thiếu minh họa & \underline{\hspace{0.8cm}} \\
+\hline
+\end{tabularx}
+
+\vspace{0.3cm}
+\noindent\textbf{TỔNG ĐIỂM:} \underline{\hspace{1.5cm}} / 16 điểm \hfill \textbf{Xếp loại:} \underline{\hspace{3cm}}
+
+\vspace{0.3cm}
+\noindent\textbf{Nhận xét chung:}
+
+\underline{\hspace{0.95\textwidth}}
+
+\underline{\hspace{0.95\textwidth}}
+
+\newpage
+%==============================================================
+% PHIẾU ĐÁNH GIÁ ĐỒNG CẤP
+%==============================================================
+\begin{center}
+{\Large\bfseries\sffamily\color{primary} PHIẾU ĐÁNH GIÁ ĐỒNG CẤP (Peer Assessment)}
+\end{center}
+
+\vspace{0.3cm}
+\noindent\textbf{Tên em:} \underline{\hspace{4cm}} \hfill \textbf{Nhóm:} \underline{\hspace{2cm}} \hfill \textbf{Ngày:} \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+\textbf{Hướng dẫn:} Đánh giá các thành viên trong nhóm theo thang điểm 1-5 (1 = Yếu, 5 = Xuất sắc)
+
+\vspace{0.3cm}
+\begin{tabularx}{\textwidth}{|L|c|c|c|c|}
+\hline
+\rowcolor{TableHeader}
+\sffamily\bfseries Tên thành viên & \sffamily\bfseries Ý tưởng & \sffamily\bfseries Hợp tác & \sffamily\bfseries Hoàn thành & \sffamily\bfseries Tổng \\
+\hline
+\underline{\hspace{4cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} \\
+\hline
+\underline{\hspace{4cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} \\
+\hline
+\underline{\hspace{4cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} \\
+\hline
+\underline{\hspace{4cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} & \underline{\hspace{1cm}} \\
+\hline
+\end{tabularx}
+
+\vspace{0.3cm}
+\textit{\footnotesize Tiêu chí: Ý tưởng = Đóng góp sáng tạo | Hợp tác = Làm việc nhóm | Hoàn thành = Hoàn thành nhiệm vụ đúng hạn}
+
+\vspace{0.5cm}
+\textbf{Thành viên đóng góp nhiều nhất:} \underline{\hspace{4cm}}
+
+\textbf{Lý do:} \underline{\hspace{10cm}}
+
+\end{document}

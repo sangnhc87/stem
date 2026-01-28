@@ -56,20 +56,21 @@
     enhanced, breakable, colback=white, colframe=primary, boxrule=1pt,
     fonttitle=\bfseries\sffamily\Large, coltitle=white, colbacktitle=primary,
     title={#1},
-    shadow={2mm}{-1mm}{0mm}{black!20}
+    shadow={2mm}{-1mm}{0mm}{black!20},
+    before upper={\phantomsection\addcontentsline{toc}{section}{#1}}
 }
 
 \newtcolorbox{mathbox}[1][]{
     enhanced, breakable, 
     colback=bgsoft, colframe=primary, boxrule=1pt, arc=3mm,
-    title={\sffamily\bfseries\color{white} 📐 KIẾN THỨC TOÁN HỌC #1},
+    title={\sffamily\bfseries\color{white} [TOÁN] KIẾN THỨC TOÁN HỌC #1},
     colbacktitle=primary, fonttitle=\bfseries\sffamily
 }
 
 \newtcolorbox{activitybox}[1]{
     enhanced, breakable,
     colback=white, colframe=accent, boxrule=1pt, arc=3mm,
-    title={\sffamily\bfseries\color{white} 🎬 HOẠT ĐỘNG: #1},
+    title={\sffamily\bfseries\color{white} [HOẠT ĐỘNG] #1},
     colbacktitle=accent, fonttitle=\bfseries\sffamily
 }
 
@@ -198,8 +199,8 @@ GV đánh giá dựa trên Rubric (đính kèm).
 
 \newpage
 \begin{sectionbox}{III. PHỤ LỤC}
-\subsection*{Phụ lục 1: Bảng tra cứu Hệ số phát thải (EF)}
-(Nguồn tham khảo: IPCC & Bộ TN\&MT)
+\phantomsection\subsection*{Phụ lục 1: Bảng tra cứu Hệ số phát thải (EF)}\addcontentsline{toc}{subsection}{Phụ lục 1: Bảng tra cứu Hệ số phát thải (EF)}
+(Nguồn tham khảo: IPCC \& Bộ TN\&MT)
 \begin{center}
 \begin{tabular}{|l|c|l|}
 \hline
@@ -216,7 +217,7 @@ Rau củ & 0.50 / kg & Canh tác \\
 \end{tabular}
 \end{center}
 
-\subsection*{Phụ lục 2: Rubric Đánh giá}
+\phantomsection\subsection*{Phụ lục 2: Rubric Đánh giá}\addcontentsline{toc}{subsection}{Phụ lục 2: Rubric Đánh giá}
 \begin{tabularx}{\textwidth}{|>{\bfseries}l|X|X|X|}
 \hline
 \rowcolor{primary!20} Tiêu chí & Mức 1 (Cần cố gắng) & Mức 2 (Đạt) & Mức 3 (Tốt) \\

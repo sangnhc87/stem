@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.16)  28 JAN 2026 13:10
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.16)  28 JAN 2026 13:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1372,76 +1372,76 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 52.
 LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line
- 77.
+ 78.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 77.
+(Font)              scaled to size 12.0pt on input line 78.
 
-No file EcoPlan.aux.
+(./EcoPlan.aux
+LaTeX Font Info:    Trying to load font information for T5+ntxtlf on input line
+ 8.
+LaTeX Font Info:    No file T5ntxtlf.fd. on input line 8.
+LaTeX Font Info:    Trying to load font information for T5+cmr on input line 8.
+
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/vntex/t5cmr.fd
+File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+
+LaTeX Font Warning: Font shape `T5/ntxtlf/m/n' undefined
+(Font)              using `T5/cmr/m/n' instead on input line 8.
+
+)
 \openout1 = `EcoPlan.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 77.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 78.
 LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line
- 77.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/omlntxmi.fd
+ 78.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 78.
 LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 
-77.
+78.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 77.
-LaTeX Font Info:    Trying to load font information for T5+cmr on input line 77
-.
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/vntex/t5cmr.fd
-File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 78.
 LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line
- 77.
+ 78.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 78.
 LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input lin
-e 77.
+e 78.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 77.
-LaTeX Font Info:    ... okay on input line 77.
-LaTeX Font Info:    Trying to load font information for T5+ntxtlf on input line
- 77.
-LaTeX Font Info:    No file T5ntxtlf.fd. on input line 77.
-
-
-LaTeX Font Warning: Font shape `T5/ntxtlf/m/n' undefined
-(Font)              using `T5/cmr/m/n' instead on input line 77.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
 
 (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -1465,27 +1465,27 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-LaTeX Info: Command `\dddot' is already robust on input line 77.
-LaTeX Info: Command `\ddddot' is already robust on input line 77.
+LaTeX Info: Command `\dddot' is already robust on input line 78.
+LaTeX Info: Command `\ddddot' is already robust on input line 78.
 
 Package pgfplots notification 'compat/show suggested version=true': document ha
 s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 
 \c@mv@tabular=\count356
 \c@mv@boldtabular=\count357
-LaTeX Info: Redefining \microtypecontext on input line 77.
-Package microtype Info: Applying patch `item' on input line 77.
-Package microtype Info: Applying patch `toc' on input line 77.
-Package microtype Info: Applying patch `eqnum' on input line 77.
-Package microtype Info: Applying patch `footnote' on input line 77.
-Package microtype Info: Applying patch `verbatim' on input line 77.
+LaTeX Info: Redefining \microtypecontext on input line 78.
+Package microtype Info: Applying patch `item' on input line 78.
+Package microtype Info: Applying patch `toc' on input line 78.
+Package microtype Info: Applying patch `eqnum' on input line 78.
+Package microtype Info: Applying patch `footnote' on input line 78.
+Package microtype Info: Applying patch `verbatim' on input line 78.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 77.
+LaTeX Info: Redefining \showhyphens on input line 78.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1495,7 +1495,7 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/ntxtlf/m/n/12'. Switching off
-(microtype)                protrusion for this font on input line 77.
+(microtype)                protrusion for this font on input line 78.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1531,118 +1531,120 @@ Package microtype Warning: I cannot find a protrusion list for font
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 77.
+Package hyperref Info: Link coloring ON on input line 78.
+(./EcoPlan.out) (./EcoPlan.out)
 \@outlinefile=\write4
 \openout4 = `EcoPlan.out'.
 
 
+
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/ntxtlf/m/n/24.88'. Switching off
-(microtype)                protrusion for this font on input line 84.
+(microtype)                protrusion for this font on input line 85.
 
 
 LaTeX Font Warning: Font shape `T5/ntxtlf/b/n' undefined
-(Font)              using `T5/ntxtlf/m/n' instead on input line 84.
+(Font)              using `T5/ntxtlf/m/n' instead on input line 85.
 
-LaTeX Font Info:    Trying to load font information for T5+phv on input line 84
+LaTeX Font Info:    Trying to load font information for T5+phv on input line 85
 .
 (/usr/local/texlive/2024/texmf-dist/tex/latex/vntex/t5phv.fd
 File: t5uhv.fd 2005/08/24 Fontinst v1.929 font definitions for T5/phv.
 )
 LaTeX Font Info:    Font shape `T5/phv/b/n' will be
-(Font)              scaled to size 22.88956pt on input line 84.
+(Font)              scaled to size 22.88956pt on input line 85.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/phv/b/n/24.88'. Switching off
-(microtype)                protrusion for this font on input line 84.
+(microtype)                protrusion for this font on input line 85.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/ntxtlf/b/n/24.88'. Switching off
-(microtype)                protrusion for this font on input line 89.
+(microtype)                protrusion for this font on input line 90.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/ntxtlf/m/n/20.74'. Switching off
-(microtype)                protrusion for this font on input line 90.
+(microtype)                protrusion for this font on input line 91.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/ntxtlf/b/n/20.74'. Switching off
-(microtype)                protrusion for this font on input line 90.
+(microtype)                protrusion for this font on input line 91.
 
 LaTeX Font Info:    Font shape `T5/phv/b/n' will be
-(Font)              scaled to size 19.08076pt on input line 90.
+(Font)              scaled to size 19.08076pt on input line 91.
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/phv/b/n/20.74'. Switching off
-(microtype)                protrusion for this font on input line 90.
+(microtype)                protrusion for this font on input line 91.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/ntxtlf/m/n/17.28'. Switching off
-(microtype)                protrusion for this font on input line 92.
+(microtype)                protrusion for this font on input line 93.
 
 
 LaTeX Font Warning: Font shape `T5/ntxtlf/m/it' undefined
-(Font)              using `T5/ntxtlf/m/n' instead on input line 92.
+(Font)              using `T5/ntxtlf/m/n' instead on input line 93.
 
 LaTeX Font Info:    Font shape `T5/phv/m/it' in size <17.28> not available
-(Font)              Font shape `T5/phv/m/sl' tried instead on input line 92.
+(Font)              Font shape `T5/phv/m/sl' tried instead on input line 93.
 LaTeX Font Info:    Font shape `T5/phv/m/sl' will be
-(Font)              scaled to size 15.89755pt on input line 92.
+(Font)              scaled to size 15.89755pt on input line 93.
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/phv/m/sl/17.28'. Switching off
-(microtype)                protrusion for this font on input line 92.
+(microtype)                protrusion for this font on input line 93.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/ntxtlf/m/n/14.4'. Switching off
-(microtype)                protrusion for this font on input line 96.
+(microtype)                protrusion for this font on input line 97.
 
 LaTeX Font Info:    Font shape `T5/phv/m/n' will be
-(Font)              scaled to size 13.24796pt on input line 96.
+(Font)              scaled to size 13.24796pt on input line 97.
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/phv/m/n/14.4'. Switching off
-(microtype)                protrusion for this font on input line 96.
+(microtype)                protrusion for this font on input line 97.
 
 LaTeX Font Info:    Trying to load font information for OT1+minntx on input lin
-e 97.
+e 98.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 14.4pt on input line 97.
+(Font)              scaled to size 14.4pt on input line 98.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `minntx' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 10.5pt on input line 97.
+(Font)              scaled to size 10.5pt on input line 98.
 LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 7.9pt on input line 97.
+(Font)              scaled to size 7.9pt on input line 98.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 14.4pt on input line 97.
+(Font)              scaled to size 14.4pt on input line 98.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 10.5pt on input line 97.
+(Font)              scaled to size 10.5pt on input line 98.
 LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 7.9pt on input line 97.
+(Font)              scaled to size 7.9pt on input line 98.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 14.4pt on input line 97.
+(Font)              scaled to size 14.4pt on input line 98.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 10.5pt on input line 97.
+(Font)              scaled to size 10.5pt on input line 98.
 LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 7.9pt on input line 97.
+(Font)              scaled to size 7.9pt on input line 98.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 14.4pt on input line 97.
+(Font)              scaled to size 14.4pt on input line 98.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 10.5pt on input line 97.
+(Font)              scaled to size 10.5pt on input line 98.
 LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 7.9pt on input line 97.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
+(Font)              scaled to size 7.9pt on input line 98.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1651,7 +1653,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -1661,66 +1663,66 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 
-97.
+98.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/gelasiomath/untxmia.fd
 File: untxmia.fd 2024/04/09 Fontinst v1.933 font definitions for U/ntxmia.
 )
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 14.4pt on input line 97.
+(Font)              scaled to size 14.4pt on input line 98.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 10.5pt on input line 97.
+(Font)              scaled to size 10.5pt on input line 98.
 LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 7.9pt on input line 97.
+(Font)              scaled to size 7.9pt on input line 98.
 LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 
-97.
+98.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 14.4pt on input line 97.
+(Font)              scaled to size 14.4pt on input line 98.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 10.5pt on input line 97.
+(Font)              scaled to size 10.5pt on input line 98.
 LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 7.9pt on input line 97.
+(Font)              scaled to size 7.9pt on input line 98.
 LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 
-97.
+98.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 14.4pt on input line 97.
+(Font)              scaled to size 14.4pt on input line 98.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 10.5pt on input line 97.
+(Font)              scaled to size 10.5pt on input line 98.
 LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 7.9pt on input line 97.
+(Font)              scaled to size 7.9pt on input line 98.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 14.4pt on input line 97.
+(Font)              scaled to size 14.4pt on input line 98.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 10.5pt on input line 97.
+(Font)              scaled to size 10.5pt on input line 98.
 LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 7.9pt on input line 97.
+(Font)              scaled to size 7.9pt on input line 98.
 LaTeX Font Info:    Font shape `T5/phv/b/n' will be
-(Font)              scaled to size 13.24796pt on input line 98.
+(Font)              scaled to size 13.24796pt on input line 99.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/phv/b/n/14.4'. Switching off
-(microtype)                protrusion for this font on input line 98.
+(microtype)                protrusion for this font on input line 99.
 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.100 ...extbf{Chủ đề Toán:} & Thống kê &
+l.101 ...extbf{Chủ đề Toán:} & Thống kê &
                                                    Hàm số bậc nhất \\
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
 
-Overfull \hbox (30.4094pt too wide) in paragraph at lines 97--103
+Overfull \hbox (30.4094pt too wide) in paragraph at lines 98--104
  [][] 
  []
 
@@ -1733,27 +1735,81 @@ al/texlive/2024/texmf-dist/fonts/enc/dvips/vntex/t5.enc}]
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/ntxtlf/b/n/17.28'. Switching off
-(microtype)                protrusion for this font on input line 110.
+(microtype)                protrusion for this font on input line 111.
 
-No file EcoPlan.toc.
+(./EcoPlan.toc
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/ntxtlf/b/n/12'. Switching off
+(microtype)                protrusion for this font on input line 2.
+
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 12.0pt on input line 5.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 8.8pt on input line 5.
+LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
+(Font)              scaled to size 6.6pt on input line 5.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 12.0pt on input line 5.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 8.8pt on input line 5.
+LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
+(Font)              scaled to size 6.6pt on input line 5.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 12.0pt on input line 5.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 8.8pt on input line 5.
+LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
+(Font)              scaled to size 6.6pt on input line 5.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 12.0pt on input line 5.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 8.8pt on input line 5.
+LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
+(Font)              scaled to size 6.6pt on input line 5.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 12.0pt on input line 5.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 8.8pt on input line 5.
+LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
+(Font)              scaled to size 6.6pt on input line 5.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 12.0pt on input line 5.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 8.8pt on input line 5.
+LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
+(Font)              scaled to size 6.6pt on input line 5.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 12.0pt on input line 5.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 8.8pt on input line 5.
+LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
+(Font)              scaled to size 6.6pt on input line 5.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 12.0pt on input line 5.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 8.8pt on input line 5.
+LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
+(Font)              scaled to size 6.6pt on input line 5.
+)
 \tf@toc=\write5
 \openout5 = `EcoPlan.toc'.
 
 
 
 LaTeX Font Info:    Font shape `T5/phv/m/n' will be
-(Font)              scaled to size 11.03998pt on input line 111.
+(Font)              scaled to size 11.03998pt on input line 112.
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/phv/m/n/12'. Switching off
-(microtype)                protrusion for this font on input line 111.
+(microtype)                protrusion for this font on input line 112.
 
 LaTeX Font Info:    Font shape `T5/phv/b/n' will be
-(Font)              scaled to size 11.03998pt on input line 111.
+(Font)              scaled to size 11.03998pt on input line 112.
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/phv/b/n/12'. Switching off
-(microtype)                protrusion for this font on input line 111.
+(microtype)                protrusion for this font on input line 112.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1768,166 +1824,49 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.111 \newpage
+l.112 \newpage
                [1]
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/ntxtlf/b/n/12'. Switching off
-(microtype)                protrusion for this font on input line 115.
-
 LaTeX Font Info:    Font shape `T5/phv/b/n' will be
-(Font)              scaled to size 15.89755pt on input line 115.
+(Font)              scaled to size 15.89755pt on input line 116.
+
 
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/phv/b/n/17.28'. Switching off
-(microtype)                protrusion for this font on input line 115.
-
-
-Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/ntxtlf/b/n/14.4'. Switching off
 (microtype)                protrusion for this font on input line 116.
 
 
 Package microtype Warning: I cannot find a protrusion list for font
-(microtype)                `T5/ntxtlf/m/it/12'. Switching off
-(microtype)                protrusion for this font on input line 119.
+(microtype)                `T5/ntxtlf/b/n/14.4'. Switching off
+(microtype)                protrusion for this font on input line 117.
 
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 12.0pt on input line 119.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 8.8pt on input line 119.
-LaTeX Font Info:    Font shape `OT1/minntx/m/n' will be
-(Font)              scaled to size 6.6pt on input line 119.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 12.0pt on input line 119.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 8.8pt on input line 119.
-LaTeX Font Info:    Font shape `OML/ntxmi/m/it' will be
-(Font)              scaled to size 6.6pt on input line 119.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 12.0pt on input line 119.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 8.8pt on input line 119.
-LaTeX Font Info:    Font shape `LMS/ntxsy/m/n' will be
-(Font)              scaled to size 6.6pt on input line 119.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 12.0pt on input line 119.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 8.8pt on input line 119.
-LaTeX Font Info:    Font shape `LMX/ntxexx/m/n' will be
-(Font)              scaled to size 6.6pt on input line 119.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 12.0pt on input line 119.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 8.8pt on input line 119.
-LaTeX Font Info:    Font shape `U/ntxmia/m/it' will be
-(Font)              scaled to size 6.6pt on input line 119.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 12.0pt on input line 119.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 8.8pt on input line 119.
-LaTeX Font Info:    Font shape `U/ntxsym/m/n' will be
-(Font)              scaled to size 6.6pt on input line 119.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 12.0pt on input line 119.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 8.8pt on input line 119.
-LaTeX Font Info:    Font shape `U/ntxsyc/m/n' will be
-(Font)              scaled to size 6.6pt on input line 119.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 12.0pt on input line 119.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 8.8pt on input line 119.
-LaTeX Font Info:    Font shape `U/ntxexa/m/n' will be
-(Font)              scaled to size 6.6pt on input line 119.
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/ntxtlf/m/it/12'. Switching off
+(microtype)                protrusion for this font on input line 120.
+
 LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input lin
-e 123.
+e 124.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 123.
+(Font)              scaled to size 12.0pt on input line 124.
 LaTeX Font Info:    Trying to load font information for T5+ntxtt on input line 
-128.
-LaTeX Font Info:    No file T5ntxtt.fd. on input line 128.
+129.
+LaTeX Font Info:    No file T5ntxtt.fd. on input line 129.
 
 
 LaTeX Font Warning: Font shape `T5/ntxtt/m/n' undefined
-(Font)              using `T5/cmr/m/n' instead on input line 128.
+(Font)              using `T5/cmr/m/n' instead on input line 129.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
 (RS)
 )
 
-! LaTeX Error: Unicode character 🎬 (U+1F3AC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.137 \begin{activitybox}{Dấu chân vô hình}
-                                                
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🎬 (U+1F3AC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.147 ...activitybox}{Thu thập số liệu thô}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 📐 (U+1F4D0)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159 ...{mathbox}[: Hàm số tính phát thải]
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character 🎬 (U+1F3AC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.174 ...ybox}{Tính toán với EcoFootprint App}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
 Package microtype Warning: I cannot find a protrusion list for font
 (microtype)                `T5/ntxtt/m/n/12'. Switching off
-(microtype)                protrusion for this font on input line 175.
-
-
-! LaTeX Error: Unicode character 🎬 (U+1F3AC)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.189 \begin{activitybox}{Cam kết xanh}
-                                         
-You may provide a definition with
-\DeclareUnicodeCharacter 
+(microtype)                protrusion for this font on input line 176.
 
 
 
@@ -1961,43 +1900,32 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-4.32144pt}.
 
 [4]
-! Misplaced alignment tab character &.
-l.202 (Nguồn tham khảo: IPCC &
-                                   Bộ TN\&MT)
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-
-Underfull \hbox (badness 5288) in paragraph at lines 232--232
+Underfull \hbox (badness 5288) in paragraph at lines 233--233
 []|\T5/ntxtlf/m/it/12 (+20) M�c 1 (C�n c�
  []
 
 
-Underfull \hbox (badness 3364) in paragraph at lines 232--232
+Underfull \hbox (badness 3364) in paragraph at lines 233--233
 \T5/ntxtlf/m/it/12 (+20) ^^_�n, nh�ng ch�a
  []
 
 
-Underfull \hbox (badness 4378) in paragraph at lines 232--232
+Underfull \hbox (badness 4378) in paragraph at lines 233--233
 []|\T5/ntxtlf/m/it/12 (+20) S� li�u chi ti�t,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--232
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 []|\T5/ntxtlf/m/it/12 (+20) Gi�i ph�p ^^_�nh
  []
 
 
-Underfull \hbox (badness 7704) in paragraph at lines 232--232
+Underfull \hbox (badness 7704) in paragraph at lines 233--233
 \T5/ntxtlf/m/it/12 (+20) l��ng ^^_��c hi�u
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--232
+Underfull \hbox (badness 10000) in paragraph at lines 233--233
 \T5/ntxtlf/m/it/12 (+20) qu� (gi�m bao
  []
 
@@ -2020,26 +1948,17 @@ L3 programming layer <2020/03/25>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `EcoPlan.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `EcoPlan.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
+Package rerunfilecheck Info: File `EcoPlan.out' has not changed.
+(rerunfilecheck)             Checksum: ADECAD2D7C63FCB4664676765A19EC27;1077.
  ) 
 Here is how much of TeX's memory you used:
- 45163 strings out of 473362
- 1027562 string characters out of 5720983
- 1585101 words of memory out of 5000000
- 67422 multiletter control sequences out of 15000+600000
+ 45185 strings out of 473362
+ 1027848 string characters out of 5720983
+ 1585476 words of memory out of 5000000
+ 67431 multiletter control sequences out of 15000+600000
  624356 words of font info for 168 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,11n,93p,1004b,1393s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,11n,93p,1004b,1401s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb></us
 r/local/texlive/2024/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb></usr/loca
 l/texlive/2024/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb></usr/local/texli
@@ -2050,10 +1969,10 @@ st/fonts/type1/vntex/urwvn/uhvr8v.pfb></usr/local/texlive/2024/texmf-dist/fonts
 vntex/vnr/vnr12.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/vntex/vnr/v
 nr17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
 
-Output written on EcoPlan.pdf (6 pages, 154874 bytes).
+Output written on EcoPlan.pdf (6 pages, 157960 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 23 named destinations out of 1000 (max. 500000)
- 46189 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 116 compressed objects within 2 object streams
+ 28 named destinations out of 1000 (max. 500000)
+ 46229 words of extra memory for PDF output out of 51595 (max. 10000000)
 

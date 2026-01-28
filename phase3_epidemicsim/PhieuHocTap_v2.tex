@@ -1,0 +1,291 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PHIẾU HỌC TẬP - HÀM SỐ MŨ VÀ MÔ HÌNH TĂNG TRƯỞNG
+% Phiên bản 2.0: Tiếp cận từ Toán học
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{graphicx}
+\usepackage{newtxtext, newtxmath}
+\usepackage[scaled=0.92]{helvet}
+\usepackage{microtype}
+
+\usepackage[svgnames]{xcolor}
+\definecolor{primary}{RGB}{0,102,153}
+\definecolor{mathblue}{RGB}{0,51,102}
+\definecolor{accent}{RGB}{255,102,0}
+\definecolor{success}{RGB}{34,139,34}
+\definecolor{TableHeader}{gray}{0.9}
+
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm,headheight=15pt]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrule}{\color{primary}\hrule width\textwidth height 1pt}
+\fancyhead[L]{\color{primary}\footnotesize\sffamily\textbf{PHIẾU HỌC TẬP - HÀM SỐ MŨ}}
+\fancyhead[R]{\color{primary}\footnotesize\sffamily\textbf{TOÁN 11}}
+\fancyfoot[C]{\sffamily\thepage}
+
+\usepackage{enumitem}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage[colorlinks=true,linkcolor=primary,urlcolor=accent]{hyperref}
+
+\newtcolorbox{phieuhoctap}[1]{
+    enhanced, breakable,
+    colback=white, colframe=mathblue,
+    boxrule=1.5pt, arc=3mm,
+    fonttitle=\bfseries\sffamily\Large,
+    coltitle=white, colbacktitle=mathblue,
+    title=#1
+}
+
+\newtcolorbox{mathbox}{
+    enhanced, breakable,
+    colback=mathblue!5, colframe=mathblue!80,
+    boxrule=1pt, arc=2mm,
+    fonttitle=\bfseries\sffamily,
+    title=\color{white}KIẾN THỨC TOÁN HỌC,
+    colbacktitle=mathblue
+}
+
+\newtcolorbox{appbox}{
+    enhanced, breakable,
+    colback=accent!5, colframe=accent!80,
+    boxrule=1pt, arc=2mm,
+    fonttitle=\bfseries\sffamily,
+    title=\color{primary}ỨNG DỤNG THỰC TIỄN
+}
+
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcommand{\header}[1]{\cellcolor{TableHeader}\sffamily\bfseries#1}
+
+\setlist[itemize,1]{label=\textbullet, leftmargin=*, nosep}
+\setlist[itemize,2]{label=--, leftmargin=*, nosep}
+
+\begin{document}
+
+%==============================================================
+% PHIẾU HỌC TẬP SỐ 1: ÔN TẬP HÀM SỐ MŨ
+%==============================================================
+\begin{phieuhoctap}{PHIẾU HỌC TẬP SỐ 1: ÔN TẬP HÀM SỐ MŨ}
+
+\noindent\textbf{Họ và tên:} \underline{\hspace{6cm}} \hfill \textbf{Nhóm:} \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+\begin{mathbox}
+\textbf{Định nghĩa:} Hàm số mũ cơ số $a$ ($a > 0$, $a \neq 1$) có dạng: $y = a^x$
+
+\textbf{Số $e$:} $e = \lim_{n \to \infty}\left(1 + \frac{1}{n}\right)^n \approx 2.71828...$
+
+\textbf{Công thức tăng trưởng liên tục:}
+$$\boxed{y(t) = y_0 \cdot e^{rt}}$$
+\begin{itemize}
+\item $y_0$: Giá trị ban đầu (tại $t = 0$)
+\item $r$: Tốc độ tăng trưởng ($r > 0$: tăng, $r < 0$: giảm)
+\item $t$: Thời gian
+\end{itemize}
+\end{mathbox}
+
+\vspace{0.5cm}
+\textbf{\color{mathblue}BÀI 1: Tính chất hàm số mũ} (Điền vào chỗ trống)
+
+\begin{enumerate}[label=\alph*)]
+\item $a^0 = \underline{\hspace{2cm}}$
+\item $a^1 = \underline{\hspace{2cm}}$
+\item $a^{x+y} = a^x \cdot \underline{\hspace{2cm}}$
+\item $a^{x-y} = \dfrac{a^x}{\underline{\hspace{2cm}}}$
+\item $(a^x)^y = a^{\underline{\hspace{2cm}}}$
+\item Đồ thị $y = a^x$ (với $a > 1$) luôn đi qua điểm $(\underline{\hspace{1cm}}, \underline{\hspace{1cm}})$
+\end{enumerate}
+
+\vspace{0.5cm}
+\textbf{\color{mathblue}BÀI 2: Tính giá trị} (Dùng máy tính, làm tròn 2 chữ số)
+
+\begin{tabularx}{\textwidth}{|L|C|C|C|C|}
+\hline
+$x$ & 0 & 1 & 2 & 3 \\
+\hline
+$e^x$ & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} \\
+\hline
+\end{tabularx}
+
+\vspace{0.5cm}
+\textbf{\color{mathblue}BÀI 3: Công thức tăng trưởng}
+
+Gửi ngân hàng 100 triệu VND, lãi suất 5\%/năm (lãi kép liên tục).
+
+Công thức: $A = P \cdot e^{rt}$ với $P = 100$ triệu, $r = 0.05$
+
+\begin{enumerate}[label=\alph*)]
+\item Sau 1 năm: $A = 100 \cdot e^{0.05 \times 1} = 100 \cdot e^{\underline{\hspace{1cm}}} = \underline{\hspace{3cm}}$ triệu
+\item Sau 5 năm: $A = 100 \cdot e^{0.05 \times 5} = 100 \cdot e^{\underline{\hspace{1cm}}} = \underline{\hspace{3cm}}$ triệu
+\item Sau 10 năm: $A = 100 \cdot e^{0.05 \times 10} = 100 \cdot e^{\underline{\hspace{1cm}}} = \underline{\hspace{3cm}}$ triệu
+\end{enumerate}
+
+\vspace{0.5cm}
+\textbf{\color{mathblue}BÀI 4: So sánh tăng trưởng}
+
+\begin{tabularx}{\textwidth}{|C|C|C|C|}
+\hline
+\header{Thời gian (năm)} & \header{Tuyến tính $y = 100 + 5t$} & \header{Mũ $y = 100 \cdot e^{0.05t}$} & \header{Chênh lệch} \\
+\hline
+0 & 100 & 100 & 0 \\
+\hline
+10 & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} \\
+\hline
+20 & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} & \underline{\hspace{2cm}} \\
+\hline
+\end{tabularx}
+
+\textbf{Nhận xét:} \underline{\hspace{0.85\textwidth}}
+
+\end{phieuhoctap}
+
+\newpage
+%==============================================================
+% PHIẾU HỌC TẬP SỐ 2: ỨNG DỤNG VÀO DỊCH BỆNH
+%==============================================================
+\begin{phieuhoctap}{PHIẾU HỌC TẬP SỐ 2: ỨNG DỤNG VÀO MÔ HÌNH DỊCH BỆNH}
+
+\noindent\textbf{Họ và tên:} \underline{\hspace{6cm}} \hfill \textbf{Nhóm:} \underline{\hspace{2cm}}
+
+\vspace{0.5cm}
+\begin{appbox}
+\textbf{Tình huống:} Một thành phố có 10,000 dân. Xuất hiện 10 ca nhiễm bệnh X ban đầu.
+
+\textbf{Áp dụng công thức Toán:} $I(t) = I_0 \cdot e^{rt}$
+\begin{itemize}
+\item $I_0 = 10$ (số ca ban đầu)
+\item $r = \beta - \gamma = 0.3 - 0.1 = 0.2$ (tốc độ lây lan 20\%/ngày)
+\item $\beta$: Tỷ lệ lây nhiễm, $\gamma$: Tỷ lệ hồi phục
+\end{itemize}
+\end{appbox}
+
+\vspace{0.5cm}
+\textbf{\color{accent}BÀI 1: Tính số ca nhiễm theo công thức mũ}
+
+Công thức: $I(t) = 10 \cdot e^{0.2t}$
+
+\begin{tabularx}{\textwidth}{|C|C|C|C|C|C|}
+\hline
+\header{Ngày $t$} & 0 & 5 & 10 & 15 & 20 \\
+\hline
+$I(t) = 10 \cdot e^{0.2t}$ & 10 & \underline{\hspace{1.5cm}} & \underline{\hspace{1.5cm}} & \underline{\hspace{1.5cm}} & \underline{\hspace{1.5cm}} \\
+\hline
+\end{tabularx}
+
+\textbf{Nhận xét:} Số ca tăng rất nhanh theo thời gian vì \underline{\hspace{5cm}}
+
+\vspace{0.5cm}
+\textbf{\color{accent}BÀI 2: Sử dụng EpidemicSim}
+\begin{itemize}
+\item \textbf{Địa chỉ:} \href{https://stem-1h8.pages.dev/EpidemicSim.html}{stem-1h8.pages.dev/EpidemicSim.html}
+\item Nhập: N = 10,000, $I_0$ = 10, $\beta$ = 0.3, $\gamma$ = 0.1
+\item Nhấn ``Chạy mô phỏng''
+\end{itemize}
+
+\textbf{Ghi lại kết quả từ mô phỏng:}
+
+\begin{tabularx}{\textwidth}{|C|C|C|C|C|C|}
+\hline
+\header{Ngày $t$} & 0 & 5 & 10 & 15 & 20 \\
+\hline
+Từ EpidemicSim & 10 & \underline{\hspace{1.5cm}} & \underline{\hspace{1.5cm}} & \underline{\hspace{1.5cm}} & \underline{\hspace{1.5cm}} \\
+\hline
+\end{tabularx}
+
+\textbf{\color{accent}BÀI 3: So sánh công thức mũ với mô phỏng SIR}
+
+\begin{enumerate}[label=\alph*)]
+\item Giai đoạn đầu (ngày 0-10): Công thức mũ và mô phỏng có giống nhau không?
+
+\underline{\hspace{\textwidth}}
+
+\item Giai đoạn sau (ngày 15-20): Tại sao kết quả khác nhau?
+
+\underline{\hspace{\textwidth}}
+
+\item Đỉnh dịch (peak) xảy ra vào ngày thứ \underline{\hspace{2cm}} với \underline{\hspace{3cm}} ca
+\end{enumerate}
+
+\vspace{0.5cm}
+\textbf{\color{accent}BÀI 4: Thử nghiệm can thiệp}
+
+Thay đổi $\beta$ từ 0.3 xuống 0.2 (giãn cách xã hội) và quan sát:
+
+\begin{tabularx}{\textwidth}{|L|C|C|}
+\hline
+& \header{Không can thiệp ($\beta=0.3$)} & \header{Giãn cách ($\beta=0.2$)} \\
+\hline
+Đỉnh dịch (số ca max) & \underline{\hspace{3cm}} & \underline{\hspace{3cm}} \\
+\hline
+Ngày đạt đỉnh & \underline{\hspace{3cm}} & \underline{\hspace{3cm}} \\
+\hline
+\end{tabularx}
+
+\textbf{Kết luận:} Giãn cách xã hội giúp \underline{\hspace{6cm}}
+
+\vspace{0.5cm}
+\textbf{\color{primary}KẾT LUẬN TỔNG QUAN}
+
+\textbf{Kiến thức Toán học:}
+\begin{itemize}
+\item Công thức tăng trưởng mũ: $y = y_0 \cdot e^{rt}$
+\item Áp dụng để mô hình hóa bài toán thực tế
+\end{itemize}
+
+\textbf{Ứng dụng thực tiễn:}
+\begin{itemize}
+\item Lãi kép ngân hàng, tăng trưởng dân số, lây lan dịch bệnh
+\item Công thức mũ đúng ở giai đoạn đầu, sau đó cần mô hình phức tạp hơn (SIR)
+\end{itemize}
+
+\end{phieuhoctap}
+
+\newpage
+%==============================================================
+% RUBRIC ĐÁNH GIÁ
+%==============================================================
+\begin{center}
+{\Large\bfseries\sffamily\color{primary} RUBRIC ĐÁNH GIÁ SẢN PHẨM}
+\end{center}
+
+\vspace{0.3cm}
+\noindent\textbf{Tên nhóm:} \underline{\hspace{4cm}} \hfill \textbf{Người đánh giá:} \underline{\hspace{4cm}}
+
+\vspace{0.5cm}
+\begin{tabularx}{\textwidth}{|>{\raggedright\arraybackslash}p{2.5cm}|X|X|X|c|}
+\hline
+\rowcolor{TableHeader}
+\sffamily\bfseries Tiêu chí & \sffamily\bfseries Xuất sắc (4đ) & \sffamily\bfseries Khá (3đ) & \sffamily\bfseries Cần cải thiện (1-2đ) & \sffamily\bfseries Điểm \\
+\hline
+\textbf{1. Kiến thức Toán} & Nắm vững hàm mũ $y=a^x$, tính đúng $e^{rt}$ & Hiểu cơ bản, tính đúng & Còn nhầm lẫn công thức & \underline{\hspace{1cm}} \\
+\hline
+\textbf{2. Mô hình hóa} & Viết đúng công thức $I=I_0 e^{rt}$ & Viết được với hỗ trợ & Chưa viết được & \underline{\hspace{1cm}} \\
+\hline
+\textbf{3. Sử dụng công nghệ} & Thành thạo mô phỏng, so sánh kịch bản & Sử dụng cơ bản & Cần hướng dẫn nhiều & \underline{\hspace{1cm}} \\
+\hline
+\textbf{4. Trình bày} & Mạch lạc, có biểu đồ minh họa & Rõ ràng, có số liệu & Rời rạc & \underline{\hspace{1cm}} \\
+\hline
+\end{tabularx}
+
+\vspace{0.5cm}
+\noindent\textbf{TỔNG ĐIỂM:} \underline{\hspace{2cm}} / 16 điểm
+
+\vspace{0.5cm}
+\noindent\textbf{Nhận xét:}
+
+\underline{\hspace{\textwidth}}
+
+\underline{\hspace{\textwidth}}
+
+\end{document}

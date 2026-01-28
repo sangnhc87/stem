@@ -1,0 +1,78 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PHIẾU HỌC TẬP: HEALTHCHECK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+
+\definecolor{medblue}{RGB}{2, 132, 199}
+
+\begin{document}
+
+\begin{center}
+    \begin{tikzpicture}
+        \node[draw=medblue, line width=2pt, rounded corners=10pt, inner sep=10pt] (box) {
+            \begin{minipage}{0.9\textwidth}
+                \centering
+                \bfseries\Large\color{medblue} PHIẾU KHÁM SỨC KHỎE STEM
+            \end{minipage}
+        };
+    \end{tikzpicture}
+    \vspace{0.5cm}
+\end{center}
+
+\noindent \textbf{Họ và tên:} \dotfill \textbf{Lớp:} \dotfill \textbf{Tuổi:} \dotfill
+
+\section*{\color{medblue} I. THU THẬP DỮ LIỆU (DATA)}
+\textit{Đo 3 lần lấy trung bình để chính xác.}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Chỉ số} & \textbf{Lần 1} & \textbf{Lần 2} & \textbf{Lần 3} & \textbf{Trung bình} \\
+\hline
+Chiều cao (cm) & ......... & ......... & ......... & $h = $ ............. (m) \\
+\hline
+Cân nặng (kg) & ......... & ......... & ......... & $w = $ ............. (kg) \\
+\hline
+Nhịp tim (bpm) & ......... & ......... & ......... & ............. bpm \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{\color{medblue} II. TÍNH TOÁN (CALCULATIONS)}
+
+\textbf{1. Tính chỉ số BMI:}
+$$ BMI = \frac{w}{h^2} = \frac{\dots\dots}{(\dots\dots)^2} = \dots\dots $$
+
+\textbf{2. Đánh giá thể trạng (Khoanh tròn):}
+\begin{center}
+    [ Nhẹ cân ] \hspace{1cm} [ Bình thường ] \hspace{1cm} [ Thừa cân ] \hspace{1cm} [ Béo phì ]
+\end{center}
+
+\textbf{3. Tính chỉ số BMR (Năng lượng nghỉ):}
+(Nam: $+5$, Nữ: $-161$)
+$$ BMR = 10w + 6.25h_{cm} - 5\times\text{Tuổi} + s $$
+$$ BMR = 10(\dots) + 6.25(\dots) - 5(\dots) + \dots = \dots\dots \text{ (Calo/ngày)} $$
+
+\section*{\color{medblue} III. TƯ VẤN SỨC KHỎE (APP)}
+Truy cập \texttt{stem-1h8.pages.dev/health.html} và nhập số liệu.
+
+\begin{itemize}
+    \item App để xuất mức calo để duy trì cân nặng (TDEE): .................... Calo.
+    \item Nếu em muốn \textbf{tăng/giảm} cân, em cần nạp: .................... Calo/ngày.
+    \item Lời khuyên của App về vận động: .............................................................
+\end{itemize}
+
+\end{document}
