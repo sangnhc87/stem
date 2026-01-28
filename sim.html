@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EpidemicSim v3 - Sức Mạnh của Toán Học</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #4f46e5;
+            --primary-dark: #4338ca;
+            --primary-light: #818cf8;
+            --secondary: #06b6d4;
+            --accent: #f43f5e;
+            --success: #10b981;
+            --bg-body: #f1f5f9;
+            --bg-card: rgba(255, 255, 255, 0.95);
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+            color: var(--text-main);
+            min-height: 100vh;
+            background-attachment: fixed;
+            padding-bottom: 2rem;
+        }
+
+        /* Decorative background blobs */
+        .blob {
+            position: fixed;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .blob-1 {
+            top: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: #6366f1;
+        }
+
+        .blob-2 {
+            bottom: -100px;
+            right: -100px;
+            width: 500px;
+            height: 500px;
+            background: #06b6d4;
+        }
+
+        .blob-3 {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 300px;
+            height: 300px;
+            background: #f43f5e;
+            opacity: 0.2;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 1rem 0;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Navigation */
+        .nav-tabs {
+            display: flex;
+            background: #e2e8f0;
+            padding: 0.3rem;
+            border-radius: 12px;
+            gap: 0.3rem;
+        }
+
+        .nav-btn {
+            padding: 0.6rem 1.2rem;
+            border: none;
+            border-radius: 10px;
+            background: transparent;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-family: inherit;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn.active {
+            background: white;
+            color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .nav-btn:hover:not(.active) {
+            color: var(--text-main);
+            background: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Main Content */
+        .tab-content {
+            display: none;
+            margin-top: 2rem;
+            animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Grid System */
+        .grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        }
+
+        /* Cards */
+        .card {
+            background: var(--bg-card);
+            backdrop-filter: blur(12px);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            color: white;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        /* Math Display */
+        .math-display {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 1.5rem;
+            text-align: center;
+            margin: 1rem 0;
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .math-display::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--primary);
+        }
+
+        .formula-large {
+            font-family: 'Times New Roman', serif;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-dark);
+        }
+
+        /* Controls */
+        label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: all 0.2s;
+            background: #f8fafc;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: white;
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.9rem 2rem;
+            border-radius: 12px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 1rem;
+            width: 100%;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+            color: white;
+            box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.4);
+        }
+
+        .btn-outline {
+            background: white;
+            border: 2px solid #e2e8f0;
+            color: var(--text-muted);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        /* Stats Grid */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stat-val {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+        }
+
+        .stat-lbl {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Tables & Lists */
+        .scenario-list {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .scenario-card {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            background: white;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .stats-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Background Effects -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <span style="font-size: 2rem;">⚡</span>
+                <div>
+                    <div>EpidemicSim <span style="font-weight: 300; opacity: 0.8;">v3</span></div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;">TOÁN HỌC & ĐỜI SỐNG
+                    </div>
+                </div>
+            </div>
+            <nav class="nav-tabs">
+                <button class="nav-btn active" onclick="switchTab('formula', this)">Công Thức</button>
+                <button class="nav-btn" onclick="switchTab('simulation', this)">Mô Phỏng</button>
+                <button class="nav-btn" onclick="switchTab('compare', this)">So Sánh</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- SECTION 1: CÔNG THỨC TOÁN HỌC -->
+        <section id="formula" class="tab-content active">
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">Σ</div>
+                        <div class="card-title">Cơ Sở Toán Học</div>
+                    </div>
+
+                    <p style="margin-bottom: 1rem; color: var(--text-muted);">Mô hình lây lan dịch bệnh tuân theo quy
+                        luật tăng trưởng mũ ở giai đoạn đầu:</p>
+
+                    <div class="math-display">
+                        <div class="formula-large">I(t) = I₀ · e<sup>rt</sup></div>
+                        <div style="margin-top: 0.5rem; color: var(--accent); font-weight: 600;">r = β - γ</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 2rem;">
+                        <div class="stat-item">
+                            <div class="stat-val" style="color: var(--secondary);">R₀</div>
+                            <div class="stat-lbl">Hệ số lây nhiễm</div>
+                            <div style="font-size: 0.9rem; margin-top: 0.2rem;">= β / γ</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-val" style="color: var(--success);">H</div>
+                            <div class="stat-lbl">Ngưỡng miễn dịch</div>
+                            <div style="font-size: 0.9rem; margin-top: 0.2rem;">= 1 - 1/R₀</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">📈</div>
+                        <div class="card-title">Sức Mạnh Của Hàm Mũ</div>
+                    </div>
+                    <p style="margin-bottom: 1rem;">Bảng giá trị của hàm <b>y = eˣ</b> cho thấy tốc độ tăng trưởng khủng
+                        khiếp:</p>
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <tr style="border-bottom: 1px solid #e2e8f0;">
+                            <th style="text-align: left; padding: 0.8rem; color: var(--text-muted);">x (thời gian)</th>
+                            <th style="text-align: right; padding: 0.8rem;">Giá trị eˣ</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.8rem;">0</td>
+                            <td style="text-align: right; font-weight: bold;">1.00</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.8rem;">1</td>
+                            <td style="text-align: right; font-weight: bold;">2.72</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.8rem;">2</td>
+                            <td style="text-align: right; font-weight: bold;">7.39</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.8rem;">3</td>
+                            <td style="text-align: right; font-weight: bold;">20.09</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.8rem; color: var(--accent);">4</td>
+                            <td style="text-align: right; font-weight: bold; color: var(--accent);">54.60</td>
+                        </tr>
+                    </table>
+                    <button class="btn btn-primary" style="margin-top: 1.5rem;"
+                        onclick="document.querySelectorAll('.nav-btn')[1].click()">
+                        Thử Mô Phỏng Ngay ➜
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: MÔ PHỎNG -->
+        <section id="simulation" class="tab-content">
+            <div class="grid grid-3" style="grid-template-columns: 350px 1fr;">
+
+                <!-- Controls -->
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon">⚙️</div>
+                        <div class="card-title">Tham Số Đầu Vào</div>
+                    </div>
+
+                    <div class="grid" style="gap: 1rem;">
+                        <div>
+                            <label>Dân số (N)</label>
+                            <input type="number" id="simN" value="10000">
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div>
+                                <label>Tỷ lệ lây (β)</label>
+                                <input type="number" id="simBeta" value="0.3" step="0.01">
+                            </div>
+                            <div>
+                                <label>Tỷ lệ khỏi (γ)</label>
+                                <input type="number" id="simGamma" value="0.1" step="0.01">
+                            </div>
+                        </div>
+                        <div>
+                            <label>Tiêm chủng (%)</label>
+                            <input type="range" id="simVaxDisplay" min="0" max="100" value="0"
+                                style="width: 100%; margin-bottom: 0.5rem;"
+                                oninput="document.getElementById('vaxVal').innerText = this.value + '%'; document.getElementById('simVax').value = this.value;">
+                            <div
+                                style="display: flex; justify-content: space-between; font-size: 0.9rem; font-weight: bold; color: var(--primary);">
+                                <span>Mức độ bảo vệ</span>
+                                <span id="vaxVal">0%</span>
+                            </div>
+                            <input type="hidden" id="simVax" value="0">
+                        </div>
+
+                        <button class="btn btn-primary" onclick="runSimulation()">▶ CHẠY MÔ PHỎNG</button>
+                    </div>
+
+                    <div class="stats-row" style="grid-template-columns: 1fr 1fr; margin-top: 2rem;">
+                        <div class="stat-item">
+                            <div class="stat-val" id="resR0">-</div>
+                            <div class="stat-lbl">R₀</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-val" id="resPeak">-</div>
+                            <div class="stat-lbl">Đỉnh Dịch</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chart -->
+                <div class="card" style="display: flex; flex-direction: column;">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: var(--success);">📊</div>
+                        <div class="card-title">Diễn Biến Theo Thời Gian (Mô hình SIR)</div>
+                    </div>
+                    <div style="flex: 1; min-height: 400px; position: relative;">
+                        <canvas id="sirChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: SO SÁNH -->
+        <section id="compare" class="tab-content">
+            <div class="grid grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon" style="background: var(--accent);">⚡</div>
+                        <div class="card-title">Quản Lý Kịch Bản</div>
+                    </div>
+
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1rem;">
+                        <input type="text" id="scenName" placeholder="Tên kịch bản (VD: Giãn cách 50%)">
+                        <button class="btn btn-primary" style="width: auto;" onclick="addScenario()">+</button>
+                    </div>
+
+                    <div class="grid grid-3" style="gap: 0.5rem; margin-bottom: 1rem;">
+                        <input type="number" id="scenBeta" placeholder="β (Lây)" value="0.3">
+                        <input type="number" id="scenGamma" placeholder="γ (Khỏi)" value="0.1">
+                        <input type="number" id="scenVax" placeholder="Tiêm %" value="0">
+                    </div>
+
+                    <div class="scenario-list" id="scenList">
+                        <!-- Items rendered via JS -->
+                    </div>
+
+                    <button class="btn btn-primary" style="margin-top: 1rem;" onclick="compareScenarios()">
+                        🚀 So Sánh Hiệu Quả
+                    </button>
+                    <button class="btn btn-outline" style="margin-top: 0.5rem;" onclick="resetScenarios()">
+                        Xóa Tất Cả
+                    </button>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Kết Quả So Sánh</div>
+                    </div>
+                    <div style="position: relative; height: 300px;">
+                        <canvas id="compareChart"></canvas>
+                    </div>
+                    <div id="compareStats" style="margin-top: 1rem;"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        // Init default settings
+        Chart.defaults.font.family = "'Outfit', sans-serif";
+        Chart.defaults.color = '#64748b';
+
+        // --- UX Functions ---
+        function switchTab(id, btn) {
+            document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+
+            document.querySelectorAll('.nav-btn').forEach(el => el.classList.remove('active'));
+            btn.classList.add('active');
+        }
+
+        // --- Logic Engine ---
+        let sirChartInstance = null;
+        let compareChartInstance = null;
+        let scenarios = [
+            { name: "Mặc định (Không can thiệp)", beta: 0.3, gamma: 0.1, vax: 0 },
+            { name: "Giãn cách xã hội (Giảm tiếp xúc)", beta: 0.15, gamma: 0.1, vax: 0 },
+            { name: "Vaccine thần tốc (60%)", beta: 0.3, gamma: 0.1, vax: 60 }
+        ];
+
+        function runSimulation() {
+            const N = +document.getElementById('simN').value;
+            const beta = +document.getElementById('simBeta').value;
+            const gamma = +document.getElementById('simGamma').value;
+            const vax = +document.getElementById('simVax').value;
+
+            const results = calculateSIR(N, beta, gamma, vax);
+
+            // Update stats UI
+            const R0 = beta / gamma;
+            const peak = Math.max(...results.I);
+
+            document.getElementById('resR0').innerText = R0.toFixed(2);
+            document.getElementById('resR0').style.color = R0 > 1 ? 'var(--accent)' : 'var(--success)';
+            document.getElementById('resPeak').innerText = Math.round(peak).toLocaleString();
+
+            // Render Chart
+            const ctx = document.getElementById('sirChart').getContext('2d');
+            if (sirChartInstance) sirChartInstance.destroy();
+
+            sirChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: results.labels,
+                    datasets: [
+                        { label: 'Người Lành (S)', data: results.S, borderColor: '#3b82f6', backgroundColor: 'rgba(59, 130, 246, 0.1)', fill: true, tension: 0.4, pointRadius: 0 },
+                        { label: 'Người Nhiễm (I)', data: results.I, borderColor: '#f43f5e', backgroundColor: 'rgba(244, 63, 94, 0.2)', fill: true, tension: 0.4, pointRadius: 0 },
+                        { label: 'Hồi Phục (R)', data: results.R, borderColor: '#10b981', backgroundColor: 'rgba(16, 185, 129, 0.1)', fill: true, tension: 0.4, pointRadius: 0 }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: { legend: { position: 'top' } },
+                    scales: { x: { grid: { display: false } }, y: { grid: { borderDash: [5, 5] } } }
+                }
+            });
+        }
+
+        function calculateSIR(N, beta, gamma, vaxPercent) {
+            let S = N * (1 - vaxPercent / 100);
+            let I = 10; // Patient zero
+            let R = N * (vaxPercent / 100);
+            const dt = 1;
+            const days = 100;
+
+            let data = { S: [], I: [], R: [], labels: [] };
+
+            for (let t = 0; t <= days; t++) {
+                data.labels.push(t);
+                data.S.push(S);
+                data.I.push(I);
+                data.R.push(R);
+
+                let newInf = (beta * I * S) / N;
+                let newRec = gamma * I;
+
+                S = S - newInf;
+                I = I + newInf - newRec;
+                R = R + newRec;
+
+                if (I < 0.5 && t > 10) I = 0; // End epidemic
+            }
+            return data;
+        }
+
+        // --- Scenario Logic ---
+        function renderScenarios() {
+            const list = document.getElementById('scenList');
+            list.innerHTML = '';
+            scenarios.forEach((s, idx) => {
+                list.innerHTML += `
+                    <div class="scenario-card">
+                        <div>
+                            <div style="font-weight:700">${s.name}</div>
+                            <div style="font-size:0.8rem; color:var(--text-muted)">β=${s.beta}, γ=${s.gamma}, Vax=${s.vax}%</div>
+                        </div>
+                        <button onclick="scenarios.splice(${idx},1); renderScenarios()" style="border:none; background:none; cursor:pointer; color:var(--accent)">✕</button>
+                    </div>
+                `;
+            });
+        }
+
+        function addScenario() {
+            scenarios.push({
+                name: document.getElementById('scenName').value || `Kịch bản ${scenarios.length + 1}`,
+                beta: +document.getElementById('scenBeta').value,
+                gamma: +document.getElementById('scenGamma').value,
+                vax: +document.getElementById('scenVax').value
+            });
+            renderScenarios();
+        }
+
+        function resetScenarios() { scenarios = []; renderScenarios(); }
+
+        function compareScenarios() {
+            const datasets = scenarios.map((s, idx) => {
+                const res = calculateSIR(10000, s.beta, s.gamma, s.vax);
+                const colors = ['#f43f5e', '#3b82f6', '#10b981', '#f59e0b', '#8b5cf6'];
+                return {
+                    label: s.name,
+                    data: res.I,
+                    borderColor: colors[idx % colors.length],
+                    borderWidth: 2,
+                    tension: 0.4,
+                    pointRadius: 0
+                };
+            });
+
+            const ctx = document.getElementById('compareChart').getContext('2d');
+            if (compareChartInstance) compareChartInstance.destroy();
+
+            compareChartInstance = new Chart(ctx, {
+                type: 'line',
+                data: { labels: Array.from({ length: 101 }, (_, i) => i), datasets: datasets },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        title: { display: true, text: 'So sánh đường cong lây nhiễm (Số ca nhiễm I)' },
+                        tooltip: { mode: 'index', intersect: false }
+                    },
+                    scales: { x: { grid: { display: false } } }
+                }
+            });
+
+            // Generate comparison stats table
+            let html = `<table style="width:100%; font-size:0.9rem;"><tr><th>Kịch bản</th><th>Đỉnh dịch</th><th>Thấp hơn gốc</th></tr>`;
+            const basePeak = Math.max(...datasets[0].data);
+
+            datasets.forEach((d, i) => {
+                const peak = Math.max(...d.data);
+                const reduction = i === 0 ? '-' : Math.round((1 - peak / basePeak) * 100) + '%';
+                html += `<tr><td>${d.label}</td><td>${Math.round(peak).toLocaleString()}</td><td style="color:var(--success); font-weight:bold">${reduction}</td></tr>`;
+            });
+            html += `</table>`;
+            document.getElementById('compareStats').innerHTML = html;
+        }
+
+        // Init
+        renderScenarios();
+        runSimulation(); // Auto run once
+    </script>
+</body>
+
+</html>
