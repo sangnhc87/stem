@@ -2,8 +2,8 @@ This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded forma
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**PhieuHocTap_Bayes.tex
-(./PhieuHocTap_Bayes.tex
+**PhieuHocTap_Crypto.tex
+(./PhieuHocTap_Crypto.tex
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -660,14 +660,8 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count309
 \l__pdf_internal_box=\box67
 )
-(./PhieuHocTap_Bayes.aux
-LaTeX Font Info:    Trying to load font information for T5+cmr on input line 5.
-
-
-(/usr/local/texlive/2024/texmf-dist/tex/latex/vntex/t5cmr.fd
-File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-))
-\openout1 = `PhieuHocTap_Bayes.aux'.
+No file PhieuHocTap_Crypto.aux.
+\openout1 = `PhieuHocTap_Crypto.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
@@ -684,6 +678,11 @@ LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 18.
+LaTeX Font Info:    Trying to load font information for T5+cmr on input line 18
+.
+(/usr/local/texlive/2024/texmf-dist/tex/latex/vntex/t5cmr.fd
+File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
 LaTeX Font Info:    ... okay on input line 18.
 
 *geometry* driver: auto-detecting
@@ -754,133 +753,36 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (179.65306pt too wide) in paragraph at lines 55--59
-[]\T5/cmr/m/it/12 Nh™n x≤t (T§i sao con sË n†y l§i thßp hÏn k˝ vÂng 99%?): \T5/
-cmr/m/n/12 ....................................................................
-.........................................
- []
-
-
-Overfull \hbox (230.27216pt too wide) in paragraph at lines 55--59
-\T5/cmr/m/n/12 ................................................................
-............................................. .................................
-............................................................................ 
- []
-
-
-! LaTeX Error: Environment checkbox undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.62 \begin{checkbox}
-                     
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.63     \item T
-                ƒÉng ƒë·ªô ch√≠nh x√°c AI l√™n 99.99\%.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 63
-[][]
- []
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.64     \item C
-                h·ªâ d√πng AI cho nh√≥m ng∆∞·ªùi c√≥ nguy c∆° cao (x√°c su·∫...
-
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 64
-[][]
- []
-
-
-! LaTeX Error: Lonely \item--perhaps a missing list environment.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.65     \item K
-                ·∫øt h·ª£p 2 lo·∫°i x√©t nghi·ªám ƒë·ªôc l·∫≠p.
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \hbox (badness 10000) detected at line 65
-[][]
- []
-
-
-! LaTeX Error: \begin{document} ended by \end{checkbox}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.66 \end{checkbox}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-Overfull \hbox (71.62051pt too wide) in paragraph at lines 65--68
-[]\T5/cmr/m/n/12 K∏t hÒp 2 lo§i x≤t nghiªm ^^_Îc l™p.  \T5/cmr/m/it/12 Gi£i thΩ
-ch ng≠n gÂn: \T5/cmr/m/n/12 ...................................................
-................................. 
- []
-
-
 
 [1
 
-{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-(./PhieuHocTap_Bayes.aux)
+{/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/loc
+al/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}]
+
+[2] (./PhieuHocTap_Crypto.aux)
  ***********
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15653 strings out of 473362
- 304984 string characters out of 5720983
- 691167 words of memory out of 5000000
- 38495 multiletter control sequences out of 15000+600000
- 570152 words of font info for 62 fonts, out of 8000000 for 9000
+ 15638 strings out of 473362
+ 304751 string characters out of 5720983
+ 703178 words of memory out of 5000000
+ 38483 multiletter control sequences out of 15000+600000
+ 567723 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,6n,107p,398b,729s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,8n,107p,399b,729s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><
 /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/local/texlive/2024/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb></usr/local/texlive/202
-4/texmf-dist/fonts/type1/vntex/vnr/vnti12.pfb>
-Output written on PhieuHocTap_Bayes.pdf (1 page, 86289 bytes).
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></us
+r/local/texlive/2024/texmf-dist/fonts/type1/vntex/vnr/vnbx12.pfb></usr/local/te
+xlive/2024/texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb>
+Output written on PhieuHocTap_Crypto.pdf (2 pages, 76182 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 45 PDF objects out of 1000 (max. 8388607)
+ 28 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

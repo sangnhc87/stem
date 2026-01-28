@@ -1,0 +1,15 @@
+\babel@toc {vietnamese}{}\relax 
+\contentsline {section}{I. MỤC TIÊU BÀI HỌC}{2}{section*.2}%
+\contentsline {subsection}{1. Kiến thức}{2}{section*.4}%
+\contentsline {subsection}{2. Kỹ năng}{2}{section*.6}%
+\contentsline {subsection}{3. Phẩm chất}{2}{section*.8}%
+\contentsline {section}{II. CHUẨN BỊ}{2}{section*.9}%
+\contentsline {section}{III. TIẾN TRÌNH DẠY HỌC (MÔ HÌNH 5E)}{2}{section*.10}%
+\contentsline {subsection}{1. ENGAGE (Gắn kết - 10p)}{2}{section*.12}%
+\contentsline {subsection}{2. EXPLORE (Khám phá - 20p)}{3}{section*.14}%
+\contentsline {subsection}{3. EXPLAIN (Giải thích - 30p)}{3}{section*.16}%
+\contentsline {subsection}{4. ELABORATE (Áp dụng - 20p)}{4}{section*.18}%
+\contentsline {subsection}{5. EVALUATE (Đánh giá - 10p)}{4}{section*.20}%
+\contentsline {section}{III. PHỤ LỤC}{5}{section*.21}%
+\contentsline {subsection}{Phụ lục 1: Thuật ngữ Y tế}{5}{section*.23}%
+\contentsline {subsection}{Phụ lục 2: Phiếu Học tập}{5}{section*.25}%

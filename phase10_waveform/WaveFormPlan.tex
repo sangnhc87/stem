@@ -1,0 +1,229 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GIÁO ÁN STEM: WAVEFORM - GIAI ĐIỆU TOÁN HỌC
+% Môn: Toán 11 | Chủ đề: Hàm lượng giác & Sóng âm thanh
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{array, booktabs, tabularx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage[svgnames]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\geometry{left=2cm,right=2cm,top=2.5cm,bottom=2cm}
+\definecolor{wavepurple}{RGB}{139, 92, 246}    % Violet 500
+\definecolor{wavedark}{RGB}{76, 29, 149}       % Violet 800
+\definecolor{wavebg}{RGB}{245, 243, 255}       % Violet 50
+
+\hypersetup{colorlinks=true, linkcolor=wavedark, urlcolor=wavepurple}
+
+% ============= BOX DEFINITIONS =============
+\newtcolorbox{sectionbox}[1]{
+    enhanced, breakable, colback=white, colframe=wavepurple, boxrule=1pt,
+    fonttitle=\bfseries\sffamily\Large, coltitle=white, colbacktitle=wavepurple,
+    title={#1},
+    shadow={2mm}{-1mm}{0mm}{black!20},
+    code={\phantomsection\addcontentsline{toc}{section}{#1}}
+}
+
+\newtcolorbox{activitybox}[1]{
+    enhanced, breakable, colback=white, colframe=wavedark, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} [HOẠT ĐỘNG] #1},
+    colbacktitle=wavedark
+}
+
+\newtcolorbox{mathbox}[1]{
+    enhanced, breakable, colback=wavebg, colframe=wavedark, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} [TOÁN] #1},
+    colbacktitle=wavedark
+}
+
+% ============= HEADERS =============
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{wavedark}\textbf{DỰ ÁN STEM: WAVEFORM}}
+\fancyhead[R]{\color{wavedark}\textbf{TOÁN HỌC \& ÂM NHẠC}}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+% ========== TITLE PAGE ==========
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        \fill[wavedark] (current page.north west) rectangle (current page.south east);
+        \node[anchor=center, color=wavepurple, font=\fontsize{60}{70}\sffamily\bfseries] at ($(current page.center)+(0,1)$) {WAVE};
+        \node[anchor=center, color=white, font=\fontsize{60}{70}\sffamily\bfseries] at ($(current page.center)+(0,-1)$) {FORM};
+        \node[anchor=center, color=white, font=\Large\sffamily] at ($(current page.center)+(0,-3)$) {Khi Âm nhạc Gặp Toán học};
+        
+        % Draw sine wave decoration
+        \draw[wavepurple, line width=2pt, domain=0:360, samples=100] 
+            plot ($(current page.south west)+(0.01*\x, 3 + 0.5*sin(\x))$);
+    \end{tikzpicture}
+    
+    \vspace{12cm}
+    \begin{center}
+        \color{black}
+        \begin{tcolorbox}[width=0.8\textwidth, colback=white, colframe=wavepurple]
+            \centering \large
+            \begin{tabular}{rl}
+                \textbf{Môn học:} & Toán (Hàm lượng giác) \\
+                \textbf{Chủ đề:} & Hàm Sin, Chu kỳ, Tần số \\
+                \textbf{Ứng dụng:} & Âm thanh, Sóng, Nhạc cụ \\
+                \textbf{Thời lượng:} & 2 tiết (90 phút)
+            \end{tabular}
+        \end{tcolorbox}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ========== CONTENT ==========
+
+\begin{sectionbox}{I. MỤC TIÊU BÀI HỌC}
+\phantomsection\subsection*{1. Kiến thức}\addcontentsline{toc}{subsection}{1. Kiến thức}
+\begin{itemize}
+    \item Nắm vững dạng tổng quát của hàm lượng giác: $y = A\sin(\omega x + \varphi)$.
+    \item Hiểu ý nghĩa vật lý của các tham số: Biên độ ($A$), Tần số góc ($\omega$), Pha ban đầu ($\varphi$).
+    \item Biết mối liên hệ: Chu kỳ $T = \frac{2\pi}{\omega}$, Tần số $f = \frac{1}{T}$.
+\end{itemize}
+
+\phantomsection\subsection*{2. Kỹ năng}\addcontentsline{toc}{subsection}{2. Kỹ năng}
+\begin{itemize}
+    \item Vẽ và phân tích đồ thị hàm sin với các tham số khác nhau.
+    \item Sử dụng công cụ mô phỏng để "nghe" và "nhìn" sóng âm.
+    \item Liên hệ tần số (Hz) với cao độ nốt nhạc.
+\end{itemize}
+
+\phantomsection\subsection*{3. Phẩm chất}\addcontentsline{toc}{subsection}{3. Phẩm chất}
+\begin{itemize}
+    \item Yêu thích vẻ đẹp của Toán học trong nghệ thuật.
+    \item Tư duy liên môn, sáng tạo.
+\end{itemize}
+\end{sectionbox}
+
+\begin{sectionbox}{II. CHUẨN BỊ}
+\begin{itemize}
+    \item \textbf{Giáo viên:} Máy chiếu, Loa, Web App \texttt{waveform.html}.
+    \item \textbf{Học sinh:} Điện thoại/Laptop (có tai nghe), Phiếu học tập.
+\end{itemize}
+\end{sectionbox}
+
+\begin{sectionbox}{III. TIẾN TRÌNH DẠY HỌC (MÔ HÌNH 5E)}
+
+\phantomsection\subsection*{1. ENGAGE (Gắn kết - 10p): Âm thanh là gì?}\addcontentsline{toc}{subsection}{1. ENGAGE (Gắn kết - 10p)}
+\textbf{Hoạt động:} GV phát 2 âm thanh (nốt Đồ và nốt La) qua loa.
+
+\textbf{Câu hỏi:}
+\begin{itemize}
+    \item "Tại sao 2 nốt này nghe khác nhau?"
+    \item "Điều gì quyết định một nốt nhạc cao hay thấp, to hay nhỏ?"
+\end{itemize}
+
+\textbf{Dẫn dắt:} "Âm thanh thực chất là Sóng. Và mọi sóng đều có thể mô tả bằng hàm Sin!"
+
+\phantomsection\subsection*{2. EXPLORE (Khám phá - 20p): Nhìn thấy Âm thanh}\addcontentsline{toc}{subsection}{2. EXPLORE (Khám phá - 20p)}
+\begin{activitybox}{Thực nghiệm trên WaveForm App}
+Truy cập: \href{https://stem-1h8.pages.dev/waveform.html}{\texttt{stem-1h8.pages.dev/waveform.html}}
+
+HS thực hiện:
+\begin{enumerate}
+    \item Bấm các phím đàn piano ảo, quan sát sóng sin hiển thị.
+    \item So sánh sóng của nốt Đồ (C4 = 262 Hz) và nốt La (A4 = 440 Hz):
+    \begin{itemize}
+        \item Sóng nào "dày đặc" hơn (tần số cao hơn)?
+        \item Sóng nào "thưa" hơn (tần số thấp hơn)?
+    \end{itemize}
+    \item Điều chỉnh thanh trượt Biên độ ($A$), quan sát sự thay đổi độ to của âm.
+\end{enumerate}
+\end{activitybox}
+
+\phantomsection\subsection*{3. EXPLAIN (Giải thích - 25p): Toán học của Âm thanh}\addcontentsline{toc}{subsection}{3. EXPLAIN (Giải thích - 25p)}
+\begin{mathbox}{Hàm Sóng Sin}
+Một sóng âm thanh đơn giản (Pure Tone) được mô tả bởi:
+$$ y(t) = A \sin(2\pi f t) $$
+
+Trong đó:
+\begin{itemize}
+    \item $A$: \textbf{Biên độ} (Amplitude) - Độ to của âm thanh.
+    \item $f$: \textbf{Tần số} (Frequency, Hz) - Số dao động trong 1 giây. Quyết định cao độ.
+    \item $t$: Thời gian (giây).
+    \item $T = \frac{1}{f}$: \textbf{Chu kỳ} - Thời gian hoàn thành 1 dao động.
+\end{itemize}
+
+\textbf{Bảng Tần số các Nốt nhạc (Octave 4):}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+Nốt & C4 & D4 & E4 & F4 & G4 & A4 & B4 \\
+\hline
+Tần số (Hz) & 262 & 294 & 330 & 349 & 392 & 440 & 494 \\
+\hline
+\end{tabular}
+\end{center}
+\end{mathbox}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=12cm, height=5cm,
+    domain=0:0.02, samples=500,
+    xlabel={Thời gian (s)}, ylabel={Biên độ},
+    legend pos=outer north east,
+    grid=major
+]
+\addplot[blue, thick] {sin(deg(2*pi*262*x))};
+\addlegendentry{C4 (262 Hz)}
+\addplot[red, thick] {sin(deg(2*pi*440*x))};
+\addlegendentry{A4 (440 Hz)}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\phantomsection\subsection*{4. ELABORATE (Áp dụng - 25p): Sáng tác Giai điệu}\addcontentsline{toc}{subsection}{4. ELABORATE (Áp dụng - 25p)}
+\begin{activitybox}{Thử thách Nhạc sĩ Toán học}
+Sử dụng App để:
+\begin{enumerate}
+    \item Tìm tần số của nốt Đồ5 (C5). Gợi ý: Gấp đôi C4.
+    \item Vẽ đồ thị $y = 2\sin(2\pi \cdot 330 \cdot t)$ (Nốt Mi với biên độ 2).
+    \item Thử cộng 2 sóng sin để tạo hợp âm (Chord). Quan sát hiện tượng "Beat".
+\end{enumerate}
+\end{activitybox}
+
+\phantomsection\subsection*{5. EVALUATE (Đánh giá - 10p)}\addcontentsline{toc}{subsection}{5. EVALUATE (Đánh giá - 10p)}
+HS hoàn thành Phiếu học tập:
+\begin{enumerate}
+    \item Xác định tần số và chu kỳ của một nốt nhạc cho trước.
+    \item Giải thích tại sao quãng tám (Octave) có tần số gấp đôi.
+\end{enumerate}
+\end{sectionbox}
+
+\newpage
+\begin{sectionbox}{IV. PHỤ LỤC}
+\phantomsection\subsection*{Phụ lục 1: Ứng dụng thực tế}\addcontentsline{toc}{subsection}{Phụ lục 1: Ứng dụng thực tế}
+\begin{itemize}
+    \item Equalizer (EQ) trong phần mềm nhạc.
+    \item Chẩn đoán y tế bằng sóng siêu âm.
+    \item Công nghệ nhận dạng giọng nói (AI Voice).
+\end{itemize}
+
+\phantomsection\subsection*{Phụ lục 2: Mở rộng}\addcontentsline{toc}{subsection}{Phụ lục 2: Mở rộng}
+\begin{itemize}
+    \item Chuỗi Fourier: Mọi sóng phức tạp đều là tổng của các sóng sin đơn giản.
+    \item Synthesizer: Tổng hợp âm thanh điện tử bằng Toán học.
+\end{itemize}
+\end{sectionbox}
+
+\end{document}

@@ -92,65 +92,106 @@
 
 % ========== CONTENT ==========
 
-\begin{sectionbox}{I. TỔNG QUAN DỰ ÁN}
-\phantomsection\subsection*{1. Đặt vấn đề}\addcontentsline{toc}{subsection}{1. Đặt vấn đề}
-Trí tuệ nhân tạo (AI) đang được dùng để chẩn đoán ung thư sớm. Một hệ thống AI được quảng cáo là "Chính xác 99\%". Tuy nhiên, khi AI báo một người bị bệnh, xác suất người đó THỰC SỰ bị bệnh có thể rất thấp. Tại sao lại có nghịch lý này?
-
-\phantomsection\subsection*{2. Mục tiêu STEM}\addcontentsline{toc}{subsection}{2. Mục tiêu STEM}
+\begin{sectionbox}{I. MỤC TIÊU BÀI HỌC}
+\phantomsection\subsection*{1. Kiến thức}\addcontentsline{toc}{subsection}{1. Kiến thức}
 \begin{itemize}
-    \item \textbf{Toán học:} Vận dụng Công thức Bayes để tính xác suất hậu nghiệm (Posterior Probability).
-    \item \textbf{Y tế:} Hiểu các khái niệm: Độ nhạy (Sensitivity), Độ đặc hiệu (Specificity), Dương tính giả (False Positive).
-    \item \textbf{Công nghệ:} Sử dụng \textbf{AI Diagnostic Simulator} (Web App) để trực quan hóa dữ liệu y tế lớn.
+    \item Hiểu và phát biểu được khái niệm \textbf{Xác suất có điều kiện}.
+    \item Nắm vững \textbf{Công thức Bayes} và ý nghĩa của các thành phần ($P(B), P(+|B), P(+|K)$).
+    \item Phân biệt được Độ nhạy (Sensitivity) và Độ đặc hiệu (Specificity) trong y tế.
+\end{itemize}
+
+\phantomsection\subsection*{2. Kỹ năng}\addcontentsline{toc}{subsection}{2. Kỹ năng}
+\begin{itemize}
+    \item Vận dụng Sơ đồ cây (Tree Diagram) để giải quyết bài toán xác suất ngược.
+    \item Sử dụng công cụ mô phỏng (App BayesHunter) để thu thập và phân tích dữ liệu.
+    \item Tư duy phản biện: Đánh giá độ tin cậy của một thông tin khoa học/y tế.
+\end{itemize}
+
+\phantomsection\subsection*{3. Phẩm chất}\addcontentsline{toc}{subsection}{3. Phẩm chất}
+\begin{itemize}
+    \item Trung thực trong xử lý số liệu.
+    \item Có trách nhiệm với các quyết định dựa trên chẩn đoán (không hoang mang vô cớ).
 \end{itemize}
 \end{sectionbox}
 
-\begin{sectionbox}{II. TIẾN TRÌNH DẠY HỌC (5E)}
-
-\phantomsection\subsection*{1. ENGAGE (Gắn kết - 10p)}\addcontentsline{toc}{subsection}{1. ENGAGE (Gắn kết - 10p)}
-\begin{activitybox}{Tình huống: Bản án tử hình hay Báo động giả?}
-GV đưa ra tình huống: Bệnh X rất hiếm (0.1\% dân số). Một AI mới có độ chính xác 99\%.
-Anh A đi khám sức khỏe, AI báo \textbf{DƯƠNG TÍNH (+)}.
+\begin{sectionbox}{II. CHUẨN BỊ}
 \begin{itemize}
-    \item \textbf{Câu hỏi:} Anh A nên lo lắng đến mức nào? Xác suất anh ấy bệnh thật là:
-    \item A. 99\% \quad B. 50\% \quad C. Dưới 10\%
+    \item \textbf{Giáo viên:} Máy chiếu, Web App \texttt{bayes.html}, Slide bài giảng.
+    \item \textbf{Học sinh:} Điện thoại/Laptop truy cập Web App, Phiếu học tập.
 \end{itemize}
-HS bình chọn nhanh. Đa số sẽ chọn 99\% (Bẫy nhận thức).
-\end{activitybox}
+\end{sectionbox}
 
-\phantomsection\subsection*{2. EXPLORE (Khám phá - 20p)}\addcontentsline{toc}{subsection}{2. EXPLORE (Khám phá - 20p)}
-\begin{activitybox}{Thực nghiệm trên BayesHunter App}
-Truy cập: \href{https://stem-1h8.pages.dev/bayes.html}{\texttt{stem-1h8.pages.dev/bayes.html}}
-- Nhập tham số: Tỷ lệ bệnh 0.1\%, AI chính xác 99\%.
-- Quan sát \textbf{Dot Matrix} (1000 chấm):
-  - Đếm số chấm Đỏ (Bệnh thật).
-  - Đếm số chấm có Vòng tròn (AI báo dương tính).
-  - Tìm giao của 2 tập hợp này.
-\textbf{Kết quả bất ngờ:} Hầu hết các ca AI báo dương tính là NGƯỜI KHỎE MẠNH (Dương tính giả).
-\end{activitybox}
+\begin{sectionbox}{III. TIẾN TRÌNH DẠY HỌC (MÔ HÌNH 5E)}
 
-\phantomsection\subsection*{3. EXPLAIN (Giải thích - 25p)}\addcontentsline{toc}{subsection}{3. EXPLAIN (Giải thích - 25p)}
-\begin{mathbox}{Công thức Bayes trong Y khoa}
-Gọi $B$ là biến cố Bị bệnh, $+$ là biến cố Test Dương tính.
-$$ P(B|+) = \frac{P(+|B) \cdot P(B)}{P(+)} $$
-Khai triển mẫu số $P(+) = P(+|B)P(B) + P(+|K)P(K)$:
+\phantomsection\subsection*{1. ENGAGE (Gắn kết - 10p): Cú sốc nhận thức}\addcontentsline{toc}{subsection}{1. ENGAGE (Gắn kết - 10p)}
+\textbf{Hoạt động:} "Bản án của AI"
 \begin{itemize}
-    \item $P(B)$: Tỷ lệ nhiễm trong cộng đồng (Prevalence).
-    \item $P(+|B)$: Độ nhạy (Sensitivity) - Khả năng phát hiện bệnh.
-    \item $P(+|K)$: Tỷ lệ Dương tính giả (False Positive Rate) = $1 - \text{Độ đặc hiệu}$.
+    \item \textbf{GV nêu tình huống:} "Một hệ thống AI chẩn đoán ung thư mới được công bố với độ chính xác lên tới \textbf{99\%}. Bệnh X cực hiếm, chỉ 0.1\% dân số mắc phải. Hôm nay, AI báo anh Nam \textbf{DƯƠNG TÍNH (+)}."
+    \item \textbf{Câu hỏi thảo luận:} Theo em, xác suất anh Nam thực sự bị bệnh là bao nhiêu?
+    \item \textbf{Dự đoán:} GV mở Poll bình chọn (A: >90\%, B: 50-90\%, C: <10\%). Đa số HS sẽ chọn A do tâm lý "tin vào con số 99\%".
+    \item \textbf{Dẫn dắt:} "Liệu trực giác của chúng ta có đúng? Hãy cùng kiểm chứng bằng Dữ liệu lớn (Big Data)."
 \end{itemize}
-\textbf{Kết luận:} Khi bệnh quá hiếm ($P(B)$ thấp), số lượng người khỏe bị báo nhầm ($P(+|K)P(K)$) sẽ áp đảo số người bệnh thật, làm giảm độ tin cậy của kết quả Dương tính ($PPV$).
+
+\phantomsection\subsection*{2. EXPLORE (Khám phá - 20p): Truy tìm sự thật}\addcontentsline{toc}{subsection}{2. EXPLORE (Khám phá - 20p)}
+\textbf{Hoạt động:} Thực nghiệm trên \textbf{BayesHunter App}
+\begin{enumerate}
+    \item HS truy cập: \href{https://stem-1h8.pages.dev/bayes.html}{\texttt{stem-1h8.pages.dev/bayes.html}}
+    \item \textbf{Thiết lập tham số:}
+    \begin{itemize}
+        \item Tỷ lệ bệnh (Prevalence): $0.1\%$
+        \item Độ nhạy (Sensitivity): $99\%$
+        \item Độ đặc hiệu (Specificity): $99\%$
+    \end{itemize}
+    \item \textbf{Quan sát Dot Matrix (1000 người):}
+    \begin{itemize}
+        \item Tìm số chấm \textbf{Đỏ} (Người bệnh thật): Rất ít ($\approx 1$ người).
+        \item Tìm số chấm có \textbf{Vòng tròn} (AI báo Dương tính): Khoảng 10-11 người.
+        \item Đếm số người \textbf{Vừa Đỏ Vừa có Vòng} (Dương tính thật).
+    \end{itemize}
+    \item \textbf{Ghi chép:} HS điền số liệu vào Phiếu học tập. Nhận ra rằng trong 11 người bị AI báo bệnh, chỉ có 1 người bệnh thật!
+\end{enumerate}
+
+\phantomsection\subsection*{3. EXPLAIN (Giải thích - 30p): Sức mạnh của Toán học}\addcontentsline{toc}{subsection}{3. EXPLAIN (Giải thích - 30p)}
+\textbf{Hoạt động:} Giải mã bằng Sơ đồ cây (Tree Diagram)
+\begin{center}
+\begin{tikzpicture}[level distance=2.5cm,
+  level 1/.style={sibling distance=6cm},
+  level 2/.style={sibling distance=3cm}]
+  \node {Dân số (10.000 người)}
+    child {node {Bệnh (10 người)}
+      child {node {\textbf{Dương tính thật} (9.9 $\approx$ 10)} edge from parent node[left] {99\%}}
+      child {node {Âm tính giả (0.1 $\approx$ 0)} edge from parent node[right] {1\%}}
+      edge from parent node[left] {0.1\%}
+    }
+    child {node {Khỏe (9.990 người)}
+      child {node {\textbf{Dương tính giả} (99.9 $\approx$ 100)} edge from parent node[left] {1\%}}
+      child {node {Âm tính thật (9.890)} edge from parent node[right] {99\%}}
+      edge from parent node[right] {99.9\%}
+    };
+\end{tikzpicture}
+\end{center}
+
+\begin{mathbox}{Công thức Bayes}
+$$ P(\text{Bệnh}|+) = \frac{P(\text{Bệnh} \cap +)}{P(+)} = \frac{\text{Số ca Dương tính thật}}{\text{Tổng số ca Dương tính}} $$
+Thay số từ sơ đồ cây:
+$$ P(\text{Bệnh}|+) = \frac{10}{10 + 100} = \frac{10}{110} \approx \mathbf{9\%} $$
+\textbf{Kết luận:} Dù AI chính xác 99\%, nhưng vì bệnh quá hiếm, số lượng người khỏe bị báo nhầm (Dương tính giả) áp đảo số người bệnh thật.
 \end{mathbox}
 
-\phantomsection\subsection*{4. ELABORATE (Áp dụng - 25p)}\addcontentsline{toc}{subsection}{4. ELABORATE (Áp dụng - 25p)}
-\begin{activitybox}{Thách thức Kỹ sư AI}
-Nếu muốn tăng độ tin cậy chẩn đoán lên 80\%, ta cần làm gì?
-1. Tăng Độ chính xác AI lên 99.9\%?
-2. Hay Sàng lọc đối tượng nguy cơ cao (Tăng $P(B)$ lên 10\%)?
-HS dùng App điều chỉnh thanh trượt để tìm câu trả lời.
-\end{activitybox}
+\phantomsection\subsection*{4. ELABORATE (Áp dụng - 20p): Kỹ sư AI tài ba}\addcontentsline{toc}{subsection}{4. ELABORATE (Áp dụng - 20p)}
+\textbf{Hoạt động:} Tối ưu hóa hệ thống
+GV đặt vấn đề: "Làm sao để tăng độ tin cậy từ 9\% lên trên 50\%?"
+HS làm việc nhóm, thử nghiệm trên App:
+\begin{itemize}
+    \item \textbf{Cách 1:} Tăng Độ đặc hiệu lên 99.9\% (AI siêu việt). $\to$ Khó khả thi về kỹ thuật.
+    \item \textbf{Cách 2:} Tăng tỷ lệ bệnh ($P(B)$) bằng cách \textbf{Sàng lọc đối tượng}. Chỉ xét nghiệm những người có triệu chứng hoặc tiền sử gia đình (nhóm nguy cơ cao, ví dụ tỷ lệ bệnh là 10\%).
+    \item \textbf{Thử nghiệm lại:} Với $P(B)=10\%$, kết quả PPV tăng vọt lên $>90\%$.
+\end{itemize}
 
 \phantomsection\subsection*{5. EVALUATE (Đánh giá - 10p)}\addcontentsline{toc}{subsection}{5. EVALUATE (Đánh giá - 10p)}
-HS hoàn thành \textbf{Báo cáo Đánh giá Công nghệ Y tế}, giải thích tại sao bác sĩ luôn cần xét nghiệm lần 2 dù lần 1 đã dương tính.
+HS hoàn thành báo cáo:
+1. Giải thích tại sao không nên xét nghiệm đại trà (mass screening) cho các bệnh hiếm.
+2. Viết một đoạn văn ngắn tư vấn cho bệnh nhân vừa nhận kết quả Dương tính để họ bình tĩnh.
 \end{sectionbox}
 
 \newpage

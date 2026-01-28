@@ -1,0 +1,94 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% PHIẾU HỌC TẬP: WAVEFORM
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{tabularx, array}
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\geometry{left=2cm,right=2cm,top=2cm,bottom=2cm}
+\definecolor{wavepurple}{RGB}{139, 92, 246}
+
+\begin{document}
+
+\begin{center}
+    \begin{tikzpicture}
+        \node[draw=wavepurple, line width=2pt, rounded corners=10pt, inner sep=10pt] (box) {
+            \begin{minipage}{0.9\textwidth}
+                \centering
+                \bfseries\Large\color{wavepurple} PHÒNG THÍ NGHIỆM ÂM THANH: WAVEFORM
+            \end{minipage}
+        };
+    \end{tikzpicture}
+    \vspace{0.5cm}
+\end{center}
+
+\noindent \textbf{Nhạc sĩ Toán học (Học sinh):} \dotfill \textbf{Lớp:} \dotfill
+
+\section*{\color{wavepurple} PHẦN 1: QUAN SÁT SÓNG}
+Sử dụng App WaveForm để bấm các nốt và điền thông tin:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Nốt nhạc} & \textbf{Tần số $f$ (Hz)} & \textbf{Chu kỳ $T = 1/f$ (s)} & \textbf{Nhận xét Sóng} \\
+\hline
+C4 (Đồ) & 262 & $\approx 0.00382$ & Sóng thưa \\
+\hline
+A4 (La) & 440 & & \\
+\hline
+C5 (Đồ cao) & & & \\
+\hline
+\end{tabular}
+\end{center}
+
+\textit{Nhận xét: Nốt càng cao thì sóng càng} .................
+
+\section*{\color{wavepurple} PHẦN 2: TÍNH TOÁN}
+\textbf{Công thức:} $y(t) = A \sin(2\pi f t)$
+
+\textbf{Bài 1:} Cho nốt G4 có tần số $f = 392$ Hz. Tính:
+\begin{itemize}
+    \item Chu kỳ $T$: $T = \frac{1}{f} = \frac{1}{392} = $ ......... (s)
+    \item Trong 1 giây, sóng hoàn thành bao nhiêu dao động? .........
+\end{itemize}
+
+\textbf{Bài 2:} Viết phương trình sóng cho nốt E4 ($f=330$ Hz) với biên độ $A=1.5$:
+$$ y(t) = ......... \sin(2\pi \cdot ......... \cdot t) $$
+
+\textbf{Bài 3:} Nốt A4 (La chuẩn) có $f=440$ Hz. Nốt A5 (La cao hơn 1 Octave) có tần số bằng bao nhiêu?
+$$ f_{A5} = 2 \times f_{A4} = 2 \times 440 = ......... \text{ Hz} $$
+
+\section*{\color{wavepurple} PHẦN 3: VẼ ĐỒ THỊ}
+Vẽ phác thảo đồ thị của 2 sóng sin trong khoảng $0 \le t \le 0.01$ (s):
+\begin{itemize}
+    \item Sóng 1: $y_1 = \sin(2\pi \cdot 100 \cdot t)$ (Tần số thấp)
+    \item Sóng 2: $y_2 = \sin(2\pi \cdot 300 \cdot t)$ (Tần số cao)
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+    width=14cm, height=5cm,
+    domain=0:0.01, samples=200,
+    xlabel={$t$ (s)}, ylabel={$y$},
+    grid=major,
+    ymin=-1.5, ymax=1.5,
+    xtick={0, 0.002, 0.004, 0.006, 0.008, 0.01}
+]
+% Students will draw here
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\textit{So sánh:} Sóng 2 có số "đỉnh" nhiều hơn sóng 1 trong cùng khoảng thời gian vì ..........................
+
+\end{document}

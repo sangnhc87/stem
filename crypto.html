@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoCode - Mã hóa Bí mật</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600;800&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: #161b22;
+            --text: #c9d1d9;
+            --primary: #10b981;
+            --secondary: #34d399;
+            --accent: #f59e0b;
+            --border: #30363d;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #8b949e;
+            margin-bottom: 40px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: var(--secondary);
+            margin-top: 0;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+
+        textarea,
+        input[type="number"] {
+            width: 100%;
+            padding: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.1rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            resize: none;
+            box-sizing: border-box;
+        }
+
+        textarea:focus,
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .key-input {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .key-input input {
+            width: 100px;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .key-input span {
+            color: #8b949e;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 1rem;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #0d1117;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .btn-accent {
+            background: var(--accent);
+            color: #0d1117;
+        }
+
+        .btn-accent:hover {
+            filter: brightness(1.1);
+        }
+
+        .output-box {
+            background: #000;
+            border: 1px solid var(--primary);
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            color: var(--primary);
+            min-height: 60px;
+            word-break: break-all;
+            margin-top: 20px;
+        }
+
+        /* Brute-force Results */
+        .brute-results {
+            max-height: 400px;
+            overflow-y: auto;
+            margin-top: 20px;
+        }
+
+        .brute-item {
+            display: flex;
+            gap: 15px;
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--border);
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .brute-item:hover {
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .brute-key {
+            color: var(--accent);
+            font-weight: bold;
+            min-width: 50px;
+        }
+
+        .brute-text {
+            color: var(--text);
+        }
+
+        /* Alphabet Reference */
+        .alphabet-ref {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .alpha-item {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-align: center;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .alpha-letter {
+            font-size: 1rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .alpha-num {
+            font-size: 0.75rem;
+            color: #8b949e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🔐 CRYPTO CODE</h1>
+        <p class="subtitle">Mã hóa & Giải mã tin nhắn bí mật bằng Toán học</p>
+
+        <!-- Alphabet Reference -->
+        <div class="card">
+            <h2>📊 Bảng Tham chiếu Chữ - Số</h2>
+            <div class="alphabet-ref" id="alpha-ref"></div>
+        </div>
+
+        <!-- Encoder/Decoder -->
+        <div class="card">
+            <h2>✉️ Công cụ Mã hóa / Giải mã</h2>
+
+            <label for="input-text">Nhập tin nhắn:</label>
+            <textarea id="input-text" rows="3" placeholder="Nhập tin nhắn của bạn ở đây..."></textarea>
+
+            <div class="key-input">
+                <label for="key" style="margin:0">Khóa (k):</label>
+                <input type="number" id="key" value="3" min="0" max="25">
+                <span>(Dịch chuyển bao nhiêu bước, từ 0 đến 25)</span>
+            </div>
+
+            <div class="btn-group">
+                <button class="btn-primary" onclick="encrypt()">🔒 Mã hóa (Encrypt)</button>
+                <button class="btn-secondary" onclick="decrypt()">🔓 Giải mã (Decrypt)</button>
+                <button class="btn-accent" onclick="bruteForce()">💣 Brute-force (Thử tất cả)</button>
+            </div>
+
+            <div class="output-box" id="output">Kết quả sẽ hiển thị ở đây...</div>
+
+            <div class="brute-results" id="brute-results" style="display: none;"></div>
+        </div>
+
+    </div>
+
+    <script>
+        // Generate Alphabet Reference
+        const alphaRef = document.getElementById('alpha-ref');
+        for (let i = 0; i < 26; i++) {
+            const letter = String.fromCharCode(65 + i);
+            const div = document.createElement('div');
+            div.className = 'alpha-item';
+            div.innerHTML = `<div class="alpha-letter">${letter}</div><div class="alpha-num">${i}</div>`;
+            alphaRef.appendChild(div);
+        }
+
+        // Caesar Cipher Functions
+        function shiftChar(char, shift, decrypt = false) {
+            const code = char.toUpperCase().charCodeAt(0);
+            if (code < 65 || code > 90) return char; // Not A-Z
+
+            let shifted = code - 65;
+            if (decrypt) {
+                shifted = (shifted - shift + 26) % 26;
+            } else {
+                shifted = (shifted + shift) % 26;
+            }
+            return String.fromCharCode(shifted + 65);
+        }
+
+        function processText(text, shift, decrypt = false) {
+            return text.split('').map(c => shiftChar(c, shift, decrypt)).join('');
+        }
+
+        function encrypt() {
+            const text = document.getElementById('input-text').value;
+            const key = parseInt(document.getElementById('key').value);
+            const result = processText(text, key, false);
+            document.getElementById('output').textContent = result;
+            document.getElementById('brute-results').style.display = 'none';
+        }
+
+        function decrypt() {
+            const text = document.getElementById('input-text').value;
+            const key = parseInt(document.getElementById('key').value);
+            const result = processText(text, key, true);
+            document.getElementById('output').textContent = result;
+            document.getElementById('brute-results').style.display = 'none';
+        }
+
+        function bruteForce() {
+            const text = document.getElementById('input-text').value;
+            const container = document.getElementById('brute-results');
+            container.innerHTML = '<h3 style="color: var(--accent); margin: 0 0 15px 0;">🔍 Thử tất cả 26 khóa:</h3>';
+
+            for (let k = 0; k < 26; k++) {
+                const result = processText(text, k, true);
+                const div = document.createElement('div');
+                div.className = 'brute-item';
+                div.innerHTML = `<span class="brute-key">k=${k}</span><span class="brute-text">${result}</span>`;
+                container.appendChild(div);
+            }
+
+            container.style.display = 'block';
+            document.getElementById('output').textContent = '⬆️ Tìm câu có nghĩa trong danh sách trên!';
+        }
+    </script>
+
+</body>
+
+</html>

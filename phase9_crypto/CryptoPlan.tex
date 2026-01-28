@@ -1,0 +1,215 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GIÁO ÁN STEM: CRYPTOCODE - ĐIỆP VIÊN MẬT MÃ
+% Môn: Toán 10/11 | Chủ đề: Số học đồng dư & Mã hóa
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{array, booktabs, tabularx}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage[svgnames]{xcolor}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins, breakable}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\geometry{left=2cm,right=2cm,top=2.5cm,bottom=2cm}
+\definecolor{cryptogreen}{RGB}{16, 185, 129}   % Emerald 500
+\definecolor{cryptodark}{RGB}{6, 78, 59}       % Emerald 900
+\definecolor{cryptobg}{RGB}{236, 253, 245}     % Emerald 50
+
+\hypersetup{colorlinks=true, linkcolor=cryptodark, urlcolor=cryptogreen}
+
+% ============= BOX DEFINITIONS =============
+\newtcolorbox{sectionbox}[1]{
+    enhanced, breakable, colback=white, colframe=cryptogreen, boxrule=1pt,
+    fonttitle=\bfseries\sffamily\Large, coltitle=white, colbacktitle=cryptogreen,
+    title={#1},
+    shadow={2mm}{-1mm}{0mm}{black!20},
+    code={\phantomsection\addcontentsline{toc}{section}{#1}}
+}
+
+\newtcolorbox{activitybox}[1]{
+    enhanced, breakable, colback=white, colframe=cryptodark, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} [HOẠT ĐỘNG] #1},
+    colbacktitle=cryptodark
+}
+
+\newtcolorbox{mathbox}[1]{
+    enhanced, breakable, colback=cryptobg, colframe=cryptodark, boxrule=1pt, arc=3mm,
+    title={\sffamily\bfseries\color{white} [TOÁN] #1},
+    colbacktitle=cryptodark
+}
+
+% ============= HEADERS =============
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{cryptodark}\textbf{DỰ ÁN STEM: CRYPTOCODE}}
+\fancyhead[R]{\color{cryptodark}\textbf{TOÁN HỌC \& BẢO MẬT}}
+\fancyfoot[C]{\thepage}
+
+\begin{document}
+
+% ========== TITLE PAGE ==========
+\begin{titlepage}
+    \begin{tikzpicture}[remember picture, overlay]
+        \fill[cryptodark] (current page.north west) rectangle (current page.south east);
+        \node[anchor=center, color=cryptogreen, font=\fontsize{60}{70}\sffamily\bfseries] at ($(current page.center)+(0,1)$) {CRYPTO};
+        \node[anchor=center, color=white, font=\fontsize{60}{70}\sffamily\bfseries] at ($(current page.center)+(0,-1)$) {CODE};
+        \node[anchor=center, color=white, font=\Large\sffamily] at ($(current page.center)+(0,-3)$) {Mật mã học cho Thế hệ Số};
+    \end{tikzpicture}
+    
+    \vspace{12cm}
+    \begin{center}
+        \color{black}
+        \begin{tcolorbox}[width=0.8\textwidth, colback=white, colframe=cryptogreen]
+            \centering \large
+            \begin{tabular}{rl}
+                \textbf{Môn học:} & Toán (Số học đồng dư) \\
+                \textbf{Chủ đề:} & Phép Modulo, Mã Caesar \\
+                \textbf{Ứng dụng:} & Bảo mật thông tin, An ninh mạng \\
+                \textbf{Thời lượng:} & 2 tiết (90 phút)
+            \end{tabular}
+        \end{tcolorbox}
+    \end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+% ========== CONTENT ==========
+
+\begin{sectionbox}{I. MỤC TIÊU BÀI HỌC}
+\phantomsection\subsection*{1. Kiến thức}\addcontentsline{toc}{subsection}{1. Kiến thức}
+\begin{itemize}
+    \item Hiểu khái niệm \textbf{Phép chia lấy dư} (Modulo) và ký hiệu $a \mod n$.
+    \item Nắm được nguyên lý hoạt động của \textbf{Mã dịch chuyển Caesar}.
+    \item Biết cách biểu diễn chữ cái thành số ($A=0, B=1, ..., Z=25$).
+\end{itemize}
+
+\phantomsection\subsection*{2. Kỹ năng}\addcontentsline{toc}{subsection}{2. Kỹ năng}
+\begin{itemize}
+    \item Thực hiện mã hóa và giải mã tin nhắn bằng công thức toán học.
+    \item Sử dụng phân tích tần suất để phá mã.
+    \item Lập trình đơn giản (nếu có điều kiện).
+\end{itemize}
+
+\phantomsection\subsection*{3. Phẩm chất}\addcontentsline{toc}{subsection}{3. Phẩm chất}
+\begin{itemize}
+    \item Ý thức bảo vệ thông tin cá nhân trong môi trường số.
+    \item Tư duy logic, kiên nhẫn khi giải quyết vấn đề.
+\end{itemize}
+\end{sectionbox}
+
+\begin{sectionbox}{II. CHUẨN BỊ}
+\begin{itemize}
+    \item \textbf{Giáo viên:} Máy chiếu, Web App \texttt{crypto.html}, Bảng chữ cái A-Z.
+    \item \textbf{Học sinh:} Điện thoại/Laptop, Phiếu học tập, Bút chì.
+\end{itemize}
+\end{sectionbox}
+
+\begin{sectionbox}{III. TIẾN TRÌNH DẠY HỌC (MÔ HÌNH 5E)}
+
+\phantomsection\subsection*{1. ENGAGE (Gắn kết - 10p): Bức thư bí ẩn}\addcontentsline{toc}{subsection}{1. ENGAGE (Gắn kết - 10p)}
+\textbf{Hoạt động:} GV đưa ra bức thư mật:
+\begin{center}
+\texttt{WKLV LV D VHFUHW PHVVDJH}
+\end{center}
+\textbf{Câu hỏi:} "Đây là một tin nhắn bí mật từ 2000 năm trước. Các em có thể giải mã không?"
+
+\textbf{Dẫn dắt:} Julius Caesar đã dùng phương pháp này để liên lạc quân sự. Chỉ cần một con số bí mật (khóa), ta có thể mã hóa mọi thông điệp.
+
+\phantomsection\subsection*{2. EXPLORE (Khám phá - 20p): Tự tay mã hóa}\addcontentsline{toc}{subsection}{2. EXPLORE (Khám phá - 20p)}
+\begin{activitybox}{Bảng dịch chuyển Caesar (Khóa = 3)}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+A & B & C & D & E & F & G & H & I & J & K & L & M \\
+\hline
+D & E & F & G & H & I & J & K & L & M & N & O & P \\
+\hline
+\end{tabular}
+\vspace{0.3cm}
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+N & O & P & Q & R & S & T & U & V & W & X & Y & Z \\
+\hline
+Q & R & S & T & U & V & W & X & Y & Z & A & B & C \\
+\hline
+\end{tabular}
+\end{center}
+HS thực hành:
+\begin{enumerate}
+    \item Mã hóa tên mình với khóa $k=3$.
+    \item Giải mã: \texttt{WKLV LV D VHFUHW PHVVDJH} $\to$ ?
+\end{enumerate}
+\end{activitybox}
+
+\phantomsection\subsection*{3. EXPLAIN (Giải thích - 25p): Toán học đằng sau}\addcontentsline{toc}{subsection}{3. EXPLAIN (Giải thích - 25p)}
+\begin{mathbox}{Công thức Mã hóa Caesar}
+Gán mỗi chữ cái một số: $A=0, B=1, ..., Z=25$.
+
+\textbf{Mã hóa:} $E(x) = (x + k) \mod 26$
+
+\textbf{Giải mã:} $D(y) = (y - k) \mod 26$
+
+Trong đó:
+\begin{itemize}
+    \item $x$: Giá trị số của chữ cái gốc.
+    \item $k$: Khóa dịch chuyển (số bước).
+    \item $\mod 26$: Lấy dư khi chia cho 26 (quay vòng bảng chữ cái).
+\end{itemize}
+
+\textbf{Ví dụ:} Mã hóa chữ "H" (vị trí 7) với $k=3$:
+$$ E(7) = (7 + 3) \mod 26 = 10 \to \text{K} $$
+\end{mathbox}
+
+\phantomsection\subsection*{4. ELABORATE (Áp dụng - 25p): Phá mã như Điệp viên}\addcontentsline{toc}{subsection}{4. ELABORATE (Áp dụng - 25p)}
+\begin{activitybox}{Brute-force Attack}
+Nếu không biết khóa $k$, ta có thể thử tất cả 26 giá trị có thể (từ 0 đến 25).
+
+HS sử dụng App \textbf{CryptoCode} tại \href{https://stem-1h8.pages.dev/crypto.html}{\texttt{stem-1h8.pages.dev/crypto.html}}:
+\begin{enumerate}
+    \item Nhập tin mã hóa.
+    \item Nhấn "Brute-force" để xem tất cả 26 phương án giải mã.
+    \item Tìm câu có nghĩa.
+\end{enumerate}
+
+\textbf{Nâng cao:} Phân tích tần suất chữ cái (chữ E xuất hiện nhiều nhất trong tiếng Anh).
+\end{activitybox}
+
+\phantomsection\subsection*{5. EVALUATE (Đánh giá - 10p)}\addcontentsline{toc}{subsection}{5. EVALUATE (Đánh giá - 10p)}
+HS hoàn thành thử thách:
+\begin{enumerate}
+    \item Tạo tin nhắn bí mật cho bạn cùng lớp với khóa tự chọn.
+    \item Giải mã tin nhắn nhận được từ bạn khác.
+\end{enumerate}
+\end{sectionbox}
+
+\newpage
+\begin{sectionbox}{IV. PHỤ LỤC}
+\phantomsection\subsection*{Phụ lục 1: Lịch sử Mật mã}\addcontentsline{toc}{subsection}{Phụ lục 1: Lịch sử Mật mã}
+\begin{itemize}
+    \item \textbf{Caesar Cipher (50 TCN):} Dịch chuyển bảng chữ cái.
+    \item \textbf{Vigenère Cipher (TK 16):} Dùng từ khóa thay vì số đơn lẻ.
+    \item \textbf{Enigma (WW2):} Máy mã hóa cơ điện phức tạp.
+    \item \textbf{RSA (1977):} Mã hóa khóa công khai hiện đại (dùng số nguyên tố lớn).
+\end{itemize}
+
+\phantomsection\subsection*{Phụ lục 2: Ứng dụng thực tế}\addcontentsline{toc}{subsection}{Phụ lục 2: Ứng dụng thực tế}
+\begin{itemize}
+    \item HTTPS (Bảo mật website).
+    \item Mã hóa đầu cuối (End-to-End Encryption) trong Zalo, Messenger.
+    \item Chữ ký số, Blockchain.
+\end{itemize}
+\end{sectionbox}
+
+\end{document}
