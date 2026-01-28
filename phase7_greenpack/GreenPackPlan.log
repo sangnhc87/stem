@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.16)  28 JAN 2026 16:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.11.16)  28 JAN 2026 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1039,7 +1039,13 @@ File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count338
 \l__pdf_internal_box=\box82
 )
-No file GreenPackPlan.aux.
+(./GreenPackPlan.aux
+LaTeX Font Info:    Trying to load font information for T5+cmr on input line 8.
+
+
+(/usr/local/texlive/2024/texmf-dist/tex/latex/vntex/t5cmr.fd
+File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+))
 \openout1 = `GreenPackPlan.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
@@ -1057,11 +1063,6 @@ LaTeX Font Info:    ... okay on input line 63.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
 LaTeX Font Info:    ... okay on input line 63.
 LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 63.
-LaTeX Font Info:    Trying to load font information for T5+cmr on input line 63
-.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/vntex/t5cmr.fd
-File: t5cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
 LaTeX Font Info:    ... okay on input line 63.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 63.
 LaTeX Font Info:    ... okay on input line 63.
@@ -1128,11 +1129,13 @@ s been generated with the most recent feature set (\pgfplotsset{compat=1.18}).
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 63.
+(./GreenPackPlan.out) (./GreenPackPlan.out)
 \@outlinefile=\write4
 \openout4 = `GreenPackPlan.out'.
 
 LaTeX Font Info:    Trying to load font information for T5+cmss on input line 6
 9.
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/vntex/t5cmss.fd
 File: t5cmss.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
@@ -1155,7 +1158,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [1
 
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-No file GreenPackPlan.toc.
+(./GreenPackPlan.toc)
 \tf@toc=\write5
 \openout5 = `GreenPackPlan.toc'.
 
@@ -1176,21 +1179,9 @@ been already used, duplicate ignored
                    \relax 
 l.94 \newpage
               [1]
-! Misplaced alignment tab character &.
-\kvtcb@title ...} [HOẠT ĐỘNG] GreenPack App &
-                                                   Phản biện
-l.139 ...tivitybox}{GreenPack App & Phản biện}
-                                                  
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
 LaTeX Font Info:    Trying to load font information for T5+cmtt on input line 1
 40.
-(/usr/local/texlive/2024/texmf-dist/tex/latex/vntex/t5cmtt.fd
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/vntex/t5cmtt.fd
 File: t5cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 
@@ -1228,24 +1219,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 LaTeX2e <2024-11-01>
 L3 programming layer <2024-11-02>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `GreenPackPlan.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `GreenPackPlan.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  F42606627240960EA2F339D35F0DBA1B;2350.
+Package rerunfilecheck Info: File `GreenPackPlan.out' has not changed.
+(rerunfilecheck)             Checksum: F42606627240960EA2F339D35F0DBA1B;2350.
  ) 
 Here is how much of TeX's memory you used:
- 37046 strings out of 473362
- 866970 string characters out of 5720983
- 1392833 words of memory out of 5000000
- 59557 multiletter control sequences out of 15000+600000
+ 37070 strings out of 473362
+ 867357 string characters out of 5720983
+ 1392968 words of memory out of 5000000
+ 59573 multiletter control sequences out of 15000+600000
  582020 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,11n,93p,734b,1403s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1263,10 +1244,10 @@ texmf-dist/fonts/type1/vntex/vnr/vnr12.pfb></usr/local/texlive/2024/texmf-dist/
 fonts/type1/vntex/vnr/vnssbx10.pfb></usr/local/texlive/2024/texmf-dist/fonts/ty
 pe1/vntex/vnr/vnssi17.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/vntex
 /vnr/vntt12.pfb>
-Output written on GreenPackPlan.pdf (5 pages, 170032 bytes).
+Output written on GreenPackPlan.pdf (5 pages, 174785 bytes).
 PDF statistics:
- 130 PDF objects out of 1000 (max. 8388607)
- 94 compressed objects within 1 object stream
+ 180 PDF objects out of 1000 (max. 8388607)
+ 143 compressed objects within 2 object streams
  27 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
