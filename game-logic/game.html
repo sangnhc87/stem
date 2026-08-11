@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siêu Trí Tuệ - Game Trắc Nghiệm</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --glass-bg: rgba(255, 255, 255, 0.95);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.5);
+            --text-color: #2d3436;
+            --correct: #00b894;
+            --wrong: #ff7675;
+            --warning: #fdcb6e;
+            --accent: #6c5ce7;
+            --accent-light: #a29bfe;
+            --shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', sans-serif;
+            user-select: none;
+        }
+
+        body {
+            background-image: var(--primary-gradient);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+            font-size: 18px;
+            position: relative;
+        }
+
+        /* --- BACKGROUND ANIMATION --- */
+        .circles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        .circles li {
+            position: absolute;
+            display: block;
+            list-style: none;
+            animation: animate 25s linear infinite;
+            bottom: -150px;
+            border-radius: 50%;
+        }
+
+        .circles li:nth-child(1) {
+            left: 25%;
+            width: 80px;
+            height: 80px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(2) {
+            left: 10%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 2s;
+            animation-duration: 12s;
+        }
+
+        .circles li:nth-child(3) {
+            left: 70%;
+            width: 20px;
+            height: 20px;
+            animation-delay: 4s;
+        }
+
+        .circles li:nth-child(4) {
+            left: 40%;
+            width: 60px;
+            height: 60px;
+            animation-delay: 0s;
+            animation-duration: 18s;
+        }
+
+        .circles li:nth-child(5) {
+            left: 65%;
+            width: 40px;
+            height: 40px;
+            animation-delay: 0s;
+        }
+
+        .circles li:nth-child(6) {
+            left: 75%;
+            width: 110px;
+            height: 110px;
+            animation-delay: 3s;
+        }
+
+        .circles li:nth-child(7) {
+            left: 35%;
+            width: 30px;
+            height: 30px;
+            animation-delay: 7s;
+        }
+
+        .circles li:nth-child(8) {
+            left: 50%;
+            width: 25px;
+            height: 25px;
+            animation-delay: 15s;
+            animation-duration: 45s;
+        }
+
+        .circles li:nth-child(9) {
+            left: 20%;
+            width: 45px;
+            height: 45px;
+            animation-delay: 2s;
+            animation-duration: 35s;
+        }
+
+        .circles li:nth-child(10) {
+            left: 85%;
+            width: 70px;
+            height: 70px;
+            animation-delay: 0s;
+            animation-duration: 11s;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-1000px) rotate(720deg);
+                opacity: 0;
+            }
+        }
+
+        /* --- CONTAINER --- */
+        .container {
+            background: var(--glass-bg);
+            width: 100%;
+            max-width: 900px;
+            height: 90vh;
+            border-radius: 32px;
+            z-index: 10;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(20px);
+            border: var(--glass-border);
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* --- MENU --- */
+        .grid-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            padding-bottom: 20px;
+            overflow-y: auto;
+        }
+
+        .subject-card {
+            background: white;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            padding: 20px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-align: left;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .subject-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-gradient);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 0;
+        }
+
+        .subject-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(108, 92, 231, 0.2);
+        }
+
+        .subject-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .subject-card .icon {
+            font-size: 35px;
+            z-index: 1;
+        }
+
+        .subject-card h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            z-index: 1;
+        }
+
+        .subject-card span {
+            font-size: 14px;
+            color: #b2bec3;
+            z-index: 1;
+        }
+
+        /* --- GAME UI --- */
+        .hide {
+            display: none !important;
+        }
+
+        .game-top-bar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            align-items: center;
+        }
+
+        /* Nút công cụ nhỏ */
+        .tool-btn {
+            background: rgba(255, 255, 255, 0.8);
+            border: 2px solid #dfe6e9;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 700;
+            color: #636e72;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 16px;
+        }
+
+        .tool-btn:hover {
+            background: white;
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-hint {
+            color: #e67e22;
+            border-color: #ffeaa7;
+        }
+
+        .btn-hint:hover {
+            background: #fff7d1;
+        }
+
+        .header-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #636e72;
+            background: #f1f2f6;
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        .streak-badge {
+            background: var(--secondary-gradient);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: var(--transition);
+            font-weight: 700;
+        }
+
+        .streak-badge.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+
+
+        .question-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .question-text {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 25px;
+            color: var(--text-color);
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.4;
+        }
+
+        .options-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 700px) {
+            .options-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .btn-option {
+            background: white;
+            border: 2px solid #e2e8f0;
+            padding: 16px 20px;
+            border-radius: 18px;
+            text-align: left;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        }
+
+        .choice-badge {
+            width: 38px;
+            height: 38px;
+            min-width: 38px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 17px;
+            box-shadow: 0 4px 12px rgba(108, 92, 231, 0.25);
+            transition: var(--transition);
+            z-index: 1;
+        }
+
+        .btn-option:hover:not([disabled]) .choice-badge {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+        }
+
+        .btn-option.correct .choice-badge {
+            background: white;
+            color: var(--correct);
+        }
+
+        .btn-option.wrong .choice-badge {
+            background: white;
+            color: var(--wrong);
+        }
+
+        .btn-option::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-gradient);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 0;
+        }
+
+        .btn-option span {
+            z-index: 1;
+            position: relative;
+        }
+
+        .btn-option:hover:not([disabled]) {
+            border-color: var(--accent);
+            background: #f8f9fa;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.12);
+        }
+
+        .btn-option:hover:not([disabled])::before {
+            opacity: 0.05;
+        }
+
+        .btn-option.correct {
+            background: var(--correct);
+            border-color: var(--correct);
+            color: white;
+        }
+
+        .btn-option.wrong {
+            background: var(--wrong);
+            border-color: var(--wrong);
+            color: white;
+            animation: shake 0.5s;
+        }
+
+        /* --- 4-SIDE AMBIENT RGB FRAME (Full Screen Cyber Frame) --- */
+        .ambient-led-top {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: rgba(10, 10, 25, 0.95);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            z-index: 9999;
+        }
+
+        .ambient-led-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: rgba(10, 10, 25, 0.95);
+            backdrop-filter: blur(6px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            z-index: 9999;
+        }
+
+        .ambient-led-left {
+            position: fixed;
+            top: 10px;
+            left: 0;
+            width: 10px;
+            height: calc(100vh - 20px);
+            background: rgba(10, 10, 25, 0.95);
+            backdrop-filter: blur(6px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            z-index: 9999;
+        }
+
+        .ambient-led-right {
+            position: fixed;
+            top: 10px;
+            right: 0;
+            width: 10px;
+            height: calc(100vh - 20px);
+            background: rgba(10, 10, 25, 0.95);
+            backdrop-filter: blur(6px);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            z-index: 9999;
+        }
+
+        .led-bulbs-horizontal {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .led-bulbs-vertical {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        .led-bulb {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #6c5ce7;
+            box-shadow: 0 0 5px rgba(108, 92, 231, 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .led-bulb.p1 { animation: ledGlow 3s infinite 0.1s; background: #00d2d3; }
+        .led-bulb.p2 { animation: ledGlow 3s infinite 0.5s; background: #a29bfe; }
+        .led-bulb.p3 { animation: ledGlow 3s infinite 0.9s; background: #54a0ff; }
+        .led-bulb.p4 { animation: ledGlow 3s infinite 1.3s; background: #ff9ff3; }
+        .led-bulb.p5 { animation: ledGlow 3s infinite 1.7s; background: #55efc4; }
+
+        @keyframes ledGlow {
+            0%, 100% { opacity: 0.4; transform: scale(0.85); }
+            50% { opacity: 0.95; transform: scale(1.1); }
+        }
+
+        .led-bulb.key-active {
+            background: #ff0055 !important;
+            box-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055 !important;
+            opacity: 1 !important;
+            animation: pulseKeyBulb 0.7s infinite alternate !important;
+        }
+
+        @keyframes pulseKeyBulb {
+            0% { transform: scale(1.3); box-shadow: 0 0 8px #ff0055; }
+            100% { transform: scale(1.85); box-shadow: 0 0 16px #ff0055, 0 0 28px #ff0055; }
+        }
+
+        /* PAUSE OVERLAY */
+        #pause-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            z-index: 50;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 32px;
+        }
+
+        #pause-overlay h2 {
+            font-size: 40px;
+            color: var(--accent);
+            margin-bottom: 30px;
+        }
+
+        /* CONTROLS */
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: auto;
+            padding-top: 10px;
+        }
+
+        .btn-control {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-control::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .btn-control:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(108, 92, 231, 0.4);
+        }
+
+        .btn-control:hover::before {
+            opacity: 1;
+        }
+
+        .btn-secondary {
+            background: #636e72;
+            box-shadow: 0 10px 20px rgba(99, 110, 114, 0.3);
+        }
+
+        .btn-resume {
+            background: var(--correct);
+            font-size: 24px;
+            padding: 15px 50px;
+            box-shadow: 0 10px 20px rgba(0, 184, 148, 0.3);
+        }
+
+        .btn-home {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            color: #636e72;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn-home:hover {
+            color: var(--accent);
+            transform: scale(1.1);
+        }
+
+        /* Loader & Animation */
+        .loader {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--accent);
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes shake {
+
+            0%,
+            100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-10px);
+            }
+
+            75% {
+                transform: translateX(10px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* SCREEN TITLE */
+        .screen-title {
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 10px;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+        }
+
+        .screen-subtitle {
+            font-size: 18px;
+            color: #636e72;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* PROGRESS BAR */
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background: #dfe6e9;
+            border-radius: 3px;
+            margin: 20px 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: var(--accent);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+    <div class="container">
+        <div id="menu-screen">
+            <h1 class="screen-title">🧠 Siêu Trí Tuệ</h1>
+            <p class="screen-subtitle">Chọn bộ đề để thử thách bản thân (50 câu/đề)</p>
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <div class="grid-menu" id="subject-list"></div>
+        </div>
+
+        <div id="loading-screen" class="hide">
+            <div class="loader"></div>
+            <p>Đang tải dữ liệu...</p>
+        </div>
+
+        <div id="game-screen" class="hide">
+            <button class="btn-home" onclick="goHome()" title="Thoát">🏠</button>
+
+            <div id="pause-overlay" class="hide">
+                <h2>⏸️ Đang Tạm Dừng</h2>
+                <p>Nghỉ ngơi một chút rồi chiến tiếp nhé!</p>
+                <button class="btn-control btn-resume" onclick="togglePause()">▶️ Tiếp Tục</button>
+            </div>
+
+            <div class="game-top-bar" style="justify-content: flex-end; gap: 10px;">
+                <button class="tool-btn btn-hint" id="btn-reveal" onclick="revealAnswer()">💡 Xem Đáp Án</button>
+                <button class="tool-btn" id="btn-pause" onclick="togglePause()">⏸️ Tạm Dừng</button>
+            </div>
+
+            <div class="header-info">
+                <span id="q-number">Câu 1/10</span>
+                <div class="streak-badge" id="streak-badge">🔥 Streak: 0</div>
+                <span id="score-display">Điểm: 0</span>
+            </div>
+
+
+
+            <div class="question-area">
+                <div class="question-text" id="question-text">Nội dung câu hỏi?</div>
+                <div class="options-list" id="options-list"></div>
+            </div>
+
+            <div class="controls">
+                <button class="btn-control hide" id="next-btn" onclick="nextQuestion()">Tiếp theo ➜</button>
+            </div>
+        </div>
+
+        <div id="result-screen" class="hide">
+            <h2>🏁 Hoàn Thành!</h2>
+            <p>Tổng điểm của bạn:</p>
+            <h1 style="font-size: 80px; color: var(--accent); margin: 20px 0;" id="final-score">0</h1>
+            <p id="high-score-msg" style="color: var(--correct); font-weight: 800; font-size: 20px;"></p>
+            <div class="controls">
+                <button class="btn-control btn-secondary" onclick="goHome()">Menu Chính</button>
+                <button class="btn-control" onclick="replay()">Chơi Lại</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- CẤU HÌNH DỮ LIỆU ---
+        const SUBJECTS = [
+            { name: "Bách Khoa Tri Thức", file: "data/bach-khoa.json", icon: "🌐", desc: "Kiến thức tổng hợp đa lĩnh vực" },
+            { name: "Văn Minh Nhân Loại", file: "data/van-minh-nhan-loai.json", icon: "🔮", desc: "Lịch sử, thần thoại & khoa học" },
+            { name: "Khám Phá Thế Giới", file: "data/kham-pha-the-gioi.json", icon: "🧭", desc: "100 câu đa dạng lĩnh vực" },
+            { name: "Thế Giới Động Vật", file: "data/the-gioi-dong-vat.json", icon: "🐾", desc: "100 câu độc lạ về động vật" },
+            { name: "Kiến Thức Tổng Hợp 1", file: "data/de_tong_hop.json", icon: "🌍", desc: "Đa dạng lĩnh vực" },
+            { name: "Kiến Thức Tổng Hợp 2", file: "data/dia_sinh_van.json", icon: "📚", desc: "Xã hội & Tự nhiên" },
+            { name: "Kiến Thức Tổng Hợp 3", file: "data/sinh_dia.json", icon: "🌱", desc: "Thế giới quanh ta" },
+            { name: "Hay & Lạ (Phần 1)", file: "data/hay-la1.json", icon: "✨", desc: "Sự thật thú vị" },
+            { name: "Hay & Lạ (Phần 2)", file: "data/hay-la2.json", icon: "🤯", desc: "Kỷ lục Guinness" },
+            { name: "Hay & Lạ (Phần 3)", file: "data/hay-la3.json", icon: "🛸", desc: "Bí ẩn thế giới" },
+            { name: "Hay & Lạ (Phần 4)", file: "data/hay-la4.json", icon: "🧬", desc: "Khoa học vui" },
+            { name: "Hay & Lạ (Phần 5)", file: "data/hay-la5.json", icon: "🍕", desc: "Đời sống" },
+            { name: "Hay & Lạ (Phần 6)", file: "data/hay-la6.json", icon: "🎪", desc: "Chuyện lạ" },
+            { name: "Hay & Lạ (Phần 7)", file: "data/hay-la7.json", icon: "🧩", desc: "Hack não" },
+            { name: "Hay & Lạ (Phần 8)", file: "data/hay-la8.json", icon: "🎭", desc: "Tổng hợp siêu dị" },
+            { name: "Tổng Hợp (Gói 1)", file: "data/tong_hop1.json", icon: "🎓", desc: "Kiến thức chung" }
+        ];
+
+        // --- ÂM THANH ---
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        function playSound(type) {
+            if (audioCtx.state === 'suspended') audioCtx.resume();
+            const osc = audioCtx.createOscillator();
+            const gainNode = audioCtx.createGain();
+            osc.connect(gainNode);
+            gainNode.connect(audioCtx.destination);
+            const now = audioCtx.currentTime;
+
+            if (type === 'correct') {
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(600, now);
+                osc.frequency.exponentialRampToValueAtTime(1200, now + 0.1);
+                gainNode.gain.setValueAtTime(0.1, now);
+                gainNode.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
+                osc.start(now); osc.stop(now + 0.5);
+            } else if (type === 'wrong') {
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(150, now);
+                osc.frequency.linearRampToValueAtTime(100, now + 0.3);
+                gainNode.gain.setValueAtTime(0.1, now);
+                gainNode.gain.exponentialRampToValueAtTime(0.001, now + 0.3);
+                osc.start(now); osc.stop(now + 0.3);
+            } else if (type === 'click') {
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(300, now);
+                gainNode.gain.setValueAtTime(0.05, now);
+                gainNode.gain.exponentialRampToValueAtTime(0.001, now + 0.05);
+                osc.start(now); osc.stop(now + 0.05);
+            } else if (type === 'win') {
+                playSound('correct'); setTimeout(() => playSound('correct'), 150); setTimeout(() => playSound('correct'), 300);
+            }
+        }
+
+        // --- BIẾN ---
+        let currentQuestions = [];
+        let currentQIndex = 0;
+        let score = 0;
+        let streak = 0;
+        let isAnswered = false;
+        let isPaused = false;
+        let currentSubjectFile = "";
+        let teacherKeyMode = false; // Chế độ Giáo viên xem KEY ẩn qua thanh LED
+
+        // Khởi tạo khung viền 4 cạnh LED RGB Ambient 360 độ (Trên, Đáy, Trái, Phải)
+        function initAmbientLedBar() {
+            const pulses = ['p1', 'p2', 'p3', 'p4', 'p5'];
+
+            // 1. VIỀN TREN (Top)
+            let topBar = document.getElementById('ambient-led-top');
+            if (!topBar) {
+                topBar = document.createElement('div');
+                topBar.id = 'ambient-led-top';
+                topBar.className = 'ambient-led-top';
+                topBar.innerHTML = '<div class="led-bulbs-horizontal" id="led-bulbs-top"></div>';
+                document.body.appendChild(topBar);
+                const cTop = document.getElementById('led-bulbs-top');
+                for (let i = 1; i <= 30; i++) {
+                    const b = document.createElement('div');
+                    b.className = `led-bulb ${pulses[(i - 1) % 5]}`;
+                    cTop.appendChild(b);
+                }
+            }
+
+            // 2. VIỀN TRÁI (Left)
+            let leftBar = document.getElementById('ambient-led-left');
+            if (!leftBar) {
+                leftBar = document.createElement('div');
+                leftBar.id = 'ambient-led-left';
+                leftBar.className = 'ambient-led-left';
+                leftBar.innerHTML = '<div class="led-bulbs-vertical" id="led-bulbs-left"></div>';
+                document.body.appendChild(leftBar);
+                const cLeft = document.getElementById('led-bulbs-left');
+                for (let i = 1; i <= 15; i++) {
+                    const b = document.createElement('div');
+                    b.className = `led-bulb ${pulses[(i + 1) % 5]}`;
+                    cLeft.appendChild(b);
+                }
+            }
+
+            // 3. VIỀN PHẢI (Right)
+            let rightBar = document.getElementById('ambient-led-right');
+            if (!rightBar) {
+                rightBar = document.createElement('div');
+                rightBar.id = 'ambient-led-right';
+                rightBar.className = 'ambient-led-right';
+                rightBar.innerHTML = '<div class="led-bulbs-vertical" id="led-bulbs-right"></div>';
+                document.body.appendChild(rightBar);
+                const cRight = document.getElementById('led-bulbs-right');
+                for (let i = 1; i <= 15; i++) {
+                    const b = document.createElement('div');
+                    b.className = `led-bulb ${pulses[(i + 3) % 5]}`;
+                    cRight.appendChild(b);
+                }
+            }
+
+            // 4. VIỀN ĐÁY (Bottom - Chứa Key ẩn)
+            let bottomBar = document.getElementById('ambient-led-bottom');
+            if (!bottomBar) {
+                bottomBar = document.createElement('div');
+                bottomBar.id = 'ambient-led-bottom';
+                bottomBar.className = 'ambient-led-bottom';
+                bottomBar.innerHTML = '<div class="led-bulbs-horizontal" id="led-bulbs-bottom"></div>';
+                document.body.appendChild(bottomBar);
+            }
+            const cBottom = document.getElementById('led-bulbs-bottom');
+            cBottom.innerHTML = '';
+            for (let i = 1; i <= 30; i++) {
+                const b = document.createElement('div');
+                b.className = `led-bulb ${pulses[(i - 1) % 5]}`;
+                b.id = `led-bulb-${i}`;
+                cBottom.appendChild(b);
+            }
+        }
+
+        // Bật/tắt Chế độ xem KEY ẩn bằng phím K
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'k' || e.key === 'K') {
+                if (['INPUT', 'TEXTAREA'].includes(document.activeElement?.tagName)) return;
+                teacherKeyMode = !teacherKeyMode;
+                renderTeacherKeyIndicators();
+            }
+        });
+
+        function renderTeacherKeyIndicators() {
+            const container = document.getElementById('led-bulbs-bottom');
+            if (!container) return;
+
+            // Tìm vị trí đáp án đúng trong các nút phương án đang hiển thị
+            const opts = document.querySelectorAll('.btn-option');
+            let correctIndex = -1;
+            opts.forEach((btn, idx) => {
+                if (btn.dataset.correct === "true") {
+                    correctIndex = idx; // 0=A, 1=B, 2=C, 3=D
+                }
+            });
+
+            // Bản đồ vị trí bóng đèn bí mật ở viền đáy: A = Đèn 1, B = Đèn 10, C = Đèn 20, D = Đèn 30
+            const keyBulbMap = { 0: 1, 1: 10, 2: 20, 3: 30 };
+            const activeBulbNum = keyBulbMap[correctIndex] || 1;
+
+            const pulses = ['p1', 'p2', 'p3', 'p4', 'p5'];
+
+            for (let i = 1; i <= 30; i++) {
+                const bulb = document.getElementById(`led-bulb-${i}`);
+                if (!bulb) continue;
+
+                if (teacherKeyMode && i === activeBulbNum) {
+                    bulb.className = 'led-bulb key-active';
+                } else {
+                    bulb.className = `led-bulb ${pulses[(i - 1) % 5]}`;
+                }
+            }
+            // Xóa mọi notice cũ nếu có
+            let notice = document.getElementById('teacher-key-notice');
+            if (notice) notice.remove();
+        }
+
+        // Elements
+        const screens = {
+            menu: document.getElementById('menu-screen'),
+            loading: document.getElementById('loading-screen'),
+            game: document.getElementById('game-screen'),
+            result: document.getElementById('result-screen')
+        };
+        const pauseOverlay = document.getElementById('pause-overlay');
+
+        // --- INIT ---
+        function initMenu() {
+            initAmbientLedBar();
+            const list = document.getElementById('subject-list');
+            list.innerHTML = "";
+            SUBJECTS.forEach((sub, index) => {
+                const div = document.createElement('div');
+                div.className = 'subject-card';
+                div.innerHTML = `<div class="icon">${sub.icon}</div><div><h3>${sub.name}</h3><span>${sub.desc}</span></div>`;
+                div.onclick = () => {
+                    playSound('click');
+                    // Update progress bar
+                    document.getElementById('progress-bar').style.width = `${((index + 1) / SUBJECTS.length) * 100}%`;
+                    loadQuizData(sub.file);
+                };
+                list.appendChild(div);
+            });
+        }
+
+        async function loadQuizData(filePath) {
+            currentSubjectFile = filePath;
+            showScreen('loading');
+            try {
+                const res = await fetch(filePath);
+                if (!res.ok) throw new Error("File not found");
+                const data = await res.json();
+                currentQuestions = shuffleArray(data);
+                setTimeout(() => { showScreen('game'); startGame(); }, 500);
+            } catch (error) {
+                alert("Lỗi: Không tải được file JSON. Hãy chạy bằng Live Server!");
+                showScreen('menu');
+            }
+        }
+
+        function startGame() {
+            currentQIndex = 0; score = 0; streak = 0; isPaused = false;
+            updateUI();
+        }
+
+        // --- TẠM DỪNG ---
+        function togglePause() {
+            isPaused = !isPaused;
+            playSound('click');
+            if (isPaused) {
+                pauseOverlay.classList.remove('hide');
+            } else {
+                pauseOverlay.classList.add('hide');
+            }
+        }
+
+        // --- XEM ĐÁP ÁN ---
+        function revealAnswer() {
+            if (isAnswered || isPaused) return;
+            playSound('click');
+            isAnswered = true;
+            streak = 0; // Mất chuỗi thắng nếu xem đáp án
+
+            // Hiện đáp án đúng
+            Array.from(document.getElementById('options-list').children).forEach(btn => {
+                if (btn.dataset.correct === "true") {
+                    btn.classList.add('correct');
+                } else {
+                    btn.style.opacity = '0.5';
+                }
+            });
+            showNextButton();
+        }
+
+        function updateUI() {
+            resetState();
+            const q = currentQuestions[currentQIndex];
+
+            document.getElementById('q-number').innerText = `Câu ${currentQIndex + 1}/${currentQuestions.length}`;
+            document.getElementById('score-display').innerText = `Điểm: ${score}`;
+            const badge = document.getElementById('streak-badge');
+            badge.className = streak > 1 ? "streak-badge show" : "streak-badge";
+            badge.innerText = `🔥 Streak: ${streak}`;
+
+            document.getElementById('question-text').innerText = q.question;
+            const optsDiv = document.getElementById('options-list');
+
+            const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+            // Trộn đáp án
+            const answers = shuffleArray([...q.answers]);
+            answers.forEach((ans, idx) => {
+                const btn = document.createElement('button');
+                btn.className = 'btn-option';
+                const letter = letters[idx] || 'A';
+                btn.innerHTML = `<div class="choice-badge">${letter}</div><span>${ans.text}</span>`;
+                btn.dataset.correct = ans.correct;
+                btn.dataset.letter = letter;
+                btn.onclick = () => selectAnswer(btn);
+                optsDiv.appendChild(btn);
+            });
+
+            renderTeacherKeyIndicators();
+        }
+
+        function resetState() {
+            isAnswered = false;
+            isPaused = false;
+            pauseOverlay.classList.add('hide');
+            document.getElementById('btn-reveal').disabled = false;
+            document.getElementById('next-btn').classList.add('hide');
+            document.getElementById('options-list').innerHTML = '';
+            document.getElementById('options-list').innerHTML = '';
+        }
+
+        function selectAnswer(btn) {
+            if (isAnswered || isPaused) return;
+            isAnswered = true;
+            document.getElementById('btn-reveal').disabled = true; // Disable reveal
+
+            const isCorrect = btn.dataset.correct === "true";
+            if (isCorrect) {
+                playSound('correct');
+                btn.classList.add('correct');
+                score += 10 + (streak * 2);
+                streak++;
+                confetti({ particleCount: 60, spread: 70, origin: { y: 0.7 }, colors: ['#6c5ce7', '#00b894'] });
+            } else {
+                playSound('wrong');
+                btn.classList.add('wrong');
+                streak = 0;
+                // Show correct one
+                Array.from(document.getElementById('options-list').children).forEach(b => {
+                    if (b.dataset.correct === "true") b.classList.add('correct');
+                });
+            }
+            document.getElementById('score-display').innerText = `Điểm: ${score}`;
+            showNextButton();
+        }
+
+        function showNextButton() {
+            const btn = document.getElementById('next-btn');
+            btn.classList.remove('hide');
+            btn.innerText = (currentQIndex === currentQuestions.length - 1) ? "Xem Kết Quả 🏆" : "Tiếp Theo ➜";
+        }
+
+        function nextQuestion() {
+            playSound('click');
+            currentQIndex++;
+            if (currentQIndex < currentQuestions.length) updateUI();
+            else showResult();
+        }
+
+        function showResult() {
+            playSound('win');
+            showScreen('result');
+            document.getElementById('final-score').innerText = score;
+
+            const key = `highscore_${currentSubjectFile}`;
+            const oldHigh = localStorage.getItem(key) || 0;
+            if (score > oldHigh) {
+                localStorage.setItem(key, score);
+                document.getElementById('high-score-msg').innerText = `🏆 Kỷ lục mới! (Cũ: ${oldHigh})`;
+                confetti({ particleCount: 300, spread: 150, origin: { y: 0.6 } });
+            } else {
+                document.getElementById('high-score-msg').innerText = `Kỷ lục của bạn: ${oldHigh}`;
+            }
+        }
+
+        function showScreen(name) {
+            Object.values(screens).forEach(s => s.classList.add('hide'));
+            screens[name].classList.remove('hide');
+        }
+
+        function goHome() {
+            playSound('click');
+            // Reset progress bar
+            document.getElementById('progress-bar').style.width = '0%';
+            showScreen('menu');
+        }
+
+        function replay() {
+            playSound('click');
+            currentQuestions = shuffleArray(currentQuestions);
+            startGame();
+        }
+
+        function shuffleArray(arr) {
+            return arr.sort(() => Math.random() - 0.5);
+        }
+
+        initMenu();
+    </script>
+</body>
+
+</html>

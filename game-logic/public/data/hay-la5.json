@@ -1,0 +1,1052 @@
+[
+  {
+    "question": "Về mặt địa lý, sa mạc lớn nhất thế giới thực chất là nơi nào?",
+    "answers": [
+      {
+        "text": "Sa mạc Ả Rập",
+        "correct": false
+      },
+      {
+        "text": "Sa mạc Sahara",
+        "correct": false
+      },
+      {
+        "text": "Châu Nam Cực",
+        "correct": true
+      },
+      {
+        "text": "Sa mạc Gobi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hành tinh nào trong Hệ Mặt Trời có khối lượng riêng nhẹ đến mức có thể nổi trên mặt nước (nếu có bể nước đủ to)?",
+    "answers": [
+      {
+        "text": "Sao Thổ",
+        "correct": true
+      },
+      {
+        "text": "Sao Hỏa",
+        "correct": false
+      },
+      {
+        "text": "Sao Mộc",
+        "correct": false
+      },
+      {
+        "text": "Sao Thiên Vương",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có thể nín thở dưới nước lâu hơn cả Cá Heo?",
+    "answers": [
+      {
+        "text": "Con Hà Mã",
+        "correct": false
+      },
+      {
+        "text": "Con Chó",
+        "correct": false
+      },
+      {
+        "text": "Con Rái cá",
+        "correct": false
+      },
+      {
+        "text": "Con Lười - nín thở được 40 phút",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Năm 1932, quân đội Úc đã phát động chiến tranh và THUA cuộc trước loài vật nào?",
+    "answers": [
+      {
+        "text": "Chuột túi Kangaroo",
+        "correct": false
+      },
+      {
+        "text": "Chim Đà điểu Emu",
+        "correct": true
+      },
+      {
+        "text": "Chó Dingo",
+        "correct": false
+      },
+      {
+        "text": "Thỏ hoang",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Màu sắc của chiếc hộp đen (Black Box) trên máy bay thực tế là màu gì?",
+    "answers": [
+      {
+        "text": "Màu Cam sáng",
+        "correct": true
+      },
+      {
+        "text": "Màu Đen tuyền",
+        "correct": false
+      },
+      {
+        "text": "Màu Đỏ",
+        "correct": false
+      },
+      {
+        "text": "Màu Xám kim loại",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Chuối mà chúng ta ăn hàng ngày, về mặt thực vật học được xếp vào loại gì?",
+    "answers": [
+      {
+        "text": "Cây thân gỗ",
+        "correct": false
+      },
+      {
+        "text": "Cây dây leo",
+        "correct": false
+      },
+      {
+        "text": "Các loại Thảo mộc",
+        "correct": true
+      },
+      {
+        "text": "Cây bụi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào sở hữu nhiều múi giờ nhất thế giới (tính cả các lãnh thổ hải ngoại)?",
+    "answers": [
+      {
+        "text": "Trung Quốc",
+        "correct": false
+      },
+      {
+        "text": "Nga",
+        "correct": false
+      },
+      {
+        "text": "Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Pháp",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Người phát minh ra Kẹo bông gòn (Cotton Candy) làm nghề gì?",
+    "answers": [
+      {
+        "text": "Đầu bếp",
+        "correct": false
+      },
+      {
+        "text": "Nha sĩ",
+        "correct": true
+      },
+      {
+        "text": "Nhà ảo thuật",
+        "correct": false
+      },
+      {
+        "text": "Giáo viên mầm non",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Sản phẩm đầu tiên có mã vạch (Barcode) được quét tại siêu thị là gì?",
+    "answers": [
+      {
+        "text": "Một quyển tạp chí",
+        "correct": false
+      },
+      {
+        "text": "Một chai Coca Cola",
+        "correct": false
+      },
+      {
+        "text": "Một hộp sữa",
+        "correct": false
+      },
+      {
+        "text": "Một gói kẹo cao su Wrigley's",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Nếu bạn hét lên trong vũ trụ (chân không), điều gì sẽ xảy ra?",
+    "answers": [
+      {
+        "text": "Không ai nghe thấy gì",
+        "correct": true
+      },
+      {
+        "text": "Bạn sẽ bị nổ phổi",
+        "correct": false
+      },
+      {
+        "text": "Tiếng hét vang vọng mãi mãi",
+        "correct": false
+      },
+      {
+        "text": "Tiếng hét to hơn bình thường",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tên của hội chứng 'Sợ những từ quá dài' viết là gì?",
+    "answers": [
+      {
+        "text": "Wordophobia",
+        "correct": false
+      },
+      {
+        "text": "Aibohphobia",
+        "correct": false
+      },
+      {
+        "text": "Longophobia",
+        "correct": false
+      },
+      {
+        "text": "Hippopotomonstrosesquippedaliophobia",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cá mập hay Cây cối, cái nào xuất hiện trên Trái Đất trước?",
+    "answers": [
+      {
+        "text": "Cây có trước 1 tỷ năm",
+        "correct": false
+      },
+      {
+        "text": "Cây cối có trước",
+        "correct": false
+      },
+      {
+        "text": "Xuất hiện cùng lúc",
+        "correct": false
+      },
+      {
+        "text": "Cá mập có trước",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Hãng Samsung ban đầu được thành lập để kinh doanh cái gì?",
+    "answers": [
+      {
+        "text": "Thuốc men",
+        "correct": false
+      },
+      {
+        "text": "Bất động sản",
+        "correct": false
+      },
+      {
+        "text": "Linh kiện điện tử",
+        "correct": false
+      },
+      {
+        "text": "Cá khô, mì sợi và rau quả",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Đỉnh núi Everest cao nhất thế giới, nhưng ngọn núi nào CAO NHẤT TỪ CHÂN ĐẾN ĐỈNH (tính từ đáy biển)?",
+    "answers": [
+      {
+        "text": "Mauna Kea",
+        "correct": true
+      },
+      {
+        "text": "K2",
+        "correct": false
+      },
+      {
+        "text": "Phú Sĩ",
+        "correct": false
+      },
+      {
+        "text": "Kilimanjaro",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong bộ bài Tây, quân Vua nào là quân duy nhất không có ria mép?",
+    "answers": [
+      {
+        "text": "Già Bích",
+        "correct": false
+      },
+      {
+        "text": "Già Chuồn",
+        "correct": false
+      },
+      {
+        "text": "Già Rô",
+        "correct": false
+      },
+      {
+        "text": "Già Cơ",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Món Ketchup (Tương cà) vào những năm 1830 được bán như là thứ gì?",
+    "answers": [
+      {
+        "text": "Mỹ phẩm",
+        "correct": false
+      },
+      {
+        "text": "Mực viết",
+        "correct": false
+      },
+      {
+        "text": "Thuốc chữa bệnh",
+        "correct": true
+      },
+      {
+        "text": "Thức ăn cho gia súc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có vân tay giống con người đến mức gây nhầm lẫn cho cảnh sát?",
+    "answers": [
+      {
+        "text": "Gấu Koala",
+        "correct": true
+      },
+      {
+        "text": "Con Lười",
+        "correct": false
+      },
+      {
+        "text": "Khỉ Đột",
+        "correct": false
+      },
+      {
+        "text": "Gấu Trúc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào không có sông (vĩnh viễn) chảy qua?",
+    "answers": [
+      {
+        "text": "Ả Rập Xê Út",
+        "correct": true
+      },
+      {
+        "text": "Ai Cập",
+        "correct": false
+      },
+      {
+        "text": "Brazil",
+        "correct": false
+      },
+      {
+        "text": "Úc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con Ốc sên có thể ngủ liền mạch trong bao lâu?",
+    "answers": [
+      {
+        "text": "3 năm",
+        "correct": true
+      },
+      {
+        "text": "3 ngày",
+        "correct": false
+      },
+      {
+        "text": "1 tháng",
+        "correct": false
+      },
+      {
+        "text": "1 tuần",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Để quả Dứa (Thơm) ngọt hơn, người ta thường làm mẹo gì?",
+    "answers": [
+      {
+        "text": "Phơi nắng 1 tuần",
+        "correct": false
+      },
+      {
+        "text": "Ngâm nước muối",
+        "correct": false
+      },
+      {
+        "text": "Hơ qua lửa",
+        "correct": false
+      },
+      {
+        "text": "Dốc ngược quả dứa xuống",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Chiếc Lò vi sóng được phát minh tình cờ khi nhà khoa học thấy cái gì bị tan chảy trong túi?",
+    "answers": [
+      {
+        "text": "Cục bơ",
+        "correct": false
+      },
+      {
+        "text": "Miếng nhựa",
+        "correct": false
+      },
+      {
+        "text": "Viên nước đá",
+        "correct": false
+      },
+      {
+        "text": "Thanh sô-cô-la",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cây Tre là loài thực vật lớn nhanh nhất, nó có thể cao thêm bao nhiêu trong 1 ngày?",
+    "answers": [
+      {
+        "text": "10 cm",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 90 cm",
+        "correct": true
+      },
+      {
+        "text": "2 mét",
+        "correct": false
+      },
+      {
+        "text": "5 cm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bề ngang của nước Úc (Australia) so với đường kính của Mặt Trăng?",
+    "answers": [
+      {
+        "text": "Mặt Trăng rộng hơn nước Úc",
+        "correct": false
+      },
+      {
+        "text": "Mặt Trăng rộng gấp đôi",
+        "correct": false
+      },
+      {
+        "text": "Nước Úc rộng hơn Mặt Trăng",
+        "correct": true
+      },
+      {
+        "text": "Bằng nhau",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con vật nào là biểu tượng quốc gia của Scotland?",
+    "answers": [
+      {
+        "text": "Đại bàng",
+        "correct": false
+      },
+      {
+        "text": "Kỳ lân",
+        "correct": true
+      },
+      {
+        "text": "Rồng",
+        "correct": false
+      },
+      {
+        "text": "Sư tử",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Mật ong tự nhiên có hạn sử dụng là bao lâu?",
+    "answers": [
+      {
+        "text": "Vĩnh viễn",
+        "correct": true
+      },
+      {
+        "text": "5 năm",
+        "correct": false
+      },
+      {
+        "text": "10 năm",
+        "correct": false
+      },
+      {
+        "text": "100 năm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trên Sao Kim (Venus), thời gian quay 1 vòng quanh trục (1 ngày) so với quay quanh Mặt Trời (1 năm) thế nào?",
+    "answers": [
+      {
+        "text": "Sao Kim không quay",
+        "correct": false
+      },
+      {
+        "text": "Một năm dài hơn một ngày",
+        "correct": false
+      },
+      {
+        "text": "Một ngày dài hơn một năm",
+        "correct": true
+      },
+      {
+        "text": "Bằng nhau",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Về mặt sinh học, quả Dâu tây có phải là quả mọng (Berry) không?",
+    "answers": [
+      {
+        "text": "Tùy loại đất trồng",
+        "correct": false
+      },
+      {
+        "text": "Chỉ dâu tây rừng mới là quả mọng",
+        "correct": false
+      },
+      {
+        "text": "Có, nó là quả mọng điển hình",
+        "correct": false
+      },
+      {
+        "text": "Không, Dâu tây không phải quả mọng",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Nhưng ngược lại, quả nào sau đây lại ĐƯỢC XẾP LÀ quả mọng (Berry)?",
+    "answers": [
+      {
+        "text": "Quả Đào",
+        "correct": false
+      },
+      {
+        "text": "Quả Chuối và Dưa hấu",
+        "correct": true
+      },
+      {
+        "text": "Quả Táo",
+        "correct": false
+      },
+      {
+        "text": "Quả Mận",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đại học Oxford (Anh) và Đế chế Aztec, cái nào ra đời trước?",
+    "answers": [
+      {
+        "text": "Đế chế Aztec",
+        "correct": false
+      },
+      {
+        "text": "Không xác định được",
+        "correct": false
+      },
+      {
+        "text": "Ra đời cùng thế kỷ",
+        "correct": false
+      },
+      {
+        "text": "Đại học Oxford",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Chiếc máy cưa xích (Chainsaw) ban đầu được phát minh để làm gì?",
+    "answers": [
+      {
+        "text": "Cắt băng đá",
+        "correct": false
+      },
+      {
+        "text": "Cưa gỗ",
+        "correct": false
+      },
+      {
+        "text": "Vũ khí",
+        "correct": false
+      },
+      {
+        "text": "Hỗ trợ sinh nở",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Con Bò có thể đi lên cầu thang, nhưng tại sao không thể đi xuống?",
+    "answers": [
+      {
+        "text": "Do chúng quá nặng",
+        "correct": false
+      },
+      {
+        "text": "Thực ra chúng đi xuống được bình thường",
+        "correct": false
+      },
+      {
+        "text": "Do cấu tạo đầu gối không thể gập vuông góc",
+        "correct": true
+      },
+      {
+        "text": "Do chúng sợ độ cao",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tín hiệu cầu cứu SOS là viết tắt của từ gì?",
+    "answers": [
+      {
+        "text": "Không là viết tắt của từ gì cả",
+        "correct": true
+      },
+      {
+        "text": "Send Out Succour",
+        "correct": false
+      },
+      {
+        "text": "Save Our Souls",
+        "correct": false
+      },
+      {
+        "text": "Save Our Ship",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bánh quy may mắn (Fortune Cookies) ở các nhà hàng Trung Hoa thực ra xuất xứ từ đâu?",
+    "answers": [
+      {
+        "text": "Mỹ",
+        "correct": true
+      },
+      {
+        "text": "Nhật Bản",
+        "correct": false
+      },
+      {
+        "text": "Trung Quốc",
+        "correct": false
+      },
+      {
+        "text": "Hồng Kông",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào là động vật duy nhất có hình dạng con ngươi (lỗ đồng tử) hình chữ nhật?",
+    "answers": [
+      {
+        "text": "Con Dê",
+        "correct": true
+      },
+      {
+        "text": "Con Hổ",
+        "correct": false
+      },
+      {
+        "text": "Con Mèo",
+        "correct": false
+      },
+      {
+        "text": "Con Cá sấu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Mùi hương đặc trưng sau cơn mưa (mùi đất ẩm) có tên khoa học là gì?",
+    "answers": [
+      {
+        "text": "Aqua",
+        "correct": false
+      },
+      {
+        "text": "Petrichor",
+        "correct": true
+      },
+      {
+        "text": "Terrace",
+        "correct": false
+      },
+      {
+        "text": "Ozone",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con người chia sẻ khoảng bao nhiêu phần trăm ADN với quả Chuối?",
+    "answers": [
+      {
+        "text": "0%",
+        "correct": false
+      },
+      {
+        "text": "99%",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 50-60%",
+        "correct": true
+      },
+      {
+        "text": "10%",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tro cốt của người phát minh ra vỏ hộp Pringles được chôn ở đâu?",
+    "answers": [
+      {
+        "text": "Rải ngoài vũ trụ",
+        "correct": false
+      },
+      {
+        "text": "Trong bếp nhà ông ấy",
+        "correct": false
+      },
+      {
+        "text": "Dưới gốc cây khoai tây",
+        "correct": false
+      },
+      {
+        "text": "Trong một chiếc hộp Pringles",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào là chim duy nhất có thể bay lùi?",
+    "answers": [
+      {
+        "text": "Chim Ưng",
+        "correct": false
+      },
+      {
+        "text": "Chim Ruồi",
+        "correct": true
+      },
+      {
+        "text": "Chim Én",
+        "correct": false
+      },
+      {
+        "text": "Đà điểu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trên Sao Thiên Vương và Sao Hải Vương, các nhà khoa học tin rằng có mưa là gì?",
+    "answers": [
+      {
+        "text": "Mưa Đá",
+        "correct": false
+      },
+      {
+        "text": "Mưa Axit",
+        "correct": false
+      },
+      {
+        "text": "Mưa Kim Cương",
+        "correct": true
+      },
+      {
+        "text": "Mưa Vàng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bật lửa (Lighter) và Diêm (Match), cái nào được phát minh trước?",
+    "answers": [
+      {
+        "text": "Diêm có trước",
+        "correct": false
+      },
+      {
+        "text": "Bật lửa có trước",
+        "correct": true
+      },
+      {
+        "text": "Diêm có trước 100 năm",
+        "correct": false
+      },
+      {
+        "text": "Cùng một năm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chữ cái duy nhất không xuất hiện trong Bảng tuần hoàn hóa học là chữ nào?",
+    "answers": [
+      {
+        "text": "Chữ J",
+        "correct": true
+      },
+      {
+        "text": "Chữ X",
+        "correct": false
+      },
+      {
+        "text": "Chữ Z",
+        "correct": false
+      },
+      {
+        "text": "Chữ Q",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cục tẩy (Gôm) màu xanh ở một đầu bút chì ngày xưa thực chất dùng để tẩy gì?",
+    "answers": [
+      {
+        "text": "Để tẩy vết bẩn trên tường",
+        "correct": false
+      },
+      {
+        "text": "Tẩy mực bút bi",
+        "correct": false
+      },
+      {
+        "text": "Để trang trí",
+        "correct": false
+      },
+      {
+        "text": "Tẩy nét bút chì trên giấy dày/nặng",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tiếng gầm của khủng long T-Rex trong phim 'Công viên kỷ Jura' là tiếng con gì?",
+    "answers": [
+      {
+        "text": "Tiếng sấm sét",
+        "correct": false
+      },
+      {
+        "text": "Tiếng sư tử",
+        "correct": false
+      },
+      {
+        "text": "Tiếng voi con, hổ và cá sấu trộn lại",
+        "correct": true
+      },
+      {
+        "text": "Tiếng tàu hỏa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bóng Golf ban đầu được làm từ chất liệu gì (trước khi dùng nhựa)?",
+    "answers": [
+      {
+        "text": "Da nhồi lông vịt/ngỗng",
+        "correct": true
+      },
+      {
+        "text": "Đá",
+        "correct": false
+      },
+      {
+        "text": "Gỗ",
+        "correct": false
+      },
+      {
+        "text": "Sắt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào ăn nhiều sô-cô-la (Chocolate) nhất thế giới?",
+    "answers": [
+      {
+        "text": "Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Thụy Sĩ",
+        "correct": true
+      },
+      {
+        "text": "Bỉ",
+        "correct": false
+      },
+      {
+        "text": "Đức",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có lưỡi nặng tương đương với một con Voi?",
+    "answers": [
+      {
+        "text": "Cá Voi Xanh",
+        "correct": true
+      },
+      {
+        "text": "Hà Mã",
+        "correct": false
+      },
+      {
+        "text": "Hươu cao cổ",
+        "correct": false
+      },
+      {
+        "text": "Tê Giác",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Để tạo ra 500 gram mật ong, đàn ong phải bay quãng đường tương đương bao xa?",
+    "answers": [
+      {
+        "text": "100 km",
+        "correct": false
+      },
+      {
+        "text": "Từ Hà Nội vào Sài Gòn",
+        "correct": false
+      },
+      {
+        "text": "Bay 3 vòng quanh Trái Đất",
+        "correct": true
+      },
+      {
+        "text": "1000 km",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Miếng nhựa (hoặc kim loại) bịt ở đầu dây giày gọi là gì?",
+    "answers": [
+      {
+        "text": "Top",
+        "correct": false
+      },
+      {
+        "text": "Tip",
+        "correct": false
+      },
+      {
+        "text": "Aglet",
+        "correct": true
+      },
+      {
+        "text": "Cap",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Dấu chấm nhỏ trên đầu chữ 'i' và chữ 'j' có tên gọi là gì?",
+    "answers": [
+      {
+        "text": "Point",
+        "correct": false
+      },
+      {
+        "text": "Tittle",
+        "correct": true
+      },
+      {
+        "text": "Mark",
+        "correct": false
+      },
+      {
+        "text": "Dot",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tại sao cửa sổ máy bay lại có hình bầu dục (bo tròn) thay vì hình vuông?",
+    "answers": [
+      {
+        "text": "Để dễ lau chùi",
+        "correct": false
+      },
+      {
+        "text": "Để nhìn đẹp hơn",
+        "correct": false
+      },
+      {
+        "text": "Để tiết kiệm kính",
+        "correct": false
+      },
+      {
+        "text": "Để chịu áp lực tốt hơn, tránh bị nứt ở góc nhọn",
+        "correct": true
+      }
+    ]
+  }
+]

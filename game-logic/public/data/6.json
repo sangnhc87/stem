@@ -1,0 +1,632 @@
+[
+  {
+    "question": "Hươu cao cổ có số lượng đốt sống cổ là bao nhiêu?",
+    "answers": [
+      {
+        "text": "15 đốt",
+        "correct": false
+      },
+      {
+        "text": "20 đốt",
+        "correct": false
+      },
+      {
+        "text": "10 đốt",
+        "correct": false
+      },
+      {
+        "text": "7 đốt",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào có tốc độ bay nhanh nhất thế giới (khi bổ nhào)?",
+    "answers": [
+      {
+        "text": "Đại bàng",
+        "correct": false
+      },
+      {
+        "text": "Chim Én",
+        "correct": false
+      },
+      {
+        "text": "Chim Hải âu",
+        "correct": false
+      },
+      {
+        "text": "Chim Cắt",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cá Ngựa (Seahorse) có đặc điểm sinh sản gì kỳ lạ?",
+    "answers": [
+      {
+        "text": "Con cái sinh con rồi bỏ đi",
+        "correct": false
+      },
+      {
+        "text": "Chúng sinh sản vô tính",
+        "correct": false
+      },
+      {
+        "text": "Cả hai cùng mang thai",
+        "correct": false
+      },
+      {
+        "text": "Con đực mang thai và sinh con",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong đàn Sư tử, nhiệm vụ săn mồi chủ yếu thuộc về con nào?",
+    "answers": [
+      {
+        "text": "Cả hai như nhau",
+        "correct": false
+      },
+      {
+        "text": "Sư tử cái",
+        "correct": true
+      },
+      {
+        "text": "Sư tử đực",
+        "correct": false
+      },
+      {
+        "text": "Sư tử con",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "San hô thực chất là gì?",
+    "answers": [
+      {
+        "text": "Thực vật",
+        "correct": false
+      },
+      {
+        "text": "Đá",
+        "correct": false
+      },
+      {
+        "text": "Khoáng vật",
+        "correct": false
+      },
+      {
+        "text": "Động vật",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Bướu của Lạc đà dùng để chứa gì?",
+    "answers": [
+      {
+        "text": "Nước",
+        "correct": false
+      },
+      {
+        "text": "Xương",
+        "correct": false
+      },
+      {
+        "text": "Mỡ",
+        "correct": true
+      },
+      {
+        "text": "Không khí",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có vân sọc trên cơ thể là độc nhất vô nhị (giống như vân tay người)?",
+    "answers": [
+      {
+        "text": "Cả Ngựa vằn và Hổ",
+        "correct": true
+      },
+      {
+        "text": "Ngựa vằn",
+        "correct": true
+      },
+      {
+        "text": "Hổ",
+        "correct": false
+      },
+      {
+        "text": "Báo đốm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con vật nào được mệnh danh là 'Chúa tể bầu trời'?",
+    "answers": [
+      {
+        "text": "Đại bàng",
+        "correct": true
+      },
+      {
+        "text": "Chim Ưng",
+        "correct": false
+      },
+      {
+        "text": "Cú mèo",
+        "correct": false
+      },
+      {
+        "text": "Kền kền",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Cú có thể xoay đầu được bao nhiêu độ?",
+    "answers": [
+      {
+        "text": "360 độ",
+        "correct": false
+      },
+      {
+        "text": "90 độ",
+        "correct": false
+      },
+      {
+        "text": "270 độ",
+        "correct": true
+      },
+      {
+        "text": "180 độ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Mực của loài Bạch tuộc dùng để làm gì?",
+    "answers": [
+      {
+        "text": "Tạo màn khói để trốn thoát kẻ thù",
+        "correct": true
+      },
+      {
+        "text": "Để săn mồi",
+        "correct": false
+      },
+      {
+        "text": "Để giao tiếp với đồng loại",
+        "correct": false
+      },
+      {
+        "text": "Để đánh dấu lãnh thổ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thức ăn duy nhất của loài Gấu Koala (Gấu túi) là gì?",
+    "answers": [
+      {
+        "text": "Hoa quả",
+        "correct": false
+      },
+      {
+        "text": "Lá cây Bạch đàn",
+        "correct": true
+      },
+      {
+        "text": "Côn trùng",
+        "correct": false
+      },
+      {
+        "text": "Lá Tre",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có tuổi thọ cao nhất trong số các loài động vật trên cạn?",
+    "answers": [
+      {
+        "text": "Cá sấu",
+        "correct": false
+      },
+      {
+        "text": "Rùa khổng lồ",
+        "correct": true
+      },
+      {
+        "text": "Voi",
+        "correct": false
+      },
+      {
+        "text": "Con Người",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ong chúa trong một tổ ong có nhiệm vụ chính là gì?",
+    "answers": [
+      {
+        "text": "Đi lấy mật",
+        "correct": false
+      },
+      {
+        "text": "Xây tổ",
+        "correct": false
+      },
+      {
+        "text": "Bảo vệ tổ",
+        "correct": false
+      },
+      {
+        "text": "Đẻ trứng duy trì nòi giống",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cá sấu thường làm gì để điều hòa thân nhiệt khi trời nắng nóng?",
+    "answers": [
+      {
+        "text": "Vẫy đuôi",
+        "correct": false
+      },
+      {
+        "text": "Thè lưỡi",
+        "correct": false
+      },
+      {
+        "text": "Chạy nhanh",
+        "correct": false
+      },
+      {
+        "text": "Há miệng to",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào không biết bay nhưng bơi rất giỏi?",
+    "answers": [
+      {
+        "text": "Chim Bồ nông",
+        "correct": false
+      },
+      {
+        "text": "Chim Vịt trời",
+        "correct": false
+      },
+      {
+        "text": "Chim Đà điểu",
+        "correct": false
+      },
+      {
+        "text": "Chim Cánh cụt",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Con Tôm chứa tim ở bộ phận nào của cơ thể?",
+    "answers": [
+      {
+        "text": "Ở bụng",
+        "correct": false
+      },
+      {
+        "text": "Ở đuôi",
+        "correct": false
+      },
+      {
+        "text": "Ở ngực",
+        "correct": false
+      },
+      {
+        "text": "Trên đầu",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài chó thoát mồ hôi chủ yếu qua đâu?",
+    "answers": [
+      {
+        "text": "Mũi",
+        "correct": false
+      },
+      {
+        "text": "Toàn thân",
+        "correct": false
+      },
+      {
+        "text": "Tai",
+        "correct": false
+      },
+      {
+        "text": "Lưỡi và đệm bàn chân",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Màu hồng của chim Hồng hạc đến từ đâu?",
+    "answers": [
+      {
+        "text": "Do màu máu",
+        "correct": false
+      },
+      {
+        "text": "Do gen di truyền tự nhiên",
+        "correct": false
+      },
+      {
+        "text": "Từ thức ăn",
+        "correct": true
+      },
+      {
+        "text": "Do tắm nắng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Dạ dày của loài Bò có mấy ngăn?",
+    "answers": [
+      {
+        "text": "4 ngăn",
+        "correct": true
+      },
+      {
+        "text": "1 ngăn",
+        "correct": false
+      },
+      {
+        "text": "2 ngăn",
+        "correct": false
+      },
+      {
+        "text": "3 ngăn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Rắn dùng bộ phận nào để 'ngửi' mùi xung quanh?",
+    "answers": [
+      {
+        "text": "Mắt",
+        "correct": false
+      },
+      {
+        "text": "Mũi",
+        "correct": false
+      },
+      {
+        "text": "Lưỡi",
+        "correct": true
+      },
+      {
+        "text": "Da",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Côn trùng nào có tổ chức xã hội kỷ luật nhất?",
+    "answers": [
+      {
+        "text": "Bọ cánh cứng",
+        "correct": false
+      },
+      {
+        "text": "Chuồn chuồn",
+        "correct": false
+      },
+      {
+        "text": "Gián",
+        "correct": false
+      },
+      {
+        "text": "Kiến",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Đom đóm phát sáng vào ban đêm để làm gì chủ yếu?",
+    "answers": [
+      {
+        "text": "Dọa kẻ thù",
+        "correct": false
+      },
+      {
+        "text": "Giữ ấm cơ thể",
+        "correct": false
+      },
+      {
+        "text": "Soi đường đi",
+        "correct": false
+      },
+      {
+        "text": "Tìm bạn tình",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cá nào được mệnh danh là 'Sát thủ đại dương'?",
+    "answers": [
+      {
+        "text": "Cá Voi xanh",
+        "correct": false
+      },
+      {
+        "text": "Cá Heo",
+        "correct": false
+      },
+      {
+        "text": "Cá Ngừ",
+        "correct": false
+      },
+      {
+        "text": "Cá Mập trắng",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Râu của loài Mèo có tác dụng quan trọng nhất là gì?",
+    "answers": [
+      {
+        "text": "Để thu hút bạn tình",
+        "correct": false
+      },
+      {
+        "text": "Để làm đẹp",
+        "correct": false
+      },
+      {
+        "text": "Để ngửi mùi",
+        "correct": false
+      },
+      {
+        "text": "Giữ thăng bằng và định vị không gian",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào thường ngủ đứng?",
+    "answers": [
+      {
+        "text": "Con Khỉ",
+        "correct": false
+      },
+      {
+        "text": "Con Lợn",
+        "correct": false
+      },
+      {
+        "text": "Con Chó",
+        "correct": false
+      },
+      {
+        "text": "Con Ngựa",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Con gì khi sinh ra đã biết bơi ngay lập tức?",
+    "answers": [
+      {
+        "text": "Chuột",
+        "correct": false
+      },
+      {
+        "text": "Chó",
+        "correct": false
+      },
+      {
+        "text": "Cá",
+        "correct": true
+      },
+      {
+        "text": "Mèo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tê giác bị săn trộm chủ yếu để lấy bộ phận nào?",
+    "answers": [
+      {
+        "text": "Thịt",
+        "correct": false
+      },
+      {
+        "text": "Da",
+        "correct": false
+      },
+      {
+        "text": "Sừng",
+        "correct": true
+      },
+      {
+        "text": "Móng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài thằn lằn nào lớn nhất thế giới hiện nay?",
+    "answers": [
+      {
+        "text": "Tắc kè hoa",
+        "correct": false
+      },
+      {
+        "text": "Kỳ đà",
+        "correct": false
+      },
+      {
+        "text": "Thằn lằn bay",
+        "correct": false
+      },
+      {
+        "text": "Rồng Komodo",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Mối chúa có thể sống được bao lâu?",
+    "answers": [
+      {
+        "text": "1 năm",
+        "correct": false
+      },
+      {
+        "text": "1 tháng",
+        "correct": false
+      },
+      {
+        "text": "1 tuần",
+        "correct": false
+      },
+      {
+        "text": "Trên 20 năm",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cá Chép hóa Rồng là biểu tượng cho đức tính gì?",
+    "answers": [
+      {
+        "text": "Kiên trì, vượt khó",
+        "correct": true
+      },
+      {
+        "text": "Sức mạnh thể chất",
+        "correct": false
+      },
+      {
+        "text": "Thông minh",
+        "correct": false
+      },
+      {
+        "text": "Sự may mắn",
+        "correct": false
+      }
+    ]
+  }
+]

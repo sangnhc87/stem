@@ -1,0 +1,1997 @@
+[
+  {
+    "question": "Hành tinh nào trong hệ Mặt Trời có ngày dài nhất?",
+    "answers": [
+      {
+        "text": "Sao Thổ",
+        "correct": false
+      },
+      {
+        "text": "Sao Kim",
+        "correct": true
+      },
+      {
+        "text": "Sao Hỏa",
+        "correct": false
+      },
+      {
+        "text": "Sao Mộc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là người phát minh ra máy in?",
+    "answers": [
+      {
+        "text": "Thomas Edison",
+        "correct": false
+      },
+      {
+        "text": "Johannes Gutenberg",
+        "correct": true
+      },
+      {
+        "text": "Benjamin Franklin",
+        "correct": false
+      },
+      {
+        "text": "Leonardo da Vinci",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Hy Lạp, Prometheus bị trừng phạt vì tội gì?",
+    "answers": [
+      {
+        "text": "Tiết lộ bí mật của thần",
+        "correct": false
+      },
+      {
+        "text": "Giết Zeus",
+        "correct": false
+      },
+      {
+        "text": "Đánh cắp lửa cho loài người",
+        "correct": true
+      },
+      {
+        "text": "Yêu một nữ thần",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể thay đổi giới tính?",
+    "answers": [
+      {
+        "text": "Cá hề",
+        "correct": true
+      },
+      {
+        "text": "Cá voi",
+        "correct": false
+      },
+      {
+        "text": "Cá heo",
+        "correct": false
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thủ đô cổ đại của Đế chế Inca là gì?",
+    "answers": [
+      {
+        "text": "Quito",
+        "correct": false
+      },
+      {
+        "text": "Lima",
+        "correct": false
+      },
+      {
+        "text": "Cusco",
+        "correct": true
+      },
+      {
+        "text": "Machu Picchu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nguyên tố nào tạo nên phần lớn bầu khí quyển Trái Đất?",
+    "answers": [
+      {
+        "text": "Nitơ",
+        "correct": true
+      },
+      {
+        "text": "Argon",
+        "correct": false
+      },
+      {
+        "text": "Oxy",
+        "correct": false
+      },
+      {
+        "text": "Carbon dioxide",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai vẽ bức tranh 'Cô gái đeo hoa tai ngọc trai'?",
+    "answers": [
+      {
+        "text": "Rembrandt",
+        "correct": false
+      },
+      {
+        "text": "Johannes Vermeer",
+        "correct": true
+      },
+      {
+        "text": "Van Gogh",
+        "correct": false
+      },
+      {
+        "text": "Monet",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài cây nào có hạt lớn nhất thế giới?",
+    "answers": [
+      {
+        "text": "Cây dừa thường",
+        "correct": false
+      },
+      {
+        "text": "Cây dừa Coco de Mer",
+        "correct": true
+      },
+      {
+        "text": "Cây xoài",
+        "correct": false
+      },
+      {
+        "text": "Cây bơ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào phát minh ra pizza?",
+    "answers": [
+      {
+        "text": "Hy Lạp",
+        "correct": false
+      },
+      {
+        "text": "Ý",
+        "correct": true
+      },
+      {
+        "text": "Pháp",
+        "correct": false
+      },
+      {
+        "text": "Mỹ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đơn vị đo lường nào được đặt theo tên của nhà khoa học Blaise Pascal?",
+    "answers": [
+      {
+        "text": "Volt",
+        "correct": false
+      },
+      {
+        "text": "Newton",
+        "correct": false
+      },
+      {
+        "text": "Watt",
+        "correct": false
+      },
+      {
+        "text": "Pascal",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Bắc Âu, cây Yggdrasil là gì?",
+    "answers": [
+      {
+        "text": "Búa của Thor",
+        "correct": false
+      },
+      {
+        "text": "Cây thế giới nối 9 cõi",
+        "correct": true
+      },
+      {
+        "text": "Con rồng khổng lồ",
+        "correct": false
+      },
+      {
+        "text": "Cầu vồng Bifrost",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào có thể bay lùi?",
+    "answers": [
+      {
+        "text": "Chim cánh cụt",
+        "correct": false
+      },
+      {
+        "text": "Chim ruồi",
+        "correct": true
+      },
+      {
+        "text": "Chim sẻ",
+        "correct": false
+      },
+      {
+        "text": "Chim đại bàng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là hoàng đế La Mã bị cho là đốt thành Rome?",
+    "answers": [
+      {
+        "text": "Nero",
+        "correct": true
+      },
+      {
+        "text": "Julius Caesar",
+        "correct": false
+      },
+      {
+        "text": "Augustus",
+        "correct": false
+      },
+      {
+        "text": "Caligula",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chất lỏng nào có trong huyết tương máu nhiều nhất?",
+    "answers": [
+      {
+        "text": "Nước",
+        "correct": true
+      },
+      {
+        "text": "Protein",
+        "correct": false
+      },
+      {
+        "text": "Mỡ",
+        "correct": false
+      },
+      {
+        "text": "Muối",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tác phẩm 'Ngàn lẻ một đêm' có nguồn gốc từ đâu?",
+    "answers": [
+      {
+        "text": "Trung Quốc",
+        "correct": false
+      },
+      {
+        "text": "Trung Đông",
+        "correct": true
+      },
+      {
+        "text": "Hy Lạp",
+        "correct": false
+      },
+      {
+        "text": "Ấn Độ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có lượng ADN giống người nhất?",
+    "answers": [
+      {
+        "text": "Khỉ đột",
+        "correct": false
+      },
+      {
+        "text": "Tinh tinh",
+        "correct": true
+      },
+      {
+        "text": "Đười ươi",
+        "correct": false
+      },
+      {
+        "text": "Gorilla",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thành phố nào có hệ thống tàu điện ngầm đông đúc nhất thế giới?",
+    "answers": [
+      {
+        "text": "Tokyo",
+        "correct": true
+      },
+      {
+        "text": "New York",
+        "correct": false
+      },
+      {
+        "text": "London",
+        "correct": false
+      },
+      {
+        "text": "Paris",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là nhà soạn nhạc của 'Hồ thiên nga'?",
+    "answers": [
+      {
+        "text": "Mozart",
+        "correct": false
+      },
+      {
+        "text": "Bach",
+        "correct": false
+      },
+      {
+        "text": "Tchaikovsky",
+        "correct": true
+      },
+      {
+        "text": "Beethoven",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Kim cương được cấu tạo từ nguyên tố nào?",
+    "answers": [
+      {
+        "text": "Carbon",
+        "correct": true
+      },
+      {
+        "text": "Sắt",
+        "correct": false
+      },
+      {
+        "text": "Nhôm",
+        "correct": false
+      },
+      {
+        "text": "Silicon",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Ai Cập, thần Osiris cai quản lĩnh vực nào?",
+    "answers": [
+      {
+        "text": "Chiến tranh",
+        "correct": false
+      },
+      {
+        "text": "Âm phủ và sự tái sinh",
+        "correct": true
+      },
+      {
+        "text": "Mặt Trời",
+        "correct": false
+      },
+      {
+        "text": "Biển cả",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đồng tiền Euro được sử dụng chính thức từ năm nào?",
+    "answers": [
+      {
+        "text": "2002",
+        "correct": true
+      },
+      {
+        "text": "2005",
+        "correct": false
+      },
+      {
+        "text": "2000",
+        "correct": false
+      },
+      {
+        "text": "1999",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài bướm nào có tuổi thọ dài nhất?",
+    "answers": [
+      {
+        "text": "Bướm phượng",
+        "correct": false
+      },
+      {
+        "text": "Bướm đêm",
+        "correct": false
+      },
+      {
+        "text": "Bướm trắng",
+        "correct": false
+      },
+      {
+        "text": "Bướm vua",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Ai là người sáng tác bản nhạc 'Für Elise'?",
+    "answers": [
+      {
+        "text": "Beethoven",
+        "correct": true
+      },
+      {
+        "text": "Chopin",
+        "correct": false
+      },
+      {
+        "text": "Mozart",
+        "correct": false
+      },
+      {
+        "text": "Bach",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vũ trụ có tuổi khoảng bao nhiêu năm?",
+    "answers": [
+      {
+        "text": "13.8 tỷ năm",
+        "correct": true
+      },
+      {
+        "text": "20 tỷ năm",
+        "correct": false
+      },
+      {
+        "text": "4.5 tỷ năm",
+        "correct": false
+      },
+      {
+        "text": "10 tỷ năm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài cá nào có thể phát sáng trong bóng tối?",
+    "answers": [
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Cá ngừ",
+        "correct": false
+      },
+      {
+        "text": "Cá hồi",
+        "correct": false
+      },
+      {
+        "text": "Cá đèn lồng",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào có nhiều người nói tiếng Bồ Đào Nha nhất?",
+    "answers": [
+      {
+        "text": "Angola",
+        "correct": false
+      },
+      {
+        "text": "Brazil",
+        "correct": true
+      },
+      {
+        "text": "Bồ Đào Nha",
+        "correct": false
+      },
+      {
+        "text": "Mozambique",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thần Hermes trong thần thoại Hy Lạp là thần của gì?",
+    "answers": [
+      {
+        "text": "Thông tin, thương mại và kẻ trộm",
+        "correct": true
+      },
+      {
+        "text": "Biển cả",
+        "correct": false
+      },
+      {
+        "text": "Tình yêu",
+        "correct": false
+      },
+      {
+        "text": "Chiến tranh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai phát minh ra vaccine đầu tiên?",
+    "answers": [
+      {
+        "text": "Edward Jenner",
+        "correct": true
+      },
+      {
+        "text": "Alexander Fleming",
+        "correct": false
+      },
+      {
+        "text": "Louis Pasteur",
+        "correct": false
+      },
+      {
+        "text": "Robert Koch",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có lưỡi dài nhất so với cơ thể?",
+    "answers": [
+      {
+        "text": "Tắc kè hoa",
+        "correct": true
+      },
+      {
+        "text": "Hươu cao cổ",
+        "correct": false
+      },
+      {
+        "text": "Thú ăn kiến",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bức tượng Nhân sư Giza có thân của loài vật nào?",
+    "answers": [
+      {
+        "text": "Chó",
+        "correct": false
+      },
+      {
+        "text": "Ngựa",
+        "correct": false
+      },
+      {
+        "text": "Sư tử",
+        "correct": true
+      },
+      {
+        "text": "Bò",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nguyên tố hóa học nào có ký hiệu 'Fe'?",
+    "answers": [
+      {
+        "text": "Kẽm",
+        "correct": false
+      },
+      {
+        "text": "Đồng",
+        "correct": false
+      },
+      {
+        "text": "Chì",
+        "correct": false
+      },
+      {
+        "text": "Sắt",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Ai là tác giả của 'Người nhện' (Spider-Man)?",
+    "answers": [
+      {
+        "text": "Jack Kirby",
+        "correct": false
+      },
+      {
+        "text": "Bob Kane",
+        "correct": false
+      },
+      {
+        "text": "Stan Lee và Steve Ditko",
+        "correct": true
+      },
+      {
+        "text": "Jerry Siegel",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài cây nào có thể hút nước qua lá?",
+    "answers": [
+      {
+        "text": "Cây bạch đàn",
+        "correct": false
+      },
+      {
+        "text": "Cây tillandsia",
+        "correct": true
+      },
+      {
+        "text": "Cây thông",
+        "correct": false
+      },
+      {
+        "text": "Cây xương rồng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thành phố nào được gọi là 'Venice phương Đông'?",
+    "answers": [
+      {
+        "text": "Singapore",
+        "correct": false
+      },
+      {
+        "text": "Tokyo, Nhật Bản",
+        "correct": false
+      },
+      {
+        "text": "Bangkok, Thái Lan",
+        "correct": true
+      },
+      {
+        "text": "Hà Nội, Việt Nam",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là người đầu tiên hoàn thành chuyến đi vòng quanh thế giới?",
+    "answers": [
+      {
+        "text": "James Cook",
+        "correct": false
+      },
+      {
+        "text": "Vasco da Gama",
+        "correct": false
+      },
+      {
+        "text": "Christopher Columbus",
+        "correct": false
+      },
+      {
+        "text": "Đoàn thám hiểm Magellan",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống lâu nhất không cần nước?",
+    "answers": [
+      {
+        "text": "Thằn lằn",
+        "correct": false
+      },
+      {
+        "text": "Chuột kangaroo",
+        "correct": true
+      },
+      {
+        "text": "Rắn sa mạc",
+        "correct": false
+      },
+      {
+        "text": "Lạc đà",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Celtic, Banshee là gì?",
+    "answers": [
+      {
+        "text": "Linh hồn nữ báo tử",
+        "correct": true
+      },
+      {
+        "text": "Nữ thần chiến tranh",
+        "correct": false
+      },
+      {
+        "text": "Ma cà rồng",
+        "correct": false
+      },
+      {
+        "text": "Tiên nữ rừng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào có diện tích nhỏ nhất thế giới?",
+    "answers": [
+      {
+        "text": "Malta",
+        "correct": false
+      },
+      {
+        "text": "Vatican",
+        "correct": true
+      },
+      {
+        "text": "Monaco",
+        "correct": false
+      },
+      {
+        "text": "San Marino",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là họa sĩ nổi tiếng với tranh 'Guernica'?",
+    "answers": [
+      {
+        "text": "Pablo Picasso",
+        "correct": true
+      },
+      {
+        "text": "Salvador Dalí",
+        "correct": false
+      },
+      {
+        "text": "Francisco Goya",
+        "correct": false
+      },
+      {
+        "text": "Joan Miró",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài côn trùng nào có thể nâng vật nặng gấp 50 lần trọng lượng cơ thể?",
+    "answers": [
+      {
+        "text": "Châu chấu",
+        "correct": false
+      },
+      {
+        "text": "Kiến",
+        "correct": true
+      },
+      {
+        "text": "Ong",
+        "correct": false
+      },
+      {
+        "text": "Bọ hung",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tầng khí quyển nào chứa tầng ozone?",
+    "answers": [
+      {
+        "text": "Tầng đối lưu",
+        "correct": false
+      },
+      {
+        "text": "Tầng nhiệt",
+        "correct": false
+      },
+      {
+        "text": "Tầng trung lưu",
+        "correct": false
+      },
+      {
+        "text": "Tầng bình lưu",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong game Pokemon, Pikachu tiến hóa thành gì?",
+    "answers": [
+      {
+        "text": "Pichu",
+        "correct": false
+      },
+      {
+        "text": "Jolteon",
+        "correct": false
+      },
+      {
+        "text": "Electabuzz",
+        "correct": false
+      },
+      {
+        "text": "Raichu",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể ngủ trong khi bơi?",
+    "answers": [
+      {
+        "text": "Hải cẩu",
+        "correct": false
+      },
+      {
+        "text": "Cá voi",
+        "correct": false
+      },
+      {
+        "text": "Cá heo",
+        "correct": true
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là người sáng lập triết học Stoicism?",
+    "answers": [
+      {
+        "text": "Plato",
+        "correct": false
+      },
+      {
+        "text": "Socrates",
+        "correct": false
+      },
+      {
+        "text": "Zeno xứ Citium",
+        "correct": true
+      },
+      {
+        "text": "Aristotle",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào sản xuất cà phê nhiều nhất thế giới?",
+    "answers": [
+      {
+        "text": "Colombia",
+        "correct": false
+      },
+      {
+        "text": "Ethiopia",
+        "correct": false
+      },
+      {
+        "text": "Brazil",
+        "correct": true
+      },
+      {
+        "text": "Việt Nam",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Hindu, Vishnu có mấy avatar chính?",
+    "answers": [
+      {
+        "text": "7 avatar",
+        "correct": false
+      },
+      {
+        "text": "10 avatar",
+        "correct": true
+      },
+      {
+        "text": "8 avatar",
+        "correct": false
+      },
+      {
+        "text": "12 avatar",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài hoa nào nở vào ban đêm?",
+    "answers": [
+      {
+        "text": "Hoa hồng",
+        "correct": false
+      },
+      {
+        "text": "Hoa cúc",
+        "correct": false
+      },
+      {
+        "text": "Hoa quỳnh",
+        "correct": true
+      },
+      {
+        "text": "Hoa sen",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là người phát minh ra penicillin?",
+    "answers": [
+      {
+        "text": "Louis Pasteur",
+        "correct": false
+      },
+      {
+        "text": "Edward Jenner",
+        "correct": false
+      },
+      {
+        "text": "Robert Koch",
+        "correct": false
+      },
+      {
+        "text": "Alexander Fleming",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tháp nghiêng Pisa ở nước nào?",
+    "answers": [
+      {
+        "text": "Hy Lạp",
+        "correct": false
+      },
+      {
+        "text": "Pháp",
+        "correct": false
+      },
+      {
+        "text": "Ý",
+        "correct": true
+      },
+      {
+        "text": "Tây Ban Nha",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có mắt lớn nhất?",
+    "answers": [
+      {
+        "text": "Voi",
+        "correct": false
+      },
+      {
+        "text": "Cá voi xanh",
+        "correct": false
+      },
+      {
+        "text": "Đà điểu",
+        "correct": false
+      },
+      {
+        "text": "Mực khổng lồ",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Ai là tác giả của 'Frankenstein'?",
+    "answers": [
+      {
+        "text": "Mary Shelley",
+        "correct": true
+      },
+      {
+        "text": "Bram Stoker",
+        "correct": false
+      },
+      {
+        "text": "Edgar Allan Poe",
+        "correct": false
+      },
+      {
+        "text": "H.P. Lovecraft",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Núi Everest cao bao nhiêu mét?",
+    "answers": [
+      {
+        "text": "8.611m",
+        "correct": false
+      },
+      {
+        "text": "8.201m",
+        "correct": false
+      },
+      {
+        "text": "8.586m",
+        "correct": false
+      },
+      {
+        "text": "8.849m",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Nhật Bản, Susanoo là thần của gì?",
+    "answers": [
+      {
+        "text": "Mặt Trời",
+        "correct": false
+      },
+      {
+        "text": "Chiến tranh",
+        "correct": false
+      },
+      {
+        "text": "Bão tố và biển cả",
+        "correct": true
+      },
+      {
+        "text": "Mặt Trăng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào sở hữu đảo Greenland?",
+    "answers": [
+      {
+        "text": "Đan Mạch",
+        "correct": true
+      },
+      {
+        "text": "Canada",
+        "correct": false
+      },
+      {
+        "text": "Iceland",
+        "correct": false
+      },
+      {
+        "text": "Na Uy",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào có thể nhận diện mình trong gương?",
+    "answers": [
+      {
+        "text": "Đại bàng",
+        "correct": false
+      },
+      {
+        "text": "Quạ",
+        "correct": false
+      },
+      {
+        "text": "Chim ác là",
+        "correct": true
+      },
+      {
+        "text": "Vẹt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai viết vở kịch 'Romeo và Juliet'?",
+    "answers": [
+      {
+        "text": "Ben Jonson",
+        "correct": false
+      },
+      {
+        "text": "Christopher Marlowe",
+        "correct": false
+      },
+      {
+        "text": "William Shakespeare",
+        "correct": true
+      },
+      {
+        "text": "John Milton",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài cá nào có thể sống ở cả nước ngọt và nước mặn?",
+    "answers": [
+      {
+        "text": "Cá hồi",
+        "correct": true
+      },
+      {
+        "text": "Cá ngừ",
+        "correct": false
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Cá chép",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thần Dionysus trong thần thoại Hy Lạp là thần của gì?",
+    "answers": [
+      {
+        "text": "Chiến tranh",
+        "correct": false
+      },
+      {
+        "text": "Âm nhạc",
+        "correct": false
+      },
+      {
+        "text": "Rượu vang và lễ hội",
+        "correct": true
+      },
+      {
+        "text": "Săn bắn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là người sáng lập SpaceX?",
+    "answers": [
+      {
+        "text": "Jeff Bezos",
+        "correct": false
+      },
+      {
+        "text": "Elon Musk",
+        "correct": true
+      },
+      {
+        "text": "Larry Page",
+        "correct": false
+      },
+      {
+        "text": "Richard Branson",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống lâu nhất mà không ăn?",
+    "answers": [
+      {
+        "text": "Rùa",
+        "correct": false
+      },
+      {
+        "text": "Cá sấu",
+        "correct": true
+      },
+      {
+        "text": "Nhện",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đế chế nào có diện tích lớn nhất trong lịch sử?",
+    "answers": [
+      {
+        "text": "Đế quốc Nga",
+        "correct": false
+      },
+      {
+        "text": "Đế quốc La Mã",
+        "correct": false
+      },
+      {
+        "text": "Đế quốc Mông Cổ",
+        "correct": false
+      },
+      {
+        "text": "Đế quốc Anh",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Quả gì được gọi là 'hoàng hậu trái cây'?",
+    "answers": [
+      {
+        "text": "Vải",
+        "correct": false
+      },
+      {
+        "text": "Măng cụt",
+        "correct": true
+      },
+      {
+        "text": "Xoài",
+        "correct": false
+      },
+      {
+        "text": "Sầu riêng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là nhà bác học phát minh ra định luật vạn vật hấp dẫn?",
+    "answers": [
+      {
+        "text": "Johannes Kepler",
+        "correct": false
+      },
+      {
+        "text": "Albert Einstein",
+        "correct": false
+      },
+      {
+        "text": "Galileo Galilei",
+        "correct": false
+      },
+      {
+        "text": "Isaac Newton",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Trung Hoa, con rồng tượng trưng cho điều gì?",
+    "answers": [
+      {
+        "text": "Cái chết",
+        "correct": false
+      },
+      {
+        "text": "Sự hủy diệt",
+        "correct": false
+      },
+      {
+        "text": "Chiến tranh",
+        "correct": false
+      },
+      {
+        "text": "Quyền lực và may mắn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào có bộ não lớn nhất so với cơ thể?",
+    "answers": [
+      {
+        "text": "Cú",
+        "correct": false
+      },
+      {
+        "text": "Quạ",
+        "correct": false
+      },
+      {
+        "text": "Chim ruồi",
+        "correct": true
+      },
+      {
+        "text": "Vẹt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào có dân số đông nhất châu Phi?",
+    "answers": [
+      {
+        "text": "Nam Phi",
+        "correct": false
+      },
+      {
+        "text": "Nigeria",
+        "correct": true
+      },
+      {
+        "text": "Ethiopia",
+        "correct": false
+      },
+      {
+        "text": "Ai Cập",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai sáng tác vở opera 'La Traviata'?",
+    "answers": [
+      {
+        "text": "Giacomo Puccini",
+        "correct": false
+      },
+      {
+        "text": "Giuseppe Verdi",
+        "correct": true
+      },
+      {
+        "text": "Gaetano Donizetti",
+        "correct": false
+      },
+      {
+        "text": "Gioachino Rossini",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài cây nào có thể sống trong sa mạc nhờ lưu trữ nước?",
+    "answers": [
+      {
+        "text": "Thông",
+        "correct": false
+      },
+      {
+        "text": "Bạch đàn",
+        "correct": false
+      },
+      {
+        "text": "Xương rồng",
+        "correct": true
+      },
+      {
+        "text": "Cọ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Maya, Quetzalcoatl là gì?",
+    "answers": [
+      {
+        "text": "Rắn có lông vũ",
+        "correct": true
+      },
+      {
+        "text": "Vua",
+        "correct": false
+      },
+      {
+        "text": "Mặt Trời",
+        "correct": false
+      },
+      {
+        "text": "Chiến binh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ngôn ngữ lập trình nào do Guido van Rossum tạo ra?",
+    "answers": [
+      {
+        "text": "Ruby",
+        "correct": false
+      },
+      {
+        "text": "Java",
+        "correct": false
+      },
+      {
+        "text": "Python",
+        "correct": true
+      },
+      {
+        "text": "JavaScript",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào không có não?",
+    "answers": [
+      {
+        "text": "Giun đất",
+        "correct": false
+      },
+      {
+        "text": "Sứa",
+        "correct": false
+      },
+      {
+        "text": "Ốc sên",
+        "correct": false
+      },
+      {
+        "text": "Sao biển",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Thành phố nào là thủ đô của Thổ Nhĩ Kỳ?",
+    "answers": [
+      {
+        "text": "Istanbul",
+        "correct": false
+      },
+      {
+        "text": "Ankara",
+        "correct": true
+      },
+      {
+        "text": "Antalya",
+        "correct": false
+      },
+      {
+        "text": "Izmir",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là nhà văn nổi tiếng với tiểu thuyết 'Tội ác và Hình phạt'?",
+    "answers": [
+      {
+        "text": "Nikolai Gogol",
+        "correct": false
+      },
+      {
+        "text": "Fyodor Dostoevsky",
+        "correct": true
+      },
+      {
+        "text": "Anton Chekhov",
+        "correct": false
+      },
+      {
+        "text": "Leo Tolstoy",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể tái sinh toàn bộ cơ thể từ một mảnh nhỏ?",
+    "answers": [
+      {
+        "text": "Giun dẹp planarian",
+        "correct": true
+      },
+      {
+        "text": "Thằn lằn",
+        "correct": false
+      },
+      {
+        "text": "Bạch tuộc",
+        "correct": false
+      },
+      {
+        "text": "Sao biển",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Hy Lạp, ai là người canh giữ lối vào địa ngục?",
+    "answers": [
+      {
+        "text": "Charon",
+        "correct": false
+      },
+      {
+        "text": "Thanatos",
+        "correct": false
+      },
+      {
+        "text": "Cerberus",
+        "correct": true
+      },
+      {
+        "text": "Hades",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào phát minh ra thuốc súng?",
+    "answers": [
+      {
+        "text": "Hy Lạp",
+        "correct": false
+      },
+      {
+        "text": "Ả Rập",
+        "correct": false
+      },
+      {
+        "text": "Trung Quốc",
+        "correct": true
+      },
+      {
+        "text": "Ấn Độ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào có thể bay cao nhất?",
+    "answers": [
+      {
+        "text": "Sếu đầu đỏ",
+        "correct": true
+      },
+      {
+        "text": "Ngỗng",
+        "correct": false
+      },
+      {
+        "text": "Đại bàng",
+        "correct": false
+      },
+      {
+        "text": "Chim ưng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là tác giả của bộ truyện 'Chúa tể những chiếc nhẫn'?",
+    "answers": [
+      {
+        "text": "George R.R. Martin",
+        "correct": false
+      },
+      {
+        "text": "C.S. Lewis",
+        "correct": false
+      },
+      {
+        "text": "Terry Pratchett",
+        "correct": false
+      },
+      {
+        "text": "J.R.R. Tolkien",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Sao Thiên Vương có đặc điểm gì độc đáo?",
+    "answers": [
+      {
+        "text": "Quay nghiêng 98 độ so với mặt phẳng quỹ đạo",
+        "correct": true
+      },
+      {
+        "text": "Nóng nhất hệ Mặt Trời",
+        "correct": false
+      },
+      {
+        "text": "Có vành đai lớn nhất",
+        "correct": false
+      },
+      {
+        "text": "Có nhiều mặt trăng nhất",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Aztec, Huitzilopochtli là thần của gì?",
+    "answers": [
+      {
+        "text": "Mưa",
+        "correct": false
+      },
+      {
+        "text": "Chết",
+        "correct": false
+      },
+      {
+        "text": "Gió",
+        "correct": false
+      },
+      {
+        "text": "Chiến tranh và Mặt Trời",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nhịn ngủ lâu nhất?",
+    "answers": [
+      {
+        "text": "Cá voi",
+        "correct": false
+      },
+      {
+        "text": "Ếch hoang mạc châu Phi",
+        "correct": true
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Rùa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là vị vua nổi tiếng của Babylon xây dựng Vườn treo?",
+    "answers": [
+      {
+        "text": "Cyrus Đại đế",
+        "correct": false
+      },
+      {
+        "text": "Darius I",
+        "correct": false
+      },
+      {
+        "text": "Nebuchadnezzar II",
+        "correct": true
+      },
+      {
+        "text": "Hammurabi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào có nhiều người Hồi giáo nhất thế giới?",
+    "answers": [
+      {
+        "text": "Pakistan",
+        "correct": false
+      },
+      {
+        "text": "Ả Rập Saudi",
+        "correct": false
+      },
+      {
+        "text": "Iran",
+        "correct": false
+      },
+      {
+        "text": "Indonesia",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài hoa nào được dùng để làm trà phổ biến nhất?",
+    "answers": [
+      {
+        "text": "Hoa nhài",
+        "correct": false
+      },
+      {
+        "text": "Hoa hồng",
+        "correct": false
+      },
+      {
+        "text": "Hoa cúc",
+        "correct": true
+      },
+      {
+        "text": "Hoa sen",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là nhà khoa học phát minh ra thuyết tương đối?",
+    "answers": [
+      {
+        "text": "Niels Bohr",
+        "correct": false
+      },
+      {
+        "text": "Albert Einstein",
+        "correct": true
+      },
+      {
+        "text": "Max Planck",
+        "correct": false
+      },
+      {
+        "text": "Isaac Newton",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Ai Cập, thần Thoth có đầu của loài vật nào?",
+    "answers": [
+      {
+        "text": "Chó rừng",
+        "correct": false
+      },
+      {
+        "text": "Cò",
+        "correct": true
+      },
+      {
+        "text": "Sư tử",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài cá nào có thể tạo ra âm thanh?",
+    "answers": [
+      {
+        "text": "Cá piranha",
+        "correct": true
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Cá chép",
+        "correct": false
+      },
+      {
+        "text": "Cá ngừ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thủ đô của Mông Cổ là thành phố nào?",
+    "answers": [
+      {
+        "text": "Dushanbe",
+        "correct": false
+      },
+      {
+        "text": "Ulaanbaatar",
+        "correct": true
+      },
+      {
+        "text": "Bishkek",
+        "correct": false
+      },
+      {
+        "text": "Astana",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai vẽ bức tranh 'Birth of Venus'?",
+    "answers": [
+      {
+        "text": "Raphael",
+        "correct": false
+      },
+      {
+        "text": "Leonardo da Vinci",
+        "correct": false
+      },
+      {
+        "text": "Michelangelo",
+        "correct": false
+      },
+      {
+        "text": "Sandro Botticelli",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có tim lớn nhất?",
+    "answers": [
+      {
+        "text": "Voi",
+        "correct": false
+      },
+      {
+        "text": "Hươu cao cổ",
+        "correct": false
+      },
+      {
+        "text": "Ngựa",
+        "correct": false
+      },
+      {
+        "text": "Cá voi xanh",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Hy Lạp, Apollo là thần của gì?",
+    "answers": [
+      {
+        "text": "Rượu vang",
+        "correct": false
+      },
+      {
+        "text": "Âm nhạc, thơ ca và Mặt Trời",
+        "correct": true
+      },
+      {
+        "text": "Chiến tranh",
+        "correct": false
+      },
+      {
+        "text": "Biển cả",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào có nhiều Nobel nhất trong lịch sử?",
+    "answers": [
+      {
+        "text": "Pháp",
+        "correct": false
+      },
+      {
+        "text": "Đức",
+        "correct": false
+      },
+      {
+        "text": "Anh",
+        "correct": false
+      },
+      {
+        "text": "Mỹ",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài cây nào có rễ lan rộng nhất?",
+    "answers": [
+      {
+        "text": "Cây bạch đàn",
+        "correct": false
+      },
+      {
+        "text": "Cây sồi",
+        "correct": false
+      },
+      {
+        "text": "Cây thông",
+        "correct": false
+      },
+      {
+        "text": "Cây đa",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Ai là nhà triết học nổi tiếng với câu 'Tôi tư duy, vậy tôi tồn tại'?",
+    "answers": [
+      {
+        "text": "René Descartes",
+        "correct": true
+      },
+      {
+        "text": "Socrates",
+        "correct": false
+      },
+      {
+        "text": "Aristotle",
+        "correct": false
+      },
+      {
+        "text": "Plato",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong phim Star Wars, ai là cha của Luke Skywalker?",
+    "answers": [
+      {
+        "text": "Darth Vader",
+        "correct": true
+      },
+      {
+        "text": "Emperor Palpatine",
+        "correct": false
+      },
+      {
+        "text": "Yoda",
+        "correct": false
+      },
+      {
+        "text": "Obi-Wan Kenobi",
+        "correct": false
+      }
+    ]
+  }
+]

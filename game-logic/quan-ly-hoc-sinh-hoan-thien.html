@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quản lý Học sinh - Bản Hoàn Thiện (Offline)</title>
+  <meta name="description" content="Ứng dụng offline quản lý học sinh: danh sách, điểm danh, điểm số, bài giảng, đề trắc nghiệm, vòng xoay chọn ngẫu nhiên, chia nhóm, báo cáo, sao lưu JSON."/>
+  <style>
+    :root {
+      --bg: #f7f9fc; --card: #ffffff; --text: #111827; --muted: #6b7280; --primary: #2563eb; --border: #e5e7eb;
+      --danger: #dc2626; --success: #16a34a; --warning: #f59e0b; --link: #1d4ed8; --shade: #f3f4f6;
+    }
+    body.dark {
+      --bg: #0b1220; --card: #0f172a; --text: #e5e7eb; --muted: #94a3b8; --primary: #60a5fa; --border: #23314d;
+      --danger: #ef4444; --success: #22c55e; --warning: #f59e0b; --link: #93c5fd; --shade: #0b1220;
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji"; background: var(--bg); color: var(--text); }
+    a { color: var(--link); }
+    header { background: var(--card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 50; }
+    .wrap { max-width: 1220px; margin: 0 auto; padding: 14px 16px; }
+    h1 { font-size: 20px; margin: 0 0 2px; }
+    .sub { color: var(--muted); font-size: 13px; }
+    nav { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+    nav button { padding: 10px 12px; background: #eef2ff11; border: 1px solid var(--border); color: var(--text); border-radius: 8px; cursor: pointer; }
+    nav button.active { background: var(--primary); border-color: var(--primary); color: #fff; }
+    main { padding: 16px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px; margin-bottom: 16px; }
+    .grid { display: grid; gap: 12px; }
+    .grid-2 { grid-template-columns: repeat(2, minmax(0,1fr)); }
+    .grid-3 { grid-template-columns: repeat(3, minmax(0,1fr)); }
+    @media (max-width: 980px){ .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+    label { font-size: 13px; color: var(--muted); }
+    input, select, textarea { width: 100%; padding: 10px; border: 1px solid var(--border); border-radius: 8px; margin-top: 4px; background: #fff0; color: var(--text); }
+    textarea { min-height: 100px; }
+    .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+    .btn { padding: 8px 12px; border-radius: 8px; border: 1px solid var(--border); background: #fff0; cursor: pointer; color: var(--text); }
+    .btn.primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+    .btn.success { background: var(--success); color: #fff; border-color: var(--success); }
+    .btn.danger { background: var(--danger); color: #fff; border-color: var(--danger); }
+    .btn.warning { background: var(--warning); color: #fff; border-color: var(--warning); }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid var(--border); padding: 8px; text-align: left; vertical-align: top; }
+    th { background: var(--shade); font-weight: 600; }
+    .muted { color: var(--muted); }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; }
+    .badge.green { background: #10b98122; color: #10b981; }
+    .badge.red { background: #ef444422; color: #ef4444; }
+    .badge.yellow { background: #f59e0b22; color: #f59e0b; }
+    .right { text-align: right; }
+    .hidden { display: none; }
+    .footer { color: var(--muted); font-size: 12px; }
+    .search { max-width: 260px; }
+    .sticky-tools { position: sticky; top: 66px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 8px; z-index: 40; }
+    .print-only { display: none; }
+    .pill { padding: 3px 8px; border-radius: 999px; border: 1px solid var(--border); font-size: 12px; }
+    .section-title { margin: 0 0 4px; }
+    @media print { header, nav, .no-print { display: none !important; } .print-only { display: block; } body { background: #fff; } main { padding: 0; } }
+
+    /* Wheel */
+    .wheel-wrap { position: relative; width: 100%; max-width: 520px; margin: 0 auto; }
+    #wheelCanvas { width: 100%; height: auto; background: #fff0; border-radius: 50%; box-shadow: 0 6px 20px rgba(0,0,0,0.08); border: 1px solid var(--border); }
+    .pointer { position: absolute; top: -6px; left: 50%; transform: translateX(-50%); width: 0; height: 0; border-left: 18px solid transparent; border-right: 18px solid transparent; border-bottom: 26px solid #ef4444; filter: drop-shadow(0 2px 2px rgba(0,0,0,0.2)); }
+    .result-box { text-align: center; margin-top: 12px; font-size: 18px; }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 12px; background: var(--shade); padding: 2px 6px; border-radius: 6px; border: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap row" aria-label="Thanh tiêu đề">
+    <div>
+      <h1>Quản lý Học sinh (Offline) <span id="app-version" class="pill muted">v1.2 hoàn thiện</span></h1>
+      <div class="sub">Lưu trữ bằng <b>localStorage</b> trên trình duyệt. Không cần mạng. Tác giả: <span id="teacher-name">—</span>.</div>
+    </div>
+    <div class="row" style="margin-left:auto">
+      <button class="btn" onclick="window.print()" title="In / Xuất PDF (Ctrl+P)">🖨️ In / PDF</button>
+      <button class="btn" onclick="toggleTheme()" id="theme-btn" title="Chuyển giao diện sáng/tối">🌙 Giao diện</button>
+      <button class="btn" onclick="resetApp()" title="Khởi tạo dữ liệu mẫu">♻️ Dữ liệu mẫu</button>
+    </div>
+  </div>
+  <div class="wrap">
+    <nav id="tabs" aria-label="Điều hướng tab"></nav>
+  </div>
+</header>
+<main class="wrap">
+  <!-- DASHBOARD -->
+  <section id="tab-dashboard" class="card" aria-labelledby="dash-title">
+    <h2 id="dash-title" class="section-title">Tổng quan</h2>
+    <div class="grid grid-3">
+      <div class="card" role="group" aria-labelledby="siso-title">
+        <div id="siso-title" class="muted">Sĩ số</div>
+        <div id="stat-total" style="font-size:28px;font-weight:700">0</div>
+        <div id="stat-classes" class="muted">—</div>
+      </div>
+      <div class="card" role="group" aria-labelledby="avg-title">
+        <div id="avg-title" class="muted">Điểm trung bình (mọi môn)</div>
+        <div id="stat-avg-score" style="font-size:28px;font-weight:700">—</div>
+        <div class="muted">Công thức trọng số tuỳ chỉnh ở tab <b>Cài đặt</b></div>
+      </div>
+      <div class="card" role="group" aria-labelledby="att-title">
+        <div id="att-title" class="muted">Tỉ lệ chuyên cần (30 ngày)</div>
+        <div id="stat-attendance" style="font-size:28px;font-weight:700">—</div>
+        <div class="muted">Có mặt / Tổng lượt điểm danh</div>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Ghi chú gần đây</h3>
+      <table>
+        <thead><tr><th>Ngày</th><th>Học sinh</th><th>Nội dung</th></tr></thead>
+        <tbody id="recent-notes"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- STUDENTS -->
+  <section id="tab-students" class="card hidden">
+    <div class="row" style="justify-content:space-between">
+      <h2>Học sinh</h2>
+      <div class="row">
+        <input id="student-search" class="search" placeholder="Tìm theo tên..." aria-label="Tìm kiếm học sinh theo tên" />
+        <select id="student-filter-class" aria-label="Lọc theo lớp"></select>
+        <button class="btn" onclick="exportTableCSV('students')" title="Xuất CSV danh sách">⬇️ Xuất CSV</button>
+        <button class="btn" onclick="downloadSampleCSV()" title="Tải mẫu CSV nhập">📄 Mẫu CSV</button>
+      </div>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+        <h3>Thêm / Sửa</h3>
+        <div class="grid grid-2">
+          <div><label>Mã HS</label><input id="s-id" placeholder="Tự tạo" /></div>
+          <div><label>Lớp</label><input id="s-class" placeholder="VD: 7A" /></div>
+          <div><label>Họ tên</label><input id="s-name" /></div>
+          <div><label>Giới tính</label>
+            <select id="s-gender"><option value="Nam">Nam</option><option value="Nữ">Nữ</option><option value="Khác">Khác</option></select>
+          </div>
+          <div><label>Ngày sinh</label><input id="s-dob" type="date" /></div>
+          <div><label>Phụ huynh</label><input id="s-parent" /></div>
+          <div><label>SĐT</label><input id="s-phone" /></div>
+          <div><label>Email</label><input id="s-email" /></div>
+        </div>
+        <div class="row">
+          <button class="btn success" onclick="saveStudent()">💾 Lưu (Enter)</button>
+          <button class="btn" onclick="clearStudentForm()">🧹 Xóa form</button>
+        </div>
+        <div class="footer">Mẹo: Để trống <i>Mã HS</i> để hệ thống tự tạo. Nhấn <span class="kbd">Enter</span> để lưu nhanh.</div>
+        <hr style="border:none;border-top:1px solid var(--border);margin:12px 0"/>
+        <div>
+          <h4>Nhập CSV</h4>
+          <p class="muted">Cột: MaHS, HoTen, Lop, GioiTinh, NgaySinh (YYYY-MM-DD), PhuHuynh, SDT, Email</p>
+          <input type="file" id="student-csv" accept=".csv,text/csv" />
+          <div class="row"><button class="btn" onclick="importStudentsCSV()">📥 Nhập CSV</button></div>
+        </div>
+      </div>
+      <div class="card" style="grid-column: span 2;">
+        <table aria-label="Bảng học sinh">
+          <thead>
+            <tr>
+              <th>Mã</th><th>Họ tên</th><th>Lớp</th><th>Giới tính</th><th>Ngày sinh</th><th>PH/SĐT</th><th></th>
+            </tr>
+          </thead>
+          <tbody id="students-table"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ATTENDANCE -->
+  <section id="tab-attendance" class="card hidden">
+    <h2>Điểm danh</h2>
+    <div class="sticky-tools row">
+      <label>Ngày: <input type="date" id="att-date" /></label>
+      <label>&nbsp;Lớp: <select id="att-class"></select></label>
+      <button class="btn" onclick="markAll('present')">Tất cả <b>Có mặt</b></button>
+      <button class="btn" onclick="markAll('absent')">Tất cả <b>Vắng</b></button>
+      <button class="btn" onclick="markAll('late')">Tất cả <b>Muộn</b></button>
+      <button class="btn success" onclick="saveAttendance()">💾 Lưu điểm danh</button>
+    </div>
+    <table>
+      <thead><tr><th>Mã</th><th>Họ tên</th><th>Trạng thái</th><th>Ghi chú</th></tr></thead>
+      <tbody id="att-table"></tbody>
+    </table>
+  </section>
+
+  <!-- GRADES -->
+  <section id="tab-grades" class="card hidden">
+    <h2>Điểm số</h2>
+    <div class="row">
+      <label>Lớp: <select id="grade-class"></select></label>
+      <label>&nbsp;Môn: <select id="grade-subject"></select></label>
+      <label>&nbsp;Kỳ: <select id="grade-term"><option value="HKI">HKI</option><option value="HKII">HKII</option></select></label>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Nhập điểm</h3>
+        <div class="grid grid-3">
+          <div><label>Mã HS</label><input id="g-id" /></div>
+          <div><label>Điểm GK (<span id="w-mid">40%</span>)</label><input id="g-mid" type="number" step="0.1" min="0" max="10" /></div>
+          <div><label>Điểm CK (<span id="w-final">60%</span>)</label><input id="g-final" type="number" step="0.1" min="0" max="10" /></div>
+        </div>
+        <div class="row">
+          <button class="btn success" onclick="saveGrade()">💾 Lưu điểm</button>
+          <button class="btn" onclick="clearGradeForm()">🧹 Xóa form</button>
+        </div>
+        <div id="g-avg" class="muted">Điểm TB: —</div>
+      </div>
+      <div class="card">
+        <h3>Bảng điểm</h3>
+        <table>
+          <thead><tr><th>Mã</th><th>Họ tên</th><th>Môn</th><th>Kỳ</th><th>GK</th><th>CK</th><th>TB</th><th></th></tr></thead>
+          <tbody id="grades-table"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- LESSONS -->
+  <section id="tab-lessons" class="card hidden">
+    <h2>Bài giảng / Kế hoạch dạy</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Thêm bài</h3>
+        <div class="grid grid-2">
+          <div><label>Tiêu đề</label><input id="l-title" /></div>
+          <div><label>Ngày</label><input id="l-date" type="date" /></div>
+          <div><label>Lớp</label><input id="l-class" placeholder="VD: 7A" /></div>
+          <div><label>Tài liệu / Link</label><input id="l-link" placeholder="http://..." /></div>
+          <div style="grid-column:1/-1"><label>Nội dung</label><textarea id="l-content"></textarea></div>
+        </div>
+        <div class="row">
+          <button class="btn success" onclick="saveLesson()">💾 Lưu bài</button>
+          <button class="btn" onclick="clearLessonForm()">🧹 Xóa form</button>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Danh sách bài giảng</h3>
+        <table>
+          <thead><tr><th>Ngày</th><th>Lớp</th><th>Tiêu đề</th><th>Tài liệu</th><th></th></tr></thead>
+          <tbody id="lessons-table"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZZES -->
+  <section id="tab-quizzes" class="card hidden">
+    <h2>Kiểm tra nhanh (trắc nghiệm)</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Tạo đề</h3>
+        <div><label>Tiêu đề</label><input id="q-title" /></div>
+        <div class="row"><button class="btn" onclick="addQuestion()">➕ Thêm câu hỏi</button><button class="btn success" onclick="saveQuiz()">💾 Lưu đề</button></div>
+        <div id="q-questions"></div>
+      </div>
+      <div class="card">
+        <h3>Danh sách đề</h3>
+        <table>
+          <thead><tr><th>Tiêu đề</th><th>Số câu</th><th></th></tr></thead>
+          <tbody id="quizzes-table"></tbody>
+        </table>
+        <div class="card">
+          <h3>Làm thử & ghi điểm</h3>
+          <div class="grid grid-2">
+            <div><label>Chọn đề</label><select id="quiz-run-id"></select></div>
+            <div><label>Mã HS</label><input id="quiz-run-student" /></div>
+          </div>
+          <div id="quiz-run-area" class="card"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RANDOM WHEEL & GROUPS -->
+  <section id="tab-random" class="card hidden">
+    <h2>Vòng xoay & Chia nhóm</h2>
+    <div class="card">
+      <h3>Vòng xoay chọn ngẫu nhiên</h3>
+      <div class="row">
+        <label>Lớp: <select id="random-class"></select></label>
+        <label class="row" style="gap:6px"><input type="checkbox" id="random-exclude"/> Loại bỏ sau khi trúng</label>
+        <label class="row" style="gap:6px"><input type="checkbox" id="random-hideid"/> Ẩn mã HS trên vòng xoay</label>
+        <button class="btn" onclick="buildWheel()">🔄 Cập nhật vòng xoay</button>
+        <button class="btn warning" onclick="quickPick()">🎲 Chọn nhanh</button>
+        <button class="btn" onclick="quickPickBalanced()" title="Ưu tiên em ít được chọn">⚖️ Chọn nhanh (cân bằng)</button>
+        <button class="btn danger" onclick="resetRandomHistory()">🗑️ Xóa lịch sử lớp</button>
+      </div>
+      <div class="wheel-wrap">
+        <div class="pointer" aria-hidden="true"></div>
+        <canvas id="wheelCanvas" width="520" height="520" aria-label="Vòng xoay học sinh"></canvas>
+      </div>
+      <div class="row" style="justify-content:center;margin-top:12px">
+        <button class="btn primary" onclick="spin()">🌀 Xoay</button>
+        <button class="btn" onclick="buildWheel()">🧩 Làm mới</button>
+        <button class="btn" onclick="downloadWheelPNG()">⬇️ Ảnh vòng xoay</button>
+      </div>
+      <div id="random-result" class="result-box muted">Kết quả sẽ hiển thị ở đây...</div>
+      <div class="card">
+        <h3>Lịch sử chọn</h3>
+        <ul id="random-history"></ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Chia nhóm nhanh</h3>
+      <div class="row">
+        <label>Lớp: <select id="group-class"></select></label>
+        <label><input type="radio" name="group-mode" value="byGroups" checked/> Theo số nhóm</label>
+        <label><input type="radio" name="group-mode" value="bySize"/> Theo số người/nhóm</label>
+        <label><input type="radio" name="group-mode" value="pairs"/> Ghép cặp</label>
+        <input id="group-value" type="number" min="2" step="1" placeholder="Số nhóm hoặc số người" style="max-width:180px" />
+        <button class="btn" onclick="makeGroups()">👥 Chia nhóm</button>
+        <button class="btn" onclick="downloadGroupsTXT()">⬇️ Tải TXT</button>
+      </div>
+      <div id="groups-output" class="grid grid-3"></div>
+    </div>
+  </section>
+
+  <!-- REPORTS -->
+  <section id="tab-reports" class="card hidden">
+    <h2>Báo cáo</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Sĩ số theo lớp</h3>
+        <ul id="report-class-size"></ul>
+      </div>
+      <div class="card">
+        <h3>Chuyên cần 7 ngày gần nhất</h3>
+        <table>
+          <thead><tr><th>Ngày</th><th>Có mặt</th><th>Vắng</th><th>Muộn</th></tr></thead>
+          <tbody id="report-att-7"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- SETTINGS -->
+  <section id="tab-settings" class="card hidden">
+    <h2>Cài đặt</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Thông tin chung</h3>
+        <div class="grid grid-2">
+          <div><label>Tên giáo viên</label><input id="set-teacher" placeholder="VD: Nguyễn Văn Sang" /></div>
+          <div><label>Giao diện</label>
+            <select id="set-theme">
+              <option value="light">Sáng</option>
+              <option value="dark">Tối</option>
+              <option value="auto">Theo hệ thống</option>
+            </select>
+          </div>
+        </div>
+        <div class="row"><button class="btn success" onclick="saveSettings()">💾 Lưu cài đặt</button></div>
+      </div>
+      <div class="card">
+        <h3>Trọng số điểm</h3>
+        <div class="grid grid-3">
+          <div><label>% Giữa kỳ</label><input id="set-w-mid" type="number" min="0" max="100" step="5" value="40"/></div>
+          <div><label>% Cuối kỳ</label><input id="set-w-final" type="number" min="0" max="100" step="5" value="60"/></div>
+          <div style="align-self:end"><span class="muted">Tổng phải = 100%</span></div>
+        </div>
+        <div class="footer">Điểm TB = GK*% + CK*% (áp dụng ở tab Điểm số)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BACKUP -->
+  <section id="tab-backup" class="card hidden">
+    <h2>Sao lưu & Khôi phục</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <h3>Xuất dữ liệu</h3>
+        <p>Dữ liệu sẽ được xuất ra file <code>.json</code> để bạn lưu trữ.</p>
+        <button class="btn primary" onclick="exportData()">⬇️ Tải về JSON</button>
+      </div>
+      <div class="card">
+        <h3>Nhập dữ liệu</h3>
+        <p>Chọn file <code>.json</code> đã xuất trước đó để khôi phục.</p>
+        <input type="file" id="import-file" accept="application/json" />
+        <div class="row"><button class="btn success" onclick="importData()">📥 Nhập</button></div>
+      </div>
+    </div>
+    <div class="footer">Lưu ý: <b>localStorage</b> lưu theo từng trình duyệt & máy. Hãy xuất JSON định kỳ để sao lưu.</div>
+  </section>
+
+  <section class="print-only">
+    <h2>Tóm tắt in ấn</h2>
+    <div id="print-summary"></div>
+  </section>
+</main>
+
+<script>
+  // ====== Utils ======
+  const isMac = navigator.platform.toUpperCase().indexOf('MAC')>=0;
+  function load(key, def){ try{ const v = localStorage.getItem(key); return v ? JSON.parse(v) : def; } catch(e){ console.warn('Load', key, e); return def; } }
+  function save(key, val){ try{ localStorage.setItem(key, JSON.stringify(val)); } catch(e){ alert('Không thể lưu: ' + e); } }
+  function uid(){ return 'ID' + Math.random().toString(36).slice(2,10).toUpperCase(); }
+  function today(){ return new Date().toISOString().slice(0,10); }
+  function byId(id){ return document.getElementById(id); }
+  function fmtDate(d){ try{ return new Date(d).toLocaleDateString('vi-VN'); } catch{ return d; } }
+  function number(x){ const n = parseFloat(x); return isNaN(n)? null : n; }
+  function download(filename, content, type='text/plain'){ const blob = new Blob([content],{type}); const a = document.createElement('a'); a.href=URL.createObjectURL(blob); a.download=filename; a.click(); URL.revokeObjectURL(a.href); }
+
+  // ====== State ======
+  const DEFAULT_SUBJECTS = ['Toán','Ngữ văn','Tiếng Anh','Vật lý','Hóa học','Sinh học','Lịch sử','Địa lý','Tin học','GDCD'];
+  const state = {
+    students: load('students', []),
+    attendance: load('attendance', {}),
+    grades: load('grades', []),
+    lessons: load('lessons', []),
+    quizzes: load('quizzes', []),
+    quizResults: load('quizResults', []),
+    randomHistory: load('randomHistory', []),
+    groups: load('groups', []),
+    settings: load('settings', { teacherName:'', theme:'auto', grading:{mid:0.4, final:0.6}, wheel:{hideId:false, exclude:true} })
+  };
+  function persist(){ save('students', state.students); save('attendance', state.attendance); save('grades', state.grades); save('lessons', state.lessons); save('quizzes', state.quizzes); save('quizResults', state.quizResults); save('randomHistory', state.randomHistory); save('groups', state.groups); save('settings', state.settings); renderAll(); }
+
+  // ====== Tabs ======
+  const tabList = [
+    {id:'dashboard', label:'Tổng quan'},
+    {id:'students', label:'Học sinh'},
+    {id:'attendance', label:'Điểm danh'},
+    {id:'grades', label:'Điểm số'},
+    {id:'lessons', label:'Bài giảng'},
+    {id:'quizzes', label:'Kiểm tra'},
+    {id:'random', label:'Vòng xoay'},
+    {id:'reports', label:'Báo cáo'},
+    {id:'settings', label:'Cài đặt'},
+    {id:'backup', label:'Sao lưu'}
+  ];
+  function setupTabs(){ const nav = byId('tabs'); nav.innerHTML = ''; tabList.forEach(t => { const b = document.createElement('button'); b.textContent = t.label; b.onclick = () => switchTab(t.id); b.id = 'btn-'+t.id; b.setAttribute('aria-controls','tab-'+t.id); nav.appendChild(b); }); switchTab('dashboard'); }
+  function switchTab(id){ tabList.forEach(t => { byId('tab-'+t.id).classList.add('hidden'); byId('btn-'+t.id).classList.remove('active'); }); byId('tab-'+id).classList.remove('hidden'); byId('btn-'+id).classList.add('active'); if(id==='attendance'){ initAttendanceTab(); } if(id==='grades'){ initGradesTab(); } if(id==='students'){ initStudentsTab(); } if(id==='quizzes'){ initQuizzesTab(); } if(id==='reports'){ renderReports(); } if(id==='dashboard'){ renderDashboard(); } if(id==='random'){ initRandomTab(); } if(id==='settings'){ initSettings(); } }
+
+  // ====== Theme ======
+  function applyTheme(){ const t = state.settings.theme; const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches; const dark = (t==='dark') || (t==='auto' && prefersDark); document.body.classList.toggle('dark', dark); byId('theme-btn').textContent = dark ? '🌞 Giao diện' : '🌙 Giao diện'; }
+  function toggleTheme(){ state.settings.theme = (state.settings.theme==='dark')?'light':'dark'; persist(); }
+
+  // ====== Sample/Reset ======
+  function resetApp(){ if(!confirm('Khởi tạo dữ liệu mẫu? Dữ liệu hiện tại sẽ bị thay thế.')) return; state.students = [
+      {id:'HS001', name:'Nguyễn An', gender:'Nam', dob:'2012-09-10', class:'7A', parent:'Nguyễn Bình', phone:'0901234567', email:'an@example.com'},
+      {id:'HS002', name:'Trần Bình', gender:'Nam', dob:'2011-05-22', class:'8A', parent:'Trần Cường', phone:'0902345678', email:'binh@example.com'},
+      {id:'HS003', name:'Lê Chi', gender:'Nữ', dob:'2012-12-01', class:'7A', parent:'Lê Dung', phone:'0903456789', email:'chi@example.com'},
+      {id:'HS004', name:'Phạm Dũng', gender:'Nam', dob:'2010-03-03', class:'9A', parent:'Phạm Em', phone:'0904567890', email:'dung@example.com'}
+    ];
+    state.attendance = {}; state.grades = []; state.lessons = []; state.quizzes = []; state.quizResults = []; state.randomHistory = []; state.groups = []; persist(); alert('Đã khởi tạo dữ liệu mẫu.'); }
+
+  // ====== Students ======
+  function classesList(){ return Array.from(new Set(state.students.map(s => s.class).filter(Boolean))).sort(); }
+  function initStudentsTab(){ const classes = classesList(); const sel = byId('student-filter-class'); sel.innerHTML = '<option value="">Tất cả lớp</option>' + classes.map(c=>`<option>${c}</option>`).join(''); renderStudents(); }
+  function renderStudents(){ const q = (byId('student-search').value||'').toLowerCase(); const cls = byId('student-filter-class').value||''; const tb = byId('students-table'); tb.innerHTML = ''; state.students.filter(s => (!cls || s.class===cls) && (!q || s.name.toLowerCase().includes(q))).sort((a,b)=>a.class.localeCompare(b.class)||a.name.localeCompare(b.name)).forEach(s => {
+      const tr = document.createElement('tr'); tr.innerHTML = `<td>${s.id}</td><td>${s.name}</td><td>${s.class}</td><td>${s.gender}</td><td>${fmtDate(s.dob)}</td><td><div>${s.parent||''}</div><div class='muted'>${s.phone||''}</div></td><td class='right'>
+        <button class='btn' title='Sửa' onclick="editStudent('${s.id}')">✏️</button>
+        <button class='btn danger' title='Xóa' onclick="deleteStudent('${s.id}')">🗑️</button></td>`; tb.appendChild(tr); }); }
+  byId('student-search').oninput = renderStudents; byId('student-filter-class').onchange = renderStudents;
+  document.addEventListener('keydown', (e)=>{ if(e.key==='Enter' && !document.activeElement.matches('textarea')){ const tabVisible = !byId('tab-students').classList.contains('hidden'); if(tabVisible) saveStudent(); } });
+  function clearStudentForm(){ ['s-id','s-class','s-name','s-gender','s-dob','s-parent','s-phone','s-email'].forEach(id => { const el=byId(id); if(el) el.value = ''; }); }
+  function editStudent(id){ const s = state.students.find(x=>x.id===id); if(!s) return; byId('s-id').value = s.id; byId('s-class').value = s.class; byId('s-name').value = s.name; byId('s-gender').value = s.gender; byId('s-dob').value = s.dob; byId('s-parent').value = s.parent||''; byId('s-phone').value = s.phone||''; byId('s-email').value = s.email||''; }
+  function deleteStudent(id){ if(!confirm('Xóa học sinh '+id+'?')) return; state.students = state.students.filter(s=>s.id!==id); persist(); }
+  function saveStudent(){ const id = (byId('s-id').value||'').trim() || uid(); const s = { id, name: byId('s-name').value.trim(), gender: byId('s-gender').value, dob: byId('s-dob').value || today(), class: (byId('s-class').value||'').trim() || 'Chưa rõ', parent: (byId('s-parent').value||'').trim(), phone: (byId('s-phone').value||'').trim(), email: (byId('s-email').value||'').trim() };
+    if(!s.name){ alert('Vui lòng nhập Họ tên'); return; }
+    const i = state.students.findIndex(x=>x.id===id);
+    if(i>=0){ state.students[i] = s; } else { state.students.push(s); }
+    persist(); clearStudentForm(); initStudentsTab(); }
+  function exportTableCSV(type){ if(type==='students'){ const rows = [['MaHS','HoTen','Lop','GioiTinh','NgaySinh','PhuHuynh','SDT','Email']].concat(state.students.map(s=>[s.id,s.name,s.class,s.gender,s.dob,s.parent||'',s.phone||'',s.email||''])); const csv = rows.map(r=>r.map(x=>`"${(x||'').toString().replaceAll('"','""')}"`).join(',')).join('\n'); download('hoc-sinh.csv', csv, 'text/csv'); } }
+  function downloadSampleCSV(){ const sample = 'MaHS,HoTen,Lop,GioiTinh,NgaySinh,PhuHuynh,SDT,Email\nHS101,Nguyen Van A,7A,Nam,2012-09-10,Nguyen B,0901234567,a@example.com'; download('mau-hoc-sinh.csv', sample, 'text/csv'); }
+  function importStudentsCSV(){ const f = byId('student-csv').files?.[0]; if(!f) return alert('Chọn file CSV'); const reader = new FileReader(); reader.onload = ()=>{ const text = reader.result; const rows = parseCSV(text); const header = rows[0].map(x=>x.trim().toLowerCase()); const idx = (name)=>header.indexOf(name);
+      const req = ['mahs','hoten','lop']; for(const k of req){ if(idx(k)<0){ alert('Thiếu cột bắt buộc: '+k); return; } }
+      const list = rows.slice(1).filter(r=>r.length>1);
+      list.forEach(r=>{ const s = { id: r[idx('mahs')]||uid(), name: r[idx('hoten')]||'', class: r[idx('lop')]||'', gender: idx('gioitinh')>=0?(r[idx('gioitinh')]||''):'', dob: idx('ngaysinh')>=0?(r[idx('ngaysinh')]||''):'', parent: idx('phuhuynh')>=0?(r[idx('phuhuynh')]||''):'', phone: idx('sdt')>=0?(r[idx('sdt')]||''):'', email: idx('email')>=0?(r[idx('email')]||''):'' };
+        if(s.name) state.students.push(s);
+      });
+      persist(); initStudentsTab(); alert('Đã nhập '+list.length+' dòng.');
+    }; reader.readAsText(f); }
+  function parseCSV(text){ // Simple CSV parser supports quotes
+    const lines = []; let cur = []; let val = ''; let inQ=false; for(let i=0;i<text.length;i++){ const c=text[i]; if(inQ){ if(c==='"'){ if(text[i+1]==='"'){ val+='"'; i++; } else { inQ=false; } } else { val+=c; } }
+      else { if(c==='"'){ inQ=true; } else if(c===','){ cur.push(val); val=''; } else if(c==='\n' || c==='\r'){ if(val!==''||cur.length){ cur.push(val); lines.push(cur); cur=[]; val=''; } } else { val+=c; } }
+    }
+    if(val!==''||cur.length){ cur.push(val); lines.push(cur); }
+    return lines.filter(r=>r.some(x=>x!==''));
+  }
+
+  // ====== Attendance ======
+  function initAttendanceTab(){ byId('att-date').value = today(); const classes = classesList(); const sel = byId('att-class'); sel.innerHTML = classes.map(c=>`<option>${c}</option>`).join(''); renderAttendance(); }
+  byId('att-date').onchange = renderAttendance; byId('att-class').onchange = renderAttendance;
+  function renderAttendance(){ const date = byId('att-date').value; const cls = byId('att-class').value; const tb = byId('att-table'); tb.innerHTML=''; const list = state.students.filter(s=>!cls || s.class===cls); const marks = (state.attendance[date]||[]).reduce((acc,r)=>{acc[r.studentId]=r; return acc;},{});
+    list.sort((a,b)=>a.class.localeCompare(b.class)||a.name.localeCompare(b.name)).forEach(s=>{ const tr = document.createElement('tr'); const mark = marks[s.id]?.status || 'present'; const note = marks[s.id]?.note || '';
+      tr.innerHTML = `<td>${s.id}</td><td>${s.name}</td><td>
+        <label><input type='radio' name='att-${s.id}' value='present' ${mark==='present'?'checked':''}/> Có mặt</label>
+        <label><input type='radio' name='att-${s.id}' value='absent' ${mark==='absent'?'checked':''}/> Vắng</label>
+        <label><input type='radio' name='att-${s.id}' value='late' ${mark==='late'?'checked':''}/> Muộn</label>
+      </td>
+      <td><input id='note-${s.id}' value='${note}' placeholder='Ghi chú...' /></td>`; tb.appendChild(tr); }); }
+  function markAll(status){ const cls = byId('att-class').value; const date = byId('att-date').value; const list = state.students.filter(s=>!cls || s.class===cls); const arr = state.attendance[date]||[]; const map = arr.reduce((acc,r)=>{acc[r.studentId]=r; return acc;},{}); list.forEach(s=>{ map[s.id] = {studentId:s.id, status, note: byId('note-'+s.id)?.value||''}; }); state.attendance[date] = Object.values(map); persist(); renderAttendance(); }
+  function saveAttendance(){ const date = byId('att-date').value; const cls = byId('att-class').value; const list = state.students.filter(s=>!cls || s.class===cls); const arr = []; list.forEach(s=>{ const inputs = document.getElementsByName('att-'+s.id); let status = 'present'; inputs.forEach?.(i=>{ if(i.checked) status = i.value; }); const note = byId('note-'+s.id)?.value||''; arr.push({studentId:s.id, status, note}); }); state.attendance[date] = arr; persist(); alert('Đã lưu điểm danh '+fmtDate(date)+(cls?(' cho lớp '+cls):'')); }
+
+  // ====== Grades ======
+  const SUBJECTS = DEFAULT_SUBJECTS.slice();
+  function initGradesTab(){ const selSub = byId('grade-subject'); selSub.innerHTML = SUBJECTS.map(s=>`<option>${s}</option>`).join(''); const classes = classesList(); const sel = byId('grade-class'); sel.innerHTML = classes.map(c=>`<option>${c}</option>`).join(''); updateWeightLabels(); renderGrades(); }
+  ['grade-class','grade-subject','grade-term','g-mid','g-final'].forEach(id=>{ const el=byId(id); if(el){ if(id.startsWith('grade-')) el.onchange = renderGrades; if(id==='g-mid'||id==='g-final'){ el.oninput = showAvg; } } });
+  function getWeights(){ const {mid, final} = state.settings.grading||{mid:0.4, final:0.6}; return {mid, final}; }
+  function updateWeightLabels(){ const {mid, final} = getWeights(); byId('w-mid').textContent = Math.round(mid*100)+'%'; byId('w-final').textContent = Math.round(final*100)+'%'; }
+  function showAvg(){ const mid = number(byId('g-mid').value); const fin = number(byId('g-final').value); const {mid:wm, final:wf} = getWeights(); if(mid==null||fin==null){ byId('g-avg').textContent='Điểm TB: —'; return; } const avg = +(mid*wm + fin*wf).toFixed(2); byId('g-avg').textContent='Điểm TB: '+avg; }
+  function clearGradeForm(){ ['g-id','g-mid','g-final'].forEach(id=>byId(id).value=''); byId('g-avg').textContent='Điểm TB: —'; }
+  function saveGrade(){ const studentId = (byId('g-id').value||'').trim(); const cls = byId('grade-class').value; const sub = byId('grade-subject').value; const term = byId('grade-term').value; const mid = number(byId('g-mid').value); const fin = number(byId('g-final').value); if(!studentId) return alert('Nhập Mã HS'); if(mid==null||fin==null) return alert('Nhập điểm hợp lệ (0-10)'); const {mid:wm,wf=undefined} = getWeights(); const wf2 = (state.settings.grading?.final ?? 0.6); const avg = +(mid*wm + fin*wf2).toFixed(2); const rec = {studentId, subject:sub, term, mid, final:fin, avg}; const i = state.grades.findIndex(g=>g.studentId===studentId && g.subject===sub && g.term===term); if(i>=0) state.grades[i]=rec; else state.grades.push(rec); persist(); clearGradeForm(); renderGrades(); }
+  function renderGrades(){ const cls = byId('grade-class').value; const sub = byId('grade-subject').value; const term = byId('grade-term').value; const tb = byId('grades-table'); tb.innerHTML=''; const idsInClass = new Set(state.students.filter(s=>!cls || s.class===cls).map(s=>s.id)); const rows = state.grades.filter(g=>(!cls||idsInClass.has(g.studentId)) && (!sub||g.subject===sub) && (!term||g.term===term)); rows.sort((a,b)=>a.subject.localeCompare(b.subject)||a.term.localeCompare(b.term)||a.studentId.localeCompare(b.studentId)).forEach(g=>{ const s = state.students.find(x=>x.id===g.studentId); const tr = document.createElement('tr'); tr.innerHTML = `<td>${g.studentId}</td><td>${s?s.name:'—'}</td><td>${g.subject}</td><td>${g.term}</td><td>${g.mid}</td><td>${g.final}</td><td><b>${g.avg}</b></td><td class='right'><button class='btn danger' onclick="delGrade('${g.studentId}','${g.subject}','${g.term}')">🗑️</button></td>`; tb.appendChild(tr); }); }
+  function delGrade(id, sub, term){ if(!confirm('Xóa điểm của '+id+' môn '+sub+' '+term+'?')) return; state.grades = state.grades.filter(g=>!(g.studentId===id && g.subject===sub && g.term===term)); persist(); renderGrades(); }
+
+  // ====== Lessons ======
+  function clearLessonForm(){ ['l-title','l-date','l-class','l-link','l-content'].forEach(id=>byId(id).value=''); }
+  function saveLesson(){ const rec = { id: uid(), title: byId('l-title').value.trim(), date: byId('l-date').value||today(), class: byId('l-class').value.trim()||'', link: byId('l-link').value.trim(), content: byId('l-content').value.trim() };
+    if(!rec.title) return alert('Nhập Tiêu đề'); state.lessons.push(rec); persist(); clearLessonForm(); }
+  function renderLessons(){ const tb = byId('lessons-table'); tb.innerHTML=''; state.lessons.sort((a,b)=>a.date.localeCompare(b.date)||a.title.localeCompare(b.title)).forEach(l=>{ const tr = document.createElement('tr'); tr.innerHTML = `<td>${fmtDate(l.date)}</td><td>${l.class||'—'}</td><td><b>${l.title}</b><div class='muted'>${(l.content||'').slice(0,80)}${(l.content||'').length>80?'...':''}</div></td><td>${l.link?`<a href='${l.link}' target='_blank' rel='noopener'>Tài liệu</a>`:'—'}</td><td class='right'><button class='btn danger' onclick="delLesson('${l.id}')">🗑️</button></td>`; tb.appendChild(tr); }); }
+  function delLesson(id){ if(!confirm('Xóa bài giảng?')) return; state.lessons = state.lessons.filter(x=>x.id!==id); persist(); }
+
+  // ====== Quizzes ======
+  function addQuestion(){ const idx = document.querySelectorAll('.q-item').length; const div = document.createElement('div'); div.className='card q-item'; div.innerHTML = `<div><label>Câu hỏi</label><input id='q-text-${idx}' /></div>
+    <div class='grid grid-2'>
+      <div><label>Đáp án A</label><input id='q-opt-${idx}-0' /></div>
+      <div><label>Đáp án B</label><input id='q-opt-${idx}-1' /></div>
+      <div><label>Đáp án C</label><input id='q-opt-${idx}-2' /></div>
+      <div><label>Đáp án D</label><input id='q-opt-${idx}-3' /></div>
+    </div>
+    <div><label>Đúng: 
+      <select id='q-correct-${idx}'>
+        <option value='0'>A</option>
+        <option value='1'>B</option>
+        <option value='2'>C</option>
+        <option value='3'>D</option>
+      </select>
+    </label></div>`; byId('q-questions').appendChild(div); }
+  function saveQuiz(){ const title = byId('q-title').value.trim(); if(!title) return alert('Nhập tiêu đề'); const items = Array.from(document.querySelectorAll('.q-item')); const qs = items.map((div,i)=>({ text: byId(`q-text-${i}`).value.trim(), options: [0,1,2,3].map(j=>byId(`q-opt-${i}-${j}`).value.trim()), correct: +byId(`q-correct-${i}`).value })); if(qs.some(q=>!q.text || q.options.some(o=>!o))){ return alert('Vui lòng điền đầy đủ câu hỏi & đáp án.'); }
+    state.quizzes.push({ id: uid(), title, questions: qs }); persist(); byId('q-title').value=''; byId('q-questions').innerHTML=''; }
+  function initQuizzesTab(){ const tb = byId('quizzes-table'); tb.innerHTML=''; state.quizzes.forEach(q=>{ const tr = document.createElement('tr'); tr.innerHTML = `<td>${q.title}</td><td>${q.questions.length}</td><td class='right'><button class='btn danger' onclick="delQuiz('${q.id}')">🗑️</button></td>`; tb.appendChild(tr); }); const sel = byId('quiz-run-id'); sel.innerHTML = '<option value="">— Chọn đề —</option>' + state.quizzes.map(q=>`<option value='${q.id}'>${q.title}</option>`).join(''); sel.onchange = renderRunQuiz; }
+  function delQuiz(id){ if(!confirm('Xóa đề kiểm tra?')) return; state.quizzes = state.quizzes.filter(q=>q.id!==id); persist(); initQuizzesTab(); }
+  function renderRunQuiz(){ const id = byId('quiz-run-id').value; const area = byId('quiz-run-area'); area.innerHTML=''; if(!id) return; const q = state.quizzes.find(x=>x.id===id); q.questions.forEach((qq,i)=>{ const block = document.createElement('div'); block.className='card'; const opts = qq.options.map((o,j)=>`<label><input type='radio' name='run-${i}' value='${j}'> ${String.fromCharCode(65+j)}. ${o}</label>`).join('<br/>'); block.innerHTML = `<div><b>Câu ${i+1}:</b> ${qq.text}</div><div style='margin-top:8px'>${opts}</div>`; area.appendChild(block); }); const btn = document.createElement('button'); btn.className='btn success'; btn.textContent='Nộp bài & Lưu điểm'; btn.onclick = submitRunQuiz; area.appendChild(btn); }
+  function submitRunQuiz(){ const id = byId('quiz-run-id').value; const q = state.quizzes.find(x=>x.id===id); const sid = (byId('quiz-run-student').value||'').trim(); if(!sid) return alert('Nhập Mã HS'); let score = 0; q.questions.forEach((qq,i)=>{ const inputs = document.getElementsByName('run-'+i); let ans = null; inputs.forEach?.(x=>{ if(x.checked) ans = +x.value; }); if(ans===qq.correct) score++; }); const percent = Math.round(100*score/q.questions.length); state.quizResults.push({quizId:id, studentId:sid, score: percent, date: today()}); persist(); alert(`Điểm: ${score}/${q.questions.length} (${percent}%)`); }
+
+  // ====== Random Wheel ======
+  let wheelAngle = 0; let wheelNames = []; let spinning = false; let wheelStudents = [];
+  function initRandomTab(){ const classes = classesList(); const sel = byId('random-class'); const sel2 = byId('group-class'); sel.innerHTML = classes.map(c=>`<option>${c}</option>`).join(''); sel2.innerHTML = classes.map(c=>`<option>${c}</option>`).join(''); byId('random-exclude').checked = !!state.settings.wheel?.exclude; byId('random-hideid').checked = !!state.settings.wheel?.hideId; byId('random-exclude').onchange = ()=>{ state.settings.wheel.exclude = byId('random-exclude').checked; persist(); }; byId('random-hideid').onchange = ()=>{ state.settings.wheel.hideId = byId('random-hideid').checked; buildWheel(); persist(); };
+    buildWheel(); renderRandomHistory(); }
+  function getAvailableStudents(cls){ const exclude = byId('random-exclude').checked; const list = state.students.filter(s=>!cls || s.class===cls); if(!exclude) return list; const pickedIds = new Set(state.randomHistory.filter(h=>h.class===cls).map(h=>h.studentId)); return list.filter(s=>!pickedIds.has(s.id)); }
+  function buildWheel(){ const cls = byId('random-class').value; const canvas = byId('wheelCanvas'); const size = Math.min(520, Math.floor(canvas.parentElement.clientWidth)); canvas.width = size; canvas.height = size; wheelAngle = 0; wheelStudents = getAvailableStudents(cls).sort((a,b)=>a.name.localeCompare(b.name)); const hideId = byId('random-hideid').checked; wheelNames = wheelStudents.map(s=> hideId? s.name : (s.name + ' ('+s.id+')') ); drawWheel(); byId('random-result').textContent = wheelNames.length? 'Bấm 🌀 Xoay để chọn!' : 'Không còn học sinh khả dụng. Bỏ tích "Loại bỏ sau khi trúng" hoặc xóa lịch sử.'; }
+  function drawWheel(){ const canvas = byId('wheelCanvas'); const ctx = canvas.getContext('2d'); ctx.clearRect(0,0,canvas.width,canvas.height); const n = wheelNames.length; const cx = canvas.width/2, cy = canvas.height/2; const r = canvas.width/2 - 6; const angle = n? (2*Math.PI/n) : 0; const colors = ['#fde68a','#a7f3d0','#bfdbfe','#fecaca','#ddd6fe','#fbcfe8','#c7d2fe','#bbf7d0'];
+    for(let i=0;i<n;i++){
+      const start = -Math.PI/2 + i*angle + wheelAngle; const end = start + angle;
+      ctx.beginPath(); ctx.moveTo(cx,cy); ctx.arc(cx,cy,r,start,end); ctx.closePath(); ctx.fillStyle = colors[i%colors.length]; ctx.fill(); ctx.strokeStyle = '#fff'; ctx.lineWidth = 2; ctx.stroke();
+      ctx.save(); ctx.translate(cx,cy); const mid = start + angle/2; ctx.rotate(mid); ctx.textAlign = 'right'; ctx.fillStyle = document.body.classList.contains('dark')? '#e5e7eb' : '#111'; ctx.font = Math.max(12, Math.floor(canvas.width/40))+'px system-ui, Arial'; ctx.fillText(wheelNames[i], r-12, 4); ctx.restore();
+    }
+    ctx.beginPath(); ctx.arc(cx,cy,24,0,2*Math.PI); ctx.fillStyle = document.body.classList.contains('dark')? '#e5e7eb' : '#111'; ctx.fill();
+  }
+  function spin(){ if(spinning) return; const n = wheelNames.length; if(n===0){ alert('Không có học sinh để xoay'); return; } spinning = true; const segment = 2*Math.PI/n; const baseTurns = 4 + Math.floor(Math.random()*3); const finalOffset = Math.random()*2*Math.PI; const startAngle = wheelAngle; const targetAngle = startAngle + baseTurns*2*Math.PI + finalOffset; const duration = 3000; const start = performance.now(); const easeOutCubic = t => 1 - Math.pow(1-t,3);
+    function step(now){ const p = Math.min(1, (now-start)/duration); wheelAngle = startAngle + (targetAngle - startAngle)*easeOutCubic(p); drawWheel(); if(p<1){ requestAnimationFrame(step); } else { spinning = false; const idx = Math.floor((2*Math.PI - (wheelAngle % (2*Math.PI))) / segment) % n; const s = wheelStudents[idx]; showPickResult('🎯 Kết quả', s); if(byId('random-exclude').checked){ state.randomHistory.push({date: today(), class: byId('random-class').value||'', studentId: s.id}); persist(); buildWheel(); } else { state.randomHistory.push({date: today(), class: byId('random-class').value||'', studentId: s.id}); persist(); renderRandomHistory(); } } } requestAnimationFrame(step); }
+  function showPickResult(prefix, s){ byId('random-result').innerHTML = `<b>${prefix}:</b> ${s.name} (${s.id})`; renderRandomHistory(); }
+  function quickPick(){ const cls = byId('random-class').value; const list = getAvailableStudents(cls); if(list.length===0){ alert('Không còn học sinh khả dụng.'); return; } const s = list[Math.floor(Math.random()*list.length)]; showPickResult('🎲 Chọn nhanh', s); state.randomHistory.push({date: today(), class: cls||'', studentId: s.id}); persist(); if(byId('random-exclude').checked){ buildWheel(); } }
+  function quickPickBalanced(){ const cls = byId('random-class').value; const list = getAvailableStudents(cls); if(list.length===0){ alert('Không còn học sinh khả dụng.'); return; } const countMap = {}; state.randomHistory.filter(h=>h.class===cls).forEach(h=>{ countMap[h.studentId]=(countMap[h.studentId]||0)+1; }); const weights = list.map(s=> 1/(1+(countMap[s.id]||0)) ); const total = weights.reduce((a,b)=>a+b,0); let r = Math.random()*total; let s = list[0]; for(let i=0;i<list.length;i++){ r -= weights[i]; if(r<=0){ s=list[i]; break; } } showPickResult('⚖️ Cân bằng', s); state.randomHistory.push({date: today(), class: cls||'', studentId: s.id}); persist(); if(byId('random-exclude').checked){ buildWheel(); } }
+  function renderRandomHistory(){ const ul = byId('random-history'); const cls = byId('random-class').value||''; const items = state.randomHistory.filter(h=>!cls || h.class===cls).slice(-30).reverse(); ul.innerHTML = items.map(h=>{ const s = state.students.find(x=>x.id===h.studentId); const name = s? s.name : h.studentId; return `<li>${fmtDate(h.date)}: <b>${name}</b> (${h.studentId}) ${h.class?('— Lớp '+h.class):''}</li>`; }).join(''); }
+  function resetRandomHistory(){ const cls = byId('random-class').value||''; if(!confirm('Xóa lịch sử chọn'+(cls?(' của lớp '+cls):' (mọi lớp)')+'?')) return; if(cls) state.randomHistory = state.randomHistory.filter(h=>h.class!==cls); else state.randomHistory = []; persist(); renderRandomHistory(); buildWheel(); }
+  function downloadWheelPNG(){ const canvas = byId('wheelCanvas'); const name = 'vong-xoay-'+(byId('random-class').value||'lop')+'.png'; const url = canvas.toDataURL('image/png'); const a = document.createElement('a'); a.href = url; a.download = name; a.click(); }
+
+  // ====== Groups ======
+  function makeGroups(){ const cls = byId('group-class').value||''; const mode = document.querySelector('input[name="group-mode"]:checked')?.value||'byGroups'; const val = parseInt(byId('group-value').value||'0'); let list = state.students.filter(s=>!cls || s.class===cls); if(list.length<2) { alert('Không đủ học sinh để chia nhóm.'); return; } list = shuffle(list.slice()); let groups = [];
+    if(mode==='pairs'){ for(let i=0;i<list.length;i+=2){ groups.push(list.slice(i,i+2)); } }
+    else if(mode==='bySize'){ const size = Math.max(2, val||2); const k = Math.ceil(list.length/size); for(let i=0;i<k;i++){ groups.push([]); } list.forEach((s,i)=>{ groups[i%k].push(s); }); }
+    else { const k = Math.max(2, val||2); for(let i=0;i<k;i++){ groups.push([]); } list.forEach((s,i)=>{ groups[i%k].push(s); }); }
+    renderGroups(groups); state.groups.push({date: today(), class: cls, groups: groups.map(g=>g.map(s=>s.id))}); persist(); }
+  function shuffle(a){ for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+  function renderGroups(groups){ const box = byId('groups-output'); if(!groups||!groups.length){ box.innerHTML=''; return; } box.innerHTML = groups.map((g,i)=>`<div class='card'><b>Nhóm ${i+1}</b><ol style='margin-top:6px'>${g.map(s=>`<li>${s.name} (${s.id})</li>`).join('')}</ol></div>`).join(''); }
+  function downloadGroupsTXT(){ const cls = byId('group-class').value||''; const text = byId('groups-output').innerText || ''; if(!text.trim()){ alert('Chưa có kết quả nhóm'); return; } download('nhom-'+(cls||'lop')+'.txt', text, 'text/plain'); }
+
+  // ====== Reports & Dashboard ======
+  function renderReports(){ const list = byId('report-class-size'); list.innerHTML=''; const classes = classesList(); classes.forEach(c=>{ const li = document.createElement('li'); li.textContent = `${c}: ${state.students.filter(s=>s.class===c).length} HS`; list.appendChild(li); });
+    const tbody = byId('report-att-7'); tbody.innerHTML=''; const dates = Object.keys(state.attendance).sort().slice(-7);
+    dates.forEach(d=>{ const rows = state.attendance[d]||[]; const present = rows.filter(r=>r.status==='present').length; const absent = rows.filter(r=>r.status==='absent').length; const late = rows.filter(r=>r.status==='late').length; const tr = document.createElement('tr'); tr.innerHTML = `<td>${fmtDate(d)}</td><td><span class='badge green'>${present}</span></td><td><span class='badge red'>${absent}</span></td><td><span class='badge yellow'>${late}</span></td>`; tbody.appendChild(tr); }); }
+  function renderDashboard(){ byId('teacher-name').textContent = state.settings.teacherName || '—'; applyTheme(); const total = state.students.length; byId('stat-total').textContent = total; const classes = classesList(); byId('stat-classes').textContent = classes.length ? ('Lớp: '+classes.join(', ')) : '—'; const avg = state.grades.length ? (state.grades.reduce((a,b)=>a+b.avg,0)/state.grades.length).toFixed(2) : '—'; byId('stat-avg-score').textContent = avg; const dates = Object.keys(state.attendance).sort().slice(-30); let totalMarks=0, present=0; dates.forEach(d=>{ const rows = state.attendance[d]||[]; totalMarks+=rows.length; present+=rows.filter(r=>r.status==='present').length; }); byId('stat-attendance').textContent = totalMarks? (Math.round(100*present/totalMarks)+'%') : '—'; const notes = []; Object.entries(state.attendance).forEach(([d,rows])=>{ rows.forEach(r=>{ if(r.note) notes.push({date:d, studentId:r.studentId, note:r.note}); }); }); notes.sort((a,b)=>a.date.localeCompare(b.date)); const tbody = byId('recent-notes'); tbody.innerHTML=''; notes.slice(-8).reverse().forEach(n=>{ const s = state.students.find(x=>x.id===n.studentId); const tr = document.createElement('tr'); tr.innerHTML = `<td>${fmtDate(n.date)}</td><td>${s?s.name:n.studentId}</td><td>${n.note}</td>`; tbody.appendChild(tr); }); const ps = byId('print-summary'); ps.innerHTML = `<div><b>Sĩ số:</b> ${total}</div><div><b>Lớp:</b> ${classes.join(', ')||'—'}</div><div><b>TB điểm:</b> ${avg}</div>`; }
+
+  // ====== Settings ======
+  function initSettings(){ byId('set-teacher').value = state.settings.teacherName || ''; byId('set-theme').value = state.settings.theme || 'auto'; byId('set-w-mid').value = Math.round((state.settings.grading?.mid??0.4)*100); byId('set-w-final').value = Math.round((state.settings.grading?.final??0.6)*100); }
+  function saveSettings(){ const name = (byId('set-teacher').value||'').trim(); const theme = byId('set-theme').value; const mid = parseInt(byId('set-w-mid').value||'40'); const fin = parseInt(byId('set-w-final').value||'60'); if(mid+fin!==100){ alert('Tổng trọng số phải bằng 100%'); return; } state.settings.teacherName = name; state.settings.theme = theme; state.settings.grading = { mid: mid/100, final: fin/100 }; persist(); updateWeightLabels(); alert('Đã lưu cài đặt'); }
+
+  // ====== Backup ======
+  function exportData(){ const data = { students: state.students, attendance: state.attendance, grades: state.grades, lessons: state.lessons, quizzes: state.quizzes, quizResults: state.quizResults, randomHistory: state.randomHistory, groups: state.groups, settings: state.settings, exportedAt: new Date().toISOString() }; download('sao-luu-quan-ly-hoc-sinh.json', JSON.stringify(data,null,2), 'application/json'); }
+  function importData(){ const f = byId('import-file').files?.[0]; if(!f) return alert('Chọn file JSON'); const reader = new FileReader(); reader.onload = () => { try{ const data = JSON.parse(reader.result); state.students = data.students||[]; state.attendance = data.attendance||{}; state.grades = data.grades||[]; state.lessons = data.lessons||[]; state.quizzes = data.quizzes||[]; state.quizResults = data.quizResults||[]; state.randomHistory = data.randomHistory||[]; state.groups = data.groups||[]; state.settings = data.settings || state.settings; persist(); alert('Đã nhập dữ liệu'); } catch(e){ alert('File không hợp lệ: '+e); } }; reader.readAsText(f); }
+
+  // ====== Render All ======
+  function renderAll(){ renderStudents(); renderLessons(); renderGrades(); renderReports(); renderDashboard(); initQuizzesTab(); const onRandom = !byId('tab-random').classList.contains('hidden'); if(onRandom) initRandomTab(); updateWeightLabels(); }
+
+  // ====== Init ======
+  setupTabs(); renderAll();
+  // Prefer shortcut hint in header
+  document.title = 'Quản lý Học sinh - Offline';
+</script>
+</body>
+</html>

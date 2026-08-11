@@ -1,0 +1,632 @@
+[
+  {
+    "question": "Loài động vật nào lớn nhất hành tinh hiện nay?",
+    "answers": [
+      {
+        "text": "Cá voi xanh",
+        "correct": true
+      },
+      {
+        "text": "Cá mập trắng",
+        "correct": false
+      },
+      {
+        "text": "Khủng long bạo chúa",
+        "correct": false
+      },
+      {
+        "text": "Voi Châu Phi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tỉnh nào của Việt Nam có 'Ngã ba Đông Dương' (nơi tiếng gà gáy cả 3 nước cùng nghe)?",
+    "answers": [
+      {
+        "text": "Gia Lai",
+        "correct": false
+      },
+      {
+        "text": "Điện Biên",
+        "correct": false
+      },
+      {
+        "text": "Lai Châu",
+        "correct": false
+      },
+      {
+        "text": "Kon Tum",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong tác phẩm 'Tắt đèn' của Ngô Tất Tố, chị Dậu tên thật là gì?",
+    "answers": [
+      {
+        "text": "Vũ Thị Tý",
+        "correct": false
+      },
+      {
+        "text": "Phạm Thị Nụ",
+        "correct": false
+      },
+      {
+        "text": "Nguyễn Thị Mận",
+        "correct": false
+      },
+      {
+        "text": "Lê Thị Đào",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Hành tinh nào trong Hệ Mặt Trời được gọi là 'Hành tinh Đỏ'?",
+    "answers": [
+      {
+        "text": "Sao Mộc",
+        "correct": false
+      },
+      {
+        "text": "Sao Hỏa",
+        "correct": true
+      },
+      {
+        "text": "Sao Thổ",
+        "correct": false
+      },
+      {
+        "text": "Sao Kim",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là người phát minh ra bóng đèn sợi đốt thương mại đầu tiên?",
+    "answers": [
+      {
+        "text": "Nikola Tesla",
+        "correct": false
+      },
+      {
+        "text": "Albert Einstein",
+        "correct": false
+      },
+      {
+        "text": "Alexander Graham Bell",
+        "correct": false
+      },
+      {
+        "text": "Thomas Edison",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào có hình dáng giống một chiếc ủng (boot)?",
+    "answers": [
+      {
+        "text": "Tây Ban Nha",
+        "correct": false
+      },
+      {
+        "text": "Italia",
+        "correct": true
+      },
+      {
+        "text": "Bồ Đào Nha",
+        "correct": false
+      },
+      {
+        "text": "Pháp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ký hiệu hóa học của vàng là gì?",
+    "answers": [
+      {
+        "text": "Au",
+        "correct": true
+      },
+      {
+        "text": "Cu",
+        "correct": false
+      },
+      {
+        "text": "Ag",
+        "correct": false
+      },
+      {
+        "text": "Fe",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bức họa nổi tiếng 'Đêm đầy sao' (The Starry Night) là của họa sĩ nào?",
+    "answers": [
+      {
+        "text": "Claude Monet",
+        "correct": false
+      },
+      {
+        "text": "Pablo Picasso",
+        "correct": false
+      },
+      {
+        "text": "Vincent van Gogh",
+        "correct": true
+      },
+      {
+        "text": "Leonardo da Vinci",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thành phố nào của Việt Nam được mệnh danh là 'Thành phố của những cây cầu'?",
+    "answers": [
+      {
+        "text": "Đà Nẵng",
+        "correct": true
+      },
+      {
+        "text": "Cần Thơ",
+        "correct": false
+      },
+      {
+        "text": "Huế",
+        "correct": false
+      },
+      {
+        "text": "Hải Phòng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bộ phận nào trên cơ thể người có diện tích lớn nhất?",
+    "answers": [
+      {
+        "text": "Phổi",
+        "correct": false
+      },
+      {
+        "text": "Ruột non",
+        "correct": false
+      },
+      {
+        "text": "Gan",
+        "correct": false
+      },
+      {
+        "text": "Da",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Thủ đô của nước Mỹ là thành phố nào?",
+    "answers": [
+      {
+        "text": "Los Angeles",
+        "correct": false
+      },
+      {
+        "text": "Chicago",
+        "correct": false
+      },
+      {
+        "text": "New York",
+        "correct": false
+      },
+      {
+        "text": "Washington, D.C.",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong truyền thuyết Sơn Tinh - Thủy Tinh, Sơn Tinh là vị thần cai quản vùng núi nào?",
+    "answers": [
+      {
+        "text": "Núi Tam Đảo",
+        "correct": false
+      },
+      {
+        "text": "Núi Hồng Lĩnh",
+        "correct": false
+      },
+      {
+        "text": "Núi Sóc",
+        "correct": false
+      },
+      {
+        "text": "Núi Tản Viên",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Chất nào cứng nhất trong tự nhiên?",
+    "answers": [
+      {
+        "text": "Sắt",
+        "correct": false
+      },
+      {
+        "text": "Kim cương",
+        "correct": true
+      },
+      {
+        "text": "Đá Granite",
+        "correct": false
+      },
+      {
+        "text": "Thạch anh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tên gọi cũ của Thành phố Hồ Chí Minh trước năm 1976 là gì?",
+    "answers": [
+      {
+        "text": "Bến Nghé",
+        "correct": false
+      },
+      {
+        "text": "Gia Định",
+        "correct": false
+      },
+      {
+        "text": "Sài Gòn",
+        "correct": true
+      },
+      {
+        "text": "Chợ Lớn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "World Wide Web (www) được phát minh bởi ai?",
+    "answers": [
+      {
+        "text": "Mark Zuckerberg",
+        "correct": false
+      },
+      {
+        "text": "Bill Gates",
+        "correct": false
+      },
+      {
+        "text": "Tim Berners-Lee",
+        "correct": true
+      },
+      {
+        "text": "Steve Jobs",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Lá cờ Olympic có bao nhiêu vòng tròn đan vào nhau?",
+    "answers": [
+      {
+        "text": "4 vòng",
+        "correct": false
+      },
+      {
+        "text": "5 vòng",
+        "correct": true
+      },
+      {
+        "text": "6 vòng",
+        "correct": false
+      },
+      {
+        "text": "7 vòng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nhà bác học nào đã tìm ra Lực vạn vật hấp dẫn khi thấy quả táo rơi?",
+    "answers": [
+      {
+        "text": "Galileo Galilei",
+        "correct": false
+      },
+      {
+        "text": "Marie Curie",
+        "correct": false
+      },
+      {
+        "text": "Isaac Newton",
+        "correct": true
+      },
+      {
+        "text": "Albert Einstein",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tác phẩm văn học 'Dế Mèn phiêu lưu ký' là sáng tác của nhà văn nào?",
+    "answers": [
+      {
+        "text": "Tô Hoài",
+        "correct": true
+      },
+      {
+        "text": "Vũ Trọng Phụng",
+        "correct": false
+      },
+      {
+        "text": "Nam Cao",
+        "correct": false
+      },
+      {
+        "text": "Ngô Tất Tố",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đất nước nào được mệnh danh là 'Xứ sở hoa anh đào'?",
+    "answers": [
+      {
+        "text": "Trung Quốc",
+        "correct": false
+      },
+      {
+        "text": "Nhật Bản",
+        "correct": true
+      },
+      {
+        "text": "Triều Tiên",
+        "correct": false
+      },
+      {
+        "text": "Hàn Quốc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bàn cờ vua tiêu chuẩn có tất cả bao nhiêu ô?",
+    "answers": [
+      {
+        "text": "100 ô",
+        "correct": false
+      },
+      {
+        "text": "32 ô",
+        "correct": false
+      },
+      {
+        "text": "64 ô",
+        "correct": true
+      },
+      {
+        "text": "81 ô",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loại nhạc cụ nào được mệnh danh là 'Vua của các loại nhạc cụ'?",
+    "answers": [
+      {
+        "text": "Kèn Saxophone",
+        "correct": false
+      },
+      {
+        "text": "Đàn Violin",
+        "correct": false
+      },
+      {
+        "text": "Đàn Piano",
+        "correct": true
+      },
+      {
+        "text": "Đàn Guitar",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào có diện tích nhỏ nhất thế giới?",
+    "answers": [
+      {
+        "text": "Singapore",
+        "correct": false
+      },
+      {
+        "text": "Maldives",
+        "correct": false
+      },
+      {
+        "text": "Monaco",
+        "correct": false
+      },
+      {
+        "text": "Thành Vatican",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Triều đại phong kiến cuối cùng của Việt Nam là triều đại nào?",
+    "answers": [
+      {
+        "text": "Triều Lê",
+        "correct": false
+      },
+      {
+        "text": "Triều Lý",
+        "correct": false
+      },
+      {
+        "text": "Triều Trần",
+        "correct": false
+      },
+      {
+        "text": "Triều Nguyễn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Thuốc kháng sinh Penicillin do ai tìm ra?",
+    "answers": [
+      {
+        "text": "Louis Pasteur",
+        "correct": false
+      },
+      {
+        "text": "Alexander Fleming",
+        "correct": true
+      },
+      {
+        "text": "Robert Koch",
+        "correct": false
+      },
+      {
+        "text": "Edward Jenner",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con sông nào chảy qua thủ đô London của nước Anh?",
+    "answers": [
+      {
+        "text": "Sông Danube",
+        "correct": false
+      },
+      {
+        "text": "Sông Thames",
+        "correct": true
+      },
+      {
+        "text": "Sông Seine",
+        "correct": false
+      },
+      {
+        "text": "Sông Rhine",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Hy Lạp, vị thần nào cai quản biển cả?",
+    "answers": [
+      {
+        "text": "Poseidon",
+        "correct": true
+      },
+      {
+        "text": "Zeus",
+        "correct": false
+      },
+      {
+        "text": "Apollo",
+        "correct": false
+      },
+      {
+        "text": "Hades",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tên gọi của đơn vị đo tần số Hz (Hertz) được đặt theo tên nhà vật lý người nước nào?",
+    "answers": [
+      {
+        "text": "Đức",
+        "correct": true
+      },
+      {
+        "text": "Anh",
+        "correct": false
+      },
+      {
+        "text": "Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Pháp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là tác giả của bộ truyện thám tử lừng danh Sherlock Holmes?",
+    "answers": [
+      {
+        "text": "Arthur Conan Doyle",
+        "correct": true
+      },
+      {
+        "text": "Agatha Christie",
+        "correct": false
+      },
+      {
+        "text": "Edgar Allan Poe",
+        "correct": false
+      },
+      {
+        "text": "J.K. Rowling",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài hoa nào được chọn là Quốc hoa của Việt Nam?",
+    "answers": [
+      {
+        "text": "Hoa Đào",
+        "correct": false
+      },
+      {
+        "text": "Hoa Sen",
+        "correct": true
+      },
+      {
+        "text": "Hoa Cúc",
+        "correct": false
+      },
+      {
+        "text": "Hoa Mai",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nhiệt độ sôi của nước là bao nhiêu độ C (ở áp suất tiêu chuẩn)?",
+    "answers": [
+      {
+        "text": "110 độ C",
+        "correct": false
+      },
+      {
+        "text": "80 độ C",
+        "correct": false
+      },
+      {
+        "text": "90 độ C",
+        "correct": false
+      },
+      {
+        "text": "100 độ C",
+        "correct": true
+      }
+    ]
+  }
+]

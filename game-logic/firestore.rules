@@ -1,0 +1,64 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Hàm tiện ích: Lấy dữ liệu của người dùng đang gửi yêu cầu
+    function getUserData() {
+      return get(/databases/$(database)/documents/users/$(request.auth.uid)).data;
+    }
+
+    // --- QUY TẮC CHO TỪNG COLLECTION ---
+
+    // USERS: Ai đã đăng nhập cũng có thể đọc. Chỉ admin hoặc chính người dùng đó mới được ghi.
+    match /users/{userId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && (request.auth.uid == userId || getUserData().role == 'admin');
+    }
+
+    // GROUPS (Lớp học): Ai đã đăng nhập đều có thể đọc. Chỉ Super Admin mới được tạo/sửa.
+    match /groups/{groupId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && getUserData().role == 'admin';
+    }
+
+    // QUIZZES (Bộ câu hỏi): Bất kỳ ai đã đăng nhập đều có thể đọc.
+    // Chỉ admin/teacher mới được tạo. Chỉ tác giả hoặc admin mới được sửa/xóa.
+    match /quizzes/{quizId} {
+      allow read: if request.auth != null; // <-- ĐÂY LÀ DÒNG ĐƯỢC SỬA
+      allow create: if request.auth != null && (getUserData().role == 'admin' || getUserData().role == 'teacher');
+      allow update, delete: if request.auth != null && (request.auth.uid == resource.data.authorId || getUserData().role == 'admin');
+    }
+
+    // LEADERBOARD: Ai đã đăng nhập đều có thể đọc. Người dùng chỉ được ghi điểm cho chính mình.
+    match /leaderboard/{userId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // SCORES: Ai đã đăng nhập đều có thể đọc và ghi điểm
+    match /scores/{scoreId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null;
+    }
+
+    // JOIN REQUESTS: Ai đã đăng nhập đều có thể đọc và tạo yêu cầu
+    match /joinRequests/{requestId} {
+      allow read: if request.auth != null;
+      allow create: if request.auth != null;
+      allow update, delete: if request.auth != null && (request.auth.uid == resource.data.teacherId || getUserData().role == 'admin');
+    }
+
+    // SETTINGS (Cài đặt chung): Ai đã đăng nhập đều có thể đọc. Chỉ admin mới được sửa.
+    match /settings/{settingId} {
+      allow read: if request.auth != null;
+      allow write: if request.auth != null && getUserData().role == 'admin';
+    }
+
+    // QUIZ_SETTINGS (Mật khẩu màn chơi): Ai đã đăng nhập cũng có thể đọc. Chỉ admin mới được sửa.
+     match /quiz_settings/{quizId} {
+       allow read: if request.auth != null;
+       allow write: if request.auth != null && getUserData().role == 'admin';
+    }
+  }
+}

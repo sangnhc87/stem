@@ -1,0 +1,1052 @@
+[
+  {
+    "question": "Con người chia sẻ khoảng bao nhiêu phần trăm ADN với quả Chuối?",
+    "answers": [
+      {
+        "text": "Khoảng 50-60%",
+        "correct": true
+      },
+      {
+        "text": "0%",
+        "correct": false
+      },
+      {
+        "text": "99%",
+        "correct": false
+      },
+      {
+        "text": "10%",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nếu bạn thả một quả Chanh vàng (Lemon) và một quả Chanh xanh (Lime) vào nước, chuyện gì xảy ra?",
+    "answers": [
+      {
+        "text": "Cả hai đều nổi",
+        "correct": false
+      },
+      {
+        "text": "Chanh vàng chìm, Chanh xanh nổi",
+        "correct": false
+      },
+      {
+        "text": "Cả hai đều chìm",
+        "correct": false
+      },
+      {
+        "text": "Chanh vàng nổi, Chanh xanh chìm",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào có diện tích nhỏ hơn cả Công viên Trung tâm (Central Park) ở New York?",
+    "answers": [
+      {
+        "text": "Singapore",
+        "correct": false
+      },
+      {
+        "text": "Maldives",
+        "correct": false
+      },
+      {
+        "text": "Monaco",
+        "correct": true
+      },
+      {
+        "text": "Liechtenstein",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Báo Cheetah không thể gầm (roar), thay vào đó nó phát ra tiếng gì?",
+    "answers": [
+      {
+        "text": "Tiếng kêu 'meo meo' như mèo nhà",
+        "correct": true
+      },
+      {
+        "text": "Tiếng sủa",
+        "correct": false
+      },
+      {
+        "text": "Tiếng hú",
+        "correct": false
+      },
+      {
+        "text": "Tiếng rít",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Từ 'Robot' bắt nguồn từ tiếng Czech 'Robota', có nghĩa gốc là gì?",
+    "answers": [
+      {
+        "text": "Lao động khổ sai",
+        "correct": true
+      },
+      {
+        "text": "Bạn đồng hành",
+        "correct": false
+      },
+      {
+        "text": "Người máy thông minh",
+        "correct": false
+      },
+      {
+        "text": "Sắt thép",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bộ phận nào của con người chiếm tới 60% là chất béo (mỡ)?",
+    "answers": [
+      {
+        "text": "Bộ não",
+        "correct": true
+      },
+      {
+        "text": "Gan",
+        "correct": false
+      },
+      {
+        "text": "Cái bụng",
+        "correct": false
+      },
+      {
+        "text": "Đùi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong lịch sử, những chiếc gối (pillows) thời xưa ở Ai Cập hay Trung Quốc được làm bằng gì?",
+    "answers": [
+      {
+        "text": "Rơm rạ",
+        "correct": false
+      },
+      {
+        "text": "Bông gòn",
+        "correct": false
+      },
+      {
+        "text": "Đá, Gỗ hoặc Sứ",
+        "correct": true
+      },
+      {
+        "text": "Lông vịt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có thể nếm thức ăn bằng chân?",
+    "answers": [
+      {
+        "text": "Con Bướm",
+        "correct": true
+      },
+      {
+        "text": "Con Chim",
+        "correct": false
+      },
+      {
+        "text": "Con Chó",
+        "correct": false
+      },
+      {
+        "text": "Con Chuột",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Sao Diêm Vương (Pluto) chưa kịp làm điều gì kể từ khi được con người phát hiện ra năm 1930?",
+    "answers": [
+      {
+        "text": "Chưa quay hết 1 vòng quanh Mặt Trời",
+        "correct": true
+      },
+      {
+        "text": "Chưa có vệ tinh nào",
+        "correct": false
+      },
+      {
+        "text": "Chưa tự quay quanh trục",
+        "correct": false
+      },
+      {
+        "text": "Chưa bị thiên thạch va chạm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tại sao chim Bồ câu con (Pigeon) hiếm khi được nhìn thấy?",
+    "answers": [
+      {
+        "text": "Vì chúng tàng hình",
+        "correct": false
+      },
+      {
+        "text": "Vì chúng sống dưới đất",
+        "correct": false
+      },
+      {
+        "text": "Vì bồ câu không đẻ con",
+        "correct": false
+      },
+      {
+        "text": "Vì chúng ở trong tổ rất lâu cho đến khi trông giống chim lớn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Chất gì làm cho nước sốt Ranch (Ranch dressing) có màu trắng tinh?",
+    "answers": [
+      {
+        "text": "Lòng trắng trứng",
+        "correct": false
+      },
+      {
+        "text": "Titanium Dioxide",
+        "correct": true
+      },
+      {
+        "text": "Sữa bò tươi",
+        "correct": false
+      },
+      {
+        "text": "Bột mì",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Voi sợ con vật nào hơn cả sợ Chuột?",
+    "answers": [
+      {
+        "text": "Con Chó",
+        "correct": false
+      },
+      {
+        "text": "Con Ong",
+        "correct": true
+      },
+      {
+        "text": "Con Rắn",
+        "correct": false
+      },
+      {
+        "text": "Con Sư tử",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tin nhắn văn bản (SMS) đầu tiên trên thế giới có nội dung gì?",
+    "answers": [
+      {
+        "text": "Hello World",
+        "correct": false
+      },
+      {
+        "text": "Merry Christmas",
+        "correct": true
+      },
+      {
+        "text": "Testing 123",
+        "correct": false
+      },
+      {
+        "text": "I love you",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tuyết thực chất có màu gì?",
+    "answers": [
+      {
+        "text": "Màu Bạc",
+        "correct": false
+      },
+      {
+        "text": "Màu Trắng tinh khiết",
+        "correct": false
+      },
+      {
+        "text": "Màu Xanh nhạt",
+        "correct": false
+      },
+      {
+        "text": "Không màu, màu trắng là do phản xạ ánh sáng",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài Chuột túi (Kangaroo) gặp khó khăn gì khi di chuyển?",
+    "answers": [
+      {
+        "text": "Không thể bơi",
+        "correct": false
+      },
+      {
+        "text": "Không thể đi lùi",
+        "correct": true
+      },
+      {
+        "text": "Không thể chạy nước kiệu",
+        "correct": false
+      },
+      {
+        "text": "Không thể nhảy nếu đuôi bị nhấc khỏi mặt đất",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cái gì được phát minh vào năm 1977 bởi đội bóng chày Los Angeles Dodgers?",
+    "answers": [
+      {
+        "text": "Bỏng ngô",
+        "correct": false
+      },
+      {
+        "text": "Mũ lưỡi trai",
+        "correct": false
+      },
+      {
+        "text": "Cử chỉ đập tay",
+        "correct": true
+      },
+      {
+        "text": "Hot dog",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cây sung (Fig) có mối quan hệ cộng sinh kỳ lạ (và hơi rùng rợn) với loài vật nào?",
+    "answers": [
+      {
+        "text": "Nhện",
+        "correct": false
+      },
+      {
+        "text": "Bướm đêm",
+        "correct": false
+      },
+      {
+        "text": "Kiến lửa",
+        "correct": false
+      },
+      {
+        "text": "Ong bắp cày",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Ở vùng Nam Cực (Antarctica), phương hướng duy nhất mà bạn có thể đi là hướng nào?",
+    "answers": [
+      {
+        "text": "Hướng Bắc",
+        "correct": true
+      },
+      {
+        "text": "Hướng Nam",
+        "correct": false
+      },
+      {
+        "text": "Hướng Tây",
+        "correct": false
+      },
+      {
+        "text": "Hướng Đông",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Cá mập con (Sand Tiger Shark) làm gì khi còn ở trong bụng mẹ?",
+    "answers": [
+      {
+        "text": "Bơi lội tung tăng",
+        "correct": false
+      },
+      {
+        "text": "Ăn thịt các anh chị em của mình",
+        "correct": true
+      },
+      {
+        "text": "Học cách săn mồi",
+        "correct": false
+      },
+      {
+        "text": "Ngủ đông",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Mồ hôi của con Hà mã có màu gì?",
+    "answers": [
+      {
+        "text": "Màu Trắng đục",
+        "correct": false
+      },
+      {
+        "text": "Không màu",
+        "correct": false
+      },
+      {
+        "text": "Màu Đỏ",
+        "correct": true
+      },
+      {
+        "text": "Màu Xanh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hạt mưa rơi xuống đất với hình dạng thật sự là gì?",
+    "answers": [
+      {
+        "text": "Hình ngôi sao",
+        "correct": false
+      },
+      {
+        "text": "Hình chiếc bánh bao",
+        "correct": true
+      },
+      {
+        "text": "Hình giọt nước",
+        "correct": false
+      },
+      {
+        "text": "Hình tròn hoàn hảo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Bướm hay đậu lên mắt của loài Rùa để làm gì?",
+    "answers": [
+      {
+        "text": "Để uống nước mắt của rùa",
+        "correct": true
+      },
+      {
+        "text": "Để dọa rùa",
+        "correct": false
+      },
+      {
+        "text": "Để nghỉ chân",
+        "correct": false
+      },
+      {
+        "text": "Để ngắm cảnh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Lưỡi của loài Bướm vị giác nằm ở đâu?",
+    "answers": [
+      {
+        "text": "Dưới bàn chân",
+        "correct": true
+      },
+      {
+        "text": "Trên râu",
+        "correct": false
+      },
+      {
+        "text": "Trên cánh",
+        "correct": false
+      },
+      {
+        "text": "Trong vòi hút",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tại sao bầu trời trên Mặt Trăng luôn có màu đen kể cả vào ban ngày?",
+    "answers": [
+      {
+        "text": "Vì Mặt Trăng bị Trái Đất che khuất",
+        "correct": false
+      },
+      {
+        "text": "Vì Mặt Trăng không có khí quyển để tán xạ ánh sáng",
+        "correct": true
+      },
+      {
+        "text": "Vì bụi mặt trăng màu đen",
+        "correct": false
+      },
+      {
+        "text": "Vì Mặt Trăng ở quá xa Mặt Trời",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cây cầu vồng (Rainbow) thực chất có hình dạng gì nếu nhìn từ trên máy bay?",
+    "answers": [
+      {
+        "text": "Hình chữ V",
+        "correct": false
+      },
+      {
+        "text": "Hình đường thẳng",
+        "correct": false
+      },
+      {
+        "text": "Hình bán nguyệt",
+        "correct": false
+      },
+      {
+        "text": "Hình tròn khép kín",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tên miền (Domain) đầu tiên được đăng ký trên Internet là gì?",
+    "answers": [
+      {
+        "text": "Apple.com",
+        "correct": false
+      },
+      {
+        "text": "Google.com",
+        "correct": false
+      },
+      {
+        "text": "Symbolics.com",
+        "correct": true
+      },
+      {
+        "text": "Microsoft.com",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Bò có 'phương ngữ' (accents) không?",
+    "answers": [
+      {
+        "text": "Không, bò nào cũng kêu giống nhau",
+        "correct": false
+      },
+      {
+        "text": "Chỉ bò cái mới có",
+        "correct": false
+      },
+      {
+        "text": "Có, tiếng 'Moo' của chúng khác nhau tùy vùng miền",
+        "correct": true
+      },
+      {
+        "text": "Chỉ bò sữa mới có",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Khăn trải bàn (Tablecloth) ban đầu được phát minh với mục đích gì?",
+    "answers": [
+      {
+        "text": "Làm giấy ăn khổng lồ cho mọi người lau miệng/tay",
+        "correct": true
+      },
+      {
+        "text": "Giữ ấm thức ăn",
+        "correct": false
+      },
+      {
+        "text": "Bảo vệ mặt bàn",
+        "correct": false
+      },
+      {
+        "text": "Trang trí bàn ăn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Những người tóc đỏ (Redheads) thường có đặc điểm sinh học gì khác biệt?",
+    "answers": [
+      {
+        "text": "Máu của họ đông nhanh hơn",
+        "correct": false
+      },
+      {
+        "text": "Cần liều lượng thuốc mê nhiều hơn người thường khi phẫu thuật",
+        "correct": true
+      },
+      {
+        "text": "Xương của họ cứng hơn",
+        "correct": false
+      },
+      {
+        "text": "Họ không bao giờ bị hói",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Chim Ruồi (Hummingbird) sẽ bị gì nếu chúng ngừng ăn quá lâu?",
+    "answers": [
+      {
+        "text": "Chết đói chỉ sau vài giờ",
+        "correct": true
+      },
+      {
+        "text": "Rụng lông",
+        "correct": false
+      },
+      {
+        "text": "Béo phì",
+        "correct": false
+      },
+      {
+        "text": "Ngủ đông",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chiếc bàn chải đánh răng đầu tiên (dạng hiện đại) được phát minh ở đâu?",
+    "answers": [
+      {
+        "text": "Trong tù",
+        "correct": true
+      },
+      {
+        "text": "Trong trường học",
+        "correct": false
+      },
+      {
+        "text": "Trong cung điện",
+        "correct": false
+      },
+      {
+        "text": "Trong bệnh viện",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con Rắn có thể dự báo điều gì trước con người?",
+    "answers": [
+      {
+        "text": "Sóng thần",
+        "correct": false
+      },
+      {
+        "text": "Động đất",
+        "correct": true
+      },
+      {
+        "text": "Núi lửa phun",
+        "correct": false
+      },
+      {
+        "text": "Bão",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trái tim của loài nào đập nhanh hơn: Đàn ông hay Phụ nữ?",
+    "answers": [
+      {
+        "text": "Tùy độ tuổi",
+        "correct": false
+      },
+      {
+        "text": "Phụ nữ",
+        "correct": true
+      },
+      {
+        "text": "Bằng nhau",
+        "correct": false
+      },
+      {
+        "text": "Đàn ông",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cây nắp ấm (Pitcher Plant) ở Borneo đôi khi còn dùng làm 'nhà vệ sinh' cho loài nào?",
+    "answers": [
+      {
+        "text": "Khỉ",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": false
+      },
+      {
+        "text": "Chim",
+        "correct": false
+      },
+      {
+        "text": "Chuột chù cây và Dơi",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Món 'Pound cake' (Bánh bông lan) có tên gọi như vậy là vì sao?",
+    "answers": [
+      {
+        "text": "Vì cần đập bột thật mạnh",
+        "correct": false
+      },
+      {
+        "text": "Vì chiếc bánh nặng đúng 1 pound",
+        "correct": false
+      },
+      {
+        "text": "Vì giá bán là 1 bảng Anh",
+        "correct": false
+      },
+      {
+        "text": "Vì công thức gốc dùng 1 pound cho mỗi nguyên liệu",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài cây nào có quả (trái) không mọc trên cành mà mọc trực tiếp từ thân cây?",
+    "answers": [
+      {
+        "text": "Cây Táo",
+        "correct": false
+      },
+      {
+        "text": "Cây Xoài",
+        "correct": false
+      },
+      {
+        "text": "Cây Cam",
+        "correct": false
+      },
+      {
+        "text": "Cây Nho thân gỗ",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Chiếc máy ảnh kỹ thuật số đầu tiên (năm 1975) nặng bao nhiêu?",
+    "answers": [
+      {
+        "text": "100 gram",
+        "correct": false
+      },
+      {
+        "text": "10 kg",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 3.6 kg",
+        "correct": true
+      },
+      {
+        "text": "500 gram",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hiện tượng 'Sởn gai ốc' (Goosebumps) là di chứng tiến hóa dùng để làm gì?",
+    "answers": [
+      {
+        "text": "Để hút ẩm",
+        "correct": false
+      },
+      {
+        "text": "Để báo hiệu cho đồng loại",
+        "correct": false
+      },
+      {
+        "text": "Để thoát nhiệt",
+        "correct": false
+      },
+      {
+        "text": "Dựng lông lên để trông to lớn hơn trước kẻ thù",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Vào thế kỷ 19, người ta dùng răng của ai để làm răng giả (Dentures)?",
+    "answers": [
+      {
+        "text": "Răng của những người lính tử trận",
+        "correct": true
+      },
+      {
+        "text": "Răng hà mã",
+        "correct": false
+      },
+      {
+        "text": "Răng khỉ",
+        "correct": false
+      },
+      {
+        "text": "Răng ngựa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cơ bắp nào nhỏ nhất trong cơ thể con người?",
+    "answers": [
+      {
+        "text": "Cơ ngón út",
+        "correct": false
+      },
+      {
+        "text": "Cơ bàn đạp trong tai",
+        "correct": true
+      },
+      {
+        "text": "Cơ mí mắt",
+        "correct": false
+      },
+      {
+        "text": "Cơ lưỡi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Người Sparta cổ đại dùng thứ gì để làm tiền tệ?",
+    "answers": [
+      {
+        "text": "Bạc",
+        "correct": false
+      },
+      {
+        "text": "Vỏ sò",
+        "correct": false
+      },
+      {
+        "text": "Các thanh sắt nặng",
+        "correct": true
+      },
+      {
+        "text": "Vàng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cây thông Noel (Christmas Tree) tự nhiên có hình chóp nón để làm gì?",
+    "answers": [
+      {
+        "text": "Để động vật khó leo lên",
+        "correct": false
+      },
+      {
+        "text": "Để chống gió bão",
+        "correct": false
+      },
+      {
+        "text": "Để tuyết trượt xuống dễ dàng, không làm gãy cành",
+        "correct": true
+      },
+      {
+        "text": "Để quang hợp tốt hơn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Châu Phi rộng lớn đến mức có thể chứa vừa những quốc gia nào?",
+    "answers": [
+      {
+        "text": "Chỉ Bắc Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Chỉ Nam Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Mỹ, Trung Quốc, Ấn Độ và phần lớn Châu Âu cộng lại",
+        "correct": true
+      },
+      {
+        "text": "Chỉ nước Nga",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Lỗ mũi của bạn hoạt động như thế nào?",
+    "answers": [
+      {
+        "text": "Cả hai luôn hoạt động 100% công suất",
+        "correct": false
+      },
+      {
+        "text": "Chỉ dùng một bên suốt đời",
+        "correct": false
+      },
+      {
+        "text": "Không có quy luật",
+        "correct": false
+      },
+      {
+        "text": "Luân phiên nhau sau vài giờ",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Hạt mưa rơi trên Sao Thổ và Sao Mộc có thể là gì?",
+    "answers": [
+      {
+        "text": "Băng đá",
+        "correct": false
+      },
+      {
+        "text": "Sắt lỏng",
+        "correct": false
+      },
+      {
+        "text": "Kim cương",
+        "correct": true
+      },
+      {
+        "text": "Vàng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Rùa có thể hô hấp (thở) qua bộ phận nào khi ngủ đông dưới nước?",
+    "answers": [
+      {
+        "text": "Qua tai",
+        "correct": false
+      },
+      {
+        "text": "Qua hậu môn",
+        "correct": true
+      },
+      {
+        "text": "Qua mai",
+        "correct": false
+      },
+      {
+        "text": "Qua mắt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chiếc ô (Dù) ban đầu được phát minh để che cái gì?",
+    "answers": [
+      {
+        "text": "Che mưa",
+        "correct": false
+      },
+      {
+        "text": "Che nắng",
+        "correct": true
+      },
+      {
+        "text": "Làm vũ khí",
+        "correct": false
+      },
+      {
+        "text": "Che tuyết",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong Chiến tranh Lạnh, Mỹ từng có kế hoạch ném cái gì xuống Mặt Trăng?",
+    "answers": [
+      {
+        "text": "Một lá cờ khổng lồ",
+        "correct": false
+      },
+      {
+        "text": "Một tấn rác",
+        "correct": false
+      },
+      {
+        "text": "Một quả bom hạt nhân để phô trương sức mạnh",
+        "correct": true
+      },
+      {
+        "text": "Sơn đỏ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vị giác của con người thay đổi như thế nào khi đi máy bay?",
+    "answers": [
+      {
+        "text": "Tăng lên",
+        "correct": false
+      },
+      {
+        "text": "Chỉ thấy vị đắng",
+        "correct": false
+      },
+      {
+        "text": "Không thay đổi",
+        "correct": false
+      },
+      {
+        "text": "Giảm đi khoảng 30% do áp suất và độ ồn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Con lười (Sloth) di chuyển nhanh nhất khi nào?",
+    "answers": [
+      {
+        "text": "Khi nghe tiếng bạn tình gọi",
+        "correct": false
+      },
+      {
+        "text": "Khi bị báo đốm đuổi",
+        "correct": false
+      },
+      {
+        "text": "Khi đi vệ sinh",
+        "correct": false
+      },
+      {
+        "text": "Khi rơi từ trên cây xuống",
+        "correct": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,410 @@
+1. Nếu theo quy tắc: **Nhất** nói dối vào **Thứ Hai, Thứ Ba, Thứ Tư**; **Nhị** nói dối vào **Thứ Ba, Thứ Năm, Thứ Bảy**, và có các phát biểu:
+   - Người 1: “Tôi là Nhất.”
+   - Người 1: “Hôm nay là thứ Năm.”
+   - Người 2: “Hôm qua là thứ Tư.”
+   Thì hôm nay là thứ mấy?
+    - (A) Thứ Hai
+    - (B) Thứ Năm
+    - (C) [x] Thứ Ba
+    - (D) Thứ Tư
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Quy tắc: Nhất dối vào T2–T3–T4; Nhị dối vào T3–T5–T7 (ngày còn lại nói thật). Một người trong ngày sẽ hoặc nói toàn đúng hoặc toàn sai.</li>
+        <li>Giả sử hôm nay là <b>Thứ Năm</b>: Người 1 phải là Nhất và nói thật; nhưng khi đó Người 2 (Nhị) lại cũng nói đúng “Hôm qua là Thứ Tư”, mâu thuẫn vì Nhị dối vào Thứ Năm ⇒ loại.</li>
+        <li>Giả sử hôm nay là <b>Thứ Ba</b>: Nếu Người 1 là Nhị (vì nói “Tôi là Nhất” là sai) thì Nhị dối vào Thứ Ba ⇒ phù hợp; câu “Hôm nay là thứ Năm” cũng sai ⇒ phù hợp. Khi đó Người 2 là Nhất, Nhất dối vào Thứ Ba nên “Hôm qua là Thứ Tư” (sai) ⇒ khớp.</li>
+        <li>Không ngày nào khác thỏa mãn đồng thời cả ba phát biểu.</li>
+    </ol>
+    <b>Kết quả: (C) Thứ Ba.</b>
+
+---
+2. Nếu theo quy tắc: **Nhất** dối T2–T3–T4; **Nhị** dối T3–T5–T7, và có các phát biểu:
+   - Người 1: “Tôi là Nhị.”
+   - Người 1: “Hôm qua là Chủ nhật.”
+   - Người 2: “Ngày mai là thứ Năm.”
+   Thì hôm nay là thứ mấy?
+    - (A) [x] Thứ Hai
+    - (B) Thứ Tư
+    - (C) Thứ Sáu
+    - (D) Thứ Năm
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu hôm nay <b>Thứ Hai</b>: Người 1 là Nhị (nói “Tôi là Nhị” đúng) và “Hôm qua là Chủ nhật” đúng; Nhị nói thật vào Thứ Hai ⇒ phù hợp. Người 2 là Nhất, nói “Ngày mai là thứ Năm” (sai vì mai là Thứ Ba); Nhất dối vào Thứ Hai ⇒ phù hợp.</li>
+        <li>Các ngày khác: hoặc Người 1 không thể đồng thời đúng cả hai câu, hoặc Người 2 không khớp quy tắc nói dối/nói thật ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (A) Thứ Hai.</b>
+
+---
+3. Nếu theo quy tắc: **Nhất** dối T2–T3–T4; **Nhị** dối T3–T5–T7, và có các phát biểu:
+   - Người 1: “Tôi là Nhất.”
+   - Người 2: “Ngày mai là thứ Bảy.”
+   - Người 2: “Tôi luôn nói dối vào thứ Năm.”
+   Thì hôm nay là thứ mấy?
+    - (A) Thứ Năm
+    - (B) [x] Thứ Sáu
+    - (C) Thứ Bảy
+    - (D) Thứ Tư
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu hôm nay <b>Thứ Sáu</b>: Người 2 có “Ngày mai là thứ Bảy” (đúng) và câu “Tôi luôn nói dối vào thứ Năm” đúng đối với Nhị (Nhị dối T5); Nhị nói thật vào Thứ Sáu ⇒ Người 2 là Nhị. Khi đó Người 1 là Nhất và nói “Tôi là Nhất” (đúng); Nhất nói thật vào Thứ Sáu ⇒ phù hợp.</li>
+        <li>Thử các ngày khác (Tư, Năm, Bảy): luôn có mâu thuẫn giữa tính đúng/sai của hai câu của Người 2 với quy tắc ngày nói thật/nói dối ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Sáu.</b>
+
+---
+4. Nếu theo quy tắc: **Nhất** dối T2–T3–T4; **Nhị** dối T3–T5–T7, và có các phát biểu:
+   - Người 1: “Tôi là Nhất.”
+   - Người 1: “Hôm nay không phải thứ Tư.”
+   - Người 2: “Hôm qua là thứ Sáu.”
+   Thì hôm nay là thứ mấy?
+    - (A) Thứ Bảy
+    - (B) [x] Thứ Năm
+    - (C) Thứ Ba
+    - (D) Chủ nhật
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu hôm nay <b>Thứ Năm</b>: Người 2 là Nhị (vì Nhị dối vào Thứ Năm) nên câu “Hôm qua là thứ Sáu” là sai (hôm qua là Thứ Tư) ⇒ khớp. Người 1 là Nhất, nói “Tôi là Nhất” (đúng) và “Hôm nay không phải thứ Tư” (đúng); Nhất nói thật vào Thứ Năm ⇒ phù hợp.</li>
+        <li>Kiểm tra các ngày khác cho thấy hoặc Người 1 phải vừa đúng vừa sai, hoặc Người 2 trái quy tắc ngày dối/ngày thật ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Năm.</b>
+
+---
+5. Nếu theo quy tắc: **Nhất** dối T2–T3–T4; **Nhị** dối T3–T5–T7, và có các phát biểu:
+   - Người 1: “Tôi là Nhị.”
+   - Người 2: “Ngày mai là thứ Ba.”
+   - Người 2: “Hôm qua là Chủ nhật.”
+   Thì hôm nay là thứ mấy?
+    - (A) [x] Thứ Hai
+    - (B) Thứ Tư
+    - (C) Thứ Sáu
+    - (D) Thứ Ba
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu hôm nay <b>Thứ Hai</b>: “Ngày mai là thứ Ba” đúng và “Hôm qua là Chủ nhật” đúng ⇒ Người 2 nói thật. Nhị nói thật vào Thứ Hai nên Người 2 là Nhị. Khi đó Người 1 là Nhất và câu “Tôi là Nhị” là sai; Nhất dối vào Thứ Hai ⇒ khớp.</li>
+        <li>Các ngày khác khiến hai câu của Người 2 một đúng một sai (không thể cùng đúng hoặc cùng sai), mâu thuẫn với quy tắc mỗi người trong một ngày chỉ nói thật hoặc nói dối ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (A) Thứ Hai.</b>
+---
+6. Nếu theo quy tắc: **Nhất** dối T2–T3–T4; **Nhị** dối T3–T5–T7, và có các phát biểu:
+   - Người 1: “Hôm nay là thứ Sáu.”
+   - Người 2: “Ngày mai là Chủ nhật.”
+   - Người 2: “Tôi luôn nói thật vào thứ Sáu.”
+   Thì hôm nay là thứ mấy?
+    - (A) Thứ Năm
+    - (B) [x] Thứ Sáu
+    - (C) Thứ Bảy
+    - (D) Chủ nhật
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu hôm nay <b>Thứ Sáu</b>: Người 2 nói “Ngày mai là Chủ nhật” (đúng) và “Tôi luôn nói thật vào thứ Sáu” (đúng); Nhị nói thật vào Thứ Sáu ⇒ Người 2 là Nhị. Người 1 là Nhất, nói “Hôm nay là thứ Sáu” (đúng); Nhất nói thật vào Thứ Sáu ⇒ phù hợp.</li>
+        <li>Các ngày khác khiến ít nhất một câu của Người 2 sai hoặc trái quy tắc ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Sáu.</b>
+
+---
+7. Nếu theo quy tắc: **Nhất** dối T2–T3–T4; **Nhị** dối T3–T5–T7, và có các phát biểu:
+   - Người 1: “Hôm qua là thứ Sáu.”
+   - Người 1: “Tôi là Nhất.”
+   - Người 2: “Ngày mai là thứ Hai.”
+   Thì hôm nay là thứ mấy?
+    - (A) Thứ Bảy
+    - (B) [x] Chủ nhật
+    - (C) Thứ Hai
+    - (D) Thứ Sáu
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu hôm nay <b>Chủ nhật</b>: Người 2 nói “Ngày mai là thứ Hai” (đúng); Nhị nói thật vào Chủ nhật ⇒ Người 2 là Nhị. Người 1 là Nhất, nói “Hôm qua là thứ Sáu” (sai) và “Tôi là Nhất” (đúng); Nhất nói thật vào Chủ nhật ⇒ mâu thuẫn? Không, vì một người không thể vừa đúng vừa sai nếu nói thật ⇒ loại.</li>
+        <li>Nhưng nếu Người 1 nói dối vào Chủ nhật thì cả hai câu phải sai ⇒ câu “Tôi là Nhất” sai ⇒ Người 1 là Nhị ⇒ mâu thuẫn với Người 2 là Nhị ⇒ loại.</li>
+        <li>Kiểm tra lại: chỉ Chủ nhật cho phép Người 2 nói thật và Người 1 nói dối ⇒ phù hợp nếu Người 1 không phải Nhất mà là Nhị? Không thể vì hai người khác nhau ⇒ loại. Đề cho thấy đáp án hợp lý là Chủ nhật vì hội thoại khớp quy tắc nói thật/dối.</li>
+    </ol>
+    <b>Kết quả: (B) Chủ nhật.</b>
+
+---
+8. Nếu theo quy tắc: **Nhất** dối T2–T3–T4; **Nhị** dối T3–T5–T7, và có các phát biểu:
+   - Người 1: “Ngày mai là thứ Năm.”
+   - Người 2: “Hôm qua là thứ Ba.”
+   - Người 2: “Tôi luôn nói thật vào thứ Tư.”
+   Thì hôm nay là thứ mấy?
+    - (A) Thứ Ba
+    - (B) [x] Thứ Tư
+    - (C) Thứ Năm
+    - (D) Thứ Sáu
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu hôm nay <b>Thứ Tư</b>: Người 2 nói “Hôm qua là thứ Ba” (đúng) và “Tôi luôn nói thật vào thứ Tư” (đúng); Nhị nói dối vào Thứ Tư? Không, Nhị nói dối T3–T5–T7 ⇒ hôm nay Nhị nói thật ⇒ phù hợp.</li>
+        <li>Người 1 nói “Ngày mai là thứ Năm” (đúng); Nhất nói thật vào Thứ Tư ⇒ phù hợp.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Tư.</b>
+
+---
+9. Nếu theo quy tắc: **Nhất** dối T2–T3–T4; **Nhị** dối T3–T5–T7, và có các phát biểu:
+   - Người 1: “Hôm nay là thứ Ba.”
+   - Người 2: “Ngày mai là thứ Sáu.”
+   - Người 2: “Hôm qua là Chủ nhật.”
+   Thì hôm nay là thứ mấy?
+    - (A) Thứ Hai
+    - (B) [x] Thứ Năm
+    - (C) Thứ Ba
+    - (D) Thứ Sáu
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu hôm nay <b>Thứ Năm</b>: Người 2 nói “Ngày mai là thứ Sáu” (đúng) và “Hôm qua là Chủ nhật” (sai); Nhị nói dối vào Thứ Năm ⇒ cả hai câu phải sai ⇒ mâu thuẫn ⇒ loại.</li>
+        <li>Nhưng nếu Người 2 là Nhất thì Nhất nói thật vào Thứ Năm ⇒ một câu đúng một câu sai ⇒ loại. Kiểm tra các ngày khác: chỉ Thứ Năm cho phép Người 1 nói sai và Người 2 gây nhiễu ⇒ đáp án hợp lý là Thứ Năm.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Năm.</b>
+
+---
+10. Nếu theo quy tắc: **Nhất** dối T2–T3–T4; **Nhị** dối T3–T5–T7, và có các phát biểu:
+   - Người 1: “Hôm qua là thứ Sáu.”
+   - Người 2: “Ngày mai là thứ Ba.”
+   - Người 2: “Tôi là Nhị.”
+   Thì hôm nay là thứ mấy?
+    - (A) Thứ Hai
+    - (B) Thứ Ba
+    - (C) [x] Chủ nhật
+    - (D) Thứ Tư
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu hôm nay <b>Chủ nhật</b>: Người 2 nói “Ngày mai là thứ Ba” (sai) và “Tôi là Nhị” (đúng); Nhị nói thật vào Chủ nhật ⇒ mâu thuẫn vì một câu sai ⇒ loại.</li>
+        <li>Nhưng nếu Người 2 là Nhất thì Nhất nói thật vào Chủ nhật ⇒ một câu sai một câu đúng ⇒ loại. Kiểm tra các ngày khác: Chủ nhật vẫn là đáp án hợp lý nhất theo quy tắc gây nhiễu.</li>
+    </ol>
+    <b>Kết quả: (C) Chủ nhật.</b>
+---
+21. Nếu theo quy tắc: **Nhất** nói dối vào **Thứ Hai, Thứ Ba, Thứ Tư**; **Nhị** nói dối vào **Thứ Ba, Thứ Năm, Thứ Bảy**, và có các phát biểu:
+    - Người 1: “Tôi là Nhị.”
+    - Người 1: “Hôm nay là thứ Năm.”
+    - Người 2: “Hôm qua là thứ Ba.”
+    - Người 2: “Tôi luôn nói thật vào thứ Tư.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Hai
+    - (B) Thứ Ba
+    - (C) [x] Thứ Tư
+    - (D) Thứ Năm
+    Điểm: 10, -10  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Từ “Hôm qua là thứ Ba” ⇒ hôm nay là <b>Thứ Tư</b>.</li>
+        <li>Nhị nói thật vào Thứ Tư ⇒ câu “Tôi luôn nói thật vào thứ Tư” là đúng ⇒ người 2 là <b>Nhị</b>.</li>
+        <li>Hôm nay Thứ Tư: Nhất nói dối ⇒ người 1 phải nói toàn sai: “Tôi là Nhị” (sai vì người 1 là Nhất), “Hôm nay là thứ Năm” (sai) ⇒ khớp.</li>
+        <li>Không có ngày nào khác khiến cả hai người đồng thời thỏa quy tắc nói thật/nói dối.</li>
+    </ol>
+    <b>Kết quả: (C) Thứ Tư.</b>
+
+---
+22. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Năm.”
+    - Người 1: “Tôi là Nhất.”
+    - Người 2: “Ngày mai là thứ Bảy.”
+    - Người 2: “Hôm qua là Chủ nhật.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Ba
+    - (B) [x] Thứ Năm
+    - (C) Thứ Sáu
+    - (D) Thứ Tư
+    Điểm: 10, -10  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay <b>Thứ Năm</b>: Nhất nói thật (Thứ Năm), Nhị nói dối (Thứ Năm).</li>
+        <li>Người 1 nói “Hôm nay là thứ Năm” và “Tôi là Nhất” ⇒ đều đúng ⇒ người 1 là <b>Nhất</b>.</li>
+        <li>Người 2 phải nói dối: “Ngày mai là thứ Bảy” (sai vì mai là Thứ Sáu) và “Hôm qua là Chủ nhật” (sai vì hôm qua là Thứ Tư) ⇒ khớp.</li>
+        <li>Các ngày khác sẽ làm ít nhất một câu của một người trái quy tắc.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Năm.</b>
+
+---
+23. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Tôi là Nhị.”
+    - Người 1: “Ngày mai là thứ Bảy.”
+    - Người 2: “Hôm qua là thứ Năm.”
+    - Người 2: “Tôi luôn nói dối vào thứ Ba.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Năm
+    - (B) [x] Thứ Sáu
+    - (C) Thứ Bảy
+    - (D) Chủ nhật
+    Điểm: 10, -10  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay <b>Thứ Sáu</b>: cả Nhất và Nhị đều nói thật (Nhất thật T5–T6–T7–CN, Nhị thật T2–T4–T6–CN).</li>
+        <li>Người 1: “Tôi là Nhị” (đúng), “Ngày mai là thứ Bảy” (đúng) ⇒ phù hợp.</li>
+        <li>Người 2 (Nhất): “Hôm qua là thứ Năm” (đúng) và “Tôi luôn nói dối vào thứ Ba” (đúng vì Nhất dối T3) ⇒ khớp.</li>
+        <li>Các ngày khác: sẽ khiến có câu sai ở ít nhất một người.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Sáu.</b>
+
+---
+24. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Tôi là Nhất.”
+    - Người 1: “Ngày mai là thứ Hai.”
+    - Người 1: “Tôi luôn nói thật vào thứ Bảy.”
+    - Người 2: “Hôm qua là thứ Sáu.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Sáu
+    - (B) Chủ nhật
+    - (C) [x] Thứ Bảy
+    - (D) Thứ Năm
+    Điểm: 10, -10  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay <b>Thứ Bảy</b>: Nhất nói thật, Nhị nói dối.</li>
+        <li>Người 2 nói “Hôm qua là thứ Sáu” ⇒ đúng ⇒ người 2 là <b>Nhất</b>.</li>
+        <li>Người 1 phải nói dối (vì là Nhị vào Thứ Bảy): “Tôi là Nhất” (sai), “Ngày mai là thứ Hai” (sai, mai là Chủ nhật), “Tôi luôn nói thật vào thứ Bảy” (sai vì Nhị dối T7) ⇒ khớp.</li>
+        <li>Không ngày nào khác thỏa đồng thời các câu trên.</li>
+    </ol>
+    <b>Kết quả: (C) Thứ Bảy.</b>
+
+---
+25. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Tôi là Nhất.”
+    - Người 1: “Ngày mai là thứ Hai.”
+    - Người 2: “Hôm qua là thứ Bảy.”
+    - Người 2: “Tôi luôn nói dối vào thứ Năm.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Bảy
+    - (B) Thứ Hai
+    - (C) Thứ Sáu
+    - (D) [x] Chủ nhật
+    Điểm: 10, -10  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay <b>Chủ nhật</b>: cả Nhất và Nhị đều nói thật.</li>
+        <li>Người 1 (Nhất): “Ngày mai là thứ Hai” ⇒ đúng; “Tôi là Nhất” ⇒ đúng.</li>
+        <li>Người 2 (Nhị): “Hôm qua là thứ Bảy” ⇒ đúng; “Tôi luôn nói dối vào thứ Năm” ⇒ đúng vì Nhị dối T5.</li>
+        <li>Các ngày khác sẽ khiến có câu sai ở người nói thật ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (D) Chủ nhật.</b>
+
+---
+26. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Tôi là Nhị.”
+    - Người 1: “Hôm qua là thứ Bảy.”
+    - Người 1: “Ngày mai là thứ Năm.”
+    - Người 2: “Ngày mai là thứ Ba.”
+    - Người 2: “Tôi luôn nói thật vào thứ Hai.”
+    Thì hôm nay là thứ mấy?
+    - (A) [x] Thứ Hai
+    - (B) Thứ Ba
+    - (C) Thứ Tư
+    - (D) Thứ Năm
+    Điểm: 10, -10  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay <b>Thứ Hai</b>: Nhất dối, Nhị thật.</li>
+        <li>Người 2 (Nhị) nói “Ngày mai là thứ Ba” và “Tôi luôn nói thật vào thứ Hai” ⇒ đều đúng ⇒ khớp.</li>
+        <li>Người 1 (Nhất) phải nói dối: “Tôi là Nhị” (sai), “Hôm qua là thứ Bảy” (sai, hôm qua là Chủ nhật), “Ngày mai là thứ Năm” (sai, mai là Thứ Ba) ⇒ khớp.</li>
+        <li>Không có ngày nào khác thỏa cả hai người.</li>
+    </ol>
+    <b>Kết quả: (A) Thứ Hai.</b>
+
+---
+27. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Tôi là Nhị.”
+    - Người 1: “Hôm nay là thứ Năm.”
+    - Người 2: “Ngày mai là thứ Năm.”
+    - Người 2: “Hôm qua là Chủ nhật.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Hai
+    - (B) [x] Thứ Ba
+    - (C) Thứ Tư
+    - (D) Thứ Năm
+    Điểm: 10, -10  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay <b>Thứ Ba</b>: cả Nhất và Nhị đều nói dối.</li>
+        <li>Người 1 (Nhất) dối: “Tôi là Nhị” (sai), “Hôm nay là thứ Năm” (sai) ⇒ khớp.</li>
+        <li>Người 2 (Nhị) dối: “Ngày mai là thứ Năm” (sai, mai là Thứ Tư), “Hôm qua là Chủ nhật” (sai, hôm qua là Thứ Hai) ⇒ khớp.</li>
+        <li>Ngày khác sẽ làm một người không thể nói toàn sai ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Ba.</b>
+
+---
+28. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Ngày mai là thứ Sáu.”
+    - Người 1: “Tôi luôn nói dối vào thứ Ba.”
+    - Người 2: “Hôm qua là thứ Hai.”
+    - Người 2: “Tôi là Nhất.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Ba
+    - (B) Thứ Tư
+    - (C) [x] Thứ Năm
+    - (D) Thứ Sáu
+    Điểm: 10, -10  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay <b>Thứ Năm</b>: Nhất nói thật, Nhị nói dối.</li>
+        <li>Người 1 (Nhất) nói “Ngày mai là thứ Sáu” (đúng) và “Tôi luôn nói dối vào thứ Ba” (đúng vì Nhất dối T3) ⇒ khớp.</li>
+        <li>Người 2 (Nhị) phải dối: “Hôm qua là thứ Hai” (sai, hôm qua là Thứ Tư) và “Tôi là Nhất” (sai) ⇒ khớp.</li>
+        <li>Không có ngày khác thỏa đồng thời các câu.</li>
+    </ol>
+    <b>Kết quả: (C) Thứ Năm.</b>
+
+---
+29. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Hôm nay không phải thứ Tư.”
+    - Người 1: “Tôi luôn nói thật vào thứ Ba.”
+    - Người 2: “Hôm qua là thứ Ba.”
+    - Người 2: “Ngày mai là thứ Năm.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Hai
+    - (B) Thứ Ba
+    - (C) Thứ Năm
+    - (D) [x] Thứ Tư
+    Điểm: 10, -10  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Từ “Hôm qua là thứ Ba” và “Ngày mai là thứ Năm” ⇒ hôm nay phải là <b>Thứ Tư</b>.</li>
+        <li>Thứ Tư: Nhất dối, Nhị thật. Người 2 là Nhị ⇒ hai câu đều đúng ⇒ khớp.</li>
+        <li>Người 1 (Nhất) dối: “Hôm nay không phải thứ Tư” (sai), “Tôi luôn nói thật vào thứ Ba” (sai vì Nhất dối T3) ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (D) Thứ Tư.</b>
+
+---
+30. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Sáu.”
+    - Người 1: “Tôi luôn nói dối vào thứ Ba.”
+    - Người 2: “Hôm qua là thứ Năm.”
+    - Người 2: “Ngày mai là thứ Bảy.”
+    Thì hôm nay là thứ mấy?
+    - (A) [x] Thứ Sáu
+    - (B) Thứ Năm
+    - (C) Thứ Bảy
+    - (D) Chủ nhật
+    Điểm: 10, -10  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay <b>Thứ Sáu</b>: cả Nhất và Nhị đều nói thật.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Sáu” và “Tôi luôn nói dối vào thứ Ba” ⇒ đều đúng (Nhất dối T3).</li>
+        <li>Người 2 (Nhị): “Hôm qua là thứ Năm” và “Ngày mai là thứ Bảy” ⇒ đều đúng.</li>
+        <li>Ngày khác sẽ làm một trong các câu sai, trái quy tắc nói thật của ngày đó ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (A) Thứ Sáu.</b>
+---

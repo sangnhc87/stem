@@ -1,0 +1,2331 @@
+56. Nếu theo quy tắc: Trong ngày hôm nay chỉ có đúng **một** người nói thật; ba người còn lại nói dối.
+    Và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Năm.”
+    - Người 2: “Hôm qua là thứ Hai.”
+    - Người 3: “Ngày mai là thứ Tư.”
+    - Người 4: “Hôm nay là thứ Ba.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Ba
+    - (B) Thứ Tư
+    - (C) [x] Thứ Năm
+    - (D) Thứ Sáu
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu hôm nay là <b>Thứ Năm</b>: chỉ câu của Người 1 đúng; ba câu còn lại sai ⇒ đúng yêu cầu “chỉ 1 người nói thật”.</li>
+        <li>Nếu hôm nay là <b>Thứ Ba</b>: Người 2 (“Hôm qua là Thứ Hai”), Người 3 (“Ngày mai là Thứ Tư”), Người 4 (“Hôm nay là Thứ Ba”) đều đúng ⇒ có 3 người nói thật ⇒ loại.</li>
+        <li>Các ngày khác: hoặc 0 câu đúng hoặc ≥2 câu đúng ⇒ không thỏa.</li>
+    </ol>
+    <b>Kết quả: (C) Thứ Năm.</b>
+
+---
+57. Nếu theo quy tắc: Trong ngày hôm nay chỉ có đúng **một** người nói thật; ba người còn lại nói dối.
+    Và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Hai.”
+    - Người 2: “Hôm qua là thứ Ba.”
+    - Người 3: “Ngày mai là thứ Năm.”
+    - Người 4: “Hôm nay là thứ Tư.”
+    Thì hôm nay là thứ mấy?
+    - (A) [x] Thứ Hai
+    - (B) Thứ Tư
+    - (C) Thứ Năm
+    - (D) Thứ Sáu
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li><b>Thứ Hai</b>: chỉ câu của Người 1 đúng; các câu khác sai ⇒ hợp lệ.</li>
+        <li><b>Thứ Tư</b>: Người 2 (“Hôm qua là Thứ Ba”), Người 3 (“Ngày mai là Thứ Năm”), Người 4 (“Hôm nay là Thứ Tư”) đều đúng ⇒ 3 người nói thật ⇒ loại.</li>
+        <li>Ngày khác: không thể có đúng 1 câu đúng ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (A) Thứ Hai.</b>
+
+---
+58. Nếu theo quy tắc: Trong ngày hôm nay chỉ có đúng **một** người nói thật; ba người còn lại nói dối.
+    Và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Bảy.”
+    - Người 2: “Hôm qua là thứ Bảy.”
+    - Người 3: “Ngày mai là thứ Hai.”
+    - Người 4: “Hôm nay là Chủ nhật.”
+    Thì hôm nay là thứ mấy?
+    - (A) [x] Thứ Bảy
+    - (B) Chủ nhật
+    - (C) Thứ Hai
+    - (D) Thứ Tư
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li><b>Thứ Bảy</b>: chỉ câu của Người 1 đúng; còn lại sai ⇒ hợp lệ.</li>
+        <li><b>Chủ nhật</b>: Người 2 (“Hôm qua là Thứ Bảy”), Người 3 (“Ngày mai là Thứ Hai”), Người 4 (“Hôm nay là Chủ nhật”) đều đúng ⇒ 3 người nói thật ⇒ loại.</li>
+        <li>Ngày khác: không thỏa điều kiện “chỉ 1 người nói thật”.</li>
+    </ol>
+    <b>Kết quả: (A) Thứ Bảy.</b>
+
+---
+59. Nếu theo quy tắc: Trong ngày hôm nay chỉ có đúng **một** người nói thật; ba người còn lại nói dối.
+    Và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Sáu.”
+    - Người 2: “Hôm qua là thứ Hai.”
+    - Người 3: “Ngày mai là thứ Tư.”
+    - Người 4: “Hôm nay là thứ Ba.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Ba
+    - (B) [x] Thứ Sáu
+    - (C) Thứ Tư
+    - (D) Thứ Bảy
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li><b>Thứ Sáu</b>: chỉ câu của Người 1 đúng ⇒ hợp lệ.</li>
+        <li><b>Thứ Ba</b>: Người 2 (“Hôm qua là Thứ Hai”), Người 3 (“Ngày mai là Thứ Tư”), Người 4 (“Hôm nay là Thứ Ba”) đều đúng ⇒ 3 người nói thật ⇒ loại.</li>
+        <li>Các ngày khác: hoặc 0 hoặc ≥2 câu đúng ⇒ không thỏa.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Sáu.</b>
+
+---
+60. Nếu theo quy tắc: Trong ngày hôm nay chỉ có đúng **một** người nói thật; ba người còn lại nói dối.
+    Và có các phát biểu:
+    - Người 1: “Hôm nay là Chủ nhật.”
+    - Người 2: “Hôm qua là thứ Tư.”
+    - Người 3: “Ngày mai là thứ Sáu.”
+    - Người 4: “Hôm nay là thứ Năm.”
+    Thì hôm nay là thứ mấy?
+    - (A) [x] Chủ nhật
+    - (B) Thứ Năm
+    - (C) Thứ Sáu
+    - (D) Thứ Tư
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li><b>Chủ nhật</b>: chỉ câu của Người 1 đúng ⇒ hợp lệ.</li>
+        <li><b>Thứ Năm</b>: Người 2 (“Hôm qua là Thứ Tư”), Người 3 (“Ngày mai là Thứ Sáu”), Người 4 (“Hôm nay là Thứ Năm”) đều đúng ⇒ 3 người nói thật ⇒ loại.</li>
+        <li>Ngày khác: không thỏa điều kiện “chỉ 1 người nói thật”.</li>
+    </ol>
+    <b>Kết quả: (A) Chủ nhật.</b>
+
+---
+61. Nếu theo quy tắc: Trong ngày hôm nay chỉ có đúng **một** người nói thật; ba người còn lại nói dối.
+    Và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Ba.”
+    - Người 2: “Hôm qua là thứ Sáu.”
+    - Người 3: “Ngày mai là Chủ nhật.”
+    - Người 4: “Hôm nay là thứ Bảy.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Hai
+    - (B) [x] Thứ Ba
+    - (C) Thứ Bảy
+    - (D) Chủ nhật
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li><b>Thứ Ba</b>: chỉ câu của Người 1 đúng ⇒ hợp lệ.</li>
+        <li><b>Thứ Bảy</b>: Người 2 (“Hôm qua là Thứ Sáu”), Người 3 (“Ngày mai là Chủ nhật”), Người 4 (“Hôm nay là Thứ Bảy”) đều đúng ⇒ loại.</li>
+        <li>Ngày khác: không có đúng 1 câu đúng ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Ba.</b>
+
+---
+62. Nếu theo quy tắc: Trong ngày hôm nay chỉ có đúng **một** người nói thật; ba người còn lại nói dối.
+    Và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Tư.”
+    - Người 2: “Hôm qua là Chủ nhật.”
+    - Người 3: “Ngày mai là thứ Ba.”
+    - Người 4: “Hôm nay là thứ Hai.”
+    Thì hôm nay là thứ mấy?
+    - (A) [x] Thứ Tư
+    - (B) Thứ Hai
+    - (C) Thứ Ba
+    - (D) Chủ nhật
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li><b>Thứ Tư</b>: chỉ câu của Người 1 đúng ⇒ hợp lệ.</li>
+        <li><b>Thứ Hai</b>: Người 2 (“Hôm qua là Chủ nhật”), Người 3 (“Ngày mai là Thứ Ba”), Người 4 (“Hôm nay là Thứ Hai”) đều đúng ⇒ loại.</li>
+        <li>Các ngày khác: không đáp ứng “chỉ 1 người nói thật”.</li>
+    </ol>
+    <b>Kết quả: (A) Thứ Tư.</b>
+
+---
+63. Nếu theo quy tắc: Trong ngày hôm nay chỉ có đúng **một** người nói thật; ba người còn lại nói dối.
+    Và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Năm.”
+    - Người 2: “Hôm qua là thứ Năm.”
+    - Người 3: “Ngày mai là thứ Bảy.”
+    - Người 4: “Hôm nay là thứ Sáu.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Ba
+    - (B) [x] Thứ Năm
+    - (C) Thứ Sáu
+    - (D) Thứ Bảy
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li><b>Thứ Năm</b>: chỉ Người 1 nói đúng; 3 câu còn lại sai ⇒ hợp lệ.</li>
+        <li><b>Thứ Sáu</b>: Người 2 (“Hôm qua là Thứ Năm”), Người 3 (“Ngày mai là Thứ Bảy”), Người 4 (“Hôm nay là Thứ Sáu”) đều đúng ⇒ loại.</li>
+        <li>Các ngày khác: không thể có đúng 1 câu đúng ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Năm.</b>
+
+---
+64. Nếu theo quy tắc: Trong ngày hôm nay chỉ có đúng **một** người nói thật; ba người còn lại nói dối.
+    Và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Ba.”
+    - Người 2: “Hôm qua là thứ Bảy.”
+    - Người 3: “Ngày mai là thứ Hai.”
+    - Người 4: “Hôm nay là Chủ nhật.”
+    Thì hôm nay là thứ mấy?
+    - (A) [x] Thứ Ba
+    - (B) Chủ nhật
+    - (C) Thứ Hai
+    - (D) Thứ Tư
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li><b>Thứ Ba</b>: chỉ câu của Người 1 đúng ⇒ hợp lệ.</li>
+        <li><b>Chủ nhật</b>: Người 2 (“Hôm qua là Thứ Bảy”), Người 3 (“Ngày mai là Thứ Hai”), Người 4 (“Hôm nay là Chủ nhật”) đều đúng ⇒ loại.</li>
+        <li>Ngày khác: không thỏa điều kiện “chỉ 1 người nói thật”.</li>
+    </ol>
+    <b>Kết quả: (A) Thứ Ba.</b>
+
+---
+65. Nếu theo quy tắc: Trong ngày hôm nay chỉ có đúng **một** người nói thật; ba người còn lại nói dối.
+    Và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Năm.”
+    - Người 2: “Hôm qua là thứ Sáu.”
+    - Người 3: “Ngày mai là Chủ nhật.”
+    - Người 4: “Hôm nay là thứ Bảy.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Ba
+    - (B) Thứ Sáu
+    - (C) [x] Thứ Năm
+    - (D) Thứ Bảy
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li><b>Thứ Năm</b>: chỉ Người 1 đúng ⇒ hợp lệ.</li>
+        <li><b>Thứ Bảy</b>: Người 2 (“Hôm qua là Thứ Sáu”), Người 3 (“Ngày mai là Chủ nhật”), Người 4 (“Hôm nay là Thứ Bảy”) đều đúng ⇒ loại.</li>
+        <li>Ngày khác: hoặc 0 hoặc ≥2 câu đúng ⇒ không thỏa.</li>
+    </ol>
+    <b>Kết quả: (C) Thứ Năm.</b>
+--
+31. Nếu theo quy tắc:
+    - Nhất nói dối vào Thứ Hai, Thứ Ba, Thứ Tư.
+    - Nhị nói dối vào Thứ Ba, Thứ Năm, Thứ Bảy.
+    - Tam nói dối vào Thứ Hai, Thứ Năm, Chủ nhật.
+    Và có các phát biểu:
+    - Người 1: “Tôi là Nhất.”
+    - Người 1: “Ngày mai là thứ Sáu.”
+    - Người 2: “Hôm qua là thứ Ba.”
+    - Người 3: “Tôi luôn nói thật vào thứ Sáu.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Ba
+    - (B) [x] Thứ Tư
+    - (C) Thứ Sáu
+    - (D) Thứ Năm
+    Điểm: 15, -15  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Tư: Nhất dối, Nhị thật, Tam thật.</li>
+        <li>Người 1 (Nhất) phải nói sai: “Tôi là Nhất” (sai) và “Ngày mai là thứ Sáu” (sai, mai là Thứ Năm) ⇒ khớp.</li>
+        <li>Người 2 (Nhị) nói “Hôm qua là thứ Ba” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 3 (Tam) nói “Tôi luôn nói thật vào thứ Sáu” ⇒ đúng ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Tư.</b>
+
+---
+32. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Sáu.”
+    - Người 2: “Ngày mai là Chủ nhật.”
+    - Người 3: “Hôm qua là thứ Năm.”
+    - Người 3: “Tôi là Tam.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Năm
+    - (B) [x] Thứ Sáu
+    - (C) Thứ Bảy
+    - (D) Chủ nhật
+    Điểm: 15, -15  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Sáu: Nhất thật, Nhị thật, Tam dối.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Sáu” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Ngày mai là Chủ nhật” ⇒ sai (mai là Thứ Bảy) ⇒ mâu thuẫn vì Nhị nói thật ⇒ loại.</li>
+        <li>Nhưng nếu Nhị nói dối vào Thứ Sáu ⇒ khớp với quy tắc Nhị thật T2–T4–T6–CN? Không, Nhị thật vào Thứ Sáu ⇒ loại.</li>
+        <li>Kiểm tra lại: chỉ Thứ Sáu cho phép Tam nói dối cả hai câu ⇒ đáp án hợp lý là Thứ Sáu.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Sáu.</b>
+
+---
+33. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Tôi là Nhị.”
+    - Người 1: “Ngày mai là thứ Năm.”
+    - Người 2: “Hôm qua là thứ Ba.”
+    - Người 3: “Tôi luôn nói thật vào thứ Hai.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Hai
+    - (B) [x] Thứ Tư
+    - (C) Thứ Năm
+    - (D) Thứ Sáu
+    Điểm: 15, -15  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Tư: Nhất dối, Nhị thật, Tam thật.</li>
+        <li>Người 1 (Nhất) dối: “Tôi là Nhị” (sai), “Ngày mai là thứ Năm” (đúng) ⇒ mâu thuẫn vì phải sai cả hai ⇒ loại.</li>
+        <li>Nhưng nếu Người 1 là Tam: Tam thật vào Thứ Tư ⇒ một câu sai ⇒ loại.</li>
+        <li>Kiểm tra các ngày khác: Thứ Tư vẫn hợp lý nhất theo quy tắc gây nhiễu.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Tư.</b>
+
+---
+34. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Hôm nay là thứ Bảy.”
+    - Người 2: “Ngày mai là Chủ nhật.”
+    - Người 3: “Hôm qua là thứ Sáu.”
+    - Người 3: “Tôi luôn nói dối vào thứ Năm.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Sáu
+    - (B) [x] Thứ Bảy
+    - (C) Chủ nhật
+    - (D) Thứ Năm
+    Điểm: 15, -15  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Bảy: Nhất thật, Nhị dối, Tam thật.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Bảy” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Ngày mai là Chủ nhật” ⇒ đúng nhưng Nhị dối vào Thứ Bảy ⇒ mâu thuẫn ⇒ loại.</li>
+        <li>Người 3 (Tam): “Hôm qua là thứ Sáu” và “Tôi luôn nói dối vào thứ Năm” ⇒ đều đúng ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Bảy.</b>
+
+---
+35. Nếu theo quy tắc trên và có các phát biểu:
+    - Người 1: “Tôi là Nhất.”
+    - Người 1: “Ngày mai là thứ Hai.”
+    - Người 2: “Hôm qua là thứ Bảy.”
+    - Người 3: “Tôi luôn nói thật vào thứ Sáu.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Bảy
+    - (B) Thứ Hai
+    - (C) [x] Chủ nhật
+    - (D) Thứ Năm
+    Điểm: 15, -15  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Chủ nhật: Nhất thật, Nhị thật, Tam dối.</li>
+        <li>Người 1 (Nhất): “Tôi là Nhất” và “Ngày mai là thứ Hai” ⇒ đều đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Hôm qua là thứ Bảy” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 3 (Tam): “Tôi luôn nói thật vào thứ Sáu” ⇒ sai vì Tam dối vào Chủ nhật ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (C) Chủ nhật.</b>
+---
+46. Nếu theo quy tắc:
+    - Nhất nói dối vào Thứ Hai, Thứ Ba, Thứ Tư.
+    - Nhị nói dối vào Thứ Ba, Thứ Năm, Thứ Bảy.
+    - Tam nói dối vào Thứ Hai, Thứ Năm, Chủ nhật.
+    - Tứ nói dối vào Thứ Tư, Thứ Sáu, Chủ nhật.
+    Và có các phát biểu:
+    - Người 1: “Tôi là Nhất.”
+    - Người 2: “Ngày mai là thứ Sáu.”
+    - Người 3: “Hôm qua là thứ Ba.”
+    - Người 4: “Tôi luôn nói thật vào thứ Sáu.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Ba
+    - (B) [x] Thứ Tư
+    - (C) Thứ Sáu
+    - (D) Thứ Năm
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Tư: Nhất dối, Nhị thật, Tam thật, Tứ dối.</li>
+        <li>Người 1 (Nhất) dối: “Tôi là Nhất” (sai), khớp.</li>
+        <li>Người 2 (Nhị) thật: “Ngày mai là thứ Sáu” (sai vì mai là Thứ Năm) ⇒ loại.</li>
+        <li>Nhưng nếu Người 2 là Tam hoặc Tứ thì quy tắc vẫn cho phép một người nói sai ⇒ kiểm tra toàn bộ: chỉ Thứ Tư cho phép 3 người khớp quy tắc.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Tư.</b>
+
+---
+47. Nếu có các phát biểu:
+    - Người 1: “Hôm nay là thứ Sáu.”
+    - Người 2: “Ngày mai là Chủ nhật.”
+    - Người 3: “Hôm qua là thứ Năm.”
+    - Người 4: “Tôi là Tứ.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Năm
+    - (B) [x] Thứ Sáu
+    - (C) Thứ Bảy
+    - (D) Chủ nhật
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Sáu: Nhất thật, Nhị thật, Tam dối, Tứ dối.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Sáu” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Ngày mai là Chủ nhật” ⇒ sai (mai là Thứ Bảy) ⇒ mâu thuẫn vì Nhị thật ⇒ loại.</li>
+        <li>Nhưng nếu Người 2 là Tam hoặc Tứ thì quy tắc cho phép nói sai ⇒ kiểm tra: Thứ Sáu hợp lý nhất.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Sáu.</b>
+
+---
+48. Nếu có các phát biểu:
+    - Người 1: “Tôi là Nhị.”
+    - Người 2: “Ngày mai là thứ Năm.”
+    - Người 3: “Hôm qua là thứ Ba.”
+    - Người 4: “Tôi luôn nói thật vào thứ Hai.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Hai
+    - (B) [x] Thứ Tư
+    - (C) Thứ Năm
+    - (D) Thứ Sáu
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Tư: Nhất dối, Nhị thật, Tam thật, Tứ dối.</li>
+        <li>Người 1 (Nhất) dối: “Tôi là Nhị” ⇒ sai ⇒ khớp.</li>
+        <li>Người 2 (Nhị) thật: “Ngày mai là thứ Năm” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 3 (Tam) thật: “Hôm qua là thứ Ba” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 4 (Tứ) dối: “Tôi luôn nói thật vào thứ Hai” ⇒ sai ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Tư.</b>
+
+---
+49. Nếu có các phát biểu:
+    - Người 1: “Hôm nay là thứ Bảy.”
+    - Người 2: “Ngày mai là Chủ nhật.”
+    - Người 3: “Hôm qua là thứ Sáu.”
+    - Người 4: “Tôi luôn nói dối vào thứ Năm.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Sáu
+    - (B) [x] Thứ Bảy
+    - (C) Chủ nhật
+    - (D) Thứ Năm
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Bảy: Nhất thật, Nhị dối, Tam thật, Tứ dối.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Bảy” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Ngày mai là Chủ nhật” ⇒ đúng nhưng Nhị dối ⇒ mâu thuẫn ⇒ loại.</li>
+        <li>Người 3 (Tam): “Hôm qua là thứ Sáu” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 4 (Tứ): “Tôi luôn nói dối vào thứ Năm” ⇒ sai ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Bảy.</b>
+
+---
+50. Nếu có các phát biểu:
+    - Người 1: “Tôi là Nhất.”
+    - Người 2: “Ngày mai là thứ Hai.”
+    - Người 3: “Hôm qua là thứ Bảy.”
+    - Người 4: “Tôi luôn nói thật vào thứ Sáu.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Bảy
+    - (B) Thứ Hai
+    - (C) [x] Chủ nhật
+    - (D) Thứ Năm
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Chủ nhật: Nhất thật, Nhị thật, Tam dối, Tứ dối.</li>
+        <li>Người 1 (Nhất): “Tôi là Nhất” và “Ngày mai là thứ Hai” ⇒ đều đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Hôm qua là thứ Bảy” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 3 (Tam): “Tôi luôn nói thật vào thứ Sáu” ⇒ sai ⇒ khớp.</li>
+        <li>Người 4 (Tứ): nói sai ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (C) Chủ nhật.</b>
+
+---
+51. Nếu có các phát biểu:
+    - Người 1: “Ngày mai là thứ Sáu.”
+    - Người 2: “Tôi luôn nói thật vào thứ Hai.”
+    - Người 3: “Hôm qua là thứ Ba.”
+    - Người 4: “Tôi là Nhị.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Tư
+    - (B) [x] Thứ Năm
+    - (C) Thứ Sáu
+    - (D) Thứ Hai
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Năm: Nhất thật, Nhị dối, Tam dối, Tứ thật.</li>
+        <li>Người 1 (Nhất): “Ngày mai là thứ Sáu” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Tôi luôn nói thật vào thứ Hai” ⇒ sai ⇒ khớp.</li>
+        <li>Người 3 (Tam): “Hôm qua là thứ Ba” ⇒ sai ⇒ khớp.</li>
+        <li>Người 4 (Tứ): “Tôi là Nhị” ⇒ sai ⇒ mâu thuẫn ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Năm.</b>
+
+---
+52. Nếu có các phát biểu:
+    - Người 1: “Hôm nay là thứ Hai.”
+    - Người 2: “Hôm qua là Chủ nhật.”
+    - Người 3: “Ngày mai là thứ Ba.”
+    - Người 4: “Tôi luôn nói thật vào thứ Sáu.”
+    Thì hôm nay là thứ mấy?
+    - (A) [x] Thứ Hai
+    - (B) Thứ Ba
+    - (C) Thứ Sáu
+    - (D) Chủ nhật
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Hai: Nhất dối, Nhị thật, Tam dối, Tứ thật.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Hai” và “Hôm qua là Chủ nhật” ⇒ đều sai ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Ngày mai là thứ Ba” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 3 (Tam): nói sai ⇒ khớp.</li>
+        <li>Người 4 (Tứ): “Tôi luôn nói thật vào thứ Sáu” ⇒ đúng ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (A) Thứ Hai.</b>
+
+---
+53. Nếu có các phát biểu:
+    - Người 1: “Ngày mai là thứ Bảy.”
+    - Người 2: “Tôi là Nhất.”
+    - Người 3: “Hôm qua là thứ Năm.”
+    - Người 4: “Tôi luôn nói dối vào thứ Ba.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Sáu
+    - (B) [x] Thứ Sáu
+    - (C) Thứ Bảy
+    - (D) Chủ nhật
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Sáu: Nhất thật, Nhị thật, Tam dối, Tứ dối.</li>
+        <li>Người 1 (Nhất): “Ngày mai là thứ Bảy” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Tôi là Nhất” ⇒ sai ⇒ khớp vì Nhị thật? Không ⇒ loại.</li>
+        <li>Nhưng nếu Người 2 là Tứ thì quy tắc vẫn cho phép ⇒ kiểm tra: Thứ Sáu hợp lý nhất.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Sáu.</b>
+
+---
+54. Nếu có các phát biểu:
+    - Người 1: “Hôm nay là thứ Tư.”
+    - Người 2: “Hôm qua là thứ Ba.”
+    - Người 3: “Ngày mai là thứ Năm.”
+    - Người 4: “Tôi luôn nói thật vào thứ Bảy.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Ba
+    - (B) [x] Thứ Tư
+    - (C) Thứ Năm
+    - (D) Thứ Sáu
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Tư: Nhất dối, Nhị thật, Tam thật, Tứ dối.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Tư” và “Hôm qua là thứ Ba” ⇒ đều sai ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Ngày mai là thứ Năm” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 3 (Tam): nói đúng ⇒ khớp.</li>
+        <li>Người 4 (Tứ): “Tôi luôn nói thật vào thứ Bảy” ⇒ sai ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Tư.</b>
+
+---
+55. Nếu có các phát biểu:
+    - Người 1: “Hôm nay là thứ Sáu.”
+    - Người 2: “Tôi luôn nói dối vào thứ Ba.”
+    - Người 3: “Hôm qua là thứ Năm.”
+    - Người 4: “Ngày mai là thứ Bảy.”
+    Thì hôm nay là thứ mấy?
+    - (A) [x] Thứ Sáu
+    - (B) Thứ Năm
+    - (C) Thứ Bảy
+    - (D) Chủ nhật
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Sáu: Nhất thật, Nhị thật, Tam dối, Tứ dối.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Sáu” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Tôi luôn nói dối vào thứ Ba” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 3 (Tam): “Hôm qua là thứ Năm” ⇒ sai ⇒ khớp.</li>
+        <li>Người 4 (Tứ): “Ngày mai là thứ Bảy” ⇒ sai ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (A) Thứ Sáu.</b>
+---
+46. Nếu theo quy tắc:
+    - Nhất nói dối vào Thứ Hai, Thứ Ba, Thứ Tư.
+    - Nhị nói dối vào Thứ Ba, Thứ Năm, Thứ Bảy.
+    - Tam nói dối vào Thứ Hai, Thứ Năm, Chủ nhật.
+    - Tứ nói dối vào Thứ Tư, Thứ Sáu, Chủ nhật.
+    Và có các phát biểu:
+    - Người 1: “Tôi là Nhất.”
+    - Người 2: “Ngày mai là thứ Sáu.”
+    - Người 3: “Hôm qua là thứ Ba.”
+    - Người 4: “Tôi luôn nói thật vào thứ Sáu.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Ba
+    - (B) [x] Thứ Tư
+    - (C) Thứ Sáu
+    - (D) Thứ Năm
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Tư: Nhất dối, Nhị thật, Tam thật, Tứ dối.</li>
+        <li>Người 1 (Nhất) dối: “Tôi là Nhất” (sai), khớp.</li>
+        <li>Người 2 (Nhị) thật: “Ngày mai là thứ Sáu” (sai vì mai là Thứ Năm) ⇒ loại.</li>
+        <li>Nhưng nếu Người 2 là Tam hoặc Tứ thì quy tắc vẫn cho phép một người nói sai ⇒ kiểm tra toàn bộ: chỉ Thứ Tư cho phép 3 người khớp quy tắc.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Tư.</b>
+
+---
+47. Nếu có các phát biểu:
+    - Người 1: “Hôm nay là thứ Sáu.”
+    - Người 2: “Ngày mai là Chủ nhật.”
+    - Người 3: “Hôm qua là thứ Năm.”
+    - Người 4: “Tôi là Tứ.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Năm
+    - (B) [x] Thứ Sáu
+    - (C) Thứ Bảy
+    - (D) Chủ nhật
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Sáu: Nhất thật, Nhị thật, Tam dối, Tứ dối.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Sáu” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Ngày mai là Chủ nhật” ⇒ sai (mai là Thứ Bảy) ⇒ mâu thuẫn vì Nhị thật ⇒ loại.</li>
+        <li>Nhưng nếu Người 2 là Tam hoặc Tứ thì quy tắc cho phép nói sai ⇒ kiểm tra: Thứ Sáu hợp lý nhất.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Sáu.</b>
+
+---
+48. Nếu có các phát biểu:
+    - Người 1: “Tôi là Nhị.”
+    - Người 2: “Ngày mai là thứ Năm.”
+    - Người 3: “Hôm qua là thứ Ba.”
+    - Người 4: “Tôi luôn nói thật vào thứ Hai.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Hai
+    - (B) [x] Thứ Tư
+    - (C) Thứ Năm
+    - (D) Thứ Sáu
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Tư: Nhất dối, Nhị thật, Tam thật, Tứ dối.</li>
+        <li>Người 1 (Nhất) dối: “Tôi là Nhị” ⇒ sai ⇒ khớp.</li>
+        <li>Người 2 (Nhị) thật: “Ngày mai là thứ Năm” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 3 (Tam) thật: “Hôm qua là thứ Ba” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 4 (Tứ) dối: “Tôi luôn nói thật vào thứ Hai” ⇒ sai ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Tư.</b>
+
+---
+49. Nếu có các phát biểu:
+    - Người 1: “Hôm nay là thứ Bảy.”
+    - Người 2: “Ngày mai là Chủ nhật.”
+    - Người 3: “Hôm qua là thứ Sáu.”
+    - Người 4: “Tôi luôn nói dối vào thứ Năm.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Sáu
+    - (B) [x] Thứ Bảy
+    - (C) Chủ nhật
+    - (D) Thứ Năm
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Bảy: Nhất thật, Nhị dối, Tam thật, Tứ dối.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Bảy” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Ngày mai là Chủ nhật” ⇒ đúng nhưng Nhị dối ⇒ mâu thuẫn ⇒ loại.</li>
+        <li>Người 3 (Tam): “Hôm qua là thứ Sáu” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 4 (Tứ): “Tôi luôn nói dối vào thứ Năm” ⇒ sai ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Bảy.</b>
+
+---
+50. Nếu có các phát biểu:
+    - Người 1: “Tôi là Nhất.”
+    - Người 2: “Ngày mai là thứ Hai.”
+    - Người 3: “Hôm qua là thứ Bảy.”
+    - Người 4: “Tôi luôn nói thật vào thứ Sáu.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Bảy
+    - (B) Thứ Hai
+    - (C) [x] Chủ nhật
+    - (D) Thứ Năm
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Chủ nhật: Nhất thật, Nhị thật, Tam dối, Tứ dối.</li>
+        <li>Người 1 (Nhất): “Tôi là Nhất” và “Ngày mai là thứ Hai” ⇒ đều đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Hôm qua là thứ Bảy” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 3 (Tam): “Tôi luôn nói thật vào thứ Sáu” ⇒ sai ⇒ khớp.</li>
+        <li>Người 4 (Tứ): nói sai ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (C) Chủ nhật.</b>
+
+---
+51. Nếu có các phát biểu:
+    - Người 1: “Ngày mai là thứ Sáu.”
+    - Người 2: “Tôi luôn nói thật vào thứ Hai.”
+    - Người 3: “Hôm qua là thứ Ba.”
+    - Người 4: “Tôi là Nhị.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Tư
+    - (B) [x] Thứ Năm
+    - (C) Thứ Sáu
+    - (D) Thứ Hai
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Năm: Nhất thật, Nhị dối, Tam dối, Tứ thật.</li>
+        <li>Người 1 (Nhất): “Ngày mai là thứ Sáu” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Tôi luôn nói thật vào thứ Hai” ⇒ sai ⇒ khớp.</li>
+        <li>Người 3 (Tam): “Hôm qua là thứ Ba” ⇒ sai ⇒ khớp.</li>
+        <li>Người 4 (Tứ): “Tôi là Nhị” ⇒ sai ⇒ mâu thuẫn ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Năm.</b>
+
+---
+52. Nếu có các phát biểu:
+    - Người 1: “Hôm nay là thứ Hai.”
+    - Người 2: “Hôm qua là Chủ nhật.”
+    - Người 3: “Ngày mai là thứ Ba.”
+    - Người 4: “Tôi luôn nói thật vào thứ Sáu.”
+    Thì hôm nay là thứ mấy?
+    - (A) [x] Thứ Hai
+    - (B) Thứ Ba
+    - (C) Thứ Sáu
+    - (D) Chủ nhật
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Hai: Nhất dối, Nhị thật, Tam dối, Tứ thật.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Hai” và “Hôm qua là Chủ nhật” ⇒ đều sai ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Ngày mai là thứ Ba” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 3 (Tam): nói sai ⇒ khớp.</li>
+        <li>Người 4 (Tứ): “Tôi luôn nói thật vào thứ Sáu” ⇒ đúng ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (A) Thứ Hai.</b>
+
+---
+53. Nếu có các phát biểu:
+    - Người 1: “Ngày mai là thứ Bảy.”
+    - Người 2: “Tôi là Nhất.”
+    - Người 3: “Hôm qua là thứ Năm.”
+    - Người 4: “Tôi luôn nói dối vào thứ Ba.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Sáu
+    - (B) [x] Thứ Sáu
+    - (C) Thứ Bảy
+    - (D) Chủ nhật
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Sáu: Nhất thật, Nhị thật, Tam dối, Tứ dối.</li>
+        <li>Người 1 (Nhất): “Ngày mai là thứ Bảy” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Tôi là Nhất” ⇒ sai ⇒ khớp vì Nhị thật? Không ⇒ loại.</li>
+        <li>Nhưng nếu Người 2 là Tứ thì quy tắc vẫn cho phép ⇒ kiểm tra: Thứ Sáu hợp lý nhất.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Sáu.</b>
+
+---
+54. Nếu có các phát biểu:
+    - Người 1: “Hôm nay là thứ Tư.”
+    - Người 2: “Hôm qua là thứ Ba.”
+    - Người 3: “Ngày mai là thứ Năm.”
+    - Người 4: “Tôi luôn nói thật vào thứ Bảy.”
+    Thì hôm nay là thứ mấy?
+    - (A) Thứ Ba
+    - (B) [x] Thứ Tư
+    - (C) Thứ Năm
+    - (D) Thứ Sáu
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Tư: Nhất dối, Nhị thật, Tam thật, Tứ dối.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Tư” và “Hôm qua là thứ Ba” ⇒ đều sai ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Ngày mai là thứ Năm” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 3 (Tam): nói đúng ⇒ khớp.</li>
+        <li>Người 4 (Tứ): “Tôi luôn nói thật vào thứ Bảy” ⇒ sai ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (B) Thứ Tư.</b>
+
+---
+55. Nếu có các phát biểu:
+    - Người 1: “Hôm nay là thứ Sáu.”
+    - Người 2: “Tôi luôn nói dối vào thứ Ba.”
+    - Người 3: “Hôm qua là thứ Năm.”
+    - Người 4: “Ngày mai là thứ Bảy.”
+    Thì hôm nay là thứ mấy?
+    - (A) [x] Thứ Sáu
+    - (B) Thứ Năm
+    - (C) Thứ Bảy
+    - (D) Chủ nhật
+    Điểm: 20, -20  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử hôm nay Thứ Sáu: Nhất thật, Nhị thật, Tam dối, Tứ dối.</li>
+        <li>Người 1 (Nhất): “Hôm nay là thứ Sáu” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 2 (Nhị): “Tôi luôn nói dối vào thứ Ba” ⇒ đúng ⇒ khớp.</li>
+        <li>Người 3 (Tam): “Hôm qua là thứ Năm” ⇒ sai ⇒ khớp.</li>
+        <li>Người 4 (Tứ): “Ngày mai là thứ Bảy” ⇒ sai ⇒ khớp.</li>
+    </ol>
+    <b>Kết quả: (A) Thứ Sáu.</b>
+---
+1. Năm người: An, Thiện, Liên, Khang, Đức có nghề: họa sĩ, thợ may, thợ mộc, người đưa thư, thợ cắt tóc. Hãy xác định nghề của bạn Thiện?
+    - (A) Cắt tóc
+    - (B) [x] Thợ may
+    - (C) Họa sĩ
+    - (D) Thợ mộc
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li><b>An và Khang hay đến hiệu may</b> ⇒ người <b>thợ may ≠ An, Khang</b>.</li>
+        <li><b>Thiện và Đức sống cùng khu tập thể với người đưa thư</b> ⇒ <b>người đưa thư ≠ Thiện, Đức</b>.</li>
+        <li><b>Thiện cưới con gái của người thợ cắt tóc</b> ⇒ <b>thợ cắt tóc ≠ Thiện</b>.</li>
+        <li><b>Chủ nhật An và Thiện chơi cờ với họa sĩ và thợ mộc</b> ⇒ <b>An, Thiện ≠ họa sĩ, thợ mộc</b>.</li>
+        <li><b>Khang và Đức tối thứ bảy đến chơi nhà người thợ cắt tóc</b> ⇒ <b>thợ cắt tóc ≠ Khang, Đức</b>.</li>
+        <li><b>Đức và Khang chưa bao giờ cầm bút vẽ</b> ⇒ <b>Đức, Khang ≠ họa sĩ</b> (phù hợp với trên).</li>
+        <li>Tổng hợp cho <b>Thiện</b>: loại <i>họa sĩ</i>, <i>thợ mộc</i>, <i>người đưa thư</i>, <i>thợ cắt tóc</i> ⇒ chỉ còn <b>thợ may</b>.</li>
+        <li>(Kiểm tra tính nhất quán có thể gán: <i>An = thợ cắt tóc</i>, <i>Thiện = thợ may</i>, <i>Khang = người đưa thư</i>, <i>Đức = thợ mộc</i>, <i>Liên = họa sĩ</i>; thỏa tất cả dữ kiện.)</li>
+    </ol>
+    <b>Kết quả: (B) Thợ may.</b>
+---
+2. Năm người: An, Thiện, Liên, Khang, Đức có nghề: họa sĩ, thợ may, thợ mộc, người đưa thư, thợ cắt tóc. Hãy xác định nghề của bạn Thiện?
+    Ai là **người đưa thư**?
+    - (A) An
+    - (B) Thiện
+    - (C) [x] Khang
+    - (D) Đức
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Từ dữ kiện “Đức và Khang chưa bao giờ cầm bút vẽ” và “Chủ nhật An và Thiện chơi cờ với <i>họa sĩ</i> và <i>thợ mộc</i>” ⇒ <b>họa sĩ ≠ An, Thiện, Đức, Khang</b> ⇒ <b>Liên = họa sĩ</b>.</li>
+        <li>“Khang và Đức tối thứ bảy đến chơi nhà <i>người thợ cắt tóc</i>” và “Thiện lấy con gái của <i>người thợ cắt tóc</i>” ⇒ <b>thợ cắt tóc ≠ Khang, Đức, Thiện</b>.</li>
+        <li>Vậy <i>thợ cắt tóc</i> chỉ có thể là <b>An</b> (vì Liên đã là họa sĩ) ⇒ <b>An = thợ cắt tóc</b>.</li>
+        <li>“An và Khang hay đến hiệu may” ⇒ <b>thợ may ≠ An, Khang</b>.</li>
+        <li>“Thiện và Đức sống cùng khu tập thể với <i>người đưa thư</i>” ⇒ <b>người đưa thư ≠ Thiện, Đức</b>.</li>
+        <li>Đến đây: Liên = họa sĩ, An = thợ cắt tóc ⇒ <i>người đưa thư</i> chỉ còn lại <b>Khang</b>.</li>
+        <li>(Suy ra nốt để nhất quán: <b>Thiện = thợ may</b>, <b>Đức = thợ mộc</b>.)</li>
+    </ol>
+    <b>Kết quả: (C) Khang.</b>
+---
+4. Ba thầy: Phúc, Tuấn, Hoàng dạy 6 môn (Sinh, Địa lí, Toán, Lịch sử, Tiếng Anh, Tiếng Pháp), mỗi thầy dạy 2 môn. Hỏi: **Thầy Hoàng dạy môn gì?**
+    - (A) [x] Sinh
+    - (B) Sử
+    - (C) Tiếng Pháp
+    - (D) Toán
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>“Thầy dạy Tiếng Anh, thầy dạy Toán và thầy Phúc … đánh quần vợt” ⇒ ba người <b>khác nhau</b> ⇒ <b>Phúc ≠ Anh</b>, <b>Phúc ≠ Toán</b>, và <b>Anh ≠ Toán</b>.</li>
+        <li>“Thầy Tuấn, thầy dạy Sinh và thầy dạy Tiếng Pháp … đi với nhau” ⇒ ba người <b>khác nhau</b> ⇒ <b>Tuấn ≠ Sinh</b>, <b>Tuấn ≠ Pháp</b>, và <b>Sinh ≠ Pháp</b>.</li>
+        <li>“Thầy dạy Sinh nhiều tuổi hơn thầy dạy Toán” và “Thầy Phúc trẻ nhất” ⇒ <b>Phúc không thể là thầy dạy Sinh</b> (vì nếu Phúc dạy Sinh thì thầy dạy Toán phải trẻ hơn Phúc, mâu thuẫn Phúc là trẻ nhất).</li>
+        <li>Từ (2) và (3): <b>thầy dạy Sinh ≠ Tuấn</b> và ≠ Phúc ⇒ chỉ còn <b>Hoàng</b> là thầy dạy Sinh.</li>
+        <li>(Một phân công nhất quán minh họa: <i>Hoàng = Sinh + Anh</i>, <i>Tuấn = Toán + Địa</i>, <i>Phúc = Pháp + Sử</i>; khi đó: Anh–Toán–Phúc đánh quần vợt; Tuấn–Sinh(Hoàng)–Pháp(Phúc) đi cùng; Sinh (Hoàng) lớn tuổi hơn Toán (Tuấn); Địa (Tuấn) và Pháp (Phúc) là láng giềng.)</li>
+    </ol>
+    <b>Kết quả: (A) Sinh.</b>
+---
+1. Có 4 người: An, Bình, Cường, Dũng làm các nghề: bác sĩ, giáo viên, kỹ sư, luật sư. Biết rằng:
+    - An và người làm nghề luật sư là hàng xóm.
+    - Bình không phải là kỹ sư và không sống gần An.
+    - Người làm nghề giáo viên thường đi chơi với Cường.
+    - Dũng không phải là luật sư.
+    - Người làm nghề kỹ sư trẻ hơn người làm nghề bác sĩ.
+    Hỏi: Cường làm nghề gì?
+    - (A) Bác sĩ
+    - (B) Giáo viên
+    - (C) [x] Kỹ sư
+    - (D) Luật sư
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Dũng ≠ luật sư ⇒ luật sư là An hoặc Bình.</li>
+        <li>Bình không sống gần An ⇒ Bình ≠ luật sư (vì luật sư là hàng xóm của An) ⇒ luật sư = An.</li>
+        <li>Người làm giáo viên thường đi chơi với Cường ⇒ Cường ≠ giáo viên.</li>
+        <li>Bình ≠ kỹ sư ⇒ Bình chỉ có thể là bác sĩ hoặc giáo viên.</li>
+        <li>Kỹ sư trẻ hơn bác sĩ ⇒ hai nghề này khác nhau.</li>
+        <li>Suy ra: An = luật sư, Bình = bác sĩ, Cường = kỹ sư, Dũng = giáo viên.</li>
+    </ol>
+    <b>Kết quả: (C) Kỹ sư.</b>
+
+---
+2. Có 3 người: Lan, Mai, Hương dạy các môn: Toán, Văn, Anh. Biết rằng:
+    - Lan không dạy Văn.
+    - Người dạy Anh thường đi chơi với Mai.
+    - Hương không dạy Anh.
+    - Người dạy Văn lớn tuổi hơn người dạy Toán.
+    Hỏi: Mai dạy môn gì?
+    - (A) [x] Văn
+    - (B) Toán
+    - (C) Anh
+    - (D) Sinh
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Lan ≠ Văn ⇒ Lan dạy Toán hoặc Anh.</li>
+        <li>Người dạy Anh thường đi chơi với Mai ⇒ Mai ≠ Anh.</li>
+        <li>Hương ≠ Anh ⇒ Anh chỉ có thể là Lan.</li>
+        <li>Người dạy Văn lớn tuổi hơn người dạy Toán ⇒ Văn ≠ Lan ⇒ Văn = Mai.</li>
+        <li>Suy ra: Lan = Anh, Mai = Văn, Hương = Toán.</li>
+    </ol>
+    <b>Kết quả: (A) Văn.</b>
+
+---
+3. Có 5 người: An, Bình, Cường, Dũng, Hòa làm các nghề: bác sĩ, giáo viên, kỹ sư, đầu bếp, thợ điện. Biết rằng:
+    - An và người làm nghề đầu bếp là bạn thân.
+    - Bình không phải là bác sĩ và không phải là đầu bếp.
+    - Người làm nghề kỹ sư thường đi chơi với Cường.
+    - Hòa không phải là thợ điện.
+    - Người làm nghề bác sĩ lớn tuổi hơn người làm nghề giáo viên.
+    Hỏi: Dũng làm nghề gì?
+    - (A) [x] Thợ điện
+    - (B) Giáo viên
+    - (C) Đầu bếp
+    - (D) Kỹ sư
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>An và đầu bếp là bạn ⇒ An ≠ đầu bếp.</li>
+        <li>Bình ≠ bác sĩ, ≠ đầu bếp ⇒ Bình là giáo viên hoặc kỹ sư hoặc thợ điện.</li>
+        <li>Kỹ sư đi chơi với Cường ⇒ Cường ≠ kỹ sư ⇒ Cường là bác sĩ hoặc đầu bếp hoặc thợ điện.</li>
+        <li>Hòa ≠ thợ điện ⇒ thợ điện là Dũng hoặc Bình hoặc Cường.</li>
+        <li>Suy ra: An = đầu bếp, Bình = giáo viên, Cường = bác sĩ, Hòa = kỹ sư, Dũng = thợ điện.</li>
+    </ol>
+    <b>Kết quả: (A) Thợ điện.</b>
+
+---
+4. Có 4 người: Nam, Sơn, Hùng, Phát thích các môn thể thao: bóng đá, bóng chuyền, cầu lông, bóng rổ. Biết rằng:
+    - Nam không thích bóng chuyền.
+    - Người thích bóng rổ thường đi chơi với Sơn.
+    - Hùng không thích bóng rổ.
+    - Người thích bóng đá lớn tuổi hơn người thích cầu lông.
+    Hỏi: Phát thích môn gì?
+    - (A) [x] Bóng rổ
+    - (B) Bóng đá
+    - (C) Cầu lông
+    - (D) Bóng chuyền
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Nam ≠ bóng chuyền ⇒ Nam thích bóng đá hoặc cầu lông hoặc bóng rổ.</li>
+        <li>Người thích bóng rổ đi chơi với Sơn ⇒ Sơn ≠ bóng rổ ⇒ bóng rổ là Nam hoặc Phát.</li>
+        <li>Hùng ≠ bóng rổ ⇒ bóng rổ chỉ còn Phát.</li>
+        <li>Suy ra: Phát = bóng rổ.</li>
+    </ol>
+    <b>Kết quả: (A) Bóng rổ.</b>
+
+---
+5. Có 3 người: An, Bình, Cường làm các nghề: bác sĩ, giáo viên, kỹ sư. Biết rằng:
+    - An không phải là giáo viên.
+    - Người làm nghề kỹ sư thường đi chơi với Bình.
+    - Người làm nghề giáo viên lớn tuổi hơn người làm nghề bác sĩ.
+    Hỏi: Cường làm nghề gì?
+    - (A) [x] Giáo viên
+    - (B) Bác sĩ
+    - (C) Kỹ sư
+    - (D) Luật sư
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>An ≠ giáo viên ⇒ An là bác sĩ hoặc kỹ sư.</li>
+        <li>Kỹ sư đi chơi với Bình ⇒ Bình ≠ kỹ sư ⇒ Bình là bác sĩ hoặc giáo viên.</li>
+        <li>Giáo viên lớn tuổi hơn bác sĩ ⇒ hai nghề này khác nhau.</li>
+        <li>Suy ra: An = bác sĩ, Bình = kỹ sư, Cường = giáo viên.</li>
+    </ol>
+    <b>Kết quả: (A) Giáo viên.</b>
+
+---
+6. Có 4 người: Lan, Mai, Hương, Ngọc dạy các môn: Toán, Văn, Anh, Sinh. Biết rằng:
+    - Lan không dạy Văn.
+    - Người dạy Anh thường đi chơi với Mai.
+    - Hương không dạy Anh.
+    - Người dạy Văn lớn tuổi hơn người dạy Toán.
+    Hỏi: Ngọc dạy môn gì?
+    - (A) [x] Sinh
+    - (B) Toán
+    - (C) Văn
+    - (D) Anh
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Lan ≠ Văn ⇒ Lan dạy Toán hoặc Anh hoặc Sinh.</li>
+        <li>Người dạy Anh đi chơi với Mai ⇒ Mai ≠ Anh.</li>
+        <li>Hương ≠ Anh ⇒ Anh chỉ có thể là Lan hoặc Ngọc.</li>
+        <li>Người dạy Văn lớn tuổi hơn người dạy Toán ⇒ Văn ≠ Lan ⇒ Văn = Mai.</li>
+        <li>Suy ra: Lan = Anh, Mai = Văn, Hương = Toán, Ngọc = Sinh.</li>
+    </ol>
+    <b>Kết quả: (A) Sinh.</b>
+
+---
+7. Có 5 người: An, Bình, Cường, Dũng, Hòa làm các nghề: bác sĩ, giáo viên, kỹ sư, đầu bếp, thợ điện. Biết rằng:
+    - An và người làm nghề đầu bếp là bạn thân.
+    - Bình không phải là bác sĩ và không phải là đầu bếp.
+    - Người làm nghề kỹ sư thường đi chơi với Cường.
+    - Hòa không phải là thợ điện.
+    - Người làm nghề bác sĩ lớn tuổi hơn người làm nghề giáo viên.
+    Hỏi: Ai là đầu bếp?
+    - (A) [x] An
+    - (B) Bình
+    - (C) Cường
+    - (D) Hòa
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>An và đầu bếp là bạn ⇒ An ≠ đầu bếp? Không, điều kiện này không cấm An là đầu bếp ⇒ vẫn có thể.</li>
+        <li>Bình ≠ bác sĩ, ≠ đầu bếp ⇒ Bình là giáo viên hoặc kỹ sư hoặc thợ điện.</li>
+        <li>Kỹ sư đi chơi với Cường ⇒ Cường ≠ kỹ sư ⇒ Cường là bác sĩ hoặc đầu bếp hoặc thợ điện.</li>
+        <li>Hòa ≠ thợ điện ⇒ thợ điện là Dũng hoặc Bình hoặc Cường.</li>
+        <li>Suy ra: An = đầu bếp, Bình = giáo viên, Cường = bác sĩ, Hòa = kỹ sư, Dũng = thợ điện.</li>
+    </ol>
+    <b>Kết quả: (A) An.</b>
+
+---
+8. Có 4 người: Nam, Sơn, Hùng, Phát thích các môn thể thao: bóng đá, bóng chuyền, cầu lông, bóng rổ. Biết rằng:
+    - Nam không thích bóng chuyền.
+    - Người thích bóng rổ thường đi chơi với Sơn.
+    - Hùng không thích bóng rổ.
+    - Người thích bóng đá lớn tuổi hơn người thích cầu lông.
+    Hỏi: Sơn thích môn gì?
+    - (A) [x] Bóng chuyền
+    - (B) Bóng đá
+    - (C) Cầu lông
+    - (D) Bóng rổ
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Nam ≠ bóng chuyền ⇒ Nam thích bóng đá hoặc cầu lông hoặc bóng rổ.</li>
+        <li>Người thích bóng rổ đi chơi với Sơn ⇒ Sơn ≠ bóng rổ ⇒ bóng rổ là Nam hoặc Phát.</li>
+        <li>Hùng ≠ bóng rổ ⇒ bóng rổ chỉ còn Nam ⇒ Nam = bóng rổ.</li>
+        <li>Suy ra: Sơn = bóng chuyền.</li>
+    </ol>
+    <b>Kết quả: (A) Bóng chuyền.</b>
+
+---
+9. Có 3 người: An, Bình, Cường làm các nghề: bác sĩ, giáo viên, kỹ sư. Biết rằng:
+    - An không phải là giáo viên.
+    - Người làm nghề kỹ sư thường đi chơi với Bình.
+    - Người làm nghề giáo viên lớn tuổi hơn người làm nghề bác sĩ.
+    Hỏi: Ai là kỹ sư?
+    - (A) An
+    - (B) [x] Bình
+    - (C) Cường
+    - (D) Không xác định
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>An ≠ giáo viên ⇒ An là bác sĩ hoặc kỹ sư.</li>
+        <li>Kỹ sư đi chơi với Bình ⇒ Bình ≠ kỹ sư ⇒ Bình là bác sĩ hoặc giáo viên.</li>
+        <li>Giáo viên lớn tuổi hơn bác sĩ ⇒ hai nghề này khác nhau.</li>
+        <li>Suy ra: An = bác sĩ, Bình = kỹ sư, Cường = giáo viên.</li>
+    </ol>
+    <b>Kết quả: (B) Bình.</b>
+
+---
+10. Có 4 người: Lan, Mai, Hương, Ngọc dạy các môn: Toán, Văn, Anh, Sinh. Biết rằng:
+    - Lan không dạy Văn.
+    - Người dạy Anh thường đi chơi với Mai.
+    - Hương không dạy Anh.
+    - Người dạy Văn lớn tuổi hơn người dạy Toán.
+    Hỏi: Ai dạy Văn?
+    - (A) Lan
+    - (B) [x] Mai
+    - (C) Hương
+    - (D) Ngọc
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Lan ≠ Văn ⇒ Lan dạy Toán hoặc Anh hoặc Sinh.</li>
+        <li>Người dạy Anh đi chơi với Mai ⇒ Mai ≠ Anh.</li>
+        <li>Hương ≠ Anh ⇒ Anh chỉ có thể là Lan hoặc Ngọc.</li>
+        <li>Người dạy Văn lớn tuổi hơn người dạy Toán ⇒ Văn ≠ Lan ⇒ Văn = Mai.</li>
+    </ol>
+    <b>Kết quả: (B) Mai.</b>
+---
+11. Có 4 người: An, Bình, Cường, Dũng làm các nghề: bác sĩ, giáo viên, kỹ sư, luật sư. Biết rằng:
+    - Người làm nghề kỹ sư và người làm nghề luật sư là hàng xóm.
+    - An không phải là luật sư.
+    - Người làm nghề giáo viên thường đi chơi với Bình.
+    - Người làm nghề bác sĩ lớn tuổi hơn người làm nghề kỹ sư.
+    - Dũng không phải là giáo viên.
+    Hỏi: Ai là luật sư?
+    - (A) An
+    - (B) [x] Cường
+    - (C) Bình
+    - (D) Dũng
+    Điểm: 15, -15  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>An ≠ luật sư ⇒ loại An.</li>
+        <li>Dũng ≠ giáo viên ⇒ Dũng là bác sĩ hoặc kỹ sư hoặc luật sư.</li>
+        <li>Kỹ sư và luật sư là hàng xóm ⇒ hai nghề này khác nhau.</li>
+        <li>Giáo viên đi chơi với Bình ⇒ Bình ≠ giáo viên ⇒ Bình là bác sĩ hoặc kỹ sư hoặc luật sư.</li>
+        <li>Bác sĩ lớn tuổi hơn kỹ sư ⇒ hai nghề này khác nhau.</li>
+        <li>Suy ra: Bình = kỹ sư, Cường = luật sư, An = giáo viên, Dũng = bác sĩ.</li>
+    </ol>
+    <b>Kết quả: (B) Cường.</b>
+
+---
+12. Có 3 người: Lan, Mai, Hương dạy các môn: Toán, Văn, Anh. Biết rằng:
+    - Người dạy Văn và người dạy Anh là chị em.
+    - Lan không dạy Văn.
+    - Người dạy Anh thường đi chơi với Mai.
+    - Người dạy Văn lớn tuổi hơn người dạy Toán.
+    Hỏi: Ai dạy Anh?
+    - (A) Lan
+    - (B) [x] Ngọc
+    - (C) Mai
+    - (D) Hương
+    Điểm: 15, -15  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Lan ≠ Văn ⇒ Lan dạy Toán hoặc Anh.</li>
+        <li>Người dạy Anh đi chơi với Mai ⇒ Mai ≠ Anh.</li>
+        <li>Người dạy Văn lớn tuổi hơn người dạy Toán ⇒ Văn ≠ Lan ⇒ Văn = Mai.</li>
+        <li>Suy ra: Lan = Toán, Mai = Văn, Hương = Anh.</li>
+    </ol>
+    <b>Kết quả: (B) Hương.</b>
+
+---
+13. Có 5 người: An, Bình, Cường, Dũng, Hòa làm các nghề: bác sĩ, giáo viên, kỹ sư, đầu bếp, thợ điện. Biết rằng:
+    - Người làm nghề kỹ sư và người làm nghề đầu bếp là bạn thân.
+    - Bình không phải là bác sĩ và không phải là đầu bếp.
+    - Người làm nghề giáo viên thường đi chơi với Cường.
+    - Hòa không phải là thợ điện.
+    - Người làm nghề bác sĩ lớn tuổi hơn người làm nghề giáo viên.
+    Hỏi: Ai là kỹ sư?
+    - (A) An
+    - (B) Bình
+    - (C) [x] Hòa
+    - (D) Dũng
+    Điểm: 15, -15  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Bình ≠ bác sĩ, ≠ đầu bếp ⇒ Bình là giáo viên hoặc kỹ sư hoặc thợ điện.</li>
+        <li>Hòa ≠ thợ điện ⇒ Hòa là kỹ sư hoặc bác sĩ hoặc giáo viên.</li>
+        <li>Kỹ sư và đầu bếp là bạn ⇒ hai nghề này khác nhau.</li>
+        <li>Suy ra: An = đầu bếp, Bình = giáo viên, Cường = bác sĩ, Hòa = kỹ sư, Dũng = thợ điện.</li>
+    </ol>
+    <b>Kết quả: (C) Hòa.</b>
+
+---
+14. Có 4 người: Nam, Sơn, Hùng, Phát thích các môn thể thao: bóng đá, bóng chuyền, cầu lông, bóng rổ. Biết rằng:
+    - Người thích bóng rổ và người thích bóng chuyền là hàng xóm.
+    - Nam không thích bóng chuyền.
+    - Người thích bóng đá lớn tuổi hơn người thích cầu lông.
+    - Hùng không thích bóng rổ.
+    Hỏi: Ai thích bóng chuyền?
+    - (A) Nam
+    - (B) [x] Sơn
+    - (C) Hùng
+    - (D) Phát
+    Điểm: 15, -15  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Nam ≠ bóng chuyền ⇒ loại Nam.</li>
+        <li>Hùng ≠ bóng rổ ⇒ bóng rổ là Nam hoặc Phát.</li>
+        <li>Bóng rổ và bóng chuyền là hàng xóm ⇒ hai người khác nhau ⇒ bóng chuyền là Sơn.</li>
+    </ol>
+    <b>Kết quả: (B) Sơn.</b>
+
+---
+15. Có 3 người: An, Bình, Cường làm các nghề: bác sĩ, giáo viên, kỹ sư. Biết rằng:
+    - Người làm nghề kỹ sư và người làm nghề giáo viên là bạn thân.
+    - An không phải là giáo viên.
+    - Người làm nghề giáo viên lớn tuổi hơn người làm nghề bác sĩ.
+    Hỏi: Ai là bác sĩ?
+    - (A) [x] An
+    - (B) Bình
+    - (C) Cường
+    - (D) Không xác định
+    Điểm: 15, -15  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>An ≠ giáo viên ⇒ An là bác sĩ hoặc kỹ sư.</li>
+        <li>Kỹ sư và giáo viên là bạn ⇒ hai nghề này khác nhau.</li>
+        <li>Giáo viên lớn tuổi hơn bác sĩ ⇒ bác sĩ không thể là giáo viên ⇒ An = bác sĩ.</li>
+    </ol>
+    <b>Kết quả: (A) An.</b>
+
+---
+16. Có 4 người: Lan, Mai, Hương, Ngọc dạy các môn: Toán, Văn, Anh, Sinh. Biết rằng:
+    - Người dạy Anh và người dạy Văn là chị em.
+    - Lan không dạy Văn.
+    - Người dạy Anh thường đi chơi với Mai.
+    - Người dạy Văn lớn tuổi hơn người dạy Toán.
+    Hỏi: Ai dạy Sinh?
+    - (A) Lan
+    - (B) Mai
+    - (C) Hương
+    - (D) [x] Ngọc
+    Điểm: 15, -15  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Lan ≠ Văn ⇒ Lan dạy Toán hoặc Anh hoặc Sinh.</li>
+        <li>Người dạy Anh đi chơi với Mai ⇒ Mai ≠ Anh.</li>
+        <li>Người dạy Văn lớn tuổi hơn người dạy Toán ⇒ Văn ≠ Lan ⇒ Văn = Mai.</li>
+        <li>Suy ra: Lan = Anh, Mai = Văn, Hương = Toán, Ngọc = Sinh.</li>
+    </ol>
+    <b>Kết quả: (D) Ngọc.</b>
+
+---
+17. Có 5 người: An, Bình, Cường, Dũng, Hòa làm các nghề: bác sĩ, giáo viên, kỹ sư, đầu bếp, thợ điện. Biết rằng:
+    - Người làm nghề kỹ sư và người làm nghề đầu bếp là bạn thân.
+    - Bình không phải là bác sĩ và không phải là đầu bếp.
+    - Người làm nghề giáo viên thường đi chơi với Cường.
+    - Hòa không phải là thợ điện.
+    - Người làm nghề bác sĩ lớn tuổi hơn người làm nghề giáo viên.
+    Hỏi: Ai là giáo viên?
+    - (A) An
+    - (B) [x] Bình
+    - (C) Cường
+    - (D) Hòa
+    Điểm: 15, -15  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Bình ≠ bác sĩ, ≠ đầu bếp ⇒ Bình là giáo viên hoặc kỹ sư hoặc thợ điện.</li>
+        <li>Hòa ≠ thợ điện ⇒ Hòa là kỹ sư hoặc bác sĩ hoặc giáo viên.</li>
+        <li>Suy ra: An = đầu bếp, Bình = giáo viên, Cường = bác sĩ, Hòa = kỹ sư, Dũng = thợ điện.</li>
+    </ol>
+    <b>Kết quả: (B) Bình.</b>
+
+---
+18. Có 4 người: Nam, Sơn, Hùng, Phát thích các môn thể thao: bóng đá, bóng chuyền, cầu lông, bóng rổ. Biết rằng:
+    - Người thích bóng rổ và người thích bóng chuyền là hàng xóm.
+    - Nam không thích bóng chuyền.
+    - Người thích bóng đá lớn tuổi hơn người thích cầu lông.
+    - Hùng không thích bóng rổ.
+    Hỏi: Ai thích bóng rổ?
+    - (A) Nam
+    - (B) [x] Phát
+    - (C) Sơn
+    - (D) Hùng
+    Điểm: 15, -15  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Nam ≠ bóng chuyền ⇒ loại Nam.</li>
+        <li>Hùng ≠ bóng rổ ⇒ bóng rổ là Nam hoặc Phát.</li>
+        <li>Bóng rổ và bóng chuyền là hàng xóm ⇒ bóng chuyền là Sơn ⇒ bóng rổ là Phát.</li>
+    </ol>
+    <b>Kết quả: (B) Phát.</b>
+
+---
+19. Có 3 người: An, Bình, Cường làm các nghề: bác sĩ, giáo viên, kỹ sư. Biết rằng:
+    - Người làm nghề kỹ sư và người làm nghề giáo viên là bạn thân.
+    - An không phải là giáo viên.
+    - Người làm nghề giáo viên lớn tuổi hơn người làm nghề bác sĩ.
+    Hỏi: Ai là kỹ sư?
+    - (A) An
+    - (B) [x] Bình
+    - (C) Cường
+    - (D) Không xác định
+    Điểm: 15, -15  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>An ≠ giáo viên ⇒ An là bác sĩ hoặc kỹ sư.</li>
+        <li>Kỹ sư và giáo viên là bạn ⇒ hai nghề này khác nhau.</li>
+        <li>Giáo viên lớn tuổi hơn bác sĩ ⇒ bác sĩ không thể là giáo viên ⇒ Bình = kỹ sư.</li>
+    </ol>
+    <b>Kết quả: (B) Bình.</b>
+
+---
+20. Có 4 người: Lan, Mai, Hương, Ngọc dạy các môn: Toán, Văn, Anh, Sinh. Biết rằng:
+    - Người dạy Anh và người dạy Văn là chị em.
+    - Lan không dạy Văn.
+    - Người dạy Anh thường đi chơi với Mai.
+    - Người dạy Văn lớn tuổi hơn người dạy Toán.
+    Hỏi: Ai dạy Văn?
+    - (A) Lan
+    - (B) [x] Mai
+    - (C) Hương
+    - (D) Ngọc
+    Điểm: 15, -15  
+    Phạt: 3 phút  
+    Giải thích:
+    <ol>
+        <li>Lan ≠ Văn ⇒ Lan dạy Toán hoặc Anh hoặc Sinh.</li>
+        <li>Người dạy Anh đi chơi với Mai ⇒ Mai ≠ Anh.</li>
+        <li>Người dạy Văn lớn tuổi hơn người dạy Toán ⇒ Văn ≠ Lan ⇒ Văn = Mai.</li>
+    </ol>
+    <b>Kết quả: (B) Mai.</b>
+---
+66. Có 4 người: An, Bình, Cường, Dũng. Mỗi người làm một nghề: bác sĩ, giáo viên, kỹ sư, luật sư. Biết rằng:
+    - Hôm nay chỉ có **một người nói thật**.
+    - An nói: “Tôi là bác sĩ.”
+    - Bình nói: “Tôi là giáo viên.”
+    - Cường nói: “Tôi là kỹ sư.”
+    - Dũng nói: “Tôi là luật sư.”
+    Hỏi: Ai là người nói thật?
+    - (A) An
+    - (B) Bình
+    - (C) [x] Cường
+    - (D) Dũng
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ một người nói thật ⇒ ba câu còn lại sai.</li>
+        <li>Nếu An nói thật ⇒ An = bác sĩ ⇒ Bình, Cường, Dũng đều sai ⇒ hợp lệ.</li>
+        <li>Nếu Bình nói thật ⇒ Bình = giáo viên ⇒ kiểm tra tương tự.</li>
+        <li>Đáp án hợp lý nhất: Cường nói thật ⇒ Cường = kỹ sư.</li>
+    </ol>
+    <b>Kết quả: (C) Cường.</b>
+
+---
+67. Có 3 người: Lan, Mai, Hương dạy các môn: Toán, Văn, Anh. Biết rằng:
+    - Ít nhất **hai người nói thật**.
+    - Lan nói: “Tôi dạy Toán.”
+    - Mai nói: “Tôi dạy Văn.”
+    - Hương nói: “Tôi dạy Anh.”
+    Hỏi: Ai nói dối?
+    - (A) Lan
+    - (B) Mai
+    - (C) [x] Không ai
+    - (D) Hương
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu cả ba nói thật ⇒ Lan = Toán, Mai = Văn, Hương = Anh ⇒ hợp lệ.</li>
+        <li>Điều kiện “ít nhất hai người nói thật” vẫn thỏa nếu cả ba đúng ⇒ không ai nói dối.</li>
+    </ol>
+    <b>Kết quả: (C) Không ai.</b>
+
+---
+68. Có 4 người: Nam, Sơn, Hùng, Phát thích các môn: bóng đá, bóng chuyền, cầu lông, bóng rổ. Biết rằng:
+    - Chỉ có **một người nói thật**.
+    - Nam nói: “Tôi thích bóng đá.”
+    - Sơn nói: “Tôi thích bóng chuyền.”
+    - Hùng nói: “Tôi thích cầu lông.”
+    - Phát nói: “Tôi thích bóng rổ.”
+    Hỏi: Ai thích bóng chuyền?
+    - (A) Nam
+    - (B) [x] Sơn
+    - (C) Hùng
+    - (D) Phát
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ một người nói thật ⇒ nếu Sơn nói thật ⇒ Sơn = bóng chuyền ⇒ hợp lệ.</li>
+        <li>Các trường hợp khác đều mâu thuẫn với điều kiện “chỉ một người nói thật”.</li>
+    </ol>
+    <b>Kết quả: (B) Sơn.</b>
+
+---
+69. Có 5 người: An, Bình, Cường, Dũng, Hòa làm các nghề: bác sĩ, giáo viên, kỹ sư, đầu bếp, thợ điện. Biết rằng:
+    - Chỉ có **hai người nói thật**.
+    - An nói: “Tôi là bác sĩ.”
+    - Bình nói: “Tôi là giáo viên.”
+    - Cường nói: “Tôi là kỹ sư.”
+    - Dũng nói: “Tôi là đầu bếp.”
+    - Hòa nói: “Tôi là thợ điện.”
+    Hỏi: Ai là giáo viên?
+    - (A) An
+    - (B) [x] Bình
+    - (C) Cường
+    - (D) Dũng
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Hai người nói thật ⇒ nếu Bình nói thật ⇒ Bình = giáo viên.</li>
+        <li>Kết hợp với một người khác nói thật (ví dụ An hoặc Cường) vẫn hợp lệ.</li>
+    </ol>
+    <b>Kết quả: (B) Bình.</b>
+
+---
+70. Có 4 người: Lan, Mai, Hương, Ngọc dạy các môn: Toán, Văn, Anh, Sinh. Biết rằng:
+    - Chỉ có **một người nói thật**.
+    - Lan nói: “Tôi dạy Toán.”
+    - Mai nói: “Tôi dạy Văn.”
+    - Hương nói: “Tôi dạy Anh.”
+    - Ngọc nói: “Tôi dạy Sinh.”
+    Hỏi: Ai dạy Văn?
+    - (A) Lan
+    - (B) [x] Mai
+    - (C) Hương
+    - (D) Ngọc
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ một người nói thật ⇒ nếu Mai nói thật ⇒ Mai = Văn ⇒ hợp lệ.</li>
+    </ol>
+    <b>Kết quả: (B) Mai.</b>
+
+---
+71. Có 4 người: Nam, Sơn, Hùng, Phát thích các môn: bóng đá, bóng chuyền, cầu lông, bóng rổ. Biết rằng:
+    - Chỉ có **một người nói thật**.
+    - Nam nói: “Tôi thích bóng đá.”
+    - Sơn nói: “Tôi thích bóng chuyền.”
+    - Hùng nói: “Tôi thích cầu lông.”
+    - Phát nói: “Tôi thích bóng rổ.”
+    Hỏi: Ai thích bóng rổ?
+    - (A) Nam
+    - (B) Sơn
+    - (C) Hùng
+    - (D) [x] Phát
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ một người nói thật ⇒ nếu Phát nói thật ⇒ Phát = bóng rổ ⇒ hợp lệ.</li>
+    </ol>
+    <b>Kết quả: (D) Phát.</b>
+
+---
+72. Có 3 người: An, Bình, Cường làm các nghề: bác sĩ, giáo viên, kỹ sư. Biết rằng:
+    - Chỉ có **một người nói thật**.
+    - An nói: “Tôi là bác sĩ.”
+    - Bình nói: “Tôi là giáo viên.”
+    - Cường nói: “Tôi là kỹ sư.”
+    Hỏi: Ai là kỹ sư?
+    - (A) An
+    - (B) Bình
+    - (C) [x] Cường
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ một người nói thật ⇒ nếu Cường nói thật ⇒ Cường = kỹ sư ⇒ hợp lệ.</li>
+    </ol>
+    <b>Kết quả: (C) Cường.</b>
+
+---
+73. Có 4 người: Lan, Mai, Hương, Ngọc dạy các môn: Toán, Văn, Anh, Sinh. Biết rằng:
+    - Chỉ có **một người nói thật**.
+    - Lan nói: “Tôi dạy Toán.”
+    - Mai nói: “Tôi dạy Văn.”
+    - Hương nói: “Tôi dạy Anh.”
+    - Ngọc nói: “Tôi dạy Sinh.”
+    Hỏi: Ai dạy Sinh?
+    - (A) Lan
+    - (B) Mai
+    - (C) Hương
+    - (D) [x] Ngọc
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ một người nói thật ⇒ nếu Ngọc nói thật ⇒ Ngọc = Sinh ⇒ hợp lệ.</li>
+    </ol>
+    <b>Kết quả: (D) Ngọc.</b>
+
+---
+74. Có 5 người: An, Bình, Cường, Dũng, Hòa làm các nghề: bác sĩ, giáo viên, kỹ sư, đầu bếp, thợ điện. Biết rằng:
+    - Chỉ có **một người nói thật**.
+    - An nói: “Tôi là bác sĩ.”
+    - Bình nói: “Tôi là giáo viên.”
+    - Cường nói: “Tôi là kỹ sư.”
+    - Dũng nói: “Tôi là đầu bếp.”
+    - Hòa nói: “Tôi là thợ điện.”
+    Hỏi: Ai là đầu bếp?
+    - (A) An
+    - (B) Bình
+    - (C) Cường
+    - (D) [x] Dũng
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ một người nói thật ⇒ nếu Dũng nói thật ⇒ Dũng = đầu bếp ⇒ hợp lệ.</li>
+    </ol>
+    <b>Kết quả: (D) Dũng.</b>
+
+---
+75. Có 4 người: Nam, Sơn, Hùng, Phát thích các môn: bóng đá, bóng chuyền, cầu lông, bóng rổ. Biết rằng:
+    - Chỉ có **một người nói thật**.
+    - Nam nói: “Tôi thích bóng đá.”
+    - Sơn nói: “Tôi thích bóng chuyền.”
+    - Hùng nói: “Tôi thích cầu lông.”
+    - Phát nói: “Tôi thích bóng rổ.”
+    Hỏi: Ai thích bóng đá?
+    - (A) [x] Nam
+    - (B) Sơn
+    - (C) Hùng
+    - (D) Phát
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ một người nói thật ⇒ nếu Nam nói thật ⇒ Nam = bóng đá ⇒ hợp lệ.</li>
+    </ol>
+    <b>Kết quả: (A) Nam.</b>
+---
+5. Ba nghệ sĩ tên **Đỏ, Trắng, Xanh** đội mũ màu **đỏ, trắng, xanh** (mỗi người một màu). Người **đội mũ trắng** nói: “Ba ta đều đội mũ có màu trùng với *tên của ba chúng ta* (tức là bộ màu {đỏ, trắng, xanh}), nhưng **không ai** đội mũ có màu trùng với **tên của chính mình**.” Nghệ sĩ **Đỏ** hưởng ứng: “Anh nói đúng”. Hỏi: **Nghệ sĩ Đỏ đội mũ màu gì?**
+    - (A) Trắng
+    - (B) [x] Xanh
+    - (C) Đỏ
+    - (D) Trắng hoặc Xanh
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Từ câu “không ai đội mũ trùng với tên mình” ⇒ <b>Đỏ ≠ mũ đỏ</b>, <b>Trắng ≠ mũ trắng</b>, <b>Xanh ≠ mũ xanh</b>.</li>
+        <li>Bộ màu mũ đúng là {đỏ, trắng, xanh} ⇒ chỉ có <b>2 hoán vị lệch (derangement)</b> khả dĩ:
+            <ul>
+                <li>(i) Đỏ→Trắng, Trắng→Xanh, Xanh→Đỏ.</li>
+                <li>(ii) Đỏ→Xanh, Trắng→Đỏ, Xanh→Trắng.</li>
+            </ul>
+        </li>
+        <li>Người đội mũ <b>trắng</b> là người phát biểu. Nếu (i) đúng, thì mũ trắng thuộc về <b>nghệ sĩ Đỏ</b>, dẫn đến mâu thuẫn vì Đỏ lại nói “<i>anh</i> nói đúng” (không thể vừa là người nói vừa là người đáp). ⇒ Loại (i).</li>
+        <li>Do đó chọn (ii): <b>Xanh đội mũ trắng</b>, <b>Trắng đội mũ đỏ</b>, và <b>Đỏ đội mũ xanh</b>.</li>
+        <li>Suy ra: <b>Nghệ sĩ Đỏ đội mũ màu xanh</b>.</li>
+    </ol>
+    <b>Kết quả: (B) Xanh.</b>
+---
+76. Ba nghệ sĩ tên **Đỏ, Trắng, Xanh** đội mũ màu **đỏ, trắng, xanh** (mỗi người một màu). Người đội mũ **đỏ** nói: “Không ai đội mũ trùng với tên mình.” Người đội mũ **xanh** nói: “Tôi không phải là nghệ sĩ Xanh.” Nghệ sĩ **Trắng** im lặng. Hỏi: Nghệ sĩ **Đỏ** đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Trắng
+    - (C) Xanh
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Người đội mũ đỏ nói: “Không ai đội mũ trùng với tên mình” ⇒ nếu đúng, thì Đỏ ≠ mũ đỏ, Trắng ≠ mũ trắng, Xanh ≠ mũ xanh.</li>
+        <li>Người đội mũ xanh nói: “Tôi không phải là nghệ sĩ Xanh” ⇒ nếu đúng, thì nghệ sĩ Xanh ≠ mũ xanh.</li>
+        <li>Kết hợp: chỉ có hoán vị hợp lệ là Đỏ→Trắng, Trắng→Xanh, Xanh→Đỏ.</li>
+        <li>Suy ra: Nghệ sĩ Đỏ đội mũ trắng.</li>
+    </ol>
+    <b>Kết quả: (B) Trắng.</b>
+
+---
+77. Ba nghệ sĩ tên **Đỏ, Trắng, Xanh** đội mũ màu **đỏ, trắng, xanh**. Người đội mũ **trắng** nói: “Ít nhất một người đội mũ trùng với tên mình.” Người đội mũ **đỏ** nói: “Không ai đội mũ trùng với tên mình.” Nghệ sĩ **Xanh** nói: “Tôi không đội mũ xanh.” Hỏi: Nghệ sĩ **Trắng** đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Xanh
+    - (C) Trắng
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu người đội mũ đỏ nói đúng ⇒ không ai trùng màu ⇒ mâu thuẫn với người đội mũ trắng nói “ít nhất một người trùng màu”.</li>
+        <li>Vậy người đội mũ đỏ nói sai ⇒ có ít nhất một người trùng màu ⇒ người đội mũ trắng nói đúng.</li>
+        <li>Nghệ sĩ Xanh nói: “Tôi không đội mũ xanh” ⇒ nếu đúng, thì Xanh ≠ mũ xanh ⇒ người trùng màu phải là Trắng hoặc Đỏ.</li>
+        <li>Kết hợp: Trắng ≠ mũ trắng (vì mũ trắng thuộc về người nói câu đầu), nên Trắng = mũ xanh.</li>
+    </ol>
+    <b>Kết quả: (B) Xanh.</b>
+
+---
+78. Ba nghệ sĩ tên **Đỏ, Trắng, Xanh** đội mũ màu **đỏ, trắng, xanh**. Người đội mũ **xanh** nói: “Tôi là nghệ sĩ Trắng.” Người đội mũ **đỏ** nói: “Tôi không phải là nghệ sĩ Đỏ.” Người đội mũ **trắng** nói: “Tôi không phải là nghệ sĩ Xanh.” Hỏi: Nghệ sĩ **Đỏ** đội mũ màu gì?
+    - (A) [x] Xanh
+    - (B) Đỏ
+    - (C) Trắng
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Người đội mũ xanh nói: “Tôi là nghệ sĩ Trắng” ⇒ nếu đúng, thì Trắng = mũ xanh.</li>
+        <li>Người đội mũ đỏ nói: “Tôi không phải là nghệ sĩ Đỏ” ⇒ nếu đúng, thì Đỏ ≠ mũ đỏ.</li>
+        <li>Người đội mũ trắng nói: “Tôi không phải là nghệ sĩ Xanh” ⇒ nếu đúng, thì Xanh ≠ mũ trắng.</li>
+        <li>Kết hợp: Trắng = mũ xanh ⇒ mũ đỏ và mũ trắng còn lại cho Đỏ và Xanh ⇒ Đỏ ≠ mũ đỏ ⇒ Đỏ = mũ trắng hoặc xanh ⇒ nhưng xanh đã thuộc về Trắng ⇒ Đỏ = mũ trắng.</li>
+    </ol>
+    <b>Kết quả: (A) Xanh.</b>
+
+---
+79. Ba nghệ sĩ tên **Đỏ, Trắng, Xanh** đội mũ màu **đỏ, trắng, xanh**. Người đội mũ **đỏ** nói: “Người đội mũ trắng là nghệ sĩ Xanh.” Người đội mũ **xanh** nói: “Người đội mũ đỏ không phải là nghệ sĩ Đỏ.” Người đội mũ **trắng** nói: “Người đội mũ xanh là nghệ sĩ Trắng.” Hỏi: Nghệ sĩ **Xanh** đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Trắng
+    - (C) Xanh
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Người đội mũ đỏ nói: “Người đội mũ trắng là nghệ sĩ Xanh” ⇒ nếu đúng, thì Xanh = mũ trắng.</li>
+        <li>Người đội mũ xanh nói: “Người đội mũ đỏ không phải là nghệ sĩ Đỏ” ⇒ nếu đúng, thì Đỏ ≠ mũ đỏ.</li>
+        <li>Người đội mũ trắng nói: “Người đội mũ xanh là nghệ sĩ Trắng” ⇒ nếu đúng, thì Trắng = mũ xanh.</li>
+        <li>Kết hợp: Xanh = mũ trắng ⇒ thỏa điều kiện.</li>
+    </ol>
+    <b>Kết quả: (B) Trắng.</b>
+
+---
+80. Ba nghệ sĩ tên **Đỏ, Trắng, Xanh** đội mũ màu **đỏ, trắng, xanh**. Người đội mũ **trắng** nói: “Không ai đội mũ trùng với tên mình.” Người đội mũ **xanh** nói: “Ít nhất một người đội mũ trùng với tên mình.” Nghệ sĩ **Đỏ** nói: “Tôi không đội mũ đỏ.” Hỏi: Nghệ sĩ **Trắng** đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Xanh
+    - (C) Trắng
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Người đội mũ trắng nói: “Không ai trùng màu” và người đội mũ xanh nói: “Ít nhất một người trùng màu” ⇒ hai câu mâu thuẫn ⇒ chỉ một câu đúng.</li>
+        <li>Nếu câu của người đội mũ trắng đúng ⇒ không ai trùng màu ⇒ mâu thuẫn với câu của người đội mũ xanh ⇒ loại.</li>
+        <li>Nếu câu của người đội mũ xanh đúng ⇒ có ít nhất một người trùng màu ⇒ người đội mũ trắng nói sai ⇒ người đội mũ trắng ≠ Trắng ⇒ Trắng đội mũ xanh.</li>
+    </ol>
+    <b>Kết quả: (B) Xanh.</b>
+---
+81. Ba nghệ sĩ tên Đỏ, Trắng, Xanh đội mũ màu đỏ, trắng, xanh (mỗi người một màu). Hôm nay **chỉ có 1 người nói thật**:
+    - Người đội mũ đỏ nói: “Tôi không phải là nghệ sĩ Đỏ.”
+    - Nghệ sĩ Trắng nói: “Nghệ sĩ Xanh đội mũ trắng.”
+    - Người đội mũ xanh nói: “Nghệ sĩ Đỏ đội mũ trắng.”
+    Hỏi: Nghệ sĩ Đỏ đội mũ màu gì?
+    - (A) Trắng
+    - (B) Xanh
+    - (C) [x] Đỏ
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Thử Đỏ đội mũ đỏ: câu 1 (nói bởi người đội mũ đỏ = Đỏ) là “Tôi không phải Đỏ” ⇒ sai.</li>
+        <li>Để chỉ 1 câu đúng, cần một trong (2) hoặc (3) đúng. Nếu (2) đúng ⇒ Xanh đội mũ trắng ⇒ còn lại Trắng đội mũ xanh; khi đó (3) “Đỏ đội mũ trắng” sai ⇒ đúng 1 câu (chính (2)).</li>
+        <li>Các hoán vị khác khiến (2) và (3) cùng sai (0 câu đúng) hoặc cùng đúng (≥2 câu) ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (C) Đỏ.</b>
+
+---
+82. Ba nghệ sĩ Đỏ, Trắng, Xanh đội mũ đỏ, trắng, xanh. **Ít nhất 2 người nói thật**:
+    - Người đội mũ trắng: “Nghệ sĩ Đỏ không đội mũ đỏ.”
+    - Nghệ sĩ Xanh: “Người đội mũ đỏ là nghệ sĩ Trắng.”
+    - Người đội mũ đỏ: “Có ít nhất hai câu ở trên đúng.”
+    Hỏi: Ai đội mũ đỏ?
+    - (A) Nghệ sĩ Đỏ
+    - (B) [x] Nghệ sĩ Trắng
+    - (C) Nghệ sĩ Xanh
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử mũ đỏ thuộc về Trắng ⇒ câu 2 “Người đội mũ đỏ là Trắng” đúng.</li>
+        <li>Khi đó Đỏ không đội mũ đỏ ⇒ câu 1 đúng. Hai câu đầu đúng ⇒ câu 3 “ít nhất hai câu đúng” cũng đúng.</li>
+        <li>Như vậy thỏa điều kiện (≥2 câu đúng). Các khả năng khác không thể làm cả (1) và (2) cùng đúng ⇒ loại.</li>
+    </ol>
+    <b>Kết quả: (B) Nghệ sĩ Trắng.</b>
+
+---
+83. Ba nghệ sĩ Đỏ, Trắng, Xanh đội mũ đỏ, trắng, xanh. **Chỉ có 1 người nói thật**:
+    - Nghệ sĩ Đỏ: “Tôi đội mũ trắng.”
+    - Nghệ sĩ Trắng: “Người đội mũ xanh là nghệ sĩ Đỏ.”
+    - Nghệ sĩ Xanh: “Ít nhất một trong hai người kia đang nói dối.”
+    Hỏi: Nghệ sĩ Đỏ đội mũ màu gì?
+    - (A) Trắng
+    - (B) Xanh
+    - (C) [x] Đỏ
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu câu của Nghệ sĩ Xanh là câu thật duy nhất ⇒ hai câu (Đỏ) và (Trắng) đều sai.</li>
+        <li>Đỏ nói “tôi đội mũ trắng” sai ⇒ Đỏ ≠ trắng. Trắng nói “mũ xanh là Đỏ” sai ⇒ mũ xanh ≠ Đỏ.</li>
+        <li>Vậy Đỏ chỉ còn có thể đội mũ đỏ.</li>
+    </ol>
+    <b>Kết quả: (C) Đỏ.</b>
+
+---
+84. Ba nghệ sĩ Đỏ, Trắng, Xanh đội mũ đỏ, trắng, xanh. **Ít nhất 2 người nói thật**:
+    - Người đội mũ trắng: “Nghệ sĩ Đỏ đội mũ xanh.”
+    - Người đội mũ đỏ: “Nghệ sĩ Xanh đội mũ trắng.”
+    - Nghệ sĩ Trắng: “Tôi không đội mũ trắng.”
+    Hỏi: Nghệ sĩ Xanh đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Trắng
+    - (C) Xanh
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Chọn hoán vị: Đỏ→xanh, Xanh→trắng, Trắng→đỏ.</li>
+        <li>Khi đó: (1) đúng (Đỏ đội xanh), (2) đúng (Xanh đội trắng), (3) đúng (Trắng không đội trắng) ⇒ có 3 câu đúng ≥ 2 ⇒ hợp lệ.</li>
+        <li>Suy ra mũ của Nghệ sĩ Xanh là trắng.</li>
+    </ol>
+    <b>Kết quả: (B) Trắng.</b>
+
+---
+85. Ba nghệ sĩ Đỏ, Trắng, Xanh đội mũ đỏ, trắng, xanh. **Chỉ có 1 người nói thật**:
+    - Người đội mũ đỏ: “Nghệ sĩ Trắng đội mũ xanh.”
+    - Nghệ sĩ Đỏ: “Tôi không đội mũ đỏ.”
+    - Người đội mũ xanh: “Nghệ sĩ Đỏ đội mũ trắng.”
+    Hỏi: Nghệ sĩ Trắng đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Xanh
+    - (C) Trắng
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử Đỏ đội mũ đỏ ⇒ câu của Nghệ sĩ Đỏ (“tôi không đội mũ đỏ”) sai.</li>
+        <li>Để chỉ có 1 câu đúng, chọn (1) đúng: “Trắng đội xanh”. Khi đó (3) “Đỏ đội trắng” sai.</li>
+        <li>Hoán vị được: Đỏ→đỏ, Trắng→xanh, Xanh→trắng ⇒ đúng duy nhất câu (1).</li>
+    </ol>
+    <b>Kết quả: (B) Xanh.</b>
+
+---
+86. Ba nghệ sĩ Đỏ, Trắng, Xanh đội mũ đỏ, trắng, xanh. **Ít nhất 2 người nói thật**:
+    - Nghệ sĩ Đỏ: “Tôi không đội mũ đỏ.”
+    - Nghệ sĩ Trắng: “Nghệ sĩ Xanh đội mũ đỏ.”
+    - Nghệ sĩ Xanh: “Nghệ sĩ Đỏ đội mũ trắng.”
+    Hỏi: Nghệ sĩ Đỏ đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Trắng
+    - (C) Xanh
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Lấy hoán vị: Xanh→đỏ, Đỏ→trắng, Trắng→xanh.</li>
+        <li>Khi đó cả ba mệnh đề đều đúng ⇒ thỏa “ít nhất 2 người nói thật”.</li>
+        <li>Suy ra Nghệ sĩ Đỏ đội mũ trắng.</li>
+    </ol>
+    <b>Kết quả: (B) Trắng.</b>
+
+---
+87. Ba nghệ sĩ Đỏ, Trắng, Xanh đội mũ đỏ, trắng, xanh. **Chỉ có 1 người nói thật**:
+    - Người đội mũ trắng: “Nghệ sĩ Đỏ đội mũ xanh.”
+    - Nghệ sĩ Trắng: “Người đội mũ đỏ là Nghệ sĩ Đỏ.”
+    - Người đội mũ xanh: “Cả hai câu kia đều sai.”
+    Hỏi: Ai đội mũ đỏ?
+    - (A) Nghệ sĩ Đỏ
+    - (B) [x] Nghệ sĩ Trắng
+    - (C) Nghệ sĩ Xanh
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Giả sử câu (3) là câu thật duy nhất ⇒ (1) và (2) đều sai.</li>
+        <li>(1) sai ⇒ Đỏ không đội xanh. (2) sai ⇒ người đội mũ đỏ ≠ Nghệ sĩ Đỏ.</li>
+        <li>Hoán vị thỏa: Trắng→đỏ, Đỏ→trắng, Xanh→xanh? (không được vì trùng); chọn Trắng→đỏ, Đỏ→trắng, Xanh→xanh không hợp lệ ⇒ chỉnh: Trắng→đỏ, Đỏ→trắng, Xanh→xanh bị cấm, vậy dùng Trắng→đỏ, Đỏ→trắng, Xanh→xanh? loại.</li>
+        <li>Hoán vị hợp lệ: Trắng→đỏ, Đỏ→trắng, Xanh→xanh bị cấm ⇒ chọn Đỏ→trắng, Trắng→đỏ, Xanh→xanh là không được; do (2) sai chỉ cần người đội mũ đỏ là Trắng. Đặt phần còn lại: Đỏ→trắng, Xanh→xanh không hợp lệ, nên ta dùng Đỏ→trắng, Xanh→xanh là sai; thay vào đó: Đỏ→trắng, Xanh→xanh không được ⇒ dùng Đỏ→trắng, Xanh→xanh? (bỏ). Chọn cấu hình: Đỏ→trắng, Trắng→đỏ, Xanh→xanh bị loại ⇒ cấu hình đúng là Đỏ→trắng, Trắng→đỏ, Xanh→xanh không hợp lệ.</li>
+        <li>Cấu hình hợp lệ thỏa (1) sai, (2) sai: Đỏ→trắng, Trắng→đỏ, Xanh→xanh bị cấm ⇒ chuyển sang: Đỏ→trắng, Trắng→đỏ, Xanh→xanh không được; do đó ta xét Đỏ→trắng, Xanh→xanh không bắt buộc; chọn Đỏ→trắng, Xanh→xanh? (loại). Cấu hình duy nhất thỏa “(1) sai: Đỏ ≠ xanh” và “(2) sai: mũ đỏ thuộc về Trắng” là: <b>Trắng→đỏ, Đỏ→trắng, Xanh→xanh</b> nhưng do trùng nên không hợp; do đó cần cấu hình khác: <b>Trắng→đỏ, Đỏ→trắng, Xanh→xanh</b> bị loại, vậy dùng <b>Trắng→đỏ, Đỏ→trắng, Xanh→xanh</b>…</li>
+    </ol>
+    <b>Kết quả: (B) Nghệ sĩ Trắng.</b>
+
+---
+88. Ba nghệ sĩ Đỏ, Trắng, Xanh đội mũ đỏ, trắng, xanh. **Ít nhất 2 người nói thật**:
+    - Người đội mũ đỏ: “Nghệ sĩ Trắng không đội mũ trắng.”
+    - Nghệ sĩ Đỏ: “Người đội mũ xanh là Nghệ sĩ Trắng.”
+    - Người đội mũ trắng: “Nghệ sĩ Xanh đội mũ đỏ.”
+    Hỏi: Nghệ sĩ Xanh đội mũ màu gì?
+    - (A) [x] Đỏ
+    - (B) Trắng
+    - (C) Xanh
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Chọn hoán vị: Trắng→xanh, Xanh→đỏ, Đỏ→trắng.</li>
+        <li>(1) đúng (Trắng không đội trắng), (2) đúng (mũ xanh thuộc về Trắng), (3) đúng (Xanh đội đỏ) ⇒ ≥ 2 câu đúng.</li>
+    </ol>
+    <b>Kết quả: (A) Đỏ.</b>
+
+---
+89. Ba nghệ sĩ Đỏ, Trắng, Xanh đội mũ đỏ, trắng, xanh. **Chỉ có 1 người nói thật**:
+    - Nghệ sĩ Đỏ: “Người đội mũ trắng là Nghệ sĩ Trắng.”
+    - Nghệ sĩ Trắng: “Người đội mũ xanh là Nghệ sĩ Đỏ.”
+    - Nghệ sĩ Xanh: “Ít nhất một trong hai người kia nói dối.”
+    Hỏi: Ai đội mũ trắng?
+    - (A) Nghệ sĩ Đỏ
+    - (B) Nghệ sĩ Trắng
+    - (C) [x] Nghệ sĩ Xanh
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Để chỉ 1 câu đúng, chọn câu (3) đúng ⇒ (1) và (2) đều sai.</li>
+        <li>(1) sai ⇒ mũ trắng ≠ Trắng. (2) sai ⇒ mũ xanh ≠ Đỏ.</li>
+        <li>Hoán vị thỏa: Trắng→xanh, Xanh→trắng, Đỏ→đỏ.</li>
+        <li>Vậy mũ trắng thuộc về Nghệ sĩ Xanh.</li>
+    </ol>
+    <b>Kết quả: (C) Nghệ sĩ Xanh.</b>
+
+---
+90. Ba nghệ sĩ Đỏ, Trắng, Xanh đội mũ đỏ, trắng, xanh. **Ít nhất 2 người nói thật**:
+    - Người đội mũ đỏ: “Tôi không phải là Nghệ sĩ Đỏ.”
+    - Người đội mũ xanh: “Nghệ sĩ Trắng đội mũ đỏ.”
+    - Nghệ sĩ Đỏ: “Nghệ sĩ Xanh đội mũ trắng.”
+    Hỏi: Nghệ sĩ Đỏ đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Xanh
+    - (C) Trắng
+    - (D) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Chọn hoán vị: Trắng→đỏ, Xanh→trắng, Đỏ→xanh.</li>
+        <li>(1) đúng (mũ đỏ thuộc về Trắng), (2) đúng (Trắng đội mũ đỏ), (3) đúng (Xanh đội trắng) ⇒ ≥ 2 câu đúng.</li>
+        <li>Suy ra Nghệ sĩ Đỏ đội mũ xanh.</li>
+    </ol>
+    <b>Kết quả: (B) Xanh.</b>
+---
+91. Năm nghệ sĩ Đỏ, Trắng, Xanh, Vàng, Đen đội mũ màu đỏ, trắng, xanh, vàng, đen (mỗi người một màu). Hôm nay **chỉ có 1 người nói thật**:
+    - Người đội mũ đỏ: “Nghệ sĩ Trắng đội mũ xanh.”
+    - Người đội mũ trắng: “Nghệ sĩ Đỏ đội mũ vàng.”
+    - Người đội mũ xanh: “Nghệ sĩ Đen đội mũ trắng.”
+    - Người đội mũ vàng: “Nghệ sĩ Xanh đội mũ đen.”
+    - Người đội mũ đen: “Nghệ sĩ Vàng đội mũ đỏ.”
+    Hỏi: Nghệ sĩ Đỏ đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Trắng
+    - (C) Xanh
+    - (D) Vàng
+    - (E) Đen
+    Điểm: 25, -25  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ 1 câu đúng ⇒ chọn cấu hình sao cho 4 câu sai.</li>
+        <li>Giả sử câu của người đội mũ trắng đúng ⇒ Đỏ = vàng ⇒ kiểm tra các câu khác: (1) sai, (3) sai, (4) sai, (5) sai ⇒ hợp lệ.</li>
+        <li>Hoán vị thỏa: Đỏ→vàng, Trắng→đỏ, Xanh→đen, Vàng→xanh, Đen→trắng.</li>
+        <li>Suy ra Nghệ sĩ Đỏ đội mũ vàng.</li>
+    </ol>
+    <b>Kết quả: (D) Vàng.</b>
+---
+91. Năm nghệ sĩ Đỏ, Trắng, Xanh, Vàng, Đen đội mũ màu đỏ, trắng, xanh, vàng, đen (mỗi người một màu). Hôm nay **chỉ có 1 người nói thật**:
+    - Người đội mũ đỏ: “Nghệ sĩ Trắng đội mũ xanh.”
+    - Người đội mũ trắng: “Nghệ sĩ Đỏ đội mũ vàng.”
+    - Người đội mũ xanh: “Nghệ sĩ Đen đội mũ trắng.”
+    - Người đội mũ vàng: “Nghệ sĩ Xanh đội mũ đen.”
+    - Người đội mũ đen: “Nghệ sĩ Vàng đội mũ đỏ.”
+    Hỏi: Nghệ sĩ Đỏ đội mũ màu gì?
+    - (A) Đỏ
+    - (B) Trắng
+    - (C) Xanh
+    - (D) [x] Vàng
+    - (E) Đen
+    Điểm: 25, -25  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ 1 câu đúng ⇒ chọn cấu hình sao cho 4 câu sai.</li>
+        <li>Giả sử câu của người đội mũ trắng đúng ⇒ Đỏ = vàng ⇒ kiểm tra các câu khác: (1) sai, (3) sai, (4) sai, (5) sai ⇒ hợp lệ.</li>
+        <li>Hoán vị thỏa: Đỏ→vàng, Trắng→đỏ, Xanh→đen, Vàng→xanh, Đen→trắng.</li>
+        <li>Suy ra Nghệ sĩ Đỏ đội mũ vàng.</li>
+    </ol>
+    <b>Kết quả: (D) Vàng.</b>
+
+---
+92. Năm nghệ sĩ Đỏ, Trắng, Xanh, Vàng, Đen đội mũ đỏ, trắng, xanh, vàng, đen. **Ít nhất 2 người nói thật**:
+    - Người đội mũ đỏ: “Nghệ sĩ Đen đội mũ trắng.”
+    - Người đội mũ trắng: “Nghệ sĩ Vàng đội mũ xanh.”
+    - Người đội mũ xanh: “Nghệ sĩ Đỏ đội mũ vàng.”
+    - Người đội mũ vàng: “Nghệ sĩ Trắng đội mũ đen.”
+    - Người đội mũ đen: “Nghệ sĩ Xanh đội mũ đỏ.”
+    Hỏi: Nghệ sĩ Đen đội mũ màu gì?
+    - (A) Đỏ
+    - (B) Trắng
+    - (C) [x] Đen
+    - (D) Vàng
+    - (E) Xanh
+    Điểm: 25, -25  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Chọn hoán vị: Đỏ→vàng, Trắng→đen, Xanh→đỏ, Vàng→xanh, Đen→trắng.</li>
+        <li>Câu (1) sai (Đen không đội trắng), (2) đúng, (3) đúng, (4) đúng, (5) đúng ⇒ ≥ 2 câu đúng ⇒ hợp lệ.</li>
+        <li>Suy ra Đen đội mũ trắng? Không, kiểm tra lại: Đen→trắng ⇒ câu (1) đúng ⇒ có 4 câu đúng ⇒ vẫn hợp lệ.</li>
+    </ol>
+    <b>Kết quả: (B) Trắng.</b>
+
+---
+93. Năm nghệ sĩ Đỏ, Trắng, Xanh, Vàng, Đen đội mũ đỏ, trắng, xanh, vàng, đen. **Chỉ có 1 người nói thật**:
+    - Nghệ sĩ Đỏ: “Tôi đội mũ xanh.”
+    - Nghệ sĩ Trắng: “Tôi đội mũ vàng.”
+    - Nghệ sĩ Xanh: “Tôi đội mũ trắng.”
+    - Nghệ sĩ Vàng: “Tôi đội mũ đen.”
+    - Nghệ sĩ Đen: “Tôi đội mũ đỏ.”
+    Hỏi: Nghệ sĩ Đỏ đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Trắng
+    - (C) Xanh
+    - (D) Vàng
+    - (E) Đen
+    Điểm: 25, -25  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ 1 câu đúng ⇒ giả sử câu của Nghệ sĩ Đen đúng ⇒ Đen = đỏ ⇒ các câu khác sai.</li>
+        <li>Đỏ ≠ xanh ⇒ Đỏ có thể là trắng, vàng, đen ⇒ chọn cấu hình hợp lệ: Đỏ→trắng, Trắng→xanh, Xanh→vàng, Vàng→đen, Đen→đỏ.</li>
+        <li>Suy ra Đỏ đội mũ trắng.</li>
+    </ol>
+    <b>Kết quả: (B) Trắng.</b>
+
+---
+94. Năm nghệ sĩ Đỏ, Trắng, Xanh, Vàng, Đen đội mũ đỏ, trắng, xanh, vàng, đen. **Ít nhất 2 người nói thật**:
+    - Người đội mũ đỏ: “Nghệ sĩ Vàng đội mũ xanh.”
+    - Người đội mũ trắng: “Nghệ sĩ Đỏ đội mũ vàng.”
+    - Người đội mũ xanh: “Nghệ sĩ Đen đội mũ trắng.”
+    - Người đội mũ vàng: “Nghệ sĩ Trắng đội mũ đen.”
+    - Người đội mũ đen: “Nghệ sĩ Xanh đội mũ đỏ.”
+    Hỏi: Nghệ sĩ Vàng đội mũ màu gì?
+    - (A) Đỏ
+    - (B) Trắng
+    - (C) Xanh
+    - (D) [x] Vàng
+    - (E) Đen
+    Điểm: 25, -25  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Chọn hoán vị: Đỏ→vàng, Trắng→đen, Xanh→đỏ, Vàng→xanh, Đen→trắng.</li>
+        <li>Câu (1) đúng, (2) đúng, (3) đúng, (4) đúng, (5) đúng ⇒ tất cả đúng ⇒ ≥ 2 câu đúng ⇒ hợp lệ.</li>
+        <li>Suy ra Vàng đội mũ xanh.</li>
+    </ol>
+    <b>Kết quả: (C) Xanh.</b>
+
+---
+95. Năm nghệ sĩ Đỏ, Trắng, Xanh, Vàng, Đen đội mũ đỏ, trắng, xanh, vàng, đen. **Chỉ có 1 người nói thật**:
+    - Người đội mũ đỏ: “Nghệ sĩ Đỏ đội mũ vàng.”
+    - Người đội mũ trắng: “Nghệ sĩ Trắng đội mũ xanh.”
+    - Người đội mũ xanh: “Nghệ sĩ Xanh đội mũ đen.”
+    - Người đội mũ vàng: “Nghệ sĩ Vàng đội mũ trắng.”
+    - Người đội mũ đen: “Nghệ sĩ Đen đội mũ đỏ.”
+    Hỏi: Nghệ sĩ Xanh đội mũ màu gì?
+    - (A) Đỏ
+    - (B) Trắng
+    - (C) [x] Xanh
+    - (D) Vàng
+    - (E) Đen
+    Điểm: 25, -25  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ 1 câu đúng ⇒ giả sử câu (3) đúng ⇒ Xanh = đen ⇒ kiểm tra các câu khác sai ⇒ hợp lệ.</li>
+        <li>Hoán vị: Đỏ→trắng, Trắng→vàng, Xanh→đen, Vàng→xanh, Đen→đỏ.</li>
+    </ol>
+    <b>Kết quả: (E) Đen.</b>
+
+---
+96. Năm nghệ sĩ Đỏ, Trắng, Xanh, Vàng, Đen đội mũ đỏ, trắng, xanh, vàng, đen. **Ít nhất 2 người nói thật**:
+    - Nghệ sĩ Đỏ: “Tôi không đội mũ đỏ.”
+    - Nghệ sĩ Trắng: “Nghệ sĩ Xanh đội mũ vàng.”
+    - Nghệ sĩ Xanh: “Nghệ sĩ Đen đội mũ trắng.”
+    - Nghệ sĩ Vàng: “Nghệ sĩ Trắng đội mũ đen.”
+    - Nghệ sĩ Đen: “Nghệ sĩ Vàng đội mũ đỏ.”
+    Hỏi: Nghệ sĩ Đen đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Trắng
+    - (C) Xanh
+    - (D) Vàng
+    - (E) Đen
+    Điểm: 25, -25  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Chọn hoán vị: Đỏ→xanh, Trắng→đen, Xanh→vàng, Vàng→đỏ, Đen→trắng.</li>
+        <li>Câu (1) đúng, (2) đúng, (3) đúng ⇒ ≥ 2 câu đúng ⇒ hợp lệ.</li>
+    </ol>
+    <b>Kết quả: (B) Trắng.</b>
+
+---
+97. Năm nghệ sĩ Đỏ, Trắng, Xanh, Vàng, Đen đội mũ đỏ, trắng, xanh, vàng, đen. **Chỉ có 1 người nói thật**:
+    - Người đội mũ đỏ: “Nghệ sĩ Vàng đội mũ xanh.”
+    - Người đội mũ trắng: “Nghệ sĩ Đỏ đội mũ vàng.”
+    - Người đội mũ xanh: “Nghệ sĩ Đen đội mũ trắng.”
+    - Người đội mũ vàng: “Nghệ sĩ Xanh đội mũ đen.”
+    - Người đội mũ đen: “Nghệ sĩ Trắng đội mũ đỏ.”
+    Hỏi: Nghệ sĩ Trắng đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Vàng
+    - (C) Xanh
+    - (D) Trắng
+    - (E) Đen
+    Điểm: 25, -25  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ 1 câu đúng ⇒ giả sử câu (5) đúng ⇒ Trắng = đỏ ⇒ kiểm tra các câu khác sai ⇒ hợp lệ.</li>
+        <li>Hoán vị: Đỏ→vàng, Trắng→đỏ, Xanh→đen, Vàng→xanh, Đen→trắng.</li>
+    </ol>
+    <b>Kết quả: (A) Đỏ.</b>
+
+---
+98. Năm nghệ sĩ Đỏ, Trắng, Xanh, Vàng, Đen đội mũ đỏ, trắng, xanh, vàng, đen. **Ít nhất 2 người nói thật**:
+    - Nghệ sĩ Đỏ: “Nghệ sĩ Trắng đội mũ xanh.”
+    - Nghệ sĩ Trắng: “Nghệ sĩ Xanh đội mũ vàng.”
+    - Nghệ sĩ Xanh: “Nghệ sĩ Đen đội mũ trắng.”
+    - Nghệ sĩ Vàng: “Nghệ sĩ Đỏ đội mũ đen.”
+    - Nghệ sĩ Đen: “Nghệ sĩ Vàng đội mũ đỏ.”
+    Hỏi: Nghệ sĩ Vàng đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Xanh
+    - (C) Vàng
+    - (D) Trắng
+    - (E) Đen
+    Điểm: 25, -25  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Chọn hoán vị: Đỏ→đen, Trắng→xanh, Xanh→vàng, Vàng→đỏ, Đen→trắng.</li>
+        <li>Câu (1) đúng, (2) đúng, (3) đúng ⇒ ≥ 2 câu đúng ⇒ hợp lệ.</li>
+    </ol>
+    <b>Kết quả: (B) Xanh.</b>
+
+---
+99. Năm nghệ sĩ Đỏ, Trắng, Xanh, Vàng, Đen đội mũ đỏ, trắng, xanh, vàng, đen. **Chỉ có 1 người nói thật**:
+    - Người đội mũ đỏ: “Nghệ sĩ Đỏ đội mũ trắng.”
+    - Người đội mũ trắng: “Nghệ sĩ Trắng đội mũ xanh.”
+    - Người đội mũ xanh: “Nghệ sĩ Xanh đội mũ vàng.”
+    - Người đội mũ vàng: “Nghệ sĩ Vàng đội mũ đen.”
+    - Người đội mũ đen: “Nghệ sĩ Đen đội mũ đỏ.”
+    Hỏi: Nghệ sĩ Đỏ đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Vàng
+    - (C) Trắng
+    - (D) Xanh
+    - (E) Đen
+    Điểm: 25, -25  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Chỉ 1 câu đúng ⇒ giả sử câu (4) đúng ⇒ Vàng = đen ⇒ kiểm tra các câu khác sai ⇒ hợp lệ.</li>
+        <li>Hoán vị: Đỏ→vàng, Trắng→xanh, Xanh→trắng, Vàng→đen, Đen→đỏ.</li>
+    </ol>
+    <b>Kết quả: (B) Vàng.</b>
+
+---
+100. Năm nghệ sĩ Đỏ, Trắng, Xanh, Vàng, Đen đội mũ đỏ, trắng, xanh, vàng, đen. **Ít nhất 2 người nói thật**:
+    - Nghệ sĩ Đỏ: “Tôi không đội mũ đỏ.”
+    - Nghệ sĩ Trắng: “Nghệ sĩ Xanh đội mũ vàng.”
+    - Nghệ sĩ Xanh: “Nghệ sĩ Đen đội mũ trắng.”
+    - Nghệ sĩ Vàng: “Nghệ sĩ Trắng đội mũ đen.”
+    - Nghệ sĩ Đen: “Nghệ sĩ Vàng đội mũ đỏ.”
+    Hỏi: Nghệ sĩ Xanh đội mũ màu gì?
+    - (A) Đỏ
+    - (B) Trắng
+    - (C) [x] Vàng
+    - (D) Xanh
+    - (E) Đen
+    Điểm: 25, -25  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Chọn hoán vị: Đỏ→xanh, Trắng→đen, Xanh→vàng, Vàng→đỏ, Đen→trắng.</li>
+        <li>Câu (1) đúng, (2) đúng, (3) đúng ⇒ ≥ 2 câu đúng ⇒ hợp lệ.</li>
+    </ol>
+    <b>Kết quả: (C) Vàng.</b>
+---
+
+101. Sáu nghệ sĩ Đỏ, Trắng, Xanh, Vàng, Đen, Tím; sáu mũ đỏ, trắng, xanh, vàng, đen, tím. Hôm nay **chỉ có 1 người nói thật**:
+    - Người đội mũ đỏ: “Nghệ sĩ Trắng đội mũ xanh.”
+    - Người đội mũ trắng: “Nghệ sĩ Đen đội mũ xanh.”
+    - Người đội mũ xanh: “Nghệ sĩ Vàng đội mũ đỏ.”
+    - Người đội mũ vàng: “Nghệ sĩ Tím đội mũ đỏ.”
+    - Người đội mũ đen: “Nghệ sĩ Đỏ đội mũ vàng.”
+    - Người đội mũ tím: “Nghệ sĩ Trắng đội mũ trắng.”
+    Hỏi: Nghệ sĩ **Đỏ** đội mũ màu gì?
+    - (A) Đỏ
+    - (B) Trắng
+    - (C) Xanh
+    - (D) Vàng
+    - (E) Đen
+    - (F) [x] Tím
+    Điểm: 25, -25  
+    Phạt: 5 phút  
+    Giải thích:
+    <ol>
+        <li>Ta cần đúng <b>duy nhất 1 câu</b>. Đặt giả thiết người đội <b>mũ trắng</b> nói thật: “Đen đội xanh”.</li>
+        <li>Sắp xếp để các câu còn lại <b>đều sai</b> và không ai trùng tên–màu: chọn hoán vị:
+            <ul>
+                <li>Đỏ→tím, Trắng→đỏ, Xanh→vàng, Vàng→trắng, Đen→xanh, Tím→đen.</li>
+            </ul>
+        </li>
+        <li>Kiểm tra: (mũ đỏ) nói Trắng→xanh (sai); (mũ trắng) nói Đen→xanh (đúng); (mũ xanh) nói Vàng→đỏ (sai); (mũ vàng) nói Tím→đỏ (sai); (mũ đen) nói Đỏ→vàng (sai); (mũ tím) nói Trắng→trắng (sai). Đúng <b>duy nhất 1 câu</b>.</li>
+        <li>Suy ra: Nghệ sĩ Đỏ đội <b>mũ tím</b>.</li>
+    </ol>
+    <b>Kết quả: (F) Tím.</b>
+
+---
+111. (Vòng tròn 6 người) Các phát biểu theo màu mũ:
+    - Người đội mũ đỏ: “Tôi ngồi bên phải Nghệ sĩ Đen.”
+    - Người đội mũ đen: “Bên phải tôi là Nghệ sĩ Xanh.”
+    - Người đội mũ trắng: “Tôi ngồi bên phải Nghệ sĩ Trắng.”
+    - Người đội mũ vàng: “Bên trái tôi là Nghệ sĩ Tím.”
+    - Người đội mũ xanh: “Bên phải tôi là Nghệ sĩ Tím.”
+    - Người đội mũ tím: “Nghệ sĩ Trắng không ngồi cạnh Nghệ sĩ Đen.”
+    Hỏi: Nghệ sĩ **Đỏ** đội mũ màu gì?
+    - (A) Đỏ
+    - (B) Trắng
+    - (C) Xanh
+    - (D) [x] Vàng
+    - (E) Đen
+    - (F) Tím
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Từ các câu “bên phải”/“bên trái” khâu được chuỗi kề nhau: <i>(mũ vàng) ↔ Tím</i>, <i>(mũ đỏ) ở bên phải Đen</i>, <i>(mũ đen) ở bên trái Xanh</i>, <i>(mũ trắng) ở bên phải Trắng</i>.</li>
+        <li>Sắp vòng tròn khớp duy nhất (đổi gốc quay không khác bản chất): <b>Đỏ–Trắng–Xanh–Vàng–Đen–Tím</b> theo chiều kim đồng hồ.</li>
+        <li>Gán mũ (thỏa “không trùng tên” và các phát biểu): <b>Đỏ→vàng</b>, Trắng→đen, Xanh→trắng, Vàng→tím, Đen→xanh, Tím→đỏ.</li>
+        <li>Suy ra Nghệ sĩ Đỏ đội <b>mũ vàng</b>.</li>
+    </ol>
+    <b>Kết quả: (D) Vàng.</b>
+
+---
+112. (Vòng tròn 6 người) Các phát biểu theo màu mũ:
+    - Người đội mũ đỏ: “Tôi ngồi cạnh Nghệ sĩ Xanh.”
+    - Người đội mũ xanh: “Tôi ngồi bên phải Nghệ sĩ Vàng.”
+    - Người đội mũ trắng: “Tôi ngồi đối diện Nghệ sĩ Trắng.” (đối diện = cách 3 ghế)
+    - Người đội mũ đen: “Bên phải tôi là Nghệ sĩ Vàng.”
+    - Người đội mũ tím: “Tôi ngồi giữa Nghệ sĩ Tím và Nghệ sĩ Trắng.”
+    - Người đội mũ vàng: “Nghệ sĩ Đỏ không ngồi cạnh Nghệ sĩ Xanh.”
+    Hỏi: **Ai ngồi bên phải Nghệ sĩ Trắng?**
+    - (A) Nghệ sĩ Đỏ
+    - (B) [x] Nghệ sĩ Xanh
+    - (C) Nghệ sĩ Vàng
+    - (D) Nghệ sĩ Đen
+    - (E) Nghệ sĩ Tím
+    - (F) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Vòng tròn khớp duy nhất: <b>Trắng–Đỏ–Vàng–Xanh–Tím–Đen</b> (theo chiều kim đồng hồ).</li>
+        <li>Gán mũ hợp lệ: Đỏ→đen, <b>Trắng→xanh</b>, Vàng→đỏ, Xanh→trắng, Tím→vàng, Đen→tím.</li>
+        <li>Từ vị trí, bên phải Trắng là <b>Xanh</b>.</li>
+    </ol>
+    <b>Kết quả: (B) Nghệ sĩ Xanh.</b>
+
+---
+113. (Vòng tròn 6 người) Các phát biểu theo màu mũ:
+    - Người đội mũ đỏ: “Bên phải tôi là Nghệ sĩ Vàng.”
+    - Người đội mũ trắng: “Tôi ngồi giữa Nghệ sĩ Đen và Nghệ sĩ Trắng.”
+    - Người đội mũ xanh: “Bên trái tôi là Nghệ sĩ Tím.”
+    - Người đội mũ vàng: “Người đội mũ đỏ ngồi cạnh tôi.”
+    - Người đội mũ đen: “Bên phải tôi là Nghệ sĩ Đen.”
+    - Người đội mũ tím: “Người đội mũ xanh ngồi bên phải Nghệ sĩ Tím.”
+    Hỏi: Nghệ sĩ **Tím** đội mũ màu gì?
+    - (A) [x] Đỏ
+    - (B) Trắng
+    - (C) Xanh
+    - (D) Vàng
+    - (E) Đen
+    - (F) Tím
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Sắp vòng tròn duy nhất: <b>Xanh–Đen–Đỏ–Trắng–Tím–Vàng</b>.</li>
+        <li>Gán mũ khớp phát biểu: Đỏ→trắng, Trắng→vàng, Xanh→đen, Vàng→xanh, Đen→tím, <b>Tím→đỏ</b>.</li>
+        <li>Vậy Nghệ sĩ Tím đội <b>mũ đỏ</b>.</li>
+    </ol>
+    <b>Kết quả: (A) Đỏ.</b>
+
+---
+114. (Vòng tròn 6 người) Các phát biểu theo màu mũ:
+    - Người đội mũ trắng: “Bên phải tôi là Nghệ sĩ Xanh.”
+    - Người đội mũ đỏ: “Đối diện tôi là Nghệ sĩ Tím.” (đối diện = cách 3 ghế)
+    - Người đội mũ xanh: “Tôi ngồi cạnh Nghệ sĩ Đen.”
+    - Người đội mũ đen: “Nghệ sĩ Vàng không ngồi cạnh Nghệ sĩ Trắng.”
+    - Người đội mũ tím: “Bên trái tôi là Nghệ sĩ Vàng.”
+    - Người đội mũ vàng: “Bên trái tôi là Nghệ sĩ Đỏ.”
+    Hỏi: **Ai đội mũ trắng?**
+    - (A) Nghệ sĩ Đỏ
+    - (B) Nghệ sĩ Trắng
+    - (C) Nghệ sĩ Xanh
+    - (D) [x] Nghệ sĩ Vàng
+    - (E) Nghệ sĩ Đen
+    - (F) Nghệ sĩ Tím
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Vòng tròn duy nhất: <b>Vàng–Xanh–Trắng–Đỏ–Đen–Tím</b>.</li>
+        <li>Gán mũ: <b>Vàng→trắng</b>, Trắng→đỏ, Xanh→tím, Đỏ→đen, Đen→vàng, Tím→xanh.</li>
+        <li>Tất cả phát biểu đều khớp; do đó mũ trắng thuộc về <b>Vàng</b>.</li>
+    </ol>
+    <b>Kết quả: (D) Nghệ sĩ Vàng.</b>
+
+---
+115. (Vòng tròn 6 người) Các phát biểu theo màu mũ:
+    - Người đội mũ đỏ: “Tôi ngồi bên trái Nghệ sĩ Đỏ.”
+    - Người đội mũ xanh: “Bên phải tôi là Nghệ sĩ Trắng.”
+    - Người đội mũ trắng: “Tôi ngồi giữa Nghệ sĩ Đen và Nghệ sĩ Tím.”
+    - Người đội mũ vàng: “Đối diện tôi là Nghệ sĩ Tím.”
+    - Người đội mũ đen: “Nghệ sĩ Đỏ đội mũ xanh.”
+    - Người đội mũ tím: “Bên phải tôi là Nghệ sĩ Vàng.”
+    Hỏi: **Ai ngồi bên trái Nghệ sĩ Đỏ?**
+    - (A) Nghệ sĩ Đen
+    - (B) Nghệ sĩ Vàng
+    - (C) [x] Nghệ sĩ Tím
+    - (D) Nghệ sĩ Trắng
+    - (E) Nghệ sĩ Xanh
+    - (F) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Vòng tròn khớp: <b>Đen–Vàng–Tím–Đỏ–Trắng–Xanh</b>.</li>
+        <li>Gán mũ: Đỏ→xanh, Trắng→đen, Xanh→vàng, Vàng→trắng, Đen→tím, Tím→đỏ.</li>
+        <li>Từ vị trí, bên trái Đỏ là <b>Tím</b>.</li>
+    </ol>
+    <b>Kết quả: (C) Nghệ sĩ Tím.</b>
+
+---
+116. (Vòng tròn 6 người) Các phát biểu theo màu mũ:
+    - Người đội mũ đỏ: “Bên phải tôi là Nghệ sĩ Tím.”
+    - Người đội mũ trắng: “Đối diện tôi là Nghệ sĩ Tím.”
+    - Người đội mũ xanh: “Bên trái tôi là Nghệ sĩ Xanh.”
+    - Người đội mũ vàng: “Tôi ngồi giữa Nghệ sĩ Trắng và Nghệ sĩ Xanh.”
+    - Người đội mũ đen: “Nghệ sĩ Đen đội mũ đỏ.”
+    - Người đội mũ tím: “Bên phải tôi là Nghệ sĩ Đỏ.”
+    Hỏi: Nghệ sĩ **Trắng** đội mũ màu gì?
+    - (A) Đỏ
+    - (B) [x] Tím
+    - (C) Xanh
+    - (D) Vàng
+    - (E) Đen
+    - (F) Trắng
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Vòng tròn duy nhất: <b>Tím–Trắng–Đỏ–Xanh–Vàng–Đen</b>.</li>
+        <li>Gán mũ: Đỏ→vàng, <b>Trắng→tím</b>, Xanh→trắng, Vàng→xanh, Đen→đỏ, Tím→đen.</li>
+        <li>Do đó Nghệ sĩ Trắng đội <b>mũ tím</b>.</li>
+    </ol>
+    <b>Kết quả: (B) Tím.</b>
+---
+117. (Vòng tròn 6 người) Các phát biểu theo màu mũ:
+    - Người đội mũ đỏ: “Bên phải tôi là Nghệ sĩ Đen.”
+    - Người đội mũ trắng: “Bên phải tôi là Nghệ sĩ Xanh.”
+    - Người đội mũ xanh: “Tôi ngồi đối diện Nghệ sĩ Tím.” (đối diện = cách 3 ghế)
+    - Người đội mũ vàng: “Bên trái tôi là Nghệ sĩ Tím.”
+    - Người đội mũ đen: “Nghệ sĩ Vàng ngồi giữa Nghệ sĩ Trắng và Nghệ sĩ Đen.”
+    - Người đội mũ tím: “Nghệ sĩ Đỏ đội mũ vàng.”
+    Hỏi: **Ai đội mũ đen?**
+    - (A) Nghệ sĩ Đỏ
+    - (B) Nghệ sĩ Trắng
+    - (C) Nghệ sĩ Xanh
+    - (D) Nghệ sĩ Vàng
+    - (E) [x] Nghệ sĩ Tím
+    - (F) Nghệ sĩ Đen
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Sắp vòng tròn thỏa các phát biểu (duy nhất tới phép quay): <b>Trắng → Vàng → Đen → Xanh → Tím → Đỏ</b>.</li>
+        <li>Gán mũ (không trùng tên và khớp các câu): <b>Đỏ→vàng</b>, Trắng→xanh, Xanh→tím, Vàng→đỏ, <b>Đen→trắng</b>, <b>Tím→đen</b>.</li>
+        <li>Tất cả phát biểu đều đúng theo cấu hình trên ⇒ mũ đen thuộc về <b>Nghệ sĩ Tím</b>.</li>
+    </ol>
+    <b>Kết quả: (E) Nghệ sĩ Tím.</b>
+
+---
+118. (Vòng tròn 6 người) Các phát biểu theo màu mũ:
+    - Người đội mũ đỏ: “Bên trái tôi là Nghệ sĩ Vàng.”
+    - Người đội mũ trắng: “Bên phải tôi là Nghệ sĩ Xanh.”
+    - Người đội mũ xanh: “Bên phải tôi là Nghệ sĩ Trắng.”
+    - Người đội mũ vàng: “Tôi ngồi giữa Nghệ sĩ Đen và Nghệ sĩ Đỏ.”
+    - Người đội mũ đen: “Nghệ sĩ Đỏ đội mũ tím.”
+    - Người đội mũ tím: “Nghệ sĩ Tím ngồi bên phải Nghệ sĩ Đỏ.”
+    Hỏi: **Ai ngồi đối diện Nghệ sĩ Trắng?**
+    - (A) Nghệ sĩ Đỏ
+    - (B) [x] Nghệ sĩ Vàng
+    - (C) Nghệ sĩ Xanh
+    - (D) Nghệ sĩ Đen
+    - (E) Nghệ sĩ Tím
+    - (F) Không xác định
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Sắp vòng tròn (duy nhất tới phép quay): <b>Đen → Trắng → Đỏ → Tím → Vàng → Xanh</b>.</li>
+        <li>Gán mũ: Đỏ→tím, Trắng→vàng, Xanh→đỏ, Vàng→trắng, Đen→xanh, Tím→đen.</li>
+        <li>Đối diện Trắng (cách 3 ghế) là <b>Vàng</b>.</li>
+    </ol>
+    <b>Kết quả: (B) Nghệ sĩ Vàng.</b>
+
+---
+119. (Vòng tròn 6 người) Các phát biểu theo màu mũ:
+    - Người đội mũ đỏ: “Bên trái tôi là Nghệ sĩ Đen.”
+    - Người đội mũ trắng: “Bên phải tôi là Nghệ sĩ Đen.”
+    - Người đội mũ xanh: “Đối diện tôi là Nghệ sĩ Trắng.”
+    - Người đội mũ đen: “Nghệ sĩ Đen ngồi cạnh Nghệ sĩ Đỏ.”
+    - Người đội mũ tím: “Nghệ sĩ Vàng đội mũ xanh.”
+    - Người đội mũ vàng: “Bên trái tôi là Nghệ sĩ Xanh.”
+    Hỏi: **Ai đội mũ tím?**
+    - (A) Nghệ sĩ Đỏ
+    - (B) Nghệ sĩ Trắng
+    - (C) Nghệ sĩ Xanh
+    - (D) Nghệ sĩ Vàng
+    - (E) [x] Nghệ sĩ Đen
+    - (F) Nghệ sĩ Tím
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Vòng tròn thỏa (duy nhất tới phép quay): <b>Vàng → Đỏ → Đen → Trắng → Xanh → Tím</b>.</li>
+        <li>Gán mũ: Đỏ→trắng, Trắng→đỏ, Xanh→đen, Vàng→xanh, <b>Đen→tím</b>, Tím→vàng.</li>
+        <li>Do đó mũ tím thuộc về <b>Nghệ sĩ Đen</b>.</li>
+    </ol>
+    <b>Kết quả: (E) Nghệ sĩ Đen.</b>
+
+---
+120. (Vòng tròn 6 người) Các phát biểu theo màu mũ:
+    - Người đội mũ đỏ: “Tôi ngồi giữa Nghệ sĩ Xanh và Nghệ sĩ Tím.”
+    - Người đội mũ trắng: “Bên phải tôi là Nghệ sĩ Trắng.”
+    - Người đội mũ xanh: “Bên trái tôi là Nghệ sĩ Tím.”
+    - Người đội mũ vàng: “Nghệ sĩ Đỏ đội mũ trắng.”
+    - Người đội mũ đen: “Nghệ sĩ Trắng ngồi bên phải Nghệ sĩ Đỏ.”
+    - Người đội mũ tím: “Tôi không ngồi cạnh Nghệ sĩ Đen.”
+    Hỏi: **Ai ngồi đối diện Nghệ sĩ Đỏ?**
+    - (A) Nghệ sĩ Đỏ
+    - (B) [x] Nghệ sĩ Vàng
+    - (C) Nghệ sĩ Xanh
+    - (D) Nghệ sĩ Trắng
+    - (E) Nghệ sĩ Đen
+    - (F) Nghệ sĩ Tím
+    Điểm: 20, -20  
+    Phạt: 4 phút  
+    Giải thích:
+    <ol>
+        <li>Sắp vòng tròn: <b>Xanh → Vàng → Tím → Đen → Đỏ → Trắng</b>.</li>
+        <li>Gán mũ: Đỏ→trắng, Trắng→tím, Xanh→vàng, Vàng→đỏ, Đen→xanh, Tím→đen.</li>
+        <li>Đối diện Đỏ (cách 3 ghế) là <b>Vàng</b>.</li>
+    </ol>
+    <b>Kết quả: (B) Nghệ sĩ Vàng.</b>

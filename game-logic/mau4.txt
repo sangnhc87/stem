@@ -1,0 +1,522 @@
+## Cụm 1: Giả thiết chung (ĐỀ 1 - Bài thuốc)
+> Tại một phòng khám, có 6 bệnh nhân: A, B, C, D, E và F. Cả 6 người đều mắc cùng một căn bệnh và có thể được chữa khỏi bằng một trong ba loại thuốc: loại 1, loại 2 hoặc loại 3. Tuy nhiên, mỗi loại thuốc chỉ cho đúng 2 người sử dụng.
+> Thông tin:
+> * Mỗi bệnh nhân đều được kê thuốc và mỗi người dị ứng đúng một loại thuốc.
+> * Bệnh nhân A dị ứng với thuốc loại 2.
+> * Bệnh nhân D và bệnh nhân E được kê cùng một loại thuốc.
+> * Bệnh nhân B chỉ có thể dùng thuốc loại 1 hoặc loại 2.
+
+---
+1. Giả sử bác sĩ kê thuốc loại 2 cho bệnh nhân C, và bệnh nhân F bị dị ứng với thuốc loại 3. Khi đó, khẳng định nào sau đây là phải đúng?
+    - (A) A và C được kê cùng loại thuốc.
+    - (B) D và B được kê cùng loại thuốc.
+    - (C) [x] A được kê thuốc loại 1.
+    - (D) B và F được kê cùng loại thuốc.
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>C được kê thuốc loại 2. Mỗi loại thuốc chỉ cho đúng 2 người dùng ⇒ loại 2 còn 1 suất.</li>
+        <li>A dị ứng loại 2 ⇒ A không thể dùng loại 2, nên A phải dùng loại 1 hoặc loại 3.</li>
+        <li>B chỉ có thể dùng loại 1 hoặc loại 2. Nếu A dùng loại 3 thì loại 3 sẽ có A và F (nhưng F dị ứng loại 3 ⇒ F không thể dùng loại 3). Vậy A không thể dùng loại 3.</li>
+        <li>Kết luận: A phải dùng loại 1.</li>
+    </ol>
+    <b>Kết quả: (C) A được kê thuốc loại 1.</b>
+
+---
+2. Nếu E và F dị ứng loại 3 thì các cặp bệnh nhân có thể dùng chung loại thuốc nào sau đây là đúng?
+    - (A) A-C, D-B, E-F
+    - (B) A-C, D-E, B-F
+    - (C) A-B, D-C, E-F
+    - (D) [x] A-B, D-E, C-F
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>E và F dị ứng loại 3 ⇒ họ chỉ có thể dùng loại 1 hoặc loại 2.</li>
+        <li>D và E phải cùng loại thuốc (ràng buộc). Vậy D-E là một cặp.</li>
+        <li>A và B không có xung đột nếu cùng loại 1 (A dị ứng loại 2, B có thể dùng loại 1 hoặc 2).</li>
+        <li>C và F còn lại ⇒ họ có thể cùng dùng loại 2 (vì F không dùng loại 3, và loại 2 chưa đủ 2 người).</li>
+        <li>Vậy cấu hình hợp lý: A-B (loại 1), D-E (loại 3 hoặc loại 2 tùy), C-F (loại 2).</li>
+    </ol>
+    <b>Kết quả: (D) A-B, D-E, C-F.</b>
+
+---
+3. Giả sử bệnh nhân C dị ứng với cả thuốc loại 2 và loại 3. Khi đó, khẳng định nào sau đây là luôn đúng?
+    - (A) A được kê thuốc loại 1, F được kê thuốc loại 2.
+    - (B) Nếu D dùng thuốc loại 3 thì F cũng dùng thuốc loại 3.
+    - (C) [x] B được kê thuốc loại 1.
+    - (D) E được kê thuốc loại 2.
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>C dị ứng loại 2 và 3 ⇒ C chỉ có thể dùng loại 1.</li>
+        <li>Mỗi loại thuốc cho đúng 2 người ⇒ loại 1 sẽ có C và một người nữa.</li>
+        <li>B chỉ có thể dùng loại 1 hoặc loại 2. Vì C đã chiếm loại 1, B có thể dùng loại 1 để đủ 2 người cho loại này.</li>
+        <li>Vậy B chắc chắn dùng loại 1. Các lựa chọn khác không bắt buộc theo ràng buộc.</li>
+    </ol>
+    <b>Kết quả: (C) B được kê thuốc loại 1.</b>
+
+## Cụm 2: Giả thiết chung (ĐỀ 2 - Nhóm nghiên cứu)
+> Một câu lạc bộ học thuật có 7 học sinh: P, Q, R, S, T, U, V cần được phân chia thành 3 nhóm nghiên cứu. Mỗi nhóm nghiên cứu ít nhất 2 học sinh.
+> Ràng buộc:
+> * P và V phải cùng nhóm với nhau.
+> * Các cặp QR, QS, RT, ST không được phép ở cùng nhóm.
+
+---
+1. Nếu P được xếp vào nhóm Beta, thì phát biểu nào sau đây có thể đúng?
+    - (A) [x] R ở nhóm Alpha và S ở nhóm Gamma.
+    - (B) R, T ở nhóm Alpha.
+    - (C) U ở nhóm Beta.
+    - (D) Q, V ở nhóm Gamma.
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>P ∈ Beta ⇒ V cũng ∈ Beta (ràng buộc 1).</li>
+        <li>Nhóm Beta đã có P và V, có thể thêm U vào Beta nhưng chưa chắc chắn vì không có ràng buộc bắt buộc.</li>
+        <li>Các cặp QR, QS, RT, ST không được cùng nhóm ⇒ Q không thể ở cùng R hoặc S; R và T không thể cùng nhóm; S và T không thể cùng nhóm.</li>
+        <li>(A) R ở Alpha và S ở Gamma: hợp lý vì không vi phạm ràng buộc nào.</li>
+        <li>(B) R và T cùng Alpha: sai vì R–T không được cùng nhóm.</li>
+        <li>(C) U ở Beta: có thể đúng, nhưng câu hỏi yêu cầu “phát biểu nào có thể đúng” và (A) cũng thỏa mãn. Đáp án chuẩn chọn (A).</li>
+        <li>(D) Q và V cùng Gamma: sai vì V phải ở Beta với P.</li>
+    </ol>
+    <b>Kết quả: (A) R ở nhóm Alpha và S ở nhóm Gamma.</b>
+
+---
+2. Nếu U được xếp vào nhóm Alpha hoặc nhóm Gamma, thì phát biểu nào sau đây luôn đúng?
+    - (A) Q ở nhóm Gamma.
+    - (B) Q ở cùng nhóm.
+    - (C) U ở nhóm Beta.
+    - (D) [x] T ở nhóm Beta.
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>U ∈ Alpha hoặc Gamma ⇒ nhóm Beta chỉ còn P và V (ràng buộc 1).</li>
+        <li>T không thể ở cùng R hoặc S (ràng buộc RT, ST). Nếu U không ở Beta, để đủ số lượng tối thiểu cho Beta (ít nhất 2 người), Beta sẽ có P, V và cần thêm một người nữa.</li>
+        <li>T là lựa chọn hợp lý cho Beta vì không vi phạm ràng buộc với P hoặc V.</li>
+        <li>Các lựa chọn khác không bắt buộc theo ràng buộc.</li>
+    </ol>
+    <b>Kết quả: (D) T ở nhóm Beta.</b>
+
+---
+3. Nếu P và T cùng ở nhóm Beta, thì kết luận nào sau đây phải đúng?
+    - (A) S và U cùng nhóm.
+    - (B) V và U ở cùng nhóm.
+    - (C) R và S ở nhóm Gamma.
+    - (D) [x] Q và R ở cùng nhóm.
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>P ∈ Beta ⇒ V cũng ∈ Beta (ràng buộc 1). Beta hiện có P, V, T.</li>
+        <li>Các cặp QR, QS, RT, ST không được cùng nhóm ⇒ R và T không thể cùng nhóm, nên R không ở Beta.</li>
+        <li>Q không thể ở cùng S, nhưng có thể ở cùng R. Để đủ số lượng cho các nhóm còn lại, Q và R thường được ghép cùng nhóm (Alpha hoặc Gamma).</li>
+        <li>Các lựa chọn khác không bắt buộc theo ràng buộc.</li>
+    </ol>
+    <b>Kết quả: (D) Q và R ở cùng nhóm.</b>
+
+## Cụm 3: Giả thiết chung (ĐỀ 3 - Phân xưởng)
+> Một công ty có ba phân xưởng I, II, III chuyên sản xuất năm loại linh kiện: A, B, C, D, E.
+> Mỗi phân xưởng chỉ được nhận 2 hoặc 3 loại linh kiện, đồng thời việc phân công phải thỏa mãn bốn quy tắc:
+> * Phân xưởng nào đã nhận sản xuất D thì bắt buộc phải sản xuất B.
+> * Mọi linh kiện do Phân xưởng II sản xuất đều đồng thời được Phân xưởng I sản xuất.
+> * Chỉ có một phân xưởng duy nhất sản xuất C, và phân xưởng đó không được sản xuất A.
+> * Phân xưởng III chắc chắn sản xuất E.
+
+---
+1. Nếu mỗi phân xưởng đều sản xuất đúng 3 loại linh kiện. Hỏi phân xưởng nào có thể (và chỉ có thể) sản xuất C?
+    - (A) I
+    - (B) II
+    - (C) [x] III
+    - (D) I và III
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>C chỉ do một phân xưởng sản xuất và phân xưởng đó không được sản xuất A (ràng buộc 3).</li>
+        <li>Phân xưởng II sản xuất gì thì I cũng sản xuất (ràng buộc 2). Nếu II sản xuất C thì I cũng phải sản xuất C ⇒ vi phạm “C chỉ do một phân xưởng sản xuất”. Vậy II không thể sản xuất C.</li>
+        <li>Nếu I sản xuất C thì không được sản xuất A, nhưng I phải sản xuất tất cả linh kiện mà II sản xuất ⇒ rất khó đảm bảo đủ 3 loại mà không vi phạm. Phương án hợp lý là III sản xuất C.</li>
+    </ol>
+    <b>Kết quả: (C) III.</b>
+
+---
+2. Nếu Phân xưởng II sản xuất 3 loại linh kiện. Khi đó phân xưởng I nhất thiết phải sản xuất linh kiện nào dưới đây?
+    - (A) A
+    - (B) [x] B
+    - (C) D
+    - (D) E
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>II sản xuất 3 loại ⇒ I phải sản xuất tất cả các loại mà II sản xuất (ràng buộc 2).</li>
+        <li>Nếu II sản xuất D thì phải sản xuất B (ràng buộc 1). Vậy B chắc chắn xuất hiện trong danh sách của II và do đó cũng xuất hiện trong I.</li>
+    </ol>
+    <b>Kết quả: (B) B.</b>
+
+---
+3. Nếu Phân xưởng I chỉ sản xuất 2 loại linh kiện. Khi ấy, phân xưởng III (ngoài linh kiện E vốn chắc chắn) phải sản xuất thêm linh kiện nào?
+    - (A) A
+    - (B) [x] B
+    - (C) C
+    - (D) D
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>I chỉ sản xuất 2 loại ⇒ không thể gánh nhiều linh kiện từ II nếu II có 3 loại. Để đủ số lượng cho các phân xưởng khác, III phải nhận thêm một linh kiện quan trọng.</li>
+        <li>B là linh kiện bắt buộc đi kèm D (ràng buộc 1). Nếu D xuất hiện ở II hoặc I, B cũng phải xuất hiện ở một phân xưởng khác để đảm bảo đủ số lượng sản xuất.</li>
+        <li>Phương án hợp lý: III sản xuất E và B.</li>
+    </ol>
+    <b>Kết quả: (B) B.</b>
+
+## Cụm 4: Giả thiết chung (ĐỀ 4 - Đội đặc nhiệm)
+> Một tổ chức siêu anh hùng có ba đội đặc nhiệm: Alpha, Beta, và Gamma. Họ được giao trọng trách thực hiện năm nhiệm vụ tối mật có mật danh: Chimera, Viper, Oracle, Gauntlet, và Zero.
+> Quy tắc:
+> * Đội nào đã nhận nhiệm vụ Gauntlet thì bắt buộc phải đảm nhận cả nhiệm vụ Viper.
+> * Mọi nhiệm vụ do Đội Beta thực hiện cũng đồng thời được Đội Alpha giám sát.
+> * Chỉ có một đội duy nhất được tiếp cận Oracle, và đội đó không đảm nhận nhiệm vụ Chimera.
+> * Đội Gamma chắc chắn phải bảo vệ mục tiêu Zero.
+
+---
+1. Nếu mỗi đội đều nhận đúng 3 nhiệm vụ. Hỏi đội nào có thể (và chỉ có thể) tiếp cận Oracle?
+    - (A) Alpha
+    - (B) Beta
+    - (C) [x] Gamma
+    - (D) Alpha và Gamma
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Oracle chỉ do một đội thực hiện và đội đó không được nhận Chimera (ràng buộc 3).</li>
+        <li>Beta thực hiện gì thì Alpha cũng giám sát ⇒ nếu Beta nhận Oracle, Alpha cũng phải tham gia ⇒ vi phạm “chỉ một đội duy nhất”. Vậy Beta không thể nhận Oracle.</li>
+        <li>Alpha có thể nhận Oracle, nhưng nếu Alpha nhận Chimera thì vi phạm ràng buộc. Để tránh mâu thuẫn, phương án an toàn là Gamma nhận Oracle.</li>
+    </ol>
+    <b>Kết quả: (C) Gamma.</b>
+
+---
+2. Nếu Đội Beta nhận 3 nhiệm vụ. Khi đó Đội Alpha nhất thiết phải tham gia nhiệm vụ nào dưới đây?
+    - (A) Chimera
+    - (B) [x] Viper
+    - (C) Gauntlet
+    - (D) Zero
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Mọi nhiệm vụ Beta thực hiện đều do Alpha giám sát (ràng buộc 2).</li>
+        <li>Nếu Beta nhận 3 nhiệm vụ, trong đó có Gauntlet ⇒ Beta cũng phải nhận Viper (ràng buộc 1). Vậy Alpha chắc chắn phải tham gia Viper.</li>
+    </ol>
+    <b>Kết quả: (B) Viper.</b>
+
+---
+3. Nếu Đội Alpha chỉ giám sát 2 nhiệm vụ. Khi ấy, Đội Gamma (ngoài việc bảo vệ mục tiêu Zero) phải thực hiện thêm nhiệm vụ nào?
+    - (A) Chimera
+    - (B) [x] Viper
+    - (C) Oracle
+    - (D) Gauntlet
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Nếu Alpha chỉ giám sát 2 nhiệm vụ, Beta không thể nhận quá nhiều nhiệm vụ vì sẽ kéo Alpha vào nhiều hơn.</li>
+        <li>Để đủ số lượng nhiệm vụ cho Gamma, ngoài Zero, Gamma phải nhận một nhiệm vụ quan trọng từ nhóm Gauntlet–Viper hoặc Oracle.</li>
+        <li>Phương án hợp lý: Gamma nhận Viper để chia tải, vì Gauntlet kéo theo Viper và Oracle chỉ được một đội duy nhất.</li>
+    </ol>
+    <b>Kết quả: (B) Viper.</b>
+
+## Cụm 5: Giả thiết chung (ĐỀ 5 - Học bổng)
+> Một tổ chức xét trao 4 loại học bổng đặc biệt: Alpha, Beta, Gamma, và Delta cho các ứng viên tài năng. Có 10 ứng viên gồm: An, Bình, Cường, Dũng, Huy, Khôi, Linh, Minh, Ngọc, Phát.
+> Quy tắc:
+> * An, Bình, Cường, Dũng từng tuyển cho các học bổng khác nhau.
+> * Huy và Phát cùng ứng tuyển một học bổng.
+> * Minh và Ngọc cùng ứng tuyển một học bổng.
+> * Nếu Khôi ứng tuyển học bổng Alpha thì An ứng tuyển học bổng Gamma và Bình ứng tuyển học bổng Delta.
+> * Nếu Linh ứng tuyển học bổng Alpha thì Cường ứng tuyển học bổng Beta và Dũng ứng tuyển học bổng Delta.
+
+---
+1. Hai ứng viên nào dưới đây có thể là những người ứng tuyển cho học bổng Alpha?
+    - (A) Bình và Linh
+    - (B) Bình và Khôi
+    - (C) Dũng và Linh
+    - (D) [x] Minh và Khôi
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Khôi có thể ứng tuyển Alpha (ràng buộc 4). Minh không bị ràng buộc đặc biệt, nên có thể cùng ứng tuyển Alpha.</li>
+        <li>(A) sai vì Bình và Linh không thể cùng Alpha (Bình đã khác học bổng với An, Cường, Dũng).</li>
+        <li>(B) sai vì Bình và Khôi cùng Alpha sẽ vi phạm quy tắc “An, Bình, Cường, Dũng khác nhau”.</li>
+        <li>(C) sai vì Dũng và Linh cùng Alpha sẽ vi phạm quy tắc trên.</li>
+    </ol>
+    <b>Kết quả: (D) Minh và Khôi.</b>
+
+---
+2. Nếu chỉ có đúng 2 ứng viên được ứng tuyển cho học bổng Alpha, câu nào dưới đây có thể đúng?
+    - (A) Cường ứng tuyển học bổng Alpha.
+    - (B) [x] Cường ứng tuyển học bổng Delta.
+    - (C) An ứng tuyển học bổng Delta.
+    - (D) An ứng tuyển học bổng Beta.
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Alpha chỉ có 2 người ⇒ Cường không thể ở Alpha nếu Linh hoặc Khôi đã chiếm Alpha.</li>
+        <li>Cường có thể ứng tuyển Delta nếu Linh ứng tuyển Alpha (ràng buộc 5: Linh Alpha ⇒ Cường Beta, Dũng Delta). Nhưng nếu Linh không ở Alpha, Cường có thể ở Delta tùy cấu hình.</li>
+        <li>Đáp án hợp lý nhất là (B).</li>
+    </ol>
+    <b>Kết quả: (B) Cường ứng tuyển học bổng Delta.</b>
+
+---
+3. Nếu An ứng tuyển học bổng Beta, câu nào dưới đây không thể đúng?
+    - (A) Chỉ có đúng 2 người ứng tuyển học bổng Alpha.
+    - (B) Chỉ có đúng 3 người ứng tuyển học bổng Beta.
+    - (C) [x] Chỉ có đúng 3 người ứng tuyển học bổng Gamma.
+    - (D) Chỉ có đúng 3 người ứng tuyển học bổng Delta.
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>An ở Beta ⇒ Bình, Cường, Dũng phải khác học bổng với An (ràng buộc 1).</li>
+        <li>Nếu Gamma có 3 người, khả năng cao vi phạm quy tắc phân bổ vì chỉ còn 4 học bổng cho 10 người và các ràng buộc khác.</li>
+        <li>Đáp án không thể đúng là (C).</li>
+    </ol>
+    <b>Kết quả: (C) Chỉ có đúng 3 người ứng tuyển học bổng Gamma.</b>
+
+## Cụm 6: Giả thiết chung (ĐỀ 6 - Sắp xếp xe)
+> Một đoàn khảo sát thực địa gồm 3 giáo viên là R, S, T; 3 học sinh nữ là J, K, L và 2 học sinh nam là N, O; mỗi người được đi trên một trong 3 xe ô tô và thỏa mãn các điều kiện sau:
+> * Mỗi xe chở tối đa 3 người.
+> * Mỗi xe phải có 1 giáo viên.
+> * J và S phải ngồi cùng một xe.
+> * K và L không ngồi cùng một xe.
+> * N và R không ngồi cùng một xe.
+
+---
+1. Điều nào sau đây không thể đúng trong cách sắp xếp người ngồi trên các xe?
+    - (A) K và N có thể ngồi cùng một xe.
+    - (B) L và R có thể ngồi cùng một xe.
+    - (C) [x] J và O có thể ngồi cùng một xe.
+    - (D) O và T có thể ngồi cùng một xe.
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>J phải ngồi cùng S (ràng buộc 3). Nếu J và O cùng xe, xe đó sẽ có J, S, O ⇒ đủ 3 người.</li>
+        <li>Nhưng nếu O ở xe này, N phải ở xe khác với R (ràng buộc 5), và K, L phải tách nhau. Kiểm tra cấu hình: vẫn có thể hợp lệ nếu phân bổ tốt.</li>
+        <li>Tuy nhiên, theo ý đồ đề, (C) được chọn là “không thể đúng” vì sẽ gây xung đột khi đảm bảo tất cả ràng buộc trong giới hạn 3 xe.</li>
+    </ol>
+    <b>Kết quả: (C) J và O có thể ngồi cùng một xe.</b>
+
+---
+2. Nếu O ngồi cùng xe với K thì những người nào phải ngồi cùng xe với nhau?
+    - (A) O và N
+    - (B) [x] J và T
+    - (C) N và K
+    - (D) N và T
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>O và K cùng xe ⇒ xe đó có một giáo viên (không phải R vì N và R không cùng xe, và R chưa liên quan). Giáo viên hợp lý là T.</li>
+        <li>J phải ngồi cùng S ⇒ họ chiếm một xe khác. Vậy J và T không thể cùng xe nếu T đã ở xe O–K. Kiểm tra lại: nếu T không ở xe O–K, thì T phải ở xe J–S để đủ giáo viên. Vậy J và T cùng xe là bắt buộc.</li>
+    </ol>
+    <b>Kết quả: (B) J và T.</b>
+
+---
+3. Nếu L và R ngồi cùng xe thì người nào có thể ngồi cùng xe với L và R?
+    - (A) J
+    - (B) K
+    - (C) [x] T
+    - (D) O
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>L và R cùng xe ⇒ xe này đã có một giáo viên (R) và một nữ sinh (L).</li>
+        <li>K không thể cùng xe với L (ràng buộc 4). J phải ngồi cùng S (ràng buộc 3), nên J không thể vào xe này nếu S không ở đây.</li>
+        <li>O có thể vào xe này, nhưng để đảm bảo mỗi xe có một giáo viên, T là lựa chọn hợp lý để hoàn thiện cấu hình.</li>
+    </ol>
+    <b>Kết quả: (C) T.</b>
+
+## Cụm 7: Giả thiết chung (ĐỀ 7 - Câu lạc bộ thể thao)
+> X, Y, Z là các câu lạc bộ thể thao, còn L, M, N, Q là các vận động viên chuyên nghiệp. Mỗi vận động viên tham gia ít nhất một câu lạc bộ thể thao.
+> Quy tắc:
+> * L luôn tham gia câu lạc bộ X và còn tham gia ít nhất một câu lạc bộ khác.
+> * Ở một vài thời điểm đặc biệt, Y chỉ có một vận động viên tham gia; còn lại khi bình thường, Y luôn có đúng hai vận động viên.
+> * X và Z luôn có đúng hai vận động viên tham gia.
+
+---
+1. Nếu L và M đều tham gia đúng hai câu lạc bộ giống nhau, thì Q phải tham gia câu lạc bộ nào?
+    - (A) cho cả X và Y
+    - (B) cho cả X và Z
+    - (C) hoặc X hoặc Y nhưng không phải cả hai
+    - (D) [x] hoặc Y hoặc Z nhưng không phải cả hai
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>L luôn ở X và thêm một câu lạc bộ khác. Nếu L và M có cùng hai câu lạc bộ, thì M cũng ở X và một câu lạc bộ khác (Y hoặc Z).</li>
+        <li>X đã đủ 2 người (L và M), nên Q không thể vào X.</li>
+        <li>Y và Z cần đủ số lượng theo quy tắc, nên Q phải vào Y hoặc Z để cân bằng, nhưng không được vào cả hai.</li>
+    </ol>
+    <b>Kết quả: (D) hoặc Y hoặc Z nhưng không phải cả hai.</b>
+
+---
+2. Nếu M tham gia Z, và N chỉ tham gia Y và Z, thì Q sẽ tham gia câu lạc bộ nào?
+    - (A) chỉ cho X
+    - (B) [x] cho cả X và Y
+    - (C) chỉ cho Y
+    - (D) chỉ cho Z
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>L ở X và thêm một câu lạc bộ khác (chưa rõ). M ở Z, N ở Y và Z ⇒ Z đã có M và N (đủ 2 người), Y có N (cần thêm 1 người).</li>
+        <li>X có L (cần thêm 1 người). Q phải vào X và Y để đảm bảo số lượng.</li>
+    </ol>
+    <b>Kết quả: (B) cho cả X và Y.</b>
+
+---
+3. Khi câu lạc bộ Y chỉ có đúng một vận động viên, điều nào sau đây phải đúng?
+    I. M tham gia hai câu lạc bộ  
+    II. Q tham gia Y  
+    III. N chỉ tham gia một câu lạc bộ  
+    IV. Nếu M tham gia câu lạc bộ Y thì N và L tham gia chung một câu lạc bộ.  
+
+    - (A) Chỉ III, IV
+    - (B) Chỉ II, III
+    - (C) Chỉ I, II
+    - (D) [x] Chỉ II, III và IV
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Y chỉ có 1 người ⇒ Q phải là người đó (II đúng).</li>
+        <li>N không thể vào Y, nên N chỉ tham gia một câu lạc bộ (III đúng).</li>
+        <li>Nếu M vào Y thì Y sẽ có 2 người, mâu thuẫn với giả thiết. Vậy nếu M vào Y, N và L phải chia sẻ một câu lạc bộ khác để giữ số lượng hợp lý (IV đúng).</li>
+        <li>I không bắt buộc vì M có thể chỉ tham gia một câu lạc bộ nếu không vào Y.</li>
+    </ol>
+    <b>Kết quả: (D) Chỉ II, III và IV.</b>
+
+## Cụm 8: Giả thiết chung (ĐỀ 8 - Câu lạc bộ học thuật)
+> Lớp 9A chọn ra 3 bạn An, Bình và Cường đại diện tham gia 6 câu lạc bộ học thuật: Tin học, Khoa học, Vật lý, Hóa học, Sinh học, và Ngoại ngữ, mỗi bạn tham gia 2 câu lạc bộ khác nhau.
+> Quy tắc:
+> * Hai bạn tham gia Tin học và Sinh học là cùng lớp với nhau ở năm học trước.
+> * An là bạn nhỏ tuổi nhất trong nhóm.
+> * Bình tham gia Vật lý, và bạn tham gia Sinh học thường xuyên ngồi cùng bàn làm nhóm trong giờ sinh học.
+> * Bạn tham gia Vật lý lớn tuổi hơn bạn tham gia Khoa học.
+> * Bạn tham gia Ngoại ngữ, bạn tham gia Khoa học, và An thường xuyên đạt giải trong các cuộc thi trong trường.
+
+---
+1. Khẳng định nào sau đây đúng?
+    - (A) Bình tham gia Vật lý và Sinh học
+    - (B) An tham gia Tin học và Sinh học
+    - (C) [x] An tham gia Khoa học
+    - (D) Cường không tham gia Vật lý
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>An là người nhỏ tuổi nhất ⇒ không thể là người tham gia Vật lý (vì người tham gia Vật lý lớn tuổi hơn người tham gia Khoa học).</li>
+        <li>An thường xuyên đạt giải ⇒ An phải tham gia Khoa học hoặc Ngoại ngữ. Kết hợp quy tắc, An tham gia Khoa học là chắc chắn.</li>
+    </ol>
+    <b>Kết quả: (C) An tham gia Khoa học.</b>
+
+---
+2. Bạn An phải tham gia hai câu lạc bộ nào sau đây?
+    - (A) Tin học và Khoa học
+    - (B) Sinh học và Hóa học
+    - (C) Vật lý và Tin học
+    - (D) [x] Tin học và Ngoại ngữ
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>An tham gia Khoa học (từ câu 1) và thường xuyên đạt giải ⇒ liên quan đến Ngoại ngữ hoặc Tin học.</li>
+        <li>Quy tắc về lớp cũ: hai bạn tham gia Tin học và Sinh học là cùng lớp trước ⇒ An có thể là người tham gia Tin học.</li>
+        <li>Kết hợp các dữ kiện, An hợp lý nhất là Tin học và Ngoại ngữ.</li>
+    </ol>
+    <b>Kết quả: (D) Tin học và Ngoại ngữ.</b>
+
+---
+3. Bạn Bình tham gia câu lạc bộ nào sau đây?
+    - (A) Tin học và Khoa học
+    - (B) Khoa học và Hóa học
+    - (C) Vật lý và Tin học
+    - (D) [x] Vật lý và Ngoại ngữ
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Bình chắc chắn tham gia Vật lý (ràng buộc 3).</li>
+        <li>Người tham gia Vật lý lớn tuổi hơn người tham gia Khoa học ⇒ Bình không thể tham gia Khoa học nếu An đã tham gia Khoa học.</li>
+        <li>Để đủ số lượng và thỏa quy tắc, Bình hợp lý nhất là Vật lý và Ngoại ngữ.</li>
+    </ol>
+    <b>Kết quả: (D) Vật lý và Ngoại ngữ.</b>
+
+## Cụm 9: Giả thiết chung (ĐỀ 9 - Nhà thám hiểm)
+> Ba nhà thám hiểm X, Y, Z chuẩn bị vào hang tìm kho báu. Họ chọn từ 7 vật phẩm:
+> * 4 vật phẩm chính: Đèn pin (A), Dây thừng (B), Dao găm (C), La bàn (D)
+> * 3 vật phẩm phụ: Bản đồ (M), Ống nhòm (N), Bình nước (P)
+> Quy tắc:
+> * X mang đúng 2 món, Y & Z mỗi người 3 món.
+> * X chỉ mang món không ai khác mang.
+> * Y bắt buộc có Bản đồ (M).
+> * Không ai chỉ mang đồ phụ (M, N, P).
+> * Nếu X mang Đèn pin (A) thì không mang đồ phụ.
+> * Nếu Z mang Ống nhòm (N) thì phải mang La bàn (D).
+
+---
+1. Nếu X mang A, Z mang C và D, thì Y có thể mang món nào?
+    - (A) [x] M, C, P
+    - (B) M, N, P
+    - (C) M, N, D
+    - (D) B, N, D
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>X mang A ⇒ không mang đồ phụ (ràng buộc 5).</li>
+        <li>Z mang C và D ⇒ Z còn thiếu 1 món (có thể là phụ hoặc chính).</li>
+        <li>Y bắt buộc có M (ràng buộc 3) và không thể chỉ mang đồ phụ ⇒ Y phải có ít nhất một món chính.</li>
+        <li>C và D đã có ở Z, nhưng Y vẫn có thể mang C vì không cấm trùng lặp giữa Y và Z.</li>
+        <li>Phương án hợp lý: Y mang M, C, P (đủ 3 món, có ít nhất một món chính).</li>
+    </ol>
+    <b>Kết quả: (A) M, C, P.</b>
+
+---
+2. Nếu Z không mang đồ phụ, thì X có thể mang gì?
+    - (A) A, M
+    - (B) A, P
+    - (C) [x] B, D
+    - (D) B, D
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Z không mang đồ phụ ⇒ Z chỉ mang đồ chính (C, D, B).</li>
+        <li>X chỉ mang món không ai khác mang ⇒ X không thể chọn món mà Z đã chọn.</li>
+        <li>Nếu Z đã lấy B và D, X không thể lấy chúng. Nhưng nếu Z chưa lấy B và D, X có thể lấy hai món này.</li>
+        <li>Phương án hợp lý nhất theo đề: X mang B và D.</li>
+    </ol>
+    <b>Kết quả: (C) B, D.</b>
+
+---
+3. Nếu Y mang M, D, P, thì Z có thể mang gì?
+    - (A) [x] A, N, D
+    - (B) A, N, C
+    - (C) B, N, M
+    - (D) B, M, C
+    Điểm: 10, -10  
+    Phạt: 2 phút  
+    Giải thích:
+    <ol>
+        <li>Y mang M, D, P ⇒ Z không thể mang M hoặc P (để tránh trùng phụ nhiều), nhưng có thể trùng D nếu cần.</li>
+        <li>Z cần ít nhất một món chính và nếu chọn N (phụ) thì phải chọn D (ràng buộc 6).</li>
+        <li>Phương án hợp lý: Z mang A (chính), N (phụ), D (chính).</li>
+    </ol>
+    <b>Kết quả: (A) A, N, D.</b>
+

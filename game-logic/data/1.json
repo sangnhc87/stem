@@ -1,0 +1,632 @@
+[
+  {
+    "question": "Sự kiện 'Chiến thắng Điện Biên Phủ lừng lẫy năm châu, chấn động địa cầu' diễn ra vào năm nào?",
+    "answers": [
+      {
+        "text": "1960",
+        "correct": false
+      },
+      {
+        "text": "1975",
+        "correct": false
+      },
+      {
+        "text": "1945",
+        "correct": false
+      },
+      {
+        "text": "1954",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào được xem là 'tàu ngầm' của sa mạc nhờ khả năng chịu khát tuyệt vời?",
+    "answers": [
+      {
+        "text": "Ngựa vằn",
+        "correct": false
+      },
+      {
+        "text": "Cáo sa mạc",
+        "correct": false
+      },
+      {
+        "text": "Lạc đà",
+        "correct": true
+      },
+      {
+        "text": "Bọ cạp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong máy tính, CPU là viết tắt của cụm từ nào?",
+    "answers": [
+      {
+        "text": "Central Processing Unit",
+        "correct": true
+      },
+      {
+        "text": "Computer Personal Unit",
+        "correct": false
+      },
+      {
+        "text": "Control Processing Unit",
+        "correct": false
+      },
+      {
+        "text": "Central Power Unit",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nữ hoàng duy nhất trong lịch sử phong kiến Việt Nam là ai?",
+    "answers": [
+      {
+        "text": "Bùi Thị Xuân",
+        "correct": false
+      },
+      {
+        "text": "Ỷ Lan",
+        "correct": false
+      },
+      {
+        "text": "Lý Chiêu Hoàng",
+        "correct": true
+      },
+      {
+        "text": "Dương Vân Nga",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con nhện có bao nhiêu chân?",
+    "answers": [
+      {
+        "text": "12 chân",
+        "correct": false
+      },
+      {
+        "text": "10 chân",
+        "correct": false
+      },
+      {
+        "text": "8 chân",
+        "correct": true
+      },
+      {
+        "text": "6 chân",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là người phát minh ra thuốc nổ Dynamite và sau này dùng tài sản lập ra giải thưởng Nobel?",
+    "answers": [
+      {
+        "text": "Albert Einstein",
+        "correct": false
+      },
+      {
+        "text": "Alfred Nobel",
+        "correct": true
+      },
+      {
+        "text": "Thomas Edison",
+        "correct": false
+      },
+      {
+        "text": "Marie Curie",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tàu Titanic bị chìm vào năm nào?",
+    "answers": [
+      {
+        "text": "1912",
+        "correct": true
+      },
+      {
+        "text": "1900",
+        "correct": false
+      },
+      {
+        "text": "1898",
+        "correct": false
+      },
+      {
+        "text": "1920",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào lớn nhất thế giới hiện nay và không biết bay?",
+    "answers": [
+      {
+        "text": "Chim Công",
+        "correct": false
+      },
+      {
+        "text": "Đà điểu Châu Phi",
+        "correct": true
+      },
+      {
+        "text": "Chim Cánh cụt",
+        "correct": false
+      },
+      {
+        "text": "Hồng hạc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vận tốc ánh sáng trong chân không xấp xỉ bao nhiêu?",
+    "answers": [
+      {
+        "text": "340 m/s",
+        "correct": false
+      },
+      {
+        "text": "1.000 km/s",
+        "correct": false
+      },
+      {
+        "text": "300.000 km/s",
+        "correct": true
+      },
+      {
+        "text": "150.000 km/s",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hoàng đế Napoleon Bonaparte là nhân vật lịch sử nổi tiếng của nước nào?",
+    "answers": [
+      {
+        "text": "Nga",
+        "correct": false
+      },
+      {
+        "text": "Anh",
+        "correct": false
+      },
+      {
+        "text": "Pháp",
+        "correct": true
+      },
+      {
+        "text": "Đức",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thức ăn chủ yếu của Gấu Trúc là gì?",
+    "answers": [
+      {
+        "text": "Tre, Trúc",
+        "correct": true
+      },
+      {
+        "text": "Thịt",
+        "correct": false
+      },
+      {
+        "text": "Mật ong",
+        "correct": false
+      },
+      {
+        "text": "Cá",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hợp chất hóa học H2O là tên gọi khoa học của chất gì?",
+    "answers": [
+      {
+        "text": "Muối ăn",
+        "correct": false
+      },
+      {
+        "text": "Nước",
+        "correct": true
+      },
+      {
+        "text": "Khí Oxy",
+        "correct": false
+      },
+      {
+        "text": "Axit",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vệ tinh nhân tạo đầu tiên của loài người được phóng lên vũ trụ tên là gì?",
+    "answers": [
+      {
+        "text": "Explorer 1",
+        "correct": false
+      },
+      {
+        "text": "Apollo 11",
+        "correct": false
+      },
+      {
+        "text": "Sputnik 1",
+        "correct": true
+      },
+      {
+        "text": "Vostok 1",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tắc kè hoa nổi tiếng với khả năng đặc biệt nào?",
+    "answers": [
+      {
+        "text": "Phun nọc độc",
+        "correct": false
+      },
+      {
+        "text": "Chạy rất nhanh",
+        "correct": false
+      },
+      {
+        "text": "Bay lượn",
+        "correct": false
+      },
+      {
+        "text": "Đổi màu da để ngụy trang",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong Thế chiến thứ 2, hai thành phố nào của Nhật Bản bị ném bom nguyên tử?",
+    "answers": [
+      {
+        "text": "Hiroshima và Nagasaki",
+        "correct": true
+      },
+      {
+        "text": "Kyoto và Hiroshima",
+        "correct": false
+      },
+      {
+        "text": "Nagasaki và Tokyo",
+        "correct": false
+      },
+      {
+        "text": "Tokyo và Osaka",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cá mập có bộ xương được cấu tạo từ chất gì?",
+    "answers": [
+      {
+        "text": "Không có xương",
+        "correct": false
+      },
+      {
+        "text": "Xương cứng",
+        "correct": false
+      },
+      {
+        "text": "Sụn",
+        "correct": true
+      },
+      {
+        "text": "Canxi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Công nghệ Wifi sử dụng loại sóng nào để truyền dữ liệu?",
+    "answers": [
+      {
+        "text": "Sóng vô tuyến",
+        "correct": true
+      },
+      {
+        "text": "Tia X",
+        "correct": false
+      },
+      {
+        "text": "Sóng âm",
+        "correct": false
+      },
+      {
+        "text": "Tia hồng ngoại",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tác phẩm 'Hịch tướng sĩ' nổi tiếng trong lịch sử Việt Nam do ai soạn thảo?",
+    "answers": [
+      {
+        "text": "Quang Trung",
+        "correct": false
+      },
+      {
+        "text": "Trần Hưng Đạo",
+        "correct": true
+      },
+      {
+        "text": "Nguyễn Trãi",
+        "correct": false
+      },
+      {
+        "text": "Lý Thường Kiệt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chuột túi (Kangaroo) là loài vật biểu tượng của quốc gia nào?",
+    "answers": [
+      {
+        "text": "Brazil",
+        "correct": false
+      },
+      {
+        "text": "Nam Phi",
+        "correct": false
+      },
+      {
+        "text": "Úc",
+        "correct": true
+      },
+      {
+        "text": "Mỹ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là người tạo ra Bảng tuần hoàn các nguyên tố hóa học?",
+    "answers": [
+      {
+        "text": "Louis Pasteur",
+        "correct": false
+      },
+      {
+        "text": "Isaac Newton",
+        "correct": false
+      },
+      {
+        "text": "Marie Curie",
+        "correct": false
+      },
+      {
+        "text": "Dmitri Mendeleev",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Con vật nào sử dụng sóng siêu âm để định vị khi bay trong đêm?",
+    "answers": [
+      {
+        "text": "Con Dơi",
+        "correct": true
+      },
+      {
+        "text": "Con Muỗi",
+        "correct": false
+      },
+      {
+        "text": "Con Cú mèo",
+        "correct": false
+      },
+      {
+        "text": "Con Đom đóm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Kim tự tháp Giza nổi tiếng nằm ở quốc gia nào?",
+    "answers": [
+      {
+        "text": "Ai Cập",
+        "correct": true
+      },
+      {
+        "text": "Mexico",
+        "correct": false
+      },
+      {
+        "text": "Thổ Nhĩ Kỳ",
+        "correct": false
+      },
+      {
+        "text": "Hy Lạp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cây xanh nhả ra khí gì trong quá trình quang hợp vào ban ngày?",
+    "answers": [
+      {
+        "text": "Khí Nitơ",
+        "correct": false
+      },
+      {
+        "text": "Khí Cacbonic",
+        "correct": false
+      },
+      {
+        "text": "Khí Oxy",
+        "correct": true
+      },
+      {
+        "text": "Hơi nước",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hệ thống định vị toàn cầu GPS là viết tắt của từ gì?",
+    "answers": [
+      {
+        "text": "Global Positioning System",
+        "correct": true
+      },
+      {
+        "text": "Global Point System",
+        "correct": false
+      },
+      {
+        "text": "General Position Satellite",
+        "correct": false
+      },
+      {
+        "text": "Geo Physical Service",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có khả năng tái sinh các bộ phận cơ thể bị mất (như xúc tu)?",
+    "answers": [
+      {
+        "text": "Mực",
+        "correct": false
+      },
+      {
+        "text": "Sao biển",
+        "correct": true
+      },
+      {
+        "text": "Sứa",
+        "correct": false
+      },
+      {
+        "text": "Cua",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cuộc cách mạng công nghiệp lần thứ nhất bắt đầu từ quốc gia nào?",
+    "answers": [
+      {
+        "text": "Pháp",
+        "correct": false
+      },
+      {
+        "text": "Đức",
+        "correct": false
+      },
+      {
+        "text": "Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Anh",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cá Heo hô hấp bằng gì?",
+    "answers": [
+      {
+        "text": "Miệng",
+        "correct": false
+      },
+      {
+        "text": "Phổi",
+        "correct": true
+      },
+      {
+        "text": "Mang",
+        "correct": false
+      },
+      {
+        "text": "Da",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chất nào giúp lá cây có màu xanh lục?",
+    "answers": [
+      {
+        "text": "Diệp lục",
+        "correct": true
+      },
+      {
+        "text": "Anthocyanin",
+        "correct": false
+      },
+      {
+        "text": "Xanthophyll",
+        "correct": false
+      },
+      {
+        "text": "Carotenoid",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Triều đại phong kiến nào tồn tại lâu nhất trong lịch sử Việt Nam?",
+    "answers": [
+      {
+        "text": "Nhà Trần",
+        "correct": false
+      },
+      {
+        "text": "Nhà Nguyễn",
+        "correct": false
+      },
+      {
+        "text": "Nhà Lý",
+        "correct": false
+      },
+      {
+        "text": "Nhà Hậu Lê",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong các nhóm máu, nhóm máu nào được gọi là nhóm máu 'chuyên cho' (có thể truyền cho các nhóm khác)?",
+    "answers": [
+      {
+        "text": "Nhóm máu A",
+        "correct": false
+      },
+      {
+        "text": "Nhóm máu AB",
+        "correct": false
+      },
+      {
+        "text": "Nhóm máu O",
+        "correct": true
+      },
+      {
+        "text": "Nhóm máu B",
+        "correct": false
+      }
+    ]
+  }
+]

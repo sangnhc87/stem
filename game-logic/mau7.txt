@@ -1,0 +1,431 @@
+ĐỀ 1
+
+Có 7 nút bấm điều khiển ký hiệu là M, N, O, P, Q, R, S đặt theo một hàng. Các nút bấm chỉ có 2 trạng thái: đóng và mở. Người điều khiển khi nhấn nút sẽ làm thay đổi trạng thái nút đó từ mở thành đóng hoặc ngược lại. Tuy nhiên, nếu nút nào đang bị ràng buộc bởi điều kiện thì người điều khiển dù có nhấn cũng không làm thay đổi trạng thái. Có một số điều kiện ràng buộc giữa các nút:
+- Nếu nút M đóng thì nút P và R phải mở.
+- Nếu nút Q đóng thì nút S và N phải đóng.
+- Nếu nút P đóng thì nút N phải đóng.
+- Nếu nút O đóng thì nút S phải mở.
+
+Câu 1: [EMPIRE TEAM]
+Nếu P đóng thì điều nào sau đây phải xảy ra?
+A. M mở
+B. R đóng
+C. R mở
+D. N mở
+
+Câu 2: [EMPIRE TEAM]
+Điều nào sau đây không thể cùng lúc xảy ra?
+A. M đóng, N đóng
+B. Q mở, N đóng
+C. Q đóng, O đóng
+D. Q đóng, P mở
+
+Câu 3: [EMPIRE TEAM]
+Điều nào sau đây phải xảy ra để số nút đóng là nhiều nhất có thể?
+A. M đóng, Q đóng
+B. M mở, O mở
+C. M đóng, O đóng
+D. Q đóng, P mở
+
+ĐỀ 2
+
+Trong một ngôi nhà hiện đại, có 8 chiếc đèn thông minh, ký hiệu là A, B, C, D, E, F, G, H. Vào mỗi tối, chủ nhà sẽ lập trình hệ thống để bật đúng 4 đèn, còn 4 đèn còn lại sẽ tắt, nhằm tiết kiệm điện nhưng vẫn đủ ánh sáng sinh hoạt. Tuy nhiên, do một số quy tắc kỹ thuật và thói quen sử dụng, hệ thống có những quy tắc như sau:
+- Nếu đèn A bật, thì đèn B phải bật.
+- Nếu đèn A tắt, thì cả đèn G và H phải bật.
+- Nếu đèn B tắt, thì đèn E cũng phải tắt.
+- Nếu đèn C tắt, thì đèn D cũng phải bật.
+- Nếu đèn G bật và E tắt, thì đèn F phải bật.
+
+Câu 1: [EMPIRE TEAM]
+Điều nào sau đây có thể đúng?
+A. B và C tắt
+B. A tắt và F bật
+C. A và B bật
+D. A và H tắt
+
+Câu 2: [EMPIRE TEAM]
+Nếu đèn C bật thì nhận định nào sau đây chắc chắn xảy ra?
+A. B bật
+B. A tắt
+C. G và B bật
+D. G và H bật
+
+Câu 3: [EMPIRE TEAM]
+Nếu A và B bật, điều nào sau đây có thể đúng?
+A. E tắt
+B. H bật
+C. G bật
+D. E bật
+
+ĐỀ 4
+
+Một bảo tàng đang trưng bày 7 bức tranh: A, B, C, D, E, F và G trong một gian phòng được bảo vệ nghiêm ngặt. Tuy nhiên, siêu trộm lừng danh Lupin vẫn thành công đột nhập vào và lấy đi một số bức tranh theo quy tắc sau:
+- Nếu Lupin không lấy tranh A, tranh E và F chắc chắn bị lấy.
+- Nếu tranh A mất, ông ta đã lấy tổng cộng 3 bức.
+- Nếu tranh E không bị lấy trộm thì tranh G và C cũng không.
+- Nếu tranh B mất thì tranh D và E cũng mất.
+- Nếu ông ta lấy tranh C thì sẽ lấy luôn tranh D.
+
+Câu 1: [EMPIRE TEAM]
+Sau kiểm tra, nếu bảo tàng phát hiện đã mất 4 bức tranh, điều nào sau đây có thể đúng?
+A. Tranh G và tranh E đều không bị lấy
+B. Tranh B và tranh D đều còn
+C. Tranh B bị mất
+D. Tranh K không bị lấy trộm
+
+Câu 2: [EMPIRE TEAM]
+Nếu tranh A bị lấy trộm và tranh G còn, những tranh nào sau đây chắc chắn không bị mất trộm?
+A. G và F
+B. G và D
+C. B và E
+D. B và C
+
+Câu 3: [EMPIRE TEAM]
+Nếu thêm một trong các điều kiện sau, những bức tranh đã bị lấy sẽ được xác định chính xác, ngoại trừ dự kiện:
+A. Chỉ bị mất 2 bức tranh
+B. C và D còn nguyên không có G
+C. A còn và tổng số bức tranh bị mất là 3
+D. A bị trộm và E, G thì vẫn còn
+
+ĐỀ 5
+
+Để chuẩn bị cho lễ phục sinh, Mary lấy từ chuồng gà bảy quả trứng A, B, C, D, E, F, G và dùng màu đỏ hoặc xanh để sơn chúng. Cả 7 quả đều đã được sơn và Mary đặt sơn chúng theo quy tắc sau:
+- Nếu trứng G có màu đỏ thì trứng C và trứng D được sơn cùng màu.
+- Trứng E và trứng F khác màu.
+- Nếu trứng B và trứng E cùng màu thì trứng F có màu đỏ.
+- Trứng A khác màu trứng C thì trứng B màu đỏ.
+- Nếu trứng A và trứng C được sơn cùng màu thì có tổng cộng 3 quả trứng đỏ.
+
+Câu 1: [EMPIRE TEAM]
+Nếu trứng A và trứng C khác màu thì có tối đa bao nhiêu trứng màu đỏ?
+A. 3
+B. 4
+C. 5
+D. 6
+
+Câu 2: [EMPIRE TEAM]
+Nếu trứng A và trứng C cùng màu, điều nào sau đây đúng?
+A. Trứng G luôn được sơn màu xanh
+B. Hai trứng A và F có thể cùng màu đỏ
+C. Trứng F và trứng G luôn khác màu
+D. Trứng B và E luôn khác màu
+
+Câu 3: [EMPIRE TEAM]
+Nếu trứng G màu đỏ, điều nào sau đây sai?
+A. Cả F và G đều màu đỏ
+B. D có thể có màu đỏ
+C. Có thể có năm trứng đỏ
+D. A và D cùng có màu đỏ
+
+ĐỀ 6
+
+Vào một chiều cuối tuần, 6 người bạn: Amber, Ben, Christ, Daniel, Emily và Frank cùng nhau ghé một tiệm trà sữa quen thuộc trong khu phố. Vì tiệm đông khách, họ phải xếp hàng một theo thứ tự từ trái sang phải để gọi món. Mỗi người có thói quen riêng, khiến cho cách họ đứng xếp hàng phụ thuộc vào nhau theo những nguyên tắc như sau:
+- Amber luôn đứng đầu hàng.
+- Nếu Ben đứng ở vị trí thứ 3, thì Emily sẽ đứng cuối hàng.
+- Nếu Christ đứng cạnh Daniel, thì Frank sẽ đứng ở vị trí thứ 4.
+- Nếu Emily đứng sau Frank, thì Daniel cũng phải đứng sau Ben.
+- Nếu Frank đứng sau Ben, thì Emily phải đứng sau Christ.
+
+Câu 1: [EMPIRE TEAM]
+Nếu Ben đứng thứ 3, Christ đứng ở vị trí nào?
+A. Thứ năm
+B. Thứ hai
+C. Cuối hàng
+D. Thứ tư
+
+Câu 2: [EMPIRE TEAM]
+Nếu Emily đứng thứ 4, ai không thể đứng ở vị trí thứ 5?
+A. Christ
+B. Daniel
+C. Ben
+D. Frank
+
+Câu 3: [EMPIRE TEAM]
+Nếu Christ đứng thứ 5, điều nào sau đây có thể đúng?
+A. B đứng thứ 3
+B. E đứng thứ 2
+C. D cuối hàng
+D. F đứng thứ 2
+
+ĐỀ 1
+
+Có 5 ngôi nhà nằm liền kề nhau, mỗi ngôi nhà có một màu sắc khác nhau, và mỗi chủ nhà có quốc tịch khác nhau.
+Mỗi người có một sở thích giải trí, một món ăn yêu thích, và thích một môn thể thao — không ai giống ai ở bất kỳ tiêu chí nào.
+
+1. Người Nhật sống trong ngôi nhà màu đen.
+2. Người Brazil yêu thích bóng đá.
+3. Người Hàn Quốc thích ăn kimchi.
+4. Ngôi nhà màu xanh lá nằm ngay bên trái ngôi nhà màu xám.
+5. Chủ nhà màu xanh lá thích ăn mì ramen.
+6. Người thích chơi cờ vua thường xem phim.
+7. Người ở ngôi nhà màu vàng thích đọc sách.
+8. Người sống trong ngôi nhà chính giữa thích ăn sushi.
+9. Người Pháp sống ở ngôi nhà đầu tiên.
+10. Người thích chơi cầu lông sống cạnh người yêu thích bơi lội.
+11. Người thích chạy bộ sống cạnh người thích đọc sách.
+12. Người thích chơi game thích ăn pizza.
+13. Người Đức thích nghe nhạc.
+14. Người Pháp sống cạnh ngôi nhà màu xanh dương.
+15. Người thích chơi cầu lông có hàng xóm thích ăn bánh mì.
+
+Câu 1: [EMPIRE TEAM]
+Người sống ở ngôi nhà chính giữa thích ăn món gì?
+A. Kimchi
+B. Sushi
+C. Pizza
+D. Bánh mì
+
+Câu 2: [EMPIRE TEAM]
+Ai là người sống cạnh ngôi nhà màu xanh dương?
+A. Người Đức
+B. Người Hàn Quốc
+C. Người Pháp
+D. Người Nhật
+
+Câu 3: [EMPIRE TEAM]
+Người thích chơi game ăn món gì?
+A. Mì ramen
+B. Bánh mì
+C. Sushi
+D. Pizza
+
+ĐỀ 2
+
+5 người bạn có 5 khu vườn khác nhau trồng 3 loại cây, mỗi loại gồm 4 giống: cây ăn quả (táo, lê, dâu tây, anh đào), rau (cà rốt, rau muối tây, bí, hành tây) và hoa (hoa cúc, hoa hồng, hoa tulip và hoa lily).
+
+1. Mỗi người trồng 4 giống khác nhau.
+2. Mỗi giống được trồng ít nhất ở một khu vườn.
+3. Có một giống được trồng ở 4/5 khu vườn.
+4. Chỉ một khu vườn có cả 3 loại cây.
+5. Chỉ một khu vườn có cả 4 giống của một loại cây.
+6. Lê là giống có ở 2 khu vườn ngoài cùng.
+7. Khu vườn của Paul nằm ở giữa và không có lily.
+8. Người trồng hoa cúc không trồng rau.
+9. Người trồng hoa hồng không trồng rau muối tây.
+10. Người trồng dâu tây có bí và trồng bí và rau muối tây.
+11. Khu vườn đầu tiên có táo và anh đào.
+12. Chỉ khu vườn của anh đào.
+13. Sam trồng hành tây và quả anh đào.
+14. Luke trồng giống cây táo và quả dâu.
+15. Tulip được trồng trong hai khu vườn.
+16. Táo chỉ được trồng trong một khu vườn.
+17. Chỉ khu vườn của Zick là trồng rau muối tây.
+18. Vườn của Sam không ở vị trí ngoài cùng.
+19. Hank không trồng rau và hoa cúc.
+20. Paul trồng 3 giống rau.
+
+Câu 1: [EMPIRE TEAM]
+Ai là người trồng táo?
+A. Sam
+B. Paul
+C. Luke
+D. Zick
+
+Câu 2: [EMPIRE TEAM]
+Trong khu vườn của người trồng hoa cúc, điều gì sau đây là chắc chắn đúng?
+A. Có trồng rau muối tây.
+B. Có trồng rau muối tây.
+C. Không trồng rau muối tây.
+D. Có trồng cả bí và hành tây.
+
+Câu 3: [EMPIRE TEAM]
+Ai là người có khu vườn không trồng hoa lily và không trồng rau?
+A. Paul
+B. Hank
+C. Zick
+D. Sam
+
+ĐỀ 4
+
+Trên tuyến metro Bến Thành – Suối Tiên, có 5 hành khách ngồi ở 5 toa khác nhau theo thứ tự từ trái sang phải, mỗi người có:
+- Một màu tóc khác nhau: Đỏ, Tím, Hồng, Cam, Đen
+- Một quốc tịch khác nhau: Việt Nam, Thái Lan, Singapore, Lào, Indonesia
+- Một vật dụng mang theo: Laptop, Sách, Ba lô, Vali, Không mang gì
+- Một thể loại nhạc thích: Rock, Pop, Ballad, Cổ điển, Jazz
+- Một ga xuống: Bến Thành, Ba Son, Văn Thánh, Thảo Điền, Suối Tiên
+
+Và không có người nào trùng nhau ở bất kỳ tiêu chí nào. Các thông tin được biết như sau:
+1. Người Việt Nam thích nghe nhạc Rock.
+2. Người Thái Lan thích nghe nhạc Pop.
+3. Người ngồi ở toa giữa đọc sách.
+4. Người thích đọc sách ngồi bên trái người nào đó mang theo vali.
+5. Người thích nghe nhạc Ballad không thích nghe Cổ điển.
+6. Người ngồi ở toa đầu tiên thích nghe nhạc Jazz.
+7. Người ngồi ở toa cuối cùng thích nghe nhạc Cổ điển.
+8. Người thích nghe nhạc Pop không mang theo vali.
+9. Người thích nghe nhạc Jazz không mang theo ba lô.
+10. Người không mang gì ngồi cạnh người thích nhạc Pop.
+11. Người nghe nhạc Jazz ngồi cạnh người xuống ga Ba Son.
+12. Người xuống Suối Tiên mang theo ba lô.
+13. Người Indonesia xuống ga Thảo Điền.
+14. Người Lào ngồi cạnh ga có người mặc áo đen.
+15. Người không mang gì ngồi cạnh người xuống metro Suối Tiên.
+
+Câu 1: [EMPIRE TEAM]
+Ai là người thích nghe nhạc Pop?
+A. Người mặc áo cam và mang sách
+B. Người xuống ga Thảo Điền và mang vali
+C. Người nghe nhạc Pop thích Singapore và xuống ga Ba Son
+D. Người nghe nhạc Pop thích Lào và xuống ga Thảo Điền
+
+Câu 2: [EMPIRE TEAM]
+Nếu người nghe nhạc Pop ngồi ở toa 3, điều nào sau đây phải đúng?
+A. Ga Bến Thành nằm giữa ga 2 và Ba Son và Thảo Điền
+B. Người nghe nhạc Jazz ngồi ở toa thứ nhất
+C. Người nghe nhạc Ballad ngồi ở toa thứ hai
+D. Bến Thành – Ba Son – Văn Thánh – Thảo Điền – Suối Tiên là thứ tự ga từ trái sang phải
+
+Câu 3: [EMPIRE TEAM]
+Nếu người nghe nhạc Jazz ở toa thứ nhất thì thứ tự nghe nhạc chính xác từ trái sang phải là?
+A. Jazz – Pop – Cổ điển – Ballad – Rock
+B. Jazz – Cổ điển – Pop – Ballad – Rock
+C. Jazz – Pop – Rock – Cổ điển – Ballad
+D. Jazz – Pop – Rock – Ballad – Rock
+
+ĐỀ 5
+
+Trong một trận chung kết cờ vua, có 5 bàn cờ khác nhau, 5 tên bàn khác nhau, đến từ 5 quốc gia khác nhau, mỗi 5 món khác nhau có vị khác nhau. Các bạn đứng theo thứ tự từ bàn số 1 đến bàn số 5 từ trái qua phải. Sau đây là các điều kiện:
+
+1. Bạn nào thích món Thái thì không đứng bên cạnh bạn có món Đức.
+2. Bạn nào thích món Việt thì bạn thích món Đức ngồi ở vị trí ngoài cùng.
+3. Bạn thích món Thái đứng cạnh bạn có món ăn Nhật.
+4. Bạn thích món Đức thì món ăn của bạn có vị Nhật.
+5. Bạn thích món Thái đứng gần bàn Nga.
+6. Bạn thích món Đức thì món ăn của bạn có vị món ăn Đức.
+7. Bạn Nga được giải nhất.
+8. Bạn nào món Nhật đứng vị trí 2 và không được giải nhất.
+9. Bạn nào món Đức đứng giải nhất và đứng bên cạnh bạn được giải nhì.
+10. Bạn nào món Đức không đứng giải nhất và đứng bên cạnh bạn được giải ba.
+11. Bạn món Việt một bên cạnh bạn có món Đức và bên cạnh bạn có món Thái.
+
+12. Bạn nào món cờ vua đứng giữa bàn Nga và bàn Việt.
+13. Bạn nào đứng bên cạnh bạn món cờ vua đứng bên cạnh bạn món Đức.
+14. Bạn nào món bàn món Nhật đều không đến từ Nhật.
+15. Bạn Việt món vị trí ngoài cùng.
+
+Câu 1: [EMPIRE TEAM]
+Bạn Thái thích món gì?
+A. Đức
+B. Việt
+C. Nhật
+D. Campuchia
+
+Câu 2: [EMPIRE TEAM]
+Bạn quốc tịch Việt đứng cạnh bạn tên gì?
+A. Đức
+B. Việt
+C. Nga
+D. Thái
+
+Câu 3: [EMPIRE TEAM]
+Món nào có vị món cờ vua?
+A. Thái
+B. Việt
+C. Nhật
+D. Nga
+
+Câu 4: [EMPIRE TEAM]
+Nhận định nào sau đây đúng?
+A. Bạn Nga đứng trên bàn giải Nhì và bên cạnh bạn giải nhất
+B. Bạn Đức đứng cạnh bạn giải ba và bạn Nga được giải nhất
+C. Bạn Nga đứng cạnh bạn giải ba và bạn Đức đứng cạnh bạn giải Bốn
+D. Bạn món Đức đứng cạnh bạn giải Bốn
+
+Câu 5: [EMPIRE TEAM]
+Ai được giải ba?
+A. Đức
+B. Việt
+C. Nhật
+D. Thái
+
+ĐỀ 6
+
+Ở một quán cà phê có 5 bạn trẻ khác nhau học môn khác nhau, gọi đồ uống khác nhau và có tuổi khác nhau (từ 13 đến 17 tuổi) theo hàng ngang. Biết các bạn sẽ dùng bút bi hoặc bút chì để vẽ bài, sử dụng laptop để làm bài hoặc đọc sách. Mỗi người có đồ uống và vật viết bài riêng. Thứ tự ngồi được đánh số từ trái sang phải từ 1 đến 5, với các điều kiện sau:
+
+1. Người thích sai laptop sử dụng bút khác nhau.
+2. Trúc 13 tuổi ngồi ở vị trí đầu tiên, không phải người thích môn Toán.
+3. Chỉ có một bạn Hòa sinh đôi với người thích Văn.
+4. Người thích Toán 15 tuổi ngồi cạnh người thích Văn và thích Lan.
+5. Người 14 tuổi ngồi bên phải người uống nước lọc.
+6. Người học môn Sinh ngồi cạnh người tên Lan và người ngồi cạnh người uống trà.
+7. Người uống cà phê là người sử dụng bút bi ngồi bên trái người sử dụng bút chì.
+8. Không ai có tuổi giống bạn ngồi bên trái và bên phải người thứ 5.
+9. Số người sai laptop bằng số người sai ipad.
+10. Những người sử dụng sai cùng loại bút (bút bi hoặc bút chì) hoặc sai cùng loại thiết bị học phải ngồi cạnh nhau.
+
+11. Huyền 16 tuổi và ngồi giữa 2 người sai bút chì.
+12. Người lớn tuổi nhất không ngồi cạnh người nhỏ tuổi nhất.
+13. Ly sử dụng laptop và ngồi thứ 2.
+14. Người nhỏ tuổi nhất không phải người thích Văn.
+15. Người học Hóa ngồi cạnh người học Văn.
+
+Câu 1: [EMPIRE TEAM]
+Người uống trà ngồi bên trái ai?
+A. Trúc
+B. Hòa
+C. Lan
+D. Huyền
+
+Câu 2: [EMPIRE TEAM]
+Ai uống sinh tố?
+A. Trúc
+B. Huyền
+C. Lan
+D. Hòa
+
+Câu 3: [EMPIRE TEAM]
+Người học Ly sử dụng thiết bị nào?
+A. Bút bi
+B. Bút chì
+C. Laptop
+D. Ipad
+
+Câu 4: [EMPIRE TEAM]
+Trúc học môn gì?
+A. Toán
+B. Ly
+C. Hóa
+D. Sinh
+
+Câu 5: [EMPIRE TEAM]
+Có bao nhiêu người sử dụng bút chì?
+A. 1
+B. 2
+C. 3
+D. 4
+
+ĐỀ 7
+
+Nhằm đón chào tân sinh viên khóa mới, trường tổ chức một buổi First Meeting nơi 5 câu lạc bộ tiêu biểu (Nhiếp ảnh, Nâu, Hướng Nghiệp, Tiếng Anh, Âm nhạc) được xếp 5 bàn theo thứ tự từ trái sang phải là A, B, C, D, E. Mỗi CLB có một mascot riêng, năm thành lập khác nhau (từ 2010 đến 2025), một concept độc đáo và màu sắc đặc trưng. Không có bất kỳ điểm nào trùng nhau giữa các CLB. Biết rằng:
+- CLB âm nhạc có concept Y2K và CLB màu xanh lá
+- CLB có concept Y2K và CLB thành lập năm 2015 có đúng 2 CLB
+- CLB có mascot Perry không nằm giữa 2 CLB nào
+- CLB có mascot Doraemon và SpongeBob
+- CLB Hướng Nghiệp xếp ở đâu đó thành lập năm 2015
+- CLB màu Hồng ở giữa CLB có màu đen và xanh lá
+- CLB màu đỏ ở giữa CLB có mascot Doraemon và SpongeBob
+- CLB có concept Y2K và CLB thành lập năm 2015 có đúng 2 CLB
+- CLB có mascot Hello Kitty thành lập năm 2020
+- CLB thành lập năm 2010 và 2011 có mascot Mickey
+- CLB âm nhạc thành lập năm 2011
+
+Câu 1: [EMPIRE TEAM]
+CLB nào có mascot là SpongeBob?
+A. Sàn A
+B. Sàn B
+C. Sàn C
+D. Sàn D
+
+Câu 2: [EMPIRE TEAM]
+CLB nào mới thành lập năm 2025?
+A. Tiếng Anh
+B. Nâu
+C. Hướng Nghiệp
+D. Nhiếp ảnh
+
+Câu 3: [EMPIRE TEAM]
+Màu nào là cách sắp xếp đúng thứ tự các CLB theo năm thành lập từ lâu đời tới mới thành lập?
+A. Nhiếp ảnh – Âm nhạc – Tiếng Anh – Hướng Nghiệp – Nâu
+B. Nâu – Âm nhạc – Nhiếp ảnh – Tiếng Anh – Hướng Nghiệp
+C. Tiếng Anh – Nâu – Nhiếp ảnh – Hướng Nghiệp – Âm nhạc
+D. Tiếng Anh – Nhiếp ảnh – Âm nhạc – Hướng Nghiệp – Nâu

@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz}
+\usepackage{enumitem}
+
+\begin{document}
+
+\textbf{Câu 1.} Cho hình vuông cỡ $9 \times 9$ tâm $O$ được tạo từ $9 \times 9$ hình vuông đơn vị. Hai hình vuông đơn vị được gọi là kề bên nếu chúng có cùng một cạnh chung. Một con bọ ban đầu ở $O$. Mỗi lần di chuyển con bọ sẽ nhảy ngẫu nhiên từ tâm hình vuông đơn vị nó đứng sang tâm hình vuông đơn vị kề bên. Tính xác suất để con bọ sau 4 bước nhảy sẽ quay lại điểm $O$.
+
+\subsubsection*{Lời giải}
+
+Số phần tử của không gian mẫu là: $n(\Omega) = 4^4 = 256$.
+
+Gọi $A$ là biến cố "Sau 4 bước nhảy con bọ quay lại điểm $O$". Do tính đối xứng, ta chỉ xét trường hợp \textbf{Bước 1 con bọ nhảy sang phải} (đến ô $A_1$), sau đó nhân kết quả với 4.
+
+Từ $A_1$, ta có 3 kịch bản cho Bước 2 như sau:
+
+\begin{itemize}
+    \item \textbf{TH1: Bước 2 quay lại $O$ ($O \to A_1 \to O$).}
+    \begin{itemize}
+        \item Lúc này bọ ở $O$. Để sau 2 bước nữa lại về $O$, nó phải đi ra rồi quay lại ngay (tương tự bước 1-2). Có 4 hướng ra, mỗi hướng có 1 cách quay lại.
+        \item Số cách: $1 \times 4 = 4$ cách.
+    \end{itemize}
+
+    \item \textbf{TH2: Bước 2 đi thẳng sang $B_1$ ($O \to A_1 \to B_1$).}
+    \begin{itemize}
+        \item Lúc này bọ cách $O$ 2 bước về phía phải. Để về kịp, bắt buộc Bước 3 phải sang trái, Bước 4 phải sang trái. Chỉ có duy nhất 1 lộ trình.
+        \item Số cách: $1 \times 1 = 1$ cách.
+    \end{itemize}
+
+    \item \textbf{TH3: Bước 2 rẽ sang $B_2$ (trên) hoặc $B_3$ (dưới).}
+    \begin{itemize}
+        \item Có 2 hướng rẽ. Giả sử rẽ lên $B_2$. Vị trí này lệch (1 phải, 1 lên) so với $O$.
+        \item Từ $B_2$ về $O$ trong 2 bước có 2 cách: (Sang trái $\to$ Xuống) hoặc (Xuống $\to$ Sang trái).
+        \item Tổng: $2 \text{ (hướng rẽ)} \times 2 \text{ (cách về)} = 4$ cách.
+    \end{itemize}
+\end{itemize}
+
+Tổng số cách đi thuận lợi (với giả thiết B1 sang phải): $4 + 1 + 4 = 9$ cách.
+Vì B1 có thể đi 4 hướng, nên số kết quả thuận lợi là: $n(A) = 4 \times 9 = 36$.
+
+Xác suất cần tìm:
+\[ P(A) = \frac{36}{256} = \frac{9}{64}. \]
+
+\end{document}

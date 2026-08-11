@@ -1,0 +1,1052 @@
+[
+  {
+    "question": "Samurai Nhật Bản có thể đã từng gửi bản Fax cho Tổng thống Abraham Lincoln không?",
+    "answers": [
+      {
+        "text": "Lincoln sống thời Trung cổ",
+        "correct": false
+      },
+      {
+        "text": "Không thể nào, sai lệch cả trăm năm",
+        "correct": false
+      },
+      {
+        "text": "Có thể",
+        "correct": true
+      },
+      {
+        "text": "Fax chỉ có từ năm 1980",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Logo của hãng sô-cô-la Toblerone (hình ngọn núi) có ẩn chứa hình con vật gì bên trong?",
+    "answers": [
+      {
+        "text": "Một con Đại bàng",
+        "correct": false
+      },
+      {
+        "text": "Một con Dê",
+        "correct": false
+      },
+      {
+        "text": "Một con Sư tử",
+        "correct": false
+      },
+      {
+        "text": "Một con Gấu đang đứng",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Mục đích thực sự của những chiếc bàn chải (lông cứng) dọc hai bên thang cuốn là gì?",
+    "answers": [
+      {
+        "text": "Để đánh bóng giày cho khách",
+        "correct": false
+      },
+      {
+        "text": "Để cảnh báo an toàn, ngăn giày dép mắc kẹt vào khe",
+        "correct": true
+      },
+      {
+        "text": "Để làm sạch thang cuốn",
+        "correct": false
+      },
+      {
+        "text": "Để giảm tiếng ồn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con số '31' ẩn trong logo của hãng kem Baskin-Robbins có ý nghĩa gì?",
+    "answers": [
+      {
+        "text": "Năm thành lập 1931",
+        "correct": false
+      },
+      {
+        "text": "31 cửa hàng đầu tiên",
+        "correct": false
+      },
+      {
+        "text": "Số tuổi của người sáng lập",
+        "correct": false
+      },
+      {
+        "text": "31 hương vị kem cho 31 ngày trong tháng",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Một nhóm Chim Cú (Owls) tập hợp lại được gọi là gì trong tiếng Anh?",
+    "answers": [
+      {
+        "text": "A School",
+        "correct": false
+      },
+      {
+        "text": "A Parliament",
+        "correct": true
+      },
+      {
+        "text": "A Gang",
+        "correct": false
+      },
+      {
+        "text": "A Team",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cục hình trụ nhỏ (Cylinder) bọc quanh dây sạc laptop hoặc dây cáp có tác dụng gì?",
+    "answers": [
+      {
+        "text": "Để trang trí",
+        "correct": false
+      },
+      {
+        "text": "Để cầm nắm cho chắc",
+        "correct": false
+      },
+      {
+        "text": "Chống nhiễu sóng điện từ",
+        "correct": true
+      },
+      {
+        "text": "Để cân bằng trọng lượng dây",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hai gờ nhỏ nổi lên ở phím F và phím J trên bàn phím máy tính dùng để làm gì?",
+    "answers": [
+      {
+        "text": "Lỗi sản xuất",
+        "correct": false
+      },
+      {
+        "text": "Để định vị ngón tay trỏ mà không cần nhìn xuống bàn phím",
+        "correct": true
+      },
+      {
+        "text": "Để tăng độ bám",
+        "correct": false
+      },
+      {
+        "text": "Dành cho người khiếm thị",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong logo của hãng chuyển phát nhanh FedEx, có một hình mũi tên ẩn nằm ở đâu?",
+    "answers": [
+      {
+        "text": "Dưới chân chữ F",
+        "correct": false
+      },
+      {
+        "text": "Không có mũi tên nào",
+        "correct": false
+      },
+      {
+        "text": "Trong chữ d",
+        "correct": false
+      },
+      {
+        "text": "Giữa chữ E và chữ x",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Phần đầu kim loại của thước cuộn (Tape measure) luôn lung lay, lỏng lẻo. Tại sao?",
+    "answers": [
+      {
+        "text": "Do thước bị hỏng/kém chất lượng",
+        "correct": false
+      },
+      {
+        "text": "Để dễ móc vào cạnh bàn",
+        "correct": false
+      },
+      {
+        "text": "Để tránh gãy thước",
+        "correct": false
+      },
+      {
+        "text": "Để bù trừ độ dày của chính miếng kim loại đó khi đo",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Chiếc cần gạt nhỏ phía dưới gương chiếu hậu trong ô tô dùng để làm gì?",
+    "answers": [
+      {
+        "text": "Để lau gương",
+        "correct": false
+      },
+      {
+        "text": "Để chỉnh góc gương",
+        "correct": false
+      },
+      {
+        "text": "Để treo đồ trang trí",
+        "correct": false
+      },
+      {
+        "text": "Chuyển sang chế độ chống chói ban đêm",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Mặt Trăng hay Nước Úc (Australia), cái nào có đường kính rộng hơn?",
+    "answers": [
+      {
+        "text": "Mặt Trăng rộng hơn",
+        "correct": false
+      },
+      {
+        "text": "Mặt Trăng gấp đôi Úc",
+        "correct": false
+      },
+      {
+        "text": "Bằng nhau",
+        "correct": false
+      },
+      {
+        "text": "Nước Úc rộng hơn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Hai lỗ nhỏ bên hông giày Converse All Star có tác dụng gì?",
+    "answers": [
+      {
+        "text": "Lỗi thiết kế",
+        "correct": false
+      },
+      {
+        "text": "Chỉ để trang trí",
+        "correct": false
+      },
+      {
+        "text": "Để thoát nước khi lội suối",
+        "correct": false
+      },
+      {
+        "text": "Để thông gió và luồn dây giày giúp ôm chân hơn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Chiếc kẹp tăm (Bobby pin) có một mặt thẳng và một mặt lượn sóng. Mặt nào nên úp xuống da đầu?",
+    "answers": [
+      {
+        "text": "Kẹp dọc chứ không kẹp ngang",
+        "correct": false
+      },
+      {
+        "text": "Mặt thẳng",
+        "correct": false
+      },
+      {
+        "text": "Mặt lượn sóng",
+        "correct": true
+      },
+      {
+        "text": "Mặt nào cũng được",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Miếng đế xoay bằng kim loại trên chiếc dập ghim (Stapler) có thể xoay ngược lại để làm gì?",
+    "answers": [
+      {
+        "text": "Để khóa dập ghim",
+        "correct": false
+      },
+      {
+        "text": "Để trang trí",
+        "correct": false
+      },
+      {
+        "text": "Để ghim tạm thời",
+        "correct": true
+      },
+      {
+        "text": "Để mài kim ghim",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hành tinh nào nóng nhất trong Hệ Mặt Trời?",
+    "answers": [
+      {
+        "text": "Sao Mộc",
+        "correct": false
+      },
+      {
+        "text": "Sao Kim",
+        "correct": true
+      },
+      {
+        "text": "Sao Thủy",
+        "correct": false
+      },
+      {
+        "text": "Sao Hỏa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có thể sống lại sau khi bị đóng băng hoàn toàn vào mùa đông?",
+    "answers": [
+      {
+        "text": "Ếch gỗ",
+        "correct": true
+      },
+      {
+        "text": "Cá sấu",
+        "correct": false
+      },
+      {
+        "text": "Gấu Bắc cực",
+        "correct": false
+      },
+      {
+        "text": "Chim Cánh cụt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vết lõm hình tròn trên nắp hộp kẹo Tic Tac dùng để làm gì?",
+    "answers": [
+      {
+        "text": "Để đóng nắp chặt hơn",
+        "correct": false
+      },
+      {
+        "text": "Để trang trí",
+        "correct": false
+      },
+      {
+        "text": "Để tiết kiệm nhựa",
+        "correct": false
+      },
+      {
+        "text": "Để giữ đúng 1 viên kẹo mỗi lần lấy",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Miếng nhựa hình vuông nhỏ dùng để khóa túi bánh mì (Bread clip) có tên gọi là gì?",
+    "answers": [
+      {
+        "text": "Occlupanid",
+        "correct": true
+      },
+      {
+        "text": "Bread Lock",
+        "correct": false
+      },
+      {
+        "text": "Plastic Tag",
+        "correct": false
+      },
+      {
+        "text": "Clip",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hãng trang sức Tiffany & Co. và nước Ý (Italy), cái nào ra đời trước?",
+    "answers": [
+      {
+        "text": "Nước Ý có trước cả nghìn năm",
+        "correct": false
+      },
+      {
+        "text": "Tiffany & Co. ra đời trước khi nước Ý thống nhất",
+        "correct": true
+      },
+      {
+        "text": "Nước Ý có trước",
+        "correct": false
+      },
+      {
+        "text": "Cùng một năm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chiếc thìa đặc biệt của món kem McFlurry (McDonald's) có cán rỗng và móc ngàm để làm gì?",
+    "answers": [
+      {
+        "text": "Để tiết kiệm nhựa",
+        "correct": false
+      },
+      {
+        "text": "Để dùng như ống hút",
+        "correct": false
+      },
+      {
+        "text": "Để cầm cho chắc",
+        "correct": false
+      },
+      {
+        "text": "Để gắn vào máy khuấy kem",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Những con bọ nhỏ sống thường trú trên lông mi của hầu hết người trưởng thành tên là gì?",
+    "answers": [
+      {
+        "text": "Mạt bụi",
+        "correct": false
+      },
+      {
+        "text": "Bọ Demodex",
+        "correct": true
+      },
+      {
+        "text": "Rệp",
+        "correct": false
+      },
+      {
+        "text": "Bọ chét",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Xương nào là xương duy nhất trong cơ thể người không nối với bất kỳ xương nào khác?",
+    "answers": [
+      {
+        "text": "Xương bánh chè",
+        "correct": false
+      },
+      {
+        "text": "Xương móng ở cổ họng",
+        "correct": true
+      },
+      {
+        "text": "Xương cụt",
+        "correct": false
+      },
+      {
+        "text": "Xương đòn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con hà mã thực chất có biết bơi không?",
+    "answers": [
+      {
+        "text": "Chúng chỉ tắm chứ không xuống nước sâu",
+        "correct": false
+      },
+      {
+        "text": "Có, bơi rất giỏi",
+        "correct": false
+      },
+      {
+        "text": "Không, chúng đi bộ hoặc chạy dưới đáy sông",
+        "correct": true
+      },
+      {
+        "text": "Chúng nổi như phao",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cái nào xuất hiện trước: Tàu hỏa (đầu máy hơi nước) hay Xe đạp?",
+    "answers": [
+      {
+        "text": "Tàu hỏa có trước Xe đạp",
+        "correct": true
+      },
+      {
+        "text": "Xuất hiện cùng năm",
+        "correct": false
+      },
+      {
+        "text": "Xe đạp có trước",
+        "correct": false
+      },
+      {
+        "text": "Xe đạp có trước 100 năm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có phân hình khối lập phương (hình vuông)?",
+    "answers": [
+      {
+        "text": "Lười",
+        "correct": false
+      },
+      {
+        "text": "Chuột túi",
+        "correct": false
+      },
+      {
+        "text": "Gấu Koala",
+        "correct": false
+      },
+      {
+        "text": "Gấu túi mũi trần",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Vệt màu ở đáy tuýp kem đánh răng có ý nghĩa gì?",
+    "answers": [
+      {
+        "text": "Phân biệt mùi vị",
+        "correct": false
+      },
+      {
+        "text": "Phân biệt thành phần hóa học/tự nhiên",
+        "correct": false
+      },
+      {
+        "text": "Chỉ là 'mắt thần' để máy đóng gói nhận biết chỗ cắt bao bì",
+        "correct": true
+      },
+      {
+        "text": "Phân biệt mức độ độc hại",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Một nhóm các con Tê giác (Rhinos) được gọi là gì?",
+    "answers": [
+      {
+        "text": "A Bump",
+        "correct": false
+      },
+      {
+        "text": "A Thunder",
+        "correct": false
+      },
+      {
+        "text": "A Crash",
+        "correct": true
+      },
+      {
+        "text": "A Herd",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nắp của cốc nhựa dùng một lần (loại đựng nước ngọt) có thể dùng làm gì khác?",
+    "answers": [
+      {
+        "text": "Làm đồ chơi",
+        "correct": false
+      },
+      {
+        "text": "Làm nắp đậy thức ăn",
+        "correct": false
+      },
+      {
+        "text": "Làm đế lót ly vừa khít đáy cốc",
+        "correct": true
+      },
+      {
+        "text": "Làm đĩa ăn bánh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có thể 'đóng băng' thời gian mang thai (tạm dừng phát triển phôi thai)?",
+    "answers": [
+      {
+        "text": "Con Người",
+        "correct": false
+      },
+      {
+        "text": "Con Voi",
+        "correct": false
+      },
+      {
+        "text": "Con Cá voi",
+        "correct": false
+      },
+      {
+        "text": "Chuột túi, Gấu, Chồn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Ở trạng thái tự nhiên, khí Oxy (O2) lỏng có màu gì?",
+    "answers": [
+      {
+        "text": "Không màu",
+        "correct": false
+      },
+      {
+        "text": "Màu trắng đục",
+        "correct": false
+      },
+      {
+        "text": "Màu xanh nhạt",
+        "correct": true
+      },
+      {
+        "text": "Màu vàng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thương hiệu Nike đã trả bao nhiêu tiền cho sinh viên thiết kế logo 'swoosh' nổi tiếng?",
+    "answers": [
+      {
+        "text": "Miễn phí",
+        "correct": false
+      },
+      {
+        "text": "1000 đô la",
+        "correct": false
+      },
+      {
+        "text": "1 triệu đô la",
+        "correct": false
+      },
+      {
+        "text": "35 đô la",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Khi bạn bẻ khớp ngón tay, âm thanh 'rắc' phát ra là do đâu?",
+    "answers": [
+      {
+        "text": "Do dây chằng bị căng",
+        "correct": false
+      },
+      {
+        "text": "Do gân bị trượt",
+        "correct": false
+      },
+      {
+        "text": "Do bong bóng khí trong dịch khớp bị vỡ",
+        "correct": true
+      },
+      {
+        "text": "Do xương va vào nhau",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chiếc hộp đựng đồ ăn Trung Hoa (Chinese takeout box) khi mở ra có thể biến thành gì?",
+    "answers": [
+      {
+        "text": "Một chiếc đĩa ăn",
+        "correct": true
+      },
+      {
+        "text": "Một cái mũ",
+        "correct": false
+      },
+      {
+        "text": "Một cái cốc",
+        "correct": false
+      },
+      {
+        "text": "Một cái thìa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Sứa (Jellyfish) có bốc hơi nếu bị phơi nắng không?",
+    "answers": [
+      {
+        "text": "Có, vì cơ thể chúng chứa tới 95-98% là nước",
+        "correct": true
+      },
+      {
+        "text": "Chúng sẽ đổi màu",
+        "correct": false
+      },
+      {
+        "text": "Không, chúng sẽ khô lại thành xác",
+        "correct": false
+      },
+      {
+        "text": "Chúng sẽ tan chảy thành chất lỏng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Miếng vải hình thoi có hai khe hở thường thấy trên ba lô (Lash tab) dùng để làm gì?",
+    "answers": [
+      {
+        "text": "Để trang trí",
+        "correct": false
+      },
+      {
+        "text": "Để thông gió",
+        "correct": false
+      },
+      {
+        "text": "Để luồn dây buộc giày hoặc treo đồ dã ngoại",
+        "correct": true
+      },
+      {
+        "text": "Để dán tên",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cây Vạn Lý Trường Thành có thể nhìn thấy từ Mặt Trăng bằng mắt thường không?",
+    "answers": [
+      {
+        "text": "Có, nhìn rất rõ",
+        "correct": false
+      },
+      {
+        "text": "Chỉ nhìn thấy bóng của nó",
+        "correct": false
+      },
+      {
+        "text": "Chỉ nhìn thấy khi trời tối",
+        "correct": false
+      },
+      {
+        "text": "Hoàn toàn không thể",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài Chuồn chuồn có bao nhiêu chân và chúng có đi được không?",
+    "answers": [
+      {
+        "text": "8 chân",
+        "correct": false
+      },
+      {
+        "text": "Không có chân",
+        "correct": false
+      },
+      {
+        "text": "6 chân nhưng không thể đi bộ",
+        "correct": true
+      },
+      {
+        "text": "4 chân và đi rất nhanh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tại sao các chai bia, rượu thường có màu xanh hoặc nâu?",
+    "answers": [
+      {
+        "text": "Để trông đẹp hơn",
+        "correct": false
+      },
+      {
+        "text": "Để che giấu cặn",
+        "correct": false
+      },
+      {
+        "text": "Vì thủy tinh màu rẻ hơn thủy tinh trong",
+        "correct": false
+      },
+      {
+        "text": "Để ngăn tia cực tím làm hỏng hương vị đồ uống",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Logo của hãng xe Toyota bao gồm cái gì đặc biệt?",
+    "answers": [
+      {
+        "text": "Hình một con bò mộng",
+        "correct": false
+      },
+      {
+        "text": "Hình vô lăng xe",
+        "correct": false
+      },
+      {
+        "text": "Tất cả các chữ cái T-O-Y-O-T-A đều ẩn trong biểu tượng",
+        "correct": true
+      },
+      {
+        "text": "Hình mặt trời mọc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hạt 'Dẻ cười' (Pistachios) có khả năng gây nguy hiểm gì khi vận chuyển số lượng lớn?",
+    "answers": [
+      {
+        "text": "Tạo ra khí độc",
+        "correct": false
+      },
+      {
+        "text": "Thu hút sét đánh",
+        "correct": false
+      },
+      {
+        "text": "Tự bốc cháy",
+        "correct": true
+      },
+      {
+        "text": "Gây nổ như bom",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vào năm 1999, Google đã muốn bán mình cho công ty Excite với giá bao nhiêu nhưng bị từ chối?",
+    "answers": [
+      {
+        "text": "750.000 đô la",
+        "correct": true
+      },
+      {
+        "text": "10 triệu đô la",
+        "correct": false
+      },
+      {
+        "text": "1 tỷ đô la",
+        "correct": false
+      },
+      {
+        "text": "100 đô la",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có thể 'nhìn' thấy nhiệt độ (tia hồng ngoại)?",
+    "answers": [
+      {
+        "text": "Đại bàng",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": true
+      },
+      {
+        "text": "Mèo",
+        "correct": false
+      },
+      {
+        "text": "Chó",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nút 'Snooze' (Hoãn báo thức) mặc định trên iPhone dài bao nhiêu phút?",
+    "answers": [
+      {
+        "text": "9 phút",
+        "correct": true
+      },
+      {
+        "text": "5 phút",
+        "correct": false
+      },
+      {
+        "text": "10 phút",
+        "correct": false
+      },
+      {
+        "text": "8 phút",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào có khả năng bay lùi?",
+    "answers": [
+      {
+        "text": "Đà Điểu",
+        "correct": false
+      },
+      {
+        "text": "Chim Ruồi",
+        "correct": true
+      },
+      {
+        "text": "Chim Sẻ",
+        "correct": false
+      },
+      {
+        "text": "Chim Én",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Cá mập xuất hiện trên Trái Đất trước hay Cây cối xuất hiện trước?",
+    "answers": [
+      {
+        "text": "Cây có trước 1 tỷ năm",
+        "correct": false
+      },
+      {
+        "text": "Xuất hiện cùng lúc",
+        "correct": false
+      },
+      {
+        "text": "Cá mập có trước",
+        "correct": true
+      },
+      {
+        "text": "Cây cối có trước",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tại sao ngón tay lại bị nhăn nheo khi ngâm nước lâu?",
+    "answers": [
+      {
+        "text": "Do da bị ngấm nước trương lên",
+        "correct": false
+      },
+      {
+        "text": "Phản ứng thần kinh để tăng độ ma sát",
+        "correct": true
+      },
+      {
+        "text": "Do da bị mất nước",
+        "correct": false
+      },
+      {
+        "text": "Do da bị mỏng đi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong bộ bài Tây, quân bài nào thường được thiết kế cầu kỳ nhất?",
+    "answers": [
+      {
+        "text": "Át Cơ",
+        "correct": false
+      },
+      {
+        "text": "Vua Cơ",
+        "correct": false
+      },
+      {
+        "text": "Joker",
+        "correct": false
+      },
+      {
+        "text": "Át Bích",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài Gấu Bắc Cực thực chất có làn da màu gì dưới lớp lông trắng?",
+    "answers": [
+      {
+        "text": "Màu Xám",
+        "correct": false
+      },
+      {
+        "text": "Màu Đen",
+        "correct": true
+      },
+      {
+        "text": "Màu Trắng",
+        "correct": false
+      },
+      {
+        "text": "Màu Hồng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Khu vực nào trên Trái Đất không thuộc sở hữu của bất kỳ quốc gia nào?",
+    "answers": [
+      {
+        "text": "Đảo Greenland",
+        "correct": false
+      },
+      {
+        "text": "Nam Cực",
+        "correct": true
+      },
+      {
+        "text": "Bắc Cực",
+        "correct": false
+      },
+      {
+        "text": "Sa mạc Sahara",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bạn có thể hắt hơi (hắt xì) trong khi ngủ không?",
+    "answers": [
+      {
+        "text": "Không, não bộ tắt phản xạ hắt hơi khi ngủ",
+        "correct": true
+      },
+      {
+        "text": "Chỉ hắt hơi khi gặp ác mộng",
+        "correct": false
+      },
+      {
+        "text": "Chỉ hắt hơi khi nằm ngửa",
+        "correct": false
+      },
+      {
+        "text": "Có, vẫn hắt hơi bình thường",
+        "correct": false
+      }
+    ]
+  }
+]

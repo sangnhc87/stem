@@ -1,0 +1,145 @@
+ĐỀ 10 (Biểu diễn văn nghệ)
+Có 7 học sinh P, Q, R, S, T, U, V tham gia biểu diễn 4 tiết mục văn nghệ theo thứ tự từ 1 đến 4.
+Mỗi bạn chỉ tham gia một tiết mục, và được sắp xếp thứ tự biểu diễn theo các yêu cầu sau:
+- Có 2 bạn sẽ biểu diễn một mình và không liền kề nhau.
+- U không biểu diễn một mình.
+- R phải biểu diễn ngay trước V.
+- S tham gia vào tiết mục cuối cùng.
+
+Câu 1: Nếu U tham gia vào tiết mục đầu tiên thì điều nào sau đây không thể xảy ra?
+A. V có thể biểu diễn một mình
+B. S có thể biểu diễn chung với bạn khác
+C. S sẽ biểu diễn ngay sau V
+D. P, Q, T có thể đều chọn một nhóm
+
+Câu 2: Nếu U và R biểu diễn một mình thì danh sách nào sau đây là đúng những bạn còn lại tham gia tiết mục chung?
+A. T, U
+B. P và V
+C. P, Q, R
+D. T, V, S
+
+Câu 3: Nếu P và Q biểu diễn một mình thì U sẽ không thể có mặt ở tiết mục mấy?
+A. 1
+B. 2
+C. 3
+D. 4
+
+ĐỀ 2 (Câu lạc bộ thể thao)
+Một nhóm bạn gồm A, B, C, D quyết định tham gia các câu lạc bộ mà nhà trường vừa mở bao gồm bóng đá, bóng chuyền và cờ vua. Biết mỗi người tham gia ít nhất một câu lạc bộ. Danh sách tham gia câu lạc bộ mới mở của nhóm bạn trên tuân theo quy tắc:
+- Không có ai đăng ký cả ba câu lạc bộ.
+- C tham gia câu lạc bộ bóng đá.
+- Nếu A tham gia câu lạc bộ nào thì B cũng tham gia câu lạc bộ đó.
+- Bất kỳ ai tham gia câu lạc bộ bóng đá thì cũng tham gia câu lạc bộ bóng chuyền.
+- Câu lạc bộ bóng đá có ít nhất hai người tham gia và nhiều nhất ba người tham gia.
+
+Câu 1: Nếu B không tham gia câu lạc bộ bóng đá thì điều nào sau đây phải đúng?
+A. A tham gia câu lạc bộ bóng chuyền.
+B. A tham gia câu lạc bộ bóng đá.
+C. D tham gia câu lạc bộ bóng chuyền.
+D. C tham gia câu lạc bộ bóng chuyền.
+
+Câu 2: Nếu không ai tham gia cờ vua thì điều nào sau đây phải đúng?
+A. Có đúng một người tham gia câu lạc bộ bóng chuyền.
+B. Có đúng hai người tham gia câu lạc bộ bóng đá.
+C. D tham gia câu lạc bộ bóng đá.
+D. D tham gia câu lạc bộ bóng chuyền.
+
+Câu 3: Nếu tất cả mọi người đều tham gia ít nhất hai câu lạc bộ thì điều nào sau đây phải đúng?
+A. Không thể tham gia câu lạc bộ cờ vua.
+B. Không thể tham gia câu lạc bộ bóng đá.
+C. Phải tham gia câu lạc bộ bóng chuyền.
+D. Phải tham gia câu lạc bộ bóng đá.
+
+ĐỀ 3 (Phục vụ bữa ăn)
+Trong một khu vực phục vụ bữa ăn, có 3 bàn thực ăn được chuẩn bị sẵn, mang tên A, B và C. Hôm nay, đầu bếp đã lên thực đơn với tổng cộng 7 món, bao gồm:
+- 3 món thịt: X, Y, Z
+- 2 món canh: I, J
+- 2 món rau: M, N
+
+Quy tắc:
+- Mỗi bàn thực ăn phải có ít nhất một món thịt, một món canh và một món rau, nhằm đảm bảo bữa ăn đầy đủ dưỡng chất và phong phú hương vị.
+- Tuy nhiên, để giữ sự tinh gọn và dễ phục vụ, mỗi bàn chỉ được chuẩn bị tối đa 4 món.
+- Các bàn còn có thể phục vụ những món trùng nhau, tùy theo nhu cầu và lựa chọn của thực khách.
+
+Điều kiện bổ sung:
+- Bàn A có 2 món thịt.
+- Bàn nào có món Z thì không có món I.
+- Bàn nào có món M thì bàn đó cũng có món X.
+- Bàn B có món N nhưng không có món Z.
+- Tất cả các món đều xuất hiện trên bàn ăn và mỗi món có tối đa 2 suất.
+
+Câu 1: Nếu bàn A có món Y và món Z, bàn B có món Y và món I thì bàn C có thể có món nào?
+A. Món Z
+B. Món N
+C. Món X
+D. Món I
+
+Câu 2: Giả sử bàn A và bàn C có món M, bàn B và bàn C không có món J thì món nào có thể có 2 suất trên 1 bàn và đó là bàn nào?
+A. Món Z, bàn B
+B. Món Y, bàn C
+C. Món X, bàn A
+D. Món X, bàn B
+
+Câu 3: Giả sử chỉ có 11 suất cho 6 món bao gồm: 4 món thịt, 4 món rau, 3 món canh. Nếu bàn A có món X, bàn B không có món trùng nhau với bàn C là bàn ăn chay (không ăn thịt) thì C sẽ có món nào?
+A. Món I
+B. Món N
+C. Món Y
+D. Món Z
+
+ĐỀ 4 (Chuyến bay)
+Ngày hôm nay tại sân bay T hãng hàng không V cần tổ chức 3 chuyến bay, mỗi chuyến bay cần 1 tổ bay để vận hành, mỗi tổ bay có thể đi và bay trên một chuyến bay. Mỗi tổ bay có ít nhất 2 phi công và nhiều nhất 3 phi công, trong đó yêu cầu có ít nhất một phi công loại A và ít nhất 1 cơ trưởng.
+
+Danh sách phi công: Duyên, Hải, Hý, Dũng, Minh, Tuấn.
+Quy tắc:
+- Thuận và Tuyền đều không cùng 1 tổ bay với Minh.
+- Phi công loại A chỉ bay cùng với phi công loại A.
+- Hý và Hải không ở cùng 1 tổ bay.
+- Thuận và Duyên là phi công loại B.
+- Dũng là phi công loại A.
+- Tuấn phải bay cùng 1 chuyến bay với Thuận.
+
+Câu 1: Nếu Duyên và Tuyền ở cùng 1 tổ bay thì tổ bay của Dũng bắt buộc phải có những ai, biết chuyến bay của Thuận chỉ có 2 phi công?
+A. Hý và Minh hoặc Hý và Hải
+B. Hải và Hý hoặc Minh và Hải
+C. Hý và Hý hoặc Hý và Minh
+D. Hý và Minh hoặc Minh và Hải
+
+Câu 2: Nếu Tuấn và Hý ở cùng 1 tổ bay, điều nào dưới đây không thể xảy ra?
+A. Hải chỉ bay cùng 1 phi công khác.
+B. Duyên và Tuyền cùng ở trên cùng 1 chuyến bay.
+C. Minh ở cùng 1 tổ bay với Hải.
+D. Tổ bay của Dũng chỉ có 2 người.
+
+Câu 3: Nếu Duyên và Hải ở cùng 1 tổ bay thì ai chắc chắn phải làm phi công thứ 3 ở tổ bay này biết Tuấn là phi công loại A+?
+A. Minh
+B. Tuyền
+C. Hý
+D. Dũng
+
+ĐỀ 5 (Phòng điều trị)
+Một khu điều trị gồm 3 bác sĩ: Lâm, Hậu, Hoàng và 5 bệnh nhân gồm: Dũng, Mạnh, Toàn, Hải, Anh. Những người này được chia vào 3 phòng điều trị, mỗi phòng điều trị có từ 2-3 người. Mỗi phòng điều trị bắt buộc phải có 1 bác sĩ để điều trị cho các bệnh nhân trong phòng điều trị đó, mỗi bác sĩ chỉ ở 1 phòng điều trị.
+
+Quy tắc:
+- Hoàng không điều trị cho Hải.
+- Hậu không điều trị cho Dũng.
+- Nếu Hoàng điều trị cho Anh thì Hoàng không điều trị thêm cho bệnh nhân nào nữa.
+- Lâm điều trị cho Toàn.
+
+Câu 1: Biết Dũng không cùng phòng với Hải và Anh không cùng phòng với Mạnh, nếu Hoàng điều trị cho Mạnh thì điều nào sau đây có thể đúng?
+A. Dũng ở cùng phòng với Toàn
+B. Anh và Hải cùng phòng
+C. Lâm chỉ điều trị một bệnh nhân duy nhất
+D. Dũng và Anh ở cùng phòng
+
+Câu 2: Hoàng điều trị cho Anh, thì điều nào sau đây phải đúng?
+A. Phòng điều trị của Toàn không có bệnh nhân khác.
+B. Toàn ở cùng 1 phòng điều trị với Dũng.
+C. Mạnh ở cùng 1 phòng điều trị với Toàn.
+D. Hải và Dũng cùng được điều trị bởi 1 bác sĩ.
+
+Câu 3: Biết Dũng không cùng phòng với Hải, Anh và Toàn không cùng phòng với Mạnh, điều nào sau đây có thể đúng?
+A. Dũng ở cùng phòng với Anh
+B. Toàn và Hải cùng phòng
+C. Mạnh và Hải cùng phòng
+D. Anh và Mạnh cùng phòng
+

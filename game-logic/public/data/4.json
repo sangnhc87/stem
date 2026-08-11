@@ -1,0 +1,632 @@
+[
+  {
+    "question": "Tòa nhà cao nhất thế giới hiện nay (Burj Khalifa) nằm ở quốc gia nào?",
+    "answers": [
+      {
+        "text": "Trung Quốc",
+        "correct": false
+      },
+      {
+        "text": "Ả Rập Xê Út",
+        "correct": false
+      },
+      {
+        "text": "Các Tiểu vương quốc Ả Rập Thống nhất",
+        "correct": true
+      },
+      {
+        "text": "Mỹ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong tác phẩm 'Tây Du Ký', Tôn Ngộ Không bị Phật Tổ giam dưới ngọn núi nào?",
+    "answers": [
+      {
+        "text": "Nga Mi Sơn",
+        "correct": false
+      },
+      {
+        "text": "Thái Sơn",
+        "correct": false
+      },
+      {
+        "text": "Ngũ Hành Sơn",
+        "correct": true
+      },
+      {
+        "text": "Hoa Quả Sơn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thành phần hóa học chính của Kim cương là nguyên tố nào?",
+    "answers": [
+      {
+        "text": "Cacbon",
+        "correct": true
+      },
+      {
+        "text": "Sắt",
+        "correct": false
+      },
+      {
+        "text": "Silic",
+        "correct": false
+      },
+      {
+        "text": "Vàng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Làng gốm Bát Tràng nổi tiếng nằm ở đâu?",
+    "answers": [
+      {
+        "text": "Hà Nội",
+        "correct": true
+      },
+      {
+        "text": "Hải Dương",
+        "correct": false
+      },
+      {
+        "text": "Hưng Yên",
+        "correct": false
+      },
+      {
+        "text": "Bắc Ninh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể ngủ mở một mắt?",
+    "answers": [
+      {
+        "text": "Con Mèo",
+        "correct": false
+      },
+      {
+        "text": "Con Chó",
+        "correct": false
+      },
+      {
+        "text": "Cá Heo",
+        "correct": true
+      },
+      {
+        "text": "Con Hổ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tác giả của bộ truyện tranh 'Doraemon' là ai?",
+    "answers": [
+      {
+        "text": "Fujiko F. Fujio",
+        "correct": true
+      },
+      {
+        "text": "Toriyama Akira",
+        "correct": false
+      },
+      {
+        "text": "Oda Eiichiro",
+        "correct": false
+      },
+      {
+        "text": "Kishimoto Masashi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hành tinh lớn nhất trong Hệ Mặt Trời là hành tinh nào?",
+    "answers": [
+      {
+        "text": "Sao Hải Vương",
+        "correct": false
+      },
+      {
+        "text": "Sao Mộc",
+        "correct": true
+      },
+      {
+        "text": "Sao Thiên Vương",
+        "correct": false
+      },
+      {
+        "text": "Sao Thổ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong lịch sử Việt Nam, ai là người đã đánh bại quân Nam Hán trên sông Bạch Đằng năm 938?",
+    "answers": [
+      {
+        "text": "Lê Hoàn",
+        "correct": false
+      },
+      {
+        "text": "Đinh Bộ Lĩnh",
+        "correct": false
+      },
+      {
+        "text": "Ngô Quyền",
+        "correct": true
+      },
+      {
+        "text": "Trần Hưng Đạo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Biểu tượng của nước Mỹ - Tượng Nữ thần Tự do là món quà tặng từ quốc gia nào?",
+    "answers": [
+      {
+        "text": "Anh",
+        "correct": false
+      },
+      {
+        "text": "Nga",
+        "correct": false
+      },
+      {
+        "text": "Đức",
+        "correct": false
+      },
+      {
+        "text": "Pháp",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Một đội bóng đá sân 11 người có tối đa bao nhiêu quyền thay người trong một trận đấu chính thức (theo luật mới nhất của FIFA)?",
+    "answers": [
+      {
+        "text": "4 người",
+        "correct": false
+      },
+      {
+        "text": "3 người",
+        "correct": false
+      },
+      {
+        "text": "6 người",
+        "correct": false
+      },
+      {
+        "text": "5 người",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tác phẩm 'Bình Ngô đại cáo' được coi là bản Tuyên ngôn độc lập thứ hai của Việt Nam do ai viết?",
+    "answers": [
+      {
+        "text": "Lê Lợi",
+        "correct": false
+      },
+      {
+        "text": "Nguyễn Du",
+        "correct": false
+      },
+      {
+        "text": "Quang Trung",
+        "correct": false
+      },
+      {
+        "text": "Nguyễn Trãi",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cây Tre thực chất thuộc họ gì?",
+    "answers": [
+      {
+        "text": "Họ Gỗ",
+        "correct": false
+      },
+      {
+        "text": "Họ Cau",
+        "correct": false
+      },
+      {
+        "text": "Họ Lúa",
+        "correct": true
+      },
+      {
+        "text": "Họ Dừa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đại dương nào bao quanh Châu Nam Cực?",
+    "answers": [
+      {
+        "text": "Bắc Băng Dương",
+        "correct": false
+      },
+      {
+        "text": "Ấn Độ Dương",
+        "correct": false
+      },
+      {
+        "text": "Đại Tây Dương",
+        "correct": false
+      },
+      {
+        "text": "Nam Đại Dương",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Nhân vật 'Người Nhện' (Spider-Man) tên thật là gì?",
+    "answers": [
+      {
+        "text": "Clark Kent",
+        "correct": false
+      },
+      {
+        "text": "Peter Parker",
+        "correct": true
+      },
+      {
+        "text": "Tony Stark",
+        "correct": false
+      },
+      {
+        "text": "Bruce Wayne",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nhiệt độ cơ thể bình thường của con người là bao nhiêu độ C?",
+    "answers": [
+      {
+        "text": "37 độ C",
+        "correct": true
+      },
+      {
+        "text": "39 độ C",
+        "correct": false
+      },
+      {
+        "text": "38 độ C",
+        "correct": false
+      },
+      {
+        "text": "36 độ C",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loại quả nào được nhắc đến trong sự tích 'Mai An Tiêm'?",
+    "answers": [
+      {
+        "text": "Quả Bưởi",
+        "correct": false
+      },
+      {
+        "text": "Dưa chuột",
+        "correct": false
+      },
+      {
+        "text": "Quả Dừa",
+        "correct": false
+      },
+      {
+        "text": "Dưa hấu",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tháp nghiêng Pisa là công trình kiến trúc nổi tiếng của nước nào?",
+    "answers": [
+      {
+        "text": "Pháp",
+        "correct": false
+      },
+      {
+        "text": "Bồ Đào Nha",
+        "correct": false
+      },
+      {
+        "text": "Italia",
+        "correct": true
+      },
+      {
+        "text": "Tây Ban Nha",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con vật nào là biểu tượng của năm Mão trong 12 con giáp ở Việt Nam?",
+    "answers": [
+      {
+        "text": "Con Hổ",
+        "correct": false
+      },
+      {
+        "text": "Con Mèo",
+        "correct": true
+      },
+      {
+        "text": "Con Thỏ",
+        "correct": false
+      },
+      {
+        "text": "Con Chuột",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là người tìm ra Châu Mỹ vào năm 1492?",
+    "answers": [
+      {
+        "text": "Vasco da Gama",
+        "correct": false
+      },
+      {
+        "text": "Christopher Columbus",
+        "correct": true
+      },
+      {
+        "text": "Magellan",
+        "correct": false
+      },
+      {
+        "text": "James Cook",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Muối ăn hàng ngày có công thức hóa học là gì?",
+    "answers": [
+      {
+        "text": "KCl",
+        "correct": false
+      },
+      {
+        "text": "NaOH",
+        "correct": false
+      },
+      {
+        "text": "HCl",
+        "correct": false
+      },
+      {
+        "text": "NaCl",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Đỉnh núi cao nhất thế giới Everest nằm ở dãy núi nào?",
+    "answers": [
+      {
+        "text": "Dãy Andes",
+        "correct": false
+      },
+      {
+        "text": "Dãy Himalaya",
+        "correct": true
+      },
+      {
+        "text": "Dãy Rocky",
+        "correct": false
+      },
+      {
+        "text": "Dãy Alps",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Em gái của Doraemon tên là gì?",
+    "answers": [
+      {
+        "text": "Jaiko",
+        "correct": false
+      },
+      {
+        "text": "Miumi",
+        "correct": false
+      },
+      {
+        "text": "Shizuka",
+        "correct": false
+      },
+      {
+        "text": "Dorami",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài hoa nào được xem là biểu tượng của tình yêu?",
+    "answers": [
+      {
+        "text": "Hoa Hướng dương",
+        "correct": false
+      },
+      {
+        "text": "Hoa Hồng đỏ",
+        "correct": true
+      },
+      {
+        "text": "Hoa Cúc trắng",
+        "correct": false
+      },
+      {
+        "text": "Hoa Ly",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào là quê hương của môn võ Taekwondo?",
+    "answers": [
+      {
+        "text": "Thái Lan",
+        "correct": false
+      },
+      {
+        "text": "Trung Quốc",
+        "correct": false
+      },
+      {
+        "text": "Hàn Quốc",
+        "correct": true
+      },
+      {
+        "text": "Nhật Bản",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong câu chuyện cổ tích 'Tấm Cám', Tấm nuôi con cá gì ở dưới giếng?",
+    "answers": [
+      {
+        "text": "Cá Chép",
+        "correct": false
+      },
+      {
+        "text": "Cá Bống",
+        "correct": true
+      },
+      {
+        "text": "Cá Trê",
+        "correct": false
+      },
+      {
+        "text": "Cá Vàng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thành phố nào được mệnh danh là 'Thành phố không bao giờ ngủ'?",
+    "answers": [
+      {
+        "text": "Tokyo",
+        "correct": false
+      },
+      {
+        "text": "Paris",
+        "correct": false
+      },
+      {
+        "text": "Las Vegas",
+        "correct": false
+      },
+      {
+        "text": "New York",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Con sông nào chảy qua 6 nước (Trung Quốc, Myanmar, Lào, Thái Lan, Campuchia, Việt Nam)?",
+    "answers": [
+      {
+        "text": "Sông Mê Kông",
+        "correct": true
+      },
+      {
+        "text": "Sông Amazon",
+        "correct": false
+      },
+      {
+        "text": "Sông Đà",
+        "correct": false
+      },
+      {
+        "text": "Sông Hồng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bức họa 'Bữa ăn tối cuối cùng' (The Last Supper) là của danh họa nào?",
+    "answers": [
+      {
+        "text": "Raphael",
+        "correct": false
+      },
+      {
+        "text": "Van Gogh",
+        "correct": false
+      },
+      {
+        "text": "Michelangelo",
+        "correct": false
+      },
+      {
+        "text": "Leonardo da Vinci",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Con vật nào có khả năng tạo ra ngọc trai?",
+    "answers": [
+      {
+        "text": "Con Trai",
+        "correct": true
+      },
+      {
+        "text": "Con Tôm",
+        "correct": false
+      },
+      {
+        "text": "Con Ốc",
+        "correct": false
+      },
+      {
+        "text": "Con Cua",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ngày Quốc khánh của nước Việt Nam là ngày nào?",
+    "answers": [
+      {
+        "text": "19 tháng 8",
+        "correct": false
+      },
+      {
+        "text": "19 tháng 5",
+        "correct": false
+      },
+      {
+        "text": "2 tháng 9",
+        "correct": true
+      },
+      {
+        "text": "30 tháng 4",
+        "correct": false
+      }
+    ]
+  }
+]

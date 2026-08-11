@@ -1,0 +1,422 @@
+[
+  {
+    "question": "Kim loại nào là kim loại duy nhất ở thể lỏng trong điều kiện nhiệt độ thường?",
+    "answers": [
+      {
+        "text": "Thủy ngân",
+        "correct": true
+      },
+      {
+        "text": "Bạc",
+        "correct": false
+      },
+      {
+        "text": "Vàng",
+        "correct": false
+      },
+      {
+        "text": "Chì",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là người Việt Nam đầu tiên bay vào vũ trụ?",
+    "answers": [
+      {
+        "text": "Phạm Tuân",
+        "correct": true
+      },
+      {
+        "text": "Hoàng Phủ Ngọc Tường",
+        "correct": false
+      },
+      {
+        "text": "Đặng Minh Tuấn",
+        "correct": false
+      },
+      {
+        "text": "Trần Đại Nghĩa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đỉnh núi Fansipan (Phan Xi Păng) thuộc dãy núi nào?",
+    "answers": [
+      {
+        "text": "Dãy Hoàng Liên Sơn",
+        "correct": true
+      },
+      {
+        "text": "Dãy Ngân Sơn",
+        "correct": false
+      },
+      {
+        "text": "Dãy Bạch Mã",
+        "correct": false
+      },
+      {
+        "text": "Dãy Trường Sơn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong Toán học, nhà bác học nào được mệnh danh là 'Ông vua của các nhà toán học'?",
+    "answers": [
+      {
+        "text": "Archimedes",
+        "correct": false
+      },
+      {
+        "text": "Isaac Newton",
+        "correct": false
+      },
+      {
+        "text": "Carl Friedrich Gauss",
+        "correct": true
+      },
+      {
+        "text": "Pythagoras",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc hiệu 'Việt Nam' chính thức xuất hiện vào thời vua nào?",
+    "answers": [
+      {
+        "text": "Vua Quang Trung",
+        "correct": false
+      },
+      {
+        "text": "Vua Minh Mạng",
+        "correct": false
+      },
+      {
+        "text": "Vua Gia Long",
+        "correct": true
+      },
+      {
+        "text": "Vua Lê Thánh Tông",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hành tinh nào nóng nhất trong Hệ Mặt Trời?",
+    "answers": [
+      {
+        "text": "Sao Thủy",
+        "correct": false
+      },
+      {
+        "text": "Sao Hỏa",
+        "correct": false
+      },
+      {
+        "text": "Sao Mộc",
+        "correct": false
+      },
+      {
+        "text": "Sao Kim",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tác giả của bản 'Tuyên ngôn độc lập' khai sinh ra nước Việt Nam Dân chủ Cộng hòa là ai?",
+    "answers": [
+      {
+        "text": "Võ Nguyên Giáp",
+        "correct": false
+      },
+      {
+        "text": "Phạm Văn Đồng",
+        "correct": false
+      },
+      {
+        "text": "Trường Chinh",
+        "correct": false
+      },
+      {
+        "text": "Hồ Chí Minh",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Eo biển nào nối liền Địa Trung Hải và Đại Tây Dương?",
+    "answers": [
+      {
+        "text": "Eo biển Manche",
+        "correct": false
+      },
+      {
+        "text": "Eo biển Malacca",
+        "correct": false
+      },
+      {
+        "text": "Eo biển Bering",
+        "correct": false
+      },
+      {
+        "text": "Eo biển Gibraltar",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Xương nào là xương nhỏ nhất trong cơ thể con người?",
+    "answers": [
+      {
+        "text": "Xương bàn đạp",
+        "correct": true
+      },
+      {
+        "text": "Xương ngón tay út",
+        "correct": false
+      },
+      {
+        "text": "Xương cụt",
+        "correct": false
+      },
+      {
+        "text": "Xương sống mũi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bài thơ 'Nam quốc sơn hà' thường được gắn liền với tên tuổi của danh tướng nào?",
+    "answers": [
+      {
+        "text": "Trần Hưng Đạo",
+        "correct": false
+      },
+      {
+        "text": "Ngô Quyền",
+        "correct": false
+      },
+      {
+        "text": "Quang Trung",
+        "correct": false
+      },
+      {
+        "text": "Lý Thường Kiệt",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Khí nào chiếm tỉ lệ lớn nhất trong bầu khí quyển Trái Đất?",
+    "answers": [
+      {
+        "text": "Hydro",
+        "correct": false
+      },
+      {
+        "text": "Oxy",
+        "correct": false
+      },
+      {
+        "text": "Cacbonic",
+        "correct": false
+      },
+      {
+        "text": "Nitơ",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Dòng sông nào dài nhất Việt Nam (chảy hoàn toàn trong lãnh thổ)?",
+    "answers": [
+      {
+        "text": "Sông Đà",
+        "correct": false
+      },
+      {
+        "text": "Sông Hồng",
+        "correct": false
+      },
+      {
+        "text": "Sông Đồng Nai",
+        "correct": true
+      },
+      {
+        "text": "Sông Mê Kông",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đơn vị đo cường độ dòng điện là gì?",
+    "answers": [
+      {
+        "text": "Vôn",
+        "correct": false
+      },
+      {
+        "text": "Jun",
+        "correct": false
+      },
+      {
+        "text": "Oát",
+        "correct": false
+      },
+      {
+        "text": "Ampe",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Đại văn hào Victor Hugo là người nước nào?",
+    "answers": [
+      {
+        "text": "Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Pháp",
+        "correct": true
+      },
+      {
+        "text": "Anh",
+        "correct": false
+      },
+      {
+        "text": "Nga",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong tin học, 1 Byte bằng bao nhiêu Bit?",
+    "answers": [
+      {
+        "text": "4 Bit",
+        "correct": false
+      },
+      {
+        "text": "16 Bit",
+        "correct": false
+      },
+      {
+        "text": "10 Bit",
+        "correct": false
+      },
+      {
+        "text": "8 Bit",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Kỳ quan cổ đại nào duy nhất còn tồn tại đến ngày nay?",
+    "answers": [
+      {
+        "text": "Vườn treo Babylon",
+        "correct": false
+      },
+      {
+        "text": "Tượng thần Zeus",
+        "correct": false
+      },
+      {
+        "text": "Hải đăng Alexandria",
+        "correct": false
+      },
+      {
+        "text": "Kim tự tháp Giza",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào có diện tích lớn nhất thế giới?",
+    "answers": [
+      {
+        "text": "Canada",
+        "correct": false
+      },
+      {
+        "text": "Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Trung Quốc",
+        "correct": false
+      },
+      {
+        "text": "Nga",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tác phẩm 'Nhật ký trong tù' của Hồ Chí Minh được viết bằng chữ gì?",
+    "answers": [
+      {
+        "text": "Tiếng Pháp",
+        "correct": false
+      },
+      {
+        "text": "Chữ Hán",
+        "correct": true
+      },
+      {
+        "text": "Chữ Nôm",
+        "correct": false
+      },
+      {
+        "text": "Chữ Quốc ngữ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào chạy nhanh nhất trên cạn?",
+    "answers": [
+      {
+        "text": "Ngựa",
+        "correct": false
+      },
+      {
+        "text": "Linh dương",
+        "correct": false
+      },
+      {
+        "text": "Sư tử",
+        "correct": false
+      },
+      {
+        "text": "Báo Cheetah",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Giải Nobel không có hạng mục cho lĩnh vực nào dưới đây?",
+    "answers": [
+      {
+        "text": "Toán học",
+        "correct": true
+      },
+      {
+        "text": "Vật lý",
+        "correct": false
+      },
+      {
+        "text": "Văn học",
+        "correct": false
+      },
+      {
+        "text": "Hóa học",
+        "correct": false
+      }
+    ]
+  }
+]

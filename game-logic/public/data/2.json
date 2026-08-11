@@ -1,0 +1,632 @@
+[
+  {
+    "question": "Môn thể thao nào được mệnh danh là 'Môn thể thao vua'?",
+    "answers": [
+      {
+        "text": "Bóng đá",
+        "correct": true
+      },
+      {
+        "text": "Quần vợt",
+        "correct": false
+      },
+      {
+        "text": "Điền kinh",
+        "correct": false
+      },
+      {
+        "text": "Bóng rổ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong âm nhạc, có bao nhiêu nốt nhạc cơ bản (Đồ, Rê, Mi...)?",
+    "answers": [
+      {
+        "text": "8 nốt",
+        "correct": false
+      },
+      {
+        "text": "5 nốt",
+        "correct": false
+      },
+      {
+        "text": "6 nốt",
+        "correct": false
+      },
+      {
+        "text": "7 nốt",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Món ăn 'Sushi' nổi tiếng là đặc sản của quốc gia nào?",
+    "answers": [
+      {
+        "text": "Nhật Bản",
+        "correct": true
+      },
+      {
+        "text": "Trung Quốc",
+        "correct": false
+      },
+      {
+        "text": "Thái Lan",
+        "correct": false
+      },
+      {
+        "text": "Hàn Quốc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Số Pi (π) trong toán học thường được lấy giá trị xấp xỉ là bao nhiêu?",
+    "answers": [
+      {
+        "text": "3,14",
+        "correct": true
+      },
+      {
+        "text": "3,16",
+        "correct": false
+      },
+      {
+        "text": "3,15",
+        "correct": false
+      },
+      {
+        "text": "3,12",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Người trưởng thành bình thường có bao nhiêu chiếc răng?",
+    "answers": [
+      {
+        "text": "28 chiếc",
+        "correct": false
+      },
+      {
+        "text": "36 chiếc",
+        "correct": false
+      },
+      {
+        "text": "30 chiếc",
+        "correct": false
+      },
+      {
+        "text": "32 chiếc",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong các loại huy chương Olympic, huy chương Vàng thực chất được làm chủ yếu từ kim loại nào?",
+    "answers": [
+      {
+        "text": "Nhôm",
+        "correct": false
+      },
+      {
+        "text": "Đồng",
+        "correct": false
+      },
+      {
+        "text": "Vàng",
+        "correct": false
+      },
+      {
+        "text": "Bạc",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Bát Phở của Việt Nam nổi tiếng thế giới thường được làm từ loại bánh phở làm từ nguyên liệu gì?",
+    "answers": [
+      {
+        "text": "Ngô",
+        "correct": false
+      },
+      {
+        "text": "Khoai tây",
+        "correct": false
+      },
+      {
+        "text": "Gạo",
+        "correct": true
+      },
+      {
+        "text": "Lúa mì",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nhạc sĩ nào được mệnh danh là 'Ông vua nhạc Pop'?",
+    "answers": [
+      {
+        "text": "Freddie Mercury",
+        "correct": false
+      },
+      {
+        "text": "Elvis Presley",
+        "correct": false
+      },
+      {
+        "text": "John Lennon",
+        "correct": false
+      },
+      {
+        "text": "Michael Jackson",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong hình học, hình nào có 3 cạnh và 3 góc?",
+    "answers": [
+      {
+        "text": "Hình chữ nhật",
+        "correct": false
+      },
+      {
+        "text": "Hình vuông",
+        "correct": false
+      },
+      {
+        "text": "Hình tam giác",
+        "correct": true
+      },
+      {
+        "text": "Hình thang",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vitamin nào được cơ thể tổng hợp chủ yếu nhờ ánh nắng mặt trời?",
+    "answers": [
+      {
+        "text": "Vitamin D",
+        "correct": true
+      },
+      {
+        "text": "Vitamin A",
+        "correct": false
+      },
+      {
+        "text": "Vitamin C",
+        "correct": false
+      },
+      {
+        "text": "Vitamin E",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Giải đấu bóng đá lớn nhất hành tinh World Cup được tổ chức bao nhiêu năm một lần?",
+    "answers": [
+      {
+        "text": "5 năm",
+        "correct": false
+      },
+      {
+        "text": "3 năm",
+        "correct": false
+      },
+      {
+        "text": "4 năm",
+        "correct": true
+      },
+      {
+        "text": "2 năm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loại gia vị nào được mệnh danh là 'Vàng đỏ', đắt nhất thế giới?",
+    "answers": [
+      {
+        "text": "Quế",
+        "correct": false
+      },
+      {
+        "text": "Nhụy hoa nghệ tây",
+        "correct": true
+      },
+      {
+        "text": "Hạt tiêu đen",
+        "correct": false
+      },
+      {
+        "text": "Vani",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bài hát 'Tiến quân ca' (Quốc ca Việt Nam) do nhạc sĩ nào sáng tác?",
+    "answers": [
+      {
+        "text": "Trịnh Công Sơn",
+        "correct": false
+      },
+      {
+        "text": "Văn Cao",
+        "correct": true
+      },
+      {
+        "text": "Phạm Duy",
+        "correct": false
+      },
+      {
+        "text": "Hoàng Việt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong số La Mã, chữ cái 'X' biểu thị cho số mấy?",
+    "answers": [
+      {
+        "text": "5",
+        "correct": false
+      },
+      {
+        "text": "100",
+        "correct": false
+      },
+      {
+        "text": "50",
+        "correct": false
+      },
+      {
+        "text": "10",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trung bình nhịp tim của một người khỏe mạnh khi nghỉ ngơi là bao nhiêu nhịp/phút?",
+    "answers": [
+      {
+        "text": "110 - 120 nhịp",
+        "correct": false
+      },
+      {
+        "text": "40 - 50 nhịp",
+        "correct": false
+      },
+      {
+        "text": "60 - 100 nhịp",
+        "correct": true
+      },
+      {
+        "text": "20 - 30 nhịp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong môn quần vợt (Tennis), điểm số đầu tiên được gọi là gì?",
+    "answers": [
+      {
+        "text": "1",
+        "correct": false
+      },
+      {
+        "text": "15",
+        "correct": true
+      },
+      {
+        "text": "10",
+        "correct": false
+      },
+      {
+        "text": "Love",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nguyên liệu chính để làm món Kim Chi của Hàn Quốc là gì?",
+    "answers": [
+      {
+        "text": "Cà rốt",
+        "correct": false
+      },
+      {
+        "text": "Dưa chuột",
+        "correct": false
+      },
+      {
+        "text": "Cải thảo",
+        "correct": true
+      },
+      {
+        "text": "Củ cải",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nhạc cụ nào có 88 phím (52 phím trắng và 36 phím đen)?",
+    "answers": [
+      {
+        "text": "Đàn Piano",
+        "correct": true
+      },
+      {
+        "text": "Đàn Accordion",
+        "correct": false
+      },
+      {
+        "text": "Đàn Organ",
+        "correct": false
+      },
+      {
+        "text": "Đàn Guitar",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Số nguyên tố nhỏ nhất là số mấy?",
+    "answers": [
+      {
+        "text": "Số 2",
+        "correct": true
+      },
+      {
+        "text": "Số 0",
+        "correct": false
+      },
+      {
+        "text": "Số 3",
+        "correct": false
+      },
+      {
+        "text": "Số 1",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Phần nào của quả trứng gà chứa nhiều cholesterol nhất?",
+    "answers": [
+      {
+        "text": "Lòng trắng",
+        "correct": false
+      },
+      {
+        "text": "Vỏ trứng",
+        "correct": false
+      },
+      {
+        "text": "Lòng đỏ",
+        "correct": true
+      },
+      {
+        "text": "Chứa bằng nhau",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Môn võ nào được coi là Quốc võ của Nhật Bản?",
+    "answers": [
+      {
+        "text": "Sumo",
+        "correct": true
+      },
+      {
+        "text": "Karate",
+        "correct": false
+      },
+      {
+        "text": "Taekwondo",
+        "correct": false
+      },
+      {
+        "text": "Judo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loại bánh nào tượng trưng cho Đất trong truyền thuyết Bánh Chưng Bánh Giầy?",
+    "answers": [
+      {
+        "text": "Bánh Nếp",
+        "correct": false
+      },
+      {
+        "text": "Bánh Tét",
+        "correct": false
+      },
+      {
+        "text": "Bánh Chưng",
+        "correct": true
+      },
+      {
+        "text": "Bánh Giầy",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong Ban nhạc The Beatles, có bao nhiêu thành viên?",
+    "answers": [
+      {
+        "text": "6 thành viên",
+        "correct": false
+      },
+      {
+        "text": "4 thành viên",
+        "correct": true
+      },
+      {
+        "text": "3 thành viên",
+        "correct": false
+      },
+      {
+        "text": "5 thành viên",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Một thiên niên kỷ bao gồm bao nhiêu năm?",
+    "answers": [
+      {
+        "text": "100 năm",
+        "correct": false
+      },
+      {
+        "text": "10.000 năm",
+        "correct": false
+      },
+      {
+        "text": "10 năm",
+        "correct": false
+      },
+      {
+        "text": "1000 năm",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Để xương chắc khỏe, chúng ta cần bổ sung khoáng chất gì nhiều nhất?",
+    "answers": [
+      {
+        "text": "Kẽm",
+        "correct": false
+      },
+      {
+        "text": "Kali",
+        "correct": false
+      },
+      {
+        "text": "Sắt",
+        "correct": false
+      },
+      {
+        "text": "Canxi",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "SEA Games là đại hội thể thao của khu vực nào?",
+    "answers": [
+      {
+        "text": "Thế giới",
+        "correct": false
+      },
+      {
+        "text": "Châu Á",
+        "correct": false
+      },
+      {
+        "text": "Đông Á",
+        "correct": false
+      },
+      {
+        "text": "Đông Nam Á",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loại nước uống nào phổ biến nhất thế giới (chỉ sau nước lọc)?",
+    "answers": [
+      {
+        "text": "Nước ngọt có ga",
+        "correct": false
+      },
+      {
+        "text": "Bia",
+        "correct": false
+      },
+      {
+        "text": "Cà phê",
+        "correct": false
+      },
+      {
+        "text": "Trà",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Biểu tượng của ngành Y dược là con gì quấn quanh cây gậy?",
+    "answers": [
+      {
+        "text": "Con Hổ",
+        "correct": false
+      },
+      {
+        "text": "Con Phượng hoàng",
+        "correct": false
+      },
+      {
+        "text": "Con Rồng",
+        "correct": false
+      },
+      {
+        "text": "Con Rắn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Môn thể thao nào sử dụng vợt và quả cầu lông vũ?",
+    "answers": [
+      {
+        "text": "Bóng bàn",
+        "correct": false
+      },
+      {
+        "text": "Bóng chày",
+        "correct": false
+      },
+      {
+        "text": "Cầu lông",
+        "correct": true
+      },
+      {
+        "text": "Quần vợt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong bài hát 'Happy Birthday to You', từ nào được lặp lại nhiều nhất?",
+    "answers": [
+      {
+        "text": "To",
+        "correct": false
+      },
+      {
+        "text": "You",
+        "correct": true
+      },
+      {
+        "text": "Birthday",
+        "correct": false
+      },
+      {
+        "text": "Happy",
+        "correct": false
+      }
+    ]
+  }
+]

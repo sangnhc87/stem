@@ -1,0 +1,779 @@
+[
+  {
+    "question": "Hươu cao cổ có ăn cỏ không?",
+    "answers": [
+      {
+        "text": "Không",
+        "correct": true
+      },
+      {
+        "text": "Thỉnh thoảng",
+        "correct": false
+      },
+      {
+        "text": "Có",
+        "correct": false
+      },
+      {
+        "text": "Chỉ ăn khi đói",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Khi gặp Thúy Kiều, Kim Trọng trao cho vật gì làm tin?",
+    "answers": [
+      {
+        "text": "Miếng Lụa",
+        "correct": false
+      },
+      {
+        "text": "Dải yếm",
+        "correct": false
+      },
+      {
+        "text": "Chiếc khăn hồng",
+        "correct": true
+      },
+      {
+        "text": "Chiếc châm cài tóc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc hiệu đầu tiên của nước ta là gì?",
+    "answers": [
+      {
+        "text": "Đại Việt",
+        "correct": false
+      },
+      {
+        "text": "Vạn Xuân",
+        "correct": false
+      },
+      {
+        "text": "Đại Nam",
+        "correct": false
+      },
+      {
+        "text": "Văn Lang",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong tác phẩm 'Nhớ rừng' của Thế Lữ, khi say con Hổ uống cái gì?",
+    "answers": [
+      {
+        "text": "Ánh trăng tan",
+        "correct": true
+      },
+      {
+        "text": "Không uống gì",
+        "correct": false
+      },
+      {
+        "text": "Rượu",
+        "correct": false
+      },
+      {
+        "text": "Nước suối",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đại vương ếch trong tác phẩm 'Dế mèn phiêu lưu ký' có tên là gì?",
+    "answers": [
+      {
+        "text": "Ếch vương",
+        "correct": false
+      },
+      {
+        "text": "Ếch đồng",
+        "correct": false
+      },
+      {
+        "text": "Ếch cốm",
+        "correct": true
+      },
+      {
+        "text": "Ếch rừng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vũ điệu truyền thống của đảo Hawaii là?",
+    "answers": [
+      {
+        "text": "Vũ điệu Tango",
+        "correct": false
+      },
+      {
+        "text": "Điệu nhảy Cha cha cha",
+        "correct": false
+      },
+      {
+        "text": "Vũ điệu Samba",
+        "correct": false
+      },
+      {
+        "text": "Điệu nhảy Hula",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Vịnh nào của Việt Nam được coi là 1 trong 3 vịnh đẹp nhất thế giới?",
+    "answers": [
+      {
+        "text": "Vịnh Xuân Đài",
+        "correct": false
+      },
+      {
+        "text": "Vịnh Lăng Cô",
+        "correct": false
+      },
+      {
+        "text": "Vịnh Hạ Long",
+        "correct": false
+      },
+      {
+        "text": "Vịnh Cam Ranh",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào có khả năng bay lùi lại phía sau?",
+    "answers": [
+      {
+        "text": "Chim ruồi",
+        "correct": true
+      },
+      {
+        "text": "Chim rái cá",
+        "correct": false
+      },
+      {
+        "text": "Chim gõ kiến",
+        "correct": false
+      },
+      {
+        "text": "Chim cu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Người sinh ra đầu tiên từ ống nghiệm là người nước nào?",
+    "answers": [
+      {
+        "text": "Nước Đức",
+        "correct": false
+      },
+      {
+        "text": "Nước Pháp",
+        "correct": false
+      },
+      {
+        "text": "Nước Anh",
+        "correct": true
+      },
+      {
+        "text": "Nước Mỹ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tên bộ phim hoạt hình đầu tiên của nước ta?",
+    "answers": [
+      {
+        "text": "Đáng đời thằng Cáo",
+        "correct": true
+      },
+      {
+        "text": "Cô bé quàng khăn đỏ",
+        "correct": false
+      },
+      {
+        "text": "Con đầu to bố đầu nhỏ",
+        "correct": false
+      },
+      {
+        "text": "Hãy đợi đấy",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nước nào sau đây có đất liền thấp hơn mực nước biển?",
+    "answers": [
+      {
+        "text": "Hà Lan",
+        "correct": true
+      },
+      {
+        "text": "Bồ Đào Nha",
+        "correct": false
+      },
+      {
+        "text": "Philippines",
+        "correct": false
+      },
+      {
+        "text": "Italia",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ngọn núi nào được coi là cánh cổng của thiên đường?",
+    "answers": [
+      {
+        "text": "Phú Sĩ",
+        "correct": false
+      },
+      {
+        "text": "Olympus",
+        "correct": true
+      },
+      {
+        "text": "Everest",
+        "correct": false
+      },
+      {
+        "text": "Fansipan",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nơi sinh của thiên tài âm nhạc Beethoven?",
+    "answers": [
+      {
+        "text": "Bỉ",
+        "correct": false
+      },
+      {
+        "text": "Pháp",
+        "correct": false
+      },
+      {
+        "text": "Italia",
+        "correct": false
+      },
+      {
+        "text": "Đức",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tác giả bài thơ 'Người đi tìm hình của nước'?",
+    "answers": [
+      {
+        "text": "Phạm Tiến Duật",
+        "correct": false
+      },
+      {
+        "text": "Chế Lan Viên",
+        "correct": true
+      },
+      {
+        "text": "Nguyễn Lữ",
+        "correct": false
+      },
+      {
+        "text": "Tố Hữu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là người đã dâng vua 'Thất trảm sớ' chém 7 nịnh thần?",
+    "answers": [
+      {
+        "text": "Nguyễn Hiền",
+        "correct": false
+      },
+      {
+        "text": "Phùng Hưng",
+        "correct": false
+      },
+      {
+        "text": "Chu Văn An",
+        "correct": true
+      },
+      {
+        "text": "Cao Bá Quát",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ở người có bao nhiêu cặp nhiễm sắc thể?",
+    "answers": [
+      {
+        "text": "23 cặp",
+        "correct": true
+      },
+      {
+        "text": "13 cặp",
+        "correct": false
+      },
+      {
+        "text": "22 cặp",
+        "correct": false
+      },
+      {
+        "text": "12 cặp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đại dương nào nhỏ nhất thế giới?",
+    "answers": [
+      {
+        "text": "Bắc Băng Dương",
+        "correct": true
+      },
+      {
+        "text": "Thái Bình Dương",
+        "correct": false
+      },
+      {
+        "text": "Ấn Độ Dương",
+        "correct": false
+      },
+      {
+        "text": "Đại Tây Dương",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trên tay của Lý Công Uẩn khi sinh ra đã có 4 chữ son, đó là những chữ nào?",
+    "answers": [
+      {
+        "text": "Sơn Hà Xã Tắc",
+        "correct": true
+      },
+      {
+        "text": "Xã Tắc Giang Sơn",
+        "correct": false
+      },
+      {
+        "text": "Xã Tắc Sơn Hà",
+        "correct": false
+      },
+      {
+        "text": "Giang Sơn Xã Tắc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vị vua nào có thời gian trị vì ngắn nhất nước ta?",
+    "answers": [
+      {
+        "text": "Dục Đức",
+        "correct": true
+      },
+      {
+        "text": "Lê Lợi",
+        "correct": false
+      },
+      {
+        "text": "Lý Công Uẩn",
+        "correct": false
+      },
+      {
+        "text": "Bảo Đại",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia thứ 3 trên thế giới đưa người vào vũ trụ là?",
+    "answers": [
+      {
+        "text": "Trung Quốc",
+        "correct": true
+      },
+      {
+        "text": "Nga",
+        "correct": false
+      },
+      {
+        "text": "Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Việt Nam",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tai của Châu Chấu nằm ở đâu?",
+    "answers": [
+      {
+        "text": "Khớp gối chân trước",
+        "correct": true
+      },
+      {
+        "text": "Cạnh mắt",
+        "correct": false
+      },
+      {
+        "text": "Không có tai",
+        "correct": false
+      },
+      {
+        "text": "Cạnh mũi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Liên đoàn bóng đá Australia thuộc liên đoàn bóng đá của châu lục nào?",
+    "answers": [
+      {
+        "text": "Châu Á",
+        "correct": true
+      },
+      {
+        "text": "Châu Âu",
+        "correct": false
+      },
+      {
+        "text": "Châu Phi",
+        "correct": false
+      },
+      {
+        "text": "Châu Mỹ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tên thật của nhà văn Tô Hoài?",
+    "answers": [
+      {
+        "text": "Nguyễn Nữ",
+        "correct": false
+      },
+      {
+        "text": "Đặng Lan",
+        "correct": false
+      },
+      {
+        "text": "Trần Sen",
+        "correct": false
+      },
+      {
+        "text": "Nguyễn Sen",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Ánh sáng từ mặt trời tới trái đất mất bao nhiêu phút?",
+    "answers": [
+      {
+        "text": "7 phút",
+        "correct": false
+      },
+      {
+        "text": "8 phút",
+        "correct": true
+      },
+      {
+        "text": "10 phút",
+        "correct": false
+      },
+      {
+        "text": "9 phút",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Phần mềm Vietkey do ai viết ra?",
+    "answers": [
+      {
+        "text": "Vũ Hoài Thanh",
+        "correct": false
+      },
+      {
+        "text": "Đặng Minh Tuấn",
+        "correct": true
+      },
+      {
+        "text": "Vương Vũ Thắng",
+        "correct": false
+      },
+      {
+        "text": "Nguyễn Đức Quảng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chiến tranh thế giới thứ 2 bùng nổ bằng sự kiện Đức đánh nước nào?",
+    "answers": [
+      {
+        "text": "Bỉ",
+        "correct": false
+      },
+      {
+        "text": "Pháp",
+        "correct": false
+      },
+      {
+        "text": "Thụy Sĩ",
+        "correct": false
+      },
+      {
+        "text": "Ba Lan",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Người đoạt giải Nobel Hòa bình năm 1973 nhưng từ chối không nhận là ai?",
+    "answers": [
+      {
+        "text": "Nguyễn Hữu Thọ",
+        "correct": false
+      },
+      {
+        "text": "Lê Đức Thọ",
+        "correct": true
+      },
+      {
+        "text": "Henry Kissinger",
+        "correct": false
+      },
+      {
+        "text": "Martin Luther King",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong 4 nhóm máu A, B, O, AB thì nhóm máu nào có thể tiếp nhận máu từ tất cả các nhóm còn lại?",
+    "answers": [
+      {
+        "text": "Nhóm O",
+        "correct": false
+      },
+      {
+        "text": "Nhóm A",
+        "correct": false
+      },
+      {
+        "text": "Nhóm B",
+        "correct": false
+      },
+      {
+        "text": "Nhóm AB",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Điệu nhảy Tango xuất xứ từ nước nào?",
+    "answers": [
+      {
+        "text": "Mexico",
+        "correct": false
+      },
+      {
+        "text": "Brazil",
+        "correct": false
+      },
+      {
+        "text": "Chile",
+        "correct": false
+      },
+      {
+        "text": "Argentina",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Phố Hàng Vải (Hà Nội) hiện nay kinh doanh mặt hàng gì chủ yếu?",
+    "answers": [
+      {
+        "text": "Vải",
+        "correct": false
+      },
+      {
+        "text": "Chiếu",
+        "correct": false
+      },
+      {
+        "text": "Tranh",
+        "correct": false
+      },
+      {
+        "text": "Tre - Trúc",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Ai là tác giả cuốn 'Đại Việt sử ký toàn thư'?",
+    "answers": [
+      {
+        "text": "Nguyễn Trãi",
+        "correct": false
+      },
+      {
+        "text": "Phan Huy Chú",
+        "correct": false
+      },
+      {
+        "text": "Lê Văn Hưu",
+        "correct": false
+      },
+      {
+        "text": "Ngô Sĩ Liên",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Theo dương lịch thì 1 năm có bao nhiêu tháng có ngày 28?",
+    "answers": [
+      {
+        "text": "Không tháng nào",
+        "correct": false
+      },
+      {
+        "text": "1 tháng",
+        "correct": false
+      },
+      {
+        "text": "12 tháng",
+        "correct": true
+      },
+      {
+        "text": "4 tháng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Rắn có mấy lá phổi?",
+    "answers": [
+      {
+        "text": "2",
+        "correct": false
+      },
+      {
+        "text": "3",
+        "correct": false
+      },
+      {
+        "text": "0",
+        "correct": false
+      },
+      {
+        "text": "1",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Quốc kỳ của 11 nước Đông Nam Á có chung màu gì?",
+    "answers": [
+      {
+        "text": "Xanh",
+        "correct": false
+      },
+      {
+        "text": "Vàng",
+        "correct": false
+      },
+      {
+        "text": "Trắng",
+        "correct": false
+      },
+      {
+        "text": "Đỏ",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Đồng tiền đầu tiên của nước ta xuất hiện từ thời nào?",
+    "answers": [
+      {
+        "text": "Triều Lê",
+        "correct": false
+      },
+      {
+        "text": "Triều Đinh",
+        "correct": true
+      },
+      {
+        "text": "Triều Lý",
+        "correct": false
+      },
+      {
+        "text": "Triều Trần",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Có bao nhiêu số chính phương nhỏ hơn 100?",
+    "answers": [
+      {
+        "text": "9",
+        "correct": true
+      },
+      {
+        "text": "10",
+        "correct": false
+      },
+      {
+        "text": "8",
+        "correct": false
+      },
+      {
+        "text": "11",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào là quê hương của cây xoài?",
+    "answers": [
+      {
+        "text": "Trung Quốc",
+        "correct": false
+      },
+      {
+        "text": "Pháp",
+        "correct": false
+      },
+      {
+        "text": "Việt Nam",
+        "correct": false
+      },
+      {
+        "text": "Ấn Độ",
+        "correct": true
+      }
+    ]
+  }
+]

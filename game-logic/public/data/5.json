@@ -1,0 +1,632 @@
+[
+  {
+    "question": "Thành phố nào của Việt Nam được mệnh danh là 'Thành phố ngàn hoa' hay 'Thành phố sương mù'?",
+    "answers": [
+      {
+        "text": "Buôn Ma Thuột",
+        "correct": false
+      },
+      {
+        "text": "Sa Pa",
+        "correct": false
+      },
+      {
+        "text": "Đà Lạt",
+        "correct": true
+      },
+      {
+        "text": "Tam Đảo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Biển nào trên thế giới có độ mặn cao đến mức con người có thể nằm đọc báo nổi trên mặt nước?",
+    "answers": [
+      {
+        "text": "Biển Đen",
+        "correct": false
+      },
+      {
+        "text": "Biển Đông",
+        "correct": false
+      },
+      {
+        "text": "Biển Chết",
+        "correct": true
+      },
+      {
+        "text": "Biển Đỏ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong 12 con giáp, con vật nào là con vật hư cấu (không có thật)?",
+    "answers": [
+      {
+        "text": "Con Rắn",
+        "correct": false
+      },
+      {
+        "text": "Con Khỉ",
+        "correct": false
+      },
+      {
+        "text": "Con Hổ",
+        "correct": false
+      },
+      {
+        "text": "Con Rồng",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Ai là người phát minh ra chiếc điện thoại đầu tiên?",
+    "answers": [
+      {
+        "text": "Thomas Edison",
+        "correct": false
+      },
+      {
+        "text": "Alexander Graham Bell",
+        "correct": true
+      },
+      {
+        "text": "Marconi",
+        "correct": false
+      },
+      {
+        "text": "Nikola Tesla",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Mạng xã hội chia sẻ video ngắn phổ biến nhất thế giới hiện nay là gì?",
+    "answers": [
+      {
+        "text": "Facebook",
+        "correct": false
+      },
+      {
+        "text": "Twitter",
+        "correct": false
+      },
+      {
+        "text": "Instagram",
+        "correct": false
+      },
+      {
+        "text": "TikTok",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Dòng sông nào chảy qua thủ đô Hà Nội?",
+    "answers": [
+      {
+        "text": "Sông Đà",
+        "correct": false
+      },
+      {
+        "text": "Sông Hồng",
+        "correct": true
+      },
+      {
+        "text": "Sông Hương",
+        "correct": false
+      },
+      {
+        "text": "Sông Lô",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Một thế kỷ bao gồm bao nhiêu năm?",
+    "answers": [
+      {
+        "text": "1000 năm",
+        "correct": false
+      },
+      {
+        "text": "10 năm",
+        "correct": false
+      },
+      {
+        "text": "50 năm",
+        "correct": false
+      },
+      {
+        "text": "100 năm",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Chủ tịch Hồ Chí Minh đã đọc bản Tuyên ngôn độc lập tại đâu?",
+    "answers": [
+      {
+        "text": "Bến Nhà Rồng",
+        "correct": false
+      },
+      {
+        "text": "Dinh Độc Lập",
+        "correct": false
+      },
+      {
+        "text": "Quảng trường Ba Đình",
+        "correct": true
+      },
+      {
+        "text": "Nhà hát lớn Hà Nội",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đơn vị tiền tệ chung của nhiều nước Châu Âu là gì?",
+    "answers": [
+      {
+        "text": "Euro",
+        "correct": true
+      },
+      {
+        "text": "Bảng Anh",
+        "correct": false
+      },
+      {
+        "text": "Franc",
+        "correct": false
+      },
+      {
+        "text": "Dollar",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tác giả của bộ truyện phù thủy nổi tiếng 'Harry Potter' là ai?",
+    "answers": [
+      {
+        "text": "George R.R. Martin",
+        "correct": false
+      },
+      {
+        "text": "Stephen King",
+        "correct": false
+      },
+      {
+        "text": "Dan Brown",
+        "correct": false
+      },
+      {
+        "text": "J.K. Rowling",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong các loại đèn tín hiệu giao thông, màu nào báo hiệu 'Được phép đi'?",
+    "answers": [
+      {
+        "text": "Màu Vàng",
+        "correct": false
+      },
+      {
+        "text": "Màu Đỏ",
+        "correct": false
+      },
+      {
+        "text": "Màu Cam",
+        "correct": false
+      },
+      {
+        "text": "Màu Xanh",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loại khí nào thường được bơm vào bóng bay để chúng bay lên cao (nhẹ hơn không khí)?",
+    "answers": [
+      {
+        "text": "Khí Cacbonic",
+        "correct": false
+      },
+      {
+        "text": "Khí Nitơ",
+        "correct": false
+      },
+      {
+        "text": "Khí Hêli",
+        "correct": true
+      },
+      {
+        "text": "Khí Oxy",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hai Bà Trưng (Trưng Trắc - Trưng Nhị) trong lịch sử thường được mô tả cưỡi con vật gì khi ra trận?",
+    "answers": [
+      {
+        "text": "Đi bộ",
+        "correct": false
+      },
+      {
+        "text": "Con Ngựa",
+        "correct": false
+      },
+      {
+        "text": "Con Voi",
+        "correct": true
+      },
+      {
+        "text": "Con Trâu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Logo của hãng công nghệ Apple có hình gì?",
+    "answers": [
+      {
+        "text": "Quả cam",
+        "correct": false
+      },
+      {
+        "text": "Quả lê",
+        "correct": false
+      },
+      {
+        "text": "Quả táo nguyên vẹn",
+        "correct": false
+      },
+      {
+        "text": "Quả táo bị cắn dở",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tác phẩm văn học 'Chí Phèo' là sáng tác của nhà văn nào?",
+    "answers": [
+      {
+        "text": "Nam Cao",
+        "correct": true
+      },
+      {
+        "text": "Vũ Trọng Phụng",
+        "correct": false
+      },
+      {
+        "text": "Nguyên Hồng",
+        "correct": false
+      },
+      {
+        "text": "Ngô Tất Tố",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài hoa nào được xem là biểu tượng của mùa hè và tuổi học trò tại Việt Nam?",
+    "answers": [
+      {
+        "text": "Hoa Đào",
+        "correct": false
+      },
+      {
+        "text": "Hoa Mai",
+        "correct": false
+      },
+      {
+        "text": "Hoa Phượng vĩ",
+        "correct": true
+      },
+      {
+        "text": "Hoa Cúc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nền tảng xem video trực tuyến YouTube hiện nay thuộc sở hữu của công ty nào?",
+    "answers": [
+      {
+        "text": "Google",
+        "correct": true
+      },
+      {
+        "text": "Facebook",
+        "correct": false
+      },
+      {
+        "text": "Microsoft",
+        "correct": false
+      },
+      {
+        "text": "Amazon",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đất nước nào nổi tiếng với biệt danh 'Xứ sở Bò tót'?",
+    "answers": [
+      {
+        "text": "Bồ Đào Nha",
+        "correct": false
+      },
+      {
+        "text": "Tây Ban Nha",
+        "correct": true
+      },
+      {
+        "text": "Mexico",
+        "correct": false
+      },
+      {
+        "text": "Brazil",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Câu tục ngữ: 'Gần mực thì đen, gần đèn thì...' điền từ còn thiếu?",
+    "answers": [
+      {
+        "text": "Rạng",
+        "correct": true
+      },
+      {
+        "text": "Xanh",
+        "correct": false
+      },
+      {
+        "text": "Mờ",
+        "correct": false
+      },
+      {
+        "text": "Tối",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong hệ đo lường, 1 tá (dozen) bằng bao nhiêu đơn vị?",
+    "answers": [
+      {
+        "text": "10",
+        "correct": false
+      },
+      {
+        "text": "12",
+        "correct": true
+      },
+      {
+        "text": "20",
+        "correct": false
+      },
+      {
+        "text": "24",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào là biểu tượng của hòa bình?",
+    "answers": [
+      {
+        "text": "Chim Hạc",
+        "correct": false
+      },
+      {
+        "text": "Chim Đại bàng",
+        "correct": false
+      },
+      {
+        "text": "Chim Sẻ",
+        "correct": false
+      },
+      {
+        "text": "Chim Bồ câu trắng",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Con sông nào được xem là con sông dài nhất thế giới?",
+    "answers": [
+      {
+        "text": "Sông Nile",
+        "correct": true
+      },
+      {
+        "text": "Sông Amazon",
+        "correct": false
+      },
+      {
+        "text": "Sông Mississippi",
+        "correct": false
+      },
+      {
+        "text": "Sông Dương Tử",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cơ quan nào trong cơ thể người sản xuất ra Insulin để điều hòa đường huyết?",
+    "answers": [
+      {
+        "text": "Gan",
+        "correct": false
+      },
+      {
+        "text": "Dạ dày",
+        "correct": false
+      },
+      {
+        "text": "Tụy",
+        "correct": true
+      },
+      {
+        "text": "Thận",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thành phố nào từng được gọi là 'Hòn ngọc Viễn Đông'?",
+    "answers": [
+      {
+        "text": "Hồng Kông",
+        "correct": false
+      },
+      {
+        "text": "Sài Gòn",
+        "correct": true
+      },
+      {
+        "text": "Manila",
+        "correct": false
+      },
+      {
+        "text": "Singapore",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thảm họa tàu Titanic xảy ra ở đại dương nào?",
+    "answers": [
+      {
+        "text": "Đại Tây Dương",
+        "correct": true
+      },
+      {
+        "text": "Thái Bình Dương",
+        "correct": false
+      },
+      {
+        "text": "Ấn Độ Dương",
+        "correct": false
+      },
+      {
+        "text": "Bắc Băng Dương",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Khí cười (dùng trong y tế để gây tê nhẹ hoặc giải trí) có công thức là gì?",
+    "answers": [
+      {
+        "text": "NO2",
+        "correct": false
+      },
+      {
+        "text": "CO2",
+        "correct": false
+      },
+      {
+        "text": "N2O",
+        "correct": true
+      },
+      {
+        "text": "H2S",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đỉnh núi Fansipan có độ cao bao nhiêu mét?",
+    "answers": [
+      {
+        "text": "3.143m",
+        "correct": true
+      },
+      {
+        "text": "2.800m",
+        "correct": false
+      },
+      {
+        "text": "3.000m",
+        "correct": false
+      },
+      {
+        "text": "4.000m",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vịnh Hạ Long đã được UNESCO công nhận là Di sản thiên nhiên thế giới bao nhiêu lần?",
+    "answers": [
+      {
+        "text": "Chưa lần nào",
+        "correct": false
+      },
+      {
+        "text": "1 lần",
+        "correct": false
+      },
+      {
+        "text": "2 lần",
+        "correct": true
+      },
+      {
+        "text": "3 lần",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tên gọi khác của tác phẩm 'Truyện Kiều' là gì?",
+    "answers": [
+      {
+        "text": "Đoạn trường tân thanh",
+        "correct": true
+      },
+      {
+        "text": "Kim Vân Kiều truyện",
+        "correct": false
+      },
+      {
+        "text": "Lục Vân Tiên",
+        "correct": false
+      },
+      {
+        "text": "Chinh phụ ngâm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loại bánh truyền thống nào của Việt Nam có hình vuông, tượng trưng cho Đất?",
+    "answers": [
+      {
+        "text": "Bánh Pía",
+        "correct": false
+      },
+      {
+        "text": "Bánh Tét",
+        "correct": false
+      },
+      {
+        "text": "Bánh Giầy",
+        "correct": false
+      },
+      {
+        "text": "Bánh Chưng",
+        "correct": true
+      }
+    ]
+  }
+]

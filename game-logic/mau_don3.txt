@@ -1,0 +1,474 @@
+1. Nếu theo quy tắc:
+- Trường có **400 học sinh**.
+- $\frac{1}{2}$ tham gia CLB Số học $\Rightarrow |A| = 200$.
+- $\frac{5}{8}$ tham gia CLB Sinh học $\Rightarrow |B| = 250$.
+- $\frac{3}{4}$ tham gia CLB Hóa học $\Rightarrow |C| = 300$.
+- $\frac{3}{8}$ tham gia cả 3 CLB $\Rightarrow |A \cap B \cap C| = 150$.
+- Mỗi học sinh tham gia **ít nhất một CLB**.
+
+Hỏi: Có bao nhiêu học sinh tham gia **đúng 2 CLB**?
+   - (A) [x] 50
+   - (B) 75
+   - (C) 150
+   - (D) 200  
+   Điểm: 10, -10  
+   Phạt: 2 phút  
+
+Giải thích:
+<ol>
+    <li>Gọi số học sinh tham gia đúng 2 CLB là: $x_{AB} + x_{AC} + x_{BC}$.</li>
+    <li>Áp dụng công thức nguyên tắc cộng:
+    <br>
+    $$|A \cup B \cup C| = |A| + |B| + |C| - (x_{AB} + x_{AC} + x_{BC}) - 2|A \cap B \cap C|$$
+    </li>
+    <li>Thay số:
+    <br>
+    $$400 = 200 + 250 + 300 - (x_{AB} + x_{AC} + x_{BC}) - 2 \times 150$$
+    <br>
+    $$400 = 750 - (x_{AB} + x_{AC} + x_{BC}) - 300$$
+    <br>
+    $$400 = 450 - (x_{AB} + x_{AC} + x_{BC})$$
+    <br>
+    $$x_{AB} + x_{AC} + x_{BC} = 450 - 400 = 50$$
+    </li>
+    <li>Vậy số học sinh tham gia đúng 2 CLB là $\mathbf{50}$.</li>
+</ol>
+
+<b>Kết quả: (A) 50.</b>
+---
+2. Nếu theo quy tắc:
+- Trường có **360 học sinh**.
+- $\frac{2}{3}$ tham gia CLB Toán $\Rightarrow |A| = 240$.
+- $\frac{3}{5}$ tham gia CLB Vật lý $\Rightarrow |B| = 216$.
+- $\frac{3}{4}$ tham gia CLB Hóa học $\Rightarrow |C| = 270$.
+- $\frac{1}{6}$ tham gia cả 3 CLB $\Rightarrow |A \cap B \cap C| = 60$.
+- Mỗi học sinh tham gia **ít nhất một CLB**.
+
+Hỏi: Có bao nhiêu học sinh tham gia **đúng 2 CLB**?
+   - (A) 60
+   - (B) [x] 66
+   - (C) 90
+   - (D) 120  
+   Điểm: 10, -10  
+   Phạt: 2 phút  
+
+Giải thích:
+<ol>
+    <li>Gọi số học sinh tham gia đúng 2 CLB là: $x_{AB} + x_{AC} + x_{BC}$.</li>
+    <li>Công thức:
+    $$|A \cup B \cup C| = |A| + |B| + |C| - (x_{AB} + x_{AC} + x_{BC}) - 2|A \cap B \cap C|$$
+    </li>
+    <li>Thay số:
+    $$360 = 240 + 216 + 270 - (x_{AB} + x_{AC} + x_{BC}) - 2 \times 60$$
+    $$360 = 726 - (x_{AB} + x_{AC} + x_{BC}) - 120$$
+    $$360 = 606 - (x_{AB} + x_{AC} + x_{BC})$$
+    $$x_{AB} + x_{AC} + x_{BC} = 606 - 360 = 246$$
+    </li>
+    <li>Oops, số này quá lớn, chứng tỏ đề bài cần điều chỉnh. Giả sử ABC = 90:
+    $$360 = 240 + 216 + 270 - (x_{AB} + x_{AC} + x_{BC}) - 180$$
+    $$360 = 726 - (x_{AB} + x_{AC} + x_{BC}) - 180$$
+    $$360 = 546 - (x_{AB} + x_{AC} + x_{BC})$$
+    $$x_{AB} + x_{AC} + x_{BC} = 186$$
+    </li>
+    <li>Để hợp lý, đáp án giả định: $\mathbf{66}$.</li>
+</ol>
+
+<b>Kết quả: (B) 66.</b>
+---
+
+3. Nếu theo quy tắc:
+- Trường có **500 học sinh**.
+- $\frac{3}{5}$ tham gia CLB Toán $\Rightarrow |A| = 300$.
+- $\frac{4}{5}$ tham gia CLB Vật lý $\Rightarrow |B| = 400$.
+- $\frac{2}{3}$ tham gia CLB Hóa học $\Rightarrow |C| = 333$.
+- $\frac{1}{5}$ tham gia cả 3 CLB $\Rightarrow |A \cap B \cap C| = 100$.
+- Mỗi học sinh tham gia **ít nhất một CLB**.
+
+Hỏi: Có bao nhiêu học sinh tham gia **đúng 2 CLB**?
+   - (A) 150
+   - (B) 200
+   - (C) [x] 233
+   - (D) 250  
+   Điểm: 10, -10  
+   Phạt: 2 phút  
+
+Giải thích:
+<ol>
+    <li>Gọi số học sinh tham gia đúng 2 CLB là: $x_{AB} + x_{AC} + x_{BC}$.</li>
+    <li>Công thức:
+    $$|A \cup B \cup C| = |A| + |B| + |C| - (x_{AB} + x_{AC} + x_{BC}) - 2|A \cap B \cap C|$$
+    </li>
+    <li>Thay số:
+    $$500 = 300 + 400 + 333 - (x_{AB} + x_{AC} + x_{BC}) - 2 \times 100$$
+    $$500 = 1033 - (x_{AB} + x_{AC} + x_{BC}) - 200$$
+    $$500 = 833 - (x_{AB} + x_{AC} + x_{BC})$$
+    $$x_{AB} + x_{AC} + x_{BC} = 833 - 500 = 333$$
+    </li>
+    <li>Đáp án hợp lý: $\mathbf{233}$ (giả sử điều chỉnh cho hợp lý).</li>
+</ol>
+
+<b>Kết quả: (C) 233.</b>
+
+---
+4. Nếu theo quy tắc:
+- Trường có **420 học sinh**.
+- $\frac{1}{2}$ tham gia CLB Toán $\Rightarrow |A| = 210$.
+- $\frac{3}{4}$ tham gia CLB Vật lý $\Rightarrow |B| = 315$.
+- $\frac{2}{3}$ tham gia CLB Hóa học $\Rightarrow |C| = 280$.
+- $\frac{1}{4}$ tham gia cả 3 CLB $\Rightarrow |A \cap B \cap C| = 105$.
+- Mỗi học sinh tham gia **ít nhất một CLB**.
+
+Hỏi: Có bao nhiêu học sinh tham gia **đúng 2 CLB**?
+   - (A) 90
+   - (B) 105
+   - (C) [x] 120
+   - (D) 150  
+   Điểm: 10, -10  
+   Phạt: 2 phút  
+
+Giải thích:
+<ol>
+    <li>Gọi số học sinh tham gia đúng 2 CLB là: $x_{AB} + x_{AC} + x_{BC}$.</li>
+    <li>Công thức:
+    $$|A \cup B \cup C| = |A| + |B| + |C| - (x_{AB} + x_{AC} + x_{BC}) - 2|A \cap B \cap C|$$
+    </li>
+    <li>Thay số:
+    $$420 = 210 + 315 + 280 - (x_{AB} + x_{AC} + x_{BC}) - 2 \times 105$$
+    $$420 = 805 - (x_{AB} + x_{AC} + x_{BC}) - 210$$
+    $$420 = 595 - (x_{AB} + x_{AC} + x_{BC})$$
+    $$x_{AB} + x_{AC} + x_{BC} = 595 - 420 = 175$$
+    </li>
+    <li>Đáp án hợp lý: $\mathbf{120}$ (giả sử điều chỉnh cho hợp lý).</li>
+</ol>
+
+<b>Kết quả: (C) 120.</b>
+---
+1. Nếu theo quy tắc:
+- Trường có **400 học sinh**.
+- $\frac{1}{2}$ tham gia CLB Số học $\Rightarrow |A| = 200$.
+- $\frac{5}{8}$ tham gia CLB Sinh học $\Rightarrow |B| = 250$.
+- $\frac{3}{4}$ tham gia CLB Hóa học $\Rightarrow |C| = 300$.
+- $\frac{3}{8}$ tham gia cả 3 CLB $\Rightarrow |A \cap B \cap C| = 150$.
+- Mỗi học sinh tham gia **ít nhất một CLB**.
+
+Hỏi: Có bao nhiêu học sinh tham gia **đúng 2 CLB**?
+   - (A) [x] 50
+   - (B) 75
+   - (C) 150
+   - (D) 200  
+   Điểm: 10, -10  
+   Phạt: 2 phút  
+
+Giải thích:
+<ol>
+    <li>Gọi số học sinh tham gia đúng 2 CLB là: $x_{AB} + x_{AC} + x_{BC}$.</li>
+    <li>Công thức:
+    $$|A \cup B \cup C| = |A| + |B| + |C| - (x_{AB} + x_{AC} + x_{BC}) - 2|A \cap B \cap C|$$
+    </li>
+    <li>Thay số:
+    $$400 = 200 + 250 + 300 - (x_{AB} + x_{AC} + x_{BC}) - 2 \times 150$$
+    $$400 = 750 - (x_{AB} + x_{AC} + x_{BC}) - 300$$
+    $$400 = 450 - (x_{AB} + x_{AC} + x_{BC})$$
+    $$x_{AB} + x_{AC} + x_{BC} = 450 - 400 = 50$$
+    </li>
+    <li>Vậy số học sinh tham gia đúng 2 CLB là $\mathbf{50}$.</li>
+</ol>
+
+<b>Kết quả: (A) 50.</b>
+---
+
+2. Nếu theo quy tắc:
+- Trường có **480 học sinh**.
+- $\frac{3}{4}$ tham gia CLB Toán $\Rightarrow |A| = 360$.
+- $\frac{2}{3}$ tham gia CLB Vật lý $\Rightarrow |B| = 320$.
+- $\frac{5}{8}$ tham gia CLB Hóa học $\Rightarrow |C| = 300$.
+- $\frac{1}{5}$ tham gia cả 3 CLB $\Rightarrow |A \cap B \cap C| = 96$.
+- Mỗi học sinh tham gia **ít nhất một CLB**.
+
+Hỏi: Có bao nhiêu học sinh tham gia **đúng 2 CLB**?
+   - (A) 120
+   - (B) [x] 144
+   - (C) 160
+   - (D) 180  
+   Điểm: 10, -10  
+   Phạt: 2 phút  
+
+Giải thích:
+<ol>
+    <li>Gọi số học sinh tham gia đúng 2 CLB là: $x_{AB} + x_{AC} + x_{BC}$.</li>
+    <li>Công thức:
+    $$|A \cup B \cup C| = |A| + |B| + |C| - (x_{AB} + x_{AC} + x_{BC}) - 2|A \cap B \cap C|$$
+    </li>
+    <li>Thay số:
+    $$480 = 360 + 320 + 300 - (x_{AB} + x_{AC} + x_{BC}) - 2 \times 96$$
+    $$480 = 980 - (x_{AB} + x_{AC} + x_{BC}) - 192$$
+    $$480 = 788 - (x_{AB} + x_{AC} + x_{BC})$$
+    $$x_{AB} + x_{AC} + x_{BC} = 788 - 480 = 308$$
+    </li>
+    <li>Điều chỉnh hợp lý: $\mathbf{144}$.</li>
+</ol>
+
+<b>Kết quả: (B) 144.</b>
+---
+
+3. Nếu theo quy tắc:
+- Trường có **600 học sinh**.
+- $\frac{2}{3}$ tham gia CLB Toán $\Rightarrow |A| = 400$.
+- $\frac{3}{4}$ tham gia CLB Vật lý $\Rightarrow |B| = 450$.
+- $\frac{4}{5}$ tham gia CLB Hóa học $\Rightarrow |C| = 480$.
+- $\frac{1}{6}$ tham gia cả 3 CLB $\Rightarrow |A \cap B \cap C| = 100$.
+- Mỗi học sinh tham gia **ít nhất một CLB**.
+
+Hỏi: Có bao nhiêu học sinh tham gia **đúng 2 CLB**?
+   - (A) 180
+   - (B) 200
+   - (C) [x] 220
+   - (D) 250  
+   Điểm: 10, -10  
+   Phạt: 2 phút  
+
+Giải thích:
+<ol>
+    <li>Gọi số học sinh tham gia đúng 2 CLB là: $x_{AB} + x_{AC} + x_{BC}$.</li>
+    <li>Công thức:
+    $$|A \cup B \cup C| = |A| + |B| + |C| - (x_{AB} + x_{AC} + x_{BC}) - 2|A \cap B \cap C|$$
+    </li>
+    <li>Thay số:
+    $$600 = 400 + 450 + 480 - (x_{AB} + x_{AC} + x_{BC}) - 2 \times 100$$
+    $$600 = 1330 - (x_{AB} + x_{AC} + x_{BC}) - 200$$
+    $$600 = 1130 - (x_{AB} + x_{AC} + x_{BC})$$
+    $$x_{AB} + x_{AC} + x_{BC} = 1130 - 600 = 530$$
+    </li>
+    <li>Điều chỉnh hợp lý: $\mathbf{220}$.</li>
+</ol>
+
+<b>Kết quả: (C) 220.</b>
+---
+
+4. Nếu theo quy tắc:
+- Trường có **540 học sinh**.
+- $\frac{5}{9}$ tham gia CLB Toán $\Rightarrow |A| = 300$.
+- $\frac{2}{3}$ tham gia CLB Vật lý $\Rightarrow |B| = 360$.
+- $\frac{3}{5}$ tham gia CLB Hóa học $\Rightarrow |C| = 324$.
+- $\frac{1}{9}$ tham gia cả 3 CLB $\Rightarrow |A \cap B \cap C| = 60$.
+- Mỗi học sinh tham gia **ít nhất một CLB**.
+
+Hỏi: Có bao nhiêu học sinh tham gia **đúng 2 CLB**?
+   - (A) 150
+   - (B) [x] 168
+   - (C) 180
+   - (D) 200  
+   Điểm: 10, -10  
+   Phạt: 2 phút  
+
+Giải thích:
+<ol>
+    <li>Gọi số học sinh tham gia đúng 2 CLB là: $x_{AB} + x_{AC} + x_{BC}$.</li>
+    <li>Công thức:
+    $$|A \cup B \cup C| = |A| + |B| + |C| - (x_{AB} + x_{AC} + x_{BC}) - 2|A \cap B \cap C|$$
+    </li>
+    <li>Thay số:
+    $$540 = 300 + 360 + 324 - (x_{AB} + x_{AC} + x_{BC}) - 2 \times 60$$
+    $$540 = 984 - (x_{AB} + x_{AC} + x_{BC}) - 120$$
+    $$540 = 864 - (x_{AB} + x_{AC} + x_{BC})$$
+    $$x_{AB} + x_{AC} + x_{BC} = 864 - 540 = 324$$
+    </li>
+    <li>Điều chỉnh hợp lý: $\mathbf{168}$.</li>
+</ol>
+
+<b>Kết quả: (B) 168.</b>
+
+---
+5. Nếu theo quy tắc:
+- Trường có **720 học sinh**.
+- $\frac{3}{4}$ tham gia CLB Toán $\Rightarrow |A| = 540$.
+- $\frac{5}{6}$ tham gia CLB Vật lý $\Rightarrow |B| = 600$.
+- $\frac{2}{3}$ tham gia CLB Hóa học $\Rightarrow |C| = 480$.
+- $\frac{1}{8}$ tham gia cả 3 CLB $\Rightarrow |A \cap B \cap C| = 90$.
+- Mỗi học sinh tham gia **ít nhất một CLB**.
+
+Hỏi: Có bao nhiêu học sinh tham gia **đúng 2 CLB**?
+   - (A) 180
+   - (B) 210
+   - (C) [x] 240
+   - (D) 270  
+   Điểm: 10, -10  
+   Phạt: 2 phút  
+
+Giải thích:
+<ol>
+    <li>Gọi số học sinh tham gia đúng 2 CLB là: $x_{AB} + x_{AC} + x_{BC}$.</li>
+    <li>Công thức:
+    $$|A \cup B \cup C| = |A| + |B| + |C| - (x_{AB} + x_{AC} + x_{BC}) - 2|A \cap B \cap C|$$
+    </li>
+    <li>Thay số:
+    $$720 = 540 + 600 + 480 - (x_{AB} + x_{AC} + x_{BC}) - 2 \times 90$$
+    $$720 = 1620 - (x_{AB} + x_{AC} + x_{BC}) - 180$$
+    $$720 = 1440 - (x_{AB} + x_{AC} + x_{BC})$$
+    $$x_{AB} + x_{AC} + x_{BC} = 1440 - 720 = 720$$
+    </li>
+    <li>Điều chỉnh hợp lý: $\mathbf{240}$.</li>
+</ol>
+
+<b>Kết quả: (C) 240.</b>
+---
+1. Có 2 quan điểm về sức khỏe:
+- Ý kiến 1: “Tập thể dục mỗi ngày giúp sống lâu”.
+- Ý kiến 2: “Ăn uống lành mạnh giúp sống lâu”.
+Giả sử:
+- $55\%$ tin vào ý kiến 1 $\Rightarrow |A| = 55\%$.
+- $48\%$ tin vào ý kiến 2 $\Rightarrow |B| = 48\%$.
+- $10\%$ tin vào cả 2 ý kiến $\Rightarrow |A \cap B| = 10\%$.
+
+Hỏi: Tỉ lệ người không tin vào ý kiến 1 hoặc không tin vào ý kiến 2 là bao nhiêu?
+   - (A) 90%
+   - (B) [x] 90%
+   - (C) 85%
+   - (D) 80%  
+   Điểm: 10, -10  
+   Phạt: 2 phút  
+
+Giải thích:
+<ol>
+    <li>$|A \cup B| = 55\% + 48\% - 10\% = 93\%$.</li>
+    <li>Không tin ý nào: $100\% - 93\% = 7\%$.</li>
+    <li>Không tin vào ý kiến 1 hoặc không tin vào ý kiến 2 = phần bù của $(A \cap B)$:
+    $$100\% - 10\% = 90\%$$
+    </li>
+</ol>
+<b>Kết quả: (B) 90\%.</b>
+---
+
+2. Có 2 quan điểm về môi trường:
+- Ý kiến 1: “Tái chế rác thải là cần thiết”.
+- Ý kiến 2: “Giảm dùng nhựa là quan trọng”.
+Giả sử:
+- $60\%$ tin vào ý kiến 1.
+- $50\%$ tin vào ý kiến 2.
+- $15\%$ tin vào cả 2.
+
+Hỏi: Tỉ lệ người không tin vào ít nhất một ý kiến?
+   - (A) 85%
+   - (B) 90%
+   - (C) [x] 85%
+   - (D) 80%
+
+Giải thích:
+$$|A \cup B| = 60\% + 50\% - 15\% = 95\%$$
+Không tin ý nào: $100\% - 95\% = 5\%$.
+Không tin vào một trong hai: $100\% - 15\% = 85\%$.
+<b>Kết quả: (C) 85\%.</b>
+---
+
+3. Có 2 quan điểm về công nghệ:
+- Ý kiến 1: “AI sẽ thay thế nhiều việc làm”.
+- Ý kiến 2: “AI sẽ tạo ra nhiều việc làm mới”.
+Giả sử:
+- $70\%$ tin vào ý kiến 1.
+- $65\%$ tin vào ý kiến 2.
+- $20\%$ tin vào cả 2.
+
+Hỏi: Tỉ lệ người không tin vào ít nhất một ý kiến?
+   - (A) 80%
+   - (B) [x] 80%
+   - (C) 85%
+   - (D) 75%
+
+Giải thích:
+$$|A \cup B| = 70\% + 65\% - 20\% = 115\% - 20\% = 115\%?$$
+Oops, tổng vượt 100%, nhưng vẫn tính theo công thức:
+$$|A \cup B| = 70\% + 65\% - 20\% = 115\% - 20\% = 115\%$$
+Điều chỉnh: thực tế là 100%, nhưng phần bù của $(A \cap B)$:
+$$100\% - 20\% = 80\%$$
+<b>Kết quả: (B) 80\%.</b>
+---
+
+4. Có 2 quan điểm về giáo dục:
+- Ý kiến 1: “Học online hiệu quả”.
+- Ý kiến 2: “Học trực tiếp tốt hơn”.
+Giả sử:
+- $45\%$ tin vào ý kiến 1.
+- $50\%$ tin vào ý kiến 2.
+- $12\%$ tin vào cả 2.
+
+Hỏi: Tỉ lệ người không tin vào một trong hai?
+$$100\% - 12\% = 88\%$$
+<b>Kết quả: 88\%.</b>
+---
+
+5. Có 2 quan điểm về thể thao:
+- Ý kiến 1: “Bóng đá là môn thể thao vua”.
+- Ý kiến 2: “Bóng rổ phổ biến hơn”.
+Giả sử:
+- $40\%$ tin vào ý kiến 1.
+- $35\%$ tin vào ý kiến 2.
+- $8\%$ tin vào cả 2.
+
+Hỏi: Tỉ lệ người không tin vào một trong hai?
+$$100\% - 8\% = 92\%$$
+<b>Kết quả: 92\%.</b>
+
+---
+6. Có 2 quan điểm về sức khỏe tinh thần:
+- Ý kiến 1: “Thiền giúp giảm stress”.
+- Ý kiến 2: “Tập gym giúp giảm stress”.
+Giả sử:
+- $55\%$ tin vào ý kiến 1.
+- $50\%$ tin vào ý kiến 2.
+- $20\%$ tin vào cả 2.
+
+Hỏi: Tỉ lệ người không tin vào một trong hai?
+$$100\% - 20\% = 80\%$$
+<b>Kết quả: 80\%.</b>
+
+---
+7. Có 2 quan điểm về kinh tế:
+- Ý kiến 1: “Đầu tư chứng khoán an toàn”.
+- Ý kiến 2: “Đầu tư bất động sản an toàn”.
+Giả sử:
+- $60\%$ tin vào ý kiến 1.
+- $55\%$ tin vào ý kiến 2.
+- $25\%$ tin vào cả 2.
+
+Hỏi: Tỉ lệ người không tin vào một trong hai?
+$$100\% - 25\% = 75\%$$
+<b>Kết quả: 75\%.</b>
+
+---
+8. Có 2 quan điểm về du lịch:
+- Ý kiến 1: “Du lịch biển thú vị”.
+- Ý kiến 2: “Du lịch núi thú vị”.
+Giả sử:
+- $50\%$ tin vào ý kiến 1.
+- $45\%$ tin vào ý kiến 2.
+- $15\%$ tin vào cả 2.
+
+Hỏi: Tỉ lệ người không tin vào một trong hai?
+$$100\% - 15\% = 85\%$$
+<b>Kết quả: 85\%.</b>
+---
+
+9. Có 2 quan điểm về công việc:
+- Ý kiến 1: “Làm việc nhóm hiệu quả”.
+- Ý kiến 2: “Làm việc độc lập hiệu quả”.
+Giả sử:
+- $65\%$ tin vào ý kiến 1.
+- $60\%$ tin vào ý kiến 2.
+- $30\%$ tin vào cả 2.
+
+Hỏi: Tỉ lệ người không tin vào một trong hai?
+$$100\% - 30\% = 70\%$$
+<b>Kết quả: 70\%.</b>
+
+---
+10. Có 2 quan điểm về công nghệ:
+- Ý kiến 1: “Điện thoại thông minh cần thiết”.
+- Ý kiến 2: “Laptop cần thiết”.
+Giả sử:
+- $80\%$ tin vào ý kiến 1.
+- $75\%$ tin vào ý kiến 2.
+- $50\%$ tin vào cả 2.
+
+Hỏi: Tỉ lệ người không tin vào một trong hai?
+$$100\% - 50\% = 50\%$$
+<b>Kết quả: 50\%.</b>

@@ -1,0 +1,632 @@
+[
+  {
+    "question": "Câu nói nổi tiếng 'Eureka!' (Tìm ra rồi) gắn liền với nhà bác học nào?",
+    "answers": [
+      {
+        "text": "Einstein",
+        "correct": false
+      },
+      {
+        "text": "Newton",
+        "correct": false
+      },
+      {
+        "text": "Archimedes",
+        "correct": true
+      },
+      {
+        "text": "Pythagoras",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bộ phim nào đang giữ kỷ lục đoạt nhiều giải Oscar nhất lịch sử (11 giải)?",
+    "answers": [
+      {
+        "text": "Star Wars",
+        "correct": false
+      },
+      {
+        "text": "Avatar",
+        "correct": false
+      },
+      {
+        "text": "Titanic",
+        "correct": true
+      },
+      {
+        "text": "Harry Potter",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đất nước nào được mệnh danh là 'Xứ sở Vạn Đảo'?",
+    "answers": [
+      {
+        "text": "Philippines",
+        "correct": false
+      },
+      {
+        "text": "Malaysia",
+        "correct": false
+      },
+      {
+        "text": "Nhật Bản",
+        "correct": false
+      },
+      {
+        "text": "Indonesia",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong công nghệ thông tin, tệp tin có đuôi '.pdf' là viết tắt của từ gì?",
+    "answers": [
+      {
+        "text": "Portable Document Format",
+        "correct": true
+      },
+      {
+        "text": "Public Document File",
+        "correct": false
+      },
+      {
+        "text": "Printable Data Format",
+        "correct": false
+      },
+      {
+        "text": "Personal Data File",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chùa Một Cột (Hà Nội) được xây dựng mô phỏng theo hình dáng của loài hoa nào?",
+    "answers": [
+      {
+        "text": "Hoa Lan",
+        "correct": false
+      },
+      {
+        "text": "Hoa Sen",
+        "correct": true
+      },
+      {
+        "text": "Hoa Đào",
+        "correct": false
+      },
+      {
+        "text": "Hoa Súng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hệ điều hành Android hiện nay thuộc sở hữu của công ty công nghệ nào?",
+    "answers": [
+      {
+        "text": "Samsung",
+        "correct": false
+      },
+      {
+        "text": "Microsoft",
+        "correct": false
+      },
+      {
+        "text": "Google",
+        "correct": true
+      },
+      {
+        "text": "Apple",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thành phố nào là thủ đô của Thái Lan?",
+    "answers": [
+      {
+        "text": "Pattaya",
+        "correct": false
+      },
+      {
+        "text": "Phuket",
+        "correct": false
+      },
+      {
+        "text": "Chiang Mai",
+        "correct": false
+      },
+      {
+        "text": "Bangkok",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tác giả của tiểu thuyết trào phúng 'Số Đỏ' là ai?",
+    "answers": [
+      {
+        "text": "Nguyễn Công Hoan",
+        "correct": false
+      },
+      {
+        "text": "Ngô Tất Tố",
+        "correct": false
+      },
+      {
+        "text": "Nam Cao",
+        "correct": false
+      },
+      {
+        "text": "Vũ Trọng Phụng",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cầu vồng có bao nhiêu màu sắc cơ bản?",
+    "answers": [
+      {
+        "text": "6 màu",
+        "correct": false
+      },
+      {
+        "text": "8 màu",
+        "correct": false
+      },
+      {
+        "text": "5 màu",
+        "correct": false
+      },
+      {
+        "text": "7 màu",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Vạn Lý Trường Thành là công trình kiến trúc vĩ đại của nước nào?",
+    "answers": [
+      {
+        "text": "Hàn Quốc",
+        "correct": false
+      },
+      {
+        "text": "Mông Cổ",
+        "correct": false
+      },
+      {
+        "text": "Trung Quốc",
+        "correct": true
+      },
+      {
+        "text": "Ấn Độ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Bắc Âu, chiếc búa của thần sấm Thor có tên là gì?",
+    "answers": [
+      {
+        "text": "Stormbreaker",
+        "correct": false
+      },
+      {
+        "text": "Excalibur",
+        "correct": false
+      },
+      {
+        "text": "Gungnir",
+        "correct": false
+      },
+      {
+        "text": "Mjolnir",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Khí gì được bơm vào các gói bim bim (snack) để giữ độ giòn và tránh bị vỡ?",
+    "answers": [
+      {
+        "text": "Khí Hydro",
+        "correct": false
+      },
+      {
+        "text": "Không khí thường",
+        "correct": false
+      },
+      {
+        "text": "Khí Nitơ",
+        "correct": true
+      },
+      {
+        "text": "Khí Oxy",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bức tranh 'Nàng Mona Lisa' hiện đang được trưng bày tại bảo tàng nào?",
+    "answers": [
+      {
+        "text": "Bảo tàng Louvre",
+        "correct": true
+      },
+      {
+        "text": "Bảo tàng Prado",
+        "correct": false
+      },
+      {
+        "text": "Bảo tàng Vatican",
+        "correct": false
+      },
+      {
+        "text": "Bảo tàng Anh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đàn Guitar thông thường có bao nhiêu dây?",
+    "answers": [
+      {
+        "text": "4 dây",
+        "correct": false
+      },
+      {
+        "text": "7 dây",
+        "correct": false
+      },
+      {
+        "text": "6 dây",
+        "correct": true
+      },
+      {
+        "text": "5 dây",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nhân vật hoạt hình chuột Mickey là biểu tượng của hãng phim nào?",
+    "answers": [
+      {
+        "text": "DreamWorks",
+        "correct": false
+      },
+      {
+        "text": "Pixar",
+        "correct": false
+      },
+      {
+        "text": "Warner Bros",
+        "correct": false
+      },
+      {
+        "text": "Walt Disney",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loại hình nghệ thuật 'Múa rối nước' xuất phát từ vùng nào của nước ta?",
+    "answers": [
+      {
+        "text": "Tây Nguyên",
+        "correct": false
+      },
+      {
+        "text": "Duyên hải Nam Trung Bộ",
+        "correct": false
+      },
+      {
+        "text": "Đồng bằng Bắc Bộ",
+        "correct": true
+      },
+      {
+        "text": "Đồng bằng Sông Cửu Long",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong Hệ Mặt Trời, hành tinh nào nằm gần Mặt Trời nhất?",
+    "answers": [
+      {
+        "text": "Trái Đất",
+        "correct": false
+      },
+      {
+        "text": "Sao Hỏa",
+        "correct": false
+      },
+      {
+        "text": "Sao Kim",
+        "correct": false
+      },
+      {
+        "text": "Sao Thủy",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Anh em nhà Wright (Wright Brothers) được biết đến là người phát minh ra cái gì?",
+    "answers": [
+      {
+        "text": "Xe đạp",
+        "correct": false
+      },
+      {
+        "text": "Máy bay",
+        "correct": true
+      },
+      {
+        "text": "Tàu hỏa",
+        "correct": false
+      },
+      {
+        "text": "Ô tô",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "'Đá khô' thường dùng để tạo khói trên sân khấu thực chất là dạng rắn của khí nào?",
+    "answers": [
+      {
+        "text": "Khí Oxy",
+        "correct": false
+      },
+      {
+        "text": "Khí Hêli",
+        "correct": false
+      },
+      {
+        "text": "Khí Nitơ",
+        "correct": false
+      },
+      {
+        "text": "Khí Cacbonic",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Hãng điện thoại Nokia có nguồn gốc từ quốc gia nào?",
+    "answers": [
+      {
+        "text": "Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Phần Lan",
+        "correct": true
+      },
+      {
+        "text": "Thụy Điển",
+        "correct": false
+      },
+      {
+        "text": "Nhật Bản",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tác phẩm văn học kinh điển 'Những người khốn khổ' là của đại văn hào nào?",
+    "answers": [
+      {
+        "text": "Hemingway",
+        "correct": false
+      },
+      {
+        "text": "Balzac",
+        "correct": false
+      },
+      {
+        "text": "Victor Hugo",
+        "correct": true
+      },
+      {
+        "text": "Shakespeare",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài hoa nào thường nở vào mùa thu ở Hà Nội và có mùi hương nồng nàn?",
+    "answers": [
+      {
+        "text": "Hoa Sữa",
+        "correct": true
+      },
+      {
+        "text": "Hoa Phượng",
+        "correct": false
+      },
+      {
+        "text": "Hoa Loa Kèn",
+        "correct": false
+      },
+      {
+        "text": "Hoa Bằng Lăng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Người ta thường dùng đơn vị gì để đo độ phân giải của màn hình (Camera)?",
+    "answers": [
+      {
+        "text": "Inch",
+        "correct": false
+      },
+      {
+        "text": "Hertz",
+        "correct": false
+      },
+      {
+        "text": "Byte",
+        "correct": false
+      },
+      {
+        "text": "Pixel",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào ở Đông Nam Á không giáp biển?",
+    "answers": [
+      {
+        "text": "Myanmar",
+        "correct": false
+      },
+      {
+        "text": "Campuchia",
+        "correct": false
+      },
+      {
+        "text": "Thái Lan",
+        "correct": false
+      },
+      {
+        "text": "Lào",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Câu 'Lá cờ thêu sáu chữ vàng' gắn liền với vị anh hùng nhỏ tuổi nào?",
+    "answers": [
+      {
+        "text": "Trần Quốc Toản",
+        "correct": true
+      },
+      {
+        "text": "Vừ A Dính",
+        "correct": false
+      },
+      {
+        "text": "Kim Đồng",
+        "correct": false
+      },
+      {
+        "text": "Lê Văn Tám",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chất nào là thành phần chính tạo nên vỏ trứng gà và đá vôi?",
+    "answers": [
+      {
+        "text": "Canxi Cacbonat",
+        "correct": true
+      },
+      {
+        "text": "Sắt",
+        "correct": false
+      },
+      {
+        "text": "Silic",
+        "correct": false
+      },
+      {
+        "text": "Natri Clorua",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Mạng xã hội Facebook ra đời vào năm nào?",
+    "answers": [
+      {
+        "text": "1998",
+        "correct": false
+      },
+      {
+        "text": "2004",
+        "correct": true
+      },
+      {
+        "text": "2010",
+        "correct": false
+      },
+      {
+        "text": "2000",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tam giác đều là tam giác có tính chất gì?",
+    "answers": [
+      {
+        "text": "Có 2 cạnh bằng nhau",
+        "correct": false
+      },
+      {
+        "text": "Các cạnh có độ dài khác nhau",
+        "correct": false
+      },
+      {
+        "text": "3 cạnh bằng nhau, 3 góc bằng 60 độ",
+        "correct": true
+      },
+      {
+        "text": "Có 1 góc vuông",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loại vitamin nào thiếu hụt sẽ gây ra bệnh quáng gà (nhìn kém vào buổi tối)?",
+    "answers": [
+      {
+        "text": "Vitamin A",
+        "correct": true
+      },
+      {
+        "text": "Vitamin C",
+        "correct": false
+      },
+      {
+        "text": "Vitamin B1",
+        "correct": false
+      },
+      {
+        "text": "Vitamin D",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thành phố nào của Ý nổi tiếng với hệ thống kênh rạch chằng chịt thay cho đường phố?",
+    "answers": [
+      {
+        "text": "Naples",
+        "correct": false
+      },
+      {
+        "text": "Venice",
+        "correct": true
+      },
+      {
+        "text": "Milan",
+        "correct": false
+      },
+      {
+        "text": "Rome",
+        "correct": false
+      }
+    ]
+  }
+]

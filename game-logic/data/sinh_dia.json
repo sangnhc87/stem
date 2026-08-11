@@ -1,0 +1,632 @@
+[
+  {
+    "question": "Thủ đô của nước Úc (Australia) là thành phố nào?",
+    "answers": [
+      {
+        "text": "Perth",
+        "correct": false
+      },
+      {
+        "text": "Melbourne",
+        "correct": false
+      },
+      {
+        "text": "Canberra",
+        "correct": true
+      },
+      {
+        "text": "Sydney",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là tác giả của tác phẩm 'Truyện Kiều'?",
+    "answers": [
+      {
+        "text": "Nguyễn Trãi",
+        "correct": false
+      },
+      {
+        "text": "Nguyễn Khuyến",
+        "correct": false
+      },
+      {
+        "text": "Nguyễn Du",
+        "correct": true
+      },
+      {
+        "text": "Hồ Xuân Hương",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật có vú nào duy nhất biết bay?",
+    "answers": [
+      {
+        "text": "Đà điểu",
+        "correct": false
+      },
+      {
+        "text": "Sóc bay",
+        "correct": false
+      },
+      {
+        "text": "Chim ưng",
+        "correct": false
+      },
+      {
+        "text": "Dơi",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Trong bảng tuần hoàn hóa học, nguyên tố 'Fe' là ký hiệu của chất nào?",
+    "answers": [
+      {
+        "text": "Đồng",
+        "correct": false
+      },
+      {
+        "text": "Kẽm",
+        "correct": false
+      },
+      {
+        "text": "Sắt",
+        "correct": true
+      },
+      {
+        "text": "Nhôm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vị vua nào đã cho dời đô từ Hoa Lư về Thăng Long năm 1010?",
+    "answers": [
+      {
+        "text": "Lê Đại Hành",
+        "correct": false
+      },
+      {
+        "text": "Lý Thái Tông",
+        "correct": false
+      },
+      {
+        "text": "Đinh Tiên Hoàng",
+        "correct": false
+      },
+      {
+        "text": "Lý Thái Tổ",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Đơn vị dùng để đo lực trong hệ đo lường quốc tế (SI) là gì?",
+    "answers": [
+      {
+        "text": "Joule",
+        "correct": false
+      },
+      {
+        "text": "Newton",
+        "correct": true
+      },
+      {
+        "text": "Watt",
+        "correct": false
+      },
+      {
+        "text": "Pascal",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hòn đảo lớn nhất của Việt Nam là đảo nào?",
+    "answers": [
+      {
+        "text": "Đảo Cát Bà",
+        "correct": false
+      },
+      {
+        "text": "Côn Đảo",
+        "correct": false
+      },
+      {
+        "text": "Đảo Lý Sơn",
+        "correct": false
+      },
+      {
+        "text": "Đảo Phú Quốc",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Ai là người đầu tiên đặt chân lên Mặt Trăng?",
+    "answers": [
+      {
+        "text": "Buzz Aldrin",
+        "correct": false
+      },
+      {
+        "text": "Michael Collins",
+        "correct": false
+      },
+      {
+        "text": "Neil Armstrong",
+        "correct": true
+      },
+      {
+        "text": "Yuri Gagarin",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nhạc sĩ thiên tài Beethoven bị khiếm khuyết gì về giác quan?",
+    "answers": [
+      {
+        "text": "Bị mù",
+        "correct": false
+      },
+      {
+        "text": "Bị câm",
+        "correct": false
+      },
+      {
+        "text": "Mất khứu giác",
+        "correct": false
+      },
+      {
+        "text": "Bị điếc",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tổng ba góc trong của một tam giác bằng bao nhiêu độ?",
+    "answers": [
+      {
+        "text": "360 độ",
+        "correct": false
+      },
+      {
+        "text": "180 độ",
+        "correct": true
+      },
+      {
+        "text": "90 độ",
+        "correct": false
+      },
+      {
+        "text": "270 độ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào có dân số đông nhất thế giới (tính đến năm 2023)?",
+    "answers": [
+      {
+        "text": "Ấn Độ",
+        "correct": true
+      },
+      {
+        "text": "Indonesia",
+        "correct": false
+      },
+      {
+        "text": "Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Trung Quốc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài cây nào là biểu tượng của người quân tử trong văn hóa Nho giáo (Tùng - Cúc - Trúc - ...)?",
+    "answers": [
+      {
+        "text": "Lan",
+        "correct": false
+      },
+      {
+        "text": "Mai",
+        "correct": true
+      },
+      {
+        "text": "Đào",
+        "correct": false
+      },
+      {
+        "text": "Sen",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đại dương nào lớn nhất trên Trái Đất?",
+    "answers": [
+      {
+        "text": "Ấn Độ Dương",
+        "correct": false
+      },
+      {
+        "text": "Bắc Băng Dương",
+        "correct": false
+      },
+      {
+        "text": "Thái Bình Dương",
+        "correct": true
+      },
+      {
+        "text": "Đại Tây Dương",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong cơ thể người, cơ quan nào đảm nhiệm chức năng lọc máu?",
+    "answers": [
+      {
+        "text": "Tim",
+        "correct": false
+      },
+      {
+        "text": "Gan",
+        "correct": false
+      },
+      {
+        "text": "Dạ dày",
+        "correct": false
+      },
+      {
+        "text": "Thận",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tháp Eiffel - biểu tượng của nước Pháp được khánh thành vào năm nào?",
+    "answers": [
+      {
+        "text": "1945",
+        "correct": false
+      },
+      {
+        "text": "1898",
+        "correct": false
+      },
+      {
+        "text": "1889",
+        "correct": true
+      },
+      {
+        "text": "1900",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tác phẩm kịch 'Romeo và Juliet' là của nhà văn nào?",
+    "answers": [
+      {
+        "text": "Mark Twain",
+        "correct": false
+      },
+      {
+        "text": "William Shakespeare",
+        "correct": true
+      },
+      {
+        "text": "Victor Hugo",
+        "correct": false
+      },
+      {
+        "text": "Leo Tolstoy",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào sau đây đẻ trứng nhưng lại nuôi con bằng sữa?",
+    "answers": [
+      {
+        "text": "Chim cánh cụt",
+        "correct": false
+      },
+      {
+        "text": "Rùa biển",
+        "correct": false
+      },
+      {
+        "text": "Cá sấu",
+        "correct": false
+      },
+      {
+        "text": "Thú mỏ vịt",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Một năm nhuận có bao nhiêu ngày?",
+    "answers": [
+      {
+        "text": "364 ngày",
+        "correct": false
+      },
+      {
+        "text": "366 ngày",
+        "correct": true
+      },
+      {
+        "text": "360 ngày",
+        "correct": false
+      },
+      {
+        "text": "365 ngày",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vị hoàng hậu cuối cùng của triều đại phong kiến Việt Nam là ai?",
+    "answers": [
+      {
+        "text": "Lệ Thiên Hoàng hậu",
+        "correct": false
+      },
+      {
+        "text": "Hoàng hậu Thượng Dương",
+        "correct": false
+      },
+      {
+        "text": "Hoàng hậu Dương Vân Nga",
+        "correct": false
+      },
+      {
+        "text": "Nam Phương Hoàng hậu",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Khí nào cần thiết nhất cho quá trình hô hấp của con người?",
+    "answers": [
+      {
+        "text": "Nitơ",
+        "correct": false
+      },
+      {
+        "text": "Oxy",
+        "correct": true
+      },
+      {
+        "text": "Hydro",
+        "correct": false
+      },
+      {
+        "text": "Cacbonic",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đâu là tên một loại hình nghệ thuật sân khấu truyền thống của Việt Nam?",
+    "answers": [
+      {
+        "text": "Opera",
+        "correct": false
+      },
+      {
+        "text": "Nhạc Jazz",
+        "correct": false
+      },
+      {
+        "text": "Ballet",
+        "correct": false
+      },
+      {
+        "text": "Tuồng",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Hành tinh nào có hệ thống vành đai (vòng tròn bao quanh) đẹp và rõ nhất trong Hệ Mặt Trời?",
+    "answers": [
+      {
+        "text": "Sao Kim",
+        "correct": false
+      },
+      {
+        "text": "Sao Thổ",
+        "correct": true
+      },
+      {
+        "text": "Sao Hỏa",
+        "correct": false
+      },
+      {
+        "text": "Sao Thủy",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tác giả của bộ truyện tranh nổi tiếng 'Thám tử lừng danh Conan' là ai?",
+    "answers": [
+      {
+        "text": "Akira Toriyama",
+        "correct": false
+      },
+      {
+        "text": "Eiichiro Oda",
+        "correct": false
+      },
+      {
+        "text": "Gosho Aoyama",
+        "correct": true
+      },
+      {
+        "text": "Fujiko F. Fujio",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nước nào đăng cai tổ chức World Cup bóng đá nam năm 2022?",
+    "answers": [
+      {
+        "text": "Nga",
+        "correct": false
+      },
+      {
+        "text": "Brazil",
+        "correct": false
+      },
+      {
+        "text": "Qatar",
+        "correct": true
+      },
+      {
+        "text": "Pháp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Hy Lạp, ai là người đã đánh cắp lửa của các vị thần để mang xuống cho loài người?",
+    "answers": [
+      {
+        "text": "Prometheus",
+        "correct": true
+      },
+      {
+        "text": "Odysseus",
+        "correct": false
+      },
+      {
+        "text": "Hercules",
+        "correct": false
+      },
+      {
+        "text": "Achilles",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tế bào máu nào có nhiệm vụ vận chuyển khí oxy đi nuôi cơ thể?",
+    "answers": [
+      {
+        "text": "Tiểu cầu",
+        "correct": false
+      },
+      {
+        "text": "Hồng cầu",
+        "correct": true
+      },
+      {
+        "text": "Bạch cầu",
+        "correct": false
+      },
+      {
+        "text": "Huyết tương",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cố đô Huế thuộc tỉnh nào của Việt Nam hiện nay?",
+    "answers": [
+      {
+        "text": "Thừa Thiên Huế",
+        "correct": true
+      },
+      {
+        "text": "Đà Nẵng",
+        "correct": false
+      },
+      {
+        "text": "Quảng Trị",
+        "correct": false
+      },
+      {
+        "text": "Quảng Nam",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ai là người sáng lập ra tập đoàn công nghệ Microsoft?",
+    "answers": [
+      {
+        "text": "Steve Jobs",
+        "correct": false
+      },
+      {
+        "text": "Mark Zuckerberg",
+        "correct": false
+      },
+      {
+        "text": "Bill Gates",
+        "correct": true
+      },
+      {
+        "text": "Elon Musk",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đâu là kim loại dẫn điện tốt nhất?",
+    "answers": [
+      {
+        "text": "Vàng",
+        "correct": false
+      },
+      {
+        "text": "Nhôm",
+        "correct": false
+      },
+      {
+        "text": "Đồng",
+        "correct": false
+      },
+      {
+        "text": "Bạc",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loại quả nào theo truyền thuyết đã rơi trúng đầu Isaac Newton?",
+    "answers": [
+      {
+        "text": "Quả Cam",
+        "correct": false
+      },
+      {
+        "text": "Quả Dừa",
+        "correct": false
+      },
+      {
+        "text": "Quả Lê",
+        "correct": false
+      },
+      {
+        "text": "Quả Táo",
+        "correct": true
+      }
+    ]
+  }
+]

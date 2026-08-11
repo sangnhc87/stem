@@ -1,0 +1,1955 @@
+[
+  {
+    "question": "Loài động vật nào có thể ngủ với một nửa bộ não?",
+    "answers": [
+      {
+        "text": "Chim cánh cụt",
+        "correct": false
+      },
+      {
+        "text": "Hải cẩu",
+        "correct": false
+      },
+      {
+        "text": "Cá heo",
+        "correct": true
+      },
+      {
+        "text": "Cá voi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có máu màu xanh lam?",
+    "answers": [
+      {
+        "text": "Sứa",
+        "correct": false
+      },
+      {
+        "text": "Bạch tuộc",
+        "correct": true
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Cá voi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào không thể nhảy?",
+    "answers": [
+      {
+        "text": "Voi",
+        "correct": true
+      },
+      {
+        "text": "Hà mã",
+        "correct": false
+      },
+      {
+        "text": "Tê giác",
+        "correct": false
+      },
+      {
+        "text": "Trâu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào có thể bay ngược?",
+    "answers": [
+      {
+        "text": "Đại bàng",
+        "correct": false
+      },
+      {
+        "text": "Chim ruồi",
+        "correct": true
+      },
+      {
+        "text": "Chim sẻ",
+        "correct": false
+      },
+      {
+        "text": "Chim én",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có tim nằm ở đầu?",
+    "answers": [
+      {
+        "text": "Tôm",
+        "correct": true
+      },
+      {
+        "text": "Cua",
+        "correct": false
+      },
+      {
+        "text": "Ốc",
+        "correct": false
+      },
+      {
+        "text": "Sò",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nín thở đến 2 giờ?",
+    "answers": [
+      {
+        "text": "Rùa biển",
+        "correct": false
+      },
+      {
+        "text": "Cá voi",
+        "correct": false
+      },
+      {
+        "text": "Hải cẩu voi",
+        "correct": true
+      },
+      {
+        "text": "Cá heo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có 32 bộ não?",
+    "answers": [
+      {
+        "text": "Bạch tuộc",
+        "correct": false
+      },
+      {
+        "text": "Sứa",
+        "correct": false
+      },
+      {
+        "text": "Đỉa",
+        "correct": true
+      },
+      {
+        "text": "Giun đất",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể tự nhân bản?",
+    "answers": [
+      {
+        "text": "Sao biển",
+        "correct": true
+      },
+      {
+        "text": "Bạch tuộc",
+        "correct": false
+      },
+      {
+        "text": "Sứa",
+        "correct": false
+      },
+      {
+        "text": "Mực",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có giọng nói to nhất thế giới?",
+    "answers": [
+      {
+        "text": "Cá voi xanh",
+        "correct": true
+      },
+      {
+        "text": "Khỉ đột",
+        "correct": false
+      },
+      {
+        "text": "Sư tử",
+        "correct": false
+      },
+      {
+        "text": "Voi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào không uống nước cả đời?",
+    "answers": [
+      {
+        "text": "Koala",
+        "correct": true
+      },
+      {
+        "text": "Thỏ",
+        "correct": false
+      },
+      {
+        "text": "Kanguru",
+        "correct": false
+      },
+      {
+        "text": "Lạc đà",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nhìn được cả phía trước và phía sau?",
+    "answers": [
+      {
+        "text": "Cú",
+        "correct": false
+      },
+      {
+        "text": "Cá",
+        "correct": false
+      },
+      {
+        "text": "Ếch",
+        "correct": false
+      },
+      {
+        "text": "Tắc kè hoa",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào ngủ đứng?",
+    "answers": [
+      {
+        "text": "Bò",
+        "correct": false
+      },
+      {
+        "text": "Dê",
+        "correct": false
+      },
+      {
+        "text": "Lợn",
+        "correct": false
+      },
+      {
+        "text": "Ngựa",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào có mắt to hơn não?",
+    "answers": [
+      {
+        "text": "Đại bàng",
+        "correct": false
+      },
+      {
+        "text": "Cú",
+        "correct": false
+      },
+      {
+        "text": "Đà điểu",
+        "correct": true
+      },
+      {
+        "text": "Chim cánh cụt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống mà không có đầu trong nhiều tuần?",
+    "answers": [
+      {
+        "text": "Nhện",
+        "correct": false
+      },
+      {
+        "text": "Gián",
+        "correct": true
+      },
+      {
+        "text": "Muỗi",
+        "correct": false
+      },
+      {
+        "text": "Kiến",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có số lượng răng nhiều nhất?",
+    "answers": [
+      {
+        "text": "Cá piranha",
+        "correct": false
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Cá sấu",
+        "correct": false
+      },
+      {
+        "text": "Ốc sên",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể thay đổi màu sắc nhanh nhất?",
+    "answers": [
+      {
+        "text": "Tắc kè hoa",
+        "correct": false
+      },
+      {
+        "text": "Mực nang",
+        "correct": true
+      },
+      {
+        "text": "Cá bảy màu",
+        "correct": false
+      },
+      {
+        "text": "Bạch tuộc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có nhiều chân nhất?",
+    "answers": [
+      {
+        "text": "Cuốn chiếu",
+        "correct": true
+      },
+      {
+        "text": "Rết",
+        "correct": false
+      },
+      {
+        "text": "Bọ cạp",
+        "correct": false
+      },
+      {
+        "text": "Nhện",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể tự phát sáng?",
+    "answers": [
+      {
+        "text": "Bướm",
+        "correct": false
+      },
+      {
+        "text": "Đom đóm",
+        "correct": true
+      },
+      {
+        "text": "Chuồn chuồn",
+        "correct": false
+      },
+      {
+        "text": "Ong",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể chạy trên mặt nước?",
+    "answers": [
+      {
+        "text": "Rắn nước",
+        "correct": false
+      },
+      {
+        "text": "Tắc kè",
+        "correct": false
+      },
+      {
+        "text": "Thằn lằn Basilisk",
+        "correct": true
+      },
+      {
+        "text": "Kỳ đà",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống không có oxy?",
+    "answers": [
+      {
+        "text": "Sứa Turritopsis dohrnii",
+        "correct": true
+      },
+      {
+        "text": "Cá",
+        "correct": false
+      },
+      {
+        "text": "Ốc",
+        "correct": false
+      },
+      {
+        "text": "Tôm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có khứu giác tốt nhất?",
+    "answers": [
+      {
+        "text": "Lợn",
+        "correct": false
+      },
+      {
+        "text": "Chó",
+        "correct": false
+      },
+      {
+        "text": "Gấu",
+        "correct": true
+      },
+      {
+        "text": "Chuột",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể quay đầu 270 độ?",
+    "answers": [
+      {
+        "text": "Vẹt",
+        "correct": false
+      },
+      {
+        "text": "Quạ",
+        "correct": false
+      },
+      {
+        "text": "Đại bàng",
+        "correct": false
+      },
+      {
+        "text": "Cú",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có vân ngón tay giống người?",
+    "answers": [
+      {
+        "text": "Gorilla",
+        "correct": false
+      },
+      {
+        "text": "Tinh tinh",
+        "correct": false
+      },
+      {
+        "text": "Đười ươi",
+        "correct": false
+      },
+      {
+        "text": "Koala",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào giao tiếp bằng cách nhảy múa?",
+    "answers": [
+      {
+        "text": "Ong mật",
+        "correct": true
+      },
+      {
+        "text": "Bướm",
+        "correct": false
+      },
+      {
+        "text": "Kiến",
+        "correct": false
+      },
+      {
+        "text": "Châu chấu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể chịu được áp suất lớn nhất?",
+    "answers": [
+      {
+        "text": "Mực khổng lồ",
+        "correct": false
+      },
+      {
+        "text": "Gấu nước",
+        "correct": true
+      },
+      {
+        "text": "Cá biển sâu",
+        "correct": false
+      },
+      {
+        "text": "Cá voi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nhìn tia cực tím?",
+    "answers": [
+      {
+        "text": "Mèo",
+        "correct": false
+      },
+      {
+        "text": "Thỏ",
+        "correct": false
+      },
+      {
+        "text": "Tuần lộc",
+        "correct": true
+      },
+      {
+        "text": "Chó",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có đặc điểm mang thai do con đực?",
+    "answers": [
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Cá heo",
+        "correct": false
+      },
+      {
+        "text": "Cá ngựa",
+        "correct": true
+      },
+      {
+        "text": "Cá voi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống đông lạnh rồi hồi sinh?",
+    "answers": [
+      {
+        "text": "Chim cánh cụt",
+        "correct": false
+      },
+      {
+        "text": "Gấu Bắc Cực",
+        "correct": false
+      },
+      {
+        "text": "Hải cẩu",
+        "correct": false
+      },
+      {
+        "text": "Ếch gỗ Alaska",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể phun máu từ mắt?",
+    "answers": [
+      {
+        "text": "Cóc",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": false
+      },
+      {
+        "text": "Thằn lằn sừng",
+        "correct": true
+      },
+      {
+        "text": "Kỳ đà",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có sữa màu hồng?",
+    "answers": [
+      {
+        "text": "Tê giác",
+        "correct": false
+      },
+      {
+        "text": "Trâu",
+        "correct": false
+      },
+      {
+        "text": "Voi",
+        "correct": false
+      },
+      {
+        "text": "Hà mã",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nghe được bằng chân?",
+    "answers": [
+      {
+        "text": "Tê giác",
+        "correct": false
+      },
+      {
+        "text": "Hà mã",
+        "correct": false
+      },
+      {
+        "text": "Voi",
+        "correct": true
+      },
+      {
+        "text": "Ngựa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có nọc độc mạnh nhất thế giới?",
+    "answers": [
+      {
+        "text": "Sứa hộp Úc",
+        "correct": true
+      },
+      {
+        "text": "Nhện phễu Sydney",
+        "correct": false
+      },
+      {
+        "text": "Rắn mamba đen",
+        "correct": false
+      },
+      {
+        "text": "Bọ cạp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nhảy xa nhất so với kích thước?",
+    "answers": [
+      {
+        "text": "Châu chấu",
+        "correct": false
+      },
+      {
+        "text": "Kanguru",
+        "correct": false
+      },
+      {
+        "text": "Bọ chét",
+        "correct": true
+      },
+      {
+        "text": "Ếch",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào không có xương?",
+    "answers": [
+      {
+        "text": "Cá đuối",
+        "correct": false
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Lươn",
+        "correct": false
+      },
+      {
+        "text": "Bạch tuộc",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có khả năng thở qua da?",
+    "answers": [
+      {
+        "text": "Ếch",
+        "correct": true
+      },
+      {
+        "text": "Thằn lằn",
+        "correct": false
+      },
+      {
+        "text": "Rùa",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể phát ra âm thanh lớn nhất trong tự nhiên?",
+    "answers": [
+      {
+        "text": "Voi",
+        "correct": false
+      },
+      {
+        "text": "Sư tử",
+        "correct": false
+      },
+      {
+        "text": "Cá voi",
+        "correct": false
+      },
+      {
+        "text": "Tôm tít",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có tốc độ tấn công nhanh nhất?",
+    "answers": [
+      {
+        "text": "Tôm tít",
+        "correct": true
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": false
+      },
+      {
+        "text": "Tắc kè hoa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống cả trên cạn và dưới nước?",
+    "answers": [
+      {
+        "text": "Cá thòi lòi",
+        "correct": true
+      },
+      {
+        "text": "Cá rô phi",
+        "correct": false
+      },
+      {
+        "text": "Cá chép",
+        "correct": false
+      },
+      {
+        "text": "Cá hồi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nhìn thấy 360 độ mà không cần quay đầu?",
+    "answers": [
+      {
+        "text": "Ruồi",
+        "correct": false
+      },
+      {
+        "text": "Bướm",
+        "correct": false
+      },
+      {
+        "text": "Ong",
+        "correct": false
+      },
+      {
+        "text": "Chuồn chuồn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể tạo ra lụa mạnh hơn thép?",
+    "answers": [
+      {
+        "text": "Sâu bướm",
+        "correct": false
+      },
+      {
+        "text": "Tằm",
+        "correct": false
+      },
+      {
+        "text": "Nhện",
+        "correct": true
+      },
+      {
+        "text": "Kiến",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống mà không có tim hay não?",
+    "answers": [
+      {
+        "text": "San hô",
+        "correct": false
+      },
+      {
+        "text": "Bọt biển",
+        "correct": false
+      },
+      {
+        "text": "Sứa",
+        "correct": true
+      },
+      {
+        "text": "Sao biển",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể tự cắt đuôi để thoát thân?",
+    "answers": [
+      {
+        "text": "Thằn lằn",
+        "correct": true
+      },
+      {
+        "text": "Kỳ nhông",
+        "correct": false
+      },
+      {
+        "text": "Tắc kè",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể bay xa nhất không nghỉ?",
+    "answers": [
+      {
+        "text": "Chim nhạn biển",
+        "correct": true
+      },
+      {
+        "text": "Đại bàng",
+        "correct": false
+      },
+      {
+        "text": "Hải âu",
+        "correct": false
+      },
+      {
+        "text": "Chim cánh cụt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể tạo ra điện?",
+    "answers": [
+      {
+        "text": "Lươn",
+        "correct": false
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Cá chình điện",
+        "correct": true
+      },
+      {
+        "text": "Cá đuối",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống lâu nhất mà không ăn?",
+    "answers": [
+      {
+        "text": "Nhện",
+        "correct": false
+      },
+      {
+        "text": "Cá sấu",
+        "correct": true
+      },
+      {
+        "text": "Rắn",
+        "correct": false
+      },
+      {
+        "text": "Rùa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nhìn thấy tia hồng ngoại?",
+    "answers": [
+      {
+        "text": "Rắn hổ mang",
+        "correct": true
+      },
+      {
+        "text": "Cú",
+        "correct": false
+      },
+      {
+        "text": "Mèo",
+        "correct": false
+      },
+      {
+        "text": "Chó",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể thay đổi giới tính?",
+    "answers": [
+      {
+        "text": "Cá heo",
+        "correct": false
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Cá voi",
+        "correct": false
+      },
+      {
+        "text": "Cá hề",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể tái sinh các chi?",
+    "answers": [
+      {
+        "text": "Axolotl",
+        "correct": true
+      },
+      {
+        "text": "Sao biển",
+        "correct": false
+      },
+      {
+        "text": "Thằn lằn",
+        "correct": false
+      },
+      {
+        "text": "Cua",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào không có dạ dày?",
+    "answers": [
+      {
+        "text": "Cá voi",
+        "correct": false
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Cá ngựa",
+        "correct": true
+      },
+      {
+        "text": "Cá heo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể ngủ lên đến 22 giờ mỗi ngày?",
+    "answers": [
+      {
+        "text": "Gấu",
+        "correct": false
+      },
+      {
+        "text": "Mèo",
+        "correct": false
+      },
+      {
+        "text": "Lười",
+        "correct": false
+      },
+      {
+        "text": "Koala",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có tim lớn nhất?",
+    "answers": [
+      {
+        "text": "Hươu cao cổ",
+        "correct": false
+      },
+      {
+        "text": "Voi",
+        "correct": false
+      },
+      {
+        "text": "Cá voi xanh",
+        "correct": true
+      },
+      {
+        "text": "Ngựa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể phát hiện động đất trước?",
+    "answers": [
+      {
+        "text": "Mèo",
+        "correct": false
+      },
+      {
+        "text": "Chim",
+        "correct": false
+      },
+      {
+        "text": "Chó",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có mắt lớn nhất thế giới?",
+    "answers": [
+      {
+        "text": "Cá voi",
+        "correct": false
+      },
+      {
+        "text": "Đà điểu",
+        "correct": false
+      },
+      {
+        "text": "Mực khổng lồ",
+        "correct": true
+      },
+      {
+        "text": "Voi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể bơi nhanh nhất?",
+    "answers": [
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Cá buồm",
+        "correct": true
+      },
+      {
+        "text": "Cá heo",
+        "correct": false
+      },
+      {
+        "text": "Cá voi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống mà không có phổi?",
+    "answers": [
+      {
+        "text": "Kỳ giông không phổi",
+        "correct": true
+      },
+      {
+        "text": "Cóc",
+        "correct": false
+      },
+      {
+        "text": "Thằn lằn",
+        "correct": false
+      },
+      {
+        "text": "Ếch",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có khả năng nhớ mặt người?",
+    "answers": [
+      {
+        "text": "Chim én",
+        "correct": false
+      },
+      {
+        "text": "Bồ câu",
+        "correct": false
+      },
+      {
+        "text": "Quạ",
+        "correct": true
+      },
+      {
+        "text": "Chim sẻ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể đi bộ trên trần nhà?",
+    "answers": [
+      {
+        "text": "Tắc kè",
+        "correct": true
+      },
+      {
+        "text": "Kiến",
+        "correct": false
+      },
+      {
+        "text": "Nhện",
+        "correct": false
+      },
+      {
+        "text": "Thằn lằn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể tạo ra âm thanh 230 decibel?",
+    "answers": [
+      {
+        "text": "Cá voi xanh",
+        "correct": true
+      },
+      {
+        "text": "Khỉ đột",
+        "correct": false
+      },
+      {
+        "text": "Sư tử",
+        "correct": false
+      },
+      {
+        "text": "Voi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể di chuyển mà không cần chân, cánh?",
+    "answers": [
+      {
+        "text": "Giun",
+        "correct": false
+      },
+      {
+        "text": "Sên",
+        "correct": false
+      },
+      {
+        "text": "Đỉa",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nhịn đói lâu nhất?",
+    "answers": [
+      {
+        "text": "Rắn",
+        "correct": false
+      },
+      {
+        "text": "Rùa",
+        "correct": false
+      },
+      {
+        "text": "Cá sấu",
+        "correct": false
+      },
+      {
+        "text": "Nhện lạc đà",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể phát ra mùi hôi nhất?",
+    "answers": [
+      {
+        "text": "Lửng mật",
+        "correct": false
+      },
+      {
+        "text": "Chồn sương",
+        "correct": false
+      },
+      {
+        "text": "Chồn hôi",
+        "correct": true
+      },
+      {
+        "text": "Cầy hương",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống ở nhiệt độ sôi?",
+    "answers": [
+      {
+        "text": "Sứa",
+        "correct": false
+      },
+      {
+        "text": "Gấu nước",
+        "correct": false
+      },
+      {
+        "text": "Giun ống Pompeii",
+        "correct": true
+      },
+      {
+        "text": "Vi khuẩn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có lưỡi dài hơn cơ thể?",
+    "answers": [
+      {
+        "text": "Thú ăn kiến",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": false
+      },
+      {
+        "text": "Tắc kè hoa",
+        "correct": true
+      },
+      {
+        "text": "Ếch",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nhảy cao gấp 150 lần chiều cao cơ thể?",
+    "answers": [
+      {
+        "text": "Dế",
+        "correct": false
+      },
+      {
+        "text": "Châu chấu",
+        "correct": false
+      },
+      {
+        "text": "Cào cào",
+        "correct": false
+      },
+      {
+        "text": "Bọ chét",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể phân biệt mùi hàng chục km?",
+    "answers": [
+      {
+        "text": "Muỗi",
+        "correct": false
+      },
+      {
+        "text": "Ruồi",
+        "correct": false
+      },
+      {
+        "text": "Bướm đêm",
+        "correct": true
+      },
+      {
+        "text": "Ong",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống dưới đất suốt 17 năm?",
+    "answers": [
+      {
+        "text": "Giun đất",
+        "correct": false
+      },
+      {
+        "text": "Ve sầu",
+        "correct": true
+      },
+      {
+        "text": "Mối",
+        "correct": false
+      },
+      {
+        "text": "Kiến",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào không có răng nhưng ăn thịt?",
+    "answers": [
+      {
+        "text": "Kanguru",
+        "correct": false
+      },
+      {
+        "text": "Koala",
+        "correct": false
+      },
+      {
+        "text": "Lửng mật",
+        "correct": false
+      },
+      {
+        "text": "Thú ăn kiến",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể phát điện lên đến 600 volt?",
+    "answers": [
+      {
+        "text": "Cá chình điện",
+        "correct": true
+      },
+      {
+        "text": "Cá sấu",
+        "correct": false
+      },
+      {
+        "text": "Cá đuối điện",
+        "correct": false
+      },
+      {
+        "text": "Cá mèo điện",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nhận diện mình trong gương?",
+    "answers": [
+      {
+        "text": "Thỏ",
+        "correct": false
+      },
+      {
+        "text": "Chó",
+        "correct": false
+      },
+      {
+        "text": "Mèo",
+        "correct": false
+      },
+      {
+        "text": "Khỉ đột",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có xương sống dài nhất?",
+    "answers": [
+      {
+        "text": "Cá voi",
+        "correct": false
+      },
+      {
+        "text": "Ngựa",
+        "correct": false
+      },
+      {
+        "text": "Rắn",
+        "correct": true
+      },
+      {
+        "text": "Hươu cao cổ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể ăn được xương?",
+    "answers": [
+      {
+        "text": "Báo",
+        "correct": false
+      },
+      {
+        "text": "Linh cẩu",
+        "correct": true
+      },
+      {
+        "text": "Hổ",
+        "correct": false
+      },
+      {
+        "text": "Sư tử",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể tạo ra nhiệt độ cơ thể cao nhất?",
+    "answers": [
+      {
+        "text": "Ong nghệ",
+        "correct": true
+      },
+      {
+        "text": "Thỏ",
+        "correct": false
+      },
+      {
+        "text": "Chim",
+        "correct": false
+      },
+      {
+        "text": "Mèo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống không cần nước nhiều tháng?",
+    "answers": [
+      {
+        "text": "Dê",
+        "correct": false
+      },
+      {
+        "text": "Bò",
+        "correct": false
+      },
+      {
+        "text": "Ngựa",
+        "correct": false
+      },
+      {
+        "text": "Lạc đà",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có khả năng bắt chước tiếng người?",
+    "answers": [
+      {
+        "text": "Vẹt xám châu Phi",
+        "correct": true
+      },
+      {
+        "text": "Chim sáo",
+        "correct": false
+      },
+      {
+        "text": "Quạ",
+        "correct": false
+      },
+      {
+        "text": "Đại bàng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể phát ra âm thanh siêu âm?",
+    "answers": [
+      {
+        "text": "Mèo",
+        "correct": false
+      },
+      {
+        "text": "Dơi",
+        "correct": true
+      },
+      {
+        "text": "Chuột",
+        "correct": false
+      },
+      {
+        "text": "Chó",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có tuổi thọ ngắn nhất (chỉ 24 giờ)?",
+    "answers": [
+      {
+        "text": "Bướm",
+        "correct": false
+      },
+      {
+        "text": "Ruồi phù du",
+        "correct": true
+      },
+      {
+        "text": "Ong",
+        "correct": false
+      },
+      {
+        "text": "Muỗi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống ở độ cao nhất?",
+    "answers": [
+      {
+        "text": "Đại bàng",
+        "correct": false
+      },
+      {
+        "text": "Dê núi",
+        "correct": false
+      },
+      {
+        "text": "Nhện nhảy Himalaya",
+        "correct": true
+      },
+      {
+        "text": "Báo tuyết",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể ăn được gỗ?",
+    "answers": [
+      {
+        "text": "Kiến",
+        "correct": false
+      },
+      {
+        "text": "Mối",
+        "correct": true
+      },
+      {
+        "text": "Ong",
+        "correct": false
+      },
+      {
+        "text": "Bọ hung",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể chạy nhanh nhất trên cạn?",
+    "answers": [
+      {
+        "text": "Linh dương",
+        "correct": false
+      },
+      {
+        "text": "Ngựa vằn",
+        "correct": false
+      },
+      {
+        "text": "Báo gêpa",
+        "correct": true
+      },
+      {
+        "text": "Sư tử",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống trong môi trường phóng xạ?",
+    "answers": [
+      {
+        "text": "Gấu nước",
+        "correct": true
+      },
+      {
+        "text": "Bọ cạp",
+        "correct": false
+      },
+      {
+        "text": "Rết",
+        "correct": false
+      },
+      {
+        "text": "Gián",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có khả năng ngụy trang tốt nhất?",
+    "answers": [
+      {
+        "text": "Bạch tuộc",
+        "correct": true
+      },
+      {
+        "text": "Mực",
+        "correct": false
+      },
+      {
+        "text": "Tắc kè hoa",
+        "correct": false
+      },
+      {
+        "text": "Cá bơn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống đảo ngược lão hóa?",
+    "answers": [
+      {
+        "text": "Sứa bất tử",
+        "correct": true
+      },
+      {
+        "text": "Voi",
+        "correct": false
+      },
+      {
+        "text": "Rùa",
+        "correct": false
+      },
+      {
+        "text": "Cá voi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có nhiều tim nhất?",
+    "answers": [
+      {
+        "text": "Bạch tuộc",
+        "correct": true
+      },
+      {
+        "text": "Giun đất",
+        "correct": false
+      },
+      {
+        "text": "Mực",
+        "correct": false
+      },
+      {
+        "text": "Sứa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể tự sản xuất chất chống đông?",
+    "answers": [
+      {
+        "text": "Chim cánh cụt",
+        "correct": false
+      },
+      {
+        "text": "Hải cẩu",
+        "correct": false
+      },
+      {
+        "text": "Cá Nam Cực",
+        "correct": true
+      },
+      {
+        "text": "Gấu Bắc Cực",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nhìn được 16 màu (trong khi người chỉ thấy 3)?",
+    "answers": [
+      {
+        "text": "Tôm tít",
+        "correct": true
+      },
+      {
+        "text": "Chuồn chuồn",
+        "correct": false
+      },
+      {
+        "text": "Bướm",
+        "correct": false
+      },
+      {
+        "text": "Ong",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể vỗ cánh 80 lần/giây?",
+    "answers": [
+      {
+        "text": "Chim ruồi",
+        "correct": true
+      },
+      {
+        "text": "Ruồi",
+        "correct": false
+      },
+      {
+        "text": "Chuồn chuồn",
+        "correct": false
+      },
+      {
+        "text": "Ong",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể phun nước sôi?",
+    "answers": [
+      {
+        "text": "Bọ hung",
+        "correct": false
+      },
+      {
+        "text": "Bọ xịt",
+        "correct": true
+      },
+      {
+        "text": "Kiến",
+        "correct": false
+      },
+      {
+        "text": "Nhện",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể nhảy lên 45cm từ mặt nước?",
+    "answers": [
+      {
+        "text": "Cá voi",
+        "correct": false
+      },
+      {
+        "text": "Cá mập",
+        "correct": false
+      },
+      {
+        "text": "Cá heo",
+        "correct": true
+      },
+      {
+        "text": "Hải cẩu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể sống cả trong nước nóng và lạnh nhất?",
+    "answers": [
+      {
+        "text": "Ếch",
+        "correct": false
+      },
+      {
+        "text": "Gấu nước",
+        "correct": true
+      },
+      {
+        "text": "Cá trê",
+        "correct": false
+      },
+      {
+        "text": "Cá hồi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể đào hang sâu 5m?",
+    "answers": [
+      {
+        "text": "Chuột đồng",
+        "correct": false
+      },
+      {
+        "text": "Chuột túi",
+        "correct": true
+      },
+      {
+        "text": "Lửng",
+        "correct": false
+      },
+      {
+        "text": "Thỏ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có huyết áp cao nhất?",
+    "answers": [
+      {
+        "text": "Ngựa",
+        "correct": false
+      },
+      {
+        "text": "Cá voi",
+        "correct": false
+      },
+      {
+        "text": "Hươu cao cổ",
+        "correct": true
+      },
+      {
+        "text": "Voi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có hàm khỏe nhất?",
+    "answers": [
+      {
+        "text": "Hổ",
+        "correct": false
+      },
+      {
+        "text": "Sư tử",
+        "correct": false
+      },
+      {
+        "text": "Cá mập trắng",
+        "correct": false
+      },
+      {
+        "text": "Cá sấu nước mặn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có thể ngửi được mùi máu từ 5km?",
+    "answers": [
+      {
+        "text": "Gấu",
+        "correct": false
+      },
+      {
+        "text": "Chó",
+        "correct": false
+      },
+      {
+        "text": "Cá mập",
+        "correct": true
+      },
+      {
+        "text": "Sói",
+        "correct": false
+      }
+    ]
+  }
+]

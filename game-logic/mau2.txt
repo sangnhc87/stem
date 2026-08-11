@@ -1,0 +1,1188 @@
+## Cụm 1: Giả thiết chung
+> Một giải đấu bóng rổ có sáu đội: J, K, N, Q, R, S. Các trận diễn ra trong ba ngày liên tiếp: Thứ Tư, Thứ Năm, Thứ Sáu; mỗi ngày có hai trận: buổi sáng (S) và buổi tối (T). Mỗi đội thi đấu đúng một lần.
+> Ràng buộc:
+> * J thi đấu buổi sáng, trong cùng một ngày với Q hoặc K.
+> * R thi đấu buổi tối, trong cùng một ngày với N hoặc S.
+> * Q thi đấu vào ngày trước K và trước N. (day(Q) < day(K), day(Q) < day(N))
+
+---
+1. Đội nào sau đây không thể thi đấu vào buổi sáng Thứ Năm?
+    - (A) J
+    - (B) N
+    - (C) K
+    - (D) [x] Q
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>Giả sử Q sáng T5 ⇒ K và N đều sau Q → dồn vào T6.</li>
+        <li>R buộc tối cùng ngày N/S; J buộc sáng ghép Q/K ⇒ xung đột phân bổ tại T6.</li>
+    </ol>
+    <b>Kết quả:  (D) Q.</b>
+
+---
+2. Nếu K thi đấu vào buổi sáng Thứ Sáu, điều nào sau đây có thể đúng?
+    - (A) Q sáng Thứ Tư
+    - (B) R tối Thứ Sáu
+    - (C) [x] J sáng Thứ Năm
+    - (D) N tối Thứ Năm
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>Lịch hợp lệ mẫu: T4: S/R ; T5: J/Q ; T6: K/N.</li>
+        <li>Đối chiếu: - (C) khớp; - (A),- (B),- (D) mâu thuẫn khi ghép 3 ràng buộc.</li>
+    </ol>
+    <b>Kết quả:  (C).</b>
+
+---
+3. Nếu Q thi đấu buổi sáng (ở bất kỳ ngày nào), đội nào sau đây có thể thi đấu buổi sáng Thứ Năm?
+    - (A) [x] J
+    - (B) S
+    - (C) R
+    - (D) K
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>Quét cấu hình hợp lệ cho “Q buổi sáng” cho thấy sáng T5 chỉ có thể là J hoặc N.</li>
+        <li>Trong các lựa chọn, chỉ J phù hợp.</li>
+    </ol>
+    <b>Kết quả:  (A) J.</b>
+
+============================================================
+
+## Cụm 2: Giả thiết chung
+> Một sự kiện trình diễn nhạc có sáu ban: A, B, C, D, E, F. Ba ngày liên tiếp: T6, T7, CN; mỗi ngày có hai suất: trưa (Tr) và tối (T).
+>
+> Ràng buộc:
+> * A phải diễn trưa, cùng ngày với B hoặc C.
+> * F phải diễn tối, cùng ngày với D hoặc E.
+> * B phải diễn trước ngày diễn của E và D. (day- (B) < day(E), day- (B) < day- (D))
+
+---
+1. Ban nào sau đây không thể diễn trưa Thứ Bảy (T7)?
+    - (A) A
+    - (B) D
+    - (C) E
+    - (D) [x] B
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>Nếu B trưa T7 ⇒ E và D phải sau B → dồn vào CN ⇒ xung đột ghép với F và A.</li>
+    </ol>
+    <b>Kết quả:  (D) B.</b>
+
+---
+2. Nếu E diễn tối Chủ Nhật, điều nào sau đây có thể đúng?
+    - (A) B trưa Thứ Sáu
+    - (B) [x] A trưa Thứ Bảy
+    - (C) D tối Thứ Bảy
+    - (D) F tối Thứ Sáu
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>B phải trước E (CN) ⇒ B ∈ {T6,T7}.</li>
+        <li>Lịch hợp lệ: T6(Tr,B;T,F), T7(Tr,A;T,C), CN(Tr,D;T,E) ⇒ - (B) đúng.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+---
+3. Nếu A trưa T6, ban nào sau đây phải diễn tối T6?
+    - (A) [x] B
+    - (B) C
+    - (C) D
+    - (D) E
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A trưa phải ghép tối cùng ngày với B hoặc C (ràng buộc 1). Chọn B là đáp án đúng duy nhất.</li>
+    </ol>
+    <b>Kết quả:  (A) B.</b>
+
+============================================================
+
+## Cụm 3: Giả thiết chung
+> Xếp 6 học sinh P, Q, R, S, T, U vào hàng ghế 1→6.
+>
+> Ràng buộc:
+> * P ngồi trước Q và trước R.
+> * S không ngồi cạnh T.
+> * U ngồi ở vị trí chẵn.
+
+---
+1. Ai không thể ngồi ở vị trí 6?
+    - (A) U
+    - (B) [x] P
+    - (C) S
+    - (D) T
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>P phải đứng trước Q và R ⇒ không thể ở vị trí cuối (6).</li>
+    </ol>
+    <b>Kết quả:  (B) P.</b>
+
+---
+2. Nếu U ngồi ở vị trí 2, điều nào sau đây có thể đúng?
+    - (A) S ở 1
+    - (B) [x] T ở 4
+    - (C) Q ở 1
+    - (D) R ở 1
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>Ví dụ hợp lệ: 1-P,2-U,3-R,4-T,5-Q,6-S (P trước Q,R; S không cạnh T).</li>
+    </ol>
+    <b>Kết quả:  (B) T ở 4.</b>
+
+---
+3. Nếu Q ở 5, điều gì phải đúng?
+    - (A) R ở 6
+    - (B) [x] P ở trước 5
+    - (C) S ở 1
+    - (D) U ở 4
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>P phải trước Q ⇒ P ở vị trí &lt; 5.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+============================================================
+
+## Cụm 4: Giả thiết chung
+> Ba phòng thí nghiệm L1, L2, L3; cần phân công 6 dự án: A, B, C, D, E, F. Mỗi phòng nhận đúng 2 dự án.
+>
+> Ràng buộc:
+> * A và B không cùng phòng.
+> * C cùng phòng với D.
+> * E không ở L3.
+
+---
+1. Phân công nào sau đây không thể xảy ra?
+    - (A) L1: A,C ; L2: D,E ; L3: B,F
+    - (B) [x] L1: C,D ; L2: A,B ; L3: E,F
+    - (C) L1: A,E ; L2: C,D ; L3: B,F
+    - (D) L1: B,E ; L2: A,F ; L3: C,D
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>- (B) vi phạm “A và B không cùng phòng”.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+---
+2. Nếu C cùng D ở L2, điều nào sau đây có thể đúng?
+    - (A) A ở L2
+    - (B) [x] B ở L3
+    - (C) E ở L3
+    - (D) F ở L1 là không thể
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>E không ở L3; A không cùng B ⇒ B ở L3 là khả dĩ nhất.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+---
+3. Nếu A ở L1 và E ở L1, điều nào sau đây phải đúng?
+    - (A) B ở L2
+    - (B) [x] B không ở L1
+    - (C) C ở L3
+    - (D) D ở L3
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A và B không cùng phòng ⇒ B không ở L1.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+============================================================
+
+## Cụm 5: Giả thiết chung
+> Lịch dạy 3 ngày: T2, T3, T4; mỗi ngày 2 ca: sáng (S), chiều - (C). Giáo viên: M, N, O, P, Q, R.
+> Ràng buộc:
+> * M dạy buổi sáng, cùng ngày với N hoặc O.
+        * R dạy chiều, cùng ngày với P hoặc Q.
+> * N dạy trước ngày của O và Q.
+
+---
+1. Ai không thể dạy sáng T3?
+    - (A) M
+    - (B) O
+    - (C) P
+    - (D) [x] N
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>N trước O và Q. Nếu N sáng T3 ⇒ O,Q dồn T4 ⇒ xung đột với ràng buộc của R.</li>
+    </ol>
+    <b>Kết quả:  (D) N.</b>
+
+---
+2. Nếu O sáng T4, điều nào có thể đúng?
+    - (A) R chiều T2
+    - (B) [x] M sáng T3
+    - (C) Q chiều T4
+    - (D) P chiều T4
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>N trước O ⇒ N ∈ {T2,T3}; M sáng ghép N/O ⇒ M sáng T3 là khả dĩ.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+---
+3. Nếu M sáng T2, điều nào phải đúng?
+    - (A) N chiều T2
+    - (B) [x] Ca chiều T2 là N hoặc O
+    - (C) P chiều T2
+    - (D) Q chiều T2
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>M sáng cùng ngày với N hoặc O ⇒ chiều T2 là N hoặc O.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+============================================================
+
+## Cụm 6: Giả thiết chung
+> Sắp xếp 6 cuốn sách (A,B,C,D,E,F) lên kệ theo thứ tự từ trái → phải (1→6).
+> Ràng buộc:
+> * A ở bên trái C.
+> * D không đặt cạnh E.
+> * F ở vị trí 1 hoặc 6.
+
+---
+1. Cuốn nào không thể ở vị trí 1?
+    - (A) F
+    - (B) [x] C
+    - (C) D
+    - (D) E
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A trái C ⇒ C không thể ở 1.</li>
+    </ol>
+    <b>Kết quả:  (B) C.</b>
+
+---
+2. Nếu F ở 6, điều nào có thể đúng?
+    - (A) D ở 2 và E ở 3
+    - (B) [x] A ở 2 và C ở 5
+    - (C) C ở 2 và A ở 3
+    - (D) E ở 2 và D ở 3
+
+    Điểm: 10, -10
+Phạt: 2 phút
+Giải thích:
+    <ol>
+        <li>- (B) thỏa A trái C; có thể bố trí tránh D cạnh E, ví dụ: 1-B,2-A,3-E,4-C,5-D,6-F.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+---
+3. Nếu D ở 3, điều gì phải đúng?
+    - (A) E ở 4
+    - (B) E ở 2
+    - (C) [x] E không ở 2 cũng không ở 4
+    - (D) A ở 1
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>D không cạnh E ⇒ E ≠ 2,4.</li>
+    </ol>
+    <b>Kết quả:  (C).</b>
+
+============================================================
+
+## Cụm 7: Giả thiết chung
+> Ba ngày thi: Thứ Hai, Thứ Ba, Thứ Tư; mỗi ngày: sáng (S) và chiều - (C). Thí sinh: H, I, J, K, L, M.
+> Ràng buộc:
+> * H thi sáng, cùng ngày với J hoặc K (tức chiều cùng ngày là J hoặc K).
+> * M thi chiều, cùng ngày với I hoặc L.
+> * J thi vào ngày trước ngày thi của L.
+
+---
+1. Ai không thể thi sáng Thứ Ba?
+    - (A) H
+    - (B) I
+    - (C) K
+    - (D) [x] J
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>J trước L. Nếu J sáng T3 ⇒ L phải T4 (không có) ⇒ bất khả.</li>
+    </ol>
+    <b>Kết quả:  (D) J.</b>
+
+---
+2. Nếu K sáng Thứ Tư, điều nào sau đây có thể đúng?
+    - (A) [x] H sáng Thứ Ba
+    - (B) L chiều Thứ Ba
+    - (C) J sáng Thứ Hai
+    - (D) I chiều Thứ Hai
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>H sáng, cùng ngày với J hoặc K. Vì K sáng Tư nên H không thể ghép với K trong ngày Tư ⇒ H ghép với J ở ngày khác.</li>
+        <li>Lịch ví dụ hợp lệ: Hai(S:I, C:M), Ba(S:H, C:J), Tư(S:K, C:L). Thỏa: H sáng ghép J; M chiều ghép I; J trước L.</li>
+    </ol>
+    <b>Kết quả:  (A).</b>
+
+---
+3. Nếu H sáng Hai, điều gì phải đúng?
+    - (A) J chiều Hai
+    - (B) [x] Chiều Hai là J hoặc K
+    - (C) L chiều Hai
+    - (D) I chiều Hai
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>H sáng cùng ngày J/K ⇒ chiều Hai phải là J hoặc K.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+============================================================
+
+## Cụm 8: Giả thiết chung
+> Chia 6 người (A,B,C,D,E,F) vào 3 nhóm dự án X,Y,Z; mỗi nhóm 2 người.
+> Ràng buộc:
+> * A không cùng nhóm với B.
+> * C cùng nhóm với D.
+> * F không ở nhóm Z.
+
+---
+1. Phân chia nào sau đây là không thể?
+    - (A) X: C,D ; Y: A,E ; Z: B,F
+    - (B) X: A,F ; Y: C,D ; Z: B,E
+    - (C) [x] X: A,B ; Y: C,D ; Z: E,F
+    - (D) X: B,E ; Y: A,F ; Z: C,D
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>- (C) vi phạm “A không cùng nhóm B”.</li>
+    </ol>
+    <b>Kết quả:  (C).</b>
+
+---
+2. Nếu C,D ở Y, điều nào có thể đúng?
+    - (A) F ở Z
+    - (B) B ở Y
+    - (C) [x] A ở X
+    - (D) E ở Y
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>F không ở Z ⇒ F ∈ {X,Y}. A không cùng B ⇒ A ở X là khả dĩ.</li>
+    </ol>
+    <b>Kết quả:  (C).</b>
+
+---
+3. Nếu A ở X và F ở X, điều nào phải đúng?
+    - (A) B ở X
+    - (B) [x] B không ở X
+    - (C) C ở Z
+    - (D) D ở Z
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A không cùng B ⇒ B không ở X.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+============================================================
+
+## Cụm 9: Giả thiết chung
+> Xếp 6 môn thi theo thứ tự ngày 1→6: Toán (T), Lý (L), Hóa (H), Sinh (S), Văn (V), Anh - (A).
+> Ràng buộc:
+> * T trước L.
+> * H không liền kề S.
+> * V ở sau A.
+
+---
+1. Môn nào không thể ở ngày 1?
+    - (A) V
+    - (B) S
+    - (C) [x] L
+    - (D) H
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>T trước L ⇒ L không thể ở ngày 1.</li>
+    </ol>
+    <b>Kết quả:  (C) L.</b>
+
+---
+2. Nếu A ở ngày 2, điều nào có thể đúng?
+    - (A) V ở ngày 1
+    - (B) [x] V ở ngày 5
+    - (C) S ở ngày 2
+    - (D) H ở ngày 3 và S ở ngày 4
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>V sau A ⇒ V ∈ {3..6}. Chọn 5 là khả dĩ.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+---
+3. Nếu T ở ngày 3, điều gì phải đúng?
+    - (A) L ở ngày 1
+    - (B) [x] L ở sau ngày 3
+    - (C) A ở ngày 1
+    - (D) V ở ngày 2
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>T trước L ⇒ L phải sau ngày 3.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+============================================================
+
+## Cụm 10: Giả thiết chung
+> Ba ngày hội thảo: Thứ Sáu, Thứ Bảy, Chủ Nhật; mỗi ngày hai phiên: sáng (S), tối (T). Diễn giả: G, H, I, J, K, L.
+> Ràng buộc:
+> * G nói sáng và cùng ngày với H hoặc I.
+> * L nói tối và cùng ngày với J hoặc K.
+> * H nói trước ngày của K.
+
+---
+1. Ai không thể nói sáng Thứ Bảy?
+    - (A) G
+    - (B) I
+    - (C) [x] H
+    - (D) J
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>H trước K. Nếu H sáng T7 ⇒ K chỉ còn CN; xung đột khi ghép L tối cùng J/K và G sáng cùng H/I.</li>
+    </ol>
+    <b>Kết quả:  (C) H.</b>
+
+---
+2. Nếu K tối CN, điều nào có thể đúng?
+    - (A) H sáng CN
+    - (B) J tối T7
+    - (C) [x] G sáng T6
+    - (D) I sáng CN
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>G sáng cùng H/I; H trước K (CN). G sáng T6 phù hợp phân bổ còn lại.</li>
+    </ol>
+    <b>Kết quả:  (C).</b>
+
+---
+3. Nếu G sáng T6, điều gì phải đúng?
+    - (A) H tối T6
+    - (B) [x] Tối T6 là H hoặc I
+    - (C) J tối T6
+    - (D) K tối T6
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>G sáng cùng ngày H/I ⇒ tối T6 là H hoặc I.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+============================================================
+## Cụm 11: Giả thiết chung
+> Lịch trực y tế ba ngày: T2, T3, T4; ca sáng (S), tối (T). Bác sĩ: A, B, C, D, E, F.
+> Ràng buộc:
+> * A trực sáng, cùng ngày với B hoặc C.
+> * F trực tối, cùng ngày với D hoặc E.
+> * B trực trước ngày của E.
+
+---
+1. Ai không thể trực sáng T3?
+    - (A) A
+    - (B) D
+    - (C) E
+    - (D) [x] B
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>B trước E; nếu B sáng T3 ⇒ E phải T4 (không có) ⇒ bất khả.</li>
+    </ol>
+    <b>Kết quả:  (D) B.</b>
+
+---
+2. Nếu C sáng T4, điều nào có thể đúng?
+    - (A) F tối T2
+    - (B) [x] A sáng T3
+    - (C) E tối T4
+    - (D) D tối T4
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A sáng ghép B/C; B trước E. A sáng T3 là phương án khả dĩ.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+---
+3. Nếu A sáng T2, điều gì phải đúng?
+    - (A) B tối T2
+    - (B) C tối T2
+    - (C) [x] Tối T2 là B hoặc C
+    - (D) E tối T2
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A sáng phải ghép B hoặc C cùng ngày.</li>
+    </ol>
+    <b>Kết quả:  (C).</b>
+
+============================================================
+
+## Cụm 12: Giả thiết chung
+> Xếp 6 vận động viên (R,S,T,U,V,W) vào 6 làn chạy (1→6).
+> Ràng buộc:
+> * R chạy trước S.
+> * T không chạy ở làn liền trước hoặc liền sau U.
+> * V ở làn chẵn.
+
+---
+1. Ai không thể ở làn 1?
+    - (A) R
+    - (B) [x] S
+    - (C) T
+    - (D) U
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>R trước S ⇒ S không thể ở vị trí đầu tiên.</li>
+    </ol>
+    <b>Kết quả:  (B) S.</b>
+
+---
+2. Nếu V ở làn 4, điều nào có thể đúng?
+    - (A) T ở 3 và U ở 4
+    - (B) U ở 5 và T ở 6
+    - (C) [x] R ở 2 và S ở 6
+    - (D) T ở 5 và U ở 6
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>T không kề U; R trước S. Cấu hình - (C) thỏa toàn bộ.</li>
+    </ol>
+    <b>Kết quả:  (C).</b>
+
+---
+3. Nếu R ở 2, điều gì phải đúng?
+    - (A) S ở 1
+    - (B) S ở 2
+    - (C) [x] S ở sau 2
+    - (D) V ở 1
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>R trước S ⇒ S ở vị trí > 2.</li>
+    </ol>
+    <b>Kết quả:  (C).</b>
+
+============================================================
+
+## Cụm 13: Giả thiết chung
+> Lịch diễn 3 ngày: Thứ Hai, Thứ Ba, Thứ Tư; mỗi ngày: sáng (S), tối (T). Nhóm: X, Y, Z, M, N, P.
+> Ràng buộc:
+> * X sáng, cùng ngày với Y hoặc Z.
+> * P tối, cùng ngày với M hoặc N.
+> * Y diễn trước ngày của N.
+
+---
+1. Nhóm nào không thể diễn sáng Thứ Ba?
+    - (A) X
+    - (B) Z
+    - (C) M
+    - (D) [x] Y
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>Y trước N. Nếu Y sáng T3 ⇒ N phải T4 (không có) ⇒ bất khả.</li>
+    </ol>
+    <b>Kết quả:  (D) Y.</b>
+
+---
+2. Nếu Z sáng Tư, điều nào có thể đúng?
+    - (A) X sáng Ba
+    - (B) [x] X sáng Hai
+    - (C) P tối Hai
+    - (D) N tối Ba
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>X sáng cùng Y/Z ⇒ nếu Z sáng Tư, X không thể sáng Tư; X sáng Hai là khả dĩ.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+---
+3. Nếu X sáng Hai, điều gì phải đúng?
+    - (A) Y tối Hai
+    - (B) [x] Tối Hai là Y hoặc Z
+    - (C) M tối Hai
+    - (D) N tối Hai
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>X sáng cùng ngày Y/Z ⇒ tối Hai là Y hoặc Z.</li>
+    </ol>
+    <b>Kết quả:  (B).</b>
+
+## Cụm 14: Giả thiết chung
+> Một liên hoan kịch có sáu đoàn: G, H, I, J, K, L. Diễn ra trong ba ngày liên tiếp: Thứ Tư (T4), Thứ Năm (T5), Thứ Sáu (T6); mỗi ngày có hai suất: sáng (S) và tối (T). Mỗi đoàn diễn đúng một lần.
+> Ràng buộc:
+> * G phải diễn buổi sáng, trong cùng một ngày với H hoặc I.
+> * L phải diễn buổi tối, trong cùng một ngày với J hoặc K.
+> * H phải diễn vào ngày trước ngày diễn của K. (day(H) < day(K))
+
+---
+1. Đoàn nào sau đây không thể diễn vào buổi tối Thứ Năm?
+    - (A) H
+    - (B) J
+    - (C) K
+    - (D) [x] G
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>G buộc diễn buổi sáng ⇒ không thể diễn tối ở bất kỳ ngày nào.</li>
+    </ol>
+    <b>Kết quả:  (D) G.</b>
+
+---
+2. Nếu K diễn tối T6 và L diễn cùng ngày với K, điều nào sau đây phải đúng?
+    - (A) H diễn tối T6
+    - (B) [x] J diễn sáng T6
+    - (C) G diễn sáng T6
+    - (D) I diễn sáng T6
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>L tối và cùng ngày với J/K. Giả thiết đã cho “L cùng ngày K”, nên suất sáng T6 không thể là K ⇒ phải là J.</li>
+        <li>H phải trước K ⇒ H ∈ {T4,T5}; G không buộc vào T6.</li>
+    </ol>
+    <b>Kết quả:  (B) J sáng T6.</b>
+
+---
+3. Nếu H diễn sáng T4 và I không thể diễn tối T4, điều nào sau đây phải đúng?
+    - (A) G diễn sáng T5
+    - (B) K diễn sáng T4
+    - (C) [x] L diễn tối T4
+    - (D) I diễn sáng T5
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>L tối phải ghép J/K cùng ngày. Với tối T4 không thể là I (giả thiết), để thỏa ràng buộc 2 ở T4, buộc tối T4 là L (ghép J/K trong ngày).</li>
+    </ol>
+    <b>Kết quả:  (C) L tối T4.</b>
+
+============================================================
+
+## Cụm 15: Giả thiết chung
+> Có sáu đội cờ: A, B, C, D, E, F thi đấu giao hữu trong ba ngày: T6, T7, CN; mỗi ngày có hai phiên: sáng (S), chiều - (C). Mỗi đội thi một trận.
+> Ràng buộc:
+> * A thi sáng, cùng ngày với B hoặc C.
+> * F thi chiều, cùng ngày với D hoặc E.
+> * B thi vào ngày trước ngày thi của E.
+
+---
+1. Đội nào sau đây không thể thi vào buổi chiều Thứ Bảy?
+    - (A) D
+    - (B) E
+    - (C) [x] A
+    - (D) C
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A buộc thi buổi sáng ⇒ không thể thi buổi chiều.</li>
+    </ol>
+    <b>Kết quả:  (C) A.</b>
+
+---
+2. Nếu E chiều CN và F cùng ngày với E là <i>không thể</i>, điều nào sau đây có thể đúng?
+    - (A) B sáng CN
+    - (B) [x] A sáng T6
+    - (C) D chiều T7
+    - (D) C sáng CN
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>F chiều phải cùng ngày với D/E; nếu E chiều CN thì F không thể cũng chiều CN (trùng suất) ⇒ F phải cùng ngày với D (ở ngày khác CN).</li>
+        <li>B trước E ⇒ B ∈ {T6, T7}. A sáng ghép B/C ⇒ A sáng T6 là cấu hình khả dĩ.</li>
+    </ol>
+    <b>Kết quả:  (B) A sáng T6.</b>
+
+---
+3. Nếu A sáng T7 và C không thể chiều T7, điều gì phải đúng?
+    - (A) B chiều T7
+    - (B) [x] B chiều T7
+    - (C) D chiều T7
+    - (D) E chiều T7
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A sáng cùng B/C ⇒ chiều T7 là B hoặc C.</li>
+        <li>C bị cấm ⇒ buộc B chiều T7.</li>
+    </ol>
+    <b>Kết quả:  (B) B chiều T7.</b>
+
+============================================================
+## Cụm 16: Giả thiết chung
+> Có sáu bài báo: J, K, L, M, N, P đăng trên ba số: Số 1, Số 2, Số 3; mỗi số có một bài buổi sáng (S) và một bài buổi chiều - (C).
+> Ràng buộc:
+> * J đăng buổi sáng, cùng số với K hoặc L.
+> * P đăng buổi chiều, cùng số với M hoặc N.
+> * K đăng trước N.
+
+---
+1. Bài nào sau đây không thể đăng buổi chiều Số 2?
+    - (A) M
+    - (B) N
+    - (C) P
+    - (D) [x] J
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>J buộc buổi sáng ⇒ không thể buổi chiều.</li>
+    </ol>
+    <b>Kết quả:  (D) J.</b>
+
+---
+2. Nếu N chiều S3 và P cùng ngày với N là <i>không thể</i>, điều nào sau đây phải đúng?
+    - (A) K chiều S3
+    - (B) L sáng S3
+    - (C) [x] M sáng S3
+    - (D) J sáng S1
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>P buộc buổi chiều và phải cùng số với M hoặc N. Với N chiều S3, P không thể cũng chiều S3 ⇒ P phải cùng số với M ở S3 ⇒ sáng S3 phải là M.</li>
+        <li>K trước N ⇒ K ∈ {S1, S2}.</li>
+    </ol>
+    <b>Kết quả:  (C) M sáng S3.</b>
+
+---
+3. Nếu J sáng S2 và K không thể chiều S2, điều nào sau đây phải đúng?
+    - (A) L chiều S2
+    - (B) N chiều S2
+    - (C) [x] L chiều S2
+    - (D) M chiều S2
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>J sáng phải ghép K hoặc L cùng số (ở chiều) ⇒ chiều S2 là K hoặc L.</li>
+        <li>K không thể chiều S2 ⇒ buộc L chiều S2.</li>
+    </ol>
+    <b>Kết quả:  (C) L chiều S2.</b>
+
+============================================================
+
+## Cụm 17: Giả thiết chung
+> Sắp xếp 6 sinh viên A, B, C, D, E, F vào 3 buổi thuyết trình: T2 (S, C), T3 (S, C), T4 (S, C). Mỗi sinh viên trình bày đúng một lần.
+> Ràng buộc:
+> * A trình bày buổi sáng, cùng ngày với B hoặc C.
+> * F trình bày buổi chiều, cùng ngày với D hoặc E.
+> * B trình bày trước E (theo ngày).
+
+---
+1. Ai sau đây không thể trình bày buổi chiều T3?
+    - (A) D
+    - (B) E
+    - (C) [x] A
+    - (D) C
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A buộc buổi sáng ⇒ không thể buổi chiều.</li>
+    </ol>
+    <b>Kết quả:  (C) A.</b>
+
+---
+2. Nếu E chiều T4 và F cùng ngày với D (không phải E), điều nào sau đây có thể đúng?
+    - (A) B sáng T4
+    - (B) D chiều T4
+    - (C) [x] A sáng T2
+    - (D) C chiều T4
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>F chiều và cùng ngày D/E. Vì E đã chiếm chiều T4, F không thể cùng ngày với E ở T4 ⇒ F phải cùng ngày với D ở ngày khác.</li>
+        <li>Cấu hình với A sáng T2 không mâu thuẫn các ràng buộc còn lại.</li>
+    </ol>
+    <b>Kết quả:  (C) A sáng T2.</b>
+
+---
+3. Nếu A sáng T3 và C không thể chiều T3, điều nào sau đây phải đúng?
+    - (A) B chiều T3
+    - (B) D chiều T3
+    - (C) [x] B chiều T3
+    - (D) E chiều T3
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A sáng phải ghép B/C cùng ngày ⇒ chiều T3 là B hoặc C.</li>
+        <li>C bị cấm ⇒ buộc B chiều T3.</li>
+    </ol>
+    <b>Kết quả:  (C) B chiều T3.</b>
+
+============================================================
+
+## Cụm 18: Giả thiết chung
+> Sắp xếp 6 gói hàng (R, S, T, U, V, W) giao trong ba ngày: Ngày 1 (S, C), Ngày 2 (S, C), Ngày 3 (S, C).
+> Ràng buộc:
+> * R giao buổi sáng, cùng ngày với S hoặc T.
+> * W giao buổi chiều, cùng ngày với U hoặc V.
+> * S giao trước V (theo ngày).
+
+---
+1. Gói nào không thể giao buổi chiều Ngày 2?
+    - (A) U
+    - (B) V
+    - (C) [x] R
+    - (D) T
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>R buộc buổi sáng ⇒ không thể buổi chiều.</li>
+    </ol>
+    <b>Kết quả:  (C) R.</b>
+
+---
+2. Nếu V chiều Ngày 3 và W cùng ngày với V là <i>không thể</i>, điều nào sau đây phải đúng?
+    - (A) U sáng Ngày 3
+    - (B) [x] U sáng Ngày 3
+    - (C) S sáng Ngày 3
+    - (D) T sáng Ngày 3
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>W buộc buổi chiều và phải cùng ngày U/V. Vì chiều Ngày 3 đã là V, W không thể cùng ngày với V ở Ngày 3 ⇒ để thỏa điều kiện cùng ngày ở Ngày 3, buổi sáng Ngày 3 phải là U (ghép theo ngày).</li>
+    </ol>
+    <b>Kết quả:  (B) U sáng Ngày 3.</b>
+
+---
+3. Nếu R sáng Ngày 2 và T không thể chiều Ngày 2, điều nào sau đây phải đúng?
+    - (A) S chiều Ngày 2
+    - (B) [x] S chiều Ngày 2
+    - (C) U chiều Ngày 2
+    - (D) V chiều Ngày 2
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>R sáng phải ghép S/T cùng ngày ⇒ chiều Ngày 2 là S hoặc T.</li>
+        <li>T bị cấm ⇒ buộc S chiều Ngày 2.</li>
+    </ol>
+    <b>Kết quả:  (B) S chiều Ngày 2.</b>
+
+============================================================
+
+## Cụm 19: Giả thiết chung
+> Xếp 6 tiết mục X, Y, Z, M, N, P vào ba ngày: D1 (S, T), D2 (S, T), D3 (S, T).
+> Ràng buộc:
+> * X diễn buổi sáng, cùng ngày với Y hoặc Z.
+> * P diễn buổi tối, cùng ngày với M hoặc N.
+> * Y diễn trước N.
+
+---
+1. Tiết mục nào không thể diễn buổi tối D2?
+    - (A) M
+    - (B) N
+    - (C) P
+    - (D) [x] X
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>X buộc buổi sáng ⇒ không thể buổi tối.</li>
+    </ol>
+    <b>Kết quả:  (D) X.</b>
+
+---
+2. Nếu N tối D3 và P cùng ngày với N là <i>không thể</i>, điều nào sau đây có thể đúng?
+    - (A) Y sáng D3
+    - (B) Z sáng D3
+    - (C) [x] M sáng D3
+    - (D) X sáng D3
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>P tối phải cùng ngày với M/N. Với N đã tối D3, P không thể cũng tối D3 ⇒ để ghép theo ngày ở D3, sáng D3 phải là M.</li>
+        <li>Y trước N ⇒ Y ∈ {D1,D2} → - (A) loại. - (D) X sáng D3 kéo Y/Z cùng ngày, mâu thuẫn thứ tự.</li>
+    </ol>
+    <b>Kết quả:  (C) M sáng D3.</b>
+
+---
+3. Nếu X sáng D2 và Z không thể tối D2, điều gì phải đúng?
+    - (A) Y tối D2
+    - (B) [x] Y tối D2
+    - (C) M tối D2
+    - (D) N tối D2
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>X sáng phải ghép Y/Z cùng ngày ⇒ tối D2 là Y hoặc Z.</li>
+        <li>Z bị cấm ⇒ buộc Y tối D2.</li>
+    </ol>
+    <b>Kết quả:  (B) Y tối D2.</b>
+
+============================================================
+## Cụm 20: Giả thiết chung
+> Phân công 6 trợ giảng (A, B, C, D, E, F) trực 3 ngày: Ngày 1 (S, T), Ngày 2 (S, T), Ngày 3 (S, T).
+> Ràng buộc:
+> * A trực sáng, cùng ngày với B hoặc C.
+> * F trực tối, cùng ngày với D hoặc E.
+> * B trực trước E.
+
+---
+1. Ai không thể trực buổi tối Ngày 2?
+    - (A) D
+    - (B) E
+    - (C) F
+    - (D) [x] A
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A buộc trực buổi sáng ⇒ không thể buổi tối.</li>
+    </ol>
+    <b>Kết quả:  (D) A.</b>
+
+---
+2. Nếu E tối Ngày 3 và F cùng ngày với D (không phải E), điều nào sau đây có thể đúng?
+    - (A) B sáng Ngày 3
+    - (B) C sáng Ngày 3
+    - (C) [x] A sáng Ngày 1
+    - (D) D tối Ngày 2
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>F tối và phải cùng ngày D/E. Vì E đã tối Ngày 3, F không thể cùng ngày với E ở Ngày 3 ⇒ F phải cùng ngày với D ở một ngày khác.</li>
+        <li>- (C) không mâu thuẫn các ràng buộc còn lại.</li>
+    </ol>
+    <b>Kết quả:  (C) A sáng Ngày 1.</b>
+
+---
+3. Nếu A sáng Ngày 2 và C không thể tối Ngày 2, điều gì phải đúng?
+    - (A) B tối Ngày 2
+    - (B) D tối Ngày 2
+    - (C) [x] B tối Ngày 2
+    - (D) E tối Ngày 2
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A sáng phải ghép B/C ⇒ tối Ngày 2 là B hoặc C.</li>
+        <li>C bị cấm ⇒ buộc B tối Ngày 2.</li>
+    </ol>
+    <b>Kết quả:  (C) B tối Ngày 2.</b>
+
+============================================================
+## Cụm 21: Giả thiết chung
+> Xếp 6 ghế ban giám khảo theo thứ tự 1→6 cho H, I, J, K, L, M.
+> Ràng buộc:
+> * H ngồi trước I.
+> * K không ngồi cạnh L.
+> * M ngồi ở vị trí chẵn.
+
+---
+1. Ai không thể ngồi ở ghế 1?
+    - (A) H
+    - (B) [x] I
+    - (C) K
+    - (D) L
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>H trước I ⇒ I không thể ở vị trí 1 (không còn ai trước I).</li>
+    </ol>
+    <b>Kết quả:  (B) I.</b>
+
+---
+2. Nếu M ở ghế 4, điều nào sau đây có thể đúng?
+    - (A) K ở 3 và L ở 4
+    - (B) L ở 5 và K ở 6
+    - (C) [x] H ở 2 và I ở 5
+    - (D) K ở 5 và L ở 6
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>M=4 thỏa; - (A) sai vì L=4 trùng M; - (B),- (D) sai vì K kề L; - (C) không vi phạm ràng buộc.</li>
+    </ol>
+    <b>Kết quả:  (C) H2, I5.</b>
+
+---
+3. Nếu H ở 2, điều gì phải đúng?
+    - (A) I ở 1
+    - (B) I ở 2
+    - (C) [x] I ở sau 2
+    - (D) M ở 1
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>H trước I ⇒ I ở vị trí &gt; 2.</li>
+    </ol>
+    <b>Kết quả:  (C) I sau 2.</b>
+
+============================================================
+
+## Cụm 22: Giả thiết chung
+> Lập lịch 6 bài nói (A, B, C, D, E, F) vào ba ngày: Ngày 1 (S, T), Ngày 2 (S, T), Ngày 3 (S, T).
+> Ràng buộc:
+> * A nói buổi sáng, cùng ngày với B hoặc C.
+> * F nói buổi tối, cùng ngày với D hoặc E.
+> * B nói trước ngày của E.
+
+---
+1. Ai không thể nói buổi tối Ngày 1?
+    - (A) D
+    - (B) E
+    - (C) F
+    - (D) [x] A
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A buộc nói buổi sáng ⇒ không thể buổi tối.</li>
+    </ol>
+    <b>Kết quả:  (D) A.</b>
+
+---
+2. Nếu E tối Ngày 3 và F cùng ngày với D (không phải E), điều nào sau đây có thể đúng?
+    - (A) B sáng Ngày 3
+    - (B) C sáng Ngày 3
+    - (C) [x] D sáng Ngày 3
+    - (D) A sáng Ngày 3
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>E tối Ngày 3 đã chiếm suất tối; F không thể cùng ngày với E ở Ngày 3 ⇒ F phải cùng ngày với D ở ngày khác.</li>
+        <li>Chọn D sáng Ngày 3 không mâu thuẫn; - (A) vi phạm “B trước E”.</li>
+    </ol>
+    <b>Kết quả:  (C) D sáng Ngày 3.</b>
+
+---
+3. Nếu A sáng Ngày 2 và C không thể tối Ngày 2, điều gì phải đúng?
+    - (A) B tối Ngày 2
+    - (B) D tối Ngày 2
+    - (C) [x] B tối Ngày 2
+    - (D) E tối Ngày 2
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>A sáng phải ghép B/C ⇒ tối Ngày 2 là B hoặc C.</li>
+        <li>C bị cấm ⇒ buộc B tối Ngày 2.</li>
+    </ol>
+    <b>Kết quả:  (C) B tối Ngày 2.</b>
+
+============================================================
+
+## Cụm 23: Giả thiết chung
+> Phân công 6 tiết giảng (R, S, T, U, V, W) vào ba ngày: D1 (S, T), D2 (S, T), D3 (S, T). Mỗi tiết dạy một lần.
+> Ràng buộc:
+> * R dạy buổi sáng, cùng ngày với S hoặc T.
+> * W dạy buổi tối, cùng ngày với U hoặc V.
+> * S dạy trước V.
+
+---
+1. Tiết nào không thể dạy buổi tối D2?
+    - (A) U
+    - (B) V
+    - (C) W
+    - (D) [x] R
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>R buộc buổi sáng ⇒ không thể buổi tối.</li>
+    </ol>
+    <b>Kết quả:  (D) R.</b>
+
+---
+2. Nếu V tối D3 và W cùng ngày với V là <i>không thể</i>, điều nào sau đây phải đúng?
+    - (A) U sáng D3
+    - (B) [x] U sáng D3
+    - (C) S sáng D3
+    - (D) T sáng D3
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>W tối và phải cùng ngày U/V. Với tối D3 đã là V, W không thể cùng ngày với V ở D3 ⇒ để ghép theo ngày ở D3, buổi sáng D3 phải là U.</li>
+    </ol>
+    <b>Kết quả:  (B) U sáng D3.</b>
+
+---
+3. Nếu R sáng D2 và T không thể tối D2, điều gì phải đúng?
+    - (A) S tối D2
+    - (B) U tối D2
+    - (C) [x] S tối D2
+    - (D) V tối D2
+    Điểm: 10, -10
+    Phạt: 2 phút
+    Giải thích:
+    <ol>
+        <li>R sáng phải ghép S/T ⇒ tối D2 là S hoặc T.</li>
+        <li>T bị cấm ⇒ buộc S tối D2.</li>
+    </ol>
+    <b>Kết quả:  (C) S tối D2.</b>

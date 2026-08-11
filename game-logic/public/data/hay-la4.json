@@ -1,0 +1,1262 @@
+[
+  {
+    "question": "Tro cốt của người phát minh ra vỏ hộp khoai tây chiên Pringles được chôn cất ở đâu?",
+    "answers": [
+      {
+        "text": "Trong viện bảo tàng",
+        "correct": false
+      },
+      {
+        "text": "Dưới gốc cây khoai tây",
+        "correct": false
+      },
+      {
+        "text": "Trong chính một chiếc hộp Pringles",
+        "correct": true
+      },
+      {
+        "text": "Rải xuống biển",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Máy Fax và Điện thoại, cái nào được phát minh trước?",
+    "answers": [
+      {
+        "text": "Máy Fax",
+        "correct": true
+      },
+      {
+        "text": "Cùng một năm",
+        "correct": false
+      },
+      {
+        "text": "Không so sánh được",
+        "correct": false
+      },
+      {
+        "text": "Điện thoại",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bánh kem sô-cô-la Đức (German Chocolate Cake) thực chất có nguồn gốc từ đâu?",
+    "answers": [
+      {
+        "text": "Thụy Sĩ",
+        "correct": false
+      },
+      {
+        "text": "Đức",
+        "correct": false
+      },
+      {
+        "text": "Mỹ",
+        "correct": true
+      },
+      {
+        "text": "Áo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hãng sản xuất lốp xe lớn nhất thế giới (tính theo số lượng lốp) là hãng nào?",
+    "answers": [
+      {
+        "text": "Goodyear",
+        "correct": false
+      },
+      {
+        "text": "Bridgestone",
+        "correct": false
+      },
+      {
+        "text": "LEGO",
+        "correct": true
+      },
+      {
+        "text": "Michelin",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "McDonald's đã từng thử nghiệm một loại súp lơ (bông cải xanh) có vị gì để dụ trẻ em ăn rau?",
+    "answers": [
+      {
+        "text": "Vị sô-cô-la",
+        "correct": false
+      },
+      {
+        "text": "Vị dâu tây",
+        "correct": false
+      },
+      {
+        "text": "Vị kẹo cao su",
+        "correct": true
+      },
+      {
+        "text": "Vị gà rán",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vào thập niên 1960, CIA đã từng tốn hàng triệu đô la để huấn luyện con vật nào làm điệp viên?",
+    "answers": [
+      {
+        "text": "Con Chuột",
+        "correct": false
+      },
+      {
+        "text": "Con Mèo",
+        "correct": true
+      },
+      {
+        "text": "Con Chó",
+        "correct": false
+      },
+      {
+        "text": "Con Chim bồ câu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Về mặt sinh học, Tôm hùm có đặc điểm gì về sự lão hóa?",
+    "answers": [
+      {
+        "text": "Chúng lột xác để trẻ lại",
+        "correct": false
+      },
+      {
+        "text": "Chúng già đi rất nhanh",
+        "correct": false
+      },
+      {
+        "text": "Chúng chỉ sống được 1 năm",
+        "correct": false
+      },
+      {
+        "text": "Chúng không già đi theo cách thông thường",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Nếu bạn nuốt trọn hạt Táo, điều gì nguy hiểm tiềm tàng (dù rất nhỏ)?",
+    "answers": [
+      {
+        "text": "Hạt táo chứa một lượng nhỏ Xyanua",
+        "correct": true
+      },
+      {
+        "text": "Hạt táo gây viêm ruột thừa ngay lập tức",
+        "correct": false
+      },
+      {
+        "text": "Cây táo sẽ mọc trong bụng",
+        "correct": false
+      },
+      {
+        "text": "Hạt táo làm thủng dạ dày",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Kẹo M&M's ban đầu được phát minh với mục đích gì?",
+    "answers": [
+      {
+        "text": "Làm quà Valentine",
+        "correct": false
+      },
+      {
+        "text": "Trang trí bánh kem",
+        "correct": false
+      },
+      {
+        "text": "Làm thuốc cho trẻ em",
+        "correct": false
+      },
+      {
+        "text": "Cho binh lính ăn trong chiến tranh",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Mứt Nutella ra đời trong hoàn cảnh thiếu thốn nguyên liệu gì sau Thế chiến thứ 2?",
+    "answers": [
+      {
+        "text": "Thiếu Ca cao",
+        "correct": true
+      },
+      {
+        "text": "Thiếu Sữa",
+        "correct": false
+      },
+      {
+        "text": "Thiếu Bơ",
+        "correct": false
+      },
+      {
+        "text": "Thiếu Đường",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cặp song sinh cùng trứng (Identical twins) có dấu vân tay giống hệt nhau không?",
+    "answers": [
+      {
+        "text": "Có, hoàn toàn giống nhau",
+        "correct": false
+      },
+      {
+        "text": "Không, vân tay của họ khác nhau",
+        "correct": true
+      },
+      {
+        "text": "Giống nhau 90%",
+        "correct": false
+      },
+      {
+        "text": "Chỉ giống ở ngón cái",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nhịp tim của Cá Voi Xanh có thể nghe thấy từ khoảng cách bao xa?",
+    "answers": [
+      {
+        "text": "10 mét",
+        "correct": false
+      },
+      {
+        "text": "100 mét",
+        "correct": false
+      },
+      {
+        "text": "Hơn 3 km",
+        "correct": true
+      },
+      {
+        "text": "Chỉ nghe thấy khi áp tai vào",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Ếch gỗ (Wood Frog) ở Alaska làm gì để sống sót qua mùa đông?",
+    "answers": [
+      {
+        "text": "Mọc thêm lông",
+        "correct": false
+      },
+      {
+        "text": "Tự đóng băng cơ thể rồi rã đông sống lại",
+        "correct": true
+      },
+      {
+        "text": "Đào hang sâu dưới lòng đất",
+        "correct": false
+      },
+      {
+        "text": "Di cư về phương Nam",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nếu phơi một con Sứa biển (Jellyfish) ngoài nắng, chuyện gì sẽ xảy ra?",
+    "answers": [
+      {
+        "text": "Nó đổi màu đen",
+        "correct": false
+      },
+      {
+        "text": "Nó sẽ bốc hơi gần hết",
+        "correct": true
+      },
+      {
+        "text": "Nó phồng to lên",
+        "correct": false
+      },
+      {
+        "text": "Nó biến thành đá",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Kiến thường làm hành động gì đầu tiên khi thức dậy vào buổi sáng?",
+    "answers": [
+      {
+        "text": "Vươn vai",
+        "correct": true
+      },
+      {
+        "text": "Ăn sáng",
+        "correct": false
+      },
+      {
+        "text": "Đi vệ sinh",
+        "correct": false
+      },
+      {
+        "text": "Đánh nhau",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con Voi là loài động vật có vú duy nhất không thể làm điều gì?",
+    "answers": [
+      {
+        "text": "Nhảy",
+        "correct": true
+      },
+      {
+        "text": "Nằm",
+        "correct": false
+      },
+      {
+        "text": "Bơi",
+        "correct": false
+      },
+      {
+        "text": "Chạy",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Hươu cao cổ dùng bộ phận nào để lấy gỉ mũi (làm sạch mũi)?",
+    "answers": [
+      {
+        "text": "Cọ vào cây",
+        "correct": false
+      },
+      {
+        "text": "Móng chân",
+        "correct": false
+      },
+      {
+        "text": "Cái lưỡi siêu dài",
+        "correct": true
+      },
+      {
+        "text": "Đuôi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ốc sên có khoảng bao nhiêu cái răng?",
+    "answers": [
+      {
+        "text": "Không có cái nào",
+        "correct": false
+      },
+      {
+        "text": "32 cái",
+        "correct": false
+      },
+      {
+        "text": "100 cái",
+        "correct": false
+      },
+      {
+        "text": "Hơn 14.000 cái",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cá mập có thể thay bao nhiêu chiếc răng trong suốt cuộc đời?",
+    "answers": [
+      {
+        "text": "Khoảng 100 chiếc",
+        "correct": false
+      },
+      {
+        "text": "Chỉ 1 bộ duy nhất",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 50 chiếc",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 30.000 chiếc",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Con Lười (Sloth) có thể nín thở dưới nước bao lâu (lâu hơn cả Cá heo)?",
+    "answers": [
+      {
+        "text": "5 phút",
+        "correct": false
+      },
+      {
+        "text": "Không biết bơi",
+        "correct": false
+      },
+      {
+        "text": "40 phút",
+        "correct": true
+      },
+      {
+        "text": "10 phút",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Não của Mực khổng lồ (Colossal Squid) có hình dáng gì kỳ lạ?",
+    "answers": [
+      {
+        "text": "Hình chiếc bánh Donut",
+        "correct": true
+      },
+      {
+        "text": "Hình vuông",
+        "correct": false
+      },
+      {
+        "text": "Hình ngôi sao",
+        "correct": false
+      },
+      {
+        "text": "Hình tam giác",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ong mật giao tiếp với nhau để chỉ chỗ có hoa bằng cách nào?",
+    "answers": [
+      {
+        "text": "Chạm râu vào nhau",
+        "correct": false
+      },
+      {
+        "text": "Phát ra tiếng kêu vo vo theo nhịp",
+        "correct": false
+      },
+      {
+        "text": "Nhảy múa",
+        "correct": true
+      },
+      {
+        "text": "Tiết ra mùi hương",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nếu Trái Đất ngừng quay đột ngột, điều gì sẽ xảy ra với mọi thứ trên bề mặt (theo quán tính)?",
+    "answers": [
+      {
+        "text": "Mọi thứ sẽ bị văng về phía Đông với tốc độ cực lớn",
+        "correct": true
+      },
+      {
+        "text": "Mọi thứ sẽ bị ép chặt xuống đất",
+        "correct": false
+      },
+      {
+        "text": "Mọi thứ sẽ đứng yên",
+        "correct": false
+      },
+      {
+        "text": "Mọi thứ sẽ bay lên trời",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Kim loại duy nhất có tính kháng khuẩn tự nhiên là gì?",
+    "answers": [
+      {
+        "text": "Chì",
+        "correct": false
+      },
+      {
+        "text": "Đồng",
+        "correct": true
+      },
+      {
+        "text": "Nhôm",
+        "correct": false
+      },
+      {
+        "text": "Sắt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tên gọi của Google xuất phát từ thuật ngữ toán học 'Googol', có nghĩa là gì?",
+    "answers": [
+      {
+        "text": "Vô cực",
+        "correct": false
+      },
+      {
+        "text": "Tìm kiếm vạn năng",
+        "correct": false
+      },
+      {
+        "text": "Thế giới phẳng",
+        "correct": false
+      },
+      {
+        "text": "Số 1 theo sau là 100 số 0",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có thể 'nếm' bằng toàn bộ bề mặt da của nó?",
+    "answers": [
+      {
+        "text": "Ếch",
+        "correct": false
+      },
+      {
+        "text": "Cá Trê",
+        "correct": true
+      },
+      {
+        "text": "Rắn",
+        "correct": false
+      },
+      {
+        "text": "Cá Vàng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong bộ phim 'Công viên kỷ Jura', tiếng gầm của khủng long T-Rex thực chất là tiếng của con gì?",
+    "answers": [
+      {
+        "text": "Tiếng sấm sét",
+        "correct": false
+      },
+      {
+        "text": "Tiếng sư tử",
+        "correct": false
+      },
+      {
+        "text": "Tiếng voi con, hổ và cá sấu trộn lại",
+        "correct": true
+      },
+      {
+        "text": "Tiếng tàu hỏa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tại sao lốp xe ô tô lại có màu đen?",
+    "answers": [
+      {
+        "text": "Do thêm Muội than để tăng độ bền",
+        "correct": true
+      },
+      {
+        "text": "Vì cao su tự nhiên có màu đen",
+        "correct": false
+      },
+      {
+        "text": "Để cho đỡ bẩn",
+        "correct": false
+      },
+      {
+        "text": "Để hấp thụ nhiệt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hộ chiếu của Nhật Bản và Singapore được coi là quyền lực nhất thế giới vì lý do gì?",
+    "answers": [
+      {
+        "text": "Có thời hạn vĩnh viễn",
+        "correct": false
+      },
+      {
+        "text": "Được làm bằng vật liệu chống cháy",
+        "correct": false
+      },
+      {
+        "text": "Được miễn thị thực ở nhiều quốc gia nhất",
+        "correct": true
+      },
+      {
+        "text": "Được mạ vàng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con Hàu (Oyster) có khả năng đặc biệt gì về giới tính?",
+    "answers": [
+      {
+        "text": "Chúng không có giới tính",
+        "correct": false
+      },
+      {
+        "text": "Chúng luôn là con cái",
+        "correct": false
+      },
+      {
+        "text": "Chúng có thể tự thay đổi giới tính nhiều lần",
+        "correct": true
+      },
+      {
+        "text": "Chúng luôn là con đực",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Tôm hùm (Lobster) đi vệ sinh (bài tiết) qua bộ phận nào trên cơ thể?",
+    "answers": [
+      {
+        "text": "Qua càng",
+        "correct": false
+      },
+      {
+        "text": "Qua khuôn mặt",
+        "correct": true
+      },
+      {
+        "text": "Qua đuôi",
+        "correct": false
+      },
+      {
+        "text": "Qua bụng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chó đốm (Dalmatian) khi mới sinh ra có màu gì?",
+    "answers": [
+      {
+        "text": "Có đốm sẵn",
+        "correct": false
+      },
+      {
+        "text": "Màu xám",
+        "correct": false
+      },
+      {
+        "text": "Đen tuyền",
+        "correct": false
+      },
+      {
+        "text": "Trắng toát",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Hệ thống xếp hạng nhà hàng danh giá 'Michelin Star' (Sao Michelin) thực chất do công ty nào sáng lập?",
+    "answers": [
+      {
+        "text": "Bộ du lịch Pháp",
+        "correct": false
+      },
+      {
+        "text": "Một hiệp hội đầu bếp Hoàng gia",
+        "correct": false
+      },
+      {
+        "text": "Công ty sản xuất Lốp xe Michelin",
+        "correct": true
+      },
+      {
+        "text": "Một tạp chí ẩm thực",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Sách Kỷ lục Guinness (Guinness World Records) ban đầu được tạo ra bởi hãng nào?",
+    "answers": [
+      {
+        "text": "Đại học Oxford",
+        "correct": false
+      },
+      {
+        "text": "Thư viện Quốc hội Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Liên Hợp Quốc",
+        "correct": false
+      },
+      {
+        "text": "Hãng bia Guinness",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Chim Cánh cụt thường tặng vật gì cho con cái để 'cầu hôn'?",
+    "answers": [
+      {
+        "text": "Một con cá",
+        "correct": false
+      },
+      {
+        "text": "Một viên sỏi đẹp nhất",
+        "correct": true
+      },
+      {
+        "text": "Một bông hoa biển",
+        "correct": false
+      },
+      {
+        "text": "Một cái vỏ ốc",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tại sao trên các miếng bánh quy mặn (Cracker) lại có các lỗ nhỏ?",
+    "answers": [
+      {
+        "text": "Để tiết kiệm bột",
+        "correct": false
+      },
+      {
+        "text": "Để thoát hơi nước, giúp bánh không bị phồng rộp khi nướng",
+        "correct": true
+      },
+      {
+        "text": "Để dễ bẻ nhỏ",
+        "correct": false
+      },
+      {
+        "text": "Để trang trí cho đẹp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tin đồn 'Ăn nhiều cà rốt giúp sáng mắt trong đêm' bắt nguồn từ đâu?",
+    "answers": [
+      {
+        "text": "Quảng cáo của nông dân trồng cà rốt",
+        "correct": false
+      },
+      {
+        "text": "Nghiên cứu khoa học chính xác",
+        "correct": false
+      },
+      {
+        "text": "Tuyên truyền của Anh trong Thế chiến II để giấu công nghệ Radar",
+        "correct": true
+      },
+      {
+        "text": "Truyền thuyết dân gian",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trước khi có đồng hồ báo thức cơ học, người ta thức dậy đúng giờ bằng cách nào?",
+    "answers": [
+      {
+        "text": "Nhờ gà trống gáy",
+        "correct": false
+      },
+      {
+        "text": "Thuê người chuyên đi gõ cửa/cửa sổ",
+        "correct": true
+      },
+      {
+        "text": "Uống thật nhiều nước trước khi ngủ",
+        "correct": false
+      },
+      {
+        "text": "Họ không cần dậy đúng giờ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ở phương Tây gọi gà tây là 'Turkey' (nước Thổ Nhĩ Kỳ), nhưng ở Thổ Nhĩ Kỳ họ gọi con gà này là gì?",
+    "answers": [
+      {
+        "text": "Gà Mỹ",
+        "correct": false
+      },
+      {
+        "text": "Gà Ai Cập",
+        "correct": false
+      },
+      {
+        "text": "Hindi",
+        "correct": true
+      },
+      {
+        "text": "Gà Pháp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "1 ounce vàng (khoảng 28g) có thể kéo dài thành sợi dây bao xa (do tính dẻo của vàng)?",
+    "answers": [
+      {
+        "text": "Khoảng 10 mét",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 500 mét",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 80 km",
+        "correct": true
+      },
+      {
+        "text": "Khoảng 1 km",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cơ thể con người cần phối hợp khoảng bao nhiêu cơ bắp để thực hiện một bước đi?",
+    "answers": [
+      {
+        "text": "Khoảng 200 cơ bắp",
+        "correct": true
+      },
+      {
+        "text": "Khoảng 10 cơ bắp",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 50 cơ bắp",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 600 cơ bắp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Móng tay ở ngón nào thường mọc nhanh nhất?",
+    "answers": [
+      {
+        "text": "Ngón giữa",
+        "correct": true
+      },
+      {
+        "text": "Ngón cái",
+        "correct": false
+      },
+      {
+        "text": "Ngón út",
+        "correct": false
+      },
+      {
+        "text": "Mọc đều như nhau",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cái bàn nhựa 3 chân nhỏ xíu thường thấy trong hộp Pizza dùng để làm gì?",
+    "answers": [
+      {
+        "text": "Để làm đồ chơi cho trẻ em",
+        "correct": false
+      },
+      {
+        "text": "Chống nắp hộp bị sập xuống dính vào mặt bánh",
+        "correct": true
+      },
+      {
+        "text": "Để giữ các miếng bánh dính vào nhau",
+        "correct": false
+      },
+      {
+        "text": "Để trang trí",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tại sao bàn phím của cây ATM thường làm bằng kim loại?",
+    "answers": [
+      {
+        "text": "Để ngăn kẻ gian đoán mật khẩu dựa trên nhiệt độ ngón tay để lại",
+        "correct": true
+      },
+      {
+        "text": "Để trông sang trọng hơn",
+        "correct": false
+      },
+      {
+        "text": "Để bền hơn nhựa",
+        "correct": false
+      },
+      {
+        "text": "Để dễ vệ sinh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Biển Sargasso nằm ở Bắc Đại Tây Dương có điểm gì độc nhất vô nhị?",
+    "answers": [
+      {
+        "text": "Là biển duy nhất trên thế giới không có bờ",
+        "correct": true
+      },
+      {
+        "text": "Nước biển ở đây ngọt",
+        "correct": false
+      },
+      {
+        "text": "Nước biển màu đỏ",
+        "correct": false
+      },
+      {
+        "text": "Không có sinh vật nào sống được",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tượng Nữ thần Tự do đi giày size bao nhiêu (theo quy chuẩn Mỹ)?",
+    "answers": [
+      {
+        "text": "Size 5000",
+        "correct": false
+      },
+      {
+        "text": "Size 50",
+        "correct": false
+      },
+      {
+        "text": "Size 879",
+        "correct": true
+      },
+      {
+        "text": "Size 100",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tại sao quần Jeans thường có các nút đinh tán bằng đồng ở túi?",
+    "answers": [
+      {
+        "text": "Để chống mài mòn",
+        "correct": false
+      },
+      {
+        "text": "Để gia cố các điểm dễ bị rách khi lao động nặng",
+        "correct": true
+      },
+      {
+        "text": "Để giữ tiền xu không rơi",
+        "correct": false
+      },
+      {
+        "text": "Để trang trí cho đẹp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quả Chuối mọc trên cây theo hướng nào?",
+    "answers": [
+      {
+        "text": "Mọc lung tung",
+        "correct": false
+      },
+      {
+        "text": "Hướng cong lên trời",
+        "correct": true
+      },
+      {
+        "text": "Hướng ngang",
+        "correct": false
+      },
+      {
+        "text": "Hướng rủ xuống đất",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vết lõm sâu dưới đáy chai rượu vang (gọi là 'Punt') có tác dụng chính là gì?",
+    "answers": [
+      {
+        "text": "Giúp chai đứng vững hơn và lắng cặn rượu vào khe",
+        "correct": true
+      },
+      {
+        "text": "Để cầm nắm dễ hơn",
+        "correct": false
+      },
+      {
+        "text": "Để tiết kiệm rượu",
+        "correct": false
+      },
+      {
+        "text": "Để người phục vụ đặt ngón tay cái vào",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Khi bạn hắt hơi (hắt xì), luồng gió bắn ra có thể đạt tốc độ bao nhiêu?",
+    "answers": [
+      {
+        "text": "Khoảng 10 km/h",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 160 km/h",
+        "correct": true
+      },
+      {
+        "text": "Tốc độ âm thanh",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 50 km/h",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bạn có thể hắt hơi khi đang mở mắt không?",
+    "answers": [
+      {
+        "text": "Gần như không thể",
+        "correct": true
+      },
+      {
+        "text": "Có, rất dễ dàng",
+        "correct": false
+      },
+      {
+        "text": "Chỉ phụ nữ mới làm được",
+        "correct": false
+      },
+      {
+        "text": "Chỉ trẻ em mới làm được",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tại sao bác sĩ thường mặc áo blouse trắng khi khám bệnh, nhưng mặc áo màu xanh (hoặc lục) khi phẫu thuật?",
+    "answers": [
+      {
+        "text": "Vì quy định ngẫu nhiên",
+        "correct": false
+      },
+      {
+        "text": "Vì màu xanh khó bám bẩn",
+        "correct": false
+      },
+      {
+        "text": "Để giúp mắt đỡ mỏi và nhìn rõ màu đỏ của máu hơn",
+        "correct": true
+      },
+      {
+        "text": "Vì áo màu xanh rẻ hơn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hươu cao cổ ngủ rất ít, trung bình mỗi ngày chúng ngủ bao lâu?",
+    "answers": [
+      {
+        "text": "Chúng không bao giờ ngủ",
+        "correct": false
+      },
+      {
+        "text": "12 tiếng",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 30 phút",
+        "correct": true
+      },
+      {
+        "text": "8 tiếng như người",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thời gian mang thai của loài Voi là bao lâu?",
+    "answers": [
+      {
+        "text": "12 tháng",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 22 tháng",
+        "correct": true
+      },
+      {
+        "text": "9 tháng 10 ngày",
+        "correct": false
+      },
+      {
+        "text": "3 năm",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Lưỡi của loài Mèo có đặc điểm gì giúp chúng chải chuốt bộ lông?",
+    "answers": [
+      {
+        "text": "Rất trơn và mịn",
+        "correct": false
+      },
+      {
+        "text": "Lưỡi mèo chẻ đôi",
+        "correct": false
+      },
+      {
+        "text": "Có các gai nhỏ mọc ngược",
+        "correct": true
+      },
+      {
+        "text": "Tiết ra dầu gội",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cá Vàng có nhắm mắt khi ngủ không?",
+    "answers": [
+      {
+        "text": "Có, chúng nhắm nghiền mắt",
+        "correct": false
+      },
+      {
+        "text": "Chúng nhắm một mắt",
+        "correct": false
+      },
+      {
+        "text": "Cá vàng không bao giờ ngủ",
+        "correct": false
+      },
+      {
+        "text": "Không, vì chúng không có mí mắt",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Bộ lông của Rái cá biển (Sea Otter) dày đến mức nào?",
+    "answers": [
+      {
+        "text": "Chúng không có lông",
+        "correct": false
+      },
+      {
+        "text": "Rất thưa thớt",
+        "correct": false
+      },
+      {
+        "text": "Giống như lông chó",
+        "correct": false
+      },
+      {
+        "text": "Hơn 100.000 sợi lông trên mỗi cm vuông",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Ai được coi là người phát minh ra trường học và hệ thống giáo dục công lập hiện đại?",
+    "answers": [
+      {
+        "text": "Thomas Edison",
+        "correct": false
+      },
+      {
+        "text": "Albert Einstein",
+        "correct": false
+      },
+      {
+        "text": "Horace Mann",
+        "correct": true
+      },
+      {
+        "text": "Isaac Newton",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loại giấy bạc (giấy nhôm) bọc thực phẩm: Mặt bóng tốt hơn hay mặt mờ tốt hơn?",
+    "answers": [
+      {
+        "text": "Hiệu quả như nhau",
+        "correct": true
+      },
+      {
+        "text": "Mặt bóng giữ nhiệt tốt hơn hẳn",
+        "correct": false
+      },
+      {
+        "text": "Mặt mờ giữ nhiệt tốt hơn hẳn",
+        "correct": false
+      },
+      {
+        "text": "Mặt bóng dùng cho đồ lạnh, mặt mờ dùng cho đồ nóng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Về mặt vật lý, Sấm (tiếng động) và Chớp (ánh sáng) cái nào xảy ra trước?",
+    "answers": [
+      {
+        "text": "Sấm xảy ra trước",
+        "correct": false
+      },
+      {
+        "text": "Chớp xảy ra trước",
+        "correct": false
+      },
+      {
+        "text": "Xảy ra cùng lúc",
+        "correct": true
+      },
+      {
+        "text": "Tùy cơn mưa",
+        "correct": false
+      }
+    ]
+  }
+]

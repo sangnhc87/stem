@@ -1,0 +1,1262 @@
+[
+  {
+    "question": "Đường biên giới trên đất liền dài nhất của nước Pháp là chung với quốc gia nào?",
+    "answers": [
+      {
+        "text": "Tây Ban Nha",
+        "correct": false
+      },
+      {
+        "text": "Brazil",
+        "correct": true
+      },
+      {
+        "text": "Đức",
+        "correct": false
+      },
+      {
+        "text": "Ý",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Ếch dùng bộ phận nào để hỗ trợ việc nuốt thức ăn?",
+    "answers": [
+      {
+        "text": "Lưỡi",
+        "correct": false
+      },
+      {
+        "text": "Cơ cổ",
+        "correct": false
+      },
+      {
+        "text": "Hai chân trước",
+        "correct": false
+      },
+      {
+        "text": "Đôi mắt",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Sô-cô-la trắng (White Chocolate) thực chất là gì?",
+    "answers": [
+      {
+        "text": "Hỗn hợp bơ ca cao, đường và sữa",
+        "correct": true
+      },
+      {
+        "text": "Sô-cô-la đen được tẩy trắng",
+        "correct": false
+      },
+      {
+        "text": "Làm từ hạt vani",
+        "correct": false
+      },
+      {
+        "text": "Làm từ bột mì",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Mùi thơm đặc trưng của cỏ mới cắt thực chất là gì?",
+    "answers": [
+      {
+        "text": "Mùi côn trùng",
+        "correct": false
+      },
+      {
+        "text": "Mùi đất bốc lên",
+        "correct": false
+      },
+      {
+        "text": "Tín hiệu kêu cứu của cây cỏ",
+        "correct": true
+      },
+      {
+        "text": "Mùi nhựa cây",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong lịch sử, ai là người châu Âu đầu tiên đặt chân đến Châu Mỹ (trước cả Columbus)?",
+    "answers": [
+      {
+        "text": "Magellan",
+        "correct": false
+      },
+      {
+        "text": "Amerigo Vespucci",
+        "correct": false
+      },
+      {
+        "text": "Leif Erikson",
+        "correct": true
+      },
+      {
+        "text": "Marco Polo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Công thức ban đầu của nước giải khát Coca-Cola (năm 1886) có chứa thành phần gây nghiện nào?",
+    "answers": [
+      {
+        "text": "Cocain",
+        "correct": true
+      },
+      {
+        "text": "Rượu mạnh",
+        "correct": false
+      },
+      {
+        "text": "Thuốc phiện",
+        "correct": false
+      },
+      {
+        "text": "Cần sa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vữa dùng để xây dựng Vạn Lý Trường Thành có thành phần đặc biệt nào giúp nó siêu bền?",
+    "answers": [
+      {
+        "text": "Cháo gạo nếp",
+        "correct": true
+      },
+      {
+        "text": "Nhựa cây",
+        "correct": false
+      },
+      {
+        "text": "Lòng trắng trứng",
+        "correct": false
+      },
+      {
+        "text": "Mật mía",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hai bộ phận nào trên khuôn mặt con người không bao giờ ngừng phát triển (to ra) cho đến lúc già?",
+    "answers": [
+      {
+        "text": "Trán và Cằm",
+        "correct": false
+      },
+      {
+        "text": "Mắt và Miệng",
+        "correct": false
+      },
+      {
+        "text": "Mũi và Tai",
+        "correct": true
+      },
+      {
+        "text": "Lông mày và Lông mi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Máy bán hàng tự động (Vending Machine) đầu tiên trên thế giới được phát minh ở Hy Lạp cổ đại để bán gì?",
+    "answers": [
+      {
+        "text": "Bánh mì",
+        "correct": false
+      },
+      {
+        "text": "Rượu vang",
+        "correct": false
+      },
+      {
+        "text": "Nước thánh",
+        "correct": true
+      },
+      {
+        "text": "Dầu ô liu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cuộc chiến tranh dài nhất lịch sử (335 năm) giữa Hà Lan và quần đảo Scilly có bao nhiêu người thiệt mạng?",
+    "answers": [
+      {
+        "text": "Hàng nghìn người",
+        "correct": false
+      },
+      {
+        "text": "100 người",
+        "correct": false
+      },
+      {
+        "text": "0 người",
+        "correct": true
+      },
+      {
+        "text": "1 triệu người",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cái tên 'Quả Cam' (Orange) và 'Màu Cam' (Orange), cái nào có trước trong ngôn ngữ?",
+    "answers": [
+      {
+        "text": "Tên Màu Cam có trước",
+        "correct": false
+      },
+      {
+        "text": "Có cùng lúc",
+        "correct": false
+      },
+      {
+        "text": "Tên Quả Cam có trước",
+        "correct": true
+      },
+      {
+        "text": "Không liên quan nhau",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vòng kim loại nhỏ nối giữa thân bút chì và cục tẩy gọi là gì?",
+    "answers": [
+      {
+        "text": "Ferrule",
+        "correct": true
+      },
+      {
+        "text": "Connector",
+        "correct": false
+      },
+      {
+        "text": "Ring",
+        "correct": false
+      },
+      {
+        "text": "Joint",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hầu hết các loại son môi có hiệu ứng lấp lánh (shimmer) đều chứa thành phần gì?",
+    "answers": [
+      {
+        "text": "Vảy cá",
+        "correct": true
+      },
+      {
+        "text": "Bột kim cương",
+        "correct": false
+      },
+      {
+        "text": "Nhựa cây",
+        "correct": false
+      },
+      {
+        "text": "Vụn thủy tinh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Từ 'OK' phổ biến toàn cầu thực chất được cho là viết tắt hài hước của cụm từ gì?",
+    "answers": [
+      {
+        "text": "Okay Key",
+        "correct": false
+      },
+      {
+        "text": "Open Key",
+        "correct": false
+      },
+      {
+        "text": "Only Kidding",
+        "correct": false
+      },
+      {
+        "text": "Oll Korrect",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Mèo trưởng thành thường gặp vấn đề gì về tiêu hóa?",
+    "answers": [
+      {
+        "text": "Không tiêu hóa được thịt",
+        "correct": false
+      },
+      {
+        "text": "Dị ứng với nước",
+        "correct": false
+      },
+      {
+        "text": "Không ăn được cá",
+        "correct": false
+      },
+      {
+        "text": "Không dung nạp Lactose",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tiền giấy (như đồng Đô la Mỹ) thực chất được làm từ vật liệu gì?",
+    "answers": [
+      {
+        "text": "Lụa",
+        "correct": false
+      },
+      {
+        "text": "Bột gỗ",
+        "correct": false
+      },
+      {
+        "text": "Nhựa tái chế",
+        "correct": false
+      },
+      {
+        "text": "Vải bông và Lanh",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Thác Máu (Blood Falls) ở Nam Cực có dòng nước màu đỏ là do đâu?",
+    "answers": [
+      {
+        "text": "Do máu động vật",
+        "correct": false
+      },
+      {
+        "text": "Do phẩm màu tự nhiên",
+        "correct": false
+      },
+      {
+        "text": "Do tảo đỏ",
+        "correct": false
+      },
+      {
+        "text": "Do nước chứa nhiều Sắt bị gỉ",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Ngọc trai tự nhiên sẽ bị tan chảy nếu ngâm trong dung dịch gì?",
+    "answers": [
+      {
+        "text": "Giấm",
+        "correct": true
+      },
+      {
+        "text": "Nước sôi",
+        "correct": false
+      },
+      {
+        "text": "Dầu ăn",
+        "correct": false
+      },
+      {
+        "text": "Rượu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Vào thế kỷ 18 ở Châu Âu, quả Cà chua từng bị hiểu lầm là gì?",
+    "answers": [
+      {
+        "text": "Vũ khí ném nhau",
+        "correct": false
+      },
+      {
+        "text": "Quả trang trí Giáng sinh",
+        "correct": false
+      },
+      {
+        "text": "Quả độc",
+        "correct": true
+      },
+      {
+        "text": "Thần dược",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con Gấu trúc (Panda) khi mới sinh ra có kích thước tương đương con gì?",
+    "answers": [
+      {
+        "text": "Một quả bóng đá",
+        "correct": false
+      },
+      {
+        "text": "Một con chuột nhắt",
+        "correct": true
+      },
+      {
+        "text": "Một con mèo",
+        "correct": false
+      },
+      {
+        "text": "Một con chó",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Nếu bạn nuốt phải kẹo cao su, nó có nằm trong bụng 7 năm như lời đồn không?",
+    "answers": [
+      {
+        "text": "Nó sẽ nằm đó vĩnh viễn",
+        "correct": false
+      },
+      {
+        "text": "Không, nó sẽ bị thải ra ngoài sau vài ngày",
+        "correct": true
+      },
+      {
+        "text": "Nó sẽ tan chảy thành nước",
+        "correct": false
+      },
+      {
+        "text": "Có, nó dính chặt vào ruột",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con người là loài động vật duy nhất sở hữu bộ phận nào trên xương hàm?",
+    "answers": [
+      {
+        "text": "Môi",
+        "correct": false
+      },
+      {
+        "text": "Cằm",
+        "correct": true
+      },
+      {
+        "text": "Răng nanh",
+        "correct": false
+      },
+      {
+        "text": "Lợi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tổng thống Mỹ Abraham Lincoln từng là nhà vô địch môn thể thao nào?",
+    "answers": [
+      {
+        "text": "Bắn súng",
+        "correct": false
+      },
+      {
+        "text": "Chạy bộ",
+        "correct": false
+      },
+      {
+        "text": "Quyền anh",
+        "correct": false
+      },
+      {
+        "text": "Đấu vật",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cây Lò xo đồ chơi (Slinky) ban đầu được phát minh nhằm mục đích gì?",
+    "answers": [
+      {
+        "text": "Làm lò xo giảm xóc xe",
+        "correct": false
+      },
+      {
+        "text": "Làm ăng-ten radio",
+        "correct": false
+      },
+      {
+        "text": "Làm đồ buộc tóc",
+        "correct": false
+      },
+      {
+        "text": "Giữ ổn định đồ đạc trên tàu biển khi sóng rung lắc",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài cây nào được biết đến là 'cây ăn thịt' có khả năng đếm số lần con mồi chạm vào?",
+    "answers": [
+      {
+        "text": "Hoa Hướng dương",
+        "correct": false
+      },
+      {
+        "text": "Cây Nắp ấm",
+        "correct": false
+      },
+      {
+        "text": "Cây Bắt ruồi",
+        "correct": true
+      },
+      {
+        "text": "Cây Xương rồng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tại sao bộ bài Tây tiêu chuẩn lại có 52 lá?",
+    "answers": [
+      {
+        "text": "Do kích thước hộp bài",
+        "correct": false
+      },
+      {
+        "text": "Tượng trưng cho 52 tuần trong một năm",
+        "correct": true
+      },
+      {
+        "text": "Tượng trưng cho 52 tiểu bang",
+        "correct": false
+      },
+      {
+        "text": "Số lượng ngẫu nhiên",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có thể tạo ra âm thanh lớn nhất thế giới (lớn hơn cả động cơ máy bay phản lực)?",
+    "answers": [
+      {
+        "text": "Voi",
+        "correct": false
+      },
+      {
+        "text": "Khỉ rú",
+        "correct": false
+      },
+      {
+        "text": "Cá Nhà Táng",
+        "correct": true
+      },
+      {
+        "text": "Sư tử",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong thần thoại Bắc Âu, thế giới được tạo ra từ xác của người khổng lồ nào?",
+    "answers": [
+      {
+        "text": "Loki",
+        "correct": false
+      },
+      {
+        "text": "Ymir",
+        "correct": true
+      },
+      {
+        "text": "Thor",
+        "correct": false
+      },
+      {
+        "text": "Odin",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bộ phận nào của Cá mập thực chất được làm từ sụn chứ không phải xương?",
+    "answers": [
+      {
+        "text": "Chỉ có hàm răng",
+        "correct": false
+      },
+      {
+        "text": "Toàn bộ bộ khung xương",
+        "correct": true
+      },
+      {
+        "text": "Cá mập có xương cứng như cá thường",
+        "correct": false
+      },
+      {
+        "text": "Chỉ có vây",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tốc độ bay của nút chai rượu vang (Champagne) khi bật ra có thể đạt đến bao nhiêu?",
+    "answers": [
+      {
+        "text": "Khoảng 40-50 km/h",
+        "correct": true
+      },
+      {
+        "text": "10 km/h",
+        "correct": false
+      },
+      {
+        "text": "5 km/h",
+        "correct": false
+      },
+      {
+        "text": "100 km/h",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Về mặt thời gian, loài Khủng long bạo chúa (T-Rex) sống gần thời đại nào hơn?",
+    "answers": [
+      {
+        "text": "Thời kỳ hình thành Trái Đất",
+        "correct": false
+      },
+      {
+        "text": "Thời kỳ cá lên cạn",
+        "correct": false
+      },
+      {
+        "text": "Con người sử dụng iPhone",
+        "correct": true
+      },
+      {
+        "text": "Loài Khủng long phiến sừng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Dòng sông Amazon vĩ đại chảy qua nhiều quốc gia, nhưng có bao nhiêu cây cầu bắc qua nó?",
+    "answers": [
+      {
+        "text": "Chỉ có 1 cây cầu",
+        "correct": false
+      },
+      {
+        "text": "Có 50 cây cầu",
+        "correct": false
+      },
+      {
+        "text": "Không có cây cầu nào",
+        "correct": true
+      },
+      {
+        "text": "Có hơn 100 cây cầu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Mũi tên nhỏ nằm cạnh biểu tượng cây xăng trên bảng đồng hồ ô tô có ý nghĩa gì?",
+    "answers": [
+      {
+        "text": "Chỉ hướng nắp bình xăng nằm ở bên nào của xe",
+        "correct": true
+      },
+      {
+        "text": "Chỉ hướng đi tới trạm xăng gần nhất",
+        "correct": false
+      },
+      {
+        "text": "Chỉ mức tiêu thụ nhiên liệu",
+        "correct": false
+      },
+      {
+        "text": "Chỉ hướng gió",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tại sao tay nắm cửa ở các tòa nhà cổ thường làm bằng đồng thau (Brass)?",
+    "answers": [
+      {
+        "text": "Vì đồng có khả năng tự khử trùng, diệt vi khuẩn",
+        "correct": true
+      },
+      {
+        "text": "Vì nó nhẹ",
+        "correct": false
+      },
+      {
+        "text": "Vì nó rẻ tiền",
+        "correct": false
+      },
+      {
+        "text": "Vì nó có màu vàng đẹp",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Từ viết tắt 'WiFi' thực chất có nghĩa đầy đủ là gì?",
+    "answers": [
+      {
+        "text": "Wireless Fidelity",
+        "correct": false
+      },
+      {
+        "text": "Wide Frequency",
+        "correct": false
+      },
+      {
+        "text": "Không có nghĩa gì cả",
+        "correct": true
+      },
+      {
+        "text": "Wire Free",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Món Kem que (Popsicle) được phát minh bởi ai?",
+    "answers": [
+      {
+        "text": "Một đầu bếp 5 sao",
+        "correct": false
+      },
+      {
+        "text": "Một bác sĩ nha khoa",
+        "correct": false
+      },
+      {
+        "text": "Một nhà khoa học thực phẩm",
+        "correct": false
+      },
+      {
+        "text": "Một cậu bé 11 tuổi",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài chim Gõ kiến quấn cái lưỡi siêu dài của nó ở đâu khi không sử dụng?",
+    "answers": [
+      {
+        "text": "Cuộn tròn trong mỏ",
+        "correct": false
+      },
+      {
+        "text": "Thụt xuống cổ họng",
+        "correct": false
+      },
+      {
+        "text": "Gấp lại dưới hàm",
+        "correct": false
+      },
+      {
+        "text": "Quấn vòng quanh hộp sọ",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Màu lông thực sự (màu nền da) của Ngựa vằn là màu gì?",
+    "answers": [
+      {
+        "text": "Màu Trắng",
+        "correct": false
+      },
+      {
+        "text": "Màu Đen",
+        "correct": true
+      },
+      {
+        "text": "Không màu",
+        "correct": false
+      },
+      {
+        "text": "Màu Xám",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Khi ăn quả Dứa (Thơm), tại sao lưỡi bạn lại có cảm giác rát?",
+    "answers": [
+      {
+        "text": "Vì Dứa quá chua",
+        "correct": false
+      },
+      {
+        "text": "Vì Dứa có enzyme Bromelain đang 'tiêu hóa' lại lưỡi bạn",
+        "correct": true
+      },
+      {
+        "text": "Vì Dứa có gai nhỏ",
+        "correct": false
+      },
+      {
+        "text": "Vì Dứa chứa muối",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đỉnh núi Everest (nơi cao nhất thế giới) thực chất được cấu tạo từ loại đá gì?",
+    "answers": [
+      {
+        "text": "Đá Granite",
+        "correct": false
+      },
+      {
+        "text": "Đá Magma núi lửa",
+        "correct": false
+      },
+      {
+        "text": "Đá Kim cương",
+        "correct": false
+      },
+      {
+        "text": "Đá vôi biển",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Cục bông tròn (Pom-pom) trên mũ len mùa đông ban đầu có công dụng gì?",
+    "answers": [
+      {
+        "text": "Để treo mũ lên móc",
+        "correct": false
+      },
+      {
+        "text": "Giúp thủy thủ không bị cụng đầu vào trần tàu thấp",
+        "correct": true
+      },
+      {
+        "text": "Để trang trí cho đẹp",
+        "correct": false
+      },
+      {
+        "text": "Để giữ ấm đỉnh đầu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Món Khoai tây chiên lát mỏng (Potato Chips) ra đời trong hoàn cảnh nào?",
+    "answers": [
+      {
+        "text": "Do muốn tiết kiệm khoai tây",
+        "correct": false
+      },
+      {
+        "text": "Do máy thái bị hỏng",
+        "correct": false
+      },
+      {
+        "text": "Do công thức hoàng gia",
+        "correct": false
+      },
+      {
+        "text": "Do đầu bếp tức giận thái mỏng để 'trả đũa' khách hàng khó tính",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Từ viết tắt 'OMG' (Oh My God) được sử dụng lần đầu tiên trong hoàn cảnh nào?",
+    "answers": [
+      {
+        "text": "Trong một bức thư gửi Winston Churchill năm 1917",
+        "correct": true
+      },
+      {
+        "text": "Trong bài hát của Madonna",
+        "correct": false
+      },
+      {
+        "text": "Trong tin nhắn Yahoo Chat năm 2000",
+        "correct": false
+      },
+      {
+        "text": "Trong Kinh thánh",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Tôm tít (Mantis Shrimp) có cú đấm mạnh đến mức nào?",
+    "answers": [
+      {
+        "text": "Mạnh bằng cú đấm của người",
+        "correct": false
+      },
+      {
+        "text": "Nhanh như viên đạn, làm sôi nước xung quanh",
+        "correct": true
+      },
+      {
+        "text": "Chỉ đủ làm vỡ vỏ ốc nhỏ",
+        "correct": false
+      },
+      {
+        "text": "Yếu ớt, không gây sát thương",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Phấn viết bảng (Chalk) ngày nay thường được làm từ thạch cao, nhưng phấn tự nhiên thực chất là gì?",
+    "answers": [
+      {
+        "text": "Bụi núi lửa",
+        "correct": false
+      },
+      {
+        "text": "Đá vôi nhân tạo",
+        "correct": false
+      },
+      {
+        "text": "Xác của hàng tỷ sinh vật phù du cổ đại",
+        "correct": true
+      },
+      {
+        "text": "Xương nghiền nhỏ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hai nhà sáng lập của Adidas và Puma có quan hệ gì với nhau?",
+    "answers": [
+      {
+        "text": "Là hai anh em ruột nhưng ghét nhau",
+        "correct": true
+      },
+      {
+        "text": "Là đối thủ không quen biết",
+        "correct": false
+      },
+      {
+        "text": "Là bạn thân",
+        "correct": false
+      },
+      {
+        "text": "Là cha con",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cái lỗ nhỏ trên tay cầm của nồi/chảo ngoài việc để treo lên thì còn dùng làm gì?",
+    "answers": [
+      {
+        "text": "Để trang trí",
+        "correct": false
+      },
+      {
+        "text": "Để thoát nhiệt",
+        "correct": false
+      },
+      {
+        "text": "Để gác thìa/muôi nấu ăn cho đỡ bẩn",
+        "correct": true
+      },
+      {
+        "text": "Để giảm trọng lượng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Hương Vani tự nhiên được chiết xuất từ loài hoa nào?",
+    "answers": [
+      {
+        "text": "Hoa Phong Lan",
+        "correct": true
+      },
+      {
+        "text": "Hoa Hồng",
+        "correct": false
+      },
+      {
+        "text": "Hoa Huệ",
+        "correct": false
+      },
+      {
+        "text": "Hoa Hướng Dương",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ở Nhật Bản, có một hòn đảo được thống trị bởi loài vật nào?",
+    "answers": [
+      {
+        "text": "Rắn",
+        "correct": false
+      },
+      {
+        "text": "Chuột",
+        "correct": false
+      },
+      {
+        "text": "Thỏ",
+        "correct": true
+      },
+      {
+        "text": "Gấu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thú mỏ vịt đực (Male Platypus) có vũ khí bí mật gì ở chân sau?",
+    "answers": [
+      {
+        "text": "Cựa chứa nọc độc gây đau đớn tột cùng",
+        "correct": true
+      },
+      {
+        "text": "Móng vuốt sắc như dao",
+        "correct": false
+      },
+      {
+        "text": "Túi đựng con",
+        "correct": false
+      },
+      {
+        "text": "Giác hút để leo trèo",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài động vật nào có khả năng tái tạo lại tứ chi, tủy sống, tim và thậm chí cả não bộ?",
+    "answers": [
+      {
+        "text": "Thạch sùng",
+        "correct": false
+      },
+      {
+        "text": "Kỳ giông Axolotl",
+        "correct": true
+      },
+      {
+        "text": "Cá sấu",
+        "correct": false
+      },
+      {
+        "text": "Sao biển",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Về mặt thực vật học, Dưa chuột (Dưa leo) là gì?",
+    "answers": [
+      {
+        "text": "Là một loại rau",
+        "correct": false
+      },
+      {
+        "text": "Là rễ cây",
+        "correct": false
+      },
+      {
+        "text": "Là thân cây",
+        "correct": false
+      },
+      {
+        "text": "Là một loại trái cây",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tại sao chim Hồng hạc thường đứng một chân?",
+    "answers": [
+      {
+        "text": "Để đánh lừa con mồi",
+        "correct": false
+      },
+      {
+        "text": "Để giữ nhiệt",
+        "correct": true
+      },
+      {
+        "text": "Để giữ thăng bằng tốt hơn",
+        "correct": false
+      },
+      {
+        "text": "Vì chân kia bị đau",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Muối Hồng Himalaya thực chất là loại muối gì?",
+    "answers": [
+      {
+        "text": "Muối lấy từ núi lửa",
+        "correct": false
+      },
+      {
+        "text": "Muối ăn thông thường",
+        "correct": false
+      },
+      {
+        "text": "Muối biển cổ đại",
+        "correct": true
+      },
+      {
+        "text": "Muối nhân tạo nhuộm màu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Từ 'Unfriend' (Hủy kết bạn) xuất hiện lần đầu vào năm nào?",
+    "answers": [
+      {
+        "text": "Năm 2004",
+        "correct": false
+      },
+      {
+        "text": "Năm 1659",
+        "correct": true
+      },
+      {
+        "text": "Năm 1990",
+        "correct": false
+      },
+      {
+        "text": "Năm 2010",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc kỳ của nước nào có hình khẩu súng AK-47?",
+    "answers": [
+      {
+        "text": "Cuba",
+        "correct": false
+      },
+      {
+        "text": "Nga",
+        "correct": false
+      },
+      {
+        "text": "Bắc Triều Tiên",
+        "correct": false
+      },
+      {
+        "text": "Mozambique",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Con người sẽ cao hơn vào thời điểm nào trong ngày?",
+    "answers": [
+      {
+        "text": "Buổi tối trước khi đi ngủ",
+        "correct": false
+      },
+      {
+        "text": "Buổi sáng khi vừa ngủ dậy",
+        "correct": true
+      },
+      {
+        "text": "Lúc nào cũng cao bằng nhau",
+        "correct": false
+      },
+      {
+        "text": "Buổi trưa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào là động vật có vú duy nhất có vảy (lớp giáp sừng)?",
+    "answers": [
+      {
+        "text": "Nhím",
+        "correct": false
+      },
+      {
+        "text": "Tê giác",
+        "correct": false
+      },
+      {
+        "text": "Thú ăn kiến",
+        "correct": false
+      },
+      {
+        "text": "Tê tê",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Hiện tượng 'Hàn nguội' (Cold Welding) trong vũ trụ là gì?",
+    "answers": [
+      {
+        "text": "Hai miếng kim loại chạm nhau sẽ tự dính chặt vĩnh viễn",
+        "correct": true
+      },
+      {
+        "text": "Hàn bằng nước đá",
+        "correct": false
+      },
+      {
+        "text": "Kim loại bị vỡ vụn vì lạnh",
+        "correct": false
+      },
+      {
+        "text": "Kim loại biến thành lỏng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chiếc vòng nhỏ phía sau lưng áo sơ mi nam (Locker loop) dùng để làm gì?",
+    "answers": [
+      {
+        "text": "Để giữ cà vạt",
+        "correct": false
+      },
+      {
+        "text": "Để trang trí",
+        "correct": false
+      },
+      {
+        "text": "Để luồn dây tai nghe",
+        "correct": false
+      },
+      {
+        "text": "Để treo áo trong tủ đồ mà không bị nhàu",
+        "correct": true
+      }
+    ]
+  }
+]

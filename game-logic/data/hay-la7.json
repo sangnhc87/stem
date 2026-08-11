@@ -1,0 +1,1052 @@
+[
+  {
+    "question": "Máu của con người khi ở trong cơ thể (chưa tiếp xúc với không khí) có màu gì?",
+    "answers": [
+      {
+        "text": "Màu Tím",
+        "correct": false
+      },
+      {
+        "text": "Không màu",
+        "correct": false
+      },
+      {
+        "text": "Màu Đỏ thẫm",
+        "correct": true
+      },
+      {
+        "text": "Màu Xanh dương",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Sơ đồ vị giác trên lưỡi (đầu lưỡi ngọt, cuống lưỡi đắng...) mà chúng ta hay học là đúng hay sai?",
+    "answers": [
+      {
+        "text": "Đúng hoàn toàn",
+        "correct": false
+      },
+      {
+        "text": "Chỉ đúng với trẻ em",
+        "correct": false
+      },
+      {
+        "text": "Chỉ đúng với vị ngọt",
+        "correct": false
+      },
+      {
+        "text": "Sai hoàn toàn",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Nếu thả một đồng xu từ tòa nhà cao tầng xuống trúng đầu người đi đường, chuyện gì sẽ xảy ra?",
+    "answers": [
+      {
+        "text": "Gây tử vong ngay lập tức",
+        "correct": false
+      },
+      {
+        "text": "Chỉ thấy đau hoặc sưng nhẹ",
+        "correct": true
+      },
+      {
+        "text": "Đồng xu nổ tung",
+        "correct": false
+      },
+      {
+        "text": "Đồng xu xuyên qua sọ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài hoa Trạng Nguyên (Poinsettia) màu đỏ thường thấy dịp Giáng sinh có độc chết người không?",
+    "answers": [
+      {
+        "text": "Gây mù mắt",
+        "correct": false
+      },
+      {
+        "text": "Có, cực độc",
+        "correct": false
+      },
+      {
+        "text": "Không, nó chỉ gây khó chịu tiêu hóa nhẹ nếu ăn phải",
+        "correct": true
+      },
+      {
+        "text": "Gây tê liệt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Lạc đà chứa gì trong cái bướu trên lưng?",
+    "answers": [
+      {
+        "text": "Xương sống",
+        "correct": false
+      },
+      {
+        "text": "Nước",
+        "correct": false
+      },
+      {
+        "text": "Mỡ",
+        "correct": true
+      },
+      {
+        "text": "Không khí",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Chó có bị mù màu (chỉ thấy đen trắng) như lời đồn không?",
+    "answers": [
+      {
+        "text": "Chúng thấy đủ 7 màu cầu vồng",
+        "correct": false
+      },
+      {
+        "text": "Chúng chỉ thấy màu đỏ",
+        "correct": false
+      },
+      {
+        "text": "Không, chúng thấy được màu vàng và xanh dương",
+        "correct": true
+      },
+      {
+        "text": "Có, hoàn toàn mù màu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Huyền thoại về loài chuột Lemming tự tử tập thể lao xuống vực bắt nguồn từ đâu?",
+    "answers": [
+      {
+        "text": "Do biến đổi khí hậu",
+        "correct": false
+      },
+      {
+        "text": "Do thiếu thức ăn",
+        "correct": false
+      },
+      {
+        "text": "Do tập tính tự nhiên",
+        "correct": false
+      },
+      {
+        "text": "Do một bộ phim tài liệu của Disney dàn dựng năm 1958",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Đà điểu có vùi đầu xuống cát khi sợ hãi không?",
+    "answers": [
+      {
+        "text": "Có, để trốn kẻ thù",
+        "correct": false
+      },
+      {
+        "text": "Chỉ đà điểu con mới làm vậy",
+        "correct": false
+      },
+      {
+        "text": "Chỉ làm vậy khi ngủ",
+        "correct": false
+      },
+      {
+        "text": "Không, chúng sẽ bỏ chạy hoặc đá trả",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Chạm tay vào con Cóc có bị lây ghẻ không?",
+    "answers": [
+      {
+        "text": "Chỉ bị nếu tay ướt",
+        "correct": false
+      },
+      {
+        "text": "Chỉ bị vào mùa mưa",
+        "correct": false
+      },
+      {
+        "text": "Có, da cóc rất độc",
+        "correct": false
+      },
+      {
+        "text": "Không, ghẻ do ký sinh trùng chứ không phải do cóc",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Có nên bơi ngay sau khi ăn no không?",
+    "answers": [
+      {
+        "text": "Phải đợi đúng 60 phút",
+        "correct": false
+      },
+      {
+        "text": "Tuyệt đối không, sẽ bị chuột rút chìm ngay",
+        "correct": false
+      },
+      {
+        "text": "Có thể bơi nhẹ nhàng",
+        "correct": true
+      },
+      {
+        "text": "Chỉ được bơi ngửa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ở nhiệt độ nào thì độ F (Fahrenheit) và độ C (Celsius) bằng nhau?",
+    "answers": [
+      {
+        "text": "Âm 10 độ",
+        "correct": false
+      },
+      {
+        "text": "100 độ",
+        "correct": false
+      },
+      {
+        "text": "Âm 40 độ",
+        "correct": true
+      },
+      {
+        "text": "0 độ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Con Muỗi thích hút máu người nhóm máu nào nhất?",
+    "answers": [
+      {
+        "text": "Nhóm máu A",
+        "correct": false
+      },
+      {
+        "text": "Nhóm máu B",
+        "correct": false
+      },
+      {
+        "text": "Nhóm máu AB",
+        "correct": false
+      },
+      {
+        "text": "Nhóm máu O",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Loài Mèo có bao nhiêu mí mắt?",
+    "answers": [
+      {
+        "text": "Không có mí mắt",
+        "correct": false
+      },
+      {
+        "text": "3 mí mắt",
+        "correct": true
+      },
+      {
+        "text": "1 mí mắt",
+        "correct": false
+      },
+      {
+        "text": "2 mí mắt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Cú Mèo có thể liếc mắt (đảo mắt) được không?",
+    "answers": [
+      {
+        "text": "Có, liếc rất nhanh",
+        "correct": false
+      },
+      {
+        "text": "Mắt chúng xoay 360 độ",
+        "correct": false
+      },
+      {
+        "text": "Chỉ liếc được khi nhắm một mắt",
+        "correct": false
+      },
+      {
+        "text": "Không, mắt chúng cố định dạng ống",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Chiếc sừng dài của Kỳ lân biển (Narwhal) thực chất là bộ phận gì?",
+    "answers": [
+      {
+        "text": "Một chiếc xương sọ",
+        "correct": false
+      },
+      {
+        "text": "Một khối u sừng",
+        "correct": false
+      },
+      {
+        "text": "Một cái râu cứng",
+        "correct": false
+      },
+      {
+        "text": "Một chiếc răng nanh mọc dài ra",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Về mặt thực vật học, Ớt chuông, Cà tím và Cà chua là gì?",
+    "answers": [
+      {
+        "text": "Trái cây",
+        "correct": true
+      },
+      {
+        "text": "Thân cây",
+        "correct": false
+      },
+      {
+        "text": "Rễ cây",
+        "correct": false
+      },
+      {
+        "text": "Rau củ",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong số La Mã, ký hiệu nào đại diện cho số 0?",
+    "answers": [
+      {
+        "text": "Z",
+        "correct": false
+      },
+      {
+        "text": "Không có ký hiệu nào cho số 0",
+        "correct": true
+      },
+      {
+        "text": "O",
+        "correct": false
+      },
+      {
+        "text": "N",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Trong tiếng Anh, số nào là số duy nhất có các chữ cái được sắp xếp theo đúng thứ tự bảng chữ cái (Alphabet)?",
+    "answers": [
+      {
+        "text": "Hundred",
+        "correct": false
+      },
+      {
+        "text": "One",
+        "correct": false
+      },
+      {
+        "text": "Ten",
+        "correct": false
+      },
+      {
+        "text": "Forty",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Khi bị chảy máu cam, bạn nên làm gì?",
+    "answers": [
+      {
+        "text": "Ngửa đầu ra sau",
+        "correct": false
+      },
+      {
+        "text": "Nhét bông gòn thật sâu",
+        "correct": false
+      },
+      {
+        "text": "Nằm xuống",
+        "correct": false
+      },
+      {
+        "text": "Cúi đầu về phía trước và bóp cánh mũi",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Đọc sách trong điều kiện thiếu ánh sáng có làm hỏng mắt vĩnh viễn không?",
+    "answers": [
+      {
+        "text": "Gây cận thị ngay lập tức",
+        "correct": false
+      },
+      {
+        "text": "Có, gây mù lòa",
+        "correct": false
+      },
+      {
+        "text": "Làm đổi màu mắt",
+        "correct": false
+      },
+      {
+        "text": "Không, chỉ làm mỏi mắt tạm thời",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Chúng ta mất nhiệt cơ thể chủ yếu qua đầu (đội mũ ấm là quan trọng nhất)?",
+    "answers": [
+      {
+        "text": "Sai, nhiệt mất đều qua bất kỳ phần da nào bị hở",
+        "correct": true
+      },
+      {
+        "text": "Đúng, 80% nhiệt mất qua đầu",
+        "correct": false
+      },
+      {
+        "text": "Chỉ đúng với trẻ em",
+        "correct": false
+      },
+      {
+        "text": "Chỉ đúng khi trời mưa",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có thể sống sót trong chân không vũ trụ?",
+    "answers": [
+      {
+        "text": "Gián",
+        "correct": false
+      },
+      {
+        "text": "Vi khuẩn E.coli",
+        "correct": false
+      },
+      {
+        "text": "Chuột",
+        "correct": false
+      },
+      {
+        "text": "Gấu nước",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Con Đỉa có bao nhiêu bộ não?",
+    "answers": [
+      {
+        "text": "Không có não",
+        "correct": false
+      },
+      {
+        "text": "1 bộ não",
+        "correct": false
+      },
+      {
+        "text": "32 bộ não",
+        "correct": true
+      },
+      {
+        "text": "2 bộ não",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Ong mật sẽ chết sau khi đốt người, còn Ong bắp cày (Wasp) thì sao?",
+    "answers": [
+      {
+        "text": "Bị rụng cánh",
+        "correct": false
+      },
+      {
+        "text": "Cũng chết ngay lập tức",
+        "correct": false
+      },
+      {
+        "text": "Biến thành ong chúa",
+        "correct": false
+      },
+      {
+        "text": "Không chết, chúng có thể đốt nhiều lần",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Tuổi thọ trung bình của một con Ruồi nhà là bao lâu?",
+    "answers": [
+      {
+        "text": "1 năm",
+        "correct": false
+      },
+      {
+        "text": "Chỉ 24 giờ",
+        "correct": false
+      },
+      {
+        "text": "Khoảng 28 ngày",
+        "correct": true
+      },
+      {
+        "text": "1 tuần",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tiếng kêu của con Vịt có tạo ra tiếng vang (echo) không?",
+    "answers": [
+      {
+        "text": "Hoàn toàn không có tiếng vang",
+        "correct": false
+      },
+      {
+        "text": "Có, nhưng khó nghe",
+        "correct": true
+      },
+      {
+        "text": "Chỉ vang khi ở trong hang",
+        "correct": false
+      },
+      {
+        "text": "Chỉ vịt đực mới có tiếng vang",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Cá mập có bị ung thư không?",
+    "answers": [
+      {
+        "text": "Chỉ cá mập nuôi nhốt mới bị",
+        "correct": false
+      },
+      {
+        "text": "Có, chúng vẫn bị ung thư như thường",
+        "correct": true
+      },
+      {
+        "text": "Không, chúng miễn dịch hoàn toàn",
+        "correct": false
+      },
+      {
+        "text": "Chỉ bị ung thư da",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Đường (Sugar) có phải là nguyên nhân chính khiến trẻ em bị tăng động (Hyperactive) không?",
+    "answers": [
+      {
+        "text": "Không, khoa học chưa tìm thấy mối liên hệ này",
+        "correct": true
+      },
+      {
+        "text": "Có, đường là nguyên nhân chính",
+        "correct": false
+      },
+      {
+        "text": "Chỉ đúng vào buổi tối",
+        "correct": false
+      },
+      {
+        "text": "Chỉ đúng với sô-cô-la",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Thả một đồng xu Penny (bằng đồng) từ tòa nhà Empire State xuống có giết chết người đi đường không?",
+    "answers": [
+      {
+        "text": "Đồng xu sẽ lún xuống đất",
+        "correct": false
+      },
+      {
+        "text": "Gây nứt sọ",
+        "correct": false
+      },
+      {
+        "text": "Không, nó chỉ gây đau nhẹ do lực cản không khí",
+        "correct": true
+      },
+      {
+        "text": "Có, lực va chạm như viên đạn",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "1/100 của một giây (1 tick tắc) có tên gọi chính thức là gì?",
+    "answers": [
+      {
+        "text": "A Flash",
+        "correct": false
+      },
+      {
+        "text": "A Moment",
+        "correct": false
+      },
+      {
+        "text": "A Jiffy",
+        "correct": true
+      },
+      {
+        "text": "A Blink",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bạn có thể tự cù (thọc lét) chính mình không?",
+    "answers": [
+      {
+        "text": "Chỉ làm được khi nhắm mắt",
+        "correct": false
+      },
+      {
+        "text": "Có, rất buồn cười",
+        "correct": false
+      },
+      {
+        "text": "Không, vì não bộ dự đoán được cảm giác đó",
+        "correct": true
+      },
+      {
+        "text": "Chỉ làm được ở chân",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cơ bắp nào là cơ bắp khỏe nhất trong cơ thể người (tính theo lực tạo ra)?",
+    "answers": [
+      {
+        "text": "Cơ hàm",
+        "correct": true
+      },
+      {
+        "text": "Cơ lưỡi",
+        "correct": false
+      },
+      {
+        "text": "Cơ bắp tay",
+        "correct": false
+      },
+      {
+        "text": "Cơ đùi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Xương nào cứng nhất trong cơ thể người?",
+    "answers": [
+      {
+        "text": "Xương đùi",
+        "correct": false
+      },
+      {
+        "text": "Xương sọ",
+        "correct": false
+      },
+      {
+        "text": "Xương sườn",
+        "correct": false
+      },
+      {
+        "text": "Xương hàm dưới",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Thương hiệu nước giải khát lâu đời nhất nước Mỹ là gì?",
+    "answers": [
+      {
+        "text": "Pepsi",
+        "correct": false
+      },
+      {
+        "text": "Coca-Cola",
+        "correct": false
+      },
+      {
+        "text": "Dr Pepper",
+        "correct": true
+      },
+      {
+        "text": "7-Up",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tên thật của quái vật màu xanh Cookie Monster trong Sesame Street là gì?",
+    "answers": [
+      {
+        "text": "Frank",
+        "correct": false
+      },
+      {
+        "text": "Sid",
+        "correct": true
+      },
+      {
+        "text": "Barney",
+        "correct": false
+      },
+      {
+        "text": "Tom",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Búp bê Barbie có họ tên đầy đủ không?",
+    "answers": [
+      {
+        "text": "Không, chỉ là Barbie",
+        "correct": false
+      },
+      {
+        "text": "Có, là Barbara Millicent Roberts",
+        "correct": true
+      },
+      {
+        "text": "Họ của cô ấy là Matel",
+        "correct": false
+      },
+      {
+        "text": "Họ của cô ấy là Doll",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài thú duy nhất không thể nhảy là gì?",
+    "answers": [
+      {
+        "text": "Voi",
+        "correct": true
+      },
+      {
+        "text": "Mèo",
+        "correct": false
+      },
+      {
+        "text": "Chó",
+        "correct": false
+      },
+      {
+        "text": "Chuột túi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài chim nào có thể bay cao hơn cả đỉnh núi Everest?",
+    "answers": [
+      {
+        "text": "Chim ưng",
+        "correct": false
+      },
+      {
+        "text": "Kền kền Ruppell",
+        "correct": true
+      },
+      {
+        "text": "Ngỗng trời",
+        "correct": false
+      },
+      {
+        "text": "Đại bàng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Quốc gia nào sản xuất nhiều cà phê nhất thế giới?",
+    "answers": [
+      {
+        "text": "Colombia",
+        "correct": false
+      },
+      {
+        "text": "Brazil",
+        "correct": true
+      },
+      {
+        "text": "Việt Nam",
+        "correct": false
+      },
+      {
+        "text": "Indonesia",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loại gia vị nào đắt nhất thế giới tính theo khối lượng?",
+    "answers": [
+      {
+        "text": "Quế",
+        "correct": false
+      },
+      {
+        "text": "Hạt tiêu",
+        "correct": false
+      },
+      {
+        "text": "Vani",
+        "correct": false
+      },
+      {
+        "text": "Nhụy hoa nghệ tây",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Thức uống nào được tiêu thụ nhiều nhất trên thế giới (sau nước lọc)?",
+    "answers": [
+      {
+        "text": "Cà phê",
+        "correct": false
+      },
+      {
+        "text": "Trà",
+        "correct": true
+      },
+      {
+        "text": "Bia",
+        "correct": false
+      },
+      {
+        "text": "Nước ngọt",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loại trái cây nào phổ biến nhất thế giới?",
+    "answers": [
+      {
+        "text": "Táo",
+        "correct": false
+      },
+      {
+        "text": "Chuối",
+        "correct": false
+      },
+      {
+        "text": "Xoài",
+        "correct": false
+      },
+      {
+        "text": "Cà chua",
+        "correct": true
+      }
+    ]
+  },
+  {
+    "question": "Đồng 100 đô la Mỹ in hình nhân vật nào?",
+    "answers": [
+      {
+        "text": "Benjamin Franklin",
+        "correct": true
+      },
+      {
+        "text": "Thomas Jefferson",
+        "correct": false
+      },
+      {
+        "text": "George Washington",
+        "correct": false
+      },
+      {
+        "text": "Abraham Lincoln",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Cặp song sinh cùng trứng (Identical twins) có ADN giống nhau, vậy vân tay của họ có giống nhau không?",
+    "answers": [
+      {
+        "text": "Không, vân tay khác nhau",
+        "correct": true
+      },
+      {
+        "text": "Có, giống hệt nhau",
+        "correct": false
+      },
+      {
+        "text": "Chưa có nghiên cứu",
+        "correct": false
+      },
+      {
+        "text": "Giống nhau ở tay phải",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tóc và móng tay có tiếp tục mọc dài ra sau khi con người qua đời không?",
+    "answers": [
+      {
+        "text": "Không, chỉ là do da co lại khiến chúng trông dài hơn",
+        "correct": true
+      },
+      {
+        "text": "Chỉ móng tay mọc tiếp",
+        "correct": false
+      },
+      {
+        "text": "Có, mọc vĩnh viễn",
+        "correct": false
+      },
+      {
+        "text": "Có, mọc thêm vài tháng",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tim của bạn có ngừng đập trong tích tắc khi bạn hắt hơi (hắt xì) không?",
+    "answers": [
+      {
+        "text": "Không, chỉ là nhịp điệu bị thay đổi chút ít",
+        "correct": true
+      },
+      {
+        "text": "Có, ngừng đập 1 giây",
+        "correct": false
+      },
+      {
+        "text": "Tim đập ngược lại",
+        "correct": false
+      },
+      {
+        "text": "Có, ngừng đập 3 giây",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Bạn có thể chết nếu nín thở quá lâu không?",
+    "answers": [
+      {
+        "text": "Không, bạn sẽ ngất đi và cơ thể tự động thở lại",
+        "correct": true
+      },
+      {
+        "text": "Chỉ chết nếu nín thở dưới nước",
+        "correct": false
+      },
+      {
+        "text": "Có, rất nguy hiểm",
+        "correct": false
+      },
+      {
+        "text": "Tim sẽ ngừng đập",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài vật nào có thể tái tạo lại các bộ phận cơ thể như tim, tủy sống và thậm chí một phần não?",
+    "answers": [
+      {
+        "text": "Kỳ giông Axolotl",
+        "correct": true
+      },
+      {
+        "text": "Rùa",
+        "correct": false
+      },
+      {
+        "text": "Thạch sùng",
+        "correct": false
+      },
+      {
+        "text": "Cá sấu",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Tôm hùm tè (bài tiết) qua bộ phận nào?",
+    "answers": [
+      {
+        "text": "Qua khuôn mặt",
+        "correct": true
+      },
+      {
+        "text": "Qua miệng",
+        "correct": false
+      },
+      {
+        "text": "Qua càng",
+        "correct": false
+      },
+      {
+        "text": "Qua đuôi",
+        "correct": false
+      }
+    ]
+  },
+  {
+    "question": "Loài Gấu nước (Tardigrade) có khả năng sinh tồn phi thường nào?",
+    "answers": [
+      {
+        "text": "Sống được trong chân không vũ trụ",
+        "correct": true
+      },
+      {
+        "text": "Biến hình",
+        "correct": false
+      },
+      {
+        "text": "Chạy nhanh hơn báo",
+        "correct": false
+      },
+      {
+        "text": "Bay được",
+        "correct": false
+      }
+    ]
+  }
+]

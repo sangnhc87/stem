@@ -1,0 +1,328 @@
+ĐỀ 1 (Nhà ngoại giao)
+Có 6 nhà ngoại giao A, B, C, D, E, F ngồi với nhau. Không phải tất cả đều nói cùng một ngôn ngữ nhưng mỗi ngôn ngữ đều có đủ số người biết để họ có thể dịch lẫn cho nhau.
+
+Thông tin:
+- A và D chỉ nói được tiếng Anh, tiếng Pháp và tiếng Ý.
+- B chỉ nói được tiếng Anh, tiếng Pháp và tiếng Nga.
+- C chỉ nói được tiếng Đức và tiếng Ý.
+- E chỉ nói được tiếng Ý.
+- F chỉ nói được tiếng Nga.
+
+Câu 1: Ngôn ngữ nào được nhiều người nói nhất?
+A. tiếng Anh
+B. tiếng Pháp
+C. tiếng Đức
+D. tiếng Ý
+
+Câu 2: Ai có thể làm phiên dịch cho B và C?
+I. A
+II. D
+III. E
+IV. F
+A. Chỉ I
+B. I và II
+C. I, II và III
+D. II, III và IV
+
+Câu 3: Hai người nào nói chuyện với nhau cần phải có người phiên dịch?
+A. C và E
+B. C và F
+C. B và D
+D. E và D
+
+ĐỀ 2 (Cuộc họp ngoại giao)
+Trong một cuộc họp có 6 đại biểu A, B, C, D, E, F biết nói tổng cộng 5 thứ tiếng: Anh, Pháp, Nga, Trung, Đức. Ngồi vào một chiếc bàn tròn sao cho 2 đại biểu ngồi cạnh nhau thì cùng biết chung ít nhất một thứ tiếng và thỏa mãn các điều kiện:
+- Mỗi đại biểu chỉ biết 2 thứ tiếng.
+- A biết nói tiếng Anh và Pháp.
+- E biết tiếng Đức và Nga.
+- C ngồi đối diện với F.
+- F biết tiếng Trung.
+
+Câu 1: Nếu A ngồi đối diện D thì B phải ngồi cạnh ai?
+A. F và A
+B. A và D
+C. D và E
+D. E và C
+
+Câu 2: Đâu là 2 thứ tiếng mà B không thể nói là?
+A. Anh và Nga
+B. Anh và Đức
+C. Pháp và Nga
+D. Đức và Nga
+
+Câu 3: Nếu F biết tiếng Trung và Pháp thì số người biết tiếng Anh tối đa có thể là?
+A. 1
+B. 2
+C. 3
+D. 4
+
+ĐỀ 1
+
+Hệ thống giao thông công cộng trong thành phố được vận hành như sau:
+- Tuyến tàu điện ngầm: Tàu khởi hành từ T, lần lượt dừng tại R, S, G, H, I, rồi quay đầu trở lại theo thứ tự ngược, ghé mọi ga trên đường.
+- Tuyến xe buýt thường: Xe xuất phát ở R, tiếp tục tới W, L, G, F, sau đó quay đầu và dừng lại ở các điểm theo thứ tự ngược.
+- Xe buýt express: Chỉ ghé dừng bến R, L và F trong cả hai chiều đi – về.
+
+Quy tắc chung với các hành khách:
+- Hành khách được tự do chuyển giữa tàu điện ngầm và xe buýt thường khi hai tuyến gặp nhau ở một bến.
+- Không được chuyển từ xe buýt express sang xe buýt thường. (Chuyển sang tàu điện ngầm thì cho phép ở bến trung tâm.)
+- Thành phố không có phương tiện công cộng nào khác ngoài ba loại nêu trên.
+
+Câu 1: [EMPIRE TEAM]
+Trong các địa điểm, để đi từ I tới W bằng phương tiện công cộng, hành khách cần thực hiện điều nào dưới đây?
+A. Xuống tàu tại G rồi chuyển sang xe buýt.
+B. Ngồi nguyên trên tàu điện ngầm suốt hành trình.
+C. Lên ngay một chuyến xe buýt thường tại I.
+D. Bắt chuyến xe buýt (bất kỳ) chạy qua L.
+
+Câu 2: [EMPIRE TEAM]
+Giả sử xảy ra hỏa hoạn khiến đoạn tàu điện ngầm qua R tạm ngưng hoạt động, nhưng tàu vẫn chạy bình thường từ T đến S, và xe buýt vẫn dừng ở R như thường lệ. Khi đó, hành khách không thể đi từ địa điểm nào sau đây bằng phương tiện công cộng?
+A. T tới W
+B. I tới D
+C. G tới H
+D. T tới R
+
+Câu 3: [EMPIRE TEAM]
+Chỉ dùng xe buýt (bao gồm xe buýt thường và xe buýt express), tuyến nào có thể đi chuyến thẳng, không phải chuyển?
+A. F tới W
+B. G tới F
+C. L tới I
+D. I tới R
+
+ĐỀ 1
+
+Trong một phiên họp thương lượng cho một hiệp ước, có 6 đại diện thương mại K, L, M, N, O, P ngồi quanh một bàn tròn với 6 ghế ngồi, mỗi ghế một người. Thứ tự ngồi thỏa mãn các điều kiện sau:
+- P ngồi cạnh N;
+- L ngồi cạnh M hoặc N, hoặc cả M, N;
+- K không ngồi cạnh M;
+- Nếu O ngồi cạnh P thì O không ngồi cạnh M;
+
+Câu 1: [EMPIRE TEAM]
+Nếu L ngồi cạnh P thì hai đại diện nào sau đây ngồi cạnh nhau?
+A. L và O
+B. L và N
+C. M và N
+D. K và O
+
+Câu 2: [EMPIRE TEAM]
+Nếu N ngồi cạnh M, K có thể ngồi cạnh những đại diện nào?
+A. P, L
+B. L, O, P
+C. M, P, N
+D. L, M
+
+Câu 3: [EMPIRE TEAM]
+Nếu K ngồi đối diện P thì O phải ngồi cạnh 2 đại diện nào sau đây?
+A. K và N
+B. L và K
+C. N và P
+D. L và N
+
+ĐỀ 2
+
+Trong một cuộc hội nghị giữa 10 quốc gia thành viên (B, C, M, N, L, P, I, S, T, V) của một tổ chức khu vực, các đại diện quốc gia sẽ được sắp xếp chỗ ngồi tại bàn họp hình chữ nhật theo quy tắc:
+- Chỗ ngồi sẽ được đánh số từ 1 đến 10 bắt đầu từ vị trí bên phải góc của lối vào (luôn nằm ở góc trái phần chiều rộng của bàn).
+- Số đại diện quốc gia ngồi ở hai phía chiều dài là bằng nhau, phần chiều rộng của bàn có đặt cơ sở được sắp xếp 2 chỗ ngồi, phần chiều rộng phía đối diện cơ sở không được sắp xếp chỗ ngồi.
+- Đại diện quốc gia chủ nhà nằm ở số ngồi vị trí số 1, thứ tự luân phiên quốc gia chủ nhà tuần theo thứ tự Alphabet.
+- Các vị trí còn lại sẽ sắp xếp theo thứ tự Alphabet tính từ chữ cái của quốc gia ở vị trí số 1.
+
+Câu 1: [EMPIRE TEAM]
+Năm 2024, L là nước chủ nhà. Vậy đại diện quốc gia nào sẽ ngồi ở vị trí số 8?
+A. M
+B. P
+C. B
+D. I
+
+Câu 2: [EMPIRE TEAM]
+Nếu đại diện của quốc gia ở vị trí 1 và L ngồi đối diện nhau thì quốc gia nào sẽ ngồi ở vị trí số 3?
+A. C
+B. P
+C. N
+D. S
+
+Câu 3: [EMPIRE TEAM]
+Năm 2020, V là nước chủ nhà. Vậy sau 37 năm, nước chủ nhà sẽ là:
+A. L và B
+B. V và C
+C. M và T
+D. S và I
+
+ĐỀ 3
+
+Tám vị khách mời gồm An, Bình, Các, Dũng, Giang, Hương, Khánh và Lan tham dự một bữa tiệc.
+Họ được sắp xếp ngồi quanh một bàn tròn có 8 ghế, đánh số từ 1 đến 8 theo chiều kim đồng hồ.
+
+Mỗi vị trí ngồi có một mức giá khác nhau, các mức giá có thể là: 150, 200, 250, 300, 350, 400, 450 và 500 (nghìn VND). Bảng sau đây ghi giá trị cho vị trí chẵn và vị trí lẻ. (Một vị trí có thể có một trong hai mức tùy tình huống):
+
+<table>
+    <tr>
+      <th>Vị trí lẻ (1, 3, 5, 7)</th>
+      <th>Vị trí chẵn (2, 4, 6, 8)</th>
+    </tr>
+    <tr>
+      <td>200</td>
+      <td>150</td>
+    </tr>
+    <tr>
+      <td>300</td>
+      <td>250</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>350</td>
+    </tr>
+    <tr>
+      <td>500</td>
+      <td>450</td>
+    </tr>
+  </table>
+
+Các điều kiện:
+- Tổng giá vé của Bình và Giang không vượt quá giá vé của Dũng.
+- Bình ngồi đối diện người có vé đắt nhất.
+- Các vé có giá trị đều khác nhau.
+- Dũng và Giang ngồi cạnh nhau. Tổng giá vé của hai là 550k.
+- Người có vé rẻ nhất ngồi cạnh Các.
+- Người có vé mắc nhất ngồi cạnh người có giá trị nhỏ hơn nhiều.
+- Người có vé mắc nhất ngồi cạnh người có giá trị nhỏ hơn nhiều.
+
+Câu 1: [EMPIRE TEAM]
+Nếu Khánh có vé 300k và ngồi đối diện Dũng thì có tối đa bao nhiêu tổ hợp sắp xếp?
+A. 7 tổ hợp
+B. 10 tổ hợp
+C. 11 tổ hợp
+D. 14 tổ hợp
+
+Câu 2: [EMPIRE TEAM]
+Nếu Lan luôn ngồi ở vị trí chẵn và vé của Lan không vượt quá 250 thì vé của Hương có thể có giá trị nào?
+A. 650k
+B. 800k
+C. Không có đáp án nào đúng
+D. Không có đáp án nào đúng
+
+Câu 3: [EMPIRE TEAM]
+Cho rằng Các luôn ngồi bên phải Bình (theo chiều hướng vào tâm bàn tròn) và vé khác 150k thì nhận định nào đúng?
+A. Giá vé của Hương không vượt quá 350k
+B. Giá vé của Bình không vượt quá 250k
+C. Giá vé của Bình không vượt quá 450k
+D. Hương có thể có giá vé bất kỳ
+
+ĐỀ 4
+
+Có 8 người bạn: An, Bình, Chi, Dũng, Giang, Hương, Khánh, Lan cùng ngồi vào một bàn tiệc tròn có 8 ghế được đánh số theo chiều kim đồng hồ từ 1 đến 8. Mỗi người ngồi một ghế. Vị trí của họ tuân theo các điều kiện sau:
+- An ngồi ở ghế số 1.
+- Bình ngồi đối diện với An khi và chỉ khi Dũng và Giang ngồi cạnh nhau.
+- Dũng không bao giờ ngồi ở vị trí số 5.
+- Hương ngồi cách Dũng đúng 2 người.
+- Khánh không ngồi cạnh An và cũng không ngồi cạnh Chi.
+- Chi chỉ có thể ngồi ở vị trí 2 hoặc 6.
+
+Câu 1: [EMPIRE TEAM]
+Nếu Dũng ngồi ở vị trí số 4 thì Khánh có thể ngồi tối đa bao nhiêu vị trí?
+A. 1
+B. 2
+C. 3
+D. 4
+
+Câu 2: [EMPIRE TEAM]
+Nếu Chi ngồi ở vị trí số 6 và không ngồi cạnh Hương thì điều nào sau đây luôn đúng?
+A. Hương ngồi cạnh Khánh.
+B. Khánh ngồi đối diện với Giang.
+C. Có đúng 2 trường hợp Lan ngồi ở vị trí đánh số 6.
+D. Hương có thể ngồi ở 1 vị trí số lẻ.
+
+Câu 3: [EMPIRE TEAM]
+Nếu Chi ngồi ngay bên trái Bình (theo chiều hướng vào tâm bàn tròn) thì có bao nhiêu tổ hợp sắp xếp có thể thỏa mãn?
+A. 2
+B. 3
+C. 4
+D. 5
+
+ĐỀ 5
+
+Trong một buổi sinh hoạt nhóm, sáu người gồm A, B, C, D, E và F cùng ngồi quanh một chiếc bàn tròn. Sau khi ổn định vị trí, ban tổ chức ghi nhận được các thông tin sau:
+- B ngồi ngay cạnh E.
+- Giữa B và F có đúng một người ngồi.
+- C ngồi cạnh E hoặc cạnh F.
+
+Câu 1: [EMPIRE TEAM]
+Giả sử B ngồi cạnh C thì điều nào sau đây có thể đúng?
+A. A có thể cách E 2 ghế
+B. F ngồi đối diện E
+C. B ngồi cạnh A
+D. B ngồi đối diện D
+
+Câu 2: [EMPIRE TEAM]
+Nếu D ngồi cạnh F, thì A không thể cùng lúc ngồi cạnh:
+A. B và C
+B. C và F
+C. B và F
+D. E và D
+
+Câu 3: [EMPIRE TEAM]
+Giả sử B ngồi cạnh A thì khả năng nào sau đây có khả năng xảy ra cao nhất?
+A. A ngồi đối diện F
+B. B ngồi đối diện C
+C. E ngồi đối diện D
+D. E ngồi cạnh F
+
+ĐỀ 6
+
+Trong một buổi dã ngoại của lớp, các bạn học sinh được chia thành từng nhóm nhỏ để tham gia một trò chơi chiến thuật có tên là “Xác định vị trí”. Trong trò chơi này, 8 bạn gồm A, B, C, D, E, F, H và K cùng ngồi quanh một chiếc bàn tròn, mỗi bạn chiếm một vị trí. Sau khi trò chơi bắt đầu, ban tổ chức cung cấp các thông tin như sau:
+- A ngồi đối diện với D.
+- Giữa B và K có đúng một chỗ (tức là giữa B và K có đúng một người).
+- B ngồi cạnh D, Chi P phải ngồi cạnh A.
+- F không ngồi cạnh K.
+- H ngồi cạnh H hoặc cạnh K.
+
+Câu 1: [EMPIRE TEAM]
+Giả sử B và D ngồi cạnh nhau thì K không thể ngồi đối diện với ai dưới đây?
+A. H
+B. E
+C. C
+D. F
+
+Câu 2: [EMPIRE TEAM]
+Nếu E ngồi đối diện với K, thì B không thể ngồi chính giữa 2 cặp đôi nào sau đây?
+A. A và F
+B. A và C
+C. F và D
+D. F và E
+
+Câu 3: [EMPIRE TEAM]
+Cần bổ sung thêm hai điều kiện nào dưới đây để xác định duy nhất vị trí chỗ ngồi của tất cả các bạn?
+A. E và K ngồi đối diện nhau và F ngồi ngay giữa B và E
+B. A và D ngồi cạnh nhau và K ngồi ngay giữa A và E
+C. Cả 2 đều đúng
+D. Cả 2 đều sai
+
+ĐỀ 7
+
+Có 8 lính canh được bố trí canh giữ một tòa tháp theo 8 hướng: Bắc, Đông Bắc, Đông, Đông Nam, Nam, Tây Nam, Tây, Tây Bắc. Vài trò của mỗi người như sau: Xa (A), Bà (B), Trinh sát (C), Dự (D), Tuần tra (M), Quan sát (P), Rà (Q). Biết rằng:
+- Các vị trí gốc không được lấp kín.
+- Một tàu phải đứng ở hướng Nam.
+- Một trinh sát phải đứng ở hướng Bắc.
+- Hai người quan sát đứng cách nhau 2 người.
+- Người tuần tra không đứng cạnh ai.
+
+Câu 1: [EMPIRE TEAM]
+Điều nào sau đây không thể xảy ra?
+A. D đứng ở hướng Tây Nam
+B. D đứng ở hướng Đông Bắc
+C. P đứng ở hướng Tây
+D. P đứng ở hướng Đông Nam
+
+Câu 2: [EMPIRE TEAM]
+Nếu D đứng ở hướng Đông Nam thì hai người nào sau đây có thể đứng cạnh nhau?
+A. Q và P
+B. D và M
+C. V và N
+D. C và D
+
+Câu 3: [EMPIRE TEAM]
+Nếu B đứng hướng Đông, D đứng hướng Tây Nam thì điều nào sau đây luôn đúng?
+A. C và P đứng cạnh nhau.
+B. M và Q đứng cách nhau 2 người.
+C. D và M đứng cạnh nhau.
+D. M và Q cách nhau đúng 3 người.
+
